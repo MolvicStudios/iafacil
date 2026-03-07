@@ -52,8 +52,6 @@
 <div id="footerContainer"></div>
 
 <script type="module">
-    import { authService } from '/js/services/auth.js';
-    import { db } from '/js/services/database.js';
     import { renderHeader } from '/js/components/header.js';
     import { renderFooter } from '/js/components/footer.js';
     import { renderBottomNav } from '/js/components/bottomNav.js';
@@ -67,11 +65,12 @@
     const filters = document.getElementById('filters');
     let userProgress = [];
 
-    // Load user progress if authenticated
+    // Load local progress for open-access mode
     async function loadProgress() {
-        if (authService.isAuthenticated()) {
-            const user = authService.getUser();
-            userProgress = await db.getAllProgress(user.id);
+        try {
+            userProgress = JSON.parse(localStorage.getItem('iafacil-course-progress') || '[]');
+        } catch {
+            userProgress = [];
         }
     }
 

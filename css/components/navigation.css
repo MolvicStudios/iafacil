@@ -223,3 +223,64 @@
     color: var(--color-primary);
     border-bottom-color: var(--color-primary);
 }
+
+/* ─── Compatibilidad bottom-nav actual ─── */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-mobile-height);
+    background: var(--bg-glass-strong);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 900;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    min-width: 56px;
+    border-radius: var(--border-radius-md);
+    position: relative;
+}
+
+.bottom-nav-icon {
+    font-size: 1.5rem;
+    transition: transform var(--transition-fast);
+}
+
+.bottom-nav-item.active {
+    color: var(--color-primary);
+}
+
+.bottom-nav-item.active .bottom-nav-icon {
+    transform: scale(1.1);
+}
+
+.bottom-nav-item:hover {
+    color: var(--color-primary);
+    background: rgba(0, 184, 148, 0.06);
+}
+
+.bottom-nav-label {
+    line-height: 1;
+}
+
+@media (min-width: 769px) {
+    .bottom-nav {
+        display: none;
+    }
+}

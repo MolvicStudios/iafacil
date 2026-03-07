@@ -5,10 +5,10 @@
 
 export const ROUTES = {
     HOME:            '/',
-    LOGIN:           '/pages/auth/login.html',
-    REGISTER:        '/pages/auth/register.html',
-    FORGOT_PASSWORD: '/pages/auth/forgot-password.html',
-    RESET_PASSWORD:  '/pages/auth/reset-password.html',
+    LOGIN:           '/',
+    REGISTER:        '/',
+    FORGOT_PASSWORD: '/',
+    RESET_PASSWORD:  '/',
 
     DASHBOARD:       '/pages/dashboard.html',
 
@@ -37,18 +37,12 @@ export const ROUTES = {
 
 /* ─── Rutas que requieren autenticación ─── */
 export const PROTECTED_ROUTES = [
-    ROUTES.DASHBOARD,
-    ROUTES.PROFILE,
-    ROUTES.CERTIFICATES,
-    '/pages/cursos/',
-    '/pages/herramientas/'
+    // Modo abierto: no hay rutas protegidas.
 ];
 
 /* ─── Rutas públicas (solo sin autenticación) ─── */
 export const AUTH_ROUTES = [
-    ROUTES.LOGIN,
-    ROUTES.REGISTER,
-    ROUTES.FORGOT_PASSWORD
+    // Modo abierto: no hay rutas exclusivas de autenticación.
 ];
 
 /**

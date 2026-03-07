@@ -150,15 +150,9 @@
     import { authService } from '/js/services/auth.js';
     import { db } from '/js/services/database.js';
     import { gamification } from '/js/services/gamification.js';
-    import { LEVELS } from '/js/config/constants.js';
     import { renderHeader } from '/js/components/header.js';
     import { renderFooter } from '/js/components/footer.js';
     import { renderBottomNav } from '/js/components/bottomNav.js';
-
-    // Verificar autenticación
-    if (!authService.isAuthenticated()) {
-        window.location.href = '/pages/auth/login.html';
-    }
 
     // Render layout components
     renderHeader(document.getElementById('headerContainer'));
@@ -169,7 +163,10 @@
     async function loadDashboard() {
         try {
             const user = authService.getUser();
-            if (!user) return;
+            if (!user) {
+                renderGuestDashboard();
+                return;
+            }
 
             const profile = await db.getProfile(user.id);
             if (!profile) return;
@@ -234,8 +231,21 @@
             }
 
         } catch (err) {
-            console.error('Error loading dashboard:', err);
+            renderGuestDashboard();
         }
+    }
+
+    function renderGuestDashboard() {
+        document.getElementById('userName').textContent = 'Visitante';
+        document.getElementById('welcomeLevel').innerHTML = `
+            <span class="level-icon">🌱</span>
+            <span class="level-name">Modo libre · Sin registro</span>
+        `;
+        document.getElementById('xpLevelName').textContent = 'Modo libre · Sin registro';
+        document.getElementById('xpNumbers').textContent = 'Explora cursos y herramientas';
+        document.getElementById('xpBarFill').style.width = '0%';
+        document.getElementById('streakMessage').textContent = 'Tu progreso no necesita cuenta para empezar.';
+        renderCalendar([]);
     }
 
     function renderContinueLearning(progressList) {

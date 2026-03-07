@@ -4,7 +4,6 @@
    ═══════════════════════════════════════════════════════════ */
 
 import { auth, supabase } from '../config/supabase.js';
-import { ROUTES, isProtectedRoute, isAuthRoute, navigateTo } from '../config/routes.js';
 
 class AuthService {
     constructor() {
@@ -71,7 +70,7 @@ class AuthService {
     /** Logout */
     async logout() {
         await auth.signOut();
-        navigateTo(ROUTES.HOME);
+        window.location.href = '/';
     }
 
     /** Recuperar contraseña */
@@ -104,33 +103,16 @@ class AuthService {
 
     /** Verificar permisos de ruta */
     checkRouteAccess() {
-        const path = window.location.pathname;
-
-        if (isProtectedRoute(path) && !this.isAuthenticated()) {
-            navigateTo(ROUTES.LOGIN);
-            return false;
-        }
-
-        if (isAuthRoute(path) && this.isAuthenticated()) {
-            navigateTo(ROUTES.DASHBOARD);
-            return false;
-        }
-
+        // Modo abierto: todas las rutas son públicas.
         return true;
     }
 
     _handleSignIn() {
-        const path = window.location.pathname;
-        if (isAuthRoute(path)) {
-            navigateTo(ROUTES.DASHBOARD);
-        }
+        // Modo abierto: no forzamos redirecciones automáticas.
     }
 
     _handleSignOut() {
-        const path = window.location.pathname;
-        if (isProtectedRoute(path)) {
-            navigateTo(ROUTES.LOGIN);
-        }
+        // Modo abierto: no forzamos redirecciones automáticas.
     }
 
     _notifyListeners(event, session) {

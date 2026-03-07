@@ -3,28 +3,24 @@
    Header dinámico (landing vs app) con estado de usuario
    ═══════════════════════════════════════════════════════════ */
 
-import { authService } from '../services/auth.js';
-import { gamification } from '../services/gamification.js';
-import { db } from '../services/database.js';
 import { ROUTES } from '../config/routes.js';
 
 export function renderHeader(container, options = {}) {
+    if (!container) return;
     const { landing = false } = options;
-    const user = authService.getUser();
-    const isAuth = authService.isAuthenticated();
 
     container.innerHTML = `
     <header class="header ${landing ? 'header-landing' : ''}" id="header">
         <div class="container">
-            <a href="${isAuth ? ROUTES.DASHBOARD : '/'}" class="header-logo">
+            <a href="${landing ? '/' : ROUTES.DASHBOARD}" class="header-logo">
                 <span class="logo-icon">🤖</span>
                 <span class="logo-text">IAFACIL<span class="logo-accent">.HELP</span></span>
             </a>
 
-            ${isAuth ? renderAppNav() : renderLandingNav()}
+            ${landing ? renderLandingNav() : renderAppNav()}
 
             <div class="header-actions">
-                ${isAuth ? renderUserActions() : renderGuestActions()}
+                ${landing ? renderGuestActions() : renderUserActions()}
             </div>
 
             <button class="hamburger" id="hamburger" aria-label="Menú">
@@ -34,10 +30,6 @@ export function renderHeader(container, options = {}) {
     </header>`;
 
     initHeaderEvents(container);
-
-    if (isAuth) {
-        loadUserStats(container);
-    }
 }
 
 function renderLandingNav() {
@@ -66,43 +58,15 @@ function renderGuestActions() {
 
 function renderUserActions() {
     return `
-        <div class="header-xp" id="headerXp">
-            <span class="xp-icon">⚡</span>
-            <span class="xp-value" id="headerXpValue">0</span>
-        </div>
-        <div class="header-streak" id="headerStreak">
-            <span class="streak-icon">🔥</span>
-            <span class="streak-value" id="headerStreakValue">0</span>
-        </div>
+        <a href="${ROUTES.DASHBOARD}" class="btn btn-sm btn-outline">Dashboard</a>
         <button class="header-avatar" id="headerAvatar" aria-label="Mi perfil">
-            <span id="headerAvatarText">?</span>
+            <span id="headerAvatarText">👤</span>
         </button>`;
 }
 
-async function loadUserStats(container) {
-    try {
-        const user = authService.getUser();
-        if (!user) return;
-
-        const profile = await db.getProfile(user.id);
-        if (!profile) return;
-
-        const xpEl = container.querySelector('#headerXpValue');
-        const streakEl = container.querySelector('#headerStreakValue');
-        const avatarEl = container.querySelector('#headerAvatarText');
-
-        if (xpEl) xpEl.textContent = profile.xp || 0;
-        if (streakEl) streakEl.textContent = profile.streak || 0;
-        if (avatarEl) {
-            const name = profile.full_name || user.email || '?';
-            avatarEl.textContent = name.charAt(0).toUpperCase();
-        }
-    } catch (e) {
-        // Silently fail for header stats
-    }
-}
-
 function initHeaderEvents(container) {
+    if (!container) return;
+
     // Scroll effect
     window.addEventListener('scroll', () => {
         const header = container.querySelector('#header');

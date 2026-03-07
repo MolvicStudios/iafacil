@@ -4,6 +4,8 @@
    ═══════════════════════════════════════════════════════════ */
 
 export function renderFooter(container) {
+    if (!container) return;
+
     container.innerHTML = `
     <footer class="footer">
         <div class="container">
@@ -37,7 +39,7 @@ export function renderFooter(container) {
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; ${new Date().getFullYear()} IAFACIL.HELP — Hecho con � para hispanohablantes</p>
+                <p>&copy; ${new Date().getFullYear()} IAFACIL.HELP - Hecho con amor para hispanohablantes</p>
             </div>
         </div>
     </footer>`;

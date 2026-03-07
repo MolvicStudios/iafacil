@@ -85,9 +85,7 @@
     import { renderFooter } from '/js/components/footer.js';
     import { renderBottomNav } from '/js/components/bottomNav.js';
     import { toast } from '/js/components/toast.js';
-    import { PROMPTS, PROMPT_CATEGORIES, getPromptsByCategory } from '/js/data/prompts.js';
-    import { DatabaseService } from '/js/services/database.js';
-    import { getUser } from '/js/config/supabase.js';
+    import { PROMPTS, PROMPT_CATEGORIES } from '/js/data/prompts.js';
 
     renderHeader(document.getElementById('headerContainer'));
     renderFooter(document.getElementById('footerContainer'));
@@ -224,14 +222,18 @@
         });
 
         document.getElementById('btnSavePrompt').addEventListener('click', async () => {
-            const user = await getUser();
-            if (!user) {
-                toast.warning('Inicia sesión para guardar prompts');
-                return;
-            }
             try {
-                await DatabaseService.savePrompt(user.id, { title: p.title, text: p.text, category: p.category });
+                const saved = JSON.parse(localStorage.getItem('iafacil-saved-prompts') || '[]');
+                saved.unshift({
+                    id: crypto.randomUUID(),
+                    title: p.title,
+                    text: p.text,
+                    category: p.category,
+                    created_at: new Date().toISOString()
+                });
+                localStorage.setItem('iafacil-saved-prompts', JSON.stringify(saved));
                 toast.success('Prompt guardado');
+                loadSaved();
             } catch (err) {
                 toast.error('Error al guardar');
             }
@@ -263,13 +265,8 @@
     // Load saved prompts
     async function loadSaved() {
         const container = document.getElementById('savedPrompts');
-        const user = await getUser();
-        if (!user) {
-            container.innerHTML = '<p class="text-muted text-center" style="padding:1rem;">Inicia sesión para ver tus prompts guardados</p>';
-            return;
-        }
         try {
-            const saved = await DatabaseService.getSavedPrompts(user.id);
+            const saved = JSON.parse(localStorage.getItem('iafacil-saved-prompts') || '[]');
             if (!saved || saved.length === 0) {
                 container.innerHTML = '<p class="text-muted text-center" style="padding:1rem;">Aún no has guardado prompts. Explora la biblioteca y guarda tus favoritos.</p>';
                 return;

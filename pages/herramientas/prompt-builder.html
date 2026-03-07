@@ -105,9 +105,6 @@
     import { renderFooter } from '/js/components/footer.js';
     import { renderBottomNav } from '/js/components/bottomNav.js';
     import { toast } from '/js/components/toast.js';
-    import { authService } from '/js/services/auth.js';
-    import { db } from '/js/services/database.js';
-    import { gamification } from '/js/services/gamification.js';
 
     renderHeader(document.getElementById('headerContainer'));
     renderFooter(document.getElementById('footerContainer'));
@@ -272,27 +269,22 @@
 
     // Save
     document.getElementById('btnSave').addEventListener('click', async () => {
-        if (!authService.isAuthenticated()) {
-            toast.warning('Inicia sesión para guardar prompts');
-            return;
-        }
         const text = preview.textContent;
         if (!text || text.includes('Añade bloques')) {
             toast.warning('No hay prompt para guardar');
             return;
         }
         try {
-            const user = authService.getUser();
-            await db.savePrompt(user.id, {
+            const saved = JSON.parse(localStorage.getItem('iafacil-saved-prompts') || '[]');
+            saved.unshift({
+                id: crypto.randomUUID(),
                 title: 'Prompt Builder - ' + new Date().toLocaleDateString('es'),
-                content: text,
-                source: 'prompt-builder'
+                text,
+                category: 'builder',
+                created_at: new Date().toISOString()
             });
+            localStorage.setItem('iafacil-saved-prompts', JSON.stringify(saved));
             toast.success('¡Prompt guardado!');
-
-            // Gamification
-            await gamification.addXP(user.id, 15, 'tool_use');
-            await gamification.checkBadges(user.id, 'tool_use', { toolId: 'prompt-builder' });
         } catch (err) {
             toast.error('Error al guardar');
         }

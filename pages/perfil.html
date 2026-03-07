@@ -96,9 +96,8 @@
 
                 <!-- Account Actions -->
                 <div class="card animate-fadeInUp delay-3" style="padding:1.5rem; margin-top:1rem;">
-                    <h3 style="margin-bottom:1rem;">⚙️ Cuenta</h3>
-                    <button class="btn btn-outline btn-block" id="btnChangePassword" style="margin-bottom:0.5rem;">🔑 Cambiar Contraseña</button>
-                    <button class="btn btn-outline btn-block" id="btnLogout" style="color:var(--color-danger); border-color:var(--color-danger);">🚪 Cerrar Sesión</button>
+                    <h3 style="margin-bottom:1rem;">⚙️ Datos locales</h3>
+                    <button class="btn btn-outline btn-block" id="btnResetLocal" style="color:var(--color-danger); border-color:var(--color-danger);">🧹 Reiniciar perfil local</button>
                 </div>
             </div>
         </div>
@@ -113,52 +112,64 @@
     import { renderFooter } from '/js/components/footer.js';
     import { renderBottomNav } from '/js/components/bottomNav.js';
     import { toast } from '/js/components/toast.js';
-    import { getUser, signOut } from '/js/config/supabase.js';
     import { LEVELS } from '/js/config/constants.js';
-    import { DatabaseService } from '/js/services/database.js';
-    import { StorageService } from '/js/services/storage.js';
-    import { GamificationService } from '/js/services/gamification.js';
     import { BADGES } from '/js/data/badges.js';
 
     renderHeader(document.getElementById('headerContainer'));
     renderFooter(document.getElementById('footerContainer'));
     renderBottomNav(document.getElementById('bottomNavContainer'));
 
-    let currentUser = null;
-    let profile = null;
+    const PROFILE_KEY = 'iafacil-profile';
+    const COURSE_PROGRESS_KEY = 'iafacil-course-progress';
+    const BADGES_KEY = 'iafacil-earned-badges';
+
+    let profile = {
+        full_name: 'Usuario IAFACIL',
+        email: 'sin-registro@iafacil.local',
+        bio: '',
+        learning_goal: '',
+        avatar_url: '',
+        total_xp: 0,
+        streak_count: 0
+    };
 
     async function init() {
-        currentUser = await getUser();
-        if (!currentUser) {
-            window.location.href = '/pages/auth/login.html';
-            return;
-        }
-
-        try {
-            profile = await DatabaseService.getProfile(currentUser.id);
-        } catch {
-            profile = null;
-        }
+        loadLocalProfile();
 
         renderProfile();
         loadBadges();
     }
 
+    function loadLocalProfile() {
+        try {
+            const saved = JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}');
+            profile = { ...profile, ...saved };
+        } catch {
+            // If local data is invalid, keep defaults.
+        }
+    }
+
+    function saveLocalProfile() {
+        localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+    }
+
     function renderProfile() {
-        const name = profile?.full_name || currentUser.user_metadata?.full_name || 'Usuario';
+        const name = profile?.full_name || 'Usuario';
         document.getElementById('profileName').textContent = name;
-        document.getElementById('profileEmail').textContent = currentUser.email;
+        document.getElementById('profileEmail').textContent = profile?.email || 'sin-registro@iafacil.local';
 
         // Avatar
         if (profile?.avatar_url) {
             document.getElementById('avatarPreview').innerHTML = `<img src="${profile.avatar_url}" style="width:100%; height:100%; object-fit:cover;" alt="Avatar" />`;
+        } else {
+            document.getElementById('avatarPreview').textContent = '👤';
         }
 
         // Level
         const xp = profile?.total_xp || 0;
-        const level = GamificationService.getLevelFromXP(xp);
-        const progress = GamificationService.getLevelProgress(xp);
-        const levelData = LEVELS[level - 1];
+        const levelData = LEVELS.find(l => xp >= l.xpMin && xp <= l.xpMax) || LEVELS[0];
+        const span = levelData.xpMax === Infinity ? 100 : Math.max(levelData.xpMax - levelData.xpMin, 1);
+        const progress = levelData.xpMax === Infinity ? 100 : Math.max(0, Math.min(100, Math.round(((xp - levelData.xpMin) / span) * 100)));
 
         document.getElementById('profileLevel').innerHTML = `
             <span style="font-size:1.25rem;">${levelData.icon}</span>
@@ -178,17 +189,15 @@
         document.getElementById('editBio').value = profile?.bio || '';
         document.getElementById('editGoal').value = profile?.learning_goal || '';
 
-        // Load course count
-        DatabaseService.getCourseProgress(currentUser.id).then(courses => {
-            document.getElementById('statCourses').textContent = courses?.length || 0;
-        }).catch(() => {});
+        // Load local course count
+        const courses = JSON.parse(localStorage.getItem(COURSE_PROGRESS_KEY) || '[]');
+        document.getElementById('statCourses').textContent = courses?.length || 0;
     }
 
     async function loadBadges() {
         const grid = document.getElementById('badgesGrid');
         try {
-            const userBadges = await DatabaseService.getUserBadges(currentUser.id);
-            const earnedIds = new Set((userBadges || []).map(b => b.badge_id));
+            const earnedIds = new Set(JSON.parse(localStorage.getItem(BADGES_KEY) || '[]'));
 
             document.getElementById('statBadges').textContent = earnedIds.size;
 
@@ -211,10 +220,16 @@
         if (!file) return;
 
         try {
-            const url = await StorageService.uploadAvatar(currentUser.id, file);
-            await DatabaseService.updateProfile(currentUser.id, { avatar_url: url });
-            document.getElementById('avatarPreview').innerHTML = `<img src="${url}" style="width:100%; height:100%; object-fit:cover;" alt="Avatar" />`;
-            toast.success('Avatar actualizado');
+            const reader = new FileReader();
+            reader.onload = () => {
+                const url = reader.result;
+                profile.avatar_url = url;
+                saveLocalProfile();
+                document.getElementById('avatarPreview').innerHTML = `<img src="${url}" style="width:100%; height:100%; object-fit:cover;" alt="Avatar" />`;
+                toast.success('Avatar actualizado');
+            };
+            reader.onerror = () => toast.error('Error al subir imagen');
+            reader.readAsDataURL(file);
         } catch (err) {
             toast.error('Error al subir imagen');
         }
@@ -230,8 +245,8 @@
         };
 
         try {
-            await DatabaseService.updateProfile(currentUser.id, data);
             profile = { ...profile, ...data };
+            saveLocalProfile();
             document.getElementById('profileName').textContent = data.full_name || 'Usuario';
             toast.success('Perfil actualizado');
         } catch {
@@ -239,15 +254,10 @@
         }
     });
 
-    // Change password
-    document.getElementById('btnChangePassword').addEventListener('click', () => {
-        window.location.href = '/pages/auth/reset-password.html';
-    });
-
-    // Logout
-    document.getElementById('btnLogout').addEventListener('click', async () => {
-        await signOut();
-        window.location.href = '/';
+    document.getElementById('btnResetLocal').addEventListener('click', () => {
+        localStorage.removeItem(PROFILE_KEY);
+        toast.success('Perfil local reiniciado');
+        window.location.reload();
     });
 
     init();

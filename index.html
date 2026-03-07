@@ -35,6 +35,22 @@
     <!-- ═══════════════ HEADER ═══════════════ -->
     <header class="header header-landing" id="header">
         <div class="container">
+            <a href="/" class="header-logo">
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">IAFACIL<span class="logo-accent">.HELP</span></span>
+            </a>
+
+            <nav class="header-nav" id="mainNav">
+                <a href="#cursos" class="nav-item">Cursos</a>
+                <a href="#herramientas" class="nav-item">Herramientas</a>
+                <a href="#como-funciona" class="nav-item">Como funciona</a>
+            </nav>
+
+            <div class="header-actions"></div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
@@ -55,11 +71,11 @@
                     Domina ChatGPT, Midjourney, DALL-E y más herramientas de IA con cursos interactivos estilo Duolingo. Gana XP, desbloquea logros y aprende a tu ritmo.
                 </p>
                 <div class="hero-actions">
-                    <a href="/pages/auth/register.html" class="btn btn-primary btn-lg">
-                        Empezar ahora — Es gratis
+                    <a href="/pages/dashboard.html" class="btn btn-primary btn-lg">
+                        Empezar ahora
                     </a>
-                    <a href="/pages/auth/login.html" class="btn btn-secondary btn-lg">
-                        Iniciar sesión
+                    <a href="/pages/herramientas/" class="btn btn-secondary btn-lg">
+                        Probar herramientas
                     </a>
                     <a href="#cursos" class="btn btn-outline btn-lg">
                         Ver cursos
@@ -180,8 +196,8 @@
             <div class="steps-grid">
                 <div class="step-card animate-fadeInUp delay-1">
                     <div class="step-number">1</div>
-                    <h3 class="step-title">Crea tu cuenta gratis</h3>
-                    <p class="step-desc">Regístrate en 30 segundos con tu email. Sin tarjeta de crédito.</p>
+                    <h3 class="step-title">Empieza al instante</h3>
+                    <p class="step-desc">Entra y comienza a aprender sin registro ni pasos extra.</p>
                 </div>
                 <div class="step-card animate-fadeInUp delay-3">
                     <div class="step-number">2</div>
@@ -246,8 +262,8 @@
             <div class="cta-card">
                 <h2 class="cta-title animate-fadeInUp">¿Listo para dominar la IA?</h2>
                 <p class="cta-subtitle animate-fadeInUp delay-2">Únete a miles de personas que ya están aprendiendo IA de forma fácil y divertida.</p>
-                <a href="/pages/auth/register.html" class="btn btn-primary btn-lg animate-fadeInUp delay-3">
-                    Crear cuenta gratis
+                <a href="/pages/cursos/" class="btn btn-primary btn-lg animate-fadeInUp delay-3">
+                    Explorar cursos ahora
                 </a>
             </div>
         </div>
@@ -341,16 +357,20 @@
         // Header scroll effect
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
-            header.classList.toggle('header-scrolled', window.scrollY > 50);
+            if (header) {
+                header.classList.toggle('header-scrolled', window.scrollY > 50);
+            }
         });
 
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const mainNav = document.getElementById('mainNav');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mainNav.classList.toggle('active');
-        });
+        if (hamburger && mainNav) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+        }
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -362,8 +382,10 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     // Close mobile menu
-                    hamburger.classList.remove('active');
-                    mainNav.classList.remove('active');
+                    if (hamburger && mainNav) {
+                        hamburger.classList.remove('active');
+                        mainNav.classList.remove('active');
+                    }
                 }
             });
         });

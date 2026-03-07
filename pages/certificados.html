@@ -38,8 +38,6 @@
     import { renderFooter } from '/js/components/footer.js';
     import { renderBottomNav } from '/js/components/bottomNav.js';
     import { toast } from '/js/components/toast.js';
-    import { getUser } from '/js/config/supabase.js';
-    import { DatabaseService } from '/js/services/database.js';
     import { COURSES, getCourseById } from '/js/data/courses.js';
 
     renderHeader(document.getElementById('headerContainer'));
@@ -47,17 +45,17 @@
     renderBottomNav(document.getElementById('bottomNavContainer'));
 
     async function init() {
-        const user = await getUser();
-        if (!user) {
-            window.location.href = '/pages/auth/login.html';
-            return;
-        }
-
         const container = document.getElementById('certificatesList');
         const empty = document.getElementById('emptyState');
 
         try {
-            const progress = await DatabaseService.getCourseProgress(user.id);
+            const localProgress = JSON.parse(localStorage.getItem('iafacil-course-progress') || '[]');
+            const profile = JSON.parse(localStorage.getItem('iafacil-profile') || '{}');
+
+            const progress = (localProgress || []).map(p => ({
+                ...p,
+                completed: p.completed ?? ((p.completed_lessons || []).length > 0)
+            }));
             const completed = (progress || []).filter(p => p.completed);
 
             if (completed.length === 0) {
@@ -65,13 +63,13 @@
                 return;
             }
 
-            const profile = await DatabaseService.getProfile(user.id);
-            const userName = profile?.full_name || user.user_metadata?.full_name || 'Estudiante';
+            const userName = profile?.full_name || 'Estudiante';
+            const userId = profile?.id || 'LOCALUSER';
 
             container.innerHTML = completed.map(p => {
                 const course = getCourseById(p.course_id);
                 const date = new Date(p.completed_at || p.updated_at).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
-                const certId = `IAFACIL-${p.course_id.toUpperCase().slice(0, 8)}-${user.id.slice(0, 6)}`.toUpperCase();
+                const certId = `IAFACIL-${p.course_id.toUpperCase().slice(0, 8)}-${String(userId).slice(0, 6)}`.toUpperCase();
 
                 return `
                 <div class="card" style="padding:2rem; margin-bottom:1.5rem; border:2px solid var(--color-primary); position:relative; overflow:hidden;">

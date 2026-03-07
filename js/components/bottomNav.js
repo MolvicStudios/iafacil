@@ -6,6 +6,7 @@
 import { ROUTES } from '../config/routes.js';
 
 export function renderBottomNav(container) {
+    if (!container) return;
     const path = window.location.pathname;
 
     container.innerHTML = `
