@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso - IAFACIL.HELP</title>
+    <meta name="description" content="Detalle de curso en IAFACIL.HELP.">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <a href="/pages/cursos/" class="btn btn-outline btn-sm" style="margin-bottom:1rem; display:inline-flex;">← Volver a cursos</a>
+
+        <section class="course-hero card" style="border-radius:var(--border-radius-lg); margin-bottom:1.5rem;">
+            <div class="course-hero-inner">
+                <span class="course-category" id="courseCategory"></span>
+                <h1 class="course-title" id="courseTitle">Curso</h1>
+                <p class="course-description" id="courseDescription"></p>
+                <div class="course-meta-bar">
+                    <span id="courseLevel"></span>
+                    <span id="courseLessons"></span>
+                    <span id="courseProgressText"></span>
+                </div>
+                <div class="progress-bar" style="margin-top:0.75rem; max-width:420px;">
+                    <div class="progress-bar-fill" id="courseProgressFill" style="width:0%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title" style="font-size:1.5rem; margin-bottom:1rem;">Contenido del curso</h2>
+            <div class="module-list" id="moduleList"></div>
+        </section>
+
+        <section class="card" id="lessonReader" style="margin-top:1.5rem; padding:1.25rem;">
+            <p class="text-muted">Selecciona una leccion para ver su contenido completo.</p>
+        </section>
+
+        <section class="card" style="margin-top:1.5rem; padding:1.25rem;">
+            <h3 style="margin-bottom:0.5rem;">Progreso local</h3>
+            <p class="text-muted" style="margin-bottom:1rem;">Este modo guarda tu avance en este navegador.</p>
+            <button class="btn btn-outline" id="btnResetProgress">Reiniciar progreso de este curso</button>
+        </section>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { COURSES, getCourseById } from '/js/data/courses.js';
+    import { getLessonContent } from '/js/data/course-lessons.js';
+    import { toast } from '/js/components/toast.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    const STORAGE_KEY = 'iafacil-course-progress';
+    const params = new URLSearchParams(window.location.search);
+    const courseId = params.get('id');
+    const course = getCourseById(courseId);
+    let activeLessonId = params.get('lesson');
+
+    function toReadable(text) {
+        if (!text) return '';
+        return String(text)
+            .replace(/-/g, ' ')
+            .replace(/\bia\b/gi, 'IA')
+            .replace(/\bgpt\b/gi, 'GPT')
+            .replace(/\bn8n\b/gi, 'n8n')
+            .replace(/\bseo\b/gi, 'SEO')
+            .replace(/\brrhh\b/gi, 'RRHH')
+            .replace(/\bapi\b/gi, 'API')
+            .replace(/\bcrm\b/gi, 'CRM')
+            .replace(/\bv6\b/gi, 'V6')
+            .replace(/\s+/g, ' ')
+            .trim()
+            .replace(/(^.|\s.)/g, m => m.toUpperCase());
+    }
+
+    function getOrderedLessons() {
+        if (!course) return [];
+        const ordered = [];
+        course.modules.forEach((module, moduleIndex) => {
+            module.lessons.forEach((lessonId, lessonIndex) => {
+                ordered.push({
+                    lessonId,
+                    moduleTitle: module.title,
+                    moduleIndex,
+                    lessonIndex
+                });
+            });
+        });
+        return ordered;
+    }
+
+    function getAllProgress() {
+        try {
+            return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        } catch {
+            return [];
+        }
+    }
+
+    function getCourseProgress() {
+        const progress = getAllProgress();
+        return progress.find(p => p.course_id === courseId) || {
+            course_id: courseId,
+            completed_lessons: [],
+            total_lessons: course ? course.totalLessons : 0,
+            updated_at: null,
+            completed: false
+        };
+    }
+
+    function saveCourseProgress(nextProgress) {
+        const all = getAllProgress();
+        const idx = all.findIndex(p => p.course_id === courseId);
+
+        if (idx >= 0) {
+            all[idx] = nextProgress;
+        } else {
+            all.push(nextProgress);
+        }
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+    }
+
+    function renderNotFound() {
+        const container = document.querySelector('main .container');
+        container.innerHTML = `
+            <div class="empty-state" style="margin-top:2rem;">
+                <div class="empty-state-icon">📚</div>
+                <h2 class="empty-state-title">Curso no encontrado</h2>
+                <p class="empty-state-desc">El curso solicitado no existe o el enlace es incorrecto.</p>
+                <a href="/pages/cursos/" class="btn btn-primary">Ver todos los cursos</a>
+            </div>
+        `;
+    }
+
+    function renderCourse() {
+        if (!course) {
+            renderNotFound();
+            return;
+        }
+
+        const orderedLessons = getOrderedLessons();
+        if (!activeLessonId && orderedLessons.length > 0) {
+            activeLessonId = orderedLessons[0].lessonId;
+        }
+
+        document.title = `${course.title} - IAFACIL.HELP`;
+
+        const progress = getCourseProgress();
+        const completedLessons = progress.completed_lessons || [];
+        const pct = Math.round((completedLessons.length / Math.max(course.totalLessons, 1)) * 100);
+
+        const categoryEl = document.getElementById('courseCategory');
+        categoryEl.textContent = `${course.categoryIcon} ${course.categoryLabel}`;
+        categoryEl.className = `course-category category-badge-${course.category}`;
+
+        document.getElementById('courseTitle').textContent = course.title;
+        document.getElementById('courseDescription').textContent = course.description;
+        document.getElementById('courseLevel').textContent = `${course.levelIcon} ${course.levelLabel}`;
+        document.getElementById('courseLessons').textContent = `📖 ${course.totalLessons} lecciones`;
+        document.getElementById('courseProgressText').textContent = `✅ ${completedLessons.length}/${course.totalLessons} completadas`;
+        document.getElementById('courseProgressFill').style.width = `${pct}%`;
+
+        const moduleList = document.getElementById('moduleList');
+        moduleList.innerHTML = course.modules.map((module, moduleIndex) => {
+            const lessonsHtml = module.lessons.map((lessonId, lessonIndex) => {
+                const lessonData = getLessonContent(course.id, lessonId);
+                const isDone = completedLessons.includes(lessonId);
+                const isActive = lessonId === activeLessonId;
+                return `
+                    <div class="lesson-item ${isDone ? 'completed' : ''} ${isActive ? 'current' : ''}" data-lesson-id="${lessonId}" data-action="open-lesson">
+                        <div class="lesson-status-icon">${isDone ? '✓' : '○'}</div>
+                        <div class="lesson-info">
+                            <div class="lesson-title">Leccion ${moduleIndex + 1}.${lessonIndex + 1}: ${lessonData?.title || toReadable(lessonId)}</div>
+                            <div class="lesson-duration">${lessonData?.durationMinutes || 15} min · ${module.title}</div>
+                        </div>
+                        <div style="display:flex; gap:0.5rem;">
+                            <button class="btn btn-sm btn-outline" data-action="open-lesson" data-lesson-id="${lessonId}">
+                                Ver
+                            </button>
+                            <button class="btn btn-sm ${isDone ? 'btn-secondary' : 'btn-outline'}" data-action="toggle-lesson" data-lesson-id="${lessonId}">
+                                ${isDone ? 'Completada' : 'Marcar'}
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            const doneInModule = module.lessons.filter(lesson => completedLessons.includes(lesson)).length;
+            return `
+                <article class="module-item">
+                    <div class="module-header">
+                        <div class="module-title">📦 ${module.title}</div>
+                        <div class="module-progress">${doneInModule}/${module.lessons.length}</div>
+                    </div>
+                    <div class="module-lessons">${lessonsHtml}</div>
+                </article>
+            `;
+        }).join('');
+
+        renderLessonReader();
+    }
+
+    function renderLessonReader() {
+        const reader = document.getElementById('lessonReader');
+        if (!reader || !course) return;
+
+        const lessonData = getLessonContent(course.id, activeLessonId);
+
+        if (!lessonData) {
+            reader.innerHTML = '<p class="text-muted">No hay contenido disponible para esta leccion.</p>';
+            return;
+        }
+
+        const progress = getCourseProgress();
+        const completed = (progress.completed_lessons || []).includes(activeLessonId);
+        const sectionsHtml = (lessonData.sections || []).map(section => `
+            <article style="margin-bottom:1rem;">
+                <h4 style="margin-bottom:0.4rem;">${section.heading}</h4>
+                <p class="text-muted">${section.content}</p>
+            </article>
+        `).join('');
+
+        const objectivesHtml = (lessonData.objectives || []).map(item => `<li>${item}</li>`).join('');
+        const checklistHtml = (lessonData.checklist || []).map(item => `<li>${item}</li>`).join('');
+
+        reader.innerHTML = `
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; margin-bottom:1rem;">
+                <div>
+                    <p class="text-muted text-sm" style="margin-bottom:0.25rem;">${lessonData.moduleTitle}</p>
+                    <h3 style="margin-bottom:0.25rem;">${lessonData.title}</h3>
+                    <p class="text-muted text-sm">⏱️ ${lessonData.durationMinutes} min</p>
+                </div>
+                <button class="btn ${completed ? 'btn-secondary' : 'btn-primary'}" data-action="toggle-lesson" data-lesson-id="${lessonData.id}">
+                    ${completed ? 'Leccion completada' : 'Marcar como completada'}
+                </button>
+            </div>
+
+            <p style="margin-bottom:1rem;">${lessonData.summary}</p>
+
+            <div class="card" style="padding:1rem; margin-bottom:1rem;">
+                <h4 style="margin-bottom:0.5rem;">Objetivos de aprendizaje</h4>
+                <ul style="padding-left:1.2rem; list-style:disc;">${objectivesHtml}</ul>
+            </div>
+
+            ${sectionsHtml}
+
+            <div class="card" style="padding:1rem; margin-bottom:1rem;">
+                <h4 style="margin-bottom:0.5rem;">Actividad practica</h4>
+                <p class="text-muted">${lessonData.activity}</p>
+                <p style="margin-top:0.5rem;"><strong>Entregable:</strong> ${lessonData.deliverable}</p>
+            </div>
+
+            <div class="card" style="padding:1rem; margin-bottom:1rem;">
+                <h4 style="margin-bottom:0.5rem;">Checklist de calidad</h4>
+                <ul style="padding-left:1.2rem; list-style:disc;">${checklistHtml}</ul>
+            </div>
+
+            <div class="card" style="padding:1rem;">
+                <h4 style="margin-bottom:0.5rem;">Prompt de arranque</h4>
+                <p class="text-muted" style="font-family:monospace;">${lessonData.promptStarter}</p>
+            </div>
+        `;
+
+        const nextParams = new URLSearchParams(window.location.search);
+        nextParams.set('id', course.id);
+        nextParams.set('lesson', lessonData.id);
+        window.history.replaceState({}, '', `/pages/cursos/curso.html?${nextParams.toString()}`);
+    }
+
+    function toggleLesson(lessonId) {
+        if (!course) return;
+
+        const current = getCourseProgress();
+        const done = new Set(current.completed_lessons || []);
+
+        if (done.has(lessonId)) {
+            done.delete(lessonId);
+        } else {
+            done.add(lessonId);
+        }
+
+        const completedLessons = [...done];
+        const next = {
+            ...current,
+            course_id: courseId,
+            completed_lessons: completedLessons,
+            total_lessons: course.totalLessons,
+            updated_at: new Date().toISOString(),
+            completed: completedLessons.length >= course.totalLessons
+        };
+
+        saveCourseProgress(next);
+        renderCourse();
+    }
+
+    document.addEventListener('click', (e) => {
+        const openBtn = e.target.closest('[data-action="open-lesson"]');
+        if (openBtn) {
+            activeLessonId = openBtn.dataset.lessonId;
+            renderCourse();
+            return;
+        }
+
+        const btn = e.target.closest('[data-action="toggle-lesson"]');
+        if (!btn) return;
+        toggleLesson(btn.dataset.lessonId);
+    });
+
+    const resetBtn = document.getElementById('btnResetProgress');
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            const all = getAllProgress().filter(p => p.course_id !== courseId);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+            renderCourse();
+            toast.success('Progreso reiniciado');
+        });
+    }
+
+    renderCourse();
+</script>
+
+</body>
+</html>

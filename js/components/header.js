@@ -58,7 +58,6 @@ function renderGuestActions() {
 
 function renderUserActions() {
     return `
-        <a href="${ROUTES.DASHBOARD}" class="btn btn-sm btn-outline">Dashboard</a>
         <button class="header-avatar" id="headerAvatar" aria-label="Mi perfil">
             <span id="headerAvatarText">👤</span>
         </button>`;

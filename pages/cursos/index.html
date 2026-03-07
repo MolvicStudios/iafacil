@@ -99,7 +99,7 @@
                 : 0;
 
             return `
-            <a href="/pages/cursos/${course.id}.html" class="course-card animate-fadeInUp delay-${(i % 6) + 1}">
+            <a href="/pages/cursos/curso.html?id=${course.id}" class="course-card animate-fadeInUp delay-${(i % 6) + 1}">
                 <div class="course-card-badge category-badge-${course.category}">${course.categoryIcon} ${course.categoryLabel}</div>
                 <h3 class="course-card-title">${course.title}</h3>
                 <p class="course-card-desc">${course.description}</p>

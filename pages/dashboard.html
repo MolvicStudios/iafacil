@@ -150,6 +150,7 @@
     import { authService } from '/js/services/auth.js';
     import { db } from '/js/services/database.js';
     import { gamification } from '/js/services/gamification.js';
+    import { getCourseById } from '/js/data/courses.js';
     import { renderHeader } from '/js/components/header.js';
     import { renderFooter } from '/js/components/footer.js';
     import { renderBottomNav } from '/js/components/bottomNav.js';
@@ -252,17 +253,20 @@
         const container = document.getElementById('continueLearning');
         const recent = progressList.slice(0, 3);
 
-        container.innerHTML = recent.map(p => `
-            <a href="/pages/cursos/${p.course_id}.html" class="continue-card">
+        container.innerHTML = recent.map(p => {
+            const course = getCourseById(p.course_id);
+            return `
+            <a href="/pages/cursos/curso.html?id=${p.course_id}" class="continue-card">
                 <div class="continue-info">
-                    <h3 class="continue-title">${p.course_id}</h3>
+                    <h3 class="continue-title">${course ? course.title : p.course_id}</h3>
                     <div class="progress-bar">
                         <div class="progress-bar-fill" style="width: ${p.completed_lessons?.length ? Math.round((p.completed_lessons.length / (p.total_lessons || 10)) * 100) : 0}%"></div>
                     </div>
                 </div>
                 <span class="continue-arrow">→</span>
             </a>
-        `).join('');
+        `;
+        }).join('');
     }
 
     function renderCalendar(activeDates) {
