@@ -4,17 +4,17 @@
    ═══════════════════════════════════════════════════════════ */
 
 :root {
-    /* ─── Colores principales ─── */
-    --color-primary: #6C5CE7;
-    --color-primary-light: #A29BFE;
-    --color-primary-dark: #5541D7;
+    /* ─── Colores principales (3 colores: verde, azul oscuro, blanco) ─── */
+    --color-primary: #00B894;
+    --color-primary-light: #55EFC4;
+    --color-primary-dark: #00A381;
 
-    --color-secondary: #00D9A5;
-    --color-secondary-light: #55EFC4;
-    --color-secondary-dark: #00B894;
+    --color-secondary: #2D3436;
+    --color-secondary-light: #636E72;
+    --color-secondary-dark: #1A1A2E;
 
-    --color-accent: #FF6B9D;
-    --color-accent-alt: #FDCB6E;
+    --color-accent: #0984E3;
+    --color-accent-alt: #74B9FF;
 
     /* ─── Colores por categoría ─── */
     --color-texto: #3498DB;
@@ -22,7 +22,7 @@
     --color-audio: #00CEC9;
     --color-video: #FF7675;
     --color-auto: #FDCB6E;
-    --color-agentes: #6C5CE7;
+    --color-agentes: #00B894;
 
     /* ─── Fondos ─── */
     --bg-primary: #FFFFFF;
@@ -38,10 +38,10 @@
     --text-inverse: #FFFFFF;
 
     /* ─── Estados ─── */
-    --color-success: #00D9A5;
+    --color-success: #00B894;
     --color-warning: #FDCB6E;
     --color-error: #FF6B6B;
-    --color-info: #74B9FF;
+    --color-info: #0984E3;
 
     /* ─── Bordes ─── */
     --border-color: #E0E6ED;
@@ -51,9 +51,9 @@
     --border-radius-xl: 30px;
 
     /* ─── Sombras ─── */
-    --shadow-sm: 0 2px 8px rgba(108, 92, 231, 0.08);
-    --shadow-md: 0 4px 20px rgba(108, 92, 231, 0.12);
-    --shadow-lg: 0 8px 40px rgba(108, 92, 231, 0.16);
+    --shadow-sm: 0 2px 8px rgba(0, 184, 148, 0.08);
+    --shadow-md: 0 4px 20px rgba(0, 184, 148, 0.12);
+    --shadow-lg: 0 8px 40px rgba(0, 184, 148, 0.16);
     --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.05);
 
     /* ─── Tipografía ─── */

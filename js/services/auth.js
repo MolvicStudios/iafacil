@@ -68,11 +68,6 @@ class AuthService {
         return await auth.signIn(email, password);
     }
 
-    /** Login con Google */
-    async loginWithGoogle() {
-        return await auth.signInWithGoogle();
-    }
-
     /** Logout */
     async logout() {
         await auth.signOut();

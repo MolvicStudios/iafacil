@@ -19,7 +19,7 @@ export const LEVELS = [
 
 /* ─── Categorías de herramientas / cursos ─── */
 export const CATEGORIES = {
-    texto:    { label: 'Texto',        color: '#6C5CE7', icon: '✍️'  },
+    texto:    { label: 'Texto',        color: '#00B894', icon: '✍️'  },
     imagen:   { label: 'Imagen',       color: '#00D9A5', icon: '🎨'  },
     audio:    { label: 'Audio',        color: '#FDCB6E', icon: '🎵'  },
     video:    { label: 'Video',        color: '#FF6B9D', icon: '🎬'  },

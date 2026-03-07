@@ -164,7 +164,7 @@ class GamificationService {
         container.className = 'confetti-container';
         document.body.appendChild(container);
 
-        const colors = ['#6C5CE7', '#00D9A5', '#FF6B9D', '#FDCB6E', '#74B9FF', '#A29BFE'];
+        const colors = ['#00B894', '#0984E3', '#2D3436', '#FDCB6E', '#74B9FF', '#00D9A5'];
 
         for (let i = 0; i < 50; i++) {
             const piece = document.createElement('div');

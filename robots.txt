@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /pages/auth/
+Disallow: /pages/dashboard.html
+Disallow: /pages/perfil.html
+Disallow: /pages/certificados.html
 
 Sitemap: https://iafacil.help/sitemap.xml

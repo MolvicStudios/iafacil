@@ -34,18 +34,6 @@ export const auth = {
         return data;
     },
 
-    /** Iniciar sesión con Google OAuth */
-    async signInWithGoogle() {
-        const { data, error } = await supabase.auth.signInWithOAuth({
-            provider: 'google',
-            options: {
-                redirectTo: `${window.location.origin}/pages/dashboard.html`
-            }
-        });
-        if (error) throw error;
-        return data;
-    },
-
     /** Cerrar sesión */
     async signOut() {
         const { error } = await supabase.auth.signOut();

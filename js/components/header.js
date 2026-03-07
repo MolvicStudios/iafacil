@@ -61,9 +61,7 @@ function renderAppNav() {
 }
 
 function renderGuestActions() {
-    return `
-        <a href="${ROUTES.LOGIN}" class="btn btn-outline">Iniciar sesión</a>
-        <a href="${ROUTES.REGISTER}" class="btn btn-primary">Comenzar gratis</a>`;
+    return '';
 }
 
 function renderUserActions() {

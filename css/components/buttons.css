@@ -141,25 +141,6 @@
     width: 100%;
 }
 
-/* Botón Google OAuth */
-.btn-google {
-    background: white;
-    color: var(--text-primary);
-    border: 2px solid var(--border-color);
-    box-shadow: 0 2px 0 var(--border-color);
-}
-
-.btn-google:hover:not(:disabled) {
-    background: var(--bg-secondary);
-    transform: translateY(-1px);
-    box-shadow: 0 3px 0 var(--border-color);
-}
-
-.btn-google img {
-    width: 20px;
-    height: 20px;
-}
-
 /* Loading state */
 .btn-loading {
     position: relative;

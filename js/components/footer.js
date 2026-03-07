@@ -27,16 +27,6 @@ export function renderFooter(container) {
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-title">Comunidad</h4>
-                    <ul class="footer-links">
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">Discord</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
                     <h4 class="footer-title">Legal</h4>
                     <ul class="footer-links">
                         <li><a href="/pages/legal/privacidad.html">Privacidad</a></li>
@@ -47,7 +37,7 @@ export function renderFooter(container) {
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; ${new Date().getFullYear()} IAFACIL.HELP — Hecho con 💜 para la comunidad hispanohablante</p>
+                <p>&copy; ${new Date().getFullYear()} IAFACIL.HELP — Hecho con � para hispanohablantes</p>
             </div>
         </div>
     </footer>`;

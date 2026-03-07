@@ -4,7 +4,7 @@
 
 /* ─── Welcome banner ─── */
 .dashboard-welcome {
-    background: linear-gradient(135deg, var(--color-primary) 0%, #5541D7 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0984E3 100%);
     color: white;
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-xl);

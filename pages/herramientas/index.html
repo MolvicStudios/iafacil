@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herramientas — IAFACIL.HELP</title>
+    <meta name="description" content="Herramientas gratuitas de IA: constructor de prompts, analizador, comparador de IAs, generador de imágenes y más. Todo en español.">
+    <meta name="keywords" content="herramientas IA gratis, tools inteligencia artificial, prompts gratis, herramientas ChatGPT">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Herramientas — IAFACIL.HELP">
+    <meta property="og:description" content="Herramientas gratuitas de IA: constructor de prompts, analizador, comparador de IAs, generador de imágenes y más. Todo en español.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iafacil.help/pages/herramientas/">
+    <meta property="og:image" content="https://iafacil.help/assets/images/og-image.png">
+    <link rel="canonical" href="https://iafacil.help/pages/herramientas/">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="stylesheet" href="/css/main.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1513893788851225" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -16,38 +27,67 @@
         <h1 class="section-title animate-fadeInUp">Herramientas interactivas</h1>
         <p class="section-subtitle animate-fadeInUp delay-1">Aprende haciendo con nuestras 7 herramientas gratuitas</p>
 
-        <div class="cards-grid" style="margin-top:2rem;">
-            <a href="/pages/herramientas/prompt-builder.html" class="tool-card animate-fadeInUp delay-1">
+        <!-- Search + Filter Bar -->
+        <div class="animate-fadeInUp delay-2" style="margin-top:2rem; margin-bottom:1.5rem;">
+            <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+                <input class="form-input" id="toolSearch" placeholder="🔍 Buscar herramienta..." style="flex:1; min-width:200px;" />
+                <div style="display:flex; gap:0.5rem; flex-wrap:wrap;" id="toolFilters">
+                    <button class="btn btn-sm btn-primary filter-btn active" data-filter="all">Todas</button>
+                    <button class="btn btn-sm btn-outline filter-btn" data-filter="prompts">✍️ Prompts</button>
+                    <button class="btn btn-sm btn-outline filter-btn" data-filter="imagen">🎨 Imagen</button>
+                    <button class="btn btn-sm btn-outline filter-btn" data-filter="analisis">🔍 Análisis</button>
+                    <button class="btn btn-sm btn-outline filter-btn" data-filter="flujos">⚡ Flujos</button>
+                    <button class="btn btn-sm btn-outline filter-btn" data-filter="referencia">📖 Referencia</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools Nav Menu -->
+        <nav class="animate-fadeInUp delay-2" style="background:var(--bg-secondary); border-radius:var(--radius-lg); padding:1rem; margin-bottom:2rem;">
+            <h4 style="margin-bottom:0.75rem; color:var(--text-secondary);">⚡ Acceso rápido</h4>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <a href="/pages/herramientas/prompt-builder.html" class="btn btn-sm btn-outline">🔧 Constructor</a>
+                <a href="/pages/herramientas/generador-imagenes.html" class="btn btn-sm btn-outline">🎨 Imágenes</a>
+                <a href="/pages/herramientas/analizador-prompts.html" class="btn btn-sm btn-outline">🔍 Analizador</a>
+                <a href="/pages/herramientas/comparador-ias.html" class="btn btn-sm btn-outline">⚖️ Comparador</a>
+                <a href="/pages/herramientas/workflow-builder.html" class="btn btn-sm btn-outline">🔄 Workflows</a>
+                <a href="/pages/herramientas/biblioteca-prompts.html" class="btn btn-sm btn-outline">📚 Biblioteca</a>
+                <a href="/pages/glosario.html" class="btn btn-sm btn-outline">📖 Glosario</a>
+            </div>
+        </nav>
+
+        <div class="cards-grid" id="toolsGrid" style="margin-bottom:2rem;">
+            <a href="/pages/herramientas/prompt-builder.html" class="tool-card animate-fadeInUp delay-1" data-cat="prompts">
                 <div class="tool-card-icon">🔧</div>
                 <h3 class="tool-card-title">Constructor de Prompts</h3>
                 <p class="tool-card-desc">Crea prompts efectivos arrastrando bloques. Sin escribir desde cero.</p>
             </a>
-            <a href="/pages/herramientas/generador-imagenes.html" class="tool-card animate-fadeInUp delay-2">
+            <a href="/pages/herramientas/generador-imagenes.html" class="tool-card animate-fadeInUp delay-2" data-cat="imagen">
                 <div class="tool-card-icon">🎨</div>
                 <h3 class="tool-card-title">Generador de Imágenes</h3>
                 <p class="tool-card-desc">Genera prompts optimizados para Midjourney, DALL-E y Stable Diffusion.</p>
             </a>
-            <a href="/pages/herramientas/analizador-prompts.html" class="tool-card animate-fadeInUp delay-3">
+            <a href="/pages/herramientas/analizador-prompts.html" class="tool-card animate-fadeInUp delay-3" data-cat="analisis">
                 <div class="tool-card-icon">🔍</div>
                 <h3 class="tool-card-title">Analizador de Prompts</h3>
                 <p class="tool-card-desc">Pega tu prompt y recibe puntuación con sugerencias de mejora.</p>
             </a>
-            <a href="/pages/herramientas/comparador-ias.html" class="tool-card animate-fadeInUp delay-4">
+            <a href="/pages/herramientas/comparador-ias.html" class="tool-card animate-fadeInUp delay-4" data-cat="analisis">
                 <div class="tool-card-icon">⚖️</div>
                 <h3 class="tool-card-title">Comparador de IAs</h3>
                 <p class="tool-card-desc">Compara ChatGPT, Claude, Gemini y más lado a lado.</p>
             </a>
-            <a href="/pages/herramientas/workflow-builder.html" class="tool-card animate-fadeInUp delay-5">
+            <a href="/pages/herramientas/workflow-builder.html" class="tool-card animate-fadeInUp delay-5" data-cat="flujos">
                 <div class="tool-card-icon">🔄</div>
                 <h3 class="tool-card-title">Workflow Builder</h3>
                 <p class="tool-card-desc">Diseña flujos de automatización combinando herramientas de IA.</p>
             </a>
-            <a href="/pages/herramientas/biblioteca-prompts.html" class="tool-card animate-fadeInUp delay-6">
+            <a href="/pages/herramientas/biblioteca-prompts.html" class="tool-card animate-fadeInUp delay-6" data-cat="prompts">
                 <div class="tool-card-icon">📚</div>
                 <h3 class="tool-card-title">Biblioteca de Prompts</h3>
                 <p class="tool-card-desc">+500 prompts probados organizados por categoría y profesión.</p>
             </a>
-            <a href="/pages/glosario.html" class="tool-card animate-fadeInUp delay-7">
+            <a href="/pages/glosario.html" class="tool-card animate-fadeInUp delay-7" data-cat="referencia">
                 <div class="tool-card-icon">📖</div>
                 <h3 class="tool-card-title">Glosario IA</h3>
                 <p class="tool-card-desc">Todos los términos de IA explicados de forma simple.</p>
@@ -67,6 +107,38 @@
     renderHeader(document.getElementById('headerContainer'));
     renderFooter(document.getElementById('footerContainer'));
     renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    // Filter logic
+    const grid = document.getElementById('toolsGrid');
+    const cards = grid.querySelectorAll('.tool-card');
+    const searchInput = document.getElementById('toolSearch');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    function filterTools() {
+        const term = searchInput.value.toLowerCase();
+        const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+
+        cards.forEach(card => {
+            const title = card.querySelector('.tool-card-title').textContent.toLowerCase();
+            const desc = card.querySelector('.tool-card-desc').textContent.toLowerCase();
+            const cat = card.dataset.cat;
+
+            const matchesSearch = !term || title.includes(term) || desc.includes(term);
+            const matchesFilter = activeFilter === 'all' || cat === activeFilter;
+
+            card.style.display = matchesSearch && matchesFilter ? '' : 'none';
+        });
+    }
+
+    searchInput.addEventListener('input', filterTools);
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => { b.classList.remove('btn-primary', 'active'); b.classList.add('btn-outline'); });
+            btn.classList.remove('btn-outline');
+            btn.classList.add('btn-primary', 'active');
+            filterTools();
+        });
+    });
 </script>
 
 </body>
