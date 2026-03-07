@@ -1,3 +1,6046 @@
+                                                                                    /* ═══════════════════════════════════════════
+                                                                                       CURSO 25: ia-ciberseguridad-basico
+                                                                                       Ciberseguridad con IA: Primeros pasos
+                                                                                       Nivel: Principiante | 8 lecciones
+                                                                                       ═══════════════════════════════════════════ */
+                                                                                    "ia-ciberseguridad-basico": {
+                                                                                        "intro-ciberseguridad-ia": {
+                                                                                            "id": "intro-ciberseguridad-ia",
+                                                                                            "title": "Introducción a la ciberseguridad con IA",
+                                                                                            "moduleTitle": "Fundamentos de ciberseguridad IA",
+                                                                                            "durationMinutes": 10,
+                                                                                            "summary": "Descubre cómo la inteligencia artificial está transformando la ciberseguridad y aprende los conceptos básicos para proteger sistemas y datos con IA.",
+                                                                                            "objectives": [
+                                                                                                "Comprender el impacto de la IA en la ciberseguridad.",
+                                                                                                "Identificar aplicaciones básicas de IA en la protección digital.",
+                                                                                                "Reconocer ventajas y desafíos iniciales."
+                                                                                            ],
+                                                                                            "sections": [
+                                                                                                { "heading": "¿Qué es la ciberseguridad con IA?", "content": "La IA se utiliza para detectar amenazas, analizar patrones y responder a incidentes de seguridad de forma automatizada." },
+                                                                                                { "heading": "Ventajas principales", "content": "Detección temprana de amenazas, respuesta rápida, análisis de grandes volúmenes de datos." },
+                                                                                                { "heading": "Desafíos y ética", "content": "Privacidad, sesgos en los modelos y dependencia de sistemas automatizados." }
+                                                                                            ],
+                                                                                            "activity": "Investiga un caso real donde la IA haya prevenido un ciberataque y presenta un resumen.",
+                                                                                            "deliverable": "Resumen del caso y análisis de la intervención de la IA.",
+                                                                                            "checklist": [
+                                                                                                "Investigué un caso real de ciberseguridad IA.",
+                                                                                                "Analicé la intervención de la IA.",
+                                                                                                "Reflexioné sobre los desafíos éticos."
+                                                                                            ],
+                                                                                            "promptStarter": "¿Cómo crees que la IA puede mejorar la protección de datos personales?",
+                                                                                            "promptExamples": [
+                                                                                                { "title": "Prompt para análisis de amenazas", "prompt": "Sugiere cómo la IA puede detectar patrones de ataques en redes empresariales." },
+                                                                                                { "title": "Prompt para ética en IA", "prompt": "¿Qué prompts usarías para analizar los riesgos éticos de la automatización en ciberseguridad?" },
+                                                                                                { "title": "Prompt para casos reales", "prompt": "Explica cómo la IA ayudó a prevenir un ataque de ransomware en una empresa." }
+                                                                                            ]
+                                                                                        },
+                                                                                        "herramientas-ciberseguridad": {
+                                                                                            "id": "herramientas-ciberseguridad",
+                                                                                            "title": "Herramientas básicas de ciberseguridad IA",
+                                                                                            "moduleTitle": "Fundamentos de ciberseguridad IA",
+                                                                                            "durationMinutes": 10,
+                                                                                            "summary": "Aprende a utilizar las principales herramientas de ciberseguridad potenciadas por IA y experimenta con simulaciones de amenazas.",
+                                                                                            "objectives": [
+                                                                                                "Identificar herramientas populares de ciberseguridad IA.",
+                                                                                                "Simular amenazas y respuestas automáticas.",
+                                                                                                "Evaluar la efectividad de las herramientas IA."
+                                                                                            ],
+                                                                                            "sections": [
+                                                                                                { "heading": "Herramientas recomendadas", "content": "Darktrace, Vectra AI, CrowdStrike, entre otras." },
+                                                                                                { "heading": "Simulación de amenazas", "content": "Cómo usar entornos de prueba para simular ataques y respuestas automáticas." },
+                                                                                                { "heading": "Evaluación de resultados", "content": "Analiza la rapidez y precisión de la detección y respuesta IA." }
+                                                                                            ],
+                                                                                            "activity": "Simula un ataque de phishing y observa cómo una herramienta IA lo detecta y responde.",
+                                                                                            "deliverable": "Informe de la simulación y análisis de la respuesta IA.",
+                                                                                            "checklist": [
+                                                                                                "Probé al menos una herramienta de ciberseguridad IA.",
+                                                                                                "Simulé una amenaza y observé la respuesta.",
+                                                                                                "Analicé la efectividad de la herramienta."
+                                                                                            ],
+                                                                                            "promptStarter": "¿Qué prompt usarías para simular un ataque de phishing y su detección con IA?",
+                                                                                            "promptExamples": [
+                                                                                                { "title": "Prompt para simulación de ataque", "prompt": "Simula un ataque de phishing dirigido a empleados de una empresa y describe cómo la IA lo detecta." },
+                                                                                                { "title": "Prompt para análisis de respuesta", "prompt": "Crea un prompt para analizar la rapidez de respuesta de una herramienta IA ante un ataque de malware." },
+                                                                                                { "title": "Prompt para evaluación de efectividad", "prompt": "Sugiere un prompt para comparar la efectividad de dos herramientas IA en la detección de amenazas." }
+                                                                                            ]
+                                                                                        },
+                                                                                        "tipos-amenazas": {
+                                                                                            "id": "tipos-amenazas",
+                                                                                            "title": "Tipos de amenazas y ataques digitales",
+                                                                                            "moduleTitle": "Fundamentos de ciberseguridad IA",
+                                                                                            "durationMinutes": 10,
+                                                                                            "summary": "Conoce los principales tipos de amenazas digitales y cómo la IA ayuda a identificarlas y prevenirlas.",
+                                                                                            "objectives": [
+                                                                                                "Identificar amenazas comunes en el entorno digital.",
+                                                                                                "Comprender cómo la IA detecta patrones de ataque.",
+                                                                                                "Analizar casos de éxito en prevención IA."
+                                                                                            ],
+                                                                                            "sections": [
+                                                                                                { "heading": "Amenazas comunes", "content": "Phishing, malware, ransomware, ataques DDoS, entre otros." },
+                                                                                                { "heading": "Detección basada en IA", "content": "La IA analiza grandes volúmenes de datos para identificar patrones anómalos y prevenir ataques." },
+                                                                                                { "heading": "Casos de éxito", "content": "Ejemplos reales donde la IA ha prevenido ataques y minimizado daños." }
+                                                                                            ],
+                                                                                            "activity": "Investiga un tipo de amenaza digital y explica cómo la IA puede ayudar a prevenirla.",
+                                                                                            "deliverable": "Informe sobre la amenaza seleccionada y el rol de la IA en su prevención.",
+                                                                                            "checklist": [
+                                                                                                "Identifiqué una amenaza digital relevante.",
+                                                                                                "Expliqué el rol de la IA en la prevención.",
+                                                                                                "Redacté un informe claro y conciso."
+                                                                                            ],
+                                                                                            "promptStarter": "¿Cómo pedirías a la IA que detecte un ataque de ransomware en tiempo real?",
+                                                                                            "promptExamples": [
+                                                                                                { "title": "Prompt para detección de ransomware", "prompt": "Genera un prompt para que la IA identifique archivos cifrados sospechosos en una red empresarial." },
+                                                                                                { "title": "Prompt para análisis de patrones", "prompt": "¿Qué prompts usarías para analizar patrones de tráfico anómalo en una red?" },
+                                                                                                { "title": "Prompt para casos de éxito", "prompt": "Sugiere un prompt para documentar un caso de éxito en prevención de ataques con IA." }
+                                                                                            ]
+                                                                                        },
+                                                                                        "proteccion-datos": {
+                                                                                            "id": "proteccion-datos",
+                                                                                            "title": "Protección de datos personales con IA",
+                                                                                            "moduleTitle": "Fundamentos de ciberseguridad IA",
+                                                                                            "durationMinutes": 10,
+                                                                                            "summary": "Aprende cómo la IA puede ayudar a proteger la privacidad y los datos personales en entornos digitales.",
+                                                                                            "objectives": [
+                                                                                                "Proteger datos personales usando IA.",
+                                                                                                "Identificar riesgos de privacidad.",
+                                                                                                "Aplicar buenas prácticas de protección digital."
+                                                                                            ],
+                                                                                            "sections": [
+                                                                                                { "heading": "Privacidad y protección de datos", "content": "La IA puede anonimizar datos, detectar accesos no autorizados y prevenir fugas de información." },
+                                                                                                { "heading": "Riesgos y desafíos", "content": "Sesgos en los modelos, errores de clasificación y dependencia de sistemas automatizados." },
+                                                                                                { "heading": "Buenas prácticas", "content": "Uso de cifrado, autenticación multifactor y monitoreo constante con IA." }
+                                                                                            ],
+                                                                                            "activity": "Simula un escenario donde la IA detecta un acceso no autorizado a datos personales y describe la respuesta automática.",
+                                                                                            "deliverable": "Descripción del escenario y análisis de la respuesta IA.",
+                                                                                            "checklist": [
+                                                                                                "Simulé un acceso no autorizado.",
+                                                                                                "Describí la respuesta automática de la IA.",
+                                                                                                "Analicé la efectividad de la protección."
+                                                                                            ],
+                                                                                            "promptStarter": "¿Qué prompt usarías para que la IA monitoree accesos a datos sensibles?",
+                                                                                            "promptExamples": [
+                                                                                                { "title": "Prompt para monitoreo de accesos", "prompt": "Genera un prompt para que la IA alerte sobre accesos inusuales a bases de datos de clientes." },
+                                                                                                { "title": "Prompt para anonimización de datos", "prompt": "¿Qué prompts usarías para pedir a la IA que anonimice información personal en grandes volúmenes de datos?" },
+                                                                                                { "title": "Prompt para buenas prácticas", "prompt": "Sugiere un prompt para documentar buenas prácticas de protección de datos con IA." }
+                                                                                            ]
+                                                                                        },
+                                                                                        "respuestas-automatizadas": {
+                                                                                            "id": "respuestas-automatizadas",
+                                                                                            "title": "Respuestas automatizadas a incidentes",
+                                                                                            "moduleTitle": "Fundamentos de ciberseguridad IA",
+                                                                                            "durationMinutes": 10,
+                                                                                            "summary": "Descubre cómo la IA puede automatizar la respuesta a incidentes de seguridad, minimizando daños y acelerando la recuperación.",
+                                                                                            "objectives": [
+                                                                                                "Automatizar respuestas a incidentes con IA.",
+                                                                                                "Reducir el tiempo de reacción ante amenazas.",
+                                                                                                "Evaluar la efectividad de la automatización IA."
+                                                                                            ],
+                                                                                            "sections": [
+                                                                                                { "heading": "Automatización de respuestas", "content": "La IA puede aislar sistemas afectados, bloquear accesos y restaurar servicios automáticamente." },
+                                                                                                { "heading": "Ventajas y limitaciones", "content": "Rapidez, reducción de errores humanos, pero riesgo de respuestas excesivas o insuficientes." },
+                                                                                                { "heading": "Casos de uso", "content": "Ejemplos de incidentes resueltos automáticamente por IA en empresas y organizaciones." }
+                                                                                            ],
+                                                                                            "activity": "Simula un incidente de malware y describe cómo la IA responde automáticamente para contener la amenaza.",
+                                                                                            "deliverable": "Descripción del incidente y análisis de la respuesta automatizada.",
+                                                                                            "checklist": [
+                                                                                                "Simulé un incidente de malware.",
+                                                                                                "Describí la respuesta automática de la IA.",
+                                                                                                "Analicé la efectividad de la automatización."
+                                                                                            ],
+                                                                                            "promptStarter": "¿Qué prompt usarías para que la IA bloquee automáticamente accesos sospechosos?",
+                                                                                            "promptExamples": [
+                                                                                                { "title": "Prompt para bloqueo automático", "prompt": "Genera un prompt para que la IA bloquee accesos desde direcciones IP sospechosas en tiempo real." },
+                                                                                                { "title": "Prompt para restauración automática", "prompt": "¿Qué prompts usarías para pedir a la IA que restaure servicios tras un ataque?" },
+                                                                                                { "title": "Prompt para análisis de incidentes", "prompt": "Sugiere un prompt para documentar la respuesta automática de la IA ante un incidente de seguridad." }
+                                                                                            ]
+                                                                                        },
+                                                                                        "colaboracion-ciberseguridad": {
+                                                                                            "id": "colaboracion-ciberseguridad",
+                                                                                            "title": "Colaboración y simulación de ataques con IA",
+                                                                                            "moduleTitle": "Fundamentos de ciberseguridad IA",
+                                                                                            "durationMinutes": 10,
+                                                                                            "summary": "Explora cómo la IA puede colaborar con equipos humanos en la simulación y prevención de ataques, mejorando la preparación y la respuesta.",
+                                                                                            "objectives": [
+                                                                                                "Colaborar con IA en simulaciones de ciberataques.",
+                                                                                                "Mejorar la preparación ante incidentes.",
+                                                                                                "Reflexionar sobre la co-creación de estrategias de defensa."
+                                                                                            ],
+                                                                                            "sections": [
+                                                                                                { "heading": "Simulación de ataques IA-humano", "content": "La IA puede generar escenarios de ataque para entrenar a equipos humanos y mejorar la respuesta conjunta." },
+                                                                                                { "heading": "Ejemplos de co-creación", "content": "Proyectos donde IA y humanos trabajan juntos: simulacros de phishing, análisis de vulnerabilidades, respuesta a incidentes complejos." },
+                                                                                                { "heading": "Reflexión sobre el proceso", "content": "Analiza cómo la colaboración potencia la defensa y reduce riesgos." }
+                                                                                            ],
+                                                                                            "activity": "Desarrolla una simulación de ataque colaborativa entre IA y equipo humano, documentando cada etapa del proceso.",
+                                                                                            "deliverable": "Informe de la simulación y registro del proceso de co-creación.",
+                                                                                            "checklist": [
+                                                                                                "Colaboré con IA en una simulación de ataque.",
+                                                                                                "Documenté el proceso de co-creación.",
+                                                                                                "Reflexioné sobre la mejora en la defensa."
+                                                                                            ],
+                                                                                            "promptStarter": "¿Cómo organizarías un simulacro de ciberataque colaborativo entre IA y equipo de seguridad?",
+                                                                                            "promptExamples": [
+                                                                                                { "title": "Prompt para simulacro colaborativo", "prompt": "Sugiere un prompt para que IA y humanos simulen juntos un ataque de ransomware y su respuesta." },
+                                                                                                { "title": "Prompt para inspiración compartida", "prompt": "¿Qué prompts usarías para que la IA proponga escenarios de ataque novedosos?" },
+                                                                                                { "title": "Prompt para reflexión defensiva", "prompt": "Explica cómo documentarías el proceso de co-creación de estrategias de defensa." }
+                                                                                            ]
+                                                                                        },
+                                                                                        "etica-ciberseguridad": {
+                                                                                            "id": "etica-ciberseguridad",
+                                                                                            "title": "Ética y privacidad en la ciberseguridad IA",
+                                                                                            "moduleTitle": "Fundamentos de ciberseguridad IA",
+                                                                                            "durationMinutes": 10,
+                                                                                            "summary": "Reflexiona sobre los desafíos éticos y de privacidad en la ciberseguridad con IA y aprende buenas prácticas para proteger los derechos de los usuarios.",
+                                                                                            "objectives": [
+                                                                                                "Identificar riesgos éticos y de privacidad en la ciberseguridad IA.",
+                                                                                                "Aplicar buenas prácticas de protección de derechos.",
+                                                                                                "Fomentar la transparencia y la confianza en sistemas IA."
+                                                                                            ],
+                                                                                            "sections": [
+                                                                                                { "heading": "Riesgos éticos y de privacidad", "content": "Vigilancia excesiva, sesgos en la detección, falta de transparencia en las decisiones automatizadas." },
+                                                                                                { "heading": "Buenas prácticas recomendadas", "content": "Minimizar la recolección de datos, auditar modelos IA, informar a los usuarios sobre el uso de IA en la seguridad." },
+                                                                                                { "heading": "Transparencia y confianza", "content": "La claridad en el funcionamiento de los sistemas IA fortalece la confianza y la protección de derechos." }
+                                                                                            ],
+                                                                                            "activity": "Analiza un caso real de controversia ética en ciberseguridad IA y propone soluciones para evitar problemas similares.",
+                                                                                            "deliverable": "Informe breve sobre el caso, riesgos identificados y recomendaciones de buenas prácticas.",
+                                                                                            "checklist": [
+                                                                                                "Analicé un caso real de ética en ciberseguridad IA.",
+                                                                                                "Identifiqué riesgos y propuse soluciones.",
+                                                                                                "Redacté recomendaciones de buenas prácticas."
+                                                                                            ],
+                                                                                            "promptStarter": "¿Qué medidas tomarías para garantizar la ética y la privacidad en sistemas de ciberseguridad IA?",
+                                                                                            "promptExamples": [
+                                                                                                { "title": "Prompt para derechos de usuario", "prompt": "Redacta un aviso de privacidad para una plataforma de ciberseguridad IA que explique el uso de datos personales." },
+                                                                                                { "title": "Prompt para transparencia", "prompt": "¿Cómo explicarías a los usuarios el funcionamiento de un sistema de detección IA?" },
+                                                                                                { "title": "Prompt para evitar sesgos", "prompt": "Sugiere buenas prácticas para auditar y reducir sesgos en modelos IA de ciberseguridad." }
+                                                                                            ]
+                                                                                        },
+                                                                                        "proyecto-final-ciberseguridad": {
+                                                                                            "id": "proyecto-final-ciberseguridad",
+                                                                                            "title": "Proyecto final: simulación de defensa IA",
+                                                                                            "moduleTitle": "Fundamentos de ciberseguridad IA",
+                                                                                            "durationMinutes": 12,
+                                                                                            "summary": "Aplica lo aprendido creando una simulación de defensa ante ciberataques usando IA, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                                                            "objectives": [
+                                                                                                "Integrar técnicas básicas de ciberseguridad IA en una simulación.",
+                                                                                                "Crear un escenario de defensa ante amenazas digitales.",
+                                                                                                "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                                                            ],
+                                                                                            "sections": [
+                                                                                                { "heading": "Definir el escenario de defensa", "content": "Elige un tipo de amenaza (phishing, malware, DDoS, etc.) y define el objetivo de la simulación: detectar, responder, restaurar servicios, etc." },
+                                                                                                { "heading": "Aplicar técnicas de defensa IA", "content": "Simula la detección y respuesta automática usando herramientas IA. Documenta el proceso y los prompts usados." },
+                                                                                                { "heading": "Presentar y justificar tus elecciones", "content": "Explica por qué elegiste cada herramienta y técnica, y qué aprendiste en el proceso." }
+                                                                                            ],
+                                                                                            "activity": "Crea una simulación de defensa ante un ciberataque usando IA, documentando cada paso y los resultados obtenidos.",
+                                                                                            "deliverable": "Informe digital con la simulación, prompts utilizados y justificación de cada elección.",
+                                                                                            "checklist": [
+                                                                                                "Simulé un escenario de defensa con IA usando diferentes herramientas y técnicas.",
+                                                                                                "Documenté los prompts y el proceso de defensa.",
+                                                                                                "Justifiqué cada elección en mi informe final."
+                                                                                            ],
+                                                                                            "promptStarter": "Crea una simulación de defensa ante un ataque de ransomware usando IA y documenta el proceso completo.",
+                                                                                            "promptExamples": [
+                                                                                                { "title": "Prompt para simulación de defensa", "prompt": "Simula la detección y bloqueo de un ataque de ransomware en una red empresarial usando IA." },
+                                                                                                { "title": "Prompt para creatividad defensiva", "prompt": "Crea un escenario donde la IA detecta y responde a un ataque de phishing dirigido a empleados." },
+                                                                                                { "title": "Prompt para reflexión", "prompt": "Sugiere un prompt para reflexionar sobre los aprendizajes obtenidos en la simulación de defensa IA." }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                        /* ═══════════════════════════════════════════
+                                                                           CURSO 24: ia-musica-basico
+                                                                           Música con IA: Primeros pasos
+                                                                           Nivel: Principiante | 8 lecciones
+                                                                           ═══════════════════════════════════════════ */
+                                                                        "ia-musica-basico": {
+                                                                            "intro-musica-ia": {
+                                                                                "id": "intro-musica-ia",
+                                                                                "title": "Introducción a la música con IA",
+                                                                                "moduleTitle": "Fundamentos de música IA",
+                                                                                "durationMinutes": 10,
+                                                                                "summary": "Descubre cómo la inteligencia artificial está transformando la creación musical y aprende los conceptos básicos para comenzar a crear música con IA.",
+                                                                                "objectives": [
+                                                                                    "Comprender el impacto de la IA en la música.",
+                                                                                    "Identificar aplicaciones básicas de IA en la composición musical.",
+                                                                                    "Reconocer ventajas y desafíos iniciales."
+                                                                                ],
+                                                                                "sections": [
+                                                                                    { "heading": "¿Qué es la música con IA?", "content": "La música con IA utiliza algoritmos para componer, arreglar y producir piezas musicales originales o inspiradas en estilos existentes." },
+                                                                                    { "heading": "Ventajas principales", "content": "Generación rápida de ideas, experimentación con estilos, acceso a herramientas de producción avanzadas." },
+                                                                                    { "heading": "Desafíos y ética", "content": "Cuestiones de derechos de autor, originalidad y el papel del músico humano." }
+                                                                                ],
+                                                                                "activity": "Escucha ejemplos de música generada por IA y selecciona tus favoritos, justificando tu elección.",
+                                                                                "deliverable": "Lista de piezas seleccionadas y breve análisis de los motivos de tu elección.",
+                                                                                "checklist": [
+                                                                                    "Escuché diferentes piezas de música IA.",
+                                                                                    "Seleccioné y analicé mis favoritas.",
+                                                                                    "Reflexioné sobre el papel de la IA en la música."
+                                                                                ],
+                                                                                "promptStarter": "¿Cómo crees que la IA puede inspirar a los músicos tradicionales?",
+                                                                                "promptExamples": [
+                                                                                    { "title": "Prompt para inspiración musical", "prompt": "Sugiere cómo un compositor puede usar IA para explorar nuevos géneros musicales." },
+                                                                                    { "title": "Prompt para análisis de pieza", "prompt": "¿Qué prompts usarías para analizar la estructura de una canción generada por IA?" },
+                                                                                    { "title": "Prompt para ética musical", "prompt": "Explica cómo abordarías el tema de la autoría en una pieza musical generada por IA." }
+                                                                                ]
+                                                                            },
+                                                                            "herramientas-musica": {
+                                                                                "id": "herramientas-musica",
+                                                                                "title": "Herramientas básicas de música IA",
+                                                                                "moduleTitle": "Fundamentos de música IA",
+                                                                                "durationMinutes": 10,
+                                                                                "summary": "Aprende a utilizar las principales herramientas de generación musical con IA y experimenta con tus primeras composiciones.",
+                                                                                "objectives": [
+                                                                                    "Identificar herramientas populares de música IA.",
+                                                                                    "Crear piezas musicales básicas con IA.",
+                                                                                    "Evaluar la facilidad de uso y resultados obtenidos."
+                                                                                ],
+                                                                                "sections": [
+                                                                                    { "heading": "Herramientas recomendadas", "content": "AIVA, Soundful, Amper Music, Boomy, entre otras." },
+                                                                                    { "heading": "Primeros pasos", "content": "Cómo registrarse, seleccionar un estilo y generar una pieza musical básica." },
+                                                                                    { "heading": "Evaluación de resultados", "content": "Analiza la calidad, originalidad y utilidad de las piezas generadas." }
+                                                                                ],
+                                                                                "activity": "Crea una pieza musical original usando una herramienta IA y compártela con tus compañeros para recibir retroalimentación.",
+                                                                                "deliverable": "Archivo de audio generado y breve reflexión sobre el proceso creativo.",
+                                                                                "checklist": [
+                                                                                    "Probé al menos una herramienta de música IA.",
+                                                                                    "Generé una pieza musical original.",
+                                                                                    "Recibí y analicé retroalimentación."
+                                                                                ],
+                                                                                "promptStarter": "¿Qué prompt usarías para crear una melodía alegre para un anuncio publicitario?",
+                                                                                "promptExamples": [
+                                                                                    { "title": "Prompt para melodía publicitaria", "prompt": "Genera una melodía pegadiza y alegre para un spot de verano, estilo pop." },
+                                                                                    { "title": "Prompt para música ambiental", "prompt": "Crea una pieza instrumental relajante para fondo de video." },
+                                                                                    { "title": "Prompt para ritmo experimental", "prompt": "Sugiere un prompt para generar una pieza de música electrónica experimental." }
+                                                                                ]
+                                                                            },
+                                                                            "generos-musicales": {
+                                                                                "id": "generos-musicales",
+                                                                                "title": "Exploración de géneros musicales con IA",
+                                                                                "moduleTitle": "Fundamentos de música IA",
+                                                                                "durationMinutes": 10,
+                                                                                "summary": "Descubre cómo la IA puede imitar y combinar géneros musicales clásicos y modernos para crear piezas originales.",
+                                                                                "objectives": [
+                                                                                    "Identificar géneros musicales populares.",
+                                                                                    "Experimentar con la combinación de géneros en IA.",
+                                                                                    "Analizar el impacto sonoro de los géneros generados."
+                                                                                ],
+                                                                                "sections": [
+                                                                                    { "heading": "Géneros clásicos y modernos", "content": "Rock, jazz, música electrónica, clásica, pop, entre otros." },
+                                                                                    { "heading": "Combinación de géneros", "content": "Cómo pedir a la IA que mezcle géneros para obtener resultados únicos." },
+                                                                                    { "heading": "Análisis sonoro", "content": "Evalúa la armonía, ritmo y originalidad de las piezas generadas." }
+                                                                                ],
+                                                                                "activity": "Genera una pieza que combine dos géneros musicales diferentes usando IA y analiza el resultado.",
+                                                                                "deliverable": "Archivo de audio generado y análisis sonoro de la combinación de géneros.",
+                                                                                "checklist": [
+                                                                                    "Probé la combinación de géneros en IA.",
+                                                                                    "Analicé el resultado sonoro.",
+                                                                                    "Reflexioné sobre la creatividad de la IA."
+                                                                                ],
+                                                                                "promptStarter": "¿Cómo pedirías a la IA que combine jazz y música electrónica en una sola pieza?",
+                                                                                "promptExamples": [
+                                                                                    { "title": "Prompt para mezcla de géneros", "prompt": "Genera una pieza instrumental que combine rock clásico y música electrónica." },
+                                                                                    { "title": "Prompt para análisis sonoro", "prompt": "¿Qué prompts usarías para analizar la armonía de una pieza generada por IA?" },
+                                                                                    { "title": "Prompt para creatividad IA", "prompt": "Sugiere un prompt para que la IA cree una pieza inspirada en sonidos de la naturaleza y música ambiental." }
+                                                                                ]
+                                                                            },
+                                                                            "composicion-letras": {
+                                                                                "id": "composicion-letras",
+                                                                                "title": "Composición de letras y melodías",
+                                                                                "moduleTitle": "Fundamentos de música IA",
+                                                                                "durationMinutes": 10,
+                                                                                "summary": "Aprende a crear letras y melodías originales usando IA, desde frases simples hasta canciones completas.",
+                                                                                "objectives": [
+                                                                                    "Componer letras originales con IA.",
+                                                                                    "Crear melodías y arreglos básicos.",
+                                                                                    "Evaluar la coherencia y expresividad de las composiciones."
+                                                                                ],
+                                                                                "sections": [
+                                                                                    { "heading": "Composición de letras", "content": "Cómo pedir a la IA que genere letras para canciones en diferentes estilos y temáticas." },
+                                                                                    { "heading": "Creación de melodías", "content": "Solicita melodías y arreglos básicos para acompañar las letras." },
+                                                                                    { "heading": "Coherencia musical", "content": "Evalúa si las letras y melodías combinan de forma armónica en la composición final." }
+                                                                                ],
+                                                                                "activity": "Crea una letra y una melodía usando IA, luego combínalas en una canción corta.",
+                                                                                "deliverable": "Archivo de audio y letra generada, con breve análisis de la coherencia musical.",
+                                                                                "checklist": [
+                                                                                    "Generé una letra y una melodía con IA.",
+                                                                                    "Combiné ambos en una canción corta.",
+                                                                                    "Analicé la coherencia y expresividad."
+                                                                                ],
+                                                                                "promptStarter": "¿Qué prompt usarías para crear una canción de amor moderna con IA?",
+                                                                                "promptExamples": [
+                                                                                    { "title": "Prompt para letra original", "prompt": "Genera una letra de canción sobre la esperanza en tiempos difíciles, estilo pop." },
+                                                                                    { "title": "Prompt para melodía alegre", "prompt": "Crea una melodía animada para acompañar una letra de superación personal." },
+                                                                                    { "title": "Prompt para canción completa", "prompt": "Sugiere un prompt para que la IA cree una canción corta sobre la amistad." }
+                                                                                ]
+                                                                            },
+                                                                            "produccion-musical": {
+                                                                                "id": "produccion-musical",
+                                                                                "title": "Producción musical básica con IA",
+                                                                                "moduleTitle": "Fundamentos de música IA",
+                                                                                "durationMinutes": 10,
+                                                                                "summary": "Descubre cómo la IA puede ayudarte a producir, mezclar y masterizar piezas musicales, logrando resultados profesionales de forma sencilla.",
+                                                                                "objectives": [
+                                                                                    "Producir y mezclar música con IA.",
+                                                                                    "Aplicar efectos y arreglos básicos.",
+                                                                                    "Evaluar el impacto sonoro de la producción IA."
+                                                                                ],
+                                                                                "sections": [
+                                                                                    { "heading": "Herramientas de producción IA", "content": "LANDR, iZotope, BandLab y otras plataformas permiten producir y masterizar música fácilmente." },
+                                                                                    { "heading": "Creación de arreglos", "content": "Cómo generar arreglos y aplicar efectos a piezas musicales con IA." },
+                                                                                    { "heading": "Evaluación de la producción", "content": "Analiza la calidad, claridad y creatividad de las producciones generadas." }
+                                                                                ],
+                                                                                "activity": "Produce una pieza musical básica usando IA y comparte el resultado para recibir comentarios.",
+                                                                                "deliverable": "Archivo de audio producido y breve reflexión sobre el proceso.",
+                                                                                "checklist": [
+                                                                                    "Probé una herramienta de producción musical IA.",
+                                                                                    "Produje una pieza musical básica.",
+                                                                                    "Recibí y analicé comentarios sobre la producción."
+                                                                                ],
+                                                                                "promptStarter": "¿Qué prompt usarías para producir una pista de música electrónica con IA?",
+                                                                                "promptExamples": [
+                                                                                    { "title": "Prompt para producción electrónica", "prompt": "Genera una pista de música electrónica con ritmo enérgico y sintetizadores modernos." },
+                                                                                    { "title": "Prompt para mezcla creativa", "prompt": "Crea una mezcla de sonidos urbanos y naturales en una sola pieza." },
+                                                                                    { "title": "Prompt para efectos de audio", "prompt": "Sugiere un prompt para añadir efectos de eco y reverb a una melodía generada por IA." }
+                                                                                ]
+                                                                            },
+                                                                            "colaboracion-musica": {
+                                                                                "id": "colaboracion-musica",
+                                                                                "title": "Colaboración y co-creación musical con IA",
+                                                                                "moduleTitle": "Fundamentos de música IA",
+                                                                                "durationMinutes": 10,
+                                                                                "summary": "Explora cómo la IA puede colaborar con músicos humanos en proyectos creativos, desde la inspiración hasta la producción final.",
+                                                                                "objectives": [
+                                                                                    "Colaborar con IA en proyectos musicales.",
+                                                                                    "Aportar ideas y ajustes humanos a piezas IA.",
+                                                                                    "Reflexionar sobre la co-creación y el rol del músico."
+                                                                                ],
+                                                                                "sections": [
+                                                                                    { "heading": "Modelos de colaboración IA-músico", "content": "La IA puede sugerir melodías, arreglos y variaciones, mientras el músico humano selecciona, ajusta y finaliza la pieza." },
+                                                                                    { "heading": "Ejemplos de co-creación", "content": "Proyectos donde IA y humanos trabajan juntos: bandas sonoras, jingles, música experimental." },
+                                                                                    { "heading": "Reflexión sobre el proceso", "content": "Analiza cómo la colaboración potencia la creatividad y redefine el concepto de autoría musical." }
+                                                                                ],
+                                                                                "activity": "Desarrolla una pieza musical colaborativa entre IA y músico humano, documentando cada etapa del proceso.",
+                                                                                "deliverable": "Archivo de audio final y registro del proceso de co-creación.",
+                                                                                "checklist": [
+                                                                                    "Colaboré con IA en una pieza musical.",
+                                                                                    "Documenté el proceso de co-creación.",
+                                                                                    "Reflexioné sobre el rol del músico humano."
+                                                                                ],
+                                                                                "promptStarter": "¿Cómo organizarías un proyecto musical colaborativo entre IA y músicos locales?",
+                                                                                "promptExamples": [
+                                                                                    { "title": "Prompt para co-creación musical", "prompt": "Sugiere un prompt para que IA y músico humano creen juntos una canción para una campaña social." },
+                                                                                    { "title": "Prompt para inspiración compartida", "prompt": "¿Qué prompts usarías para que la IA proponga variaciones sobre una melodía humana?" },
+                                                                                    { "title": "Prompt para reflexión musical", "prompt": "Explica cómo documentarías el proceso de co-creación entre IA y músico." }
+                                                                                ]
+                                                                            },
+                                                                            "etica-musica": {
+                                                                                "id": "etica-musica",
+                                                                                "title": "Ética y derechos en la música IA",
+                                                                                "moduleTitle": "Fundamentos de música IA",
+                                                                                "durationMinutes": 10,
+                                                                                "summary": "Reflexiona sobre los desafíos éticos y legales de la música generada por IA y aprende buenas prácticas para proteger la autoría y los derechos de los creadores.",
+                                                                                "objectives": [
+                                                                                    "Identificar riesgos éticos y legales en la música IA.",
+                                                                                    "Aplicar buenas prácticas de autoría y derechos.",
+                                                                                    "Fomentar la transparencia y el reconocimiento en piezas IA."
+                                                                                ],
+                                                                                "sections": [
+                                                                                    { "heading": "Riesgos éticos y legales", "content": "Plagio, uso indebido de obras, falta de reconocimiento al músico humano y desafíos en la protección de derechos." },
+                                                                                    { "heading": "Buenas prácticas recomendadas", "content": "Atribuir siempre la autoría, respetar licencias, documentar el proceso y promover la transparencia en la creación IA." },
+                                                                                    { "heading": "Reconocimiento y transparencia", "content": "La claridad en la autoría y el proceso creativo fortalece la confianza y el valor de las piezas IA." }
+                                                                                ],
+                                                                                "activity": "Analiza un caso real de controversia ética en música generada por IA y propone soluciones para evitar problemas similares.",
+                                                                                "deliverable": "Informe breve sobre el caso, riesgos identificados y recomendaciones de buenas prácticas.",
+                                                                                "checklist": [
+                                                                                    "Analicé un caso real de ética en música IA.",
+                                                                                    "Identifiqué riesgos y propuse soluciones.",
+                                                                                    "Redacté recomendaciones de buenas prácticas."
+                                                                                ],
+                                                                                "promptStarter": "¿Qué medidas tomarías para garantizar la ética y los derechos en piezas musicales IA?",
+                                                                                "promptExamples": [
+                                                                                    { "title": "Prompt para derechos de autor", "prompt": "Redacta un aviso de derechos para una plataforma de música IA que explique la autoría compartida." },
+                                                                                    { "title": "Prompt para transparencia", "prompt": "¿Cómo explicarías a los oyentes el proceso de creación de una pieza musical IA?" },
+                                                                                    { "title": "Prompt para evitar plagio", "prompt": "Sugiere buenas prácticas para evitar el plagio en música generada por IA." }
+                                                                                ]
+                                                                            },
+                                                                            "proyecto-final-musica": {
+                                                                                "id": "proyecto-final-musica",
+                                                                                "title": "Proyecto final: portafolio de música IA",
+                                                                                "moduleTitle": "Fundamentos de música IA",
+                                                                                "durationMinutes": 12,
+                                                                                "summary": "Aplica lo aprendido creando un portafolio personal de piezas musicales generadas con IA, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                                                "objectives": [
+                                                                                    "Integrar técnicas básicas de música IA en un portafolio.",
+                                                                                    "Crear una colección temática de piezas IA.",
+                                                                                    "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                                                ],
+                                                                                "sections": [
+                                                                                    { "heading": "Definir el objetivo del portafolio", "content": "Elige un tema central (emociones, paisajes, tecnología, etc.) y define el propósito de tu portafolio: mostrar habilidades, inspirar, exponer, etc." },
+                                                                                    { "heading": "Aplicar técnicas de música IA", "content": "Genera al menos 3 piezas usando diferentes herramientas y géneros. Documenta el proceso y los prompts usados." },
+                                                                                    { "heading": "Presentar y justificar tus elecciones", "content": "Organiza las piezas en una galería digital, explica por qué elegiste cada estilo y herramienta, y qué aprendiste en el proceso." }
+                                                                                ],
+                                                                                "activity": "Crea un portafolio de 3 piezas IA sobre un tema de tu elección, usando al menos 2 herramientas y 2 géneros diferentes.",
+                                                                                "deliverable": "Portafolio digital con 3 piezas, prompts utilizados y justificación de cada elección.",
+                                                                                "checklist": [
+                                                                                    "Generé al menos 3 piezas con IA usando diferentes herramientas y géneros.",
+                                                                                    "Documenté los prompts y el proceso de selección.",
+                                                                                    "Justifiqué cada elección en mi portafolio."
+                                                                                ],
+                                                                                "promptStarter": "Crea una serie de piezas sobre 'la naturaleza y la tecnología' usando IA y diferentes géneros musicales.",
+                                                                                "promptExamples": [
+                                                                                    { "title": "Prompt para portafolio temático", "prompt": "Una pieza instrumental sobre la conexión entre la naturaleza y la inteligencia artificial." },
+                                                                                    { "title": "Prompt para creatividad", "prompt": "Una canción pop sobre la amistad en la era digital." },
+                                                                                    { "title": "Prompt para reflexión", "prompt": "Una pieza que invite a reflexionar sobre el impacto de la tecnología en la música." }
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                            /* ═══════════════════════════════════════════
+                                                               CURSO 19: ia-salud-avanzado
+                                                               IA en Salud: Técnicas avanzadas
+                                                               Nivel: Intermedio | 8 lecciones
+                                                               ═══════════════════════════════════════════ */
+                                                                "ia-salud-avanzado": {
+                                                                    "diseno-prompts-salud": {
+                                                                        "id": "diseno-prompts-salud",
+                                                                        "title": "Diseño avanzado de prompts en salud",
+                                                                        "moduleTitle": "Técnicas avanzadas",
+                                                                        "durationMinutes": 12,
+                                                                        "summary": "Aprende a crear prompts complejos para personalizar diagnósticos, generar reportes y resolver retos clínicos específicos con IA.",
+                                                                        "objectives": [
+                                                                            "Dominar la estructura avanzada de prompts para salud.",
+                                                                            "Personalizar reportes y diagnósticos con IA.",
+                                                                            "Evitar ambigüedades y maximizar la utilidad de los prompts médicos."
+                                                                        ],
+                                                                        "sections": [
+                                                                            { "heading": "¿Qué es el prompt engineering en salud?", "content": "Es el arte de diseñar instrucciones detalladas para que la IA genere reportes, diagnósticos o soluciones alineadas con objetivos clínicos." },
+                                                                            { "heading": "Estructura de un prompt avanzado", "content": "Incluye: objetivo clínico, especialidad médica, formato de salida, contexto del paciente y criterios de evaluación." },
+                                                                            { "heading": "Errores comunes y cómo evitarlos", "content": "Evita prompts vagos o sin contexto. Especifica siempre el tipo de paciente, el área médica y el resultado esperado." }
+                                                                        ],
+                                                                        "activity": "Crea un prompt avanzado para generar un reporte de laboratorio para pacientes pediátricos, especificando formato, especialidad y criterios de interpretación.",
+                                                                        "deliverable": "Prompt generado y ejemplo de reporte creado por la IA.",
+                                                                        "checklist": [
+                                                                            "Diseñé un prompt con todos los elementos avanzados.",
+                                                                            "Probé el prompt y analicé el resultado.",
+                                                                            "Ajusté el prompt para mejorar el reporte generado."
+                                                                        ],
+                                                                        "promptStarter": "Genera un informe de diagnóstico para un paciente adulto con síntomas respiratorios, en formato de tabla y con criterios de interpretación claros.",
+                                                                        "promptExamples": [
+                                                                            { "title": "Prompt para reporte personalizado", "prompt": "Crea un reporte de evolución clínica para un paciente con diabetes tipo 2, en formato gráfico." },
+                                                                            { "title": "Prompt con criterios de interpretación", "prompt": "Genera un informe de laboratorio con interpretación para un paciente pediátrico con anemia." },
+                                                                            { "title": "Prompt para recursos diferenciados", "prompt": "Crea tres versiones de un informe de diagnóstico para diferentes especialidades médicas." }
+                                                                        ]
+                                                                    },
+                                                                    /* ═══════════════════════════════════════════
+                                                                       CURSO 23: ia-arte-basico
+                                                                       Arte con IA: Primeros pasos
+                                                                       Nivel: Principiante | 8 lecciones
+                                                                       ═══════════════════════════════════════════ */
+                                                                    "ia-arte-basico": {
+                                                                        "intro-arte-ia": {
+                                                                            "id": "intro-arte-ia",
+                                                                            "title": "Introducción al arte con IA",
+                                                                            "moduleTitle": "Fundamentos de arte IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo la inteligencia artificial está revolucionando la creación artística y aprende los conceptos básicos para comenzar a crear arte digital con IA.",
+                                                                            "objectives": [
+                                                                                "Comprender el impacto de la IA en el arte.",
+                                                                                "Identificar aplicaciones básicas de IA en la creación artística.",
+                                                                                "Reconocer ventajas y desafíos iniciales."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es el arte con IA?", "content": "El arte con IA utiliza algoritmos y modelos generativos para crear imágenes, ilustraciones y obras visuales únicas." },
+                                                                                { "heading": "Ventajas principales", "content": "Exploración creativa, generación rápida de ideas, acceso a estilos y técnicas innovadoras." },
+                                                                                { "heading": "Desafíos y ética", "content": "Cuestiones de autoría, derechos de uso y el papel del artista humano en la obra generada." }
+                                                                            ],
+                                                                            "activity": "Explora una galería de arte generado por IA y selecciona tus obras favoritas, justificando tu elección.",
+                                                                            "deliverable": "Lista de obras seleccionadas y breve análisis de los motivos de tu elección.",
+                                                                            "checklist": [
+                                                                                "Exploré diferentes obras de arte IA.",
+                                                                                "Seleccioné y analicé mis favoritas.",
+                                                                                "Reflexioné sobre el papel de la IA en el arte."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo crees que la IA puede inspirar a los artistas tradicionales?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para inspiración creativa", "prompt": "Sugiere cómo un pintor puede usar IA para explorar nuevos estilos en su obra." },
+                                                                                { "title": "Prompt para análisis de obra", "prompt": "¿Qué prompts usarías para analizar el estilo de una pintura famosa con IA?" },
+                                                                                { "title": "Prompt para ética artística", "prompt": "Explica cómo abordarías el tema de la autoría en una obra generada por IA." }
+                                                                            ]
+                                                                        },
+                                                                        "herramientas-basicas": {
+                                                                            "id": "herramientas-basicas",
+                                                                            "title": "Herramientas básicas de arte IA",
+                                                                            "moduleTitle": "Fundamentos de arte IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a utilizar las principales herramientas de generación de arte con IA y experimenta con tus primeras creaciones digitales.",
+                                                                            "objectives": [
+                                                                                "Identificar herramientas populares de arte IA.",
+                                                                                "Crear imágenes básicas con IA.",
+                                                                                "Evaluar la facilidad de uso y resultados obtenidos."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Herramientas recomendadas", "content": "DALL-E, Midjourney, Stable Diffusion, Canva IA, entre otras." },
+                                                                                { "heading": "Primeros pasos", "content": "Cómo registrarse, escribir un prompt y generar una imagen básica." },
+                                                                                { "heading": "Evaluación de resultados", "content": "Analiza la calidad, originalidad y utilidad de las imágenes generadas." }
+                                                                            ],
+                                                                            "activity": "Crea una imagen original usando una herramienta IA y compártela con tus compañeros para recibir retroalimentación.",
+                                                                            "deliverable": "Imagen generada y breve reflexión sobre el proceso creativo.",
+                                                                            "checklist": [
+                                                                                "Probé al menos una herramienta de arte IA.",
+                                                                                "Generé una imagen original.",
+                                                                                "Recibí y analicé retroalimentación."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué prompt usarías para crear una ilustración de portada para un libro de fantasía?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para imagen fantástica", "prompt": "Genera una ilustración de un dragón volando sobre un castillo al atardecer, estilo acuarela." },
+                                                                                { "title": "Prompt para retrato IA", "prompt": "Crea un retrato futurista de una persona usando IA." },
+                                                                                { "title": "Prompt para arte abstracto", "prompt": "Sugiere un prompt para generar una obra abstracta inspirada en la naturaleza." }
+                                                                            ]
+                                                                        },
+                                                                        "estilos-arte": {
+                                                                            "id": "estilos-arte",
+                                                                            "title": "Exploración de estilos artísticos con IA",
+                                                                            "moduleTitle": "Fundamentos de arte IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo la IA puede imitar y combinar estilos artísticos clásicos y modernos para crear obras originales.",
+                                                                            "objectives": [
+                                                                                "Identificar estilos artísticos populares.",
+                                                                                "Experimentar con la combinación de estilos en IA.",
+                                                                                "Analizar el impacto visual de los estilos generados."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Estilos clásicos y modernos", "content": "Impresionismo, surrealismo, arte digital, pop art, entre otros." },
+                                                                                { "heading": "Combinación de estilos", "content": "Cómo pedir a la IA que mezcle estilos para obtener resultados únicos." },
+                                                                                { "heading": "Análisis visual", "content": "Evalúa la armonía, contraste y originalidad de las obras generadas." }
+                                                                            ],
+                                                                            "activity": "Genera una imagen que combine dos estilos artísticos diferentes usando IA y analiza el resultado.",
+                                                                            "deliverable": "Imagen generada y análisis visual de la combinación de estilos.",
+                                                                            "checklist": [
+                                                                                "Probé la combinación de estilos en IA.",
+                                                                                "Analicé el resultado visual.",
+                                                                                "Reflexioné sobre la creatividad de la IA."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo pedirías a la IA que combine el estilo de Van Gogh con el arte digital moderno?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para mezcla de estilos", "prompt": "Genera una imagen de una ciudad futurista en el estilo de Monet y arte digital." },
+                                                                                { "title": "Prompt para análisis visual", "prompt": "¿Qué prompts usarías para analizar la armonía de una obra generada por IA?" },
+                                                                                { "title": "Prompt para creatividad IA", "prompt": "Sugiere un prompt para que la IA cree una obra inspirada en sueños y surrealismo." }
+                                                                            ]
+                                                                        },
+                                                                        "creacion-personajes": {
+                                                                            "id": "creacion-personajes",
+                                                                            "title": "Creación de personajes y escenarios",
+                                                                            "moduleTitle": "Fundamentos de arte IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a diseñar personajes y escenarios originales usando IA, desde bocetos hasta ilustraciones detalladas.",
+                                                                            "objectives": [
+                                                                                "Diseñar personajes originales con IA.",
+                                                                                "Crear escenarios y fondos creativos.",
+                                                                                "Evaluar la coherencia y expresividad de los diseños."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Diseño de personajes", "content": "Cómo describir rasgos, vestimenta y emociones para que la IA genere personajes únicos." },
+                                                                                { "heading": "Creación de escenarios", "content": "Solicita fondos y ambientes detallados para complementar tus personajes." },
+                                                                                { "heading": "Coherencia visual", "content": "Evalúa si los personajes y escenarios combinan de forma armónica en la composición final." }
+                                                                            ],
+                                                                            "activity": "Crea un personaje y un escenario usando IA, luego combínalos en una ilustración completa.",
+                                                                            "deliverable": "Ilustración final y breve análisis de la coherencia visual.",
+                                                                            "checklist": [
+                                                                                "Generé un personaje y un escenario con IA.",
+                                                                                "Combiné ambos en una ilustración.",
+                                                                                "Analicé la coherencia y expresividad."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué prompt usarías para crear un héroe de fantasía y su mundo con IA?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para personaje original", "prompt": "Genera un personaje de ciencia ficción con armadura futurista y expresión decidida." },
+                                                                                { "title": "Prompt para escenario creativo", "prompt": "Crea un escenario de bosque encantado con luces mágicas y árboles gigantes." },
+                                                                                { "title": "Prompt para ilustración completa", "prompt": "Sugiere un prompt para combinar un personaje y un escenario en una sola imagen épica." }
+                                                                            ]
+                                                                        },
+                                                                        "animacion-basica": {
+                                                                            "id": "animacion-basica",
+                                                                            "title": "Animación básica con IA",
+                                                                            "moduleTitle": "Fundamentos de arte IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo la IA puede animar imágenes y personajes, creando secuencias simples y efectos visuales llamativos.",
+                                                                            "objectives": [
+                                                                                "Animar imágenes y personajes con IA.",
+                                                                                "Crear secuencias animadas básicas.",
+                                                                                "Evaluar el impacto visual de la animación IA."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Herramientas de animación IA", "content": "Kaiber, Runway, Pika y otras plataformas permiten animar imágenes y personajes fácilmente." },
+                                                                                { "heading": "Creación de secuencias", "content": "Cómo generar animaciones cortas a partir de imágenes estáticas o prompts descriptivos." },
+                                                                                { "heading": "Evaluación de animaciones", "content": "Analiza la fluidez, expresividad y creatividad de las animaciones generadas." }
+                                                                            ],
+                                                                            "activity": "Crea una animación corta de un personaje usando IA y comparte el resultado para recibir comentarios.",
+                                                                            "deliverable": "Archivo de animación generado y breve reflexión sobre el proceso.",
+                                                                            "checklist": [
+                                                                                "Probé una herramienta de animación IA.",
+                                                                                "Generé una animación básica.",
+                                                                                "Recibí y analicé comentarios sobre la animación."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué prompt usarías para animar una escena de aventura con IA?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para animación de personaje", "prompt": "Genera una animación de un dragón volando y lanzando fuego, estilo cartoon." },
+                                                                                { "title": "Prompt para secuencia creativa", "prompt": "Crea una animación de una ciudad futurista al anochecer con luces en movimiento." },
+                                                                                { "title": "Prompt para efectos visuales", "prompt": "Sugiere un prompt para añadir efectos de partículas mágicas a una animación de bosque." }
+                                                                            ]
+                                                                        },
+                                                                        "colaboracion-arte": {
+                                                                            "id": "colaboracion-arte",
+                                                                            "title": "Colaboración y co-creación artística con IA",
+                                                                            "moduleTitle": "Fundamentos de arte IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Explora cómo la IA puede colaborar con artistas humanos en proyectos creativos, desde la inspiración hasta la producción final.",
+                                                                            "objectives": [
+                                                                                "Colaborar con IA en proyectos artísticos.",
+                                                                                "Aportar ideas y ajustes humanos a obras IA.",
+                                                                                "Reflexionar sobre la co-creación y el rol del artista."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Modelos de colaboración IA-artista", "content": "La IA puede sugerir bocetos, estilos y variaciones, mientras el artista humano selecciona, ajusta y finaliza la obra." },
+                                                                                { "heading": "Ejemplos de co-creación", "content": "Proyectos donde IA y humanos trabajan juntos: murales digitales, ilustraciones para libros, arte generativo en tiempo real." },
+                                                                                { "heading": "Reflexión sobre el proceso", "content": "Analiza cómo la colaboración potencia la creatividad y redefine el concepto de autoría." }
+                                                                            ],
+                                                                            "activity": "Desarrolla una obra colaborativa entre IA y artista humano, documentando cada etapa del proceso.",
+                                                                            "deliverable": "Obra final y registro del proceso de co-creación.",
+                                                                            "checklist": [
+                                                                                "Colaboré con IA en una obra artística.",
+                                                                                "Documenté el proceso de co-creación.",
+                                                                                "Reflexioné sobre el rol del artista humano."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo organizarías un proyecto de mural digital colaborativo entre IA y artistas locales?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para co-creación", "prompt": "Sugiere un prompt para que IA y artista humano creen juntos una portada de álbum musical." },
+                                                                                { "title": "Prompt para inspiración compartida", "prompt": "¿Qué prompts usarías para que la IA proponga variaciones sobre un boceto humano?" },
+                                                                                { "title": "Prompt para reflexión artística", "prompt": "Explica cómo documentarías el proceso de co-creación entre IA y artista." }
+                                                                            ]
+                                                                        },
+                                                                        "etica-arte": {
+                                                                            "id": "etica-arte",
+                                                                            "title": "Ética y derechos en el arte IA",
+                                                                            "moduleTitle": "Fundamentos de arte IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Reflexiona sobre los desafíos éticos y legales del arte generado por IA y aprende buenas prácticas para proteger la autoría y los derechos de los creadores.",
+                                                                            "objectives": [
+                                                                                "Identificar riesgos éticos y legales en el arte IA.",
+                                                                                "Aplicar buenas prácticas de autoría y derechos.",
+                                                                                "Fomentar la transparencia y el reconocimiento en obras IA."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Riesgos éticos y legales", "content": "Plagio, uso indebido de obras, falta de reconocimiento al artista humano y desafíos en la protección de derechos." },
+                                                                                { "heading": "Buenas prácticas recomendadas", "content": "Atribuir siempre la autoría, respetar licencias, documentar el proceso y promover la transparencia en la creación IA." },
+                                                                                { "heading": "Reconocimiento y transparencia", "content": "La claridad en la autoría y el proceso creativo fortalece la confianza y el valor de las obras IA." }
+                                                                            ],
+                                                                            "activity": "Analiza un caso real de controversia ética en arte digital generado por IA y propone soluciones para evitar problemas similares.",
+                                                                            "deliverable": "Informe breve sobre el caso, riesgos identificados y recomendaciones de buenas prácticas.",
+                                                                            "checklist": [
+                                                                                "Analicé un caso real de ética en arte IA.",
+                                                                                "Identifiqué riesgos y propuse soluciones.",
+                                                                                "Redacté recomendaciones de buenas prácticas."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué medidas tomarías para garantizar la ética y los derechos en obras de arte IA?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para derechos de autor", "prompt": "Redacta un aviso de derechos para una galería de arte IA que explique la autoría compartida." },
+                                                                                { "title": "Prompt para transparencia", "prompt": "¿Cómo explicarías a los espectadores el proceso de creación de una obra IA?" },
+                                                                                { "title": "Prompt para evitar plagio", "prompt": "Sugiere buenas prácticas para evitar el plagio en obras generadas por IA." }
+                                                                            ]
+                                                                        },
+                                                                        "proyecto-final-arte": {
+                                                                            "id": "proyecto-final-arte",
+                                                                            "title": "Proyecto final: portafolio de arte IA",
+                                                                            "moduleTitle": "Fundamentos de arte IA",
+                                                                            "durationMinutes": 12,
+                                                                            "summary": "Aplica lo aprendido creando un portafolio personal de arte generado con IA, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                                            "objectives": [
+                                                                                "Integrar técnicas básicas de arte IA en un portafolio.",
+                                                                                "Crear una colección temática de obras IA.",
+                                                                                "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Definir el objetivo del portafolio", "content": "Elige un tema central (naturaleza, tecnología, emociones, etc.) y define el propósito de tu portafolio: mostrar habilidades, inspirar, exponer, etc." },
+                                                                                { "heading": "Aplicar técnicas de arte IA", "content": "Genera al menos 5 obras usando diferentes herramientas y estilos. Documenta el proceso y los prompts usados." },
+                                                                                { "heading": "Presentar y justificar tus elecciones", "content": "Organiza las obras en una galería digital, explica por qué elegiste cada estilo y herramienta, y qué aprendiste en el proceso." }
+                                                                            ],
+                                                                            "activity": "Crea un portafolio de 5 obras IA sobre un tema de tu elección, usando al menos 3 herramientas y 3 estilos diferentes.",
+                                                                            "deliverable": "Portafolio digital con 5 obras, prompts utilizados y justificación de cada elección.",
+                                                                            "checklist": [
+                                                                                "Generé al menos 5 obras con IA usando diferentes herramientas y estilos.",
+                                                                                "Documenté los prompts y el proceso de selección.",
+                                                                                "Justifiqué cada elección en mi portafolio."
+                                                                            ],
+                                                                            "promptStarter": "Crea una serie de obras sobre 'la relación entre humanos y tecnología' usando IA y diferentes estilos artísticos.",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para portafolio temático", "prompt": "Una obra abstracta sobre la conexión entre mente humana e inteligencia artificial." },
+                                                                                { "title": "Prompt para creatividad", "prompt": "Una ilustración futurista de una ciudad donde humanos y robots conviven." },
+                                                                                { "title": "Prompt para reflexión", "prompt": "Una obra que invite a reflexionar sobre el impacto de la tecnología en la creatividad humana." }
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    /* ═══════════════════════════════════════════
+                                                                       CURSO 22: ia-marketing-avanzado
+                                                                       Marketing con IA: Estrategias avanzadas
+                                                                       Nivel: Avanzado | 8 lecciones
+                                                                       ═══════════════════════════════════════════ */
+                                                                    "ia-marketing-avanzado": {
+                                                                        "estrategias-avanzadas": {
+                                                                            "id": "estrategias-avanzadas",
+                                                                            "title": "Estrategias avanzadas de marketing IA",
+                                                                            "moduleTitle": "Estrategias avanzadas",
+                                                                            "durationMinutes": 12,
+                                                                            "summary": "Explora técnicas avanzadas para diseñar campañas de marketing digital impulsadas por IA, desde la hiperpersonalización hasta la automatización inteligente.",
+                                                                            "objectives": [
+                                                                                "Diseñar campañas avanzadas con IA.",
+                                                                                "Aplicar hiperpersonalización y automatización.",
+                                                                                "Evaluar el impacto de estrategias IA en resultados."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es una estrategia avanzada de marketing IA?", "content": "Implica el uso de modelos predictivos, análisis de big data y personalización dinámica para maximizar el impacto de las campañas." },
+                                                                                { "heading": "Hiperpersonalización", "content": "La IA permite adaptar mensajes, ofertas y experiencias a nivel individual, aumentando la conversión y la satisfacción del cliente." },
+                                                                                { "heading": "Automatización inteligente", "content": "Flujos de trabajo que responden en tiempo real a las acciones del usuario, optimizando recursos y resultados." }
+                                                                            ],
+                                                                            "activity": "Diseña una campaña que utilice IA para personalizar ofertas en tiempo real según el comportamiento del usuario.",
+                                                                            "deliverable": "Documento con el flujo de la campaña, herramientas IA usadas y resultados esperados.",
+                                                                            "checklist": [
+                                                                                "Definí la estrategia avanzada y los objetivos.",
+                                                                                "Implementé hiperpersonalización y automatización.",
+                                                                                "Documenté el flujo y los resultados esperados."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo usarías IA para personalizar una campaña de ecommerce en tiempo real?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para personalización dinámica", "prompt": "Genera ofertas personalizadas para usuarios que abandonan el carrito en una tienda online." },
+                                                                                { "title": "Prompt para automatización inteligente", "prompt": "Diseña un flujo automatizado que envíe mensajes según la interacción del usuario en una web." },
+                                                                                { "title": "Prompt para análisis predictivo", "prompt": "Explica cómo la IA puede predecir el mejor momento para enviar una promoción a cada cliente." }
+                                                                            ]
+                                                                        },
+                                                                        "analitica-predictiva": {
+                                                                            "id": "analitica-predictiva",
+                                                                            "title": "Analítica predictiva y big data",
+                                                                            "moduleTitle": "Estrategias avanzadas",
+                                                                            "durationMinutes": 11,
+                                                                            "summary": "Aprende a utilizar analítica predictiva y big data para anticipar tendencias, segmentar audiencias y optimizar campañas de marketing.",
+                                                                            "objectives": [
+                                                                                "Comprender el análisis predictivo con IA.",
+                                                                                "Aplicar big data para segmentación avanzada.",
+                                                                                "Optimizar campañas usando predicciones."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es la analítica predictiva?", "content": "Uso de modelos IA para anticipar comportamientos futuros, identificar oportunidades y reducir riesgos en campañas." },
+                                                                                { "heading": "Big data en marketing", "content": "La IA analiza grandes volúmenes de datos para descubrir patrones y segmentar audiencias de forma precisa." },
+                                                                                { "heading": "Optimización basada en predicciones", "content": "Permite ajustar campañas en tiempo real según las tendencias y el comportamiento del usuario." }
+                                                                            ],
+                                                                            "activity": "Utiliza una herramienta IA para analizar datos históricos de una campaña y anticipar tendencias para la próxima temporada.",
+                                                                            "deliverable": "Informe con predicciones, segmentos identificados y recomendaciones de acción.",
+                                                                            "checklist": [
+                                                                                "Analicé datos históricos con IA.",
+                                                                                "Identifiqué tendencias y segmentos clave.",
+                                                                                "Propuse acciones basadas en predicciones."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo usarías IA para anticipar tendencias de consumo en una campaña de moda?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para análisis de datos", "prompt": "Analiza datos de ventas de los últimos 3 años y predice los productos más demandados para la próxima temporada." },
+                                                                                { "title": "Prompt para segmentación avanzada", "prompt": "Identifica segmentos de clientes emergentes usando big data e IA." },
+                                                                                { "title": "Prompt para optimización de campañas", "prompt": "Sugiere ajustes en una campaña en curso basados en predicciones de comportamiento." }
+                                                                            ]
+                                                                        },
+                                                                        "creatividad-generativa": {
+                                                                            "id": "creatividad-generativa",
+                                                                            "title": "Creatividad generativa y campañas innovadoras",
+                                                                            "moduleTitle": "Estrategias avanzadas",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo la IA generativa puede inspirar campañas creativas, desde la generación de ideas hasta la producción de contenido original.",
+                                                                            "objectives": [
+                                                                                "Aplicar IA generativa en brainstorming creativo.",
+                                                                                "Generar contenido original para campañas.",
+                                                                                "Evaluar el impacto de la creatividad IA en el marketing."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es la creatividad generativa?", "content": "La IA puede sugerir ideas, crear textos, imágenes y videos originales, y ayudar a los equipos creativos a innovar." },
+                                                                                { "heading": "Herramientas y técnicas", "content": "ChatGPT, DALL-E, generadores de video IA y plataformas de brainstorming asistido." },
+                                                                                { "heading": "Impacto en campañas innovadoras", "content": "Permite lanzar campañas disruptivas, personalizadas y con alto impacto visual y emocional." }
+                                                                            ],
+                                                                            "activity": "Utiliza una IA generativa para crear el concepto y los materiales de una campaña innovadora para un producto nuevo.",
+                                                                            "deliverable": "Concepto de campaña, ejemplos de contenido generado y análisis del impacto esperado.",
+                                                                            "checklist": [
+                                                                                "Usé IA generativa para brainstorming y creación de contenido.",
+                                                                                "Documenté el proceso creativo y los resultados.",
+                                                                                "Analicé el impacto potencial de la campaña."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué prompts usarías para que una IA genere ideas para una campaña disruptiva de lanzamiento?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para brainstorming IA", "prompt": "Genera 5 ideas creativas para una campaña de lanzamiento de un producto tecnológico." },
+                                                                                { "title": "Prompt para contenido original", "prompt": "Crea un video promocional original para una marca de ropa sostenible usando IA." },
+                                                                                { "title": "Prompt para análisis de impacto", "prompt": "Sugiere cómo medir el impacto emocional de una campaña generada con IA." }
+                                                                            ]
+                                                                        },
+                                                                        "automatizacion-avanzada": {
+                                                                            "id": "automatizacion-avanzada",
+                                                                            "title": "Automatización avanzada de marketing",
+                                                                            "moduleTitle": "Estrategias avanzadas",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a diseñar flujos de automatización complejos que integran IA, APIs y plataformas de marketing para maximizar la eficiencia.",
+                                                                            "objectives": [
+                                                                                "Diseñar flujos de automatización complejos.",
+                                                                                "Integrar IA con APIs y plataformas externas.",
+                                                                                "Medir el impacto de la automatización avanzada."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es la automatización avanzada?", "content": "Implica conectar IA con otras herramientas (APIs, CRMs, plataformas de email) para crear flujos de trabajo inteligentes y personalizados." },
+                                                                                { "heading": "Ejemplos de integración", "content": "Automatización de campañas multicanal, respuestas automáticas en tiempo real, análisis y ajustes automáticos de campañas." },
+                                                                                { "heading": "Medición y optimización", "content": "La automatización avanzada permite medir resultados en tiempo real y ajustar estrategias para maximizar el ROI." }
+                                                                            ],
+                                                                            "activity": "Diseña un flujo de automatización que integre IA, una API de CRM y una plataforma de email marketing para una campaña multicanal.",
+                                                                            "deliverable": "Diagrama del flujo, herramientas integradas y análisis de resultados esperados.",
+                                                                            "checklist": [
+                                                                                "Diseñé un flujo de automatización avanzado.",
+                                                                                "Integré IA con al menos dos plataformas externas.",
+                                                                                "Analicé el impacto y posibles mejoras."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo automatizarías el seguimiento de leads en una campaña B2B usando IA y APIs externas?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para integración de APIs", "prompt": "Diseña un flujo donde IA y un CRM trabajen juntos para nutrir leads automáticamente." },
+                                                                                { "title": "Prompt para automatización multicanal", "prompt": "Crea un flujo automatizado que envíe mensajes personalizados por email y SMS según la interacción del usuario." },
+                                                                                { "title": "Prompt para optimización en tiempo real", "prompt": "Sugiere cómo ajustar automáticamente una campaña en curso según los resultados obtenidos cada día." }
+                                                                            ]
+                                                                        },
+                                                                        "experiencia-usuario": {
+                                                                            "id": "experiencia-usuario",
+                                                                            "title": "Optimización de la experiencia de usuario",
+                                                                            "moduleTitle": "Estrategias avanzadas",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo la IA puede analizar y mejorar la experiencia del usuario en cada punto de contacto de una campaña digital.",
+                                                                            "objectives": [
+                                                                                "Analizar el recorrido del usuario con IA.",
+                                                                                "Detectar puntos de mejora en la experiencia.",
+                                                                                "Implementar ajustes personalizados en campañas."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Por qué optimizar la experiencia de usuario?", "content": "Una experiencia positiva aumenta la retención, la conversión y la lealtad del cliente." },
+                                                                                { "heading": "Herramientas IA para análisis de experiencia", "content": "Mapas de calor, análisis de comportamiento, encuestas inteligentes y personalización dinámica." },
+                                                                                { "heading": "Ajustes personalizados", "content": "La IA permite adaptar la navegación, los mensajes y las ofertas en tiempo real según el comportamiento del usuario." }
+                                                                            ],
+                                                                            "activity": "Analiza el recorrido de un usuario en una web y sugiere tres mejoras personalizadas usando IA.",
+                                                                            "deliverable": "Mapa del recorrido, mejoras propuestas y justificación de cada una.",
+                                                                            "checklist": [
+                                                                                "Analicé el recorrido del usuario con IA.",
+                                                                                "Propuse mejoras personalizadas.",
+                                                                                "Justifiqué cada ajuste recomendado."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué prompts usarías para que una IA sugiera mejoras en la experiencia de usuario de una tienda online?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para análisis de experiencia", "prompt": "Analiza el comportamiento de los usuarios en una web y sugiere mejoras para aumentar la conversión." },
+                                                                                { "title": "Prompt para personalización dinámica", "prompt": "Genera recomendaciones de productos en tiempo real según la navegación del usuario." },
+                                                                                { "title": "Prompt para encuestas inteligentes", "prompt": "Crea una encuesta IA que adapte las preguntas según las respuestas del usuario." }
+                                                                            ]
+                                                                        },
+                                                                        "influencers-ia": {
+                                                                            "id": "influencers-ia",
+                                                                            "title": "Colaboración con influencers y agentes IA",
+                                                                            "moduleTitle": "Estrategias avanzadas",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a diseñar campañas colaborativas entre influencers humanos y agentes IA para maximizar el alcance y la autenticidad.",
+                                                                            "objectives": [
+                                                                                "Diseñar campañas colaborativas con IA e influencers.",
+                                                                                "Evaluar el impacto de agentes IA en la comunicación.",
+                                                                                "Medir resultados y ajustar estrategias colaborativas."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Por qué colaborar con influencers y agentes IA?", "content": "La combinación de influencers humanos y agentes IA permite llegar a nuevas audiencias y crear campañas más auténticas y escalables." },
+                                                                                { "heading": "Ejemplos de colaboración", "content": "Influencers virtuales, campañas co-creadas, agentes IA que interactúan en redes sociales y eventos digitales." },
+                                                                                { "heading": "Medición y ajuste de resultados", "content": "La IA permite analizar el impacto de la colaboración y ajustar la estrategia en tiempo real." }
+                                                                            ],
+                                                                            "activity": "Diseña una campaña colaborativa entre un influencer humano y un agente IA para promocionar un producto digital.",
+                                                                            "deliverable": "Descripción de la campaña, roles de cada colaborador y análisis de resultados esperados.",
+                                                                            "checklist": [
+                                                                                "Definí los roles de influencer y agente IA.",
+                                                                                "Diseñé la campaña colaborativa.",
+                                                                                "Analicé el impacto y posibles mejoras."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo diseñarías una campaña donde un influencer y un agente IA interactúan con la audiencia?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para colaboración IA", "prompt": "Crea un guion para una transmisión en vivo donde un influencer y un agente IA responden preguntas del público." },
+                                                                                { "title": "Prompt para agentes virtuales", "prompt": "Diseña una campaña en Instagram con un influencer virtual creado por IA." },
+                                                                                { "title": "Prompt para análisis de impacto", "prompt": "Sugiere métricas para medir el éxito de una campaña colaborativa entre humanos y agentes IA." }
+                                                                            ]
+                                                                        },
+                                                                        "etica-avanzada": {
+                                                                            "id": "etica-avanzada",
+                                                                            "title": "Ética y regulación en marketing IA avanzado",
+                                                                            "moduleTitle": "Estrategias avanzadas",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Reflexiona sobre los desafíos éticos y regulatorios del marketing IA avanzado y aprende a implementar estrategias responsables y legales.",
+                                                                            "objectives": [
+                                                                                "Identificar riesgos éticos y regulatorios avanzados.",
+                                                                                "Aplicar estrategias responsables en campañas IA.",
+                                                                                "Cumplir con normativas y proteger la reputación de la marca."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Riesgos éticos y regulatorios", "content": "Manipulación algorítmica, privacidad avanzada, cumplimiento de normativas internacionales y transparencia en el uso de IA." },
+                                                                                { "heading": "Estrategias responsables", "content": "Auditorías de algoritmos, explicabilidad, consentimiento informado y monitoreo constante de riesgos." },
+                                                                                { "heading": "Protección de la reputación de marca", "content": "La ética y la legalidad son clave para mantener la confianza y evitar crisis reputacionales." }
+                                                                            ],
+                                                                            "activity": "Analiza un caso real de controversia ética en marketing IA avanzado y propone un plan de acción para cumplir con la regulación y proteger la marca.",
+                                                                            "deliverable": "Informe sobre el caso, plan de acción y recomendaciones legales y éticas.",
+                                                                            "checklist": [
+                                                                                "Analicé un caso real de ética y regulación.",
+                                                                                "Propuse un plan de acción responsable.",
+                                                                                "Redacté recomendaciones legales y éticas."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué estrategias implementarías para garantizar la ética y el cumplimiento legal en campañas IA avanzadas?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para auditoría de algoritmos", "prompt": "Redacta un protocolo para auditar algoritmos IA usados en campañas de marketing." },
+                                                                                { "title": "Prompt para consentimiento informado", "prompt": "Crea un aviso de consentimiento para usuarios que interactúan con campañas IA avanzadas." },
+                                                                                { "title": "Prompt para gestión de crisis", "prompt": "Sugiere un plan de acción ante una crisis reputacional causada por un error de IA en marketing." }
+                                                                            ]
+                                                                        },
+                                                                        "proyecto-final": {
+                                                                            "id": "proyecto-final",
+                                                                            "title": "Proyecto final: campaña avanzada con IA",
+                                                                            "moduleTitle": "Estrategias avanzadas",
+                                                                            "durationMinutes": 13,
+                                                                            "summary": "Aplica lo aprendido diseñando una campaña avanzada de marketing digital con IA, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                                            "objectives": [
+                                                                                "Integrar técnicas avanzadas de IA en marketing.",
+                                                                                "Diseñar una campaña digital innovadora y efectiva.",
+                                                                                "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Definir el objetivo de la campaña avanzada", "content": "Elige un producto o servicio y define el objetivo principal de la campaña: innovación, posicionamiento, engagement, etc." },
+                                                                                { "heading": "Aplicar técnicas avanzadas de IA", "content": "Utiliza al menos tres herramientas IA para personalizar, automatizar y analizar resultados. Documenta cada paso y los prompts usados." },
+                                                                                { "heading": "Reflexionar sobre el proceso", "content": "Analiza los resultados, identifica los aprendizajes y propone mejoras para futuras campañas avanzadas con IA." }
+                                                                            ],
+                                                                            "activity": "Diseña una campaña digital avanzada usando IA para personalizar, automatizar y analizar resultados. Documenta el proceso y los resultados obtenidos.",
+                                                                            "deliverable": "Documento con la campaña, herramientas IA usadas, resultados y reflexión final.",
+                                                                            "checklist": [
+                                                                                "Diseñé una campaña digital avanzada aplicando IA.",
+                                                                                "Documenté el proceso y los prompts usados.",
+                                                                                "Reflexioné sobre el impacto y aprendizajes."
+                                                                            ],
+                                                                            "promptStarter": "Crea una campaña avanzada para promocionar una app usando IA para personalizar, automatizar y analizar resultados.",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para personalización avanzada", "prompt": "Personaliza mensajes y ofertas para diferentes segmentos de usuarios en una campaña de lanzamiento de app." },
+                                                                                { "title": "Prompt para automatización compleja", "prompt": "Crea un flujo automatizado que integre IA, CRM y email marketing para nutrir leads." },
+                                                                                { "title": "Prompt para análisis avanzado", "prompt": "Sugiere métricas avanzadas para evaluar el éxito de la campaña y cómo analizarlas con IA." }
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    /* ═══════════════════════════════════════════
+                                                                       CURSO 21: ia-marketing-basico
+                                                                       Marketing con IA: Primeros pasos
+                                                                       Nivel: Principiante | 8 lecciones
+                                                                       ═══════════════════════════════════════════ */
+                                                                    "ia-marketing-basico": {
+                                                                        "intro-marketing-ia": {
+                                                                            "id": "intro-marketing-ia",
+                                                                            "title": "Introducción al marketing con IA",
+                                                                            "moduleTitle": "Fundamentos de marketing IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo la inteligencia artificial está transformando el marketing digital y aprende los conceptos básicos para comenzar a aplicarla.",
+                                                                            "objectives": [
+                                                                                "Comprender el impacto de la IA en el marketing.",
+                                                                                "Identificar aplicaciones básicas de IA en campañas.",
+                                                                                "Reconocer ventajas y limitaciones iniciales."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es el marketing con IA?", "content": "El marketing con IA utiliza algoritmos y modelos inteligentes para optimizar campañas, personalizar mensajes y analizar datos de clientes." },
+                                                                                { "heading": "Ventajas principales", "content": "Automatización, segmentación precisa, análisis predictivo y personalización de experiencias." },
+                                                                                { "heading": "Limitaciones y desafíos", "content": "Requiere datos de calidad, supervisión humana y adaptación constante a nuevas tendencias." }
+                                                                            ],
+                                                                            "activity": "Investiga una campaña real que haya usado IA y describe los resultados obtenidos.",
+                                                                            "deliverable": "Resumen de la campaña, herramientas IA utilizadas y resultados destacados.",
+                                                                            "checklist": [
+                                                                                "Identifiqué una campaña real con IA.",
+                                                                                "Describí las herramientas y resultados.",
+                                                                                "Analicé ventajas y desafíos observados."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo crees que la IA puede mejorar una campaña de email marketing?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para segmentación", "prompt": "Sugiere cómo usar IA para segmentar una base de datos de clientes en una campaña de lanzamiento." },
+                                                                                { "title": "Prompt para personalización", "prompt": "¿Qué prompts usarías para personalizar mensajes en una campaña de redes sociales con IA?" },
+                                                                                { "title": "Prompt para análisis de resultados", "prompt": "Explica cómo la IA puede ayudar a analizar el éxito de una campaña publicitaria." }
+                                                                            ]
+                                                                        },
+                                                                        "automatizacion-basica": {
+                                                                            "id": "automatizacion-basica",
+                                                                            "title": "Automatización de tareas de marketing",
+                                                                            "moduleTitle": "Fundamentos de marketing IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a automatizar tareas repetitivas de marketing usando herramientas de IA sencillas y accesibles.",
+                                                                            "objectives": [
+                                                                                "Identificar tareas de marketing automatizables.",
+                                                                                "Configurar una herramienta básica de automatización.",
+                                                                                "Evaluar el impacto de la automatización en la eficiencia."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué tareas se pueden automatizar?", "content": "Envío de emails, programación de publicaciones, respuestas automáticas y análisis de métricas." },
+                                                                                { "heading": "Herramientas básicas de automatización", "content": "Ejemplos: Mailchimp, Buffer, chatbots simples y plataformas de análisis automatizado." },
+                                                                                { "heading": "Beneficios y precauciones", "content": "Ahorro de tiempo, reducción de errores, pero requiere supervisión para evitar mensajes fuera de contexto." }
+                                                                            ],
+                                                                            "activity": "Configura una automatización sencilla para enviar un email de bienvenida a nuevos suscriptores.",
+                                                                            "deliverable": "Captura de pantalla o descripción del flujo de automatización implementado.",
+                                                                            "checklist": [
+                                                                                "Seleccioné una herramienta de automatización.",
+                                                                                "Configuré el flujo de trabajo básico.",
+                                                                                "Verifiqué el funcionamiento correcto."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué pasos seguirías para automatizar el envío de newsletters con IA?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para automatización de emails", "prompt": "Crea un flujo automatizado para enviar correos de bienvenida y seguimiento a nuevos clientes." },
+                                                                                { "title": "Prompt para chatbots", "prompt": "¿Cómo configurarías un chatbot IA para responder preguntas frecuentes en una web de productos?" },
+                                                                                { "title": "Prompt para análisis automatizado", "prompt": "Sugiere cómo usar IA para analizar automáticamente los resultados de una campaña de marketing." }
+                                                                            ]
+                                                                        },
+                                                                        "segmentacion-clientes": {
+                                                                            "id": "segmentacion-clientes",
+                                                                            "title": "Segmentación de clientes con IA",
+                                                                            "moduleTitle": "Fundamentos de marketing IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo la IA permite segmentar audiencias de manera precisa para campañas más efectivas.",
+                                                                            "objectives": [
+                                                                                "Comprender la segmentación basada en datos.",
+                                                                                "Aplicar IA para identificar grupos de clientes.",
+                                                                                "Diseñar mensajes personalizados para cada segmento."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Por qué segmentar clientes?", "content": "La segmentación permite enviar mensajes relevantes a cada grupo, aumentando la efectividad de las campañas." },
+                                                                                { "heading": "Técnicas de segmentación con IA", "content": "Clustering, análisis de comportamiento, predicción de intereses y personalización dinámica." },
+                                                                                { "heading": "Ejemplo práctico", "content": "Uso de IA para identificar clientes interesados en un producto específico y enviarles ofertas personalizadas." }
+                                                                            ],
+                                                                            "activity": "Utiliza una herramienta IA para segmentar una base de datos de clientes y diseña un mensaje para cada grupo identificado.",
+                                                                            "deliverable": "Lista de segmentos creados y ejemplos de mensajes personalizados.",
+                                                                            "checklist": [
+                                                                                "Segmenté una base de datos usando IA.",
+                                                                                "Diseñé mensajes para cada segmento.",
+                                                                                "Analicé la efectividad potencial de la segmentación."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo usarías IA para identificar clientes potenciales para un nuevo producto?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para clustering", "prompt": "Describe cómo aplicarías clustering con IA para segmentar una base de datos de clientes." },
+                                                                                { "title": "Prompt para personalización", "prompt": "¿Qué prompts usarías para generar mensajes personalizados para diferentes segmentos?" },
+                                                                                { "title": "Prompt para predicción de intereses", "prompt": "Explica cómo la IA puede predecir intereses de clientes a partir de su historial de compras." }
+                                                                            ]
+                                                                        },
+                                                                        "creacion-contenido": {
+                                                                            "id": "creacion-contenido",
+                                                                            "title": "Creación de contenido con IA",
+                                                                            "moduleTitle": "Fundamentos de marketing IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a generar textos, imágenes y videos atractivos para campañas de marketing usando herramientas de IA.",
+                                                                            "objectives": [
+                                                                                "Generar contenido relevante con IA.",
+                                                                                "Probar diferentes formatos: texto, imagen, video.",
+                                                                                "Evaluar la calidad y adecuación del contenido generado."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué tipo de contenido puede crear la IA?", "content": "Textos para blogs, emails, redes sociales, imágenes promocionales y videos cortos." },
+                                                                                { "heading": "Herramientas recomendadas", "content": "ChatGPT, DALL-E, Canva IA, Lumen5, entre otras." },
+                                                                                { "heading": "Buenas prácticas", "content": "Revisar y ajustar el contenido generado, asegurando coherencia con la marca y el público objetivo." }
+                                                                            ],
+                                                                            "activity": "Genera un post para redes sociales y una imagen promocional usando herramientas IA. Ajusta el contenido para alinearlo con una marca específica.",
+                                                                            "deliverable": "Post y imagen generados, junto con una breve justificación de los ajustes realizados.",
+                                                                            "checklist": [
+                                                                                "Generé contenido en al menos dos formatos.",
+                                                                                "Ajusté el contenido para la marca.",
+                                                                                "Justifiqué los cambios realizados."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué prompts usarías para crear una campaña de lanzamiento de producto con IA?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para post de redes", "prompt": "Genera un post atractivo para Instagram anunciando un nuevo producto ecológico." },
+                                                                                { "title": "Prompt para imagen IA", "prompt": "Crea una imagen promocional para una campaña de descuentos usando DALL-E o Canva IA." },
+                                                                                { "title": "Prompt para video corto", "prompt": "Sugiere un guion para un video de 15 segundos promocionando una app móvil." }
+                                                                            ]
+                                                                        },
+                                                                        "analisis-metricas": {
+                                                                            "id": "analisis-metricas",
+                                                                            "title": "Análisis de métricas y resultados",
+                                                                            "moduleTitle": "Fundamentos de marketing IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo la IA puede analizar métricas de campañas y ayudar a tomar decisiones basadas en datos.",
+                                                                            "objectives": [
+                                                                                "Identificar métricas clave en marketing digital.",
+                                                                                "Usar IA para analizar resultados de campañas.",
+                                                                                "Tomar decisiones informadas a partir de los datos."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué métricas analizar?", "content": "Tasa de apertura, clics, conversiones, alcance, engagement, retorno de inversión (ROI)." },
+                                                                                { "heading": "Herramientas de análisis IA", "content": "Google Analytics con IA, plataformas de dashboards inteligentes, análisis predictivo." },
+                                                                                { "heading": "Interpretación de resultados", "content": "La IA puede identificar patrones, predecir tendencias y sugerir mejoras para futuras campañas." }
+                                                                            ],
+                                                                            "activity": "Analiza los resultados de una campaña ficticia usando una herramienta IA y sugiere al menos dos mejoras basadas en los datos obtenidos.",
+                                                                            "deliverable": "Informe de análisis con métricas clave y recomendaciones de mejora.",
+                                                                            "checklist": [
+                                                                                "Identifiqué y analicé métricas clave.",
+                                                                                "Usé IA para interpretar los resultados.",
+                                                                                "Propuse mejoras basadas en los datos."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo usarías IA para mejorar el ROI de una campaña digital?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para análisis de métricas", "prompt": "Analiza los resultados de una campaña de email marketing y sugiere mejoras usando IA." },
+                                                                                { "title": "Prompt para dashboards inteligentes", "prompt": "¿Qué prompts usarías para crear un dashboard IA que resuma el desempeño de varias campañas?" },
+                                                                                { "title": "Prompt para predicción de tendencias", "prompt": "Explica cómo la IA puede predecir el mejor horario para publicar en redes sociales." }
+                                                                            ]
+                                                                        },
+                                                                        "personalizacion-basica": {
+                                                                            "id": "personalizacion-basica",
+                                                                            "title": "Personalización de experiencias de usuario",
+                                                                            "moduleTitle": "Fundamentos de marketing IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a personalizar mensajes y experiencias para cada usuario usando IA, mejorando la conexión y la conversión.",
+                                                                            "objectives": [
+                                                                                "Comprender la importancia de la personalización.",
+                                                                                "Aplicar IA para adaptar mensajes y ofertas.",
+                                                                                "Medir el impacto de la personalización en campañas."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Por qué personalizar?", "content": "La personalización aumenta la relevancia, el engagement y la probabilidad de conversión en campañas de marketing." },
+                                                                                { "heading": "Técnicas básicas de personalización IA", "content": "Recomendaciones de productos, emails dinámicos, ofertas personalizadas y contenido adaptativo." },
+                                                                                { "heading": "Medición del impacto", "content": "Analiza tasas de apertura, clics y conversiones para evaluar la efectividad de la personalización." }
+                                                                            ],
+                                                                            "activity": "Crea un email personalizado para dos segmentos de clientes usando IA y mide la tasa de apertura de cada uno.",
+                                                                            "deliverable": "Ejemplo de emails personalizados y análisis de resultados obtenidos.",
+                                                                            "checklist": [
+                                                                                "Generé mensajes personalizados para al menos dos segmentos.",
+                                                                                "Medí el impacto de la personalización.",
+                                                                                "Analicé los resultados y propuse mejoras."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué prompts usarías para personalizar ofertas en una tienda online con IA?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para recomendaciones IA", "prompt": "Sugiere productos personalizados para un cliente que ha comprado libros de cocina." },
+                                                                                { "title": "Prompt para emails dinámicos", "prompt": "Genera un email personalizado para un cliente que abandonó su carrito de compras." },
+                                                                                { "title": "Prompt para ofertas adaptativas", "prompt": "¿Cómo usarías IA para adaptar descuentos según el historial de compras de cada usuario?" }
+                                                                            ]
+                                                                        },
+                                                                        "etica-marketing": {
+                                                                            "id": "etica-marketing",
+                                                                            "title": "Ética y buenas prácticas en marketing IA",
+                                                                            "moduleTitle": "Fundamentos de marketing IA",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Reflexiona sobre los desafíos éticos del marketing con IA y aprende a aplicar buenas prácticas para proteger la privacidad y la confianza del usuario.",
+                                                                            "objectives": [
+                                                                                "Identificar riesgos éticos en el uso de IA.",
+                                                                                "Aplicar buenas prácticas de privacidad y transparencia.",
+                                                                                "Fomentar la confianza del usuario en campañas IA."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Riesgos éticos principales", "content": "Uso indebido de datos, discriminación algorítmica, manipulación de usuarios y falta de transparencia." },
+                                                                                { "heading": "Buenas prácticas recomendadas", "content": "Solicitar consentimiento, explicar el uso de IA, proteger datos personales y evitar sesgos en los algoritmos." },
+                                                                                { "heading": "Construcción de confianza", "content": "La transparencia y la ética fortalecen la relación con los clientes y mejoran la reputación de la marca." }
+                                                                            ],
+                                                                            "activity": "Analiza un caso real de controversia ética en marketing digital y propone soluciones para evitar problemas similares usando IA responsable.",
+                                                                            "deliverable": "Informe breve sobre el caso, riesgos identificados y recomendaciones de buenas prácticas.",
+                                                                            "checklist": [
+                                                                                "Analicé un caso real de ética en marketing.",
+                                                                                "Identifiqué riesgos y propuse soluciones.",
+                                                                                "Redacté recomendaciones de buenas prácticas."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué medidas tomarías para garantizar la ética en campañas de marketing con IA?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para privacidad", "prompt": "Redacta un aviso de privacidad para una campaña de marketing IA que explique el uso de datos personales." },
+                                                                                { "title": "Prompt para transparencia", "prompt": "¿Cómo explicarías a los usuarios que una campaña utiliza IA para personalizar ofertas?" },
+                                                                                { "title": "Prompt para evitar sesgos", "prompt": "Sugiere buenas prácticas para evitar la discriminación algorítmica en campañas IA." }
+                                                                            ]
+                                                                        },
+                                                                        "proyecto-final": {
+                                                                            "id": "proyecto-final",
+                                                                            "title": "Proyecto final: campaña básica con IA",
+                                                                            "moduleTitle": "Fundamentos de marketing IA",
+                                                                            "durationMinutes": 12,
+                                                                            "summary": "Aplica lo aprendido diseñando una campaña básica de marketing digital con IA, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                                            "objectives": [
+                                                                                "Integrar técnicas básicas de IA en marketing.",
+                                                                                "Diseñar una campaña digital sencilla y efectiva.",
+                                                                                "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Definir el objetivo de la campaña", "content": "Elige un producto o servicio y define el objetivo principal de la campaña: aumentar ventas, captar leads, mejorar la visibilidad, etc." },
+                                                                                { "heading": "Aplicar técnicas de IA", "content": "Utiliza al menos dos herramientas IA para segmentar, personalizar mensajes o analizar resultados. Documenta cada paso y los prompts usados." },
+                                                                                { "heading": "Reflexionar sobre el proceso", "content": "Analiza los resultados, identifica los aprendizajes y propone mejoras para futuras campañas con IA." }
+                                                                            ],
+                                                                            "activity": "Diseña una campaña digital básica usando IA para segmentar y personalizar mensajes. Documenta el proceso y los resultados obtenidos.",
+                                                                            "deliverable": "Documento con la campaña, herramientas IA usadas, resultados y reflexión final.",
+                                                                            "checklist": [
+                                                                                "Diseñé una campaña digital aplicando IA.",
+                                                                                "Documenté el proceso y los prompts usados.",
+                                                                                "Reflexioné sobre el impacto y aprendizajes."
+                                                                            ],
+                                                                            "promptStarter": "Crea una campaña básica para promocionar un curso online usando IA para segmentar y personalizar mensajes.",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para segmentación", "prompt": "Segmenta una base de datos de estudiantes y personaliza mensajes para cada grupo." },
+                                                                                { "title": "Prompt para contenido IA", "prompt": "Genera un post y una imagen promocional para la campaña usando IA." },
+                                                                                { "title": "Prompt para análisis de resultados", "prompt": "Sugiere dos métricas clave para evaluar el éxito de la campaña y cómo analizarlas con IA." }
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    "integracion-herramientas-salud": {
+                                                                        "id": "integracion-herramientas-salud",
+                                                                        "title": "Integración de herramientas IA en salud",
+                                                                        "moduleTitle": "Técnicas avanzadas",
+                                                                        "durationMinutes": 10,
+                                                                        "summary": "Descubre cómo combinar diferentes soluciones IA para enriquecer la atención médica y optimizar procesos clínicos y administrativos.",
+                                                                        "objectives": [
+                                                                            "Identificar ventajas de combinar herramientas IA en salud.",
+                                                                            "Diseñar flujos de trabajo integrados en clínicas y hospitales.",
+                                                                            "Optimizar la gestión y personalización médica."
+                                                                        ],
+                                                                        "sections": [
+                                                                            { "heading": "¿Por qué integrar herramientas IA?", "content": "Cada herramienta IA tiene fortalezas: análisis de imágenes, gestión de expedientes, asistentes virtuales. Integrarlas permite experiencias más completas y eficientes." },
+                                                                            { "heading": "Ejemplo de flujo integrado", "content": "Genera reportes con una IA, automatiza la gestión de citas con otra y usa un asistente virtual para seguimiento de pacientes. Así se optimiza el tiempo médico y se personaliza la atención." },
+                                                                            { "heading": "Consejos para integración efectiva", "content": "Documenta los flujos, revisa compatibilidad y capacita al personal en el uso de las herramientas." }
+                                                                        ],
+                                                                        "activity": "Diseña un flujo de trabajo que combine al menos dos herramientas IA para diagnóstico, gestión y seguimiento de pacientes en una especialidad médica de tu elección.",
+                                                                        "deliverable": "Diagrama del flujo, herramientas usadas y análisis de ventajas obtenidas.",
+                                                                        "checklist": [
+                                                                            "Combiné al menos dos herramientas IA en un flujo clínico o administrativo.",
+                                                                            "Documenté el proceso y las ventajas.",
+                                                                            "Analicé el impacto en la atención médica."
+                                                                        ],
+                                                                        "promptStarter": "Genera reportes de laboratorio con una IA, automatiza la gestión de citas y diseña un asistente virtual para seguimiento de pacientes crónicos.",
+                                                                        "promptExamples": [
+                                                                            { "title": "Prompt para generación de reportes", "prompt": "Crea 5 reportes de laboratorio para pacientes con insuficiencia renal, con interpretación médica." },
+                                                                            { "title": "Prompt para automatización de gestión", "prompt": "Sugiere cómo una IA puede automatizar la gestión de citas y recordatorios en una clínica de especialidad." },
+                                                                            { "title": "Prompt para asistente virtual", "prompt": "Diseña un asistente virtual que resuelva dudas frecuentes sobre tratamientos para pacientes oncológicos." }
+                                                                        ]
+                                                                    },
+                                                                    "analisis-avanzado-salud": {
+                                                                        "id": "analisis-avanzado-salud",
+                                                                        "title": "Análisis avanzado de datos clínicos con IA",
+                                                                        "moduleTitle": "Técnicas avanzadas",
+                                                                        "durationMinutes": 12,
+                                                                        "summary": "Explora técnicas de análisis de datos clínicos con IA para identificar patrones, predecir riesgos y personalizar intervenciones médicas.",
+                                                                        "objectives": [
+                                                                            "Aplicar análisis avanzado de datos clínicos.",
+                                                                            "Identificar patrones y predecir riesgos médicos.",
+                                                                            "Personalizar intervenciones médicas con IA."
+                                                                        ],
+                                                                        "sections": [
+                                                                            { "heading": "Análisis de datos clínicos", "content": "La IA puede analizar resultados, identificar tendencias y predecir riesgos de enfermedades para cada paciente o grupo." },
+                                                                            { "heading": "Predicción y personalización", "content": "Con modelos predictivos, la IA sugiere intervenciones personalizadas antes de que surjan complicaciones médicas." },
+                                                                            { "heading": "Visualización y toma de decisiones", "content": "Dashboards y reportes IA ayudan a médicos y directivos a tomar decisiones informadas para mejorar la atención." }
+                                                                        ],
+                                                                        "activity": "Analiza los resultados de un grupo de pacientes con IA, identifica patrones de riesgo y sugiere intervenciones personalizadas para los casos más críticos.",
+                                                                        "deliverable": "Reporte de análisis, patrones detectados y plan de intervención personalizado.",
+                                                                        "checklist": [
+                                                                            "Apliqué análisis avanzado de datos clínicos.",
+                                                                            "Identifiqué patrones y predije riesgos médicos.",
+                                                                            "Propuse intervenciones personalizadas."
+                                                                        ],
+                                                                        "promptStarter": "Analiza los resultados de laboratorio de un grupo de pacientes diabéticos y sugiere intervenciones para los casos con mayor riesgo.",
+                                                                        "promptExamples": [
+                                                                            { "title": "Prompt para análisis de patrones", "prompt": "Detecta patrones de riesgo en resultados de laboratorio de pacientes con insuficiencia cardíaca." },
+                                                                            { "title": "Prompt para predicción de riesgos", "prompt": "Predice qué pacientes podrían desarrollar complicaciones renales el próximo año." },
+                                                                            { "title": "Prompt para visualización de datos", "prompt": "Genera un dashboard con los resultados de laboratorio de pacientes oncológicos." }
+                                                                        ]
+                                                                    },
+                                                                    "automatizacion-avanzada-salud": {
+                                                                        "id": "automatizacion-avanzada-salud",
+                                                                        "title": "Automatización avanzada de procesos médicos",
+                                                                        "moduleTitle": "Técnicas avanzadas",
+                                                                        "durationMinutes": 10,
+                                                                        "summary": "Aprende a automatizar procesos médicos complejos usando IA, APIs y flujos de trabajo integrados para optimizar la gestión clínica y administrativa.",
+                                                                        "objectives": [
+                                                                            "Identificar procesos médicos complejos para automatizar.",
+                                                                            "Integrar múltiples herramientas IA en un solo flujo.",
+                                                                            "Evaluar el impacto de la automatización en la atención médica."
+                                                                        ],
+                                                                        "sections": [
+                                                                            { "heading": "Procesos ideales para automatización avanzada", "content": "Procesos como gestión de hospitalizaciones, seguimiento de tratamientos y comunicación con pacientes pueden automatizarse integrando varias herramientas IA y APIs." },
+                                                                            { "heading": "Integración de herramientas y APIs", "content": "Usa plataformas como Epic, Zapier y sistemas de gestión hospitalaria para conectar procesos y automatizar tareas clínicas y administrativas." },
+                                                                            { "heading": "Evaluación y mejora continua", "content": "Monitorea el funcionamiento del flujo automatizado, recopila métricas y ajusta los procesos para maximizar el beneficio médico y administrativo." }
+                                                                        ],
+                                                                        "activity": "Automatiza el seguimiento de tratamientos y la comunicación con pacientes en una clínica usando IA y APIs.",
+                                                                        "deliverable": "Descripción del flujo automatizado, herramientas integradas y análisis del impacto en la gestión clínica.",
+                                                                        "checklist": [
+                                                                            "Identifiqué un proceso médico complejo y herramientas IA para automatizarlo.",
+                                                                            "Implementé la integración y medí el resultado.",
+                                                                            "Analicé el impacto y posibles mejoras futuras."
+                                                                        ],
+                                                                        "promptStarter": "Describe un proceso de seguimiento de tratamientos y pide a la IA que sugiera una integración de herramientas para automatizarlo.",
+                                                                        "promptExamples": [
+                                                                            { "title": "Prompt para automatización avanzada", "prompt": "Sugiere cómo automatizar la gestión de hospitalizaciones y comunicación con pacientes usando IA y APIs." },
+                                                                            { "title": "Prompt para integración de sistemas", "prompt": "Propón una integración entre un sistema de gestión hospitalaria y un asistente virtual para informar a pacientes sobre su tratamiento." },
+                                                                            { "title": "Prompt para análisis de impacto", "prompt": "Genera un reporte sobre el impacto de la automatización avanzada en la reducción de tareas administrativas médicas." }
+                                                                        ]
+                                                                    },
+                                                                    "mejorar-resultados-salud": {
+                                                                        "id": "mejorar-resultados-salud",
+                                                                        "title": "Cómo mejorar resultados y evitar errores comunes",
+                                                                        "moduleTitle": "Técnicas avanzadas",
+                                                                        "durationMinutes": 10,
+                                                                        "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener mejores resultados en la aplicación de IA en salud.",
+                                                                        "objectives": [
+                                                                            "Identificar errores comunes en prompts médicos.",
+                                                                            "Aplicar técnicas de iteración y ajuste.",
+                                                                            "Obtener soluciones más alineadas con los objetivos clínicos."
+                                                                        ],
+                                                                        "sections": [
+                                                                            { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir reportes demasiado generales, no especificar el contexto clínico. Solución: revisa tu prompt, añade detalles y enfócate en el objetivo médico." },
+                                                                            { "heading": "Iterar y ajustar para mejorar", "content": "Genera el reporte, analiza el resultado y ajusta el prompt: cambia el enfoque, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                                            { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad médica. No temas experimentar y pedir feedback a otros profesionales." }
+                                                                        ],
+                                                                        "activity": "Elige un reporte IA generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                                                        "deliverable": "Secuencia de 3 reportes (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                                                        "checklist": [
+                                                                            "Identifiqué y corregí errores en mis prompts médicos.",
+                                                                            "Iteré al menos dos veces para mejorar el resultado.",
+                                                                            "Documenté el proceso de mejora."
+                                                                        ],
+                                                                        "promptStarter": "Genera un informe de laboratorio para un paciente oncológico. Si el resultado no es satisfactorio, ajusta el prompt para enfocarlo en predicción de riesgos y luego en recomendaciones personalizadas.",
+                                                                        "promptExamples": [
+                                                                            { "title": "Prompt original", "prompt": "Crea un informe de laboratorio para un paciente oncológico." },
+                                                                            { "title": "Primera iteración", "prompt": "Propón un informe de laboratorio para un paciente oncológico que incluya predicción de riesgos." },
+                                                                            { "title": "Segunda iteración", "prompt": "Sugiere un informe de laboratorio para un paciente oncológico con recomendaciones personalizadas de tratamiento." }
+                                                                        ]
+                                                                    },
+                                                                    "proyecto-final-avanzado-salud": {
+                                                                        "id": "proyecto-final-avanzado-salud",
+                                                                        "title": "Proyecto final: portafolio avanzado de IA en salud",
+                                                                        "moduleTitle": "Técnicas avanzadas",
+                                                                        "durationMinutes": 12,
+                                                                        "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de soluciones IA aplicadas a la salud, documentando el proceso y los resultados.",
+                                                                        "objectives": [
+                                                                            "Combinar técnicas avanzadas de prompting, análisis y automatización en salud.",
+                                                                            "Crear un portafolio temático con soluciones IA personalizadas.",
+                                                                            "Documentar el proceso y justificar cada elección creativa."
+                                                                        ],
+                                                                        "sections": [
+                                                                            { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un área avanzada de salud (cardiología, oncología, rehabilitación, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                                                            { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 soluciones usando diferentes técnicas: prompt engineering, análisis avanzado, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                                                            { "heading": "Presentar y justificar el portafolio", "content": "Organiza las soluciones en un documento digital, explica las técnicas y herramientas usadas en cada una, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                                                                        ],
+                                                                        "activity": "Crea un portafolio digital de 6 soluciones IA para salud sobre un área avanzada, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                                                                        "deliverable": "Portafolio digital con 6 soluciones, prompts, técnicas usadas y justificación de cada elección creativa.",
+                                                                        "checklist": [
+                                                                            "Generé al menos 6 soluciones IA aplicando técnicas avanzadas en salud.",
+                                                                            "Documenté el proceso y los prompts usados.",
+                                                                            "Justifiqué cada elección creativa en el portafolio."
+                                                                        ],
+                                                                        "promptStarter": "Crea una serie de soluciones para 'gestión avanzada de pacientes crónicos' usando técnicas avanzadas de prompting, análisis y automatización.",
+                                                                        "promptExamples": [
+                                                                            { "title": "Prompt para portafolio temático", "prompt": "Una solución para personalizar el seguimiento de pacientes con insuficiencia cardíaca usando IA y análisis de datos clínicos." },
+                                                                            { "title": "Prompt para creatividad", "prompt": "Una integración entre un asistente virtual y un sistema de gestión hospitalaria para mejorar la experiencia de pacientes oncológicos." },
+                                                                            { "title": "Prompt para análisis de impacto", "prompt": "Un reporte visual generado con IA sobre el impacto de la automatización avanzada en la gestión clínica." }
+                                                                        ]
+                                                                    }
+                                                                    /* ═══════════════════════════════════════════
+                                                                       CURSO 20: agentes-ia
+                                                                       Agentes de IA y GPTs personalizados
+                                                                       Nivel: Avanzado | 10 lecciones
+                                                                       ═══════════════════════════════════════════ */
+                                                                    "agentes-ia": {
+                                                                        "crear-gpt": {
+                                                                            "id": "crear-gpt",
+                                                                            "title": "Creación de GPTs personalizados",
+                                                                            "moduleTitle": "GPTs Personalizados",
+                                                                            "durationMinutes": 12,
+                                                                            "summary": "Aprende a crear tus propios modelos GPT personalizados para tareas específicas, desde la configuración inicial hasta la puesta en marcha.",
+                                                                            "objectives": [
+                                                                                "Comprender el proceso de creación de un GPT personalizado.",
+                                                                                "Configurar parámetros y datos de entrenamiento.",
+                                                                                "Implementar y probar el modelo en un entorno real."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es un GPT personalizado?", "content": "Un GPT personalizado es un modelo de lenguaje adaptado a necesidades específicas, entrenado con datos propios o configurado para tareas concretas." },
+                                                                                { "heading": "Pasos para crear un GPT", "content": "Incluye: definir el objetivo, recopilar datos, ajustar parámetros, entrenar el modelo y validar resultados." },
+                                                                                { "heading": "Aplicaciones prácticas", "content": "Desde asistentes virtuales hasta generadores de contenido especializado, los GPTs personalizados amplían las posibilidades de la IA." }
+                                                                            ],
+                                                                            "activity": "Define un caso de uso y diseña un GPT personalizado para resolverlo, detallando los datos y parámetros necesarios.",
+                                                                            "deliverable": "Documento con el caso de uso, configuración y resultados esperados del GPT personalizado.",
+                                                                            "checklist": [
+                                                                                "Definí un caso de uso concreto.",
+                                                                                "Seleccioné datos y parámetros relevantes.",
+                                                                                "Describí el proceso de entrenamiento y validación."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo crearías un GPT para responder preguntas frecuentes sobre un producto específico?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para configuración inicial", "prompt": "Describe los pasos para configurar un GPT que ayude a estudiantes de medicina con preguntas clínicas." },
+                                                                                { "title": "Prompt para selección de datos", "prompt": "¿Qué tipo de datos usarías para entrenar un GPT que genere recetas de cocina saludables?" },
+                                                                                { "title": "Prompt para validación", "prompt": "Explica cómo validarías la precisión de un GPT personalizado para atención al cliente." }
+                                                                            ]
+                                                                        },
+                                                                        "instrucciones": {
+                                                                            "id": "instrucciones",
+                                                                            "title": "Definición de instrucciones y límites",
+                                                                            "moduleTitle": "GPTs Personalizados",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a definir instrucciones claras y límites para tus agentes GPT, asegurando respuestas alineadas con los objetivos y valores del proyecto.",
+                                                                            "objectives": [
+                                                                                "Redactar instrucciones efectivas para agentes IA.",
+                                                                                "Establecer límites y restricciones de uso.",
+                                                                                "Evaluar el impacto de las instrucciones en el comportamiento del agente."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Importancia de las instrucciones", "content": "Las instrucciones guían el comportamiento del agente, determinando el tipo de respuestas y el tono utilizado." },
+                                                                                { "heading": "Cómo definir límites", "content": "Incluye: temas prohibidos, formatos de respuesta, tono, nivel de detalle y restricciones éticas o legales." },
+                                                                                { "heading": "Evaluación y ajuste", "content": "Prueba el agente con diferentes instrucciones y ajusta según los resultados obtenidos en pruebas reales." }
+                                                                            ],
+                                                                            "activity": "Redacta un conjunto de instrucciones y límites para un agente GPT que atienda consultas legales básicas.",
+                                                                            "deliverable": "Documento con las instrucciones, límites y ejemplos de respuestas esperadas.",
+                                                                            "checklist": [
+                                                                                "Redacté instrucciones claras y específicas.",
+                                                                                "Definí límites y restricciones relevantes.",
+                                                                                "Probé el agente y ajusté las instrucciones según los resultados."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué instrucciones darías a un GPT para que solo responda preguntas sobre derecho laboral?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para tono y formato", "prompt": "Define el tono y formato de respuesta para un agente que asesora en trámites migratorios." },
+                                                                                { "title": "Prompt para límites temáticos", "prompt": "Redacta instrucciones para que un GPT no responda preguntas sobre temas médicos." },
+                                                                                { "title": "Prompt para restricciones legales", "prompt": "Establece límites para que un agente GPT no brinde asesoría legal vinculante." }
+                                                                            ]
+                                                                        },
+                                                                        "knowledge-base": {
+                                                                            "id": "knowledge-base",
+                                                                            "title": "Integración de bases de conocimiento",
+                                                                            "moduleTitle": "GPTs Personalizados",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo conectar agentes GPT con bases de conocimiento externas para mejorar la precisión y relevancia de las respuestas.",
+                                                                            "objectives": [
+                                                                                "Comprender la importancia de las bases de conocimiento.",
+                                                                                "Integrar fuentes externas de información.",
+                                                                                "Actualizar y mantener la base de conocimiento del agente."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es una base de conocimiento?", "content": "Es un repositorio estructurado de información que el agente puede consultar para responder preguntas específicas." },
+                                                                                { "heading": "Métodos de integración", "content": "Incluye: APIs, documentos, bases de datos y sistemas de gestión de conocimiento conectados al agente." },
+                                                                                { "heading": "Mantenimiento y actualización", "content": "Es fundamental mantener la base de conocimiento actualizada para asegurar respuestas precisas y relevantes." }
+                                                                            ],
+                                                                            "activity": "Integra una base de conocimiento externa a un agente GPT y prueba su funcionamiento con diferentes consultas.",
+                                                                            "deliverable": "Informe sobre el proceso de integración, pruebas realizadas y resultados obtenidos.",
+                                                                            "checklist": [
+                                                                                "Seleccioné una base de conocimiento relevante.",
+                                                                                "Integré la fuente externa al agente GPT.",
+                                                                                "Probé y documenté los resultados de la integración."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo conectarías un GPT a una base de datos de preguntas frecuentes de una empresa?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para integración API", "prompt": "Describe los pasos para conectar un GPT a una API de noticias actualizadas." },
+                                                                                { "title": "Prompt para actualización de datos", "prompt": "¿Cómo automatizarías la actualización de una base de conocimiento para un agente de soporte técnico?" },
+                                                                                { "title": "Prompt para pruebas de integración", "prompt": "Sugiere pruebas para validar la integración de una base de datos de productos en un agente GPT de ventas." }
+                                                                            ]
+                                                                        },
+                                                                        "actions-api": {
+                                                                            "id": "actions-api",
+                                                                            "title": "Uso de Actions y APIs externas",
+                                                                            "moduleTitle": "GPTs Personalizados",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a ampliar las capacidades de tus agentes GPT conectándolos con APIs externas y acciones automatizadas.",
+                                                                            "objectives": [
+                                                                                "Comprender el concepto de Actions en agentes GPT.",
+                                                                                "Configurar conexiones con APIs externas.",
+                                                                                "Diseñar flujos de trabajo automatizados con IA."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué son las Actions?", "content": "Son funciones o comandos que el agente puede ejecutar para interactuar con sistemas externos, como enviar emails, consultar bases de datos o realizar cálculos en tiempo real." },
+                                                                                { "heading": "Integración con APIs externas", "content": "Incluye: autenticación, manejo de respuestas, gestión de errores y seguridad en la conexión." },
+                                                                                { "heading": "Ejemplos de flujos automatizados", "content": "Automatización de reservas, generación de reportes, envío de notificaciones y más, todo desde el agente GPT." }
+                                                                            ],
+                                                                            "activity": "Diseña un flujo de trabajo donde un agente GPT use una API externa para resolver una tarea real (por ejemplo, consultar el clima y enviar una alerta).",
+                                                                            "deliverable": "Diagrama del flujo, código de integración y análisis del impacto en la eficiencia.",
+                                                                            "checklist": [
+                                                                                "Definí el flujo de trabajo y la API a usar.",
+                                                                                "Implementé la integración y probé el agente.",
+                                                                                "Analicé el impacto y posibles mejoras."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo harías que un GPT consulte el clima y envíe una alerta por email usando una API externa?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para integración de APIs", "prompt": "Explica cómo conectar un GPT a la API de Google Calendar para crear eventos automáticamente." },
+                                                                                { "title": "Prompt para manejo de errores", "prompt": "¿Cómo gestionarías los errores al consultar una API externa desde un agente GPT?" },
+                                                                                { "title": "Prompt para automatización de tareas", "prompt": "Diseña un flujo donde un agente GPT reciba una orden y genere un reporte en PDF usando una API." }
+                                                                            ]
+                                                                        },
+                                                                        "publicar-gpt": {
+                                                                            "id": "publicar-gpt",
+                                                                            "title": "Publicación y despliegue de GPTs personalizados",
+                                                                            "moduleTitle": "GPTs Personalizados",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo publicar y desplegar tus agentes GPT personalizados para que sean accesibles y útiles en diferentes plataformas.",
+                                                                            "objectives": [
+                                                                                "Preparar un GPT para su publicación.",
+                                                                                "Seleccionar la plataforma de despliegue adecuada.",
+                                                                                "Asegurar la accesibilidad y el monitoreo del agente publicado."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Preparación para el despliegue", "content": "Incluye: pruebas finales, documentación, configuración de seguridad y revisión de instrucciones." },
+                                                                                { "heading": "Opciones de publicación", "content": "Desde plataformas web hasta integraciones en apps móviles, chatbots o sistemas empresariales." },
+                                                                                { "heading": "Monitoreo y mantenimiento", "content": "Es fundamental monitorear el desempeño del agente y actualizarlo según el feedback de los usuarios." }
+                                                                            ],
+                                                                            "activity": "Prepara y publica un GPT personalizado en una plataforma de tu elección, documentando el proceso y los resultados obtenidos.",
+                                                                            "deliverable": "Informe de publicación, capturas de pantalla y análisis del uso inicial del agente.",
+                                                                            "checklist": [
+                                                                                "Realicé pruebas finales y documenté el agente.",
+                                                                                "Seleccioné la plataforma de publicación adecuada.",
+                                                                                "Monitoreé el desempeño y recopilé feedback inicial."
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo publicarías un GPT personalizado en una web de atención al cliente?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para despliegue web", "prompt": "Describe los pasos para integrar un GPT en una página de soporte técnico." },
+                                                                                { "title": "Prompt para monitoreo", "prompt": "¿Qué métricas usarías para monitorear el desempeño de un agente GPT publicado?" },
+                                                                                { "title": "Prompt para feedback de usuarios", "prompt": "Sugiere métodos para recopilar y analizar feedback de usuarios de un agente GPT." }
+                                                                            ]
+                                                                        },
+                                                                        "que-son-agentes": {
+                                                                            "id": "que-son-agentes",
+                                                                            "title": "¿Qué son los agentes autónomos?",
+                                                                            "moduleTitle": "Agentes autónomos",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Explora el concepto de agentes autónomos, sus diferencias con los chatbots tradicionales y su potencial en la automatización avanzada.",
+                                                                            "objectives": [
+                                                                                "Definir qué es un agente autónomo.",
+                                                                                "Diferenciar entre agentes, chatbots y asistentes.",
+                                                                                "Identificar aplicaciones prácticas de agentes autónomos."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Definición de agente autónomo", "content": "Un agente autónomo es un sistema de IA capaz de tomar decisiones y ejecutar acciones sin intervención humana directa, adaptándose al entorno y a los objetivos definidos." },
+                                                                                { "heading": "Diferencias con chatbots y asistentes", "content": "A diferencia de los chatbots, los agentes autónomos pueden planificar, aprender y actuar de forma proactiva, no solo responder preguntas." },
+                                                                                { "heading": "Aplicaciones prácticas", "content": "Desde automatización de procesos empresariales hasta asistentes personales inteligentes y robots colaborativos." }
+                                                                            ],
+                                                                            "activity": "Identifica un proceso que podría beneficiarse de un agente autónomo y diseña una solución conceptual para automatizarlo.",
+                                                                            "deliverable": "Diagrama o descripción del proceso automatizado y análisis de los beneficios esperados.",
+                                                                            "checklist": [
+                                                                                "Definí el proceso y los objetivos de automatización.",
+                                                                                "Diseñé la solución conceptual del agente autónomo.",
+                                                                                "Analicé los beneficios y posibles retos de la automatización."
+                                                                            ],
+                                                                            "promptStarter": "¿Qué proceso empresarial automatizarías con un agente autónomo y cómo lo diseñarías?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para automatización avanzada", "prompt": "Diseña un agente autónomo para gestionar inventarios en tiempo real en una tienda online." },
+                                                                                { "title": "Prompt para diferenciación de agentes", "prompt": "Explica la diferencia entre un chatbot y un agente autónomo en el contexto de atención al cliente." },
+                                                                                { "title": "Prompt para aplicaciones prácticas", "prompt": "Propón un agente autónomo para coordinar tareas en un equipo de trabajo remoto." }
+                                                                            ]
+                                                                        },
+                                                                        "crew-ai": {
+                                                                            "id": "crew-ai",
+                                                                            "title": "Colaboración y orquestación con CrewAI",
+                                                                            "moduleTitle": "Agentes autónomos",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a coordinar múltiples agentes autónomos usando CrewAI para resolver tareas complejas de forma colaborativa.",
+                                                                            "objectives": [
+                                                                                "Comprender el funcionamiento de CrewAI.",
+                                                                                "Diseñar flujos de trabajo colaborativos entre agentes.",
+                                                                                "Evaluar ventajas y retos de la orquestación de agentes."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es CrewAI?", "content": "CrewAI es una plataforma que permite coordinar varios agentes autónomos, asignando roles y tareas para resolver problemas complejos de manera eficiente." },
+                                                                                { "heading": "Diseño de flujos colaborativos", "content": "Incluye: definición de roles, comunicación entre agentes, gestión de conflictos y evaluación de resultados." },
+                                                                                { "heading": "Ventajas y retos", "content": "La colaboración entre agentes permite abordar tareas multidisciplinarias, pero requiere una buena orquestación y monitoreo constante." }
+                                                                            ],
+                                                                            "activity": "Diseña un flujo de trabajo donde al menos tres agentes colaboren para resolver una tarea empresarial compleja.",
+                                                                            "deliverable": "Diagrama del flujo, roles de los agentes y análisis de los resultados esperados.",
+                                                                            "checklist": [
+                                                                                "Definí los roles y tareas de cada agente.",
+                                                                                "Diseñé el flujo de colaboración y comunicación.",
+                                                                                "Analicé los beneficios y retos de la orquestación." 
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo coordinarías tres agentes autónomos para gestionar el ciclo completo de ventas en una empresa?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para roles colaborativos", "prompt": "Define los roles de tres agentes para automatizar la atención, facturación y seguimiento de clientes." },
+                                                                                { "title": "Prompt para orquestación de tareas", "prompt": "Diseña un flujo donde agentes colaboren para organizar un evento empresarial." },
+                                                                                { "title": "Prompt para análisis de resultados", "prompt": "Sugiere métricas para evaluar la eficiencia de una colaboración entre agentes autónomos." }
+                                                                            ]
+                                                                        },
+                                                                        "autogen": {
+                                                                            "id": "autogen",
+                                                                            "title": "Automatización avanzada con AutoGen",
+                                                                            "moduleTitle": "Agentes autónomos",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Descubre cómo usar AutoGen para crear agentes autónomos que aprendan y se adapten a tareas cambiantes de forma automática.",
+                                                                            "objectives": [
+                                                                                "Comprender el funcionamiento de AutoGen.",
+                                                                                "Configurar agentes que aprendan de la experiencia.",
+                                                                                "Evaluar el impacto de la automatización adaptativa."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es AutoGen?", "content": "AutoGen es una tecnología que permite a los agentes autónomos aprender de los datos y experiencias previas, adaptando su comportamiento a nuevas situaciones." },
+                                                                                { "heading": "Configuración de agentes adaptativos", "content": "Incluye: definición de objetivos de aprendizaje, recopilación de datos, ajuste de parámetros y evaluación continua." },
+                                                                                { "heading": "Impacto y aplicaciones", "content": "La automatización adaptativa es clave en entornos dinámicos como logística, finanzas y atención al cliente." }
+                                                                            ],
+                                                                            "activity": "Configura un agente AutoGen para optimizar la gestión de inventario en una tienda online, documentando el proceso de aprendizaje y adaptación.",
+                                                                            "deliverable": "Informe sobre la configuración, resultados de aprendizaje y mejoras observadas.",
+                                                                            "checklist": [
+                                                                                "Definí los objetivos de aprendizaje del agente.",
+                                                                                "Configuré el proceso de recopilación y análisis de datos.",
+                                                                                "Documenté la adaptación y mejoras logradas." 
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo usarías AutoGen para mejorar la atención al cliente en una plataforma digital?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para aprendizaje adaptativo", "prompt": "Configura un agente que mejore su desempeño en ventas online aprendiendo de las interacciones previas." },
+                                                                                { "title": "Prompt para ajuste de parámetros", "prompt": "¿Qué parámetros ajustarías para que un agente AutoGen se adapte a cambios en la demanda de productos?" },
+                                                                                { "title": "Prompt para evaluación continua", "prompt": "Sugiere métodos para evaluar el aprendizaje y adaptación de un agente autónomo en tiempo real." }
+                                                                            ]
+                                                                        },
+                                                                        "langchain-basico": {
+                                                                            "id": "langchain-basico",
+                                                                            "title": "Automatización de flujos con LangChain",
+                                                                            "moduleTitle": "Agentes autónomos",
+                                                                            "durationMinutes": 10,
+                                                                            "summary": "Aprende a usar LangChain para crear flujos de trabajo automatizados y agentes conversacionales avanzados.",
+                                                                            "objectives": [
+                                                                                "Comprender la arquitectura de LangChain.",
+                                                                                "Diseñar flujos de trabajo conversacionales.",
+                                                                                "Implementar agentes que interactúen con múltiples fuentes de datos."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "¿Qué es LangChain?", "content": "LangChain es una biblioteca que facilita la creación de agentes conversacionales y flujos de trabajo automatizados, integrando múltiples fuentes de datos y herramientas externas." },
+                                                                                { "heading": "Diseño de flujos conversacionales", "content": "Incluye: definición de intenciones, manejo de contexto, integración de APIs y personalización de respuestas." },
+                                                                                { "heading": "Aplicaciones prácticas", "content": "Desde asistentes virtuales hasta sistemas de soporte técnico y automatización de procesos empresariales." }
+                                                                            ],
+                                                                            "activity": "Crea un flujo conversacional con LangChain que integre al menos dos fuentes de datos externas y personalice las respuestas según el usuario.",
+                                                                            "deliverable": "Script del flujo, documentación y análisis de los resultados obtenidos.",
+                                                                            "checklist": [
+                                                                                "Definí las intenciones y fuentes de datos a integrar.",
+                                                                                "Implementé el flujo conversacional y probé su funcionamiento.",
+                                                                                "Documenté el proceso y los resultados." 
+                                                                            ],
+                                                                            "promptStarter": "¿Cómo crearías un asistente virtual con LangChain que consulte una base de datos de productos y un sistema de tickets de soporte?",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para integración de datos", "prompt": "Diseña un flujo en LangChain que combine información de una API de clima y una base de datos de eventos." },
+                                                                                { "title": "Prompt para personalización de respuestas", "prompt": "¿Cómo harías que un agente LangChain adapte sus respuestas según el historial del usuario?" },
+                                                                                { "title": "Prompt para manejo de contexto", "prompt": "Explica cómo LangChain puede mantener el contexto de una conversación larga con un cliente." }
+                                                                            ]
+                                                                        },
+                                                                        "proyecto-agente": {
+                                                                            "id": "proyecto-agente",
+                                                                            "title": "Proyecto final: portafolio de agentes IA",
+                                                                            "moduleTitle": "Agentes autónomos",
+                                                                            "durationMinutes": 12,
+                                                                            "summary": "Aplica lo aprendido creando un portafolio de agentes IA personalizados y autónomos, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                                            "objectives": [
+                                                                                "Integrar técnicas avanzadas de agentes y GPTs personalizados.",
+                                                                                "Crear un portafolio temático con agentes IA.",
+                                                                                "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                                            ],
+                                                                            "sections": [
+                                                                                { "heading": "Definir el objetivo del portafolio", "content": "Elige un área de aplicación (soporte, ventas, automatización, etc.) y define el propósito del portafolio: mostrar habilidades, resolver problemas, innovar, etc." },
+                                                                                { "heading": "Aplicar técnicas avanzadas de agentes IA", "content": "Genera al menos 4 agentes usando diferentes técnicas: GPTs personalizados, integración de APIs, orquestación y aprendizaje adaptativo. Documenta cada paso y los prompts usados." },
+                                                                                { "heading": "Reflexionar sobre el proceso", "content": "Analiza los resultados, identifica los aprendizajes y propone mejoras para futuras aplicaciones de agentes IA." }
+                                                                            ],
+                                                                            "activity": "Crea un portafolio digital de 4 agentes IA sobre un área específica, aplicando diferentes técnicas y documentando el proceso.",
+                                                                            "deliverable": "Portafolio digital con 4 agentes, prompts, técnicas usadas y reflexión final.",
+                                                                            "checklist": [
+                                                                                "Generé al menos 4 agentes IA aplicando técnicas avanzadas.",
+                                                                                "Documenté el proceso y los prompts usados.",
+                                                                                "Reflexioné sobre el impacto y aprendizajes."
+                                                                            ],
+                                                                            "promptStarter": "Crea una serie de agentes para 'automatización de soporte técnico' usando técnicas avanzadas de IA.",
+                                                                            "promptExamples": [
+                                                                                { "title": "Prompt para portafolio temático", "prompt": "Un agente GPT personalizado para responder preguntas frecuentes de clientes en una tienda online." },
+                                                                                { "title": "Prompt para integración de APIs", "prompt": "Un agente autónomo que gestione reservas y pagos usando APIs externas." },
+                                                                                { "title": "Prompt para aprendizaje adaptativo", "prompt": "Un agente que mejore su desempeño en ventas aprendiendo de las interacciones con clientes." }
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                },
+                                                            "ia-salud-avanzado": {
+                                                                "diseno-prompts-salud": {
+                                                                    "id": "diseno-prompts-salud",
+                                                                    "title": "Diseño avanzado de prompts en salud",
+                                                                    "moduleTitle": "Técnicas avanzadas",
+                                                                    "durationMinutes": 12,
+                                                                    "summary": "Aprende a crear prompts complejos para personalizar diagnósticos, generar reportes y resolver retos clínicos específicos con IA.",
+                                                                    "objectives": [
+                                                                        "Dominar la estructura avanzada de prompts para salud.",
+                                                                        "Personalizar reportes y diagnósticos con IA.",
+                                                                        "Evitar ambigüedades y maximizar la utilidad de los prompts médicos."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "¿Qué es el prompt engineering en salud?", "content": "Es el arte de diseñar instrucciones detalladas para que la IA genere reportes, diagnósticos o soluciones alineadas con objetivos clínicos." },
+                                                                        { "heading": "Estructura de un prompt avanzado", "content": "Incluye: objetivo clínico, especialidad médica, formato de salida, contexto del paciente y criterios de evaluación." },
+                                                                        { "heading": "Errores comunes y cómo evitarlos", "content": "Evita prompts vagos o sin contexto. Especifica siempre el tipo de paciente, el área médica y el resultado esperado." }
+                                                                    ],
+                                                                    "activity": "Crea un prompt avanzado para generar un reporte de laboratorio para pacientes pediátricos, especificando formato, especialidad y criterios de interpretación.",
+                                                                    "deliverable": "Prompt generado y ejemplo de reporte creado por la IA.",
+                                                                    "checklist": [
+                                                                        "Diseñé un prompt con todos los elementos avanzados.",
+                                                                        "Probé el prompt y analicé el resultado.",
+                                                                        "Ajusté el prompt para mejorar el reporte generado."
+                                                                    ],
+                                                                    "promptStarter": "Genera un informe de diagnóstico para un paciente adulto con síntomas respiratorios, en formato de tabla y con criterios de interpretación claros.",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para reporte personalizado", "prompt": "Crea un reporte de evolución clínica para un paciente con diabetes tipo 2, en formato gráfico." },
+                                                                        { "title": "Prompt con criterios de interpretación", "prompt": "Genera un informe de laboratorio con interpretación para un paciente pediátrico con anemia." },
+                                                                        { "title": "Prompt para recursos diferenciados", "prompt": "Crea tres versiones de un informe de diagnóstico para diferentes especialidades médicas." }
+                                                                    ]
+                                                                },
+                                                                "integracion-herramientas-salud": {
+                                                                    "id": "integracion-herramientas-salud",
+                                                                    "title": "Integración de herramientas IA en salud",
+                                                                    "moduleTitle": "Técnicas avanzadas",
+                                                                    "durationMinutes": 10,
+                                                                    "summary": "Descubre cómo combinar diferentes soluciones IA para enriquecer la atención médica y optimizar procesos clínicos y administrativos.",
+                                                                    "objectives": [
+                                                                        "Identificar ventajas de combinar herramientas IA en salud.",
+                                                                        "Diseñar flujos de trabajo integrados en clínicas y hospitales.",
+                                                                        "Optimizar la gestión y personalización médica."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "¿Por qué integrar herramientas IA?", "content": "Cada herramienta IA tiene fortalezas: análisis de imágenes, gestión de expedientes, asistentes virtuales. Integrarlas permite experiencias más completas y eficientes." },
+                                                                        { "heading": "Ejemplo de flujo integrado", "content": "Genera reportes con una IA, automatiza la gestión de citas con otra y usa un asistente virtual para seguimiento de pacientes. Así se optimiza el tiempo médico y se personaliza la atención." },
+                                                                        { "heading": "Consejos para integración efectiva", "content": "Documenta los flujos, revisa compatibilidad y capacita al personal en el uso de las herramientas." }
+                                                                    ],
+                                                                    "activity": "Diseña un flujo de trabajo que combine al menos dos herramientas IA para diagnóstico, gestión y seguimiento de pacientes en una especialidad médica de tu elección.",
+                                                                    "deliverable": "Diagrama del flujo, herramientas usadas y análisis de ventajas obtenidas.",
+                                                                    "checklist": [
+                                                                        "Combiné al menos dos herramientas IA en un flujo clínico o administrativo.",
+                                                                        "Documenté el proceso y las ventajas.",
+                                                                        "Analicé el impacto en la atención médica."
+                                                                    ],
+                                                                    "promptStarter": "Genera reportes de laboratorio con una IA, automatiza la gestión de citas y diseña un asistente virtual para seguimiento de pacientes crónicos.",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para generación de reportes", "prompt": "Crea 5 reportes de laboratorio para pacientes con insuficiencia renal, con interpretación médica." },
+                                                                        { "title": "Prompt para automatización de gestión", "prompt": "Sugiere cómo una IA puede automatizar la gestión de citas y recordatorios en una clínica de especialidad." },
+                                                                        { "title": "Prompt para asistente virtual", "prompt": "Diseña un asistente virtual que resuelva dudas frecuentes sobre tratamientos para pacientes oncológicos." }
+                                                                    ]
+                                                                },
+                                                                "analisis-avanzado-salud": {
+                                                                    "id": "analisis-avanzado-salud",
+                                                                    "title": "Análisis avanzado de datos clínicos con IA",
+                                                                    "moduleTitle": "Técnicas avanzadas",
+                                                                    "durationMinutes": 12,
+                                                                    "summary": "Explora técnicas de análisis de datos clínicos con IA para identificar patrones, predecir riesgos y personalizar intervenciones médicas.",
+                                                                    "objectives": [
+                                                                        "Aplicar análisis avanzado de datos clínicos.",
+                                                                        "Identificar patrones y predecir riesgos médicos.",
+                                                                        "Personalizar intervenciones médicas con IA."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "Análisis de datos clínicos", "content": "La IA puede analizar resultados, identificar tendencias y predecir riesgos de enfermedades para cada paciente o grupo." },
+                                                                        { "heading": "Predicción y personalización", "content": "Con modelos predictivos, la IA sugiere intervenciones personalizadas antes de que surjan complicaciones médicas." },
+                                                                        { "heading": "Visualización y toma de decisiones", "content": "Dashboards y reportes IA ayudan a médicos y directivos a tomar decisiones informadas para mejorar la atención." }
+                                                                    ],
+                                                                    "activity": "Analiza los resultados de un grupo de pacientes con IA, identifica patrones de riesgo y sugiere intervenciones personalizadas para los casos más críticos.",
+                                                                    "deliverable": "Reporte de análisis, patrones detectados y plan de intervención personalizado.",
+                                                                    "checklist": [
+                                                                        "Apliqué análisis avanzado de datos clínicos.",
+                                                                        "Identifiqué patrones y predije riesgos médicos.",
+                                                                        "Propuse intervenciones personalizadas."
+                                                                    ],
+                                                                    "promptStarter": "Analiza los resultados de laboratorio de un grupo de pacientes diabéticos y sugiere intervenciones para los casos con mayor riesgo.",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para análisis de patrones", "prompt": "Detecta patrones de riesgo en resultados de laboratorio de pacientes con insuficiencia cardíaca." },
+                                                                        { "title": "Prompt para predicción de riesgos", "prompt": "Predice qué pacientes podrían desarrollar complicaciones renales el próximo año." },
+                                                                        { "title": "Prompt para visualización de datos", "prompt": "Genera un dashboard con los resultados de laboratorio de pacientes oncológicos." }
+                                                                    ]
+                                                                },
+                                                                "automatizacion-avanzada-salud": {
+                                                                    "id": "automatizacion-avanzada-salud",
+                                                                    "title": "Automatización avanzada de procesos médicos",
+                                                                    "moduleTitle": "Técnicas avanzadas",
+                                                                    "durationMinutes": 10,
+                                                                    "summary": "Aprende a automatizar procesos médicos complejos usando IA, APIs y flujos de trabajo integrados para optimizar la gestión clínica y administrativa.",
+                                                                    "objectives": [
+                                                                        "Identificar procesos médicos complejos para automatizar.",
+                                                                        "Integrar múltiples herramientas IA en un solo flujo.",
+                                                                        "Evaluar el impacto de la automatización en la atención médica."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "Procesos ideales para automatización avanzada", "content": "Procesos como gestión de hospitalizaciones, seguimiento de tratamientos y comunicación con pacientes pueden automatizarse integrando varias herramientas IA y APIs." },
+                                                                        { "heading": "Integración de herramientas y APIs", "content": "Usa plataformas como Epic, Zapier y sistemas de gestión hospitalaria para conectar procesos y automatizar tareas clínicas y administrativas." },
+                                                                        { "heading": "Evaluación y mejora continua", "content": "Monitorea el funcionamiento del flujo automatizado, recopila métricas y ajusta los procesos para maximizar el beneficio médico y administrativo." }
+                                                                    ],
+                                                                    "activity": "Automatiza el seguimiento de tratamientos y la comunicación con pacientes en una clínica usando IA y APIs.",
+                                                                    "deliverable": "Descripción del flujo automatizado, herramientas integradas y análisis del impacto en la gestión clínica.",
+                                                                    "checklist": [
+                                                                        "Identifiqué un proceso médico complejo y herramientas IA para automatizarlo.",
+                                                                        "Implementé la integración y medí el resultado.",
+                                                                        "Analicé el impacto y posibles mejoras futuras."
+                                                                    ],
+                                                                    "promptStarter": "Describe un proceso de seguimiento de tratamientos y pide a la IA que sugiera una integración de herramientas para automatizarlo.",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para automatización avanzada", "prompt": "Sugiere cómo automatizar la gestión de hospitalizaciones y comunicación con pacientes usando IA y APIs." },
+                                                                        { "title": "Prompt para integración de sistemas", "prompt": "Propón una integración entre un sistema de gestión hospitalaria y un asistente virtual para informar a pacientes sobre su tratamiento." },
+                                                                        { "title": "Prompt para análisis de impacto", "prompt": "Genera un reporte sobre el impacto de la automatización avanzada en la reducción de tareas administrativas médicas." }
+                                                                    ]
+                                                                },
+                                                                "mejorar-resultados-salud": {
+                                                                    "id": "mejorar-resultados-salud",
+                                                                    "title": "Cómo mejorar resultados y evitar errores comunes",
+                                                                    "moduleTitle": "Técnicas avanzadas",
+                                                                    "durationMinutes": 10,
+                                                                    "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener mejores resultados en la aplicación de IA en salud.",
+                                                                    "objectives": [
+                                                                        "Identificar errores comunes en prompts médicos.",
+                                                                        "Aplicar técnicas de iteración y ajuste.",
+                                                                        "Obtener soluciones más alineadas con los objetivos clínicos."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir reportes demasiado generales, no especificar el contexto clínico. Solución: revisa tu prompt, añade detalles y enfócate en el objetivo médico." },
+                                                                        { "heading": "Iterar y ajustar para mejorar", "content": "Genera el reporte, analiza el resultado y ajusta el prompt: cambia el enfoque, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                                        { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad médica. No temas experimentar y pedir feedback a otros profesionales." }
+                                                                    ],
+                                                                    "activity": "Elige un reporte IA generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                                                    "deliverable": "Secuencia de 3 reportes (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                                                    "checklist": [
+                                                                        "Identifiqué y corregí errores en mis prompts médicos.",
+                                                                        "Iteré al menos dos veces para mejorar el resultado.",
+                                                                        "Documenté el proceso de mejora."
+                                                                    ],
+                                                                    "promptStarter": "Genera un informe de laboratorio para un paciente oncológico. Si el resultado no es satisfactorio, ajusta el prompt para enfocarlo en predicción de riesgos y luego en recomendaciones personalizadas.",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt original", "prompt": "Crea un informe de laboratorio para un paciente oncológico." },
+                                                                        { "title": "Primera iteración", "prompt": "Propón un informe de laboratorio para un paciente oncológico que incluya predicción de riesgos." },
+                                                                        { "title": "Segunda iteración", "prompt": "Sugiere un informe de laboratorio para un paciente oncológico con recomendaciones personalizadas de tratamiento." }
+                                                                    ]
+                                                                },
+                                                                "proyecto-final-avanzado-salud": {
+                                                                    "id": "proyecto-final-avanzado-salud",
+                                                                    "title": "Proyecto final: portafolio avanzado de IA en salud",
+                                                                    "moduleTitle": "Técnicas avanzadas",
+                                                                    "durationMinutes": 12,
+                                                                    "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de soluciones IA aplicadas a la salud, documentando el proceso y los resultados.",
+                                                                    "objectives": [
+                                                                        "Combinar técnicas avanzadas de prompting, análisis y automatización en salud.",
+                                                                        "Crear un portafolio temático con soluciones IA personalizadas.",
+                                                                        "Documentar el proceso y justificar cada elección creativa."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un área avanzada de salud (cardiología, oncología, rehabilitación, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                                                        { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 soluciones usando diferentes técnicas: prompt engineering, análisis avanzado, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                                                        { "heading": "Presentar y justificar el portafolio", "content": "Organiza las soluciones en un documento digital, explica las técnicas y herramientas usadas en cada una, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                                                                    ],
+                                                                    "activity": "Crea un portafolio digital de 6 soluciones IA para salud sobre un área avanzada, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                                                                    "deliverable": "Portafolio digital con 6 soluciones, prompts, técnicas usadas y justificación de cada elección creativa.",
+                                                                    "checklist": [
+                                                                        "Generé al menos 6 soluciones IA aplicando técnicas avanzadas en salud.",
+                                                                        "Documenté el proceso y los prompts usados.",
+                                                                        "Justifiqué cada elección creativa en el portafolio."
+                                                                    ],
+                                                                    "promptStarter": "Crea una serie de soluciones para 'gestión avanzada de pacientes crónicos' usando técnicas avanzadas de prompting, análisis y automatización.",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para portafolio temático", "prompt": "Una solución para personalizar el seguimiento de pacientes con insuficiencia cardíaca usando IA y análisis de datos clínicos." },
+                                                                        { "title": "Prompt para creatividad", "prompt": "Una integración entre un asistente virtual y un sistema de gestión hospitalaria para mejorar la experiencia de pacientes oncológicos." },
+                                                                        { "title": "Prompt para análisis de impacto", "prompt": "Un reporte visual generado con IA sobre el impacto de la automatización avanzada en la gestión clínica." }
+                                                                    ]
+                                                                }
+                                                            },
+                                                        /* ═══════════════════════════════════════════
+                                                           CURSO 18: ia-salud-basico
+                                                           IA en Salud: Primeros pasos
+                                                           Nivel: Básico | 8 lecciones
+                                                           ═══════════════════════════════════════════ */
+                                                            "ia-salud-basico": {
+                                                                "introduccion-ia-salud": {
+                                                                    "id": "introduccion-ia-salud",
+                                                                    "title": "Introducción a la IA en salud",
+                                                                    "moduleTitle": "Primeros pasos",
+                                                                    "durationMinutes": 8,
+                                                                    "summary": "Descubre cómo la inteligencia artificial está transformando la salud, desde el diagnóstico hasta la gestión hospitalaria y la atención personalizada.",
+                                                                    "objectives": [
+                                                                        "Comprender el impacto de la IA en la salud actual.",
+                                                                        "Identificar aplicaciones básicas de IA en el sector salud.",
+                                                                        "Reconocer oportunidades y desafíos iniciales."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "¿Qué es la IA en salud?", "content": "La IA en salud abarca herramientas y sistemas que ayudan en el diagnóstico, la gestión de datos médicos, la predicción de enfermedades y la personalización de tratamientos." },
+                                                                        { "heading": "Aplicaciones básicas", "content": "Ejemplos: asistentes virtuales para pacientes, sistemas de apoyo al diagnóstico, análisis de imágenes médicas, gestión de citas y expedientes." },
+                                                                        { "heading": "Oportunidades y desafíos", "content": "La IA puede mejorar la eficiencia y precisión médica, pero plantea retos como la privacidad, la ética y la capacitación del personal." }
+                                                                    ],
+                                                                    "activity": "Investiga una herramienta de IA en salud y describe cómo podría mejorar la atención médica tradicional.",
+                                                                    "deliverable": "Breve informe sobre la herramienta investigada y su posible impacto en la atención médica.",
+                                                                    "checklist": [
+                                                                        "Identifiqué una herramienta de IA en salud.",
+                                                                        "Expliqué su funcionamiento básico.",
+                                                                        "Analicé su impacto potencial en la atención médica."
+                                                                    ],
+                                                                    "promptStarter": "¿Cómo podría un asistente virtual IA mejorar la experiencia de los pacientes en una clínica?",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para personalización de atención", "prompt": "Sugiere cómo una IA puede adaptar recomendaciones de salud a diferentes perfiles de pacientes." },
+                                                                        { "title": "Prompt para automatización de gestión", "prompt": "Explica cómo una IA puede gestionar automáticamente las citas médicas y recordatorios para pacientes crónicos." },
+                                                                        { "title": "Prompt para apoyo diagnóstico", "prompt": "Propón una solución IA para ayudar a médicos en el diagnóstico de enfermedades respiratorias." }
+                                                                    ]
+                                                                },
+                                                                "personalizacion-atencion-salud": {
+                                                                    "id": "personalizacion-atencion-salud",
+                                                                    "title": "Personalización de la atención médica con IA",
+                                                                    "moduleTitle": "Primeros pasos",
+                                                                    "durationMinutes": 10,
+                                                                    "summary": "Aprende cómo la IA permite adaptar tratamientos, recomendaciones y seguimientos a las necesidades de cada paciente.",
+                                                                    "objectives": [
+                                                                        "Entender la personalización médica con IA.",
+                                                                        "Explorar ejemplos de adaptación de tratamientos.",
+                                                                        "Valorar los beneficios para la diversidad de pacientes."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "¿Qué es la personalización con IA?", "content": "La IA analiza datos clínicos y de estilo de vida para recomendar tratamientos, recordatorios y seguimientos personalizados." },
+                                                                        { "heading": "Ejemplos prácticos", "content": "Plataformas que sugieren medicamentos según historial, IA que adapta rutinas de rehabilitación, sistemas que recomiendan chequeos personalizados." },
+                                                                        { "heading": "Beneficios y retos", "content": "Mejora la adherencia y los resultados, pero requiere datos de calidad y supervisión médica." }
+                                                                    ],
+                                                                    "activity": "Diseña un plan de seguimiento personalizado para un paciente con diabetes usando IA.",
+                                                                    "deliverable": "Plan de seguimiento y justificación de la personalización realizada.",
+                                                                    "checklist": [
+                                                                        "Analicé las necesidades del paciente.",
+                                                                        "Utilicé IA para adaptar el plan.",
+                                                                        "Justifiqué las decisiones tomadas."
+                                                                    ],
+                                                                    "promptStarter": "Sugiere una serie de recomendaciones personalizadas para mejorar el control de la diabetes en un paciente adulto.",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para adaptación de tratamiento", "prompt": "Genera un plan de ejercicios personalizado para un paciente con hipertensión." },
+                                                                        { "title": "Prompt para recordatorios inteligentes", "prompt": "Recomienda recordatorios automáticos para la toma de medicamentos en pacientes mayores." },
+                                                                        { "title": "Prompt para seguimiento personalizado", "prompt": "Sugiere cómo una IA puede monitorear el avance de un paciente en rehabilitación y ajustar el plan semanalmente." }
+                                                                    ]
+                                                                },
+                                                                "automatizacion-tareas-salud": {
+                                                                    "id": "automatizacion-tareas-salud",
+                                                                    "title": "Automatización de tareas médicas con IA",
+                                                                    "moduleTitle": "Primeros pasos",
+                                                                    "durationMinutes": 9,
+                                                                    "summary": "Descubre cómo la IA puede liberar tiempo del personal médico automatizando tareas repetitivas como la gestión de expedientes, la programación de citas y la generación de informes.",
+                                                                    "objectives": [
+                                                                        "Identificar tareas médicas automatizables con IA.",
+                                                                        "Explorar herramientas de automatización en salud.",
+                                                                        "Valorar el impacto en la labor médica."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "Tareas automatizables", "content": "Gestión de expedientes, programación de citas, generación de informes médicos, envío de recordatorios y retroalimentación automática." },
+                                                                        { "heading": "Herramientas disponibles", "content": "Plataformas como Epic, Cerner y sistemas de gestión hospitalaria integran IA para automatizar procesos." },
+                                                                        { "heading": "Impacto en la labor médica", "content": "Permite a los profesionales enfocarse en la atención directa y el diagnóstico, reduciendo la carga administrativa." }
+                                                                    ],
+                                                                    "activity": "Selecciona una tarea médica repetitiva y describe cómo la automatizarías usando IA.",
+                                                                    "deliverable": "Descripción del proceso automatizado y análisis del tiempo ahorrado.",
+                                                                    "checklist": [
+                                                                        "Identifiqué una tarea repetitiva.",
+                                                                        "Propuse una solución IA para automatizarla.",
+                                                                        "Analicé el impacto en la labor médica."
+                                                                    ],
+                                                                    "promptStarter": "¿Cómo puede una IA automatizar la gestión de expedientes médicos en un hospital?",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para automatización de informes", "prompt": "Genera un informe semanal de evolución de pacientes a partir de los datos clínicos registrados." },
+                                                                        { "title": "Prompt para gestión de citas", "prompt": "Sugiere cómo una IA puede programar y optimizar las citas médicas automáticamente." },
+                                                                        { "title": "Prompt para retroalimentación automática", "prompt": "Crea mensajes de seguimiento personalizados para pacientes que no asistieron a sus citas." }
+                                                                    ]
+                                                                },
+                                                                "diagnostico-ia": {
+                                                                    "id": "diagnostico-ia",
+                                                                    "title": "Diagnóstico asistido por IA",
+                                                                    "moduleTitle": "Primeros pasos",
+                                                                    "durationMinutes": 9,
+                                                                    "summary": "Aprende cómo la IA puede apoyar el diagnóstico médico, analizando síntomas, imágenes y datos clínicos para sugerir posibles enfermedades y tratamientos.",
+                                                                    "objectives": [
+                                                                        "Comprender el rol de la IA en el diagnóstico médico.",
+                                                                        "Explorar ejemplos de apoyo diagnóstico automatizado.",
+                                                                        "Valorar la precisión y los límites de la IA en salud."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "Diagnóstico asistido con IA", "content": "La IA puede analizar síntomas, imágenes médicas y datos de laboratorio para sugerir diagnósticos probables y apoyar la toma de decisiones clínicas." },
+                                                                        { "heading": "Ejemplos de herramientas", "content": "Plataformas como IBM Watson Health, Aidoc y sistemas de apoyo al diagnóstico usan IA para analizar grandes volúmenes de datos médicos." },
+                                                                        { "heading": "Ventajas y precauciones", "content": "Aumenta la precisión y permite diagnósticos más rápidos, pero requiere supervisión médica para evitar errores y sesgos." }
+                                                                    ],
+                                                                    "activity": "Crea un caso clínico breve y describe cómo una IA podría apoyar el diagnóstico y sugerir tratamientos.",
+                                                                    "deliverable": "Caso clínico generado y explicación del proceso de apoyo diagnóstico IA.",
+                                                                    "checklist": [
+                                                                        "Generé un caso clínico con IA.",
+                                                                        "Expliqué el proceso de apoyo diagnóstico.",
+                                                                        "Analicé ventajas y precauciones."
+                                                                    ],
+                                                                    "promptStarter": "Genera un caso clínico de dolor abdominal y explica cómo una IA podría apoyar el diagnóstico y sugerir tratamientos.",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para generación de casos", "prompt": "Crea 3 casos clínicos de pacientes con síntomas respiratorios para práctica diagnóstica." },
+                                                                        { "title": "Prompt para apoyo diagnóstico", "prompt": "Explica cómo una IA puede analizar imágenes de rayos X para detectar neumonía." },
+                                                                        { "title": "Prompt para sugerencia de tratamientos", "prompt": "Sugiere tratamientos personalizados para pacientes con hipertensión basados en datos clínicos." }
+                                                                    ]
+                                                                },
+                                                                "inclusion-salud-ia": {
+                                                                    "id": "inclusion-salud-ia",
+                                                                    "title": "Inclusión y accesibilidad en salud apoyada por IA",
+                                                                    "moduleTitle": "Primeros pasos",
+                                                                    "durationMinutes": 8,
+                                                                    "summary": "Explora cómo la IA puede hacer la atención médica más inclusiva, apoyando a pacientes con necesidades especiales y eliminando barreras de acceso.",
+                                                                    "objectives": [
+                                                                        "Identificar aplicaciones de IA para la inclusión en salud.",
+                                                                        "Explorar herramientas de apoyo para pacientes con necesidades especiales.",
+                                                                        "Valorar el impacto de la IA en la equidad en salud."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "IA para la inclusión en salud", "content": "La IA puede adaptar recomendaciones, traducir en tiempo real, generar recordatorios accesibles y ofrecer apoyos personalizados para pacientes con discapacidades." },
+                                                                        { "heading": "Herramientas de apoyo", "content": "Ejemplos: asistentes de voz, traductores automáticos, generadores de recordatorios visuales y auditivos, sistemas de navegación para personas con discapacidad visual." },
+                                                                        { "heading": "Impacto en la equidad", "content": "La IA puede reducir brechas en el acceso a la salud, pero es fundamental garantizar la accesibilidad y la capacitación del personal médico." }
+                                                                    ],
+                                                                    "activity": "Propón una solución IA para apoyar a pacientes con discapacidad auditiva en la gestión de sus citas médicas.",
+                                                                    "deliverable": "Descripción de la solución propuesta y análisis de su impacto en la inclusión en salud.",
+                                                                    "checklist": [
+                                                                        "Identifiqué una necesidad de inclusión en salud.",
+                                                                        "Propuse una solución IA específica.",
+                                                                        "Analicé el impacto en la equidad en salud."
+                                                                    ],
+                                                                    "promptStarter": "¿Cómo puede una IA ayudar a pacientes con discapacidad visual a seguir sus tratamientos médicos?",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para adaptación de recordatorios", "prompt": "Sugiere cómo una IA puede generar recordatorios accesibles para pacientes con discapacidad auditiva." },
+                                                                        { "title": "Prompt para traducción automática", "prompt": "Explica cómo una IA puede traducir instrucciones médicas a lenguaje de señas en tiempo real." },
+                                                                        { "title": "Prompt para asistentes de voz", "prompt": "Propón un asistente de voz IA para guiar a pacientes con discapacidad visual en la toma de medicamentos." }
+                                                                    ]
+                                                                },
+                                                                "etica-ia-salud": {
+                                                                    "id": "etica-ia-salud",
+                                                                    "title": "Ética y privacidad en el uso de IA en salud",
+                                                                    "moduleTitle": "Primeros pasos",
+                                                                    "durationMinutes": 8,
+                                                                    "summary": "Reflexiona sobre los desafíos éticos y de privacidad que implica el uso de IA en salud, y aprende buenas prácticas para proteger a los pacientes.",
+                                                                    "objectives": [
+                                                                        "Comprender los riesgos éticos de la IA en salud.",
+                                                                        "Identificar buenas prácticas de privacidad y protección de datos médicos.",
+                                                                        "Promover el uso responsable de la IA en el sector salud."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "Riesgos éticos y de privacidad", "content": "La IA puede recopilar y analizar datos sensibles de pacientes. Es fundamental proteger la privacidad y evitar sesgos o discriminación en la atención médica." },
+                                                                        { "heading": "Buenas prácticas", "content": "Solicitar consentimiento informado, anonimizar datos, limitar el acceso y capacitar al personal en el uso seguro de la IA." },
+                                                                        { "heading": "Uso responsable", "content": "Promover la transparencia, la equidad y la supervisión médica en todas las aplicaciones de IA en salud." }
+                                                                    ],
+                                                                    "activity": "Elabora un código de buenas prácticas para el uso de IA en tu centro de salud o consultorio.",
+                                                                    "deliverable": "Documento con el código de buenas prácticas y ejemplos de aplicación.",
+                                                                    "checklist": [
+                                                                        "Identifiqué riesgos éticos y de privacidad en salud.",
+                                                                        "Propuse buenas prácticas para mitigarlos.",
+                                                                        "Promoví el uso responsable de la IA en salud."
+                                                                    ],
+                                                                    "promptStarter": "¿Qué medidas se deben tomar para proteger la privacidad de los pacientes al usar IA en el sector salud?",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para código de ética", "prompt": "Redacta un código de ética para el uso de IA en un hospital público." },
+                                                                        { "title": "Prompt para protección de datos", "prompt": "Sugiere prácticas para anonimizar los datos de pacientes en plataformas IA de salud." },
+                                                                        { "title": "Prompt para supervisión médica", "prompt": "Explica por qué es importante la supervisión médica en el uso de IA en salud." }
+                                                                    ]
+                                                                },
+                                                                "proyecto-final-salud": {
+                                                                    "id": "proyecto-final-salud",
+                                                                    "title": "Proyecto final: portafolio de IA en salud",
+                                                                    "moduleTitle": "Primeros pasos",
+                                                                    "durationMinutes": 10,
+                                                                    "summary": "Aplica lo aprendido creando un portafolio de soluciones IA para la salud, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                                    "objectives": [
+                                                                        "Integrar técnicas básicas de IA en soluciones de salud.",
+                                                                        "Crear un portafolio temático con aplicaciones IA en salud.",
+                                                                        "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                                    ],
+                                                                    "sections": [
+                                                                        { "heading": "Definir el objetivo del portafolio", "content": "Elige un área de salud (prevención, diagnóstico, gestión, etc.) y define el propósito del portafolio: mejorar la atención, apoyar la inclusión, automatizar tareas, etc." },
+                                                                        { "heading": "Aplicar técnicas básicas de IA", "content": "Genera al menos 4 soluciones usando IA: personalización, automatización, diagnóstico y apoyo a la inclusión. Documenta cada paso y los prompts usados." },
+                                                                        { "heading": "Reflexionar sobre el proceso", "content": "Analiza los resultados, identifica los aprendizajes y propone mejoras para futuras aplicaciones de IA en salud." }
+                                                                    ],
+                                                                    "activity": "Crea un portafolio digital de 4 soluciones IA para salud sobre un área específica, aplicando diferentes técnicas y documentando el proceso.",
+                                                                    "deliverable": "Portafolio digital con 4 soluciones, prompts, técnicas usadas y reflexión final.",
+                                                                    "checklist": [
+                                                                        "Generé al menos 4 soluciones IA aplicando técnicas básicas en salud.",
+                                                                        "Documenté el proceso y los prompts usados.",
+                                                                        "Reflexioné sobre el impacto y aprendizajes."
+                                                                    ],
+                                                                    "promptStarter": "Crea una serie de soluciones para 'mejorar la adherencia a tratamientos' usando IA en salud básica.",
+                                                                    "promptExamples": [
+                                                                        { "title": "Prompt para portafolio temático", "prompt": "Una solución para personalizar recordatorios de medicamentos en pacientes crónicos usando IA." },
+                                                                        { "title": "Prompt para automatización", "prompt": "Una herramienta IA que automatice la gestión de citas y seguimiento de pacientes en un consultorio." },
+                                                                        { "title": "Prompt para apoyo a la inclusión", "prompt": "Una IA que adapte materiales de educación en salud para pacientes con discapacidad auditiva." }
+                                                                    ]
+                                                                }
+                                                            },
+                                                        "ia-salud-basico": {
+                                                            "introduccion-ia-salud": {
+                                                                "id": "introduccion-ia-salud",
+                                                                "title": "Introducción a la IA en salud",
+                                                                "moduleTitle": "Primeros pasos",
+                                                                "durationMinutes": 8,
+                                                                "summary": "Descubre cómo la inteligencia artificial está transformando la salud, desde el diagnóstico hasta la gestión hospitalaria y la atención personalizada.",
+                                                                "objectives": [
+                                                                    "Comprender el impacto de la IA en la salud actual.",
+                                                                    "Identificar aplicaciones básicas de IA en el sector salud.",
+                                                                    "Reconocer oportunidades y desafíos iniciales."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "¿Qué es la IA en salud?", "content": "La IA en salud abarca herramientas y sistemas que ayudan en el diagnóstico, la gestión de datos médicos, la predicción de enfermedades y la personalización de tratamientos." },
+                                                                    { "heading": "Aplicaciones básicas", "content": "Ejemplos: asistentes virtuales para pacientes, sistemas de apoyo al diagnóstico, análisis de imágenes médicas, gestión de citas y expedientes." },
+                                                                    { "heading": "Oportunidades y desafíos", "content": "La IA puede mejorar la eficiencia y precisión médica, pero plantea retos como la privacidad, la ética y la capacitación del personal." }
+                                                                ],
+                                                                "activity": "Investiga una herramienta de IA en salud y describe cómo podría mejorar la atención médica tradicional.",
+                                                                "deliverable": "Breve informe sobre la herramienta investigada y su posible impacto en la atención médica.",
+                                                                "checklist": [
+                                                                    "Identifiqué una herramienta de IA en salud.",
+                                                                    "Expliqué su funcionamiento básico.",
+                                                                    "Analicé su impacto potencial en la atención médica."
+                                                                ],
+                                                                "promptStarter": "¿Cómo podría un asistente virtual IA mejorar la experiencia de los pacientes en una clínica?",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para personalización de atención", "prompt": "Sugiere cómo una IA puede adaptar recomendaciones de salud a diferentes perfiles de pacientes." },
+                                                                    { "title": "Prompt para automatización de gestión", "prompt": "Explica cómo una IA puede gestionar automáticamente las citas médicas y recordatorios para pacientes crónicos." },
+                                                                    { "title": "Prompt para apoyo diagnóstico", "prompt": "Propón una solución IA para ayudar a médicos en el diagnóstico de enfermedades respiratorias." }
+                                                                ]
+                                                            },
+                                                            "personalizacion-atencion-salud": {
+                                                                "id": "personalizacion-atencion-salud",
+                                                                "title": "Personalización de la atención médica con IA",
+                                                                "moduleTitle": "Primeros pasos",
+                                                                "durationMinutes": 10,
+                                                                "summary": "Aprende cómo la IA permite adaptar tratamientos, recomendaciones y seguimientos a las necesidades de cada paciente.",
+                                                                "objectives": [
+                                                                    "Entender la personalización médica con IA.",
+                                                                    "Explorar ejemplos de adaptación de tratamientos.",
+                                                                    "Valorar los beneficios para la diversidad de pacientes."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "¿Qué es la personalización con IA?", "content": "La IA analiza datos clínicos y de estilo de vida para recomendar tratamientos, recordatorios y seguimientos personalizados." },
+                                                                    { "heading": "Ejemplos prácticos", "content": "Plataformas que sugieren medicamentos según historial, IA que adapta rutinas de rehabilitación, sistemas que recomiendan chequeos personalizados." },
+                                                                    { "heading": "Beneficios y retos", "content": "Mejora la adherencia y los resultados, pero requiere datos de calidad y supervisión médica." }
+                                                                ],
+                                                                "activity": "Diseña un plan de seguimiento personalizado para un paciente con diabetes usando IA.",
+                                                                "deliverable": "Plan de seguimiento y justificación de la personalización realizada.",
+                                                                "checklist": [
+                                                                    "Analicé las necesidades del paciente.",
+                                                                    "Utilicé IA para adaptar el plan.",
+                                                                    "Justifiqué las decisiones tomadas."
+                                                                ],
+                                                                "promptStarter": "Sugiere una serie de recomendaciones personalizadas para mejorar el control de la diabetes en un paciente adulto.",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para adaptación de tratamiento", "prompt": "Genera un plan de ejercicios personalizado para un paciente con hipertensión." },
+                                                                    { "title": "Prompt para recordatorios inteligentes", "prompt": "Recomienda recordatorios automáticos para la toma de medicamentos en pacientes mayores." },
+                                                                    { "title": "Prompt para seguimiento personalizado", "prompt": "Sugiere cómo una IA puede monitorear el avance de un paciente en rehabilitación y ajustar el plan semanalmente." }
+                                                                ]
+                                                            },
+                                                            "automatizacion-tareas-salud": {
+                                                                "id": "automatizacion-tareas-salud",
+                                                                "title": "Automatización de tareas médicas con IA",
+                                                                "moduleTitle": "Primeros pasos",
+                                                                "durationMinutes": 9,
+                                                                "summary": "Descubre cómo la IA puede liberar tiempo del personal médico automatizando tareas repetitivas como la gestión de expedientes, la programación de citas y la generación de informes.",
+                                                                "objectives": [
+                                                                    "Identificar tareas médicas automatizables con IA.",
+                                                                    "Explorar herramientas de automatización en salud.",
+                                                                    "Valorar el impacto en la labor médica."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "Tareas automatizables", "content": "Gestión de expedientes, programación de citas, generación de informes médicos, envío de recordatorios y retroalimentación automática." },
+                                                                    { "heading": "Herramientas disponibles", "content": "Plataformas como Epic, Cerner y sistemas de gestión hospitalaria integran IA para automatizar procesos." },
+                                                                    { "heading": "Impacto en la labor médica", "content": "Permite a los profesionales enfocarse en la atención directa y el diagnóstico, reduciendo la carga administrativa." }
+                                                                ],
+                                                                "activity": "Selecciona una tarea médica repetitiva y describe cómo la automatizarías usando IA.",
+                                                                "deliverable": "Descripción del proceso automatizado y análisis del tiempo ahorrado.",
+                                                                "checklist": [
+                                                                    "Identifiqué una tarea repetitiva.",
+                                                                    "Propuse una solución IA para automatizarla.",
+                                                                    "Analicé el impacto en la labor médica."
+                                                                ],
+                                                                "promptStarter": "¿Cómo puede una IA automatizar la gestión de expedientes médicos en un hospital?",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para automatización de informes", "prompt": "Genera un informe semanal de evolución de pacientes a partir de los datos clínicos registrados." },
+                                                                    { "title": "Prompt para gestión de citas", "prompt": "Sugiere cómo una IA puede programar y optimizar las citas médicas automáticamente." },
+                                                                    { "title": "Prompt para retroalimentación automática", "prompt": "Crea mensajes de seguimiento personalizados para pacientes que no asistieron a sus citas." }
+                                                                ]
+                                                            },
+                                                            "diagnostico-ia": {
+                                                                "id": "diagnostico-ia",
+                                                                "title": "Diagnóstico asistido por IA",
+                                                                "moduleTitle": "Primeros pasos",
+                                                                "durationMinutes": 9,
+                                                                "summary": "Aprende cómo la IA puede apoyar el diagnóstico médico, analizando síntomas, imágenes y datos clínicos para sugerir posibles enfermedades y tratamientos.",
+                                                                "objectives": [
+                                                                    "Comprender el rol de la IA en el diagnóstico médico.",
+                                                                    "Explorar ejemplos de apoyo diagnóstico automatizado.",
+                                                                    "Valorar la precisión y los límites de la IA en salud."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "Diagnóstico asistido con IA", "content": "La IA puede analizar síntomas, imágenes médicas y datos de laboratorio para sugerir diagnósticos probables y apoyar la toma de decisiones clínicas." },
+                                                                    { "heading": "Ejemplos de herramientas", "content": "Plataformas como IBM Watson Health, Aidoc y sistemas de apoyo al diagnóstico usan IA para analizar grandes volúmenes de datos médicos." },
+                                                                    { "heading": "Ventajas y precauciones", "content": "Aumenta la precisión y permite diagnósticos más rápidos, pero requiere supervisión médica para evitar errores y sesgos." }
+                                                                ],
+                                                                "activity": "Crea un caso clínico breve y describe cómo una IA podría apoyar el diagnóstico y sugerir tratamientos.",
+                                                                "deliverable": "Caso clínico generado y explicación del proceso de apoyo diagnóstico IA.",
+                                                                "checklist": [
+                                                                    "Generé un caso clínico con IA.",
+                                                                    "Expliqué el proceso de apoyo diagnóstico.",
+                                                                    "Analicé ventajas y precauciones."
+                                                                ],
+                                                                "promptStarter": "Genera un caso clínico de dolor abdominal y explica cómo una IA podría apoyar el diagnóstico y sugerir tratamientos.",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para generación de casos", "prompt": "Crea 3 casos clínicos de pacientes con síntomas respiratorios para práctica diagnóstica." },
+                                                                    { "title": "Prompt para apoyo diagnóstico", "prompt": "Explica cómo una IA puede analizar imágenes de rayos X para detectar neumonía." },
+                                                                    { "title": "Prompt para sugerencia de tratamientos", "prompt": "Sugiere tratamientos personalizados para pacientes con hipertensión basados en datos clínicos." }
+                                                                ]
+                                                            },
+                                                            "inclusion-salud-ia": {
+                                                                "id": "inclusion-salud-ia",
+                                                                "title": "Inclusión y accesibilidad en salud apoyada por IA",
+                                                                "moduleTitle": "Primeros pasos",
+                                                                "durationMinutes": 8,
+                                                                "summary": "Explora cómo la IA puede hacer la atención médica más inclusiva, apoyando a pacientes con necesidades especiales y eliminando barreras de acceso.",
+                                                                "objectives": [
+                                                                    "Identificar aplicaciones de IA para la inclusión en salud.",
+                                                                    "Explorar herramientas de apoyo para pacientes con necesidades especiales.",
+                                                                    "Valorar el impacto de la IA en la equidad en salud."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "IA para la inclusión en salud", "content": "La IA puede adaptar recomendaciones, traducir en tiempo real, generar recordatorios accesibles y ofrecer apoyos personalizados para pacientes con discapacidades." },
+                                                                    { "heading": "Herramientas de apoyo", "content": "Ejemplos: asistentes de voz, traductores automáticos, generadores de recordatorios visuales y auditivos, sistemas de navegación para personas con discapacidad visual." },
+                                                                    { "heading": "Impacto en la equidad", "content": "La IA puede reducir brechas en el acceso a la salud, pero es fundamental garantizar la accesibilidad y la capacitación del personal médico." }
+                                                                ],
+                                                                "activity": "Propón una solución IA para apoyar a pacientes con discapacidad auditiva en la gestión de sus citas médicas.",
+                                                                "deliverable": "Descripción de la solución propuesta y análisis de su impacto en la inclusión en salud.",
+                                                                "checklist": [
+                                                                    "Identifiqué una necesidad de inclusión en salud.",
+                                                                    "Propuse una solución IA específica.",
+                                                                    "Analicé el impacto en la equidad en salud."
+                                                                ],
+                                                                "promptStarter": "¿Cómo puede una IA ayudar a pacientes con discapacidad visual a seguir sus tratamientos médicos?",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para adaptación de recordatorios", "prompt": "Sugiere cómo una IA puede generar recordatorios accesibles para pacientes con discapacidad auditiva." },
+                                                                    { "title": "Prompt para traducción automática", "prompt": "Explica cómo una IA puede traducir instrucciones médicas a lenguaje de señas en tiempo real." },
+                                                                    { "title": "Prompt para asistentes de voz", "prompt": "Propón un asistente de voz IA para guiar a pacientes con discapacidad visual en la toma de medicamentos." }
+                                                                ]
+                                                            },
+                                                            "etica-ia-salud": {
+                                                                "id": "etica-ia-salud",
+                                                                "title": "Ética y privacidad en el uso de IA en salud",
+                                                                "moduleTitle": "Primeros pasos",
+                                                                "durationMinutes": 8,
+                                                                "summary": "Reflexiona sobre los desafíos éticos y de privacidad que implica el uso de IA en salud, y aprende buenas prácticas para proteger a los pacientes.",
+                                                                "objectives": [
+                                                                    "Comprender los riesgos éticos de la IA en salud.",
+                                                                    "Identificar buenas prácticas de privacidad y protección de datos médicos.",
+                                                                    "Promover el uso responsable de la IA en el sector salud."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "Riesgos éticos y de privacidad", "content": "La IA puede recopilar y analizar datos sensibles de pacientes. Es fundamental proteger la privacidad y evitar sesgos o discriminación en la atención médica." },
+                                                                    { "heading": "Buenas prácticas", "content": "Solicitar consentimiento informado, anonimizar datos, limitar el acceso y capacitar al personal en el uso seguro de la IA." },
+                                                                    { "heading": "Uso responsable", "content": "Promover la transparencia, la equidad y la supervisión médica en todas las aplicaciones de IA en salud." }
+                                                                ],
+                                                                "activity": "Elabora un código de buenas prácticas para el uso de IA en tu centro de salud o consultorio.",
+                                                                "deliverable": "Documento con el código de buenas prácticas y ejemplos de aplicación.",
+                                                                "checklist": [
+                                                                    "Identifiqué riesgos éticos y de privacidad en salud.",
+                                                                    "Propuse buenas prácticas para mitigarlos.",
+                                                                    "Promoví el uso responsable de la IA en salud."
+                                                                ],
+                                                                "promptStarter": "¿Qué medidas se deben tomar para proteger la privacidad de los pacientes al usar IA en el sector salud?",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para código de ética", "prompt": "Redacta un código de ética para el uso de IA en un hospital público." },
+                                                                    { "title": "Prompt para protección de datos", "prompt": "Sugiere prácticas para anonimizar los datos de pacientes en plataformas IA de salud." },
+                                                                    { "title": "Prompt para supervisión médica", "prompt": "Explica por qué es importante la supervisión médica en el uso de IA en salud." }
+                                                                ]
+                                                            },
+                                                            "proyecto-final-salud": {
+                                                                "id": "proyecto-final-salud",
+                                                                "title": "Proyecto final: portafolio de IA en salud",
+                                                                "moduleTitle": "Primeros pasos",
+                                                                "durationMinutes": 10,
+                                                                "summary": "Aplica lo aprendido creando un portafolio de soluciones IA para la salud, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                                "objectives": [
+                                                                    "Integrar técnicas básicas de IA en soluciones de salud.",
+                                                                    "Crear un portafolio temático con aplicaciones IA en salud.",
+                                                                    "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "Definir el objetivo del portafolio", "content": "Elige un área de salud (prevención, diagnóstico, gestión, etc.) y define el propósito del portafolio: mejorar la atención, apoyar la inclusión, automatizar tareas, etc." },
+                                                                    { "heading": "Aplicar técnicas básicas de IA", "content": "Genera al menos 4 soluciones usando IA: personalización, automatización, diagnóstico y apoyo a la inclusión. Documenta cada paso y los prompts usados." },
+                                                                    { "heading": "Reflexionar sobre el proceso", "content": "Analiza los resultados, identifica los aprendizajes y propone mejoras para futuras aplicaciones de IA en salud." }
+                                                                ],
+                                                                "activity": "Crea un portafolio digital de 4 soluciones IA para salud sobre un área específica, aplicando diferentes técnicas y documentando el proceso.",
+                                                                "deliverable": "Portafolio digital con 4 soluciones, prompts, técnicas usadas y reflexión final.",
+                                                                "checklist": [
+                                                                    "Generé al menos 4 soluciones IA aplicando técnicas básicas en salud.",
+                                                                    "Documenté el proceso y los prompts usados.",
+                                                                    "Reflexioné sobre el impacto y aprendizajes."
+                                                                ],
+                                                                "promptStarter": "Crea una serie de soluciones para 'mejorar la adherencia a tratamientos' usando IA en salud básica.",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para portafolio temático", "prompt": "Una solución para personalizar recordatorios de medicamentos en pacientes crónicos usando IA." },
+                                                                    { "title": "Prompt para automatización", "prompt": "Una herramienta IA que automatice la gestión de citas y seguimiento de pacientes en un consultorio." },
+                                                                    { "title": "Prompt para apoyo a la inclusión", "prompt": "Una IA que adapte materiales de educación en salud para pacientes con discapacidad auditiva." }
+                                                                ]
+                                                            }
+                                                        },
+                                                    /* ═══════════════════════════════════════════
+                                                       CURSO 17: ia-educacion-avanzado
+                                                       IA en Educación: Técnicas avanzadas
+                                                       Nivel: Intermedio | 8 lecciones
+                                                       ═══════════════════════════════════════════ */
+                                                        "ia-educacion-avanzado": {
+                                                            "diseno-prompts-educativos": {
+                                                                "id": "diseno-prompts-educativos",
+                                                                "title": "Diseño avanzado de prompts educativos",
+                                                                "moduleTitle": "Técnicas avanzadas",
+                                                                "durationMinutes": 12,
+                                                                "summary": "Aprende a crear prompts complejos para personalizar actividades, generar recursos y resolver retos educativos específicos con IA.",
+                                                                "objectives": [
+                                                                    "Dominar la estructura avanzada de prompts para educación.",
+                                                                    "Personalizar recursos y actividades con IA.",
+                                                                    "Evitar ambigüedades y maximizar la utilidad de los prompts."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "¿Qué es el prompt engineering educativo?", "content": "Es el arte de diseñar instrucciones detalladas para que la IA genere materiales, actividades o soluciones alineadas con objetivos pedagógicos." },
+                                                                    { "heading": "Estructura de un prompt avanzado", "content": "Incluye: objetivo pedagógico, nivel educativo, formato de salida, contexto del estudiante y criterios de evaluación." },
+                                                                    { "heading": "Errores comunes y cómo evitarlos", "content": "Evita prompts vagos o sin contexto. Especifica siempre el nivel, el área y el tipo de resultado esperado." }
+                                                                ],
+                                                                "activity": "Crea un prompt avanzado para generar una actividad de ciencias naturales para estudiantes de secundaria, especificando formato, nivel y criterios de evaluación.",
+                                                                "deliverable": "Prompt generado y ejemplo de actividad creada por la IA.",
+                                                                "checklist": [
+                                                                    "Diseñé un prompt con todos los elementos avanzados.",
+                                                                    "Probé el prompt y analicé el resultado.",
+                                                                    "Ajusté el prompt para mejorar la actividad generada."
+                                                                ],
+                                                                "promptStarter": "Genera una actividad de matemáticas para primaria en formato de juego interactivo, con criterios de evaluación claros.",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para actividad personalizada", "prompt": "Crea una actividad de comprensión lectora para estudiantes de secundaria, en formato de cómic digital." },
+                                                                    { "title": "Prompt con criterios de evaluación", "prompt": "Genera un ejercicio de ciencias con rúbrica de evaluación para estudiantes de primaria." },
+                                                                    { "title": "Prompt para recursos diferenciados", "prompt": "Crea tres versiones de una actividad de historia para diferentes niveles de dificultad." }
+                                                                ]
+                                                            },
+                                                            "integracion-herramientas-educativas": {
+                                                                "id": "integracion-herramientas-educativas",
+                                                                "title": "Integración de herramientas IA en el aula",
+                                                                "moduleTitle": "Técnicas avanzadas",
+                                                                "durationMinutes": 10,
+                                                                "summary": "Descubre cómo combinar diferentes soluciones IA para enriquecer la experiencia educativa y optimizar procesos de enseñanza-aprendizaje.",
+                                                                "objectives": [
+                                                                    "Identificar ventajas de combinar herramientas IA educativas.",
+                                                                    "Diseñar flujos de trabajo integrados en el aula.",
+                                                                    "Optimizar la gestión y personalización educativa."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "¿Por qué integrar herramientas IA?", "content": "Cada herramienta IA tiene fortalezas: generadores de ejercicios, chatbots, sistemas de seguimiento. Integrarlas permite experiencias más completas y personalizadas." },
+                                                                    { "heading": "Ejemplo de flujo integrado", "content": "Genera ejercicios con una IA, automatiza la corrección con otra y usa un chatbot para resolver dudas. Así se optimiza el tiempo docente y se personaliza el aprendizaje." },
+                                                                    { "heading": "Consejos para integración efectiva", "content": "Documenta los flujos, revisa compatibilidad y capacita a docentes y estudiantes en el uso de las herramientas." }
+                                                                ],
+                                                                "activity": "Diseña un flujo de trabajo que combine al menos dos herramientas IA para crear, corregir y retroalimentar actividades en una materia de tu elección.",
+                                                                "deliverable": "Diagrama del flujo, herramientas usadas y análisis de ventajas obtenidas.",
+                                                                "checklist": [
+                                                                    "Combiné al menos dos herramientas IA en un flujo educativo.",
+                                                                    "Documenté el proceso y las ventajas.",
+                                                                    "Analicé el impacto en la experiencia educativa."
+                                                                ],
+                                                                "promptStarter": "Genera ejercicios de inglés con una IA, automatiza la corrección y diseña un chatbot para dudas frecuentes.",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para generación de ejercicios", "prompt": "Crea 10 ejercicios de gramática inglesa para secundaria, con respuestas." },
+                                                                    { "title": "Prompt para automatización de corrección", "prompt": "Sugiere cómo una IA puede corregir automáticamente ejercicios de matemáticas de primaria." },
+                                                                    { "title": "Prompt para chatbot educativo", "prompt": "Diseña un chatbot que resuelva dudas sobre historia universal para estudiantes de secundaria." }
+                                                                ]
+                                                            },
+                                                            "analisis-avanzado-aprendizaje": {
+                                                                "id": "analisis-avanzado-aprendizaje",
+                                                                "title": "Análisis avanzado del aprendizaje con IA",
+                                                                "moduleTitle": "Técnicas avanzadas",
+                                                                "durationMinutes": 12,
+                                                                "summary": "Explora técnicas de análisis de datos educativos con IA para identificar patrones, predecir dificultades y personalizar intervenciones pedagógicas.",
+                                                                "objectives": [
+                                                                    "Aplicar análisis avanzado de datos educativos.",
+                                                                    "Identificar patrones y predecir dificultades de aprendizaje.",
+                                                                    "Personalizar intervenciones pedagógicas con IA."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "Análisis de datos educativos", "content": "La IA puede analizar resultados, identificar tendencias y predecir áreas de dificultad para cada estudiante o grupo." },
+                                                                    { "heading": "Predicción y personalización", "content": "Con modelos predictivos, la IA sugiere intervenciones personalizadas antes de que surjan problemas de aprendizaje." },
+                                                                    { "heading": "Visualización y toma de decisiones", "content": "Dashboards y reportes IA ayudan a docentes y directivos a tomar decisiones informadas para mejorar el aprendizaje." }
+                                                                ],
+                                                                "activity": "Analiza los resultados de una evaluación con IA, identifica patrones de error y sugiere intervenciones personalizadas para los estudiantes con más dificultades.",
+                                                                "deliverable": "Reporte de análisis, patrones detectados y plan de intervención personalizado.",
+                                                                "checklist": [
+                                                                    "Apliqué análisis avanzado de datos educativos.",
+                                                                    "Identifiqué patrones y predije dificultades.",
+                                                                    "Propuse intervenciones personalizadas."
+                                                                ],
+                                                                "promptStarter": "Analiza los resultados de una prueba de matemáticas y sugiere intervenciones para los estudiantes con bajo desempeño.",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para análisis de patrones", "prompt": "Detecta patrones de error en respuestas de comprensión lectora en secundaria." },
+                                                                    { "title": "Prompt para predicción de dificultades", "prompt": "Predice qué estudiantes podrían tener dificultades en ciencias naturales el próximo trimestre." },
+                                                                    { "title": "Prompt para visualización de datos", "prompt": "Genera un dashboard con los resultados de una evaluación de inglés en primaria." }
+                                                                ]
+                                                            },
+                                                            "automatizacion-avanzada-educacion": {
+                                                                "id": "automatizacion-avanzada-educacion",
+                                                                "title": "Automatización avanzada de procesos educativos",
+                                                                "moduleTitle": "Técnicas avanzadas",
+                                                                "durationMinutes": 10,
+                                                                "summary": "Aprende a automatizar procesos educativos complejos usando IA, APIs y flujos de trabajo integrados para optimizar la gestión escolar y el aprendizaje.",
+                                                                "objectives": [
+                                                                    "Identificar procesos educativos complejos para automatizar.",
+                                                                    "Integrar múltiples herramientas IA en un solo flujo.",
+                                                                    "Evaluar el impacto de la automatización en la educación."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "Procesos ideales para automatización avanzada", "content": "Procesos como gestión de inscripciones, seguimiento de tareas y comunicación con familias pueden automatizarse integrando varias herramientas IA y APIs." },
+                                                                    { "heading": "Integración de herramientas y APIs", "content": "Usa plataformas como Google Classroom, Zapier y sistemas de gestión escolar para conectar procesos y automatizar tareas administrativas y pedagógicas." },
+                                                                    { "heading": "Evaluación y mejora continua", "content": "Monitorea el funcionamiento del flujo automatizado, recopila métricas y ajusta los procesos para maximizar el beneficio educativo." }
+                                                                ],
+                                                                "activity": "Automatiza el seguimiento de tareas y la comunicación con familias en una escuela usando IA y APIs.",
+                                                                "deliverable": "Descripción del flujo automatizado, herramientas integradas y análisis del impacto en la gestión escolar.",
+                                                                "checklist": [
+                                                                    "Identifiqué un proceso educativo complejo y herramientas IA para automatizarlo.",
+                                                                    "Implementé la integración y medí el resultado.",
+                                                                    "Analicé el impacto y posibles mejoras futuras."
+                                                                ],
+                                                                "promptStarter": "Describe un proceso de seguimiento de tareas y pide a la IA que sugiera una integración de herramientas para automatizarlo.",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para automatización avanzada", "prompt": "Sugiere cómo automatizar la gestión de inscripciones y comunicación con familias usando IA y APIs." },
+                                                                    { "title": "Prompt para integración de sistemas", "prompt": "Propón una integración entre un sistema de gestión escolar y un chatbot para informar a las familias sobre el progreso de los estudiantes." },
+                                                                    { "title": "Prompt para análisis de impacto", "prompt": "Genera un reporte sobre el impacto de la automatización avanzada en la reducción de tareas administrativas docentes." }
+                                                                ]
+                                                            },
+                                                            "mejorar-resultados-educacion": {
+                                                                "id": "mejorar-resultados-educacion",
+                                                                "title": "Cómo mejorar resultados y evitar errores comunes",
+                                                                "moduleTitle": "Técnicas avanzadas",
+                                                                "durationMinutes": 10,
+                                                                "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener mejores resultados en la aplicación de IA en educación.",
+                                                                "objectives": [
+                                                                    "Identificar errores comunes en prompts educativos.",
+                                                                    "Aplicar técnicas de iteración y ajuste.",
+                                                                    "Obtener soluciones más alineadas con los objetivos pedagógicos."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir actividades demasiado generales, no especificar el nivel educativo. Solución: revisa tu prompt, añade detalles y enfócate en el objetivo pedagógico." },
+                                                                    { "heading": "Iterar y ajustar para mejorar", "content": "Genera la actividad, analiza el resultado y ajusta el prompt: cambia el enfoque, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                                    { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad educativa. No temas experimentar y pedir feedback a otros docentes." }
+                                                                ],
+                                                                "activity": "Elige una actividad IA generada que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                                                "deliverable": "Secuencia de 3 actividades (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                                                "checklist": [
+                                                                    "Identifiqué y corregí errores en mis prompts educativos.",
+                                                                    "Iteré al menos dos veces para mejorar el resultado.",
+                                                                    "Documenté el proceso de mejora."
+                                                                ],
+                                                                "promptStarter": "Genera una actividad de ciencias para secundaria. Si el resultado no es satisfactorio, ajusta el prompt para enfocarlo en trabajo colaborativo y luego en evaluación por rúbrica.",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt original", "prompt": "Crea una actividad de ciencias para secundaria." },
+                                                                    { "title": "Primera iteración", "prompt": "Propón una actividad de ciencias para secundaria que fomente el trabajo colaborativo." },
+                                                                    { "title": "Segunda iteración", "prompt": "Sugiere una actividad de ciencias para secundaria con evaluación por rúbrica detallada." }
+                                                                ]
+                                                            },
+                                                            "proyecto-final-avanzado-educacion": {
+                                                                "id": "proyecto-final-avanzado-educacion",
+                                                                "title": "Proyecto final: portafolio avanzado de IA educativa",
+                                                                "moduleTitle": "Técnicas avanzadas",
+                                                                "durationMinutes": 12,
+                                                                "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de soluciones IA aplicadas a la educación, documentando el proceso y los resultados.",
+                                                                "objectives": [
+                                                                    "Combinar técnicas avanzadas de prompting, análisis y automatización en educación.",
+                                                                    "Crear un portafolio temático con soluciones IA personalizadas.",
+                                                                    "Documentar el proceso y justificar cada elección creativa."
+                                                                ],
+                                                                "sections": [
+                                                                    { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un área educativa avanzada (STEM, humanidades, idiomas, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                                                    { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 soluciones usando diferentes técnicas: prompt engineering, análisis avanzado, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                                                    { "heading": "Presentar y justificar el portafolio", "content": "Organiza las soluciones en un documento digital, explica las técnicas y herramientas usadas en cada una, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                                                                ],
+                                                                "activity": "Crea un portafolio digital de 6 soluciones IA para educación sobre un área avanzada, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                                                                "deliverable": "Portafolio digital con 6 soluciones, prompts, técnicas usadas y justificación de cada elección creativa.",
+                                                                "checklist": [
+                                                                    "Generé al menos 6 soluciones IA aplicando técnicas avanzadas.",
+                                                                    "Documenté el proceso y los prompts usados.",
+                                                                    "Justifiqué cada elección creativa en el portafolio."
+                                                                ],
+                                                                "promptStarter": "Crea una serie de soluciones para 'enseñanza de ciencias' usando técnicas avanzadas de prompting, análisis y automatización.",
+                                                                "promptExamples": [
+                                                                    { "title": "Prompt para portafolio temático", "prompt": "Una solución para personalizar ejercicios de física en secundaria usando IA y análisis de datos de desempeño." },
+                                                                    { "title": "Prompt para creatividad", "prompt": "Una integración entre un chatbot y una plataforma de aprendizaje adaptativo para mejorar la experiencia de estudiantes de idiomas." },
+                                                                    { "title": "Prompt para análisis de impacto", "prompt": "Un reporte visual generado con IA sobre el impacto de la automatización avanzada en la gestión escolar." }
+                                                                ]
+                                                            }
+                                                        },
+                                                    "ia-educacion-avanzado": {
+                                                        "diseno-prompts-educativos": {
+                                                            "id": "diseno-prompts-educativos",
+                                                            "title": "Diseño avanzado de prompts educativos",
+                                                            "moduleTitle": "Técnicas avanzadas",
+                                                            "durationMinutes": 12,
+                                                            "summary": "Aprende a crear prompts complejos para personalizar actividades, generar recursos y resolver retos educativos específicos con IA.",
+                                                            "objectives": [
+                                                                "Dominar la estructura avanzada de prompts para educación.",
+                                                                "Personalizar recursos y actividades con IA.",
+                                                                "Evitar ambigüedades y maximizar la utilidad de los prompts."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "¿Qué es el prompt engineering educativo?", "content": "Es el arte de diseñar instrucciones detalladas para que la IA genere materiales, actividades o soluciones alineadas con objetivos pedagógicos." },
+                                                                { "heading": "Estructura de un prompt avanzado", "content": "Incluye: objetivo pedagógico, nivel educativo, formato de salida, contexto del estudiante y criterios de evaluación." },
+                                                                { "heading": "Errores comunes y cómo evitarlos", "content": "Evita prompts vagos o sin contexto. Especifica siempre el nivel, el área y el tipo de resultado esperado." }
+                                                            ],
+                                                            "activity": "Crea un prompt avanzado para generar una actividad de ciencias naturales para estudiantes de secundaria, especificando formato, nivel y criterios de evaluación.",
+                                                            "deliverable": "Prompt generado y ejemplo de actividad creada por la IA.",
+                                                            "checklist": [
+                                                                "Diseñé un prompt con todos los elementos avanzados.",
+                                                                "Probé el prompt y analicé el resultado.",
+                                                                "Ajusté el prompt para mejorar la actividad generada."
+                                                            ],
+                                                            "promptStarter": "Genera una actividad de matemáticas para primaria en formato de juego interactivo, con criterios de evaluación claros.",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para actividad personalizada", "prompt": "Crea una actividad de comprensión lectora para estudiantes de secundaria, en formato de cómic digital." },
+                                                                { "title": "Prompt con criterios de evaluación", "prompt": "Genera un ejercicio de ciencias con rúbrica de evaluación para estudiantes de primaria." },
+                                                                { "title": "Prompt para recursos diferenciados", "prompt": "Crea tres versiones de una actividad de historia para diferentes niveles de dificultad." }
+                                                            ]
+                                                        },
+                                                        "integracion-herramientas-educativas": {
+                                                            "id": "integracion-herramientas-educativas",
+                                                            "title": "Integración de herramientas IA en el aula",
+                                                            "moduleTitle": "Técnicas avanzadas",
+                                                            "durationMinutes": 10,
+                                                            "summary": "Descubre cómo combinar diferentes soluciones IA para enriquecer la experiencia educativa y optimizar procesos de enseñanza-aprendizaje.",
+                                                            "objectives": [
+                                                                "Identificar ventajas de combinar herramientas IA educativas.",
+                                                                "Diseñar flujos de trabajo integrados en el aula.",
+                                                                "Optimizar la gestión y personalización educativa."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "¿Por qué integrar herramientas IA?", "content": "Cada herramienta IA tiene fortalezas: generadores de ejercicios, chatbots, sistemas de seguimiento. Integrarlas permite experiencias más completas y personalizadas." },
+                                                                { "heading": "Ejemplo de flujo integrado", "content": "Genera ejercicios con una IA, automatiza la corrección con otra y usa un chatbot para resolver dudas. Así se optimiza el tiempo docente y se personaliza el aprendizaje." },
+                                                                { "heading": "Consejos para integración efectiva", "content": "Documenta los flujos, revisa compatibilidad y capacita a docentes y estudiantes en el uso de las herramientas." }
+                                                            ],
+                                                            "activity": "Diseña un flujo de trabajo que combine al menos dos herramientas IA para crear, corregir y retroalimentar actividades en una materia de tu elección.",
+                                                            "deliverable": "Diagrama del flujo, herramientas usadas y análisis de ventajas obtenidas.",
+                                                            "checklist": [
+                                                                "Combiné al menos dos herramientas IA en un flujo educativo.",
+                                                                "Documenté el proceso y las ventajas.",
+                                                                "Analicé el impacto en la experiencia educativa."
+                                                            ],
+                                                            "promptStarter": "Genera ejercicios de inglés con una IA, automatiza la corrección y diseña un chatbot para dudas frecuentes.",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para generación de ejercicios", "prompt": "Crea 10 ejercicios de gramática inglesa para secundaria, con respuestas." },
+                                                                { "title": "Prompt para automatización de corrección", "prompt": "Sugiere cómo una IA puede corregir automáticamente ejercicios de matemáticas de primaria." },
+                                                                { "title": "Prompt para chatbot educativo", "prompt": "Diseña un chatbot que resuelva dudas sobre historia universal para estudiantes de secundaria." }
+                                                            ]
+                                                        },
+                                                        "analisis-avanzado-aprendizaje": {
+                                                            "id": "analisis-avanzado-aprendizaje",
+                                                            "title": "Análisis avanzado del aprendizaje con IA",
+                                                            "moduleTitle": "Técnicas avanzadas",
+                                                            "durationMinutes": 12,
+                                                            "summary": "Explora técnicas de análisis de datos educativos con IA para identificar patrones, predecir dificultades y personalizar intervenciones pedagógicas.",
+                                                            "objectives": [
+                                                                "Aplicar análisis avanzado de datos educativos.",
+                                                                "Identificar patrones y predecir dificultades de aprendizaje.",
+                                                                "Personalizar intervenciones pedagógicas con IA."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "Análisis de datos educativos", "content": "La IA puede analizar resultados, identificar tendencias y predecir áreas de dificultad para cada estudiante o grupo." },
+                                                                { "heading": "Predicción y personalización", "content": "Con modelos predictivos, la IA sugiere intervenciones personalizadas antes de que surjan problemas de aprendizaje." },
+                                                                { "heading": "Visualización y toma de decisiones", "content": "Dashboards y reportes IA ayudan a docentes y directivos a tomar decisiones informadas para mejorar el aprendizaje." }
+                                                            ],
+                                                            "activity": "Analiza los resultados de una evaluación con IA, identifica patrones de error y sugiere intervenciones personalizadas para los estudiantes con más dificultades.",
+                                                            "deliverable": "Reporte de análisis, patrones detectados y plan de intervención personalizado.",
+                                                            "checklist": [
+                                                                "Apliqué análisis avanzado de datos educativos.",
+                                                                "Identifiqué patrones y predije dificultades.",
+                                                                "Propuse intervenciones personalizadas."
+                                                            ],
+                                                            "promptStarter": "Analiza los resultados de una prueba de matemáticas y sugiere intervenciones para los estudiantes con bajo desempeño.",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para análisis de patrones", "prompt": "Detecta patrones de error en respuestas de comprensión lectora en secundaria." },
+                                                                { "title": "Prompt para predicción de dificultades", "prompt": "Predice qué estudiantes podrían tener dificultades en ciencias naturales el próximo trimestre." },
+                                                                { "title": "Prompt para visualización de datos", "prompt": "Genera un dashboard con los resultados de una evaluación de inglés en primaria." }
+                                                            ]
+                                                        },
+                                                        "automatizacion-avanzada-educacion": {
+                                                            "id": "automatizacion-avanzada-educacion",
+                                                            "title": "Automatización avanzada de procesos educativos",
+                                                            "moduleTitle": "Técnicas avanzadas",
+                                                            "durationMinutes": 10,
+                                                            "summary": "Aprende a automatizar procesos educativos complejos usando IA, APIs y flujos de trabajo integrados para optimizar la gestión escolar y el aprendizaje.",
+                                                            "objectives": [
+                                                                "Identificar procesos educativos complejos para automatizar.",
+                                                                "Integrar múltiples herramientas IA en un solo flujo.",
+                                                                "Evaluar el impacto de la automatización en la educación."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "Procesos ideales para automatización avanzada", "content": "Procesos como gestión de inscripciones, seguimiento de tareas y comunicación con familias pueden automatizarse integrando varias herramientas IA y APIs." },
+                                                                { "heading": "Integración de herramientas y APIs", "content": "Usa plataformas como Google Classroom, Zapier y sistemas de gestión escolar para conectar procesos y automatizar tareas administrativas y pedagógicas." },
+                                                                { "heading": "Evaluación y mejora continua", "content": "Monitorea el funcionamiento del flujo automatizado, recopila métricas y ajusta los procesos para maximizar el beneficio educativo." }
+                                                            ],
+                                                            "activity": "Automatiza el seguimiento de tareas y la comunicación con familias en una escuela usando IA y APIs.",
+                                                            "deliverable": "Descripción del flujo automatizado, herramientas integradas y análisis del impacto en la gestión escolar.",
+                                                            "checklist": [
+                                                                "Identifiqué un proceso educativo complejo y herramientas IA para automatizarlo.",
+                                                                "Implementé la integración y medí el resultado.",
+                                                                "Analicé el impacto y posibles mejoras futuras."
+                                                            ],
+                                                            "promptStarter": "Describe un proceso de seguimiento de tareas y pide a la IA que sugiera una integración de herramientas para automatizarlo.",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para automatización avanzada", "prompt": "Sugiere cómo automatizar la gestión de inscripciones y comunicación con familias usando IA y APIs." },
+                                                                { "title": "Prompt para integración de sistemas", "prompt": "Propón una integración entre un sistema de gestión escolar y un chatbot para informar a las familias sobre el progreso de los estudiantes." },
+                                                                { "title": "Prompt para análisis de impacto", "prompt": "Genera un reporte sobre el impacto de la automatización avanzada en la reducción de tareas administrativas docentes." }
+                                                            ]
+                                                        },
+                                                        "mejorar-resultados-educacion": {
+                                                            "id": "mejorar-resultados-educacion",
+                                                            "title": "Cómo mejorar resultados y evitar errores comunes",
+                                                            "moduleTitle": "Técnicas avanzadas",
+                                                            "durationMinutes": 10,
+                                                            "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener mejores resultados en la aplicación de IA en educación.",
+                                                            "objectives": [
+                                                                "Identificar errores comunes en prompts educativos.",
+                                                                "Aplicar técnicas de iteración y ajuste.",
+                                                                "Obtener soluciones más alineadas con los objetivos pedagógicos."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir actividades demasiado generales, no especificar el nivel educativo. Solución: revisa tu prompt, añade detalles y enfócate en el objetivo pedagógico." },
+                                                                { "heading": "Iterar y ajustar para mejorar", "content": "Genera la actividad, analiza el resultado y ajusta el prompt: cambia el enfoque, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                                { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad educativa. No temas experimentar y pedir feedback a otros docentes." }
+                                                            ],
+                                                            "activity": "Elige una actividad IA generada que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                                            "deliverable": "Secuencia de 3 actividades (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                                            "checklist": [
+                                                                "Identifiqué y corregí errores en mis prompts educativos.",
+                                                                "Iteré al menos dos veces para mejorar el resultado.",
+                                                                "Documenté el proceso de mejora."
+                                                            ],
+                                                            "promptStarter": "Genera una actividad de ciencias para secundaria. Si el resultado no es satisfactorio, ajusta el prompt para enfocarlo en trabajo colaborativo y luego en evaluación por rúbrica.",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt original", "prompt": "Crea una actividad de ciencias para secundaria." },
+                                                                { "title": "Primera iteración", "prompt": "Propón una actividad de ciencias para secundaria que fomente el trabajo colaborativo." },
+                                                                { "title": "Segunda iteración", "prompt": "Sugiere una actividad de ciencias para secundaria con evaluación por rúbrica detallada." }
+                                                            ]
+                                                        },
+                                                        "proyecto-final-avanzado-educacion": {
+                                                            "id": "proyecto-final-avanzado-educacion",
+                                                            "title": "Proyecto final: portafolio avanzado de IA educativa",
+                                                            "moduleTitle": "Técnicas avanzadas",
+                                                            "durationMinutes": 12,
+                                                            "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de soluciones IA aplicadas a la educación, documentando el proceso y los resultados.",
+                                                            "objectives": [
+                                                                "Combinar técnicas avanzadas de prompting, análisis y automatización en educación.",
+                                                                "Crear un portafolio temático con soluciones IA personalizadas.",
+                                                                "Documentar el proceso y justificar cada elección creativa."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un área educativa avanzada (STEM, humanidades, idiomas, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                                                { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 soluciones usando diferentes técnicas: prompt engineering, análisis avanzado, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                                                { "heading": "Presentar y justificar el portafolio", "content": "Organiza las soluciones en un documento digital, explica las técnicas y herramientas usadas en cada una, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                                                            ],
+                                                            "activity": "Crea un portafolio digital de 6 soluciones IA para educación sobre un área avanzada, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                                                            "deliverable": "Portafolio digital con 6 soluciones, prompts, técnicas usadas y justificación de cada elección creativa.",
+                                                            "checklist": [
+                                                                "Generé al menos 6 soluciones IA aplicando técnicas avanzadas.",
+                                                                "Documenté el proceso y los prompts usados.",
+                                                                "Justifiqué cada elección creativa en el portafolio."
+                                                            ],
+                                                            "promptStarter": "Crea una serie de soluciones para 'enseñanza de ciencias' usando técnicas avanzadas de prompting, análisis y automatización.",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para portafolio temático", "prompt": "Una solución para personalizar ejercicios de física en secundaria usando IA y análisis de datos de desempeño." },
+                                                                { "title": "Prompt para creatividad", "prompt": "Una integración entre un chatbot y una plataforma de aprendizaje adaptativo para mejorar la experiencia de estudiantes de idiomas." },
+                                                                { "title": "Prompt para análisis de impacto", "prompt": "Un reporte visual generado con IA sobre el impacto de la automatización avanzada en la gestión escolar." }
+                                                            ]
+                                                        }
+                                                    },
+                                                /* ═══════════════════════════════════════════
+                                                   CURSO 16: ia-educacion-basico
+                                                   IA en Educación: Primeros pasos
+                                                   Nivel: Básico | 8 lecciones
+                                                   ═══════════════════════════════════════════ */
+                                                    "ia-educacion-basico": {
+                                                        "introduccion-ia-educacion": {
+                                                            "id": "introduccion-ia-educacion",
+                                                            "title": "Introducción a la IA en educación",
+                                                            "moduleTitle": "Primeros pasos",
+                                                            "durationMinutes": 8,
+                                                            "summary": "Descubre cómo la inteligencia artificial está transformando la educación, desde la personalización del aprendizaje hasta la automatización de tareas docentes.",
+                                                            "objectives": [
+                                                                "Comprender el impacto de la IA en la educación actual.",
+                                                                "Identificar aplicaciones básicas de IA en el aula.",
+                                                                "Reconocer oportunidades y desafíos iniciales."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "¿Qué es la IA en educación?", "content": "La IA en educación abarca herramientas y sistemas que ayudan a personalizar el aprendizaje, automatizar tareas administrativas y mejorar la experiencia educativa." },
+                                                                { "heading": "Aplicaciones básicas", "content": "Ejemplos: chatbots para responder dudas, sistemas de recomendación de recursos, corrección automática de ejercicios." },
+                                                                { "heading": "Oportunidades y desafíos", "content": "La IA puede hacer la educación más inclusiva y eficiente, pero plantea retos como la privacidad y la capacitación docente." }
+                                                            ],
+                                                            "activity": "Investiga una herramienta de IA educativa y describe cómo podría mejorar una clase tradicional.",
+                                                            "deliverable": "Breve informe sobre la herramienta investigada y su posible impacto en el aula.",
+                                                            "checklist": [
+                                                                "Identifiqué una herramienta de IA educativa.",
+                                                                "Expliqué su funcionamiento básico.",
+                                                                "Analicé su impacto potencial en la educación."
+                                                            ],
+                                                            "promptStarter": "¿Cómo podría un chatbot educativo mejorar la experiencia de aprendizaje en matemáticas básicas?",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para personalización", "prompt": "Sugiere cómo una IA puede adaptar ejercicios de lectura a diferentes niveles de estudiantes." },
+                                                                { "title": "Prompt para automatización", "prompt": "Explica cómo una IA puede corregir automáticamente exámenes de opción múltiple." },
+                                                                { "title": "Prompt para inclusión", "prompt": "Propón una solución IA para apoyar a estudiantes con necesidades educativas especiales." }
+                                                            ]
+                                                        },
+                                                        "personalizacion-aprendizaje": {
+                                                            "id": "personalizacion-aprendizaje",
+                                                            "title": "Personalización del aprendizaje con IA",
+                                                            "moduleTitle": "Primeros pasos",
+                                                            "durationMinutes": 10,
+                                                            "summary": "Aprende cómo la IA permite adaptar el contenido, ritmo y formato de enseñanza a las necesidades de cada estudiante.",
+                                                            "objectives": [
+                                                                "Entender la personalización educativa con IA.",
+                                                                "Explorar ejemplos de adaptación de contenidos.",
+                                                                "Valorar los beneficios para la diversidad estudiantil."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "¿Qué es la personalización con IA?", "content": "La IA analiza datos de desempeño y preferencias para recomendar actividades, recursos y ritmos de aprendizaje personalizados." },
+                                                                { "heading": "Ejemplos prácticos", "content": "Plataformas que sugieren ejercicios según el avance, IA que adapta la dificultad de preguntas, sistemas que recomiendan videos o lecturas personalizadas." },
+                                                                { "heading": "Beneficios y retos", "content": "Mejora la motivación y el rendimiento, pero requiere datos de calidad y supervisión docente." }
+                                                            ],
+                                                            "activity": "Diseña una secuencia de actividades personalizadas para un estudiante con dificultades en comprensión lectora usando IA.",
+                                                            "deliverable": "Secuencia de actividades y justificación de la personalización realizada.",
+                                                            "checklist": [
+                                                                "Analicé las necesidades del estudiante.",
+                                                                "Utilicé IA para adaptar las actividades.",
+                                                                "Justifiqué las decisiones tomadas."
+                                                            ],
+                                                            "promptStarter": "Sugiere una serie de ejercicios personalizados para mejorar la comprensión lectora de un estudiante de primaria.",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para adaptación de dificultad", "prompt": "Genera preguntas de comprensión lectora de dificultad progresiva para un estudiante de secundaria." },
+                                                                { "title": "Prompt para recomendación de recursos", "prompt": "Recomienda videos educativos personalizados para un estudiante con interés en ciencias naturales." },
+                                                                { "title": "Prompt para seguimiento personalizado", "prompt": "Sugiere cómo una IA puede monitorear el avance de un estudiante y ajustar el plan de estudio semanalmente." }
+                                                            ]
+                                                        },
+                                                        "automatizacion-tareas-docentes": {
+                                                            "id": "automatizacion-tareas-docentes",
+                                                            "title": "Automatización de tareas docentes con IA",
+                                                            "moduleTitle": "Primeros pasos",
+                                                            "durationMinutes": 9,
+                                                            "summary": "Descubre cómo la IA puede liberar tiempo docente automatizando tareas repetitivas como la corrección, la gestión de asistencia y la generación de informes.",
+                                                            "objectives": [
+                                                                "Identificar tareas docentes automatizables con IA.",
+                                                                "Explorar herramientas de automatización educativa.",
+                                                                "Valorar el impacto en la labor docente."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "Tareas automatizables", "content": "Corrección de exámenes, gestión de asistencia, generación de informes de progreso, envío de recordatorios y retroalimentación automática." },
+                                                                { "heading": "Herramientas disponibles", "content": "Plataformas como Google Classroom, Edpuzzle y sistemas de gestión escolar integran IA para automatizar procesos." },
+                                                                { "heading": "Impacto en la docencia", "content": "Permite a los docentes enfocarse en la enseñanza y el acompañamiento personalizado, reduciendo la carga administrativa." }
+                                                            ],
+                                                            "activity": "Selecciona una tarea docente repetitiva y describe cómo la automatizarías usando IA.",
+                                                            "deliverable": "Descripción del proceso automatizado y análisis del tiempo ahorrado.",
+                                                            "checklist": [
+                                                                "Identifiqué una tarea repetitiva.",
+                                                                "Propuse una solución IA para automatizarla.",
+                                                                "Analicé el impacto en la labor docente."
+                                                            ],
+                                                            "promptStarter": "¿Cómo puede una IA automatizar la corrección de exámenes de opción múltiple en una clase grande?",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para automatización de informes", "prompt": "Genera un informe semanal de progreso de los estudiantes a partir de los resultados de sus actividades." },
+                                                                { "title": "Prompt para gestión de asistencia", "prompt": "Sugiere cómo una IA puede registrar y analizar la asistencia de los estudiantes automáticamente." },
+                                                                { "title": "Prompt para retroalimentación automática", "prompt": "Crea mensajes de retroalimentación personalizados para estudiantes que no entregaron tareas a tiempo." }
+                                                            ]
+                                                        },
+                                                        "evaluacion-ia": {
+                                                            "id": "evaluacion-ia",
+                                                            "title": "Evaluación educativa con IA",
+                                                            "moduleTitle": "Primeros pasos",
+                                                            "durationMinutes": 9,
+                                                            "summary": "Aprende cómo la IA puede apoyar la evaluación formativa y sumativa, generando preguntas, corrigiendo respuestas y analizando el progreso estudiantil.",
+                                                            "objectives": [
+                                                                "Comprender el rol de la IA en la evaluación educativa.",
+                                                                "Explorar ejemplos de generación y corrección automática de evaluaciones.",
+                                                                "Valorar la objetividad y personalización en la evaluación."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "Evaluación formativa y sumativa con IA", "content": "La IA puede generar preguntas personalizadas, corregir respuestas abiertas y analizar tendencias de aprendizaje para ajustar la enseñanza." },
+                                                                { "heading": "Ejemplos de herramientas", "content": "Plataformas como Socrative, Quizizz y sistemas de evaluación adaptativa usan IA para personalizar y automatizar la evaluación." },
+                                                                { "heading": "Ventajas y precauciones", "content": "Aumenta la objetividad y permite retroalimentación inmediata, pero requiere supervisión para evitar sesgos y errores." }
+                                                            ],
+                                                            "activity": "Crea una evaluación corta usando IA que incluya preguntas de opción múltiple y abiertas, y describe cómo se corregirían automáticamente.",
+                                                            "deliverable": "Evaluación generada y explicación del proceso de corrección automática.",
+                                                            "checklist": [
+                                                                "Generé preguntas con IA.",
+                                                                "Expliqué el proceso de corrección automática.",
+                                                                "Analicé ventajas y precauciones."
+                                                            ],
+                                                            "promptStarter": "Genera una evaluación de matemáticas para primaria con preguntas de opción múltiple y abiertas, lista para corrección automática.",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para generación de preguntas", "prompt": "Crea 5 preguntas de opción múltiple sobre historia de México para secundaria." },
+                                                                { "title": "Prompt para corrección automática", "prompt": "Explica cómo una IA puede corregir respuestas abiertas en una evaluación de comprensión lectora." },
+                                                                { "title": "Prompt para análisis de progreso", "prompt": "Sugiere cómo una IA puede analizar los resultados de evaluaciones para identificar áreas de mejora en un grupo de estudiantes." }
+                                                            ]
+                                                        },
+                                                        "inclusion-educativa-ia": {
+                                                            "id": "inclusion-educativa-ia",
+                                                            "title": "Inclusión educativa apoyada por IA",
+                                                            "moduleTitle": "Primeros pasos",
+                                                            "durationMinutes": 8,
+                                                            "summary": "Explora cómo la IA puede hacer la educación más inclusiva, apoyando a estudiantes con necesidades especiales y eliminando barreras de aprendizaje.",
+                                                            "objectives": [
+                                                                "Identificar aplicaciones de IA para la inclusión educativa.",
+                                                                "Explorar herramientas de apoyo para estudiantes con necesidades especiales.",
+                                                                "Valorar el impacto de la IA en la equidad educativa."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "IA para la inclusión", "content": "La IA puede adaptar materiales, traducir en tiempo real, generar subtítulos y ofrecer apoyos personalizados para estudiantes con discapacidades." },
+                                                                { "heading": "Herramientas de apoyo", "content": "Ejemplos: lectores de pantalla, traductores automáticos, generadores de subtítulos, asistentes virtuales para estudiantes con autismo o dislexia." },
+                                                                { "heading": "Impacto en la equidad", "content": "La IA puede reducir brechas educativas, pero es fundamental garantizar el acceso y la capacitación docente para su uso efectivo." }
+                                                            ],
+                                                            "activity": "Propón una solución IA para apoyar a estudiantes con discapacidad visual en el aprendizaje de ciencias.",
+                                                            "deliverable": "Descripción de la solución propuesta y análisis de su impacto en la inclusión educativa.",
+                                                            "checklist": [
+                                                                "Identifiqué una necesidad de inclusión.",
+                                                                "Propuse una solución IA específica.",
+                                                                "Analicé el impacto en la equidad educativa."
+                                                            ],
+                                                            "promptStarter": "¿Cómo puede una IA ayudar a estudiantes con dislexia a mejorar su comprensión lectora?",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para adaptación de materiales", "prompt": "Sugiere cómo una IA puede adaptar textos científicos para estudiantes con discapacidad visual." },
+                                                                { "title": "Prompt para traducción automática", "prompt": "Explica cómo una IA puede traducir en tiempo real las instrucciones de una clase para estudiantes migrantes." },
+                                                                { "title": "Prompt para asistentes virtuales", "prompt": "Propón un asistente virtual IA para apoyar a estudiantes con autismo en la organización de sus tareas." }
+                                                            ]
+                                                        },
+                                                        "etica-ia-educacion": {
+                                                            "id": "etica-ia-educacion",
+                                                            "title": "Ética y privacidad en el uso de IA educativa",
+                                                            "moduleTitle": "Primeros pasos",
+                                                            "durationMinutes": 8,
+                                                            "summary": "Reflexiona sobre los desafíos éticos y de privacidad que implica el uso de IA en la educación, y aprende buenas prácticas para proteger a los estudiantes.",
+                                                            "objectives": [
+                                                                "Comprender los riesgos éticos de la IA educativa.",
+                                                                "Identificar buenas prácticas de privacidad y protección de datos.",
+                                                                "Promover el uso responsable de la IA en el aula."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "Riesgos éticos y de privacidad", "content": "La IA puede recopilar y analizar datos sensibles de estudiantes. Es fundamental proteger la privacidad y evitar sesgos o discriminación." },
+                                                                { "heading": "Buenas prácticas", "content": "Solicitar consentimiento informado, anonimizar datos, limitar el acceso y capacitar a docentes y estudiantes en el uso seguro de la IA." },
+                                                                { "heading": "Uso responsable", "content": "Promover la transparencia, la equidad y la supervisión humana en todas las aplicaciones de IA educativa." }
+                                                            ],
+                                                            "activity": "Elabora un código de buenas prácticas para el uso de IA en tu escuela o institución educativa.",
+                                                            "deliverable": "Documento con el código de buenas prácticas y ejemplos de aplicación.",
+                                                            "checklist": [
+                                                                "Identifiqué riesgos éticos y de privacidad.",
+                                                                "Propuse buenas prácticas para mitigarlos.",
+                                                                "Promoví el uso responsable de la IA educativa."
+                                                            ],
+                                                            "promptStarter": "¿Qué medidas se deben tomar para proteger la privacidad de los estudiantes al usar IA en el aula?",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para código de ética", "prompt": "Redacta un código de ética para el uso de IA en una escuela primaria." },
+                                                                { "title": "Prompt para protección de datos", "prompt": "Sugiere prácticas para anonimizar los datos de estudiantes en plataformas educativas IA." },
+                                                                { "title": "Prompt para supervisión humana", "prompt": "Explica por qué es importante la supervisión docente en el uso de IA educativa." }
+                                                            ]
+                                                        },
+                                                        "proyecto-final-educacion": {
+                                                            "id": "proyecto-final-educacion",
+                                                            "title": "Proyecto final: portafolio de IA educativa",
+                                                            "moduleTitle": "Primeros pasos",
+                                                            "durationMinutes": 10,
+                                                            "summary": "Aplica lo aprendido creando un portafolio de soluciones IA para la educación, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                            "objectives": [
+                                                                "Integrar técnicas básicas de IA en soluciones educativas.",
+                                                                "Crear un portafolio temático con aplicaciones IA.",
+                                                                "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                            ],
+                                                            "sections": [
+                                                                { "heading": "Definir el objetivo del portafolio", "content": "Elige un área educativa (matemáticas, ciencias, idiomas, etc.) y define el propósito del portafolio: mejorar el aprendizaje, apoyar la inclusión, automatizar tareas, etc." },
+                                                                { "heading": "Aplicar técnicas básicas de IA", "content": "Genera al menos 4 soluciones usando IA: personalización, automatización, evaluación y apoyo a la inclusión. Documenta cada paso y los prompts usados." },
+                                                                { "heading": "Reflexionar sobre el proceso", "content": "Analiza los resultados, identifica los aprendizajes y propone mejoras para futuras aplicaciones de IA en educación." }
+                                                            ],
+                                                            "activity": "Crea un portafolio digital de 4 soluciones IA para educación sobre un área específica, aplicando diferentes técnicas y documentando el proceso.",
+                                                            "deliverable": "Portafolio digital con 4 soluciones, prompts, técnicas usadas y reflexión final.",
+                                                            "checklist": [
+                                                                "Generé al menos 4 soluciones IA aplicando técnicas básicas.",
+                                                                "Documenté el proceso y los prompts usados.",
+                                                                "Reflexioné sobre el impacto y aprendizajes."
+                                                            ],
+                                                            "promptStarter": "Crea una serie de soluciones para 'mejorar la comprensión lectora' usando IA educativa básica.",
+                                                            "promptExamples": [
+                                                                { "title": "Prompt para portafolio temático", "prompt": "Una solución para personalizar ejercicios de matemáticas en primaria usando IA." },
+                                                                { "title": "Prompt para automatización", "prompt": "Una herramienta IA que automatice la corrección de tareas de ciencias naturales." },
+                                                                { "title": "Prompt para apoyo a la inclusión", "prompt": "Una IA que adapte materiales de historia para estudiantes con discapacidad auditiva." }
+                                                            ]
+                                                        }
+                                                    },
+                                                "ia-educacion-basico": {
+                                                    "introduccion-ia-educacion": {
+                                                        "id": "introduccion-ia-educacion",
+                                                        "title": "Introducción a la IA en educación",
+                                                        "moduleTitle": "Primeros pasos",
+                                                        "durationMinutes": 8,
+                                                        "summary": "Descubre cómo la inteligencia artificial está transformando la educación, desde la personalización del aprendizaje hasta la automatización de tareas docentes.",
+                                                        "objectives": [
+                                                            "Comprender el impacto de la IA en la educación actual.",
+                                                            "Identificar aplicaciones básicas de IA en el aula.",
+                                                            "Reconocer oportunidades y desafíos iniciales."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "¿Qué es la IA en educación?", "content": "La IA en educación abarca herramientas y sistemas que ayudan a personalizar el aprendizaje, automatizar tareas administrativas y mejorar la experiencia educativa." },
+                                                            { "heading": "Aplicaciones básicas", "content": "Ejemplos: chatbots para responder dudas, sistemas de recomendación de recursos, corrección automática de ejercicios." },
+                                                            { "heading": "Oportunidades y desafíos", "content": "La IA puede hacer la educación más inclusiva y eficiente, pero plantea retos como la privacidad y la capacitación docente." }
+                                                        ],
+                                                        "activity": "Investiga una herramienta de IA educativa y describe cómo podría mejorar una clase tradicional.",
+                                                        "deliverable": "Breve informe sobre la herramienta investigada y su posible impacto en el aula.",
+                                                        "checklist": [
+                                                            "Identifiqué una herramienta de IA educativa.",
+                                                            "Expliqué su funcionamiento básico.",
+                                                            "Analicé su impacto potencial en la educación."
+                                                        ],
+                                                        "promptStarter": "¿Cómo podría un chatbot educativo mejorar la experiencia de aprendizaje en matemáticas básicas?",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para personalización", "prompt": "Sugiere cómo una IA puede adaptar ejercicios de lectura a diferentes niveles de estudiantes." },
+                                                            { "title": "Prompt para automatización", "prompt": "Explica cómo una IA puede corregir automáticamente exámenes de opción múltiple." },
+                                                            { "title": "Prompt para inclusión", "prompt": "Propón una solución IA para apoyar a estudiantes con necesidades educativas especiales." }
+                                                        ]
+                                                    },
+                                                    "personalizacion-aprendizaje": {
+                                                        "id": "personalizacion-aprendizaje",
+                                                        "title": "Personalización del aprendizaje con IA",
+                                                        "moduleTitle": "Primeros pasos",
+                                                        "durationMinutes": 10,
+                                                        "summary": "Aprende cómo la IA permite adaptar el contenido, ritmo y formato de enseñanza a las necesidades de cada estudiante.",
+                                                        "objectives": [
+                                                            "Entender la personalización educativa con IA.",
+                                                            "Explorar ejemplos de adaptación de contenidos.",
+                                                            "Valorar los beneficios para la diversidad estudiantil."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "¿Qué es la personalización con IA?", "content": "La IA analiza datos de desempeño y preferencias para recomendar actividades, recursos y ritmos de aprendizaje personalizados." },
+                                                            { "heading": "Ejemplos prácticos", "content": "Plataformas que sugieren ejercicios según el avance, IA que adapta la dificultad de preguntas, sistemas que recomiendan videos o lecturas personalizadas." },
+                                                            { "heading": "Beneficios y retos", "content": "Mejora la motivación y el rendimiento, pero requiere datos de calidad y supervisión docente." }
+                                                        ],
+                                                        "activity": "Diseña una secuencia de actividades personalizadas para un estudiante con dificultades en comprensión lectora usando IA.",
+                                                        "deliverable": "Secuencia de actividades y justificación de la personalización realizada.",
+                                                        "checklist": [
+                                                            "Analicé las necesidades del estudiante.",
+                                                            "Utilicé IA para adaptar las actividades.",
+                                                            "Justifiqué las decisiones tomadas."
+                                                        ],
+                                                        "promptStarter": "Sugiere una serie de ejercicios personalizados para mejorar la comprensión lectora de un estudiante de primaria.",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para adaptación de dificultad", "prompt": "Genera preguntas de comprensión lectora de dificultad progresiva para un estudiante de secundaria." },
+                                                            { "title": "Prompt para recomendación de recursos", "prompt": "Recomienda videos educativos personalizados para un estudiante con interés en ciencias naturales." },
+                                                            { "title": "Prompt para seguimiento personalizado", "prompt": "Sugiere cómo una IA puede monitorear el avance de un estudiante y ajustar el plan de estudio semanalmente." }
+                                                        ]
+                                                    },
+                                                    "automatizacion-tareas-docentes": {
+                                                        "id": "automatizacion-tareas-docentes",
+                                                        "title": "Automatización de tareas docentes con IA",
+                                                        "moduleTitle": "Primeros pasos",
+                                                        "durationMinutes": 9,
+                                                        "summary": "Descubre cómo la IA puede liberar tiempo docente automatizando tareas repetitivas como la corrección, la gestión de asistencia y la generación de informes.",
+                                                        "objectives": [
+                                                            "Identificar tareas docentes automatizables con IA.",
+                                                            "Explorar herramientas de automatización educativa.",
+                                                            "Valorar el impacto en la labor docente."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "Tareas automatizables", "content": "Corrección de exámenes, gestión de asistencia, generación de informes de progreso, envío de recordatorios y retroalimentación automática." },
+                                                            { "heading": "Herramientas disponibles", "content": "Plataformas como Google Classroom, Edpuzzle y sistemas de gestión escolar integran IA para automatizar procesos." },
+                                                            { "heading": "Impacto en la docencia", "content": "Permite a los docentes enfocarse en la enseñanza y el acompañamiento personalizado, reduciendo la carga administrativa." }
+                                                        ],
+                                                        "activity": "Selecciona una tarea docente repetitiva y describe cómo la automatizarías usando IA.",
+                                                        "deliverable": "Descripción del proceso automatizado y análisis del tiempo ahorrado.",
+                                                        "checklist": [
+                                                            "Identifiqué una tarea repetitiva.",
+                                                            "Propuse una solución IA para automatizarla.",
+                                                            "Analicé el impacto en la labor docente."
+                                                        ],
+                                                        "promptStarter": "¿Cómo puede una IA automatizar la corrección de exámenes de opción múltiple en una clase grande?",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para automatización de informes", "prompt": "Genera un informe semanal de progreso de los estudiantes a partir de los resultados de sus actividades." },
+                                                            { "title": "Prompt para gestión de asistencia", "prompt": "Sugiere cómo una IA puede registrar y analizar la asistencia de los estudiantes automáticamente." },
+                                                            { "title": "Prompt para retroalimentación automática", "prompt": "Crea mensajes de retroalimentación personalizados para estudiantes que no entregaron tareas a tiempo." }
+                                                        ]
+                                                    },
+                                                    "evaluacion-ia": {
+                                                        "id": "evaluacion-ia",
+                                                        "title": "Evaluación educativa con IA",
+                                                        "moduleTitle": "Primeros pasos",
+                                                        "durationMinutes": 9,
+                                                        "summary": "Aprende cómo la IA puede apoyar la evaluación formativa y sumativa, generando preguntas, corrigiendo respuestas y analizando el progreso estudiantil.",
+                                                        "objectives": [
+                                                            "Comprender el rol de la IA en la evaluación educativa.",
+                                                            "Explorar ejemplos de generación y corrección automática de evaluaciones.",
+                                                            "Valorar la objetividad y personalización en la evaluación."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "Evaluación formativa y sumativa con IA", "content": "La IA puede generar preguntas personalizadas, corregir respuestas abiertas y analizar tendencias de aprendizaje para ajustar la enseñanza." },
+                                                            { "heading": "Ejemplos de herramientas", "content": "Plataformas como Socrative, Quizizz y sistemas de evaluación adaptativa usan IA para personalizar y automatizar la evaluación." },
+                                                            { "heading": "Ventajas y precauciones", "content": "Aumenta la objetividad y permite retroalimentación inmediata, pero requiere supervisión para evitar sesgos y errores." }
+                                                        ],
+                                                        "activity": "Crea una evaluación corta usando IA que incluya preguntas de opción múltiple y abiertas, y describe cómo se corregirían automáticamente.",
+                                                        "deliverable": "Evaluación generada y explicación del proceso de corrección automática.",
+                                                        "checklist": [
+                                                            "Generé preguntas con IA.",
+                                                            "Expliqué el proceso de corrección automática.",
+                                                            "Analicé ventajas y precauciones."
+                                                        ],
+                                                        "promptStarter": "Genera una evaluación de matemáticas para primaria con preguntas de opción múltiple y abiertas, lista para corrección automática.",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para generación de preguntas", "prompt": "Crea 5 preguntas de opción múltiple sobre historia de México para secundaria." },
+                                                            { "title": "Prompt para corrección automática", "prompt": "Explica cómo una IA puede corregir respuestas abiertas en una evaluación de comprensión lectora." },
+                                                            { "title": "Prompt para análisis de progreso", "prompt": "Sugiere cómo una IA puede analizar los resultados de evaluaciones para identificar áreas de mejora en un grupo de estudiantes." }
+                                                        ]
+                                                    },
+                                                    "inclusion-educativa-ia": {
+                                                        "id": "inclusion-educativa-ia",
+                                                        "title": "Inclusión educativa apoyada por IA",
+                                                        "moduleTitle": "Primeros pasos",
+                                                        "durationMinutes": 8,
+                                                        "summary": "Explora cómo la IA puede hacer la educación más inclusiva, apoyando a estudiantes con necesidades especiales y eliminando barreras de aprendizaje.",
+                                                        "objectives": [
+                                                            "Identificar aplicaciones de IA para la inclusión educativa.",
+                                                            "Explorar herramientas de apoyo para estudiantes con necesidades especiales.",
+                                                            "Valorar el impacto de la IA en la equidad educativa."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "IA para la inclusión", "content": "La IA puede adaptar materiales, traducir en tiempo real, generar subtítulos y ofrecer apoyos personalizados para estudiantes con discapacidades." },
+                                                            { "heading": "Herramientas de apoyo", "content": "Ejemplos: lectores de pantalla, traductores automáticos, generadores de subtítulos, asistentes virtuales para estudiantes con autismo o dislexia." },
+                                                            { "heading": "Impacto en la equidad", "content": "La IA puede reducir brechas educativas, pero es fundamental garantizar el acceso y la capacitación docente para su uso efectivo." }
+                                                        ],
+                                                        "activity": "Propón una solución IA para apoyar a estudiantes con discapacidad visual en el aprendizaje de ciencias.",
+                                                        "deliverable": "Descripción de la solución propuesta y análisis de su impacto en la inclusión educativa.",
+                                                        "checklist": [
+                                                            "Identifiqué una necesidad de inclusión.",
+                                                            "Propuse una solución IA específica.",
+                                                            "Analicé el impacto en la equidad educativa."
+                                                        ],
+                                                        "promptStarter": "¿Cómo puede una IA ayudar a estudiantes con dislexia a mejorar su comprensión lectora?",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para adaptación de materiales", "prompt": "Sugiere cómo una IA puede adaptar textos científicos para estudiantes con discapacidad visual." },
+                                                            { "title": "Prompt para traducción automática", "prompt": "Explica cómo una IA puede traducir en tiempo real las instrucciones de una clase para estudiantes migrantes." },
+                                                            { "title": "Prompt para asistentes virtuales", "prompt": "Propón un asistente virtual IA para apoyar a estudiantes con autismo en la organización de sus tareas." }
+                                                        ]
+                                                    },
+                                                    "etica-ia-educacion": {
+                                                        "id": "etica-ia-educacion",
+                                                        "title": "Ética y privacidad en el uso de IA educativa",
+                                                        "moduleTitle": "Primeros pasos",
+                                                        "durationMinutes": 8,
+                                                        "summary": "Reflexiona sobre los desafíos éticos y de privacidad que implica el uso de IA en la educación, y aprende buenas prácticas para proteger a los estudiantes.",
+                                                        "objectives": [
+                                                            "Comprender los riesgos éticos de la IA educativa.",
+                                                            "Identificar buenas prácticas de privacidad y protección de datos.",
+                                                            "Promover el uso responsable de la IA en el aula."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "Riesgos éticos y de privacidad", "content": "La IA puede recopilar y analizar datos sensibles de estudiantes. Es fundamental proteger la privacidad y evitar sesgos o discriminación." },
+                                                            { "heading": "Buenas prácticas", "content": "Solicitar consentimiento informado, anonimizar datos, limitar el acceso y capacitar a docentes y estudiantes en el uso seguro de la IA." },
+                                                            { "heading": "Uso responsable", "content": "Promover la transparencia, la equidad y la supervisión humana en todas las aplicaciones de IA educativa." }
+                                                        ],
+                                                        "activity": "Elabora un código de buenas prácticas para el uso de IA en tu escuela o institución educativa.",
+                                                        "deliverable": "Documento con el código de buenas prácticas y ejemplos de aplicación.",
+                                                        "checklist": [
+                                                            "Identifiqué riesgos éticos y de privacidad.",
+                                                            "Propuse buenas prácticas para mitigarlos.",
+                                                            "Promoví el uso responsable de la IA educativa."
+                                                        ],
+                                                        "promptStarter": "¿Qué medidas se deben tomar para proteger la privacidad de los estudiantes al usar IA en el aula?",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para código de ética", "prompt": "Redacta un código de ética para el uso de IA en una escuela primaria." },
+                                                            { "title": "Prompt para protección de datos", "prompt": "Sugiere prácticas para anonimizar los datos de estudiantes en plataformas educativas IA." },
+                                                            { "title": "Prompt para supervisión humana", "prompt": "Explica por qué es importante la supervisión docente en el uso de IA educativa." }
+                                                        ]
+                                                    },
+                                                    "proyecto-final-educacion": {
+                                                        "id": "proyecto-final-educacion",
+                                                        "title": "Proyecto final: portafolio de IA educativa",
+                                                        "moduleTitle": "Primeros pasos",
+                                                        "durationMinutes": 10,
+                                                        "summary": "Aplica lo aprendido creando un portafolio de soluciones IA para la educación, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                        "objectives": [
+                                                            "Integrar técnicas básicas de IA en soluciones educativas.",
+                                                            "Crear un portafolio temático con aplicaciones IA.",
+                                                            "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "Definir el objetivo del portafolio", "content": "Elige un área educativa (matemáticas, ciencias, idiomas, etc.) y define el propósito del portafolio: mejorar el aprendizaje, apoyar la inclusión, automatizar tareas, etc." },
+                                                            { "heading": "Aplicar técnicas básicas de IA", "content": "Genera al menos 4 soluciones usando IA: personalización, automatización, evaluación y apoyo a la inclusión. Documenta cada paso y los prompts usados." },
+                                                            { "heading": "Reflexionar sobre el proceso", "content": "Analiza los resultados, identifica los aprendizajes y propone mejoras para futuras aplicaciones de IA en educación." }
+                                                        ],
+                                                        "activity": "Crea un portafolio digital de 4 soluciones IA para educación sobre un área específica, aplicando diferentes técnicas y documentando el proceso.",
+                                                        "deliverable": "Portafolio digital con 4 soluciones, prompts, técnicas usadas y reflexión final.",
+                                                        "checklist": [
+                                                            "Generé al menos 4 soluciones IA aplicando técnicas básicas.",
+                                                            "Documenté el proceso y los prompts usados.",
+                                                            "Reflexioné sobre el impacto y aprendizajes."
+                                                        ],
+                                                        "promptStarter": "Crea una serie de soluciones para 'mejorar la comprensión lectora' usando IA educativa básica.",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para portafolio temático", "prompt": "Una solución para personalizar ejercicios de matemáticas en primaria usando IA." },
+                                                            { "title": "Prompt para automatización", "prompt": "Una herramienta IA que automatice la corrección de tareas de ciencias naturales." },
+                                                            { "title": "Prompt para apoyo a la inclusión", "prompt": "Una IA que adapte materiales de historia para estudiantes con discapacidad auditiva." }
+                                                        ]
+                                                    }
+                                                },
+                                            /* ═══════════════════════════════════════════
+                                               CURSO 15: ia-negocios-avanzado
+                                               IA en Negocios: Técnicas avanzadas
+                                               Nivel: Intermedio | 8 lecciones
+                                               ═══════════════════════════════════════════ */
+                                                "ia-negocios-avanzado": {
+                                                    "prompt-engineering-negocios": {
+                                                        "id": "prompt-engineering-negocios",
+                                                        "title": "Prompt Engineering para negocios",
+                                                        "moduleTitle": "Técnicas avanzadas",
+                                                        "durationMinutes": 12,
+                                                        "summary": "Descubre cómo estructurar prompts complejos para obtener soluciones empresariales precisas y personalizadas. Aprende a usar descriptores, contexto y parámetros avanzados.",
+                                                        "objectives": [
+                                                            "Dominar la estructura avanzada de prompts para negocios.",
+                                                            "Utilizar descriptores y contexto para afinar resultados.",
+                                                            "Evitar ambigüedades y errores comunes en prompts complejos."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "¿Qué es el prompt engineering en negocios?", "content": "Es el arte de diseñar instrucciones detalladas y precisas para que la IA genere soluciones alineadas con los objetivos empresariales. Incluye el uso de descriptores, contexto, formato y parámetros técnicos." },
+                                                            { "heading": "Descriptores y parámetros avanzados", "content": "Incluye detalles como área de negocio, objetivo, formato de salida, nivel de personalización, etc. Ejemplo: 'Genera un reporte de ventas mensual para una pyme de tecnología, con análisis de tendencias y recomendaciones'." },
+                                                            { "heading": "Errores y cómo evitarlos", "content": "Evita prompts demasiado generales o ambiguos. Prioriza la claridad y la jerarquía de la información: primero el objetivo, luego el área, después el formato y finalmente los detalles técnicos." }
+                                                        ],
+                                                        "activity": "Escribe un prompt avanzado para 'un análisis de satisfacción de clientes en una tienda online, con recomendaciones de mejora'. Experimenta cambiando el área de enfoque y el formato del reporte.",
+                                                        "deliverable": "Dos reportes generados con variaciones en área y formato, más una reflexión sobre el impacto de los cambios.",
+                                                        "checklist": [
+                                                            "Escribí y probé un prompt avanzado con descriptores detallados.",
+                                                            "Ajusté parámetros para comparar resultados.",
+                                                            "Documenté el impacto de los cambios en el resultado."
+                                                        ],
+                                                        "promptStarter": "Genera un análisis de ventas trimestral, primero en formato gráfico y luego en formato tabla, con recomendaciones para el equipo comercial.",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt avanzado con descriptores", "prompt": "Crea un reporte de desempeño de marketing digital para una empresa de servicios, con métricas clave y sugerencias de optimización." },
+                                                            { "title": "Prompt con parámetros técnicos", "prompt": "Genera un análisis financiero anual en formato PDF, con gráficos y conclusiones ejecutivas." },
+                                                            { "title": "Prompt para formato específico", "prompt": "Crea una presentación de resultados de satisfacción de clientes en PowerPoint, con insights visuales." }
+                                                        ]
+                                                    },
+                                                    "combinacion-herramientas-negocios": {
+                                                        "id": "combinacion-herramientas-negocios",
+                                                        "title": "Combinando herramientas de IA para negocios",
+                                                        "moduleTitle": "Técnicas avanzadas",
+                                                        "durationMinutes": 10,
+                                                        "summary": "Aprende a combinar diferentes soluciones IA para obtener resultados empresariales únicos y aprovechar lo mejor de cada herramienta.",
+                                                        "objectives": [
+                                                            "Identificar ventajas y limitaciones de cada herramienta IA empresarial.",
+                                                            "Combinar soluciones generadas en diferentes plataformas.",
+                                                            "Optimizar el flujo de trabajo empresarial usando IA."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "¿Por qué combinar herramientas?", "content": "Cada solución IA tiene fortalezas: Power BI es potente en visualización, Zapier en automatización, chatbots en atención al cliente. Combinarlas permite obtener resultados más ricos y eficientes." },
+                                                            { "heading": "Flujo de trabajo recomendado", "content": "Ejemplo: genera un reporte en Power BI, automatiza el envío con Zapier y responde consultas con un chatbot. Así aprovechas la visualización, la automatización y la interacción de cada herramienta." },
+                                                            { "heading": "Consejos para integración", "content": "Documenta los flujos, usa APIs y revisa la compatibilidad entre plataformas para asegurar una integración fluida." }
+                                                        ],
+                                                        "activity": "Crea un reporte visual en Power BI, automatiza su envío semanal con Zapier y diseña un chatbot para responder preguntas sobre el reporte.",
+                                                        "deliverable": "Secuencia de soluciones (reporte, automatización, chatbot) con explicación de los cambios y herramientas usadas.",
+                                                        "checklist": [
+                                                            "Probé al menos dos herramientas IA diferentes en un mismo proceso empresarial.",
+                                                            "Documenté el flujo de trabajo y las herramientas usadas.",
+                                                            "Analicé las ventajas de cada herramienta en el resultado final."
+                                                        ],
+                                                        "promptStarter": "Genera un reporte de inventario en Power BI, automatiza el envío con Zapier y diseña un chatbot para consultas frecuentes.",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para reporte inicial", "prompt": "Crea un dashboard de ventas mensuales en Power BI, con filtros por producto y región." },
+                                                            { "title": "Prompt para automatización", "prompt": "Automatiza el envío semanal del dashboard a los gerentes de ventas usando Zapier." },
+                                                            { "title": "Prompt para chatbot", "prompt": "Diseña un chatbot que responda preguntas sobre los datos del dashboard de ventas." }
+                                                        ]
+                                                    },
+                                                    "analisis-avanzado-negocios": {
+                                                        "id": "analisis-avanzado-negocios",
+                                                        "title": "Análisis avanzado de datos empresariales con IA",
+                                                        "moduleTitle": "Técnicas avanzadas",
+                                                        "durationMinutes": 12,
+                                                        "summary": "Descubre técnicas avanzadas de análisis de datos empresariales con IA: segmentación, predicción y visualización profesional.",
+                                                        "objectives": [
+                                                            "Aplicar segmentación y predicción avanzada con IA.",
+                                                            "Visualizar datos empresariales de forma profesional.",
+                                                            "Tomar decisiones estratégicas basadas en análisis IA."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "Segmentación y predicción avanzada", "content": "Herramientas como Power BI, Tableau y Google Data Studio permiten segmentar clientes, predecir ventas y detectar patrones complejos usando IA integrada." },
+                                                            { "heading": "Visualización profesional de datos", "content": "Crea dashboards interactivos, gráficos avanzados y reportes ejecutivos para comunicar hallazgos de manera efectiva a diferentes públicos." },
+                                                            { "heading": "Toma de decisiones estratégicas", "content": "Utiliza los análisis para identificar oportunidades, anticipar riesgos y definir acciones concretas para el negocio." }
+                                                        ],
+                                                        "activity": "Segmenta la base de clientes de tu empresa con IA, predice las ventas del próximo trimestre y presenta los resultados en un dashboard profesional.",
+                                                        "deliverable": "Dashboard interactivo, predicción de ventas y análisis de segmentos, más una reflexión sobre el proceso de análisis avanzado.",
+                                                        "checklist": [
+                                                            "Apliqué segmentación y predicción avanzada con IA.",
+                                                            "Visualicé los resultados en un dashboard profesional.",
+                                                            "Tomé decisiones estratégicas basadas en el análisis IA."
+                                                        ],
+                                                        "promptStarter": "Segmenta los clientes de una tienda online según su frecuencia de compra y predice las ventas del próximo mes con IA.",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para segmentación avanzada", "prompt": "Segmenta la base de clientes de una empresa de servicios en grupos prioritarios usando IA." },
+                                                            { "title": "Prompt para predicción de ventas", "prompt": "Predice las ventas trimestrales de una pyme de tecnología usando datos históricos y modelos IA." },
+                                                            { "title": "Prompt para visualización profesional", "prompt": "Crea un dashboard ejecutivo con los principales KPIs de una empresa de logística." }
+                                                        ]
+                                                    },
+                                                    "automatizacion-negocios-avanzada": {
+                                                        "id": "automatizacion-negocios-avanzada",
+                                                        "title": "Automatización avanzada de procesos empresariales con IA",
+                                                        "moduleTitle": "Técnicas avanzadas",
+                                                        "durationMinutes": 10,
+                                                        "summary": "Aprende a automatizar procesos empresariales complejos usando IA, APIs y flujos de trabajo integrados.",
+                                                        "objectives": [
+                                                            "Identificar procesos empresariales complejos para automatizar.",
+                                                            "Integrar múltiples herramientas IA en un solo flujo.",
+                                                            "Evaluar el impacto de la automatización avanzada en el negocio."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "Procesos ideales para automatización avanzada", "content": "Procesos como gestión de pedidos, análisis financiero y atención multicanal pueden automatizarse integrando varias herramientas IA y APIs." },
+                                                            { "heading": "Integración de herramientas y APIs", "content": "Usa Zapier, Power Automate y APIs de plataformas empresariales para conectar sistemas, automatizar tareas y centralizar información." },
+                                                            { "heading": "Evaluación y mejora continua", "content": "Monitorea el funcionamiento del flujo automatizado, recopila métricas y ajusta los procesos para maximizar el beneficio empresarial." }
+                                                        ],
+                                                        "activity": "Automatiza la gestión de pedidos en una tienda online integrando un CRM, un sistema de inventario y un chatbot de atención al cliente.",
+                                                        "deliverable": "Descripción del flujo automatizado, herramientas integradas y análisis del impacto en la eficiencia operativa.",
+                                                        "checklist": [
+                                                            "Identifiqué un proceso complejo y herramientas IA para automatizarlo.",
+                                                            "Implementé la integración y medí el resultado.",
+                                                            "Analicé el impacto y posibles mejoras futuras."
+                                                        ],
+                                                        "promptStarter": "Describe un proceso de ventas complejo y pide a la IA que sugiera una integración de herramientas para automatizarlo.",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para automatización avanzada", "prompt": "Sugiere cómo automatizar la gestión de pedidos y facturación en una tienda online usando IA y APIs." },
+                                                            { "title": "Prompt para integración de sistemas", "prompt": "Propón una integración entre un CRM, un sistema de inventario y un chatbot para mejorar la gestión de clientes." },
+                                                            { "title": "Prompt para análisis de impacto", "prompt": "Genera un reporte sobre el impacto de la automatización avanzada en la reducción de errores operativos." }
+                                                        ]
+                                                    },
+                                                    "mejorar-resultados": {
+                                                        "id": "mejorar-resultados",
+                                                        "title": "Cómo mejorar resultados y evitar errores comunes",
+                                                        "moduleTitle": "Técnicas avanzadas",
+                                                        "durationMinutes": 10,
+                                                        "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener mejores resultados en la aplicación de IA en negocios.",
+                                                        "objectives": [
+                                                            "Identificar errores comunes en prompts para negocios.",
+                                                            "Aplicar técnicas de iteración y ajuste.",
+                                                            "Obtener soluciones más alineadas con las necesidades empresariales."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir soluciones demasiado generales, no especificar el contexto del negocio. Solución: revisa tu prompt, añade detalles y enfócate en el objetivo empresarial." },
+                                                            { "heading": "Iterar y ajustar para mejorar", "content": "Genera la solución, analiza el resultado y ajusta el prompt: cambia el enfoque, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                            { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros empresarios." }
+                                                        ],
+                                                        "activity": "Elige una solución IA generada que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                                        "deliverable": "Secuencia de 3 soluciones (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                                        "checklist": [
+                                                            "Identifiqué y corregí errores en mis prompts empresariales.",
+                                                            "Iteré al menos dos veces para mejorar el resultado.",
+                                                            "Documenté el proceso de mejora."
+                                                        ],
+                                                        "promptStarter": "Genera una propuesta para optimizar la logística de una empresa. Si el resultado no es satisfactorio, ajusta el prompt para enfocarlo en reducción de costos y luego en sostenibilidad.",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt original", "prompt": "Optimizar la logística en una empresa de distribución." },
+                                                            { "title": "Primera iteración", "prompt": "Propón soluciones digitales para reducir costos logísticos en una empresa de distribución." },
+                                                            { "title": "Segunda iteración", "prompt": "Sugiere cómo hacer la logística más sostenible usando IA y datos de rutas." }
+                                                        ]
+                                                    },
+                                                    "proyecto-final": {
+                                                        "id": "proyecto-final",
+                                                        "title": "Proyecto final: portafolio avanzado de IA en negocios",
+                                                        "moduleTitle": "Técnicas avanzadas",
+                                                        "durationMinutes": 12,
+                                                        "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de soluciones IA aplicadas a negocios, documentando el proceso y los resultados.",
+                                                        "objectives": [
+                                                            "Combinar técnicas avanzadas de prompting, análisis y automatización en negocios.",
+                                                            "Crear un portafolio temático con soluciones IA personalizadas.",
+                                                            "Documentar el proceso y justificar cada elección creativa."
+                                                        ],
+                                                        "sections": [
+                                                            { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un área avanzada de negocio (logística, finanzas, marketing, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                                            { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 soluciones usando diferentes técnicas: prompt engineering, análisis avanzado, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                                            { "heading": "Presentar y justificar el portafolio", "content": "Organiza las soluciones en un documento digital, explica las técnicas y herramientas usadas en cada una, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                                                        ],
+                                                        "activity": "Crea un portafolio digital de 6 soluciones IA para negocios sobre un área avanzada, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                                                        "deliverable": "Portafolio digital con 6 soluciones, prompts, técnicas usadas y justificación de cada elección creativa.",
+                                                        "checklist": [
+                                                            "Generé al menos 6 soluciones IA aplicando técnicas avanzadas.",
+                                                            "Documenté el proceso y los prompts usados.",
+                                                            "Justifiqué cada elección creativa en el portafolio."
+                                                        ],
+                                                        "promptStarter": "Crea una serie de soluciones para 'optimización logística' usando técnicas avanzadas de prompting, análisis y automatización.",
+                                                        "promptExamples": [
+                                                            { "title": "Prompt para portafolio temático", "prompt": "Una solución para optimizar rutas de entrega en una empresa de logística usando IA y datos en tiempo real." },
+                                                            { "title": "Prompt para creatividad", "prompt": "Una integración entre un chatbot y un sistema de facturación para mejorar la experiencia del cliente B2B." },
+                                                            { "title": "Prompt para análisis de impacto", "prompt": "Un reporte visual generado con IA sobre el impacto de la automatización avanzada en la satisfacción del cliente." }
+                                                        ]
+                                                    }
+                                                },
+                                            "ia-negocios-avanzado": {
+                                                "prompt-engineering-negocios": {
+                                                    "id": "prompt-engineering-negocios",
+                                                    "title": "Prompt Engineering para negocios",
+                                                    "moduleTitle": "Técnicas avanzadas",
+                                                    "durationMinutes": 12,
+                                                    "summary": "Descubre cómo estructurar prompts complejos para obtener soluciones empresariales precisas y personalizadas. Aprende a usar descriptores, contexto y parámetros avanzados.",
+                                                    "objectives": [
+                                                        "Dominar la estructura avanzada de prompts para negocios.",
+                                                        "Utilizar descriptores y contexto para afinar resultados.",
+                                                        "Evitar ambigüedades y errores comunes en prompts complejos."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "¿Qué es el prompt engineering en negocios?", "content": "Es el arte de diseñar instrucciones detalladas y precisas para que la IA genere soluciones alineadas con los objetivos empresariales. Incluye el uso de descriptores, contexto, formato y parámetros técnicos." },
+                                                        { "heading": "Descriptores y parámetros avanzados", "content": "Incluye detalles como área de negocio, objetivo, formato de salida, nivel de personalización, etc. Ejemplo: 'Genera un reporte de ventas mensual para una pyme de tecnología, con análisis de tendencias y recomendaciones'." },
+                                                        { "heading": "Errores y cómo evitarlos", "content": "Evita prompts demasiado generales o ambiguos. Prioriza la claridad y la jerarquía de la información: primero el objetivo, luego el área, después el formato y finalmente los detalles técnicos." }
+                                                    ],
+                                                    "activity": "Escribe un prompt avanzado para 'un análisis de satisfacción de clientes en una tienda online, con recomendaciones de mejora'. Experimenta cambiando el área de enfoque y el formato del reporte.",
+                                                    "deliverable": "Dos reportes generados con variaciones en área y formato, más una reflexión sobre el impacto de los cambios.",
+                                                    "checklist": [
+                                                        "Escribí y probé un prompt avanzado con descriptores detallados.",
+                                                        "Ajusté parámetros para comparar resultados.",
+                                                        "Documenté el impacto de los cambios en el resultado."
+                                                    ],
+                                                    "promptStarter": "Genera un análisis de ventas trimestral, primero en formato gráfico y luego en formato tabla, con recomendaciones para el equipo comercial.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt avanzado con descriptores", "prompt": "Crea un reporte de desempeño de marketing digital para una empresa de servicios, con métricas clave y sugerencias de optimización." },
+                                                        { "title": "Prompt con parámetros técnicos", "prompt": "Genera un análisis financiero anual en formato PDF, con gráficos y conclusiones ejecutivas." },
+                                                        { "title": "Prompt para formato específico", "prompt": "Crea una presentación de resultados de satisfacción de clientes en PowerPoint, con insights visuales." }
+                                                    ]
+                                                },
+                                                "combinacion-herramientas-negocios": {
+                                                    "id": "combinacion-herramientas-negocios",
+                                                    "title": "Combinando herramientas de IA para negocios",
+                                                    "moduleTitle": "Técnicas avanzadas",
+                                                    "durationMinutes": 10,
+                                                    "summary": "Aprende a combinar diferentes soluciones IA para obtener resultados empresariales únicos y aprovechar lo mejor de cada herramienta.",
+                                                    "objectives": [
+                                                        "Identificar ventajas y limitaciones de cada herramienta IA empresarial.",
+                                                        "Combinar soluciones generadas en diferentes plataformas.",
+                                                        "Optimizar el flujo de trabajo empresarial usando IA."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "¿Por qué combinar herramientas?", "content": "Cada solución IA tiene fortalezas: Power BI es potente en visualización, Zapier en automatización, chatbots en atención al cliente. Combinarlas permite obtener resultados más ricos y eficientes." },
+                                                        { "heading": "Flujo de trabajo recomendado", "content": "Ejemplo: genera un reporte en Power BI, automatiza el envío con Zapier y responde consultas con un chatbot. Así aprovechas la visualización, la automatización y la interacción de cada herramienta." },
+                                                        { "heading": "Consejos para integración", "content": "Documenta los flujos, usa APIs y revisa la compatibilidad entre plataformas para asegurar una integración fluida." }
+                                                    ],
+                                                    "activity": "Crea un reporte visual en Power BI, automatiza su envío semanal con Zapier y diseña un chatbot para responder preguntas sobre el reporte.",
+                                                    "deliverable": "Secuencia de soluciones (reporte, automatización, chatbot) con explicación de los cambios y herramientas usadas.",
+                                                    "checklist": [
+                                                        "Probé al menos dos herramientas IA diferentes en un mismo proceso empresarial.",
+                                                        "Documenté el flujo de trabajo y las herramientas usadas.",
+                                                        "Analicé las ventajas de cada herramienta en el resultado final."
+                                                    ],
+                                                    "promptStarter": "Genera un reporte de inventario en Power BI, automatiza el envío con Zapier y diseña un chatbot para consultas frecuentes.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt para reporte inicial", "prompt": "Crea un dashboard de ventas mensuales en Power BI, con filtros por producto y región." },
+                                                        { "title": "Prompt para automatización", "prompt": "Automatiza el envío semanal del dashboard a los gerentes de ventas usando Zapier." },
+                                                        { "title": "Prompt para chatbot", "prompt": "Diseña un chatbot que responda preguntas sobre los datos del dashboard de ventas." }
+                                                    ]
+                                                },
+                                                "analisis-avanzado-negocios": {
+                                                    "id": "analisis-avanzado-negocios",
+                                                    "title": "Análisis avanzado de datos empresariales con IA",
+                                                    "moduleTitle": "Técnicas avanzadas",
+                                                    "durationMinutes": 12,
+                                                    "summary": "Descubre técnicas avanzadas de análisis de datos empresariales con IA: segmentación, predicción y visualización profesional.",
+                                                    "objectives": [
+                                                        "Aplicar segmentación y predicción avanzada con IA.",
+                                                        "Visualizar datos empresariales de forma profesional.",
+                                                        "Tomar decisiones estratégicas basadas en análisis IA."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "Segmentación y predicción avanzada", "content": "Herramientas como Power BI, Tableau y Google Data Studio permiten segmentar clientes, predecir ventas y detectar patrones complejos usando IA integrada." },
+                                                        { "heading": "Visualización profesional de datos", "content": "Crea dashboards interactivos, gráficos avanzados y reportes ejecutivos para comunicar hallazgos de manera efectiva a diferentes públicos." },
+                                                        { "heading": "Toma de decisiones estratégicas", "content": "Utiliza los análisis para identificar oportunidades, anticipar riesgos y definir acciones concretas para el negocio." }
+                                                    ],
+                                                    "activity": "Segmenta la base de clientes de tu empresa con IA, predice las ventas del próximo trimestre y presenta los resultados en un dashboard profesional.",
+                                                    "deliverable": "Dashboard interactivo, predicción de ventas y análisis de segmentos, más una reflexión sobre el proceso de análisis avanzado.",
+                                                    "checklist": [
+                                                        "Apliqué segmentación y predicción avanzada con IA.",
+                                                        "Visualicé los resultados en un dashboard profesional.",
+                                                        "Tomé decisiones estratégicas basadas en el análisis IA."
+                                                    ],
+                                                    "promptStarter": "Segmenta los clientes de una tienda online según su frecuencia de compra y predice las ventas del próximo mes con IA.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt para segmentación avanzada", "prompt": "Segmenta la base de clientes de una empresa de servicios en grupos prioritarios usando IA." },
+                                                        { "title": "Prompt para predicción de ventas", "prompt": "Predice las ventas trimestrales de una pyme de tecnología usando datos históricos y modelos IA." },
+                                                        { "title": "Prompt para visualización profesional", "prompt": "Crea un dashboard ejecutivo con los principales KPIs de una empresa de logística." }
+                                                    ]
+                                                },
+                                                "automatizacion-negocios-avanzada": {
+                                                    "id": "automatizacion-negocios-avanzada",
+                                                    "title": "Automatización avanzada de procesos empresariales con IA",
+                                                    "moduleTitle": "Técnicas avanzadas",
+                                                    "durationMinutes": 10,
+                                                    "summary": "Aprende a automatizar procesos empresariales complejos usando IA, APIs y flujos de trabajo integrados.",
+                                                    "objectives": [
+                                                        "Identificar procesos empresariales complejos para automatizar.",
+                                                        "Integrar múltiples herramientas IA en un solo flujo.",
+                                                        "Evaluar el impacto de la automatización avanzada en el negocio."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "Procesos ideales para automatización avanzada", "content": "Procesos como gestión de pedidos, análisis financiero y atención multicanal pueden automatizarse integrando varias herramientas IA y APIs." },
+                                                        { "heading": "Integración de herramientas y APIs", "content": "Usa Zapier, Power Automate y APIs de plataformas empresariales para conectar sistemas, automatizar tareas y centralizar información." },
+                                                        { "heading": "Evaluación y mejora continua", "content": "Monitorea el funcionamiento del flujo automatizado, recopila métricas y ajusta los procesos para maximizar el beneficio empresarial." }
+                                                    ],
+                                                    "activity": "Automatiza la gestión de pedidos en una tienda online integrando un CRM, un sistema de inventario y un chatbot de atención al cliente.",
+                                                    "deliverable": "Descripción del flujo automatizado, herramientas integradas y análisis del impacto en la eficiencia operativa.",
+                                                    "checklist": [
+                                                        "Identifiqué un proceso complejo y herramientas IA para automatizarlo.",
+                                                        "Implementé la integración y medí el resultado.",
+                                                        "Analicé el impacto y posibles mejoras futuras."
+                                                    ],
+                                                    "promptStarter": "Describe un proceso de ventas complejo y pide a la IA que sugiera una integración de herramientas para automatizarlo.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt para automatización avanzada", "prompt": "Sugiere cómo automatizar la gestión de pedidos y facturación en una tienda online usando IA y APIs." },
+                                                        { "title": "Prompt para integración de sistemas", "prompt": "Propón una integración entre un CRM, un sistema de inventario y un chatbot para mejorar la gestión de clientes." },
+                                                        { "title": "Prompt para análisis de impacto", "prompt": "Genera un reporte sobre el impacto de la automatización avanzada en la reducción de errores operativos." }
+                                                    ]
+                                                },
+                                                "mejorar-resultados": {
+                                                    "id": "mejorar-resultados",
+                                                    "title": "Cómo mejorar resultados y evitar errores comunes",
+                                                    "moduleTitle": "Técnicas avanzadas",
+                                                    "durationMinutes": 10,
+                                                    "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener mejores resultados en la aplicación de IA en negocios.",
+                                                    "objectives": [
+                                                        "Identificar errores comunes en prompts para negocios.",
+                                                        "Aplicar técnicas de iteración y ajuste.",
+                                                        "Obtener soluciones más alineadas con las necesidades empresariales."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir soluciones demasiado generales, no especificar el contexto del negocio. Solución: revisa tu prompt, añade detalles y enfócate en el objetivo empresarial." },
+                                                        { "heading": "Iterar y ajustar para mejorar", "content": "Genera la solución, analiza el resultado y ajusta el prompt: cambia el enfoque, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                        { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros empresarios." }
+                                                    ],
+                                                    "activity": "Elige una solución IA generada que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                                    "deliverable": "Secuencia de 3 soluciones (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                                    "checklist": [
+                                                        "Identifiqué y corregí errores en mis prompts empresariales.",
+                                                        "Iteré al menos dos veces para mejorar el resultado.",
+                                                        "Documenté el proceso de mejora."
+                                                    ],
+                                                    "promptStarter": "Genera una propuesta para optimizar la logística de una empresa. Si el resultado no es satisfactorio, ajusta el prompt para enfocarlo en reducción de costos y luego en sostenibilidad.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt original", "prompt": "Optimizar la logística en una empresa de distribución." },
+                                                        { "title": "Primera iteración", "prompt": "Propón soluciones digitales para reducir costos logísticos en una empresa de distribución." },
+                                                        { "title": "Segunda iteración", "prompt": "Sugiere cómo hacer la logística más sostenible usando IA y datos de rutas." }
+                                                    ]
+                                                },
+                                                "proyecto-final": {
+                                                    "id": "proyecto-final",
+                                                    "title": "Proyecto final: portafolio avanzado de IA en negocios",
+                                                    "moduleTitle": "Técnicas avanzadas",
+                                                    "durationMinutes": 12,
+                                                    "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de soluciones IA aplicadas a negocios, documentando el proceso y los resultados.",
+                                                    "objectives": [
+                                                        "Combinar técnicas avanzadas de prompting, análisis y automatización en negocios.",
+                                                        "Crear un portafolio temático con soluciones IA personalizadas.",
+                                                        "Documentar el proceso y justificar cada elección creativa."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un área avanzada de negocio (logística, finanzas, marketing, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                                        { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 soluciones usando diferentes técnicas: prompt engineering, análisis avanzado, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                                        { "heading": "Presentar y justificar el portafolio", "content": "Organiza las soluciones en un documento digital, explica las técnicas y herramientas usadas en cada una, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                                                    ],
+                                                    "activity": "Crea un portafolio digital de 6 soluciones IA para negocios sobre un área avanzada, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                                                    "deliverable": "Portafolio digital con 6 soluciones, prompts, técnicas usadas y justificación de cada elección creativa.",
+                                                    "checklist": [
+                                                        "Generé al menos 6 soluciones IA aplicando técnicas avanzadas.",
+                                                        "Documenté el proceso y los prompts usados.",
+                                                        "Justifiqué cada elección creativa en el portafolio."
+                                                    ],
+                                                    "promptStarter": "Crea una serie de soluciones para 'optimización logística' usando técnicas avanzadas de prompting, análisis y automatización.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt para portafolio temático", "prompt": "Una solución para optimizar rutas de entrega en una empresa de logística usando IA y datos en tiempo real." },
+                                                        { "title": "Prompt para creatividad", "prompt": "Una integración entre un chatbot y un sistema de facturación para mejorar la experiencia del cliente B2B." },
+                                                        { "title": "Prompt para análisis de impacto", "prompt": "Un reporte visual generado con IA sobre el impacto de la automatización avanzada en la satisfacción del cliente." }
+                                                    ]
+                                                }
+                                            },
+                                        /* ═══════════════════════════════════════════
+                                           CURSO 14: ia-negocios-basico
+                                           IA en Negocios: Primeros pasos
+                                           Nivel: Principiante | 8 lecciones
+                                           ═══════════════════════════════════════════ */
+                                            "ia-negocios-basico": {
+                                                "negocios-ia-intro": {
+                                                    "id": "negocios-ia-intro",
+                                                    "title": "Introducción a la IA en negocios",
+                                                    "moduleTitle": "Herramientas para negocios",
+                                                    "durationMinutes": 10,
+                                                    "summary": "Descubre cómo la IA está transformando los negocios y aprende a identificar oportunidades para aplicarla en tu empresa o emprendimiento.",
+                                                    "objectives": [
+                                                        "Entender el impacto de la IA en el mundo empresarial.",
+                                                        "Identificar áreas clave donde la IA puede aportar valor.",
+                                                        "Reconocer los primeros pasos para implementar IA en negocios."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "¿Qué es la IA en negocios?", "content": "La IA permite automatizar tareas, analizar grandes volúmenes de datos y tomar decisiones más informadas. Se aplica en marketing, ventas, atención al cliente, logística y más." },
+                                                        { "heading": "Oportunidades y retos", "content": "La IA puede aumentar la eficiencia y reducir costos, pero requiere inversión y adaptación cultural. Es clave identificar procesos repetitivos y áreas con alto volumen de datos." },
+                                                        { "heading": "Primeros pasos para implementar IA", "content": "Evalúa las necesidades de tu negocio, identifica herramientas accesibles y comienza con proyectos piloto de bajo riesgo para medir el impacto." }
+                                                    ],
+                                                    "activity": "Identifica un proceso repetitivo en tu negocio y plantea cómo la IA podría automatizarlo o mejorarlo.",
+                                                    "deliverable": "Breve informe sobre el proceso seleccionado, propuesta de automatización y posibles beneficios esperados.",
+                                                    "checklist": [
+                                                        "Identifiqué un proceso repetitivo en mi negocio.",
+                                                        "Propuse una solución basada en IA.",
+                                                        "Analicé los beneficios potenciales de la automatización."
+                                                    ],
+                                                    "promptStarter": "Describe un proceso de tu empresa que podría beneficiarse de la IA y pide a la IA que sugiera una solución automatizada.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt para automatización", "prompt": "Sugiere cómo automatizar la gestión de inventario en una tienda minorista usando IA." },
+                                                        { "title": "Prompt para análisis de datos", "prompt": "Explica cómo la IA puede ayudar a analizar las ventas mensuales y predecir tendencias." },
+                                                        { "title": "Prompt para atención al cliente", "prompt": "Genera un flujo de chatbot para responder preguntas frecuentes de clientes en una tienda online." }
+                                                    ]
+                                                },
+                                                "mejorar-procesos": {
+                                                    "id": "mejorar-procesos",
+                                                    "title": "Mejorar procesos empresariales con IA",
+                                                    "moduleTitle": "Herramientas para negocios",
+                                                    "durationMinutes": 10,
+                                                    "summary": "Aprende a identificar y optimizar procesos clave en tu empresa usando herramientas de IA accesibles.",
+                                                    "objectives": [
+                                                        "Mapear procesos empresariales susceptibles de mejora.",
+                                                        "Seleccionar herramientas IA para optimización.",
+                                                        "Medir el impacto de la mejora implementada."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "Identificación de procesos clave", "content": "Analiza las áreas de tu empresa con mayor carga operativa o donde se producen cuellos de botella. Ejemplo: atención al cliente, facturación, logística." },
+                                                        { "heading": "Herramientas IA para optimización", "content": "Existen soluciones para automatizar emails, analizar datos, gestionar inventarios y más. Herramientas como Zapier, Power Automate o chatbots pueden implementarse sin conocimientos técnicos avanzados." },
+                                                        { "heading": "Medición de resultados", "content": "Define indicadores clave (tiempo, costo, satisfacción) y compara antes y después de la implementación de IA para evaluar el impacto real." }
+                                                    ],
+                                                    "activity": "Selecciona un proceso de tu empresa, implementa una mejora con IA y mide el resultado tras una semana.",
+                                                    "deliverable": "Informe comparativo con indicadores antes y después de la mejora, más una reflexión sobre el proceso.",
+                                                    "checklist": [
+                                                        "Seleccioné un proceso y una herramienta IA para optimizarlo.",
+                                                        "Implementé la mejora y medí los resultados.",
+                                                        "Reflexioné sobre el impacto y posibles mejoras futuras."
+                                                    ],
+                                                    "promptStarter": "Describe un proceso lento en tu empresa y pide a la IA que sugiera una forma de optimizarlo con herramientas accesibles.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt para optimización de procesos", "prompt": "Sugiere cómo automatizar la generación de facturas en una pyme usando IA." },
+                                                        { "title": "Prompt para análisis de eficiencia", "prompt": "Analiza cómo la IA puede reducir el tiempo de respuesta en atención al cliente." },
+                                                        { "title": "Prompt para integración de herramientas", "prompt": "Propón una integración entre un CRM y un chatbot para mejorar la gestión de clientes." }
+                                                    ]
+                                                },
+                                                "analisis-datos-negocios": {
+                                                    "id": "analisis-datos-negocios",
+                                                    "title": "Análisis de datos empresariales con IA",
+                                                    "moduleTitle": "Herramientas para negocios",
+                                                    "durationMinutes": 10,
+                                                    "summary": "Descubre cómo la IA puede analizar grandes volúmenes de datos empresariales y generar reportes útiles para la toma de decisiones.",
+                                                    "objectives": [
+                                                        "Recolectar y organizar datos relevantes del negocio.",
+                                                        "Aplicar herramientas IA para análisis de datos.",
+                                                        "Interpretar reportes y tomar decisiones informadas."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "Recolección y organización de datos", "content": "Identifica fuentes de datos clave: ventas, clientes, inventario, etc. Usa hojas de cálculo, ERPs o CRMs para centralizar la información." },
+                                                        { "heading": "Herramientas IA para análisis", "content": "Plataformas como Power BI, Tableau o Google Data Studio integran IA para detectar patrones, predecir tendencias y visualizar datos de forma intuitiva." },
+                                                        { "heading": "Interpretación y toma de decisiones", "content": "Analiza los reportes generados, identifica oportunidades de mejora y toma decisiones basadas en datos, no solo en intuición." }
+                                                    ],
+                                                    "activity": "Recopila datos de ventas de los últimos 3 meses y genera un reporte visual con IA. Identifica una tendencia relevante.",
+                                                    "deliverable": "Reporte visual generado con IA y breve análisis de la tendencia identificada.",
+                                                    "checklist": [
+                                                        "Recolecté y organicé datos relevantes del negocio.",
+                                                        "Generé un reporte visual con IA.",
+                                                        "Identifiqué una tendencia o patrón relevante."
+                                                    ],
+                                                    "promptStarter": "Sube tus datos de ventas y pide a la IA que genere un gráfico de tendencias y un análisis de oportunidades.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt para análisis de ventas", "prompt": "Genera un reporte visual de las ventas mensuales y predice la tendencia para el próximo trimestre." },
+                                                        { "title": "Prompt para segmentación de clientes", "prompt": "Analiza los datos de clientes y sugiere segmentos de mercado prioritarios." },
+                                                        { "title": "Prompt para optimización de inventario", "prompt": "Sugiere cómo ajustar el inventario según las tendencias de ventas detectadas por IA." }
+                                                    ]
+                                                },
+                                                "automatizacion-negocios": {
+                                                    "id": "automatizacion-negocios",
+                                                    "title": "Automatización de tareas empresariales con IA",
+                                                    "moduleTitle": "Herramientas para negocios",
+                                                    "durationMinutes": 10,
+                                                    "summary": "Aprende a automatizar tareas repetitivas y administrativas usando IA y herramientas digitales accesibles.",
+                                                    "objectives": [
+                                                        "Identificar tareas repetitivas susceptibles de automatización.",
+                                                        "Seleccionar herramientas IA para automatizar tareas.",
+                                                        "Implementar y evaluar la automatización en el negocio."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "Tareas ideales para automatizar", "content": "Procesos como envío de emails, generación de reportes, actualización de bases de datos y atención a clientes son ideales para automatización con IA." },
+                                                        { "heading": "Herramientas accesibles para automatización", "content": "Zapier, Power Automate y bots de WhatsApp permiten crear flujos automáticos sin programar. Empieza con tareas simples y ve escalando según los resultados." },
+                                                        { "heading": "Evaluación y mejora continua", "content": "Monitorea el funcionamiento de las automatizaciones, recopila feedback y ajusta los flujos para maximizar el beneficio." }
+                                                    ],
+                                                    "activity": "Automatiza una tarea administrativa en tu empresa usando una herramienta IA y mide el ahorro de tiempo tras una semana.",
+                                                    "deliverable": "Descripción de la tarea automatizada, herramienta utilizada y análisis del tiempo ahorrado.",
+                                                    "checklist": [
+                                                        "Identifiqué una tarea repetitiva y una herramienta IA para automatizarla.",
+                                                        "Implementé la automatización y medí el resultado.",
+                                                        "Analicé el impacto y posibles mejoras futuras."
+                                                    ],
+                                                    "promptStarter": "Describe una tarea administrativa que te quite tiempo y pide a la IA que sugiera una forma de automatizarla.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt para automatización de emails", "prompt": "Sugiere cómo automatizar el envío de recordatorios de pago a clientes usando IA." },
+                                                        { "title": "Prompt para generación de reportes", "prompt": "Explica cómo automatizar la generación de reportes semanales de ventas." },
+                                                        { "title": "Prompt para bots de atención", "prompt": "Crea un flujo de chatbot para responder consultas frecuentes de clientes." }
+                                                    ]
+                                                },
+                                                "mejorar-resultados": {
+                                                    "id": "mejorar-resultados",
+                                                    "title": "Cómo mejorar resultados y evitar errores comunes",
+                                                    "moduleTitle": "Herramientas para negocios",
+                                                    "durationMinutes": 10,
+                                                    "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener mejores resultados en la aplicación de IA en negocios.",
+                                                    "objectives": [
+                                                        "Identificar errores comunes en prompts para negocios.",
+                                                        "Aplicar técnicas de iteración y ajuste.",
+                                                        "Obtener soluciones más alineadas con las necesidades empresariales."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir soluciones demasiado generales, no especificar el contexto del negocio. Solución: revisa tu prompt, añade detalles y enfócate en el objetivo empresarial." },
+                                                        { "heading": "Iterar y ajustar para mejorar", "content": "Genera la solución, analiza el resultado y ajusta el prompt: cambia el enfoque, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                        { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros empresarios." }
+                                                    ],
+                                                    "activity": "Elige una solución IA generada que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                                    "deliverable": "Secuencia de 3 soluciones (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                                    "checklist": [
+                                                        "Identifiqué y corregí errores en mis prompts empresariales.",
+                                                        "Iteré al menos dos veces para mejorar el resultado.",
+                                                        "Documenté el proceso de mejora."
+                                                    ],
+                                                    "promptStarter": "Genera una propuesta para mejorar la atención al cliente. Si el resultado no es satisfactorio, ajusta el prompt para enfocarlo en canales digitales y luego en personalización.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt original", "prompt": "Mejorar la atención al cliente en una tienda online." },
+                                                        { "title": "Primera iteración", "prompt": "Propón soluciones digitales para mejorar la atención al cliente en una tienda online." },
+                                                        { "title": "Segunda iteración", "prompt": "Sugiere cómo personalizar la atención al cliente usando IA y datos de comportamiento." }
+                                                    ]
+                                                },
+                                                "proyecto-final": {
+                                                    "id": "proyecto-final",
+                                                    "title": "Proyecto final: portafolio de IA en negocios",
+                                                    "moduleTitle": "Herramientas para negocios",
+                                                    "durationMinutes": 12,
+                                                    "summary": "Pon en práctica todo lo aprendido creando un portafolio personal de soluciones IA aplicadas a negocios, documentando el proceso y los resultados.",
+                                                    "objectives": [
+                                                        "Aplicar técnicas de prompting y automatización en negocios.",
+                                                        "Usar al menos dos herramientas diferentes de IA para empresas.",
+                                                        "Presentar un portafolio con justificación de cada solución."
+                                                    ],
+                                                    "sections": [
+                                                        { "heading": "Definir el objetivo del portafolio", "content": "Elige un área de negocio (ventas, marketing, operaciones, etc.) y define el propósito del portafolio: mostrar habilidades, inspirar, presentar a clientes, etc." },
+                                                        { "heading": "Seleccionar herramientas y procesos", "content": "Genera al menos 5 soluciones usando diferentes herramientas (Zapier, Power BI, chatbots, etc.) y procesos variados. Documenta el proceso y los prompts usados." },
+                                                        { "heading": "Presentar y justificar tus elecciones", "content": "Organiza las soluciones en un documento o galería, explica por qué elegiste cada herramienta y proceso, y qué aprendiste en el proceso." }
+                                                    ],
+                                                    "activity": "Crea un portafolio de 5 soluciones IA para negocios sobre un área de tu elección, usando al menos 3 herramientas y 3 procesos diferentes.",
+                                                    "deliverable": "Portafolio digital con 5 soluciones, prompts utilizados y justificación de cada elección.",
+                                                    "checklist": [
+                                                        "Generé al menos 5 soluciones IA usando diferentes herramientas y procesos.",
+                                                        "Documenté los prompts y el proceso de selección.",
+                                                        "Justifiqué cada elección en mi portafolio."
+                                                    ],
+                                                    "promptStarter": "Crea una serie de soluciones para 'automatización de ventas' usando Zapier, Power BI y chatbots, cada una enfocada en un proceso diferente.",
+                                                    "promptExamples": [
+                                                        { "title": "Prompt para portafolio temático", "prompt": "Una solución para automatizar el seguimiento de clientes potenciales en ventas B2B." },
+                                                        { "title": "Prompt para creatividad", "prompt": "Una integración entre un chatbot y un sistema de reservas para mejorar la experiencia del cliente." },
+                                                        { "title": "Prompt para análisis de resultados", "prompt": "Un reporte visual generado con IA sobre el impacto de la automatización en la reducción de costos operativos." }
+                                                    ]
+                                                }
+                                            },
+                                        "ia-negocios-basico": {
+                                            "negocios-ia-intro": {
+                                                "id": "negocios-ia-intro",
+                                                "title": "Introducción a la IA en negocios",
+                                                "moduleTitle": "Herramientas para negocios",
+                                                "durationMinutes": 10,
+                                                "summary": "Descubre cómo la IA está transformando los negocios y aprende a identificar oportunidades para aplicarla en tu empresa o emprendimiento.",
+                                                "objectives": [
+                                                    "Entender el impacto de la IA en el mundo empresarial.",
+                                                    "Identificar áreas clave donde la IA puede aportar valor.",
+                                                    "Reconocer los primeros pasos para implementar IA en negocios."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "¿Qué es la IA en negocios?", "content": "La IA permite automatizar tareas, analizar grandes volúmenes de datos y tomar decisiones más informadas. Se aplica en marketing, ventas, atención al cliente, logística y más." },
+                                                    { "heading": "Oportunidades y retos", "content": "La IA puede aumentar la eficiencia y reducir costos, pero requiere inversión y adaptación cultural. Es clave identificar procesos repetitivos y áreas con alto volumen de datos." },
+                                                    { "heading": "Primeros pasos para implementar IA", "content": "Evalúa las necesidades de tu negocio, identifica herramientas accesibles y comienza con proyectos piloto de bajo riesgo para medir el impacto." }
+                                                ],
+                                                "activity": "Identifica un proceso repetitivo en tu negocio y plantea cómo la IA podría automatizarlo o mejorarlo.",
+                                                "deliverable": "Breve informe sobre el proceso seleccionado, propuesta de automatización y posibles beneficios esperados.",
+                                                "checklist": [
+                                                    "Identifiqué un proceso repetitivo en mi negocio.",
+                                                    "Propuse una solución basada en IA.",
+                                                    "Analicé los beneficios potenciales de la automatización."
+                                                ],
+                                                "promptStarter": "Describe un proceso de tu empresa que podría beneficiarse de la IA y pide a la IA que sugiera una solución automatizada.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para automatización", "prompt": "Sugiere cómo automatizar la gestión de inventario en una tienda minorista usando IA." },
+                                                    { "title": "Prompt para análisis de datos", "prompt": "Explica cómo la IA puede ayudar a analizar las ventas mensuales y predecir tendencias." },
+                                                    { "title": "Prompt para atención al cliente", "prompt": "Genera un flujo de chatbot para responder preguntas frecuentes de clientes en una tienda online." }
+                                                ]
+                                            },
+                                            "mejorar-procesos": {
+                                                "id": "mejorar-procesos",
+                                                "title": "Mejorar procesos empresariales con IA",
+                                                "moduleTitle": "Herramientas para negocios",
+                                                "durationMinutes": 10,
+                                                "summary": "Aprende a identificar y optimizar procesos clave en tu empresa usando herramientas de IA accesibles.",
+                                                "objectives": [
+                                                    "Mapear procesos empresariales susceptibles de mejora.",
+                                                    "Seleccionar herramientas IA para optimización.",
+                                                    "Medir el impacto de la mejora implementada."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Identificación de procesos clave", "content": "Analiza las áreas de tu empresa con mayor carga operativa o donde se producen cuellos de botella. Ejemplo: atención al cliente, facturación, logística." },
+                                                    { "heading": "Herramientas IA para optimización", "content": "Existen soluciones para automatizar emails, analizar datos, gestionar inventarios y más. Herramientas como Zapier, Power Automate o chatbots pueden implementarse sin conocimientos técnicos avanzados." },
+                                                    { "heading": "Medición de resultados", "content": "Define indicadores clave (tiempo, costo, satisfacción) y compara antes y después de la implementación de IA para evaluar el impacto real." }
+                                                ],
+                                                "activity": "Selecciona un proceso de tu empresa, implementa una mejora con IA y mide el resultado tras una semana.",
+                                                "deliverable": "Informe comparativo con indicadores antes y después de la mejora, más una reflexión sobre el proceso.",
+                                                "checklist": [
+                                                    "Seleccioné un proceso y una herramienta IA para optimizarlo.",
+                                                    "Implementé la mejora y medí los resultados.",
+                                                    "Reflexioné sobre el impacto y posibles mejoras futuras."
+                                                ],
+                                                "promptStarter": "Describe un proceso lento en tu empresa y pide a la IA que sugiera una forma de optimizarlo con herramientas accesibles.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para optimización de procesos", "prompt": "Sugiere cómo automatizar la generación de facturas en una pyme usando IA." },
+                                                    { "title": "Prompt para análisis de eficiencia", "prompt": "Analiza cómo la IA puede reducir el tiempo de respuesta en atención al cliente." },
+                                                    { "title": "Prompt para integración de herramientas", "prompt": "Propón una integración entre un CRM y un chatbot para mejorar la gestión de clientes." }
+                                                ]
+                                            },
+                                            "analisis-datos-negocios": {
+                                                "id": "analisis-datos-negocios",
+                                                "title": "Análisis de datos empresariales con IA",
+                                                "moduleTitle": "Herramientas para negocios",
+                                                "durationMinutes": 10,
+                                                "summary": "Descubre cómo la IA puede analizar grandes volúmenes de datos empresariales y generar reportes útiles para la toma de decisiones.",
+                                                "objectives": [
+                                                    "Recolectar y organizar datos relevantes del negocio.",
+                                                    "Aplicar herramientas IA para análisis de datos.",
+                                                    "Interpretar reportes y tomar decisiones informadas."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Recolección y organización de datos", "content": "Identifica fuentes de datos clave: ventas, clientes, inventario, etc. Usa hojas de cálculo, ERPs o CRMs para centralizar la información." },
+                                                    { "heading": "Herramientas IA para análisis", "content": "Plataformas como Power BI, Tableau o Google Data Studio integran IA para detectar patrones, predecir tendencias y visualizar datos de forma intuitiva." },
+                                                    { "heading": "Interpretación y toma de decisiones", "content": "Analiza los reportes generados, identifica oportunidades de mejora y toma decisiones basadas en datos, no solo en intuición." }
+                                                ],
+                                                "activity": "Recopila datos de ventas de los últimos 3 meses y genera un reporte visual con IA. Identifica una tendencia relevante.",
+                                                "deliverable": "Reporte visual generado con IA y breve análisis de la tendencia identificada.",
+                                                "checklist": [
+                                                    "Recolecté y organicé datos relevantes del negocio.",
+                                                    "Generé un reporte visual con IA.",
+                                                    "Identifiqué una tendencia o patrón relevante."
+                                                ],
+                                                "promptStarter": "Sube tus datos de ventas y pide a la IA que genere un gráfico de tendencias y un análisis de oportunidades.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para análisis de ventas", "prompt": "Genera un reporte visual de las ventas mensuales y predice la tendencia para el próximo trimestre." },
+                                                    { "title": "Prompt para segmentación de clientes", "prompt": "Analiza los datos de clientes y sugiere segmentos de mercado prioritarios." },
+                                                    { "title": "Prompt para optimización de inventario", "prompt": "Sugiere cómo ajustar el inventario según las tendencias de ventas detectadas por IA." }
+                                                ]
+                                            },
+                                            "automatizacion-negocios": {
+                                                "id": "automatizacion-negocios",
+                                                "title": "Automatización de tareas empresariales con IA",
+                                                "moduleTitle": "Herramientas para negocios",
+                                                "durationMinutes": 10,
+                                                "summary": "Aprende a automatizar tareas repetitivas y administrativas usando IA y herramientas digitales accesibles.",
+                                                "objectives": [
+                                                    "Identificar tareas repetitivas susceptibles de automatización.",
+                                                    "Seleccionar herramientas IA para automatizar tareas.",
+                                                    "Implementar y evaluar la automatización en el negocio."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Tareas ideales para automatizar", "content": "Procesos como envío de emails, generación de reportes, actualización de bases de datos y atención a clientes son ideales para automatización con IA." },
+                                                    { "heading": "Herramientas accesibles para automatización", "content": "Zapier, Power Automate y bots de WhatsApp permiten crear flujos automáticos sin programar. Empieza con tareas simples y ve escalando según los resultados." },
+                                                    { "heading": "Evaluación y mejora continua", "content": "Monitorea el funcionamiento de las automatizaciones, recopila feedback y ajusta los flujos para maximizar el beneficio." }
+                                                ],
+                                                "activity": "Automatiza una tarea administrativa en tu empresa usando una herramienta IA y mide el ahorro de tiempo tras una semana.",
+                                                "deliverable": "Descripción de la tarea automatizada, herramienta utilizada y análisis del tiempo ahorrado.",
+                                                "checklist": [
+                                                    "Identifiqué una tarea repetitiva y una herramienta IA para automatizarla.",
+                                                    "Implementé la automatización y medí el resultado.",
+                                                    "Analicé el impacto y posibles mejoras futuras."
+                                                ],
+                                                "promptStarter": "Describe una tarea administrativa que te quite tiempo y pide a la IA que sugiera una forma de automatizarla.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para automatización de emails", "prompt": "Sugiere cómo automatizar el envío de recordatorios de pago a clientes usando IA." },
+                                                    { "title": "Prompt para generación de reportes", "prompt": "Explica cómo automatizar la generación de reportes semanales de ventas." },
+                                                    { "title": "Prompt para bots de atención", "prompt": "Crea un flujo de chatbot para responder consultas frecuentes de clientes." }
+                                                ]
+                                            },
+                                            "mejorar-resultados": {
+                                                "id": "mejorar-resultados",
+                                                "title": "Cómo mejorar resultados y evitar errores comunes",
+                                                "moduleTitle": "Herramientas para negocios",
+                                                "durationMinutes": 10,
+                                                "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener mejores resultados en la aplicación de IA en negocios.",
+                                                "objectives": [
+                                                    "Identificar errores comunes en prompts para negocios.",
+                                                    "Aplicar técnicas de iteración y ajuste.",
+                                                    "Obtener soluciones más alineadas con las necesidades empresariales."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir soluciones demasiado generales, no especificar el contexto del negocio. Solución: revisa tu prompt, añade detalles y enfócate en el objetivo empresarial." },
+                                                    { "heading": "Iterar y ajustar para mejorar", "content": "Genera la solución, analiza el resultado y ajusta el prompt: cambia el enfoque, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                    { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros empresarios." }
+                                                ],
+                                                "activity": "Elige una solución IA generada que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                                "deliverable": "Secuencia de 3 soluciones (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                                "checklist": [
+                                                    "Identifiqué y corregí errores en mis prompts empresariales.",
+                                                    "Iteré al menos dos veces para mejorar el resultado.",
+                                                    "Documenté el proceso de mejora."
+                                                ],
+                                                "promptStarter": "Genera una propuesta para mejorar la atención al cliente. Si el resultado no es satisfactorio, ajusta el prompt para enfocarlo en canales digitales y luego en personalización.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt original", "prompt": "Mejorar la atención al cliente en una tienda online." },
+                                                    { "title": "Primera iteración", "prompt": "Propón soluciones digitales para mejorar la atención al cliente en una tienda online." },
+                                                    { "title": "Segunda iteración", "prompt": "Sugiere cómo personalizar la atención al cliente usando IA y datos de comportamiento." }
+                                                ]
+                                            },
+                                            "proyecto-final": {
+                                                "id": "proyecto-final",
+                                                "title": "Proyecto final: portafolio de IA en negocios",
+                                                "moduleTitle": "Herramientas para negocios",
+                                                "durationMinutes": 12,
+                                                "summary": "Pon en práctica todo lo aprendido creando un portafolio personal de soluciones IA aplicadas a negocios, documentando el proceso y los resultados.",
+                                                "objectives": [
+                                                    "Aplicar técnicas de prompting y automatización en negocios.",
+                                                    "Usar al menos dos herramientas diferentes de IA para empresas.",
+                                                    "Presentar un portafolio con justificación de cada solución."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Definir el objetivo del portafolio", "content": "Elige un área de negocio (ventas, marketing, operaciones, etc.) y define el propósito del portafolio: mostrar habilidades, inspirar, presentar a clientes, etc." },
+                                                    { "heading": "Seleccionar herramientas y procesos", "content": "Genera al menos 5 soluciones usando diferentes herramientas (Zapier, Power BI, chatbots, etc.) y procesos variados. Documenta el proceso y los prompts usados." },
+                                                    { "heading": "Presentar y justificar tus elecciones", "content": "Organiza las soluciones en un documento o galería, explica por qué elegiste cada herramienta y proceso, y qué aprendiste en el proceso." }
+                                                ],
+                                                "activity": "Crea un portafolio de 5 soluciones IA para negocios sobre un área de tu elección, usando al menos 3 herramientas y 3 procesos diferentes.",
+                                                "deliverable": "Portafolio digital con 5 soluciones, prompts utilizados y justificación de cada elección.",
+                                                "checklist": [
+                                                    "Generé al menos 5 soluciones IA usando diferentes herramientas y procesos.",
+                                                    "Documenté los prompts y el proceso de selección.",
+                                                    "Justifiqué cada elección en mi portafolio."
+                                                ],
+                                                "promptStarter": "Crea una serie de soluciones para 'automatización de ventas' usando Zapier, Power BI y chatbots, cada una enfocada en un proceso diferente.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para portafolio temático", "prompt": "Una solución para automatizar el seguimiento de clientes potenciales en ventas B2B." },
+                                                    { "title": "Prompt para creatividad", "prompt": "Una integración entre un chatbot y un sistema de reservas para mejorar la experiencia del cliente." },
+                                                    { "title": "Prompt para análisis de resultados", "prompt": "Un reporte visual generado con IA sobre el impacto de la automatización en la reducción de costos operativos." }
+                                                ]
+                                            }
+                                        },
+                                    /* ═══════════════════════════════════════════
+                                       CURSO 13: ia-codigo-avanzado
+                                       Código con IA: Técnicas avanzadas
+                                       Nivel: Intermedio | 8 lecciones
+                                       ═══════════════════════════════════════════ */
+                                        "ia-codigo-avanzado": {
+                                            "prompt-engineering-codigo": {
+                                                "id": "prompt-engineering-codigo",
+                                                "title": "Prompt Engineering para código",
+                                                "moduleTitle": "Técnicas avanzadas",
+                                                "durationMinutes": 12,
+                                                "summary": "Descubre cómo estructurar prompts complejos para obtener código preciso, eficiente y personalizado. Aprende a usar descriptores, estilos y parámetros avanzados.",
+                                                "objectives": [
+                                                    "Dominar la estructura avanzada de prompts para código.",
+                                                    "Utilizar descriptores y parámetros para afinar resultados.",
+                                                    "Evitar ambigüedades y errores comunes en prompts complejos."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "¿Qué es el prompt engineering en código?", "content": "Es el arte de diseñar instrucciones detalladas y precisas para que la IA genere código alineado con tu objetivo. Incluye el uso de descriptores, lenguaje, formato y parámetros técnicos." },
+                                                    { "heading": "Descriptores y parámetros avanzados", "content": "Incluye detalles como lenguaje de programación, estilo de codificación, nivel de optimización, formato de salida, etc. Ejemplo: 'Genera una función en Python para ordenar una lista usando el algoritmo quicksort, con comentarios detallados y manejo de errores'." },
+                                                    { "heading": "Errores y cómo evitarlos", "content": "Evita prompts demasiado largos o contradictorios. Prioriza la claridad y la jerarquía de la información: primero el objetivo, luego el lenguaje, después el formato y finalmente los detalles técnicos." }
+                                                ],
+                                                "activity": "Escribe un prompt avanzado para 'un script que procese archivos CSV y genere un informe en HTML, usando Python, con manejo de errores y comentarios'. Experimenta cambiando el lenguaje y el formato de salida.",
+                                                "deliverable": "Dos scripts generados con variaciones en lenguaje y formato, más una reflexión sobre el impacto de los cambios.",
+                                                "checklist": [
+                                                    "Escribí y probé un prompt avanzado con descriptores detallados.",
+                                                    "Ajusté parámetros para comparar resultados.",
+                                                    "Documenté el impacto de los cambios en el resultado."
+                                                ],
+                                                "promptStarter": "Genera una función para validar emails, primero en Python y luego en JavaScript, con pruebas unitarias incluidas.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt avanzado con descriptores", "prompt": "Crea una clase en Java para gestionar usuarios, con métodos para alta, baja y modificación, siguiendo el patrón Singleton." },
+                                                    { "title": "Prompt con parámetros técnicos", "prompt": "Genera un script en Bash para hacer copias de seguridad automáticas, con logs y notificaciones por email." },
+                                                    { "title": "Prompt para formato específico", "prompt": "Crea una función en Python que devuelva los resultados en formato JSON." }
+                                                ]
+                                            },
+                                            "combinacion-herramientas-codigo": {
+                                                "id": "combinacion-herramientas-codigo",
+                                                "title": "Combinando herramientas de IA para código",
+                                                "moduleTitle": "Técnicas avanzadas",
+                                                "durationMinutes": 10,
+                                                "summary": "Aprende a combinar diferentes generadores de código IA para obtener resultados únicos y aprovechar lo mejor de cada uno.",
+                                                "objectives": [
+                                                    "Identificar ventajas y limitaciones de cada herramienta.",
+                                                    "Combinar código generado en diferentes plataformas.",
+                                                    "Optimizar el flujo de trabajo creativo usando IA."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "¿Por qué combinar herramientas?", "content": "Cada generador de código IA tiene fortalezas: Copilot es versátil, ChatGPT destaca en explicaciones, Replit es bueno en prototipos rápidos. Combinarlas permite obtener resultados más ricos y variados." },
+                                                    { "heading": "Flujo de trabajo recomendado", "content": "Ejemplo: genera un borrador en Copilot, refínalo en ChatGPT y prueba el código en Replit. Así aprovechas la creatividad, la explicación y la ejecución de cada herramienta." },
+                                                    { "heading": "Consejos para integración", "content": "Guarda tus scripts en diferentes versiones, usa editores para ajustes finales y documenta los prompts y parámetros usados en cada etapa." }
+                                                ],
+                                                "activity": "Crea un script en Copilot, revisa y comenta el código en ChatGPT y prueba la ejecución en Replit. Documenta el proceso y los cambios en cada etapa.",
+                                                "deliverable": "Secuencia de 3 scripts (borrador, revisión, ejecución) con explicación de los cambios y herramientas usadas.",
+                                                "checklist": [
+                                                    "Probé al menos dos herramientas diferentes en un mismo proyecto.",
+                                                    "Documenté el flujo de trabajo y los prompts usados.",
+                                                    "Analicé las ventajas de cada herramienta en el resultado final."
+                                                ],
+                                                "promptStarter": "Genera un script para analizar datos en Copilot, revisa la lógica en ChatGPT y ejecuta pruebas en Replit.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para borrador inicial", "prompt": "Crea una función en Python para calcular estadísticas básicas de una lista de números." },
+                                                    { "title": "Prompt para revisión de código", "prompt": "Revisa y comenta el código anterior, sugiriendo mejoras de eficiencia." },
+                                                    { "title": "Prompt para pruebas de ejecución", "prompt": "Ejecuta el script con datos de ejemplo y muestra los resultados." }
+                                                ]
+                                            },
+                                            "explicacion-avanzada": {
+                                                "id": "explicacion-avanzada",
+                                                "title": "Explicación avanzada y refactorización con IA",
+                                                "moduleTitle": "Técnicas avanzadas",
+                                                "durationMinutes": 12,
+                                                "summary": "Descubre técnicas avanzadas de explicación, refactorización y documentación de código con IA para proyectos profesionales.",
+                                                "objectives": [
+                                                    "Refactorizar y optimizar código con IA.",
+                                                    "Generar documentación profesional y explicaciones detalladas.",
+                                                    "Mejorar la mantenibilidad y escalabilidad del código."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Refactorización automática con IA", "content": "Herramientas como Copilot o ChatGPT pueden sugerir mejoras estructurales, dividir funciones largas, eliminar redundancias y aplicar patrones de diseño." },
+                                                    { "heading": "Documentación profesional", "content": "Solicita a la IA que genere documentación en formato estándar (Sphinx, JSDoc, JavaDoc) y explicaciones detalladas para usuarios y desarrolladores." },
+                                                    { "heading": "Limitaciones y revisión manual", "content": "La IA puede no captar dependencias complejas o requisitos específicos del proyecto. Revisa y ajusta la refactorización y documentación generadas." }
+                                                ],
+                                                "activity": "Refactoriza un script complejo con IA, genera documentación profesional y revisa la escalabilidad del código.",
+                                                "deliverable": "Script original, versión refactorizada y documentación generada, más una reflexión sobre la utilidad de la IA en proyectos profesionales.",
+                                                "checklist": [
+                                                    "Usé la IA para refactorizar y documentar un script.",
+                                                    "Probé diferentes formatos de documentación profesional.",
+                                                    "Analicé la escalabilidad y mantenibilidad del código generado."
+                                                ],
+                                                "promptStarter": "Refactoriza un algoritmo de ordenamiento, genera documentación en Sphinx y explica cómo escalar el código para grandes volúmenes de datos.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para refactorización", "prompt": "Refactoriza este script de Python para hacerlo más modular y eficiente." },
+                                                    { "title": "Prompt para documentación profesional", "prompt": "Genera documentación en formato JSDoc para este archivo JavaScript." },
+                                                    { "title": "Prompt para explicación avanzada", "prompt": "Explica cómo adaptar este código para procesar millones de registros." }
+                                                ]
+                                            },
+                                            "automatizacion-codigo-avanzado": {
+                                                "id": "automatizacion-codigo-avanzado",
+                                                "title": "Automatización avanzada de generación de código IA",
+                                                "moduleTitle": "Técnicas avanzadas",
+                                                "durationMinutes": 10,
+                                                "summary": "Aprende a automatizar la creación de proyectos completos usando IA, APIs y flujos de trabajo avanzados.",
+                                                "objectives": [
+                                                    "Conocer las opciones de automatización avanzada para código IA.",
+                                                    "Crear scripts para generar proyectos completos automáticamente.",
+                                                    "Integrar la generación de código en pipelines de desarrollo."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "¿Por qué automatizar proyectos completos?", "content": "La automatización avanzada permite crear aplicaciones, APIs o módulos completos, integrando generación de código, pruebas y despliegue en un solo flujo de trabajo." },
+                                                    { "heading": "Opciones de automatización avanzada", "content": "Usa APIs de Copilot, ChatGPT o Replit, o scripts en Python para generar múltiples archivos, ejecutar pruebas y desplegar automáticamente. Ejemplo: automatizar la creación de una API RESTful con documentación y pruebas." },
+                                                    { "heading": "Ejemplo de pipeline automatizado", "content": "Un script en Python que genera el código de una API, ejecuta pruebas unitarias y despliega en un entorno de pruebas automáticamente." }
+                                                ],
+                                                "activity": "Crea un pipeline automatizado que genere una API, ejecute pruebas y despliegue el proyecto usando IA.",
+                                                "deliverable": "Script funcional, proyecto generado y documentación del pipeline, más una breve explicación del proceso.",
+                                                "checklist": [
+                                                    "Creé un pipeline automatizado para generación de código IA.",
+                                                    "Probé la automatización con al menos 3 proyectos diferentes.",
+                                                    "Documenté el proceso y los resultados obtenidos."
+                                                ],
+                                                "promptStarter": "Automatiza la generación de una API RESTful en Python, con pruebas y documentación, usando una API de IA.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para automatización avanzada", "prompt": "Genera el código de una aplicación web en Flask, con endpoints y pruebas unitarias." },
+                                                    { "title": "Prompt para integración de pruebas", "prompt": "Crea un script que genere código y ejecute pruebas automáticas en JavaScript." },
+                                                    { "title": "Prompt para despliegue automatizado", "prompt": "Automatiza el despliegue de un proyecto Node.js en un servidor remoto." }
+                                                ]
+                                            },
+                                            "mejorar-resultados": {
+                                                "id": "mejorar-resultados",
+                                                "title": "Cómo mejorar resultados y evitar errores comunes",
+                                                "moduleTitle": "Técnicas avanzadas",
+                                                "durationMinutes": 10,
+                                                "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener código más preciso y profesional.",
+                                                "objectives": [
+                                                    "Identificar errores comunes en prompts de código.",
+                                                    "Aplicar técnicas de iteración y ajuste.",
+                                                    "Obtener código más alineado con tu idea inicial."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo del código. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                                                    { "heading": "Iterar y ajustar para mejorar", "content": "Genera el código, analiza el resultado y ajusta el prompt: cambia el lenguaje, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                    { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+                                                ],
+                                                "activity": "Elige un código generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                                "deliverable": "Secuencia de 3 códigos (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                                "checklist": [
+                                                    "Identifiqué y corregí errores en mis prompts.",
+                                                    "Iteré al menos dos veces para mejorar el resultado.",
+                                                    "Documenté el proceso de mejora."
+                                                ],
+                                                "promptStarter": "Genera un script para procesar imágenes. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la eficiencia y la legibilidad.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt original", "prompt": "Procesar una imagen en Python para convertirla a escala de grises." },
+                                                    { "title": "Primera iteración", "prompt": "Agrega manejo de errores y validación de archivos al script anterior." },
+                                                    { "title": "Segunda iteración", "prompt": "Optimiza el script para procesar varias imágenes en paralelo." }
+                                                ]
+                                            },
+                                            "proyecto-final": {
+                                                "id": "proyecto-final",
+                                                "title": "Proyecto final: portafolio avanzado de código IA",
+                                                "moduleTitle": "Técnicas avanzadas",
+                                                "durationMinutes": 12,
+                                                "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de scripts generados con IA, combinando herramientas, lenguajes y automatización.",
+                                                "objectives": [
+                                                    "Combinar técnicas avanzadas de prompting, refactorización y automatización.",
+                                                    "Crear un portafolio temático con scripts IA personalizados.",
+                                                    "Documentar el proceso y justificar cada elección creativa."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un tema avanzado (automatización, análisis de datos, web, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                                    { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 scripts usando diferentes técnicas: prompt engineering, refactorización, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                                    { "heading": "Presentar y justificar el portafolio", "content": "Organiza los scripts en un documento digital, explica las técnicas y herramientas usadas en cada uno, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                                                ],
+                                                "activity": "Crea un portafolio digital de 6 scripts IA sobre un tema avanzado, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                                                "deliverable": "Portafolio digital con 6 scripts, prompts, técnicas usadas y justificación de cada elección creativa.",
+                                                "checklist": [
+                                                    "Generé al menos 6 scripts IA aplicando técnicas avanzadas.",
+                                                    "Documenté el proceso y los prompts usados.",
+                                                    "Justifiqué cada elección creativa en el portafolio."
+                                                ],
+                                                "promptStarter": "Crea una serie de scripts sobre 'automatización avanzada' usando técnicas de prompting, refactorización y automatización.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para portafolio temático", "prompt": "Un script en Python para procesar grandes volúmenes de datos y generar informes automáticos." },
+                                                    { "title": "Prompt para creatividad", "prompt": "Un script en JavaScript que genera visualizaciones interactivas en una web." },
+                                                    { "title": "Prompt para integración avanzada", "prompt": "Un script en Bash para desplegar aplicaciones en la nube automáticamente." }
+                                                ]
+                                            }
+                                        },
+                                    "ia-codigo-avanzado": {
+                                        "prompt-engineering-codigo": {
+                                            "id": "prompt-engineering-codigo",
+                                            "title": "Prompt Engineering para código",
+                                            "moduleTitle": "Técnicas avanzadas",
+                                            "durationMinutes": 12,
+                                            "summary": "Descubre cómo estructurar prompts complejos para obtener código preciso, eficiente y personalizado. Aprende a usar descriptores, estilos y parámetros avanzados.",
+                                            "objectives": [
+                                                "Dominar la estructura avanzada de prompts para código.",
+                                                "Utilizar descriptores y parámetros para afinar resultados.",
+                                                "Evitar ambigüedades y errores comunes en prompts complejos."
+                                            ],
+                                            "sections": [
+                                                { "heading": "¿Qué es el prompt engineering en código?", "content": "Es el arte de diseñar instrucciones detalladas y precisas para que la IA genere código alineado con tu objetivo. Incluye el uso de descriptores, lenguaje, formato y parámetros técnicos." },
+                                                { "heading": "Descriptores y parámetros avanzados", "content": "Incluye detalles como lenguaje de programación, estilo de codificación, nivel de optimización, formato de salida, etc. Ejemplo: 'Genera una función en Python para ordenar una lista usando el algoritmo quicksort, con comentarios detallados y manejo de errores'." },
+                                                { "heading": "Errores y cómo evitarlos", "content": "Evita prompts demasiado largos o contradictorios. Prioriza la claridad y la jerarquía de la información: primero el objetivo, luego el lenguaje, después el formato y finalmente los detalles técnicos." }
+                                            ],
+                                            "activity": "Escribe un prompt avanzado para 'un script que procese archivos CSV y genere un informe en HTML, usando Python, con manejo de errores y comentarios'. Experimenta cambiando el lenguaje y el formato de salida.",
+                                            "deliverable": "Dos scripts generados con variaciones en lenguaje y formato, más una reflexión sobre el impacto de los cambios.",
+                                            "checklist": [
+                                                "Escribí y probé un prompt avanzado con descriptores detallados.",
+                                                "Ajusté parámetros para comparar resultados.",
+                                                "Documenté el impacto de los cambios en el resultado."
+                                            ],
+                                            "promptStarter": "Genera una función para validar emails, primero en Python y luego en JavaScript, con pruebas unitarias incluidas.",
+                                            "promptExamples": [
+                                                { "title": "Prompt avanzado con descriptores", "prompt": "Crea una clase en Java para gestionar usuarios, con métodos para alta, baja y modificación, siguiendo el patrón Singleton." },
+                                                { "title": "Prompt con parámetros técnicos", "prompt": "Genera un script en Bash para hacer copias de seguridad automáticas, con logs y notificaciones por email." },
+                                                { "title": "Prompt para formato específico", "prompt": "Crea una función en Python que devuelva los resultados en formato JSON." }
+                                            ]
+                                        },
+                                        "combinacion-herramientas-codigo": {
+                                            "id": "combinacion-herramientas-codigo",
+                                            "title": "Combinando herramientas de IA para código",
+                                            "moduleTitle": "Técnicas avanzadas",
+                                            "durationMinutes": 10,
+                                            "summary": "Aprende a combinar diferentes generadores de código IA para obtener resultados únicos y aprovechar lo mejor de cada uno.",
+                                            "objectives": [
+                                                "Identificar ventajas y limitaciones de cada herramienta.",
+                                                "Combinar código generado en diferentes plataformas.",
+                                                "Optimizar el flujo de trabajo creativo usando IA."
+                                            ],
+                                            "sections": [
+                                                { "heading": "¿Por qué combinar herramientas?", "content": "Cada generador de código IA tiene fortalezas: Copilot es versátil, ChatGPT destaca en explicaciones, Replit es bueno en prototipos rápidos. Combinarlas permite obtener resultados más ricos y variados." },
+                                                { "heading": "Flujo de trabajo recomendado", "content": "Ejemplo: genera un borrador en Copilot, refínalo en ChatGPT y prueba el código en Replit. Así aprovechas la creatividad, la explicación y la ejecución de cada herramienta." },
+                                                { "heading": "Consejos para integración", "content": "Guarda tus scripts en diferentes versiones, usa editores para ajustes finales y documenta los prompts y parámetros usados en cada etapa." }
+                                            ],
+                                            "activity": "Crea un script en Copilot, revisa y comenta el código en ChatGPT y prueba la ejecución en Replit. Documenta el proceso y los cambios en cada etapa.",
+                                            "deliverable": "Secuencia de 3 scripts (borrador, revisión, ejecución) con explicación de los cambios y herramientas usadas.",
+                                            "checklist": [
+                                                "Probé al menos dos herramientas diferentes en un mismo proyecto.",
+                                                "Documenté el flujo de trabajo y los prompts usados.",
+                                                "Analicé las ventajas de cada herramienta en el resultado final."
+                                            ],
+                                            "promptStarter": "Genera un script para analizar datos en Copilot, revisa la lógica en ChatGPT y ejecuta pruebas en Replit.",
+                                            "promptExamples": [
+                                                { "title": "Prompt para borrador inicial", "prompt": "Crea una función en Python para calcular estadísticas básicas de una lista de números." },
+                                                { "title": "Prompt para revisión de código", "prompt": "Revisa y comenta el código anterior, sugiriendo mejoras de eficiencia." },
+                                                { "title": "Prompt para pruebas de ejecución", "prompt": "Ejecuta el script con datos de ejemplo y muestra los resultados." }
+                                            ]
+                                        },
+                                        "explicacion-avanzada": {
+                                            "id": "explicacion-avanzada",
+                                            "title": "Explicación avanzada y refactorización con IA",
+                                            "moduleTitle": "Técnicas avanzadas",
+                                            "durationMinutes": 12,
+                                            "summary": "Descubre técnicas avanzadas de explicación, refactorización y documentación de código con IA para proyectos profesionales.",
+                                            "objectives": [
+                                                "Refactorizar y optimizar código con IA.",
+                                                "Generar documentación profesional y explicaciones detalladas.",
+                                                "Mejorar la mantenibilidad y escalabilidad del código."
+                                            ],
+                                            "sections": [
+                                                { "heading": "Refactorización automática con IA", "content": "Herramientas como Copilot o ChatGPT pueden sugerir mejoras estructurales, dividir funciones largas, eliminar redundancias y aplicar patrones de diseño." },
+                                                { "heading": "Documentación profesional", "content": "Solicita a la IA que genere documentación en formato estándar (Sphinx, JSDoc, JavaDoc) y explicaciones detalladas para usuarios y desarrolladores." },
+                                                { "heading": "Limitaciones y revisión manual", "content": "La IA puede no captar dependencias complejas o requisitos específicos del proyecto. Revisa y ajusta la refactorización y documentación generadas." }
+                                            ],
+                                            "activity": "Refactoriza un script complejo con IA, genera documentación profesional y revisa la escalabilidad del código.",
+                                            "deliverable": "Script original, versión refactorizada y documentación generada, más una reflexión sobre la utilidad de la IA en proyectos profesionales.",
+                                            "checklist": [
+                                                "Usé la IA para refactorizar y documentar un script.",
+                                                "Probé diferentes formatos de documentación profesional.",
+                                                "Analicé la escalabilidad y mantenibilidad del código generado."
+                                            ],
+                                            "promptStarter": "Refactoriza un algoritmo de ordenamiento, genera documentación en Sphinx y explica cómo escalar el código para grandes volúmenes de datos.",
+                                            "promptExamples": [
+                                                { "title": "Prompt para refactorización", "prompt": "Refactoriza este script de Python para hacerlo más modular y eficiente." },
+                                                { "title": "Prompt para documentación profesional", "prompt": "Genera documentación en formato JSDoc para este archivo JavaScript." },
+                                                { "title": "Prompt para explicación avanzada", "prompt": "Explica cómo adaptar este código para procesar millones de registros." }
+                                            ]
+                                        },
+                                        "automatizacion-codigo-avanzado": {
+                                            "id": "automatizacion-codigo-avanzado",
+                                            "title": "Automatización avanzada de generación de código IA",
+                                            "moduleTitle": "Técnicas avanzadas",
+                                            "durationMinutes": 10,
+                                            "summary": "Aprende a automatizar la creación de proyectos completos usando IA, APIs y flujos de trabajo avanzados.",
+                                            "objectives": [
+                                                "Conocer las opciones de automatización avanzada para código IA.",
+                                                "Crear scripts para generar proyectos completos automáticamente.",
+                                                "Integrar la generación de código en pipelines de desarrollo."
+                                            ],
+                                            "sections": [
+                                                { "heading": "¿Por qué automatizar proyectos completos?", "content": "La automatización avanzada permite crear aplicaciones, APIs o módulos completos, integrando generación de código, pruebas y despliegue en un solo flujo de trabajo." },
+                                                { "heading": "Opciones de automatización avanzada", "content": "Usa APIs de Copilot, ChatGPT o Replit, o scripts en Python para generar múltiples archivos, ejecutar pruebas y desplegar automáticamente. Ejemplo: automatizar la creación de una API RESTful con documentación y pruebas." },
+                                                { "heading": "Ejemplo de pipeline automatizado", "content": "Un script en Python que genera el código de una API, ejecuta pruebas unitarias y despliega en un entorno de pruebas automáticamente." }
+                                            ],
+                                            "activity": "Crea un pipeline automatizado que genere una API, ejecute pruebas y despliegue el proyecto usando IA.",
+                                            "deliverable": "Script funcional, proyecto generado y documentación del pipeline, más una breve explicación del proceso.",
+                                            "checklist": [
+                                                "Creé un pipeline automatizado para generación de código IA.",
+                                                "Probé la automatización con al menos 3 proyectos diferentes.",
+                                                "Documenté el proceso y los resultados obtenidos."
+                                            ],
+                                            "promptStarter": "Automatiza la generación de una API RESTful en Python, con pruebas y documentación, usando una API de IA.",
+                                            "promptExamples": [
+                                                { "title": "Prompt para automatización avanzada", "prompt": "Genera el código de una aplicación web en Flask, con endpoints y pruebas unitarias." },
+                                                { "title": "Prompt para integración de pruebas", "prompt": "Crea un script que genere código y ejecute pruebas automáticas en JavaScript." },
+                                                { "title": "Prompt para despliegue automatizado", "prompt": "Automatiza el despliegue de un proyecto Node.js en un servidor remoto." }
+                                            ]
+                                        },
+                                        "mejorar-resultados": {
+                                            "id": "mejorar-resultados",
+                                            "title": "Cómo mejorar resultados y evitar errores comunes",
+                                            "moduleTitle": "Técnicas avanzadas",
+                                            "durationMinutes": 10,
+                                            "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener código más preciso y profesional.",
+                                            "objectives": [
+                                                "Identificar errores comunes en prompts de código.",
+                                                "Aplicar técnicas de iteración y ajuste.",
+                                                "Obtener código más alineado con tu idea inicial."
+                                            ],
+                                            "sections": [
+                                                { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo del código. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                                                { "heading": "Iterar y ajustar para mejorar", "content": "Genera el código, analiza el resultado y ajusta el prompt: cambia el lenguaje, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                                { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+                                            ],
+                                            "activity": "Elige un código generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                            "deliverable": "Secuencia de 3 códigos (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                            "checklist": [
+                                                "Identifiqué y corregí errores en mis prompts.",
+                                                "Iteré al menos dos veces para mejorar el resultado.",
+                                                "Documenté el proceso de mejora."
+                                            ],
+                                            "promptStarter": "Genera un script para procesar imágenes. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la eficiencia y la legibilidad.",
+                                            "promptExamples": [
+                                                { "title": "Prompt original", "prompt": "Procesar una imagen en Python para convertirla a escala de grises." },
+                                                { "title": "Primera iteración", "prompt": "Agrega manejo de errores y validación de archivos al script anterior." },
+                                                { "title": "Segunda iteración", "prompt": "Optimiza el script para procesar varias imágenes en paralelo." }
+                                            ]
+                                        },
+                                        "proyecto-final": {
+                                            "id": "proyecto-final",
+                                            "title": "Proyecto final: portafolio avanzado de código IA",
+                                            "moduleTitle": "Técnicas avanzadas",
+                                            "durationMinutes": 12,
+                                            "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de scripts generados con IA, combinando herramientas, lenguajes y automatización.",
+                                            "objectives": [
+                                                "Combinar técnicas avanzadas de prompting, refactorización y automatización.",
+                                                "Crear un portafolio temático con scripts IA personalizados.",
+                                                "Documentar el proceso y justificar cada elección creativa."
+                                            ],
+                                            "sections": [
+                                                { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un tema avanzado (automatización, análisis de datos, web, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                                { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 scripts usando diferentes técnicas: prompt engineering, refactorización, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                                { "heading": "Presentar y justificar el portafolio", "content": "Organiza los scripts en un documento digital, explica las técnicas y herramientas usadas en cada uno, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                                            ],
+                                            "activity": "Crea un portafolio digital de 6 scripts IA sobre un tema avanzado, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                                            "deliverable": "Portafolio digital con 6 scripts, prompts, técnicas usadas y justificación de cada elección creativa.",
+                                            "checklist": [
+                                                "Generé al menos 6 scripts IA aplicando técnicas avanzadas.",
+                                                "Documenté el proceso y los prompts usados.",
+                                                "Justifiqué cada elección creativa en el portafolio."
+                                            ],
+                                            "promptStarter": "Crea una serie de scripts sobre 'automatización avanzada' usando técnicas de prompting, refactorización y automatización.",
+                                            "promptExamples": [
+                                                { "title": "Prompt para portafolio temático", "prompt": "Un script en Python para procesar grandes volúmenes de datos y generar informes automáticos." },
+                                                { "title": "Prompt para creatividad", "prompt": "Un script en JavaScript que genera visualizaciones interactivas en una web." },
+                                                { "title": "Prompt para integración avanzada", "prompt": "Un script en Bash para desplegar aplicaciones en la nube automáticamente." }
+                                            ]
+                                        }
+                                    },
+                                /* ═══════════════════════════════════════════
+                                   CURSO 12: ia-codigo-basico
+                                   Código con IA: Primeros pasos
+                                   Nivel: Principiante | 8 lecciones
+                                   ═══════════════════════════════════════════ */
+                                        "ia-codigo-basico": {
+                                            "codigo-ia-intro": {
+                                                "id": "codigo-ia-intro",
+                                                "title": "Introducción al código con IA",
+                                                "moduleTitle": "Herramientas de código",
+                                                "durationMinutes": 10,
+                                                "summary": "Descubre cómo la IA puede ayudarte a escribir, corregir y entender código de manera sencilla. Aprende a usar herramientas básicas para tus primeros scripts.",
+                                                "objectives": [
+                                                    "Entender el funcionamiento básico de la generación de código IA.",
+                                                    "Crear tu primer script a partir de un prompt simple.",
+                                                    "Identificar los límites y mejores usos del código IA."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "¿Qué es el código generado por IA?", "content": "La IA puede escribir, corregir y explicar código en diferentes lenguajes a partir de instrucciones en lenguaje natural. Es útil para aprender, prototipar y automatizar tareas sencillas." },
+                                                    { "heading": "Cómo usar herramientas básicas de código IA", "content": "Plataformas como GitHub Copilot, ChatGPT o Replit permiten escribir un prompt, elegir un lenguaje y generar código funcional. Ejemplo: 'Crea una función en Python que calcule el factorial de un número'." },
+                                                    { "heading": "Limitaciones y mejores prácticas", "content": "El código IA puede contener errores o no seguir las mejores prácticas. Para mejores resultados, revisa y prueba el código generado, y proporciona instrucciones claras y específicas." }
+                                                ],
+                                                "activity": "Genera un script que salude al usuario en tres lenguajes de programación diferentes usando IA. Prueba diferentes estilos de prompts.",
+                                                "deliverable": "Tres scripts generados en diferentes lenguajes, más una reflexión sobre cuál fue más fácil de entender y ejecutar.",
+                                                "checklist": [
+                                                    "He generado al menos 3 scripts con IA.",
+                                                    "Probé diferentes lenguajes y estilos de prompts.",
+                                                    "Identifiqué una limitación del código IA en mis pruebas."
+                                                ],
+                                                "promptStarter": "Genera una función que calcule la suma de dos números, primero en Python y luego en JavaScript.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt simple para código IA", "prompt": "Crea una función en JavaScript que invierta una cadena de texto." },
+                                                    { "title": "Prompt con lenguaje específico", "prompt": "Genera un script en Bash que liste todos los archivos de una carpeta." },
+                                                    { "title": "Prompt para explicación de código", "prompt": "Explica paso a paso cómo funciona un bucle for en Python." }
+                                                ]
+                                            },
+                                            "mejorar-codigo": {
+                                                "id": "mejorar-codigo",
+                                                "title": "Mejorar y corregir código con IA",
+                                                "moduleTitle": "Herramientas de código",
+                                                "durationMinutes": 10,
+                                                "summary": "Aprende a usar la IA para corregir errores, optimizar y adaptar código a diferentes necesidades.",
+                                                "objectives": [
+                                                    "Corregir errores y bugs en código con IA.",
+                                                    "Optimizar scripts para mayor eficiencia.",
+                                                    "Adaptar código a diferentes lenguajes o estilos."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Corrección automática de código", "content": "Herramientas como Copilot o ChatGPT pueden detectar y corregir errores de sintaxis, lógica y estilo. Solo debes pedir: 'Corrige el siguiente código'." },
+                                                    { "heading": "Optimización y adaptación", "content": "Solicita a la IA que haga tu código más eficiente, legible o que lo adapte a otro lenguaje. Ejemplo: 'Optimiza este script para que sea más rápido'." },
+                                                    { "heading": "Limitaciones y revisión manual", "content": "La IA puede no detectar errores complejos o dependencias externas. Siempre revisa y prueba el código antes de usarlo en producción." }
+                                                ],
+                                                "activity": "Corrige y optimiza un script propio usando IA. Luego, pide una versión adaptada a otro lenguaje de programación.",
+                                                "deliverable": "Tres versiones del script: original, optimizada y adaptada, más una reflexión sobre los cambios realizados.",
+                                                "checklist": [
+                                                    "Corregí y optimicé un script con IA.",
+                                                    "Probé la adaptación a otro lenguaje.",
+                                                    "Reflexioné sobre las diferencias y mejoras."
+                                                ],
+                                                "promptStarter": "Corrige el siguiente código en Python y luego adáptalo a JavaScript.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para corrección de errores", "prompt": "Corrige el error de sintaxis en este script de Python." },
+                                                    { "title": "Prompt para optimización", "prompt": "Optimiza este código para que sea más eficiente en memoria." },
+                                                    { "title": "Prompt para adaptación de lenguaje", "prompt": "Convierte este script de Bash a Python." }
+                                                ]
+                                            },
+                                            "automatizacion-codigo-basico": {
+                                                "id": "automatizacion-codigo-basico",
+                                                "title": "Automatización básica de tareas con IA",
+                                                "moduleTitle": "Herramientas de código",
+                                                "durationMinutes": 10,
+                                                "summary": "Descubre cómo la IA puede ayudarte a automatizar tareas repetitivas y ahorrar tiempo en tus proyectos.",
+                                                "objectives": [
+                                                    "Identificar tareas repetitivas que se pueden automatizar.",
+                                                    "Crear scripts sencillos para automatización.",
+                                                    "Evaluar el impacto de la automatización en la productividad."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "¿Qué tareas se pueden automatizar?", "content": "Procesos como renombrar archivos, enviar emails, recopilar datos o generar reportes pueden automatizarse fácilmente con IA y scripts simples." },
+                                                    { "heading": "Herramientas y ejemplos básicos", "content": "Usa plataformas como Zapier, scripts en Python o Bash, y asistentes IA para crear automatizaciones sin programar desde cero." },
+                                                    { "heading": "Impacto en la productividad", "content": "La automatización libera tiempo para tareas creativas y reduce errores humanos. Evalúa el antes y después de automatizar una tarea." }
+                                                ],
+                                                "activity": "Automatiza una tarea repetitiva de tu día a día usando IA y mide el tiempo ahorrado.",
+                                                "deliverable": "Script automatizador y breve análisis del impacto en tu productividad.",
+                                                "checklist": [
+                                                    "Identifiqué una tarea repetitiva.",
+                                                    "Automatizé la tarea con IA o scripts.",
+                                                    "Analicé el tiempo ahorrado y los beneficios." 
+                                                ],
+                                                "promptStarter": "Crea un script que renombre automáticamente archivos en una carpeta.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para automatización de emails", "prompt": "Genera un script que envíe correos automáticos a una lista de contactos." },
+                                                    { "title": "Prompt para recopilación de datos", "prompt": "Crea un script que recopile precios de productos de una web y los guarde en un archivo CSV." },
+                                                    { "title": "Prompt para generación de reportes", "prompt": "Genera un script que lea datos de un Excel y cree un reporte en PDF." }
+                                                ]
+                                            },
+                                            "explicacion-codigo": {
+                                                "id": "explicacion-codigo",
+                                                "title": "Explicación y documentación de código con IA",
+                                                "moduleTitle": "Herramientas de código",
+                                                "durationMinutes": 10,
+                                                "summary": "Aprende a usar la IA para generar explicaciones, comentarios y documentación profesional de tus scripts.",
+                                                "objectives": [
+                                                    "Generar explicaciones detalladas de código con IA.",
+                                                    "Crear documentación profesional automáticamente.",
+                                                    "Mejorar la comprensión y mantenibilidad de tus scripts."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Explicaciones automáticas con IA", "content": "Solicita a la IA que explique paso a paso cualquier fragmento de código. Ejemplo: 'Explica cómo funciona este algoritmo de ordenamiento'." },
+                                                    { "heading": "Generación de documentación", "content": "Herramientas como Copilot o ChatGPT pueden crear comentarios, docstrings y documentación en formato estándar (Markdown, JSDoc, etc.)." },
+                                                    { "heading": "Ventajas y límites", "content": "La documentación generada por IA es útil como base, pero siempre revisa y ajusta para reflejar detalles específicos de tu proyecto." }
+                                                ],
+                                                "activity": "Elige un script propio y genera documentación profesional con IA. Compara la comprensión antes y después de documentar.",
+                                                "deliverable": "Script documentado y breve reflexión sobre la utilidad de la documentación IA.",
+                                                "checklist": [
+                                                    "Generé documentación automática con IA.",
+                                                    "Revisé y ajusté la documentación generada.",
+                                                    "Analicé la mejora en la comprensión del código." 
+                                                ],
+                                                "promptStarter": "Genera comentarios y docstrings para el siguiente script en Python.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para explicación de funciones", "prompt": "Explica cómo funciona la función 'procesar_datos' en este script." },
+                                                    { "title": "Prompt para documentación profesional", "prompt": "Genera documentación en formato Markdown para este archivo JavaScript." },
+                                                    { "title": "Prompt para comentarios automáticos", "prompt": "Agrega comentarios explicativos a cada línea de este script en Bash." }
+                                                ]
+                                            },
+                                            "proyecto-final-codigo": {
+                                                "id": "proyecto-final-codigo",
+                                                "title": "Proyecto final: portafolio de código IA",
+                                                "moduleTitle": "Herramientas de código",
+                                                "durationMinutes": 12,
+                                                "summary": "Aplica lo aprendido creando un portafolio de scripts generados con IA, documentando el proceso y reflexionando sobre los resultados obtenidos.",
+                                                "objectives": [
+                                                    "Integrar técnicas básicas de IA en scripts útiles.",
+                                                    "Crear un portafolio temático con scripts IA.",
+                                                    "Reflexionar sobre el impacto y los aprendizajes obtenidos."
+                                                ],
+                                                "sections": [
+                                                    { "heading": "Definir el objetivo del portafolio", "content": "Elige un área de aplicación (automatización, análisis de datos, web, etc.) y define el propósito del portafolio: mostrar habilidades, inspirar, resolver problemas, etc." },
+                                                    { "heading": "Aplicar técnicas básicas de IA", "content": "Genera al menos 4 scripts usando IA: automatización, análisis, documentación y adaptación de código. Documenta cada paso y los prompts usados." },
+                                                    { "heading": "Reflexionar sobre el proceso", "content": "Analiza los resultados, identifica los aprendizajes y propone mejoras para futuras aplicaciones de IA en código." }
+                                                ],
+                                                "activity": "Crea un portafolio digital de 4 scripts IA sobre un área específica, aplicando diferentes técnicas y documentando el proceso.",
+                                                "deliverable": "Portafolio digital con 4 scripts, prompts, técnicas usadas y reflexión final.",
+                                                "checklist": [
+                                                    "Generé al menos 4 scripts IA aplicando técnicas básicas.",
+                                                    "Documenté el proceso y los prompts usados.",
+                                                    "Reflexioné sobre el impacto y aprendizajes."
+                                                ],
+                                                "promptStarter": "Crea una serie de scripts para 'automatización de tareas diarias' usando IA básica.",
+                                                "promptExamples": [
+                                                    { "title": "Prompt para portafolio temático", "prompt": "Un script en Python para automatizar el envío de reportes diarios por email." },
+                                                    { "title": "Prompt para análisis de datos", "prompt": "Un script en JavaScript que analice datos de ventas y genere gráficos interactivos." },
+                                                    { "title": "Prompt para documentación automática", "prompt": "Un script en Bash con comentarios generados automáticamente para cada paso." }
+                                                ]
+                                            }
+                                        },
+                                "ia-codigo-basico": {
+                                    "codigo-ia-intro": {
+                                        "id": "codigo-ia-intro",
+                                        "title": "Introducción al código con IA",
+                                        "moduleTitle": "Herramientas de código",
+                                        "durationMinutes": 10,
+                                        "summary": "Descubre cómo la IA puede ayudarte a escribir, corregir y entender código de manera sencilla. Aprende a usar herramientas básicas para tus primeros scripts.",
+                                        "objectives": [
+                                            "Entender el funcionamiento básico de la generación de código IA.",
+                                            "Crear tu primer script a partir de un prompt simple.",
+                                            "Identificar los límites y mejores usos del código IA."
+                                        ],
+                                        "sections": [
+                                            { "heading": "¿Qué es el código generado por IA?", "content": "La IA puede escribir, corregir y explicar código en diferentes lenguajes a partir de instrucciones en lenguaje natural. Es útil para aprender, prototipar y automatizar tareas sencillas." },
+                                            { "heading": "Cómo usar herramientas básicas de código IA", "content": "Plataformas como GitHub Copilot, ChatGPT o Replit permiten escribir un prompt, elegir un lenguaje y generar código funcional. Ejemplo: 'Crea una función en Python que calcule el factorial de un número'." },
+                                            { "heading": "Limitaciones y mejores prácticas", "content": "El código IA puede contener errores o no seguir las mejores prácticas. Para mejores resultados, revisa y prueba el código generado, y proporciona instrucciones claras y específicas." }
+                                        ],
+                                        "activity": "Genera un script que salude al usuario en tres lenguajes de programación diferentes usando IA. Prueba diferentes estilos de prompts.",
+                                        "deliverable": "Tres scripts generados en diferentes lenguajes, más una reflexión sobre cuál fue más fácil de entender y ejecutar.",
+                                        "checklist": [
+                                            "He generado al menos 3 scripts con IA.",
+                                            "Probé diferentes lenguajes y estilos de prompts.",
+                                            "Identifiqué una limitación del código IA en mis pruebas."
+                                        ],
+                                        "promptStarter": "Genera una función que calcule la suma de dos números, primero en Python y luego en JavaScript.",
+                                        "promptExamples": [
+                                            { "title": "Prompt simple para código IA", "prompt": "Crea una función en JavaScript que invierta una cadena de texto." },
+                                            { "title": "Prompt con lenguaje específico", "prompt": "Genera un script en Bash que liste todos los archivos de una carpeta." },
+                                            { "title": "Prompt para explicación de código", "prompt": "Explica paso a paso cómo funciona un bucle for en Python." }
+                                        ]
+                                    },
+                                    "mejorar-codigo": {
+                                        "id": "mejorar-codigo",
+                                        "title": "Mejorar y corregir código con IA",
+                                        "moduleTitle": "Herramientas de código",
+                                        "durationMinutes": 10,
+                                        "summary": "Aprende a usar la IA para corregir errores, optimizar y adaptar código a diferentes necesidades.",
+                                        "objectives": [
+                                            "Corregir errores y bugs en código con IA.",
+                                            "Optimizar scripts para mayor eficiencia.",
+                                            "Adaptar código a diferentes lenguajes o estilos."
+                                        ],
+                                        "sections": [
+                                            { "heading": "Corrección automática de código", "content": "Herramientas como Copilot o ChatGPT pueden detectar y corregir errores de sintaxis, lógica y estilo. Solo debes pedir: 'Corrige el siguiente código'." },
+                                            { "heading": "Optimización y adaptación", "content": "Solicita a la IA que haga tu código más eficiente, legible o que lo adapte a otro lenguaje. Ejemplo: 'Optimiza este script para que sea más rápido'." },
+                                            { "heading": "Limitaciones y revisión manual", "content": "La IA puede no detectar errores complejos o dependencias externas. Siempre revisa y prueba el código antes de usarlo en producción." }
+                                        ],
+                                        "activity": "Corrige y optimiza un script propio usando IA. Luego, pide una versión adaptada a otro lenguaje de programación.",
+                                        "deliverable": "Tres versiones del script: original, optimizada y adaptada, más una reflexión sobre los cambios realizados.",
+                                        "checklist": [
+                                            "Usé la IA para corregir y mejorar un script.",
+                                            "Probé adaptaciones a diferentes lenguajes.",
+                                            "Analicé los cambios y su impacto en el funcionamiento."
+                                        ],
+                                        "promptStarter": "Convierte un script de Python a JavaScript y luego optimízalo para mayor eficiencia.",
+                                        "promptExamples": [
+                                            { "title": "Prompt para corrección de código", "prompt": "Corrige los errores en este script de Python." },
+                                            { "title": "Prompt para optimización", "prompt": "Haz este código más eficiente y legible." },
+                                            { "title": "Prompt para adaptación de lenguaje", "prompt": "Convierte este script de Bash a PowerShell." }
+                                        ]
+                                    },
+                                    "explicacion-codigo": {
+                                        "id": "explicacion-codigo",
+                                        "title": "Explicación y documentación de código con IA",
+                                        "moduleTitle": "Herramientas de código",
+                                        "durationMinutes": 10,
+                                        "summary": "Explora cómo la IA puede ayudarte a entender, documentar y comentar código de manera automática.",
+                                        "objectives": [
+                                            "Generar explicaciones detalladas de código con IA.",
+                                            "Documentar funciones y scripts automáticamente.",
+                                            "Mejorar la comprensión y el mantenimiento del código."
+                                        ],
+                                        "sections": [
+                                            { "heading": "Explicación automática de código", "content": "La IA puede analizar un script y generar explicaciones paso a paso, identificar la función de cada bloque y sugerir comentarios útiles." },
+                                            { "heading": "Documentación y comentarios automáticos", "content": "Solicita a la IA que añada comentarios o genere documentación en formato estándar (docstrings, JSDoc, etc.). Ejemplo: 'Comenta este código en español'." },
+                                            { "heading": "Limitaciones y revisión manual", "content": "La IA puede no captar la intención completa del código o el contexto del proyecto. Revisa y ajusta los comentarios generados según tus necesidades." }
+                                        ],
+                                        "activity": "Pide a la IA que explique un script complejo y genere documentación automática. Luego, revisa y ajusta los comentarios según tu criterio.",
+                                        "deliverable": "Script original, versión comentada y documentación generada, más una reflexión sobre la utilidad de la IA en la comprensión del código.",
+                                        "checklist": [
+                                            "Usé la IA para explicar y documentar un script.",
+                                            "Probé diferentes formatos de documentación.",
+                                            "Analicé la utilidad de los comentarios generados."
+                                        ],
+                                        "promptStarter": "Explica paso a paso cómo funciona un algoritmo de ordenamiento y genera comentarios automáticos en el código.",
+                                        "promptExamples": [
+                                            { "title": "Prompt para explicación de código", "prompt": "Explica cómo funciona este algoritmo de búsqueda binaria." },
+                                            { "title": "Prompt para documentación automática", "prompt": "Genera docstrings para todas las funciones de este script en Python." },
+                                            { "title": "Prompt para comentarios en otro idioma", "prompt": "Comenta este código en inglés y español." }
+                                        ]
+                                    },
+                                    "automatizacion-codigo": {
+                                        "id": "automatizacion-codigo",
+                                        "title": "Automatización de generación de código IA",
+                                        "moduleTitle": "Herramientas de código",
+                                        "durationMinutes": 10,
+                                        "summary": "Aprende a automatizar la creación de scripts y funciones usando IA, APIs y flujos de trabajo programados.",
+                                        "objectives": [
+                                            "Conocer las opciones de automatización para código IA.",
+                                            "Crear un script básico para generar código automáticamente.",
+                                            "Integrar la generación de código en otros proyectos digitales."
+                                        ],
+                                        "sections": [
+                                            { "heading": "¿Por qué automatizar?", "content": "La automatización permite generar grandes volúmenes de código, crear variaciones rápidamente y ahorrar tiempo en proyectos creativos o empresariales." },
+                                            { "heading": "Opciones de automatización", "content": "Usa APIs de Copilot, ChatGPT o Replit, o scripts en Python para enviar prompts y descargar código automáticamente. Ejemplo: automatizar la creación de funciones para una app web." },
+                                            { "heading": "Ejemplo de script básico", "content": "Un script en Python que envía una lista de prompts a la API de ChatGPT y guarda los códigos generados en archivos locales." }
+                                        ],
+                                        "activity": "Crea un script sencillo que genere 5 funciones IA a partir de una lista de prompts y las guarde automáticamente.",
+                                        "deliverable": "Script funcional y archivos con los códigos generados, más una breve explicación del proceso.",
+                                        "checklist": [
+                                            "Creé un script o usé una API para automatizar la generación de código.",
+                                            "Probé la automatización con al menos 5 prompts diferentes.",
+                                            "Documenté el proceso y los resultados obtenidos."
+                                        ],
+                                        "promptStarter": "Automatiza la generación de funciones matemáticas en diferentes lenguajes usando una API de IA.",
+                                        "promptExamples": [
+                                            { "title": "Prompt para automatización", "prompt": "Genera una función en Python que calcule el área de un círculo." },
+                                            { "title": "Prompt para variaciones", "prompt": "Crea 3 versiones de una función de suma en Python, JavaScript y C++." },
+                                            { "title": "Prompt para integración digital", "prompt": "Genera scripts para automatizar tareas de limpieza de datos en archivos CSV." }
+                                        ]
+                                    },
+                                    "mejorar-resultados": {
+                                        "id": "mejorar-resultados",
+                                        "title": "Cómo mejorar resultados y evitar errores comunes",
+                                        "moduleTitle": "Herramientas de código",
+                                        "durationMinutes": 10,
+                                        "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener código más preciso y profesional.",
+                                        "objectives": [
+                                            "Identificar errores comunes en prompts de código.",
+                                            "Aplicar técnicas de iteración y ajuste.",
+                                            "Obtener código más alineado con tu idea inicial."
+                                        ],
+                                        "sections": [
+                                            { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo del código. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                                            { "heading": "Iterar y ajustar para mejorar", "content": "Genera el código, analiza el resultado y ajusta el prompt: cambia el lenguaje, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                            { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+                                        ],
+                                        "activity": "Elige un código generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                        "deliverable": "Secuencia de 3 códigos (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                        "checklist": [
+                                            "Identifiqué y corregí errores en mis prompts.",
+                                            "Iteré al menos dos veces para mejorar el resultado.",
+                                            "Documenté el proceso de mejora."
+                                        ],
+                                        "promptStarter": "Genera un script para descargar archivos de internet. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la eficiencia y la seguridad.",
+                                        "promptExamples": [
+                                            { "title": "Prompt original", "prompt": "Descargar un archivo de internet usando Python." },
+                                            { "title": "Primera iteración", "prompt": "Agrega manejo de errores y validación de URL al script anterior." },
+                                            { "title": "Segunda iteración", "prompt": "Optimiza el script para descargar varios archivos en paralelo." }
+                                        ]
+                                    },
+                                    "proyecto-final": {
+                                        "id": "proyecto-final",
+                                        "title": "Proyecto final: portafolio de código IA",
+                                        "moduleTitle": "Herramientas de código",
+                                        "durationMinutes": 12,
+                                        "summary": "Pon en práctica todo lo aprendido creando un portafolio personal de scripts generados con IA, aplicando diferentes lenguajes, herramientas y técnicas de prompting.",
+                                        "objectives": [
+                                            "Aplicar técnicas de prompting y adaptación de lenguajes.",
+                                            "Usar al menos dos herramientas diferentes de IA de código.",
+                                            "Presentar un portafolio con justificación de cada script."
+                                        ],
+                                        "sections": [
+                                            { "heading": "Definir el objetivo del portafolio", "content": "Elige un tema central (automatización, análisis de datos, web, etc.) y define el propósito de tu portafolio: mostrar habilidades, inspirar, presentar a clientes, etc." },
+                                            { "heading": "Seleccionar herramientas y lenguajes", "content": "Genera al menos 5 scripts usando diferentes herramientas (Copilot, ChatGPT, Replit, etc.) y lenguajes variados. Documenta el proceso y los prompts usados." },
+                                            { "heading": "Presentar y justificar tus elecciones", "content": "Organiza los scripts en un documento o galería, explica por qué elegiste cada lenguaje y herramienta, y qué aprendiste en el proceso." }
+                                        ],
+                                        "activity": "Crea un portafolio de 5 scripts IA sobre un tema de tu elección, usando al menos 3 lenguajes y 3 herramientas diferentes.",
+                                        "deliverable": "Portafolio digital con 5 scripts, prompts utilizados y justificación de cada elección.",
+                                        "checklist": [
+                                            "Generé al menos 5 scripts con IA usando diferentes lenguajes y herramientas.",
+                                            "Documenté los prompts y el proceso de selección.",
+                                            "Justifiqué cada elección en mi portafolio."
+                                        ],
+                                        "promptStarter": "Crea una serie de scripts sobre 'automatización de tareas' usando Copilot, ChatGPT y Replit, cada uno en un lenguaje diferente.",
+                                        "promptExamples": [
+                                            { "title": "Prompt para portafolio temático", "prompt": "Un script en Python para analizar archivos CSV y generar un informe." },
+                                            { "title": "Prompt para creatividad", "prompt": "Un script en JavaScript que genera animaciones en una página web." },
+                                            { "title": "Prompt para reflexión", "prompt": "Un script en Bash para hacer copias de seguridad automáticas de una carpeta." }
+                                        ]
+                                    }
+                                },
+                            /* ═══════════════════════════════════════════
+                               CURSO 11: ia-video-avanzado
+                               Video con IA: Técnicas avanzadas
+                               Nivel: Intermedio | 8 lecciones
+                               ═══════════════════════════════════════════ */
+                            "ia-video-avanzado": {
+                                "prompt-engineering-video": {
+                                    "id": "prompt-engineering-video",
+                                    "title": "Prompt Engineering para video",
+                                    "moduleTitle": "Técnicas avanzadas",
+                                    "durationMinutes": 12,
+                                    "summary": "Descubre cómo estructurar prompts complejos para obtener videos precisos, creativos y personalizados. Aprende a usar descriptores, estilos y parámetros avanzados.",
+                                    "objectives": [
+                                        "Dominar la estructura avanzada de prompts para video.",
+                                        "Utilizar descriptores y parámetros para afinar resultados.",
+                                        "Evitar ambigüedades y errores comunes en prompts complejos."
+                                    ],
+                                    "sections": [
+                                        { "heading": "¿Qué es el prompt engineering en video?", "content": "Es el arte de diseñar instrucciones detalladas y precisas para que la IA genere videos alineados con tu visión. Incluye el uso de descriptores, estilos, formato y parámetros técnicos." },
+                                        { "heading": "Descriptores y parámetros avanzados", "content": "Incluye detalles como duración, estilo visual, ritmo, efectos, formato de salida, etc. Ejemplo: 'Genera un video animado de 30 segundos sobre energías renovables, estilo cartoon, ritmo dinámico, música de fondo alegre'." },
+                                        { "heading": "Errores y cómo evitarlos", "content": "Evita prompts demasiado largos o contradictorios. Prioriza la claridad y la jerarquía de la información: primero el objetivo, luego el público, después el formato y finalmente los detalles técnicos." }
+                                    ],
+                                    "activity": "Escribe un prompt avanzado para 'un video motivacional para estudiantes, estilo animación, duración 45 segundos, música inspiradora'. Experimenta cambiando el ritmo y el estilo visual.",
+                                    "deliverable": "Dos videos generados con variaciones en ritmo y estilo, más una reflexión sobre el impacto de los cambios.",
+                                    "checklist": [
+                                        "Escribí y probé un prompt avanzado con descriptores detallados.",
+                                        "Ajusté parámetros para comparar resultados.",
+                                        "Documenté el impacto de los cambios en el resultado."
+                                    ],
+                                    "promptStarter": "Genera un video de felicitación por logros académicos, primero en estilo animación y luego en estilo realista.",
+                                    "promptExamples": [
+                                        { "title": "Prompt avanzado con descriptores", "prompt": "Crea un video de bienvenida para un congreso, estilo animación 3D, duración 1 minuto, música suave de fondo." },
+                                        { "title": "Prompt con parámetros técnicos", "prompt": "Genera un video de despedida con efectos de partículas, ritmo lento, duración 20 segundos." },
+                                        { "title": "Prompt para formato específico", "prompt": "Crea un video publicitario de 15 segundos para una campaña ecológica, estilo realista." }
+                                    ]
+                                },
+                                "combinacion-herramientas-video": {
+                                    "id": "combinacion-herramientas-video",
+                                    "title": "Combinando herramientas de IA para video",
+                                    "moduleTitle": "Técnicas avanzadas",
+                                    "durationMinutes": 10,
+                                    "summary": "Aprende a combinar diferentes generadores de video IA para obtener resultados únicos y aprovechar lo mejor de cada uno.",
+                                    "objectives": [
+                                        "Identificar ventajas y limitaciones de cada herramienta.",
+                                        "Combinar videos generados en diferentes plataformas.",
+                                        "Optimizar el flujo de trabajo creativo usando IA."
+                                    ],
+                                    "sections": [
+                                        { "heading": "¿Por qué combinar herramientas?", "content": "Cada generador de video IA tiene fortalezas: Pika es versátil, Runway destaca en edición, Kaiber es bueno en animación. Combinarlas permite obtener resultados más ricos y variados." },
+                                        { "heading": "Flujo de trabajo recomendado", "content": "Ejemplo: genera una animación en Kaiber, edita efectos en Runway y añade música en Pika. Así aprovechas la creatividad, la edición y la personalización de cada herramienta." },
+                                        { "heading": "Consejos para integración", "content": "Guarda tus videos en alta calidad, usa editores para ajustes finales y documenta los prompts y parámetros usados en cada etapa." }
+                                    ],
+                                    "activity": "Crea un video animado en Kaiber, edita efectos en Runway y añade música en Pika. Documenta el proceso y los cambios en cada etapa.",
+                                    "deliverable": "Secuencia de 3 videos (animación, efectos, música) con explicación de los cambios y herramientas usadas.",
+                                    "checklist": [
+                                        "Probé al menos dos herramientas diferentes en un mismo proyecto.",
+                                        "Documenté el flujo de trabajo y los prompts usados.",
+                                        "Analicé las ventajas de cada herramienta en el resultado final."
+                                    ],
+                                    "promptStarter": "Genera un video de cuento infantil en Kaiber, edita efectos en Runway y añade música en Pika.",
+                                    "promptExamples": [
+                                        { "title": "Prompt para animación inicial", "prompt": "Crea un video animado narrando una fábula corta, estilo cartoon, duración 1 minuto." },
+                                        { "title": "Prompt para efectos de video", "prompt": "Añade efectos de partículas y transiciones suaves al video anterior." },
+                                        { "title": "Prompt para música de fondo", "prompt": "Agrega música alegre de fondo al video animado." }
+                                    ]
+                                },
+                                "edicion-avanzada-video": {
+                                    "id": "edicion-avanzada-video",
+                                    "title": "Edición avanzada de video con IA",
+                                    "moduleTitle": "Técnicas avanzadas",
+                                    "durationMinutes": 12,
+                                    "summary": "Descubre técnicas avanzadas de edición de video con IA: mejora de calidad, efectos especiales, subtitulado automático y personalización profesional.",
+                                    "objectives": [
+                                        "Mejorar la calidad y resolución de videos con IA.",
+                                        "Aplicar efectos especiales y transiciones avanzadas.",
+                                        "Personalizar videos para proyectos profesionales."
+                                    ],
+                                    "sections": [
+                                        { "heading": "Mejora de calidad avanzada", "content": "Herramientas como Topaz Video AI o Runway permiten aumentar la resolución, eliminar ruido y mejorar la nitidez de videos automáticamente para resultados profesionales." },
+                                        { "heading": "Efectos especiales y transiciones", "content": "Aplica efectos de partículas, animaciones, transiciones dinámicas y filtros avanzados para lograr videos impactantes y creativos." },
+                                        { "heading": "Subtitulado y personalización", "content": "La IA puede generar subtítulos automáticos, traducirlos y personalizar el formato para diferentes públicos y plataformas." }
+                                    ],
+                                    "activity": "Toma un video original, mejora la calidad con IA, añade efectos especiales y genera subtítulos automáticos.",
+                                    "deliverable": "Video original, versión mejorada, versión con efectos y subtítulos, más una reflexión sobre el proceso de edición avanzada.",
+                                    "checklist": [
+                                        "Usé IA para mejorar y editar videos.",
+                                        "Apliqué al menos dos efectos avanzados y subtítulos.",
+                                        "Documenté el proceso y los resultados obtenidos."
+                                    ],
+                                    "promptStarter": "Mejora la calidad de un video de presentación, añade efectos de partículas y genera subtítulos automáticos en español.",
+                                    "promptExamples": [
+                                        { "title": "Prompt para mejora avanzada", "prompt": "Mejora la resolución y claridad de este video de conferencia, añade un filtro profesional." },
+                                        { "title": "Prompt para efectos especiales", "prompt": "Agrega efectos de luz y partículas a un video educativo." },
+                                        { "title": "Prompt para subtitulado automático", "prompt": "Genera subtítulos en inglés y español para este video de entrevista." }
+                                    ]
+                                },
+                                "automatizacion-video": {
+                                    "id": "automatizacion-video",
+                                    "title": "Automatización de generación de video IA",
+                                    "moduleTitle": "Técnicas avanzadas",
+                                    "durationMinutes": 10,
+                                    "summary": "Aprende a automatizar la creación de videos IA usando scripts, APIs y flujos de trabajo programados.",
+                                    "objectives": [
+                                        "Conocer las opciones de automatización para video IA.",
+                                        "Crear un script básico para generar videos automáticamente.",
+                                        "Integrar la generación de videos en otros proyectos digitales."
+                                    ],
+                                    "sections": [
+                                        { "heading": "¿Por qué automatizar?", "content": "La automatización permite generar grandes volúmenes de videos, crear variaciones rápidamente y ahorrar tiempo en proyectos creativos o empresariales." },
+                                        { "heading": "Opciones de automatización", "content": "Usa APIs de Pika, Runway o Kaiber, o scripts en Python para enviar prompts y descargar videos automáticamente. Ejemplo: automatizar la creación de videos para una app educativa o una campaña de marketing." },
+                                        { "heading": "Ejemplo de script básico", "content": "Un script en Python que envía una lista de prompts a la API de Pika y guarda los videos generados en una carpeta local." }
+                                    ],
+                                    "activity": "Crea un script sencillo que genere 5 videos IA a partir de una lista de prompts y los guarde automáticamente.",
+                                    "deliverable": "Script funcional y carpeta con los videos generados, más una breve explicación del proceso.",
+                                    "checklist": [
+                                        "Creé un script o usé una API para automatizar la generación de videos.",
+                                        "Probé la automatización con al menos 5 prompts diferentes.",
+                                        "Documenté el proceso y los resultados obtenidos."
+                                    ],
+                                    "promptStarter": "Automatiza la generación de videos de diferentes mensajes en estilos variados usando una API de IA.",
+                                    "promptExamples": [
+                                        { "title": "Prompt para automatización", "prompt": "Genera un video de saludo en estilo animación." },
+                                        { "title": "Prompt para variaciones", "prompt": "Crea 3 versiones de un mismo mensaje en diferentes estilos: animación, realista y publicitario." },
+                                        { "title": "Prompt para integración digital", "prompt": "Genera videos para notificaciones de una app móvil, estilo breve y claro." }
+                                    ]
+                                },
+                                "mejorar-resultados": {
+                                    "id": "mejorar-resultados",
+                                    "title": "Cómo mejorar resultados y evitar errores comunes",
+                                    "moduleTitle": "Técnicas avanzadas",
+                                    "durationMinutes": 10,
+                                    "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener videos más precisos y profesionales.",
+                                    "objectives": [
+                                        "Identificar errores comunes en prompts de video.",
+                                        "Aplicar técnicas de iteración y ajuste.",
+                                        "Obtener videos más alineados con tu idea inicial."
+                                    ],
+                                    "sections": [
+                                        { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo del video. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                                        { "heading": "Iterar y ajustar para mejorar", "content": "Genera el video, analiza el resultado y ajusta el prompt: cambia el estilo, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                        { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+                                    ],
+                                    "activity": "Elige un video generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                    "deliverable": "Secuencia de 3 videos (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                    "checklist": [
+                                        "Identifiqué y corregí errores en mis prompts.",
+                                        "Iteré al menos dos veces para mejorar el resultado.",
+                                        "Documenté el proceso de mejora."
+                                    ],
+                                    "promptStarter": "Genera un video sobre la importancia de la colaboración. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la claridad y el nivel de detalle.",
+                                    "promptExamples": [
+                                        { "title": "Prompt original", "prompt": "La importancia de la colaboración en el trabajo en equipo." },
+                                        { "title": "Primera iteración", "prompt": "Explica con ejemplos concretos por qué la colaboración es fundamental para el éxito de los proyectos, en formato de video animado." },
+                                        { "title": "Segunda iteración", "prompt": "Genera un video persuasivo sobre los beneficios de la colaboración, dirigido a líderes de equipos." }
+                                    ]
+                                },
+                                "proyecto-final": {
+                                    "id": "proyecto-final",
+                                    "title": "Proyecto final: portafolio avanzado de videos IA",
+                                    "moduleTitle": "Técnicas avanzadas",
+                                    "durationMinutes": 13,
+                                    "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de videos IA, combinando herramientas, estilos y automatización.",
+                                    "objectives": [
+                                        "Combinar técnicas avanzadas de prompting, edición y automatización.",
+                                        "Crear un portafolio temático con videos IA personalizados.",
+                                        "Documentar el proceso y justificar cada elección creativa."
+                                    ],
+                                    "sections": [
+                                        { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un tema avanzado (tecnología, educación, medio ambiente, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                        { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 videos usando diferentes técnicas: prompt engineering, edición avanzada, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                        { "heading": "Presentar y justificar el portafolio", "content": "Organiza los videos en un documento digital, explica las técnicas y herramientas usadas en cada uno, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                                    ],
+                                    "activity": "Crea un portafolio digital de 6 videos IA sobre un tema avanzado, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                                    "deliverable": "Portafolio digital con 6 videos, prompts, técnicas usadas y justificación de cada elección creativa.",
+                                    "checklist": [
+                                        "Generé al menos 6 videos IA aplicando técnicas avanzadas.",
+                                        "Documenté el proceso y los prompts usados.",
+                                        "Justifiqué cada elección creativa en el portafolio."
+                                    ],
+                                    "promptStarter": "Crea una serie de videos sobre 'el futuro de la comunicación' usando técnicas avanzadas de prompting, edición y automatización.",
+                                    "promptExamples": [
+                                        { "title": "Prompt para portafolio temático", "prompt": "Un video informativo sobre inteligencia artificial en la comunicación, dirigido a profesionales." },
+                                        { "title": "Prompt para creatividad", "prompt": "Un video animado sobre un robot que aprende a escuchar." },
+                                        { "title": "Prompt para edición avanzada", "prompt": "Genera un video con efectos especiales sobre la evolución de la tecnología." }
+                                    ]
+                                }
+                            },
+                        /* ═══════════════════════════════════════════
+                           CURSO 10: ia-video-basico
+                           Video con IA: Primeros pasos
+                           Nivel: Principiante | 8 lecciones
+                           ═══════════════════════════════════════════ */
+                        "ia-video-basico": {
+                            "video-ia-intro": {
+                                "id": "video-ia-intro",
+                                "title": "Introducción al video con IA",
+                                "moduleTitle": "Herramientas de video",
+                                "durationMinutes": 10,
+                                "summary": "Descubre cómo la IA puede generar y editar videos de manera sencilla. Aprende a usar herramientas básicas para crear tus primeros clips.",
+                                "objectives": [
+                                    "Entender el funcionamiento básico de la generación de video IA.",
+                                    "Crear tu primer video a partir de un prompt simple.",
+                                    "Identificar los límites y mejores usos del video IA."
+                                ],
+                                "sections": [
+                                    { "heading": "¿Qué es el video generado por IA?", "content": "La IA puede crear videos a partir de texto, imágenes o clips cortos, usando modelos entrenados para animar escenas, personajes y efectos. Es útil para presentaciones, redes sociales y prototipos creativos." },
+                                    { "heading": "Cómo usar herramientas básicas de video IA", "content": "Plataformas como Pika, Runway o Kaiber permiten escribir un prompt, elegir un estilo y generar un video corto. Ejemplo: 'Un robot bailando en una ciudad futurista, estilo animación 3D'." },
+                                    { "heading": "Limitaciones y mejores prácticas", "content": "Los videos IA suelen ser cortos (menos de 1 minuto) y pueden tener artefactos visuales. Para mejores resultados, usa descripciones claras, estilos definidos y revisa el video antes de compartirlo." }
+                                ],
+                                "activity": "Genera un video de bienvenida para un curso online usando una herramienta de video IA. Prueba diferentes estilos y duraciones.",
+                                "deliverable": "Tres versiones del video: estilo animación, realista y una con efectos especiales, más una reflexión sobre cuál comunica mejor tu mensaje.",
+                                "checklist": [
+                                    "He generado al menos 3 videos con IA.",
+                                    "Probé diferentes estilos y duraciones.",
+                                    "Identifiqué una limitación del video IA en mis pruebas."
+                                ],
+                                "promptStarter": "Genera un video de despedida para un evento, primero en estilo animación y luego en estilo realista.",
+                                "promptExamples": [
+                                    { "title": "Prompt simple para video IA", "prompt": "Crea un video de un gato jugando con una pelota, estilo animación 2D." },
+                                    { "title": "Prompt con estilo específico", "prompt": "Genera un video de una científica en su laboratorio, estilo realista, duración 20 segundos." },
+                                    { "title": "Prompt para efectos especiales", "prompt": "Crea un video de un castillo flotando sobre nubes, con efectos de luz y partículas." }
+                                ]
+                            },
+                            "mejorar-video": {
+                                "id": "mejorar-video",
+                                "title": "Mejorar y editar videos con IA",
+                                "moduleTitle": "Herramientas de video",
+                                "durationMinutes": 10,
+                                "summary": "Aprende a usar la IA para mejorar la calidad de tus videos, añadir efectos y editar clips fácilmente.",
+                                "objectives": [
+                                    "Mejorar la resolución y claridad de un video.",
+                                    "Editar y ajustar clips con herramientas IA.",
+                                    "Aplicar efectos y transiciones básicas."
+                                ],
+                                "sections": [
+                                    { "heading": "Mejora de calidad con IA", "content": "Herramientas como Topaz Video AI o Runway permiten aumentar la resolución, eliminar ruido y mejorar la nitidez de videos automáticamente." },
+                                    { "heading": "Edición básica con IA", "content": "Puedes cortar, unir y ajustar clips usando editores con IA. Algunos permiten añadir subtítulos, cambiar la velocidad o aplicar filtros simples." },
+                                    { "heading": "Aplicar efectos y transiciones", "content": "Prueba añadir efectos de luz, transiciones suaves o animaciones para personalizar tus videos y hacerlos más atractivos." }
+                                ],
+                                "activity": "Graba un video breve y usa una herramienta IA para mejorar la calidad. Luego, edita la velocidad y añade un efecto de transición.",
+                                "deliverable": "Video original, versión mejorada y versión editada con efectos, más una reflexión sobre los cambios realizados.",
+                                "checklist": [
+                                    "Usé la IA para mejorar y editar un video.",
+                                    "Probé al menos dos efectos o transiciones.",
+                                    "Analicé el impacto de las mejoras en la calidad del video."
+                                ],
+                                "promptStarter": "Graba una presentación personal y mejora el video con IA. Luego, cambia la velocidad y añade una transición animada.",
+                                "promptExamples": [
+                                    { "title": "Prompt para mejora de video", "prompt": "Mejora la resolución y claridad de este video de presentación." },
+                                    { "title": "Prompt para cambio de velocidad", "prompt": "Aumenta la velocidad del video para que dure la mitad del tiempo." },
+                                    { "title": "Prompt para efectos creativos", "prompt": "Añade un efecto de partículas y una transición de fundido al video." }
+                                ]
+                            },
+                            "animacion-ia": {
+                                "id": "animacion-ia",
+                                "title": "Animación y movimiento con IA",
+                                "moduleTitle": "Herramientas de video",
+                                "durationMinutes": 10,
+                                "summary": "Explora cómo la IA puede animar imágenes, personajes y objetos para crear videos dinámicos y atractivos.",
+                                "objectives": [
+                                    "Animar imágenes o personajes con IA.",
+                                    "Probar diferentes estilos de animación.",
+                                    "Identificar limitaciones y mejores usos de la animación IA."
+                                ],
+                                "sections": [
+                                    { "heading": "¿Qué es la animación IA?", "content": "Modelos como Kaiber, Pika o Runway pueden animar imágenes estáticas, crear movimientos realistas o fantásticos y generar clips animados a partir de descripciones." },
+                                    { "heading": "Cómo animar con IA", "content": "Sube una imagen o describe una escena, elige un estilo de animación y la IA generará un video animado. Ejemplo: 'Un dragón volando sobre una ciudad, estilo animación 3D'." },
+                                    { "heading": "Limitaciones y mejores prácticas", "content": "La animación IA puede tener movimientos poco naturales o artefactos visuales. Para mejores resultados, usa imágenes de alta calidad y revisa el video generado antes de publicarlo." }
+                                ],
+                                "activity": "Anima una imagen de tu elección usando IA. Prueba al menos dos estilos de animación (realista y cartoon).",
+                                "deliverable": "Dos videos animados generados con IA, más una reflexión sobre cuál estilo comunica mejor tu idea.",
+                                "checklist": [
+                                    "Animé al menos dos imágenes con IA.",
+                                    "Probé diferentes estilos de animación.",
+                                    "Analicé la utilidad de la animación IA en mi proyecto."
+                                ],
+                                "promptStarter": "Anima una imagen de un robot explorador, primero en estilo realista y luego en estilo cartoon.",
+                                "promptExamples": [
+                                    { "title": "Prompt para animación realista", "prompt": "Anima una imagen de un paisaje natural, estilo realista, con movimiento de nubes y agua." },
+                                    { "title": "Prompt para animación cartoon", "prompt": "Crea un video animado de un perro saltando, estilo cartoon, fondo colorido." },
+                                    { "title": "Prompt para animación fantástica", "prompt": "Genera una animación de un castillo flotante, con efectos de luz y partículas." }
+                                ]
+                            },
+                            "resumir-video": {
+                                "id": "resumir-video",
+                                "title": "Resumir y extraer ideas clave de videos con IA",
+                                "moduleTitle": "Herramientas de video",
+                                "durationMinutes": 9,
+                                "summary": "Aprende a usar la IA para resumir videos, extraer ideas principales y organizar información visual de manera eficiente.",
+                                "objectives": [
+                                    "Resumir videos extensos en clips cortos.",
+                                    "Extraer ideas clave y conceptos principales de un video.",
+                                    "Organizar información visual de manera clara y estructurada."
+                                ],
+                                "sections": [
+                                    { "heading": "Resumir videos con IA", "content": "Herramientas como Wisecut, Runway o Pictory pueden resumir videos largos, eliminar pausas y destacar los momentos clave automáticamente." },
+                                    { "heading": "Extraer ideas clave", "content": "La IA puede identificar los conceptos principales, crear resúmenes visuales o generar listas de puntos clave a partir del contenido del video." },
+                                    { "heading": "Organizar información visual", "content": "La IA puede ayudarte a estructurar la información en esquemas, tablas o clips temáticos, facilitando la comprensión y el estudio." }
+                                ],
+                                "activity": "Resume un video de tu interés en un clip de menos de 1 minuto. Luego, pide a la IA que extraiga las ideas clave y las organice en una tabla comparativa.",
+                                "deliverable": "Clip resumen, lista de ideas clave y tabla comparativa, más una reflexión sobre la utilidad de cada formato.",
+                                "checklist": [
+                                    "Usé la IA para resumir y extraer ideas clave de un video.",
+                                    "Probé diferentes formatos de organización de información visual.",
+                                    "Analicé cuál formato es más útil para mi objetivo."
+                                ],
+                                "promptStarter": "Resume un video educativo sobre energías renovables en un clip de 30 segundos y extrae los conceptos principales en una lista.",
+                                "promptExamples": [
+                                    { "title": "Prompt para resumen de video", "prompt": "Resume este video de una conferencia en un clip de 1 minuto." },
+                                    { "title": "Prompt para ideas clave", "prompt": "Enumera los puntos principales de este video sobre cambio climático." },
+                                    { "title": "Prompt para tabla comparativa", "prompt": "Organiza la información de este video en una tabla con ventajas y desventajas." }
+                                ]
+                            },
+                            "estilos-video": {
+                                "id": "estilos-video",
+                                "title": "Estilos de video y adaptación",
+                                "moduleTitle": "Herramientas de video",
+                                "durationMinutes": 9,
+                                "summary": "Conoce los estilos de video más comunes y aprende a adaptar tus clips según el público y el objetivo.",
+                                "objectives": [
+                                    "Identificar al menos 4 estilos de video.",
+                                    "Adaptar un video a diferentes estilos y públicos.",
+                                    "Elegir el estilo más adecuado para cada situación."
+                                ],
+                                "sections": [
+                                    { "heading": "Estilos de video más usados", "content": "Animación, realista, publicitario y educativo. Cada uno tiene características propias y se adapta a diferentes objetivos: entretener, informar, persuadir o enseñar." },
+                                    { "heading": "Cómo adaptar el estilo", "content": "Define el objetivo y el público del video. Ajusta el tono, la música y los efectos visuales para conectar mejor con los espectadores. Prueba diferentes estilos para ver cuál comunica mejor tu mensaje." },
+                                    { "heading": "Ejemplos prácticos", "content": "Toma un mismo mensaje (por ejemplo, una invitación) y genera videos en cada estilo. Analiza cómo cambia la percepción según el enfoque." }
+                                ],
+                                "activity": "Genera un video sobre la importancia del reciclaje en estilo animación, realista, publicitario y educativo. Compara los resultados y elige el más adecuado para una campaña escolar.",
+                                "deliverable": "Cuatro versiones del video, una por estilo, más una justificación de la elección final para el público objetivo.",
+                                "checklist": [
+                                    "Probé al menos 4 estilos de video diferentes.",
+                                    "Analicé cuál comunica mejor para mi objetivo.",
+                                    "Elegí el estilo más adecuado para mi audiencia."
+                                ],
+                                "promptStarter": "Genera un video sobre el ahorro de energía en estilo animación, luego realista, publicitario y educativo.",
+                                "promptExamples": [
+                                    { "title": "Prompt para animación", "prompt": "Crea un video animado sobre la importancia de reciclar, estilo cartoon." },
+                                    { "title": "Prompt para realista", "prompt": "Genera un video realista explicando los beneficios del reciclaje." },
+                                    { "title": "Prompt para publicitario", "prompt": "Crea un anuncio de video breve para motivar a reciclar." }
+                                ]
+                            },
+                            "mejorar-resultados": {
+                                "id": "mejorar-resultados",
+                                "title": "Cómo mejorar resultados y evitar errores comunes",
+                                "moduleTitle": "Herramientas de video",
+                                "durationMinutes": 10,
+                                "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener videos más precisos y profesionales.",
+                                "objectives": [
+                                    "Identificar errores comunes en prompts de video.",
+                                    "Aplicar técnicas de iteración y ajuste.",
+                                    "Obtener videos más alineados con tu idea inicial."
+                                ],
+                                "sections": [
+                                    { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo del video. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                                    { "heading": "Iterar y ajustar para mejorar", "content": "Genera el video, analiza el resultado y ajusta el prompt: cambia el estilo, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                    { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+                                ],
+                                "activity": "Elige un video generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                                "deliverable": "Secuencia de 3 videos (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                                "checklist": [
+                                    "Identifiqué y corregí errores en mis prompts.",
+                                    "Iteré al menos dos veces para mejorar el resultado.",
+                                    "Documenté el proceso de mejora."
+                                ],
+                                "promptStarter": "Genera un video sobre la importancia de la lectura. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la claridad y el nivel de detalle.",
+                                "promptExamples": [
+                                    { "title": "Prompt original", "prompt": "La importancia de la lectura en la educación." },
+                                    { "title": "Primera iteración", "prompt": "Explica con ejemplos concretos por qué la lectura es fundamental para el aprendizaje, en formato de video animado." },
+                                    { "title": "Segunda iteración", "prompt": "Genera un video persuasivo sobre los beneficios de la lectura diaria, dirigido a estudiantes de secundaria." }
+                                ]
+                            },
+                            "proyecto-final": {
+                                "id": "proyecto-final",
+                                "title": "Proyecto final: portafolio de videos IA",
+                                "moduleTitle": "Herramientas de video",
+                                "durationMinutes": 12,
+                                "summary": "Pon en práctica todo lo aprendido creando un portafolio personal de videos generados con IA, aplicando diferentes estilos, herramientas y técnicas de prompting.",
+                                "objectives": [
+                                    "Aplicar técnicas de prompting y adaptación de estilos.",
+                                    "Usar al menos dos herramientas diferentes de IA de video.",
+                                    "Presentar un portafolio con justificación de cada video."
+                                ],
+                                "sections": [
+                                    { "heading": "Definir el objetivo del portafolio", "content": "Elige un tema central (educación, tecnología, medio ambiente, etc.) y define el propósito de tu portafolio: mostrar habilidades, inspirar, presentar a clientes, etc." },
+                                    { "heading": "Seleccionar herramientas y estilos", "content": "Genera al menos 5 videos usando diferentes herramientas (Pika, Runway, Kaiber, etc.) y estilos variados. Documenta el proceso y los prompts usados." },
+                                    { "heading": "Presentar y justificar tus elecciones", "content": "Organiza los videos en un documento o galería, explica por qué elegiste cada estilo y herramienta, y qué aprendiste en el proceso." }
+                                ],
+                                "activity": "Crea un portafolio de 5 videos IA sobre un tema de tu elección, usando al menos 3 herramientas y 3 estilos diferentes.",
+                                "deliverable": "Portafolio digital con 5 videos, prompts utilizados y justificación de cada elección.",
+                                "checklist": [
+                                    "Generé al menos 5 videos con IA usando diferentes herramientas y estilos.",
+                                    "Documenté los prompts y el proceso de selección.",
+                                    "Justifiqué cada elección en mi portafolio."
+                                ],
+                                "promptStarter": "Crea una serie de videos sobre 'el futuro de la educación' usando Pika, Runway y Kaiber, cada uno en un estilo diferente.",
+                                "promptExamples": [
+                                    { "title": "Prompt para portafolio temático", "prompt": "Un video informativo sobre inteligencia artificial en la educación, dirigido a docentes." },
+                                    { "title": "Prompt para creatividad", "prompt": "Un video animado sobre un robot que aprende a escribir poesía." },
+                                    { "title": "Prompt para reflexión", "prompt": "Un video persuasivo sobre la importancia de la ética en el uso de IA." }
+                                ]
+                            }
+                        },
+                    /* ═══════════════════════════════════════════
+                       CURSO 9: ia-audio-avanzado
+                       Audio con IA: Técnicas avanzadas
+                       Nivel: Intermedio | 8 lecciones
+                       ═══════════════════════════════════════════ */
+                    "ia-audio-avanzado": {
+                        "prompt-engineering-audio": {
+                            "id": "prompt-engineering-audio",
+                            "title": "Prompt Engineering para audio",
+                            "moduleTitle": "Técnicas avanzadas",
+                            "durationMinutes": 12,
+                            "summary": "Descubre cómo estructurar prompts complejos para obtener audios precisos, creativos y personalizados. Aprende a usar descriptores, estilos y parámetros avanzados.",
+                            "objectives": [
+                                "Dominar la estructura avanzada de prompts para audio.",
+                                "Utilizar descriptores y parámetros para afinar resultados.",
+                                "Evitar ambigüedades y errores comunes en prompts complejos."
+                            ],
+                            "sections": [
+                                { "heading": "¿Qué es el prompt engineering en audio?", "content": "Es el arte de diseñar instrucciones detalladas y precisas para que la IA genere audios alineados con tu visión. Incluye el uso de descriptores, tono, formato y parámetros técnicos." },
+                                { "heading": "Descriptores y parámetros avanzados", "content": "Incluye detalles como tono de voz, emoción, velocidad, formato, duración, efectos, etc. Ejemplo: 'Genera un audio de bienvenida con voz entusiasta, duración 30 segundos, fondo musical alegre'." },
+                                { "heading": "Errores y cómo evitarlos", "content": "Evita prompts demasiado largos o contradictorios. Prioriza la claridad y la jerarquía de la información: primero el objetivo, luego el público, después el formato y finalmente los detalles técnicos." }
+                            ],
+                            "activity": "Escribe un prompt avanzado para 'un audio motivacional para estudiantes, voz juvenil, fondo musical inspirador'. Experimenta cambiando el tono y la velocidad.",
+                            "deliverable": "Dos audios generados con variaciones en tono y velocidad, más una reflexión sobre el impacto de los cambios.",
+                            "checklist": [
+                                "Escribí y probé un prompt avanzado con descriptores detallados.",
+                                "Ajusté parámetros para comparar resultados.",
+                                "Documenté el impacto de los cambios en el resultado."
+                            ],
+                            "promptStarter": "Genera un audio de felicitación por logros académicos, primero en tono formal y luego en tono festivo.",
+                            "promptExamples": [
+                                { "title": "Prompt avanzado con descriptores", "prompt": "Crea un audio de bienvenida para un congreso, voz profesional, fondo musical suave, duración 45 segundos." },
+                                { "title": "Prompt con parámetros técnicos", "prompt": "Genera un audio de despedida con voz cálida, velocidad lenta, duración 20 segundos." },
+                                { "title": "Prompt para formato específico", "prompt": "Crea un jingle publicitario de 10 segundos para una campaña ecológica, estilo alegre." }
+                            ]
+                        },
+                        "combinacion-herramientas-audio": {
+                            "id": "combinacion-herramientas-audio",
+                            "title": "Combinando herramientas de IA para audio",
+                            "moduleTitle": "Técnicas avanzadas",
+                            "durationMinutes": 10,
+                            "summary": "Aprende a combinar diferentes generadores de audio IA para obtener resultados únicos y aprovechar lo mejor de cada uno.",
+                            "objectives": [
+                                "Identificar ventajas y limitaciones de cada herramienta.",
+                                "Combinar audios generados en diferentes plataformas.",
+                                "Optimizar el flujo de trabajo creativo usando IA."
+                            ],
+                            "sections": [
+                                { "heading": "¿Por qué combinar herramientas?", "content": "Cada generador de audio IA tiene fortalezas: ElevenLabs es versátil, Suno destaca en música, Play.ht es bueno en voces personalizadas. Combinarlas permite obtener resultados más ricos y variados." },
+                                { "heading": "Flujo de trabajo recomendado", "content": "Ejemplo: genera una voz en ElevenLabs, añade música en Suno y edita efectos en Auphonic. Así aprovechas la calidad, la creatividad y la personalización de cada herramienta." },
+                                { "heading": "Consejos para integración", "content": "Guarda tus audios en alta calidad, usa editores para ajustes finales y documenta los prompts y parámetros usados en cada etapa." }
+                            ],
+                            "activity": "Crea un audio narrativo en ElevenLabs, añade música en Suno y edita efectos en Auphonic. Documenta el proceso y los cambios en cada etapa.",
+                            "deliverable": "Secuencia de 3 audios (narración, música, efectos) con explicación de los cambios y herramientas usadas.",
+                            "checklist": [
+                                "Probé al menos dos herramientas diferentes en un mismo proyecto.",
+                                "Documenté el flujo de trabajo y los prompts usados.",
+                                "Analicé las ventajas de cada herramienta en el resultado final."
+                            ],
+                            "promptStarter": "Genera un audio de cuento infantil en ElevenLabs, añade música en Suno y edita efectos en Auphonic.",
+                            "promptExamples": [
+                                { "title": "Prompt para narración inicial", "prompt": "Crea un audio narrando una fábula corta, voz cálida, duración 1 minuto." },
+                                { "title": "Prompt para música de fondo", "prompt": "Añade música alegre de fondo al audio anterior, estilo infantil." },
+                                { "title": "Prompt para efectos", "prompt": "Agrega efectos de sonido de naturaleza al audio narrado." }
+                            ]
+                        },
+                        "edicion-avanzada": {
+                            "id": "edicion-avanzada",
+                            "title": "Edición avanzada de audio con IA",
+                            "moduleTitle": "Técnicas avanzadas",
+                            "durationMinutes": 12,
+                            "summary": "Descubre técnicas avanzadas de edición de audio con IA: separación de pistas, mejora de calidad, efectos y personalización profesional.",
+                            "objectives": [
+                                "Separar voces y música en un audio con IA.",
+                                "Aplicar efectos avanzados y mejorar la calidad.",
+                                "Personalizar audios para proyectos profesionales."
+                            ],
+                            "sections": [
+                                { "heading": "Separación de pistas con IA", "content": "Herramientas como LALAL.AI o Spleeter permiten separar voces, instrumentos y música de fondo en un audio. Es útil para remixes, doblajes o análisis de grabaciones." },
+                                { "heading": "Mejora y efectos avanzados", "content": "Aplica reducción de ruido, ecualización, compresión y efectos especiales para lograr un audio profesional. Usa editores como Adobe Podcast AI o Auphonic para resultados óptimos." },
+                                { "heading": "Personalización profesional", "content": "Ajusta parámetros como tono, tempo, reverberación y mezcla para adaptar el audio a diferentes contextos: podcasts, videos, presentaciones, etc." }
+                            ],
+                            "activity": "Toma un audio con música y voz, sepáralos usando IA. Luego, mejora la voz y añade un efecto especial.",
+                            "deliverable": "Audio original, pistas separadas y versión editada con efectos, más una reflexión sobre el proceso de edición avanzada.",
+                            "checklist": [
+                                "Usé IA para separar y editar pistas de audio.",
+                                "Apliqué al menos dos efectos avanzados.",
+                                "Documenté el proceso y los resultados obtenidos."
+                            ],
+                            "promptStarter": "Separa la voz y la música de un audio de podcast, mejora la calidad de la voz y añade un efecto de eco.",
+                            "promptExamples": [
+                                { "title": "Prompt para separación de pistas", "prompt": "Separa la voz y la música de este audio de canción." },
+                                { "title": "Prompt para mejora avanzada", "prompt": "Mejora la claridad y el volumen de la voz en este audio." },
+                                { "title": "Prompt para efectos especiales", "prompt": "Añade un efecto de reverberación a la voz principal." }
+                            ]
+                        },
+                        "automatizacion-audio": {
+                            "id": "automatizacion-audio",
+                            "title": "Automatización de generación de audio IA",
+                            "moduleTitle": "Técnicas avanzadas",
+                            "durationMinutes": 10,
+                            "summary": "Aprende a automatizar la creación de audios IA usando scripts, APIs y flujos de trabajo programados.",
+                            "objectives": [
+                                "Conocer las opciones de automatización para audio IA.",
+                                "Crear un script básico para generar audios automáticamente.",
+                                "Integrar la generación de audios en otros proyectos digitales."
+                            ],
+                            "sections": [
+                                { "heading": "¿Por qué automatizar?", "content": "La automatización permite generar grandes volúmenes de audios, crear variaciones rápidamente y ahorrar tiempo en proyectos creativos o empresariales." },
+                                { "heading": "Opciones de automatización", "content": "Usa APIs de ElevenLabs, Play.ht o Suno, o scripts en Python para enviar prompts y descargar audios automáticamente. Ejemplo: automatizar la creación de audios para una app educativa o una campaña de marketing." },
+                                { "heading": "Ejemplo de script básico", "content": "Un script en Python que envía una lista de prompts a la API de ElevenLabs y guarda los audios generados en una carpeta local." }
+                            ],
+                            "activity": "Crea un script sencillo que genere 5 audios IA a partir de una lista de prompts y los guarde automáticamente.",
+                            "deliverable": "Script funcional y carpeta con los audios generados, más una breve explicación del proceso.",
+                            "checklist": [
+                                "Creé un script o usé una API para automatizar la generación de audios.",
+                                "Probé la automatización con al menos 5 prompts diferentes.",
+                                "Documenté el proceso y los resultados obtenidos."
+                            ],
+                            "promptStarter": "Automatiza la generación de audios de diferentes mensajes en estilos variados usando una API de IA.",
+                            "promptExamples": [
+                                { "title": "Prompt para automatización", "prompt": "Genera un audio de saludo en estilo formal." },
+                                { "title": "Prompt para variaciones", "prompt": "Crea 3 versiones de un mismo mensaje en diferentes tonos: profesional, amistoso y creativo." },
+                                { "title": "Prompt para integración digital", "prompt": "Genera audios para notificaciones de una app móvil, estilo breve y claro." }
+                            ]
+                        },
+                        "mejorar-resultados": {
+                            "id": "mejorar-resultados",
+                            "title": "Cómo mejorar resultados y evitar errores comunes",
+                            "moduleTitle": "Técnicas avanzadas",
+                            "durationMinutes": 10,
+                            "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener audios más precisos y profesionales.",
+                            "objectives": [
+                                "Identificar errores comunes en prompts de audio.",
+                                "Aplicar técnicas de iteración y ajuste.",
+                                "Obtener audios más alineados con tu idea inicial."
+                            ],
+                            "sections": [
+                                { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo del audio. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                                { "heading": "Iterar y ajustar para mejorar", "content": "Genera el audio, analiza el resultado y ajusta el prompt: cambia el estilo, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                                { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+                            ],
+                            "activity": "Elige un audio generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                            "deliverable": "Secuencia de 3 audios (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                            "checklist": [
+                                "Identifiqué y corregí errores en mis prompts.",
+                                "Iteré al menos dos veces para mejorar el resultado.",
+                                "Documenté el proceso de mejora."
+                            ],
+                            "promptStarter": "Genera un audio sobre la importancia de la comunicación clara. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la claridad y el nivel de detalle.",
+                            "promptExamples": [
+                                { "title": "Prompt original", "prompt": "La importancia de la comunicación en el trabajo en equipo." },
+                                { "title": "Primera iteración", "prompt": "Explica con ejemplos concretos por qué la comunicación es fundamental para el éxito de los proyectos." },
+                                { "title": "Segunda iteración", "prompt": "Genera un audio persuasivo sobre los beneficios de la comunicación efectiva, dirigido a líderes de equipos." }
+                            ]
+                        },
+                        "proyecto-final": {
+                            "id": "proyecto-final",
+                            "title": "Proyecto final: portafolio avanzado de audios IA",
+                            "moduleTitle": "Técnicas avanzadas",
+                            "durationMinutes": 13,
+                            "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de audios IA, combinando herramientas, estilos y automatización.",
+                            "objectives": [
+                                "Combinar técnicas avanzadas de prompting, edición y automatización.",
+                                "Crear un portafolio temático con audios IA personalizados.",
+                                "Documentar el proceso y justificar cada elección creativa."
+                            ],
+                            "sections": [
+                                { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un tema avanzado (salud, tecnología, educación, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                                { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 audios usando diferentes técnicas: prompt engineering, edición avanzada, automatización, combinación de herramientas. Documenta cada paso y los prompts usados." },
+                                { "heading": "Presentar y justificar el portafolio", "content": "Organiza los audios en un documento digital, explica las técnicas y herramientas usadas en cada uno, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                            ],
+                            "activity": "Crea un portafolio digital de 6 audios IA sobre un tema avanzado, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                            "deliverable": "Portafolio digital con 6 audios, prompts, técnicas usadas y justificación de cada elección creativa.",
+                            "checklist": [
+                                "Generé al menos 6 audios IA aplicando técnicas avanzadas.",
+                                "Documenté el proceso y los prompts usados.",
+                                "Justifiqué cada elección creativa en el portafolio."
+                            ],
+                            "promptStarter": "Crea una serie de audios sobre 'el futuro de la comunicación' usando técnicas avanzadas de prompting, edición y automatización.",
+                            "promptExamples": [
+                                { "title": "Prompt para portafolio temático", "prompt": "Un audio informativo sobre inteligencia artificial en la comunicación, dirigido a profesionales." },
+                                { "title": "Prompt para creatividad", "prompt": "Un cuento breve narrado con voz IA sobre un robot que aprende a escuchar." },
+                                { "title": "Prompt para edición avanzada", "prompt": "Genera un audio con efectos especiales sobre la evolución de la tecnología." }
+                            ]
+                        }
+                    },
+                /* ═══════════════════════════════════════════
+                   CURSO 8: ia-audio-basico
+                   Audio con IA: Primeros pasos
+                   Nivel: Principiante | 8 lecciones
+                   ═══════════════════════════════════════════ */
+                "ia-audio-basico": {
+                    "voz-ia-intro": {
+                        "id": "voz-ia-intro",
+                        "title": "Introducción a la voz con IA",
+                        "moduleTitle": "Herramientas de audio",
+                        "durationMinutes": 10,
+                        "summary": "Descubre cómo la IA puede generar voces sintéticas realistas y personalizadas. Aprende a usar herramientas básicas para crear tus primeros audios.",
+                        "objectives": [
+                            "Entender el funcionamiento básico de la síntesis de voz IA.",
+                            "Crear tu primer audio a partir de un texto simple.",
+                            "Identificar los límites y mejores usos de la voz IA."
+                        ],
+                        "sections": [
+                            { "heading": "¿Qué es la síntesis de voz IA?", "content": "La síntesis de voz IA convierte texto en audio usando modelos entrenados para imitar voces humanas. Es útil para narraciones, accesibilidad, asistentes virtuales y más." },
+                            { "heading": "Cómo usar herramientas básicas de voz IA", "content": "Plataformas como ElevenLabs, Play.ht o Google Text-to-Speech permiten escribir un texto y elegir una voz para generar el audio. Ejemplo: 'Bienvenido a nuestro curso de IA'." },
+                            { "heading": "Limitaciones y mejores prácticas", "content": "Las voces IA pueden sonar robóticas o poco expresivas en textos largos o complejos. Para mejores resultados, usa frases cortas, puntuación clara y elige voces adecuadas al contexto." }
+                        ],
+                        "activity": "Genera un audio de bienvenida para un curso online usando una herramienta de voz IA. Prueba diferentes voces y velocidades.",
+                        "deliverable": "Tres versiones del audio: voz masculina, femenina y una con velocidad ajustada, más una reflexión sobre cuál comunica mejor tu mensaje.",
+                        "checklist": [
+                            "He generado al menos 3 audios con voz IA.",
+                            "Probé diferentes voces y velocidades.",
+                            "Identifiqué una limitación de la voz IA en mis pruebas."
+                        ],
+                        "promptStarter": "Genera un audio de despedida para un evento, primero en tono formal y luego en tono amistoso.",
+                        "promptExamples": [
+                            { "title": "Prompt simple para voz IA", "prompt": "Convierte este texto en audio: 'Gracias por participar en nuestro taller'." },
+                            { "title": "Prompt con voz específica", "prompt": "Genera un audio con voz juvenil y tono entusiasta: '¡Nos vemos en la próxima sesión!'" },
+                            { "title": "Prompt para velocidad ajustada", "prompt": "Crea un audio con voz pausada y clara: 'Recuerda repasar los materiales del curso'." }
+                        ]
+                    },
+                    "mejorar-audio": {
+                        "id": "mejorar-audio",
+                        "title": "Mejorar y editar audios con IA",
+                        "moduleTitle": "Herramientas de audio",
+                        "durationMinutes": 10,
+                        "summary": "Aprende a usar la IA para mejorar la calidad de tus audios, eliminar ruido y editar grabaciones fácilmente.",
+                        "objectives": [
+                            "Eliminar ruido y mejorar la claridad de un audio.",
+                            "Editar y ajustar grabaciones con herramientas IA.",
+                            "Aplicar efectos y cambios de voz básicos."
+                        ],
+                        "sections": [
+                            { "heading": "Eliminación de ruido y mejora de calidad", "content": "Herramientas como Adobe Podcast AI o Auphonic eliminan ruido de fondo y mejoran la claridad automáticamente. Solo sube tu audio y descarga la versión mejorada." },
+                            { "heading": "Edición básica con IA", "content": "Puedes cortar, unir y ajustar fragmentos de audio usando editores con IA. Algunos permiten cambiar el tono, la velocidad o añadir efectos simples." },
+                            { "heading": "Aplicar efectos y cambios de voz", "content": "Prueba cambiar la voz a masculina, femenina o infantil, o añade eco y otros efectos para personalizar tus grabaciones." }
+                        ],
+                        "activity": "Graba un audio breve y usa una herramienta IA para eliminar el ruido. Luego, edita la velocidad y añade un efecto de eco.",
+                        "deliverable": "Audio original, versión mejorada y versión editada con efectos, más una reflexión sobre los cambios realizados.",
+                        "checklist": [
+                            "Usé la IA para mejorar y editar un audio.",
+                            "Probé al menos dos efectos o cambios de voz.",
+                            "Analicé el impacto de las mejoras en la calidad del audio."
+                        ],
+                        "promptStarter": "Graba una presentación personal y mejora el audio con IA. Luego, cambia la voz a un tono más grave y añade un efecto de eco.",
+                        "promptExamples": [
+                            { "title": "Prompt para mejora de audio", "prompt": "Elimina el ruido de fondo y mejora la claridad de este audio." },
+                            { "title": "Prompt para cambio de voz", "prompt": "Convierte la voz original en una voz infantil y añade un efecto divertido." },
+                            { "title": "Prompt para edición creativa", "prompt": "Ajusta la velocidad del audio para que suene más dinámico y añade un efecto de reverberación." }
+                        ]
+                    },
+                    "musica-ia": {
+                        "id": "musica-ia",
+                        "title": "Generación de música con IA",
+                        "moduleTitle": "Herramientas de audio",
+                        "durationMinutes": 10,
+                        "summary": "Explora cómo la IA puede crear música original a partir de descripciones o estilos, y aprende a generar tus primeras piezas musicales.",
+                        "objectives": [
+                            "Generar música original con IA a partir de un prompt.",
+                            "Probar diferentes estilos y géneros musicales.",
+                            "Identificar limitaciones y mejores usos de la música IA."
+                        ],
+                        "sections": [
+                            { "heading": "¿Qué es la música generada por IA?", "content": "Modelos como Suno, AIVA o Soundful crean música original a partir de descripciones textuales o selección de estilos. Es útil para videos, podcasts y proyectos creativos." },
+                            { "heading": "Cómo generar música con IA", "content": "Elige un estilo (pop, rock, ambiental, etc.), escribe una breve descripción y la IA generará una pieza musical. Ejemplo: 'Música alegre para fondo de video educativo'." },
+                            { "heading": "Limitaciones y mejores prácticas", "content": "La música IA puede ser repetitiva o carecer de matices humanos. Para mejores resultados, ajusta la duración, elige estilos variados y edita la música generada según tus necesidades." }
+                        ],
+                        "activity": "Genera una pieza musical para un video de presentación usando IA. Prueba al menos dos estilos diferentes (alegre y relajante).",
+                        "deliverable": "Dos piezas musicales generadas con IA, más una reflexión sobre cuál se adapta mejor al video.",
+                        "checklist": [
+                            "Generé al menos dos piezas musicales con IA.",
+                            "Probé diferentes estilos y géneros.",
+                            "Analicé la utilidad de la música IA en mi proyecto."
+                        ],
+                        "promptStarter": "Crea una música de fondo para un podcast educativo, primero en estilo pop y luego en estilo ambiental.",
+                        "promptExamples": [
+                            { "title": "Prompt para música alegre", "prompt": "Genera una pieza musical alegre y motivadora para un video de bienvenida." },
+                            { "title": "Prompt para música relajante", "prompt": "Crea una música ambiental suave para acompañar una meditación guiada." },
+                            { "title": "Prompt para música de suspenso", "prompt": "Genera una pieza musical de suspenso para un tráiler de película." }
+                        ]
+                    },
+                    "resumir-audio": {
+                        "id": "resumir-audio",
+                        "title": "Resumir y transcribir audios con IA",
+                        "moduleTitle": "Herramientas de audio",
+                        "durationMinutes": 9,
+                        "summary": "Aprende a usar la IA para transcribir y resumir audios, facilitando la organización y el análisis de información hablada.",
+                        "objectives": [
+                            "Transcribir audios a texto con IA.",
+                            "Resumir grabaciones largas en puntos clave.",
+                            "Organizar información de audio de manera eficiente."
+                        ],
+                        "sections": [
+                            { "heading": "Transcripción automática con IA", "content": "Herramientas como Whisper, Otter.ai o Google Speech-to-Text convierten audios en texto de forma precisa. Solo sube tu grabación y descarga la transcripción." },
+                            { "heading": "Resumir grabaciones largas", "content": "Pide a la IA que resuma una transcripción en puntos clave o en un número específico de frases. Ejemplo: 'Resume esta reunión en 5 ideas principales'." },
+                            { "heading": "Organizar información de audio", "content": "La IA puede ayudarte a estructurar la información transcrita en listas, tablas o esquemas para facilitar su análisis y estudio." }
+                        ],
+                        "activity": "Transcribe un audio breve con IA y pide un resumen en 5 frases. Organiza la información en una tabla comparativa.",
+                        "deliverable": "Transcripción, resumen y tabla comparativa, más una reflexión sobre la utilidad de cada formato.",
+                        "checklist": [
+                            "Usé la IA para transcribir y resumir un audio.",
+                            "Probé diferentes formatos de organización de información.",
+                            "Analicé cuál formato es más útil para mi objetivo."
+                        ],
+                        "promptStarter": "Transcribe un audio de una entrevista y resume las ideas principales en una lista.",
+                        "promptExamples": [
+                            { "title": "Prompt para transcripción", "prompt": "Transcribe este audio de una clase magistral." },
+                            { "title": "Prompt para resumen de audio", "prompt": "Resume la grabación de la reunión en 5 frases clave." },
+                            { "title": "Prompt para tabla comparativa", "prompt": "Organiza la información de la entrevista en una tabla con preguntas y respuestas." }
+                        ]
+                    },
+                    "estilos-audio": {
+                        "id": "estilos-audio",
+                        "title": "Estilos de audio y adaptación",
+                        "moduleTitle": "Herramientas de audio",
+                        "durationMinutes": 9,
+                        "summary": "Conoce los estilos de audio más comunes y aprende a adaptar tus grabaciones según el público y el objetivo.",
+                        "objectives": [
+                            "Identificar al menos 4 estilos de audio.",
+                            "Adaptar un audio a diferentes estilos y públicos.",
+                            "Elegir el estilo más adecuado para cada situación."
+                        ],
+                        "sections": [
+                            { "heading": "Estilos de audio más usados", "content": "Narrativo, informativo, publicitario y educativo. Cada uno tiene características propias y se adapta a diferentes objetivos: contar historias, informar, persuadir o enseñar." },
+                            { "heading": "Cómo adaptar el estilo", "content": "Define el objetivo y el público del audio. Ajusta el tono, la velocidad y la música de fondo para conectar mejor con los oyentes. Prueba diferentes estilos para ver cuál comunica mejor tu mensaje." },
+                            { "heading": "Ejemplos prácticos", "content": "Toma un mismo mensaje (por ejemplo, una invitación) y graba versiones en cada estilo. Analiza cómo cambia la percepción según el enfoque." }
+                        ],
+                        "activity": "Graba un mensaje sobre la importancia de la hidratación en estilo narrativo, informativo, publicitario y educativo. Compara los resultados y elige el más adecuado para una campaña escolar.",
+                        "deliverable": "Cuatro versiones del audio, una por estilo, más una justificación de la elección final para el público objetivo.",
+                        "checklist": [
+                            "Probé al menos 4 estilos de audio diferentes.",
+                            "Analicé cuál comunica mejor para mi objetivo.",
+                            "Elegí el estilo más adecuado para mi audiencia."
+                        ],
+                        "promptStarter": "Graba un mensaje sobre el reciclaje en estilo narrativo, luego informativo, publicitario y educativo.",
+                        "promptExamples": [
+                            { "title": "Prompt para narrativo", "prompt": "Cuenta una historia breve sobre la importancia de reciclar, en formato de audio." },
+                            { "title": "Prompt para informativo", "prompt": "Graba un audio explicando los beneficios del reciclaje en tono informativo." },
+                            { "title": "Prompt para publicitario", "prompt": "Crea un anuncio de audio breve para motivar a reciclar." }
+                        ]
+                    },
+                    "mejorar-resultados": {
+                        "id": "mejorar-resultados",
+                        "title": "Cómo mejorar resultados y evitar errores comunes",
+                        "moduleTitle": "Herramientas de audio",
+                        "durationMinutes": 10,
+                        "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener audios más precisos y profesionales.",
+                        "objectives": [
+                            "Identificar errores comunes en prompts de audio.",
+                            "Aplicar técnicas de iteración y ajuste.",
+                            "Obtener audios más alineados con tu idea inicial."
+                        ],
+                        "sections": [
+                            { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo del audio. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                            { "heading": "Iterar y ajustar para mejorar", "content": "Genera el audio, analiza el resultado y ajusta el prompt: cambia el estilo, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                            { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+                        ],
+                        "activity": "Elige un audio generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                        "deliverable": "Secuencia de 3 audios (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                        "checklist": [
+                            "Identifiqué y corregí errores en mis prompts.",
+                            "Iteré al menos dos veces para mejorar el resultado.",
+                            "Documenté el proceso de mejora."
+                        ],
+                        "promptStarter": "Graba un audio sobre la importancia del descanso. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la claridad y el nivel de detalle.",
+                        "promptExamples": [
+                            { "title": "Prompt original", "prompt": "La importancia del descanso para la salud." },
+                            { "title": "Primera iteración", "prompt": "Explica con ejemplos concretos por qué el descanso es fundamental para el bienestar." },
+                            { "title": "Segunda iteración", "prompt": "Graba un audio persuasivo sobre los beneficios del descanso diario, dirigido a estudiantes." }
+                        ]
+                    },
+                    "proyecto-final": {
+                        "id": "proyecto-final",
+                        "title": "Proyecto final: portafolio de audios IA",
+                        "moduleTitle": "Herramientas de audio",
+                        "durationMinutes": 12,
+                        "summary": "Pon en práctica todo lo aprendido creando un portafolio personal de audios generados con IA, aplicando diferentes estilos, herramientas y técnicas de prompting.",
+                        "objectives": [
+                            "Aplicar técnicas de prompting y adaptación de estilos.",
+                            "Usar al menos dos herramientas diferentes de IA de audio.",
+                            "Presentar un portafolio con justificación de cada audio."
+                        ],
+                        "sections": [
+                            { "heading": "Definir el objetivo del portafolio", "content": "Elige un tema central (educación, salud, tecnología, etc.) y define el propósito de tu portafolio: mostrar habilidades, inspirar, presentar a clientes, etc." },
+                            { "heading": "Seleccionar herramientas y estilos", "content": "Genera al menos 5 audios usando diferentes herramientas (ElevenLabs, Play.ht, Suno, etc.) y estilos variados. Documenta el proceso y los prompts usados." },
+                            { "heading": "Presentar y justificar tus elecciones", "content": "Organiza los audios en un documento o galería, explica por qué elegiste cada estilo y herramienta, y qué aprendiste en el proceso." }
+                        ],
+                        "activity": "Crea un portafolio de 5 audios IA sobre un tema de tu elección, usando al menos 3 herramientas y 3 estilos diferentes.",
+                        "deliverable": "Portafolio digital con 5 audios, prompts utilizados y justificación de cada elección.",
+                        "checklist": [
+                            "Generé al menos 5 audios con IA usando diferentes herramientas y estilos.",
+                            "Documenté los prompts y el proceso de selección.",
+                            "Justifiqué cada elección en mi portafolio."
+                        ],
+                        "promptStarter": "Crea una serie de audios sobre 'hábitos saludables' usando ElevenLabs, Play.ht y Suno, cada uno en un estilo diferente.",
+                        "promptExamples": [
+                            { "title": "Prompt para portafolio temático", "prompt": "Un audio informativo sobre la importancia de la hidratación, dirigido a adolescentes." },
+                            { "title": "Prompt para creatividad", "prompt": "Un cuento breve narrado con voz IA sobre un robot que aprende a cantar." },
+                            { "title": "Prompt para reflexión", "prompt": "Un audio persuasivo sobre la importancia de la empatía en la vida diaria." }
+                        ]
+                    }
+                },
+            /* ═══════════════════════════════════════════
+               CURSO 7: ia-textos-avanzado
+               Textos con IA: Técnicas avanzadas
+               Nivel: Intermedio | 8 lecciones
+               ═══════════════════════════════════════════ */
+            "ia-textos-avanzado": {
+                "prompt-engineering": {
+                    "id": "prompt-engineering",
+                    "title": "Prompt Engineering para textos",
+                    "moduleTitle": "Técnicas avanzadas",
+                    "durationMinutes": 12,
+                    "summary": "Descubre cómo estructurar prompts complejos para obtener textos precisos, creativos y personalizados. Aprende a usar descriptores, estilos y parámetros avanzados.",
+                    "objectives": [
+                        "Dominar la estructura avanzada de prompts textuales.",
+                        "Utilizar descriptores y parámetros para afinar resultados.",
+                        "Evitar ambigüedades y errores comunes en prompts complejos."
+                    ],
+                    "sections": [
+                        { "heading": "¿Qué es el prompt engineering?", "content": "Es el arte de diseñar instrucciones detalladas y precisas para que la IA genere textos alineados con tu visión. Incluye el uso de descriptores, tono, formato y parámetros técnicos." },
+                        { "heading": "Descriptores y parámetros avanzados", "content": "Incluye detalles como tono, público objetivo, formato, extensión, nivel de detalle, etc. Ejemplo: 'Redacta un informe ejecutivo de 300 palabras sobre energías renovables, tono formal, dirigido a directivos'." },
+                        { "heading": "Errores y cómo evitarlos", "content": "Evita prompts demasiado largos o contradictorios. Prioriza la claridad y la jerarquía de la información: primero el objetivo, luego el público, después el formato y finalmente los detalles técnicos." }
+                    ],
+                    "activity": "Escribe un prompt avanzado para 'un artículo de opinión sobre el impacto de la IA en la educación, dirigido a padres y docentes, tono reflexivo'. Experimenta cambiando el público y el tono.",
+                    "deliverable": "Dos textos generados con variaciones en público y tono, más una reflexión sobre el impacto de los cambios.",
+                    "checklist": [
+                        "Escribí y probé un prompt avanzado con descriptores detallados.",
+                        "Ajusté parámetros para comparar resultados.",
+                        "Documenté el impacto de los cambios en el resultado."
+                    ],
+                    "promptStarter": "Redacta una carta abierta sobre el uso responsable de la IA, primero en tono formal y luego en tono inspirador.",
+                    "promptExamples": [
+                        { "title": "Prompt avanzado con descriptores", "prompt": "Redacta un discurso motivacional para estudiantes universitarios sobre el futuro de la tecnología, tono optimista, duración 3 minutos." },
+                        { "title": "Prompt con parámetros técnicos", "prompt": "Escribe un resumen ejecutivo de 200 palabras sobre energías limpias, dirigido a inversores." },
+                        { "title": "Prompt para formato específico", "prompt": "Crea una tabla comparativa de ventajas y desventajas de la IA en la medicina." }
+                    ]
+                },
+                "combinacion-herramientas": {
+                    "id": "combinacion-herramientas",
+                    "title": "Combinando herramientas de IA para textos",
+                    "moduleTitle": "Técnicas avanzadas",
+                    "durationMinutes": 10,
+                    "summary": "Aprende a combinar diferentes generadores de texto IA para obtener resultados únicos y aprovechar lo mejor de cada uno.",
+                    "objectives": [
+                        "Identificar ventajas y limitaciones de cada herramienta.",
+                        "Combinar textos generados en diferentes plataformas.",
+                        "Optimizar el flujo de trabajo creativo usando IA."
+                    ],
+                    "sections": [
+                        { "heading": "¿Por qué combinar herramientas?", "content": "Cada generador de texto IA tiene fortalezas: ChatGPT es versátil, Gemini destaca en síntesis, Claude es bueno en razonamiento. Combinarlas permite obtener resultados más ricos y variados." },
+                        { "heading": "Flujo de trabajo recomendado", "content": "Ejemplo: genera un borrador en ChatGPT, refínalo en Gemini y aplica revisiones finales en Claude. Así aprovechas la creatividad, la síntesis y la precisión de cada herramienta." },
+                        { "heading": "Consejos para integración", "content": "Guarda tus textos en diferentes versiones, usa editores para ajustes finales y documenta los prompts y parámetros usados en cada etapa." }
+                    ],
+                    "activity": "Crea un texto informativo en ChatGPT, resúmelo en Gemini y revisa el estilo en Claude. Documenta el proceso y los cambios en cada etapa.",
+                    "deliverable": "Secuencia de 3 textos (borrador, resumen, revisión) con explicación de los cambios y herramientas usadas.",
+                    "checklist": [
+                        "Probé al menos dos herramientas diferentes en un mismo proyecto.",
+                        "Documenté el flujo de trabajo y los prompts usados.",
+                        "Analicé las ventajas de cada herramienta en el resultado final."
+                    ],
+                    "promptStarter": "Genera un artículo sobre energías renovables en ChatGPT, resúmelo en Gemini y revisa el tono en Claude.",
+                    "promptExamples": [
+                        { "title": "Prompt para borrador inicial", "prompt": "Redacta un artículo de 500 palabras sobre inteligencia artificial en la educación." },
+                        { "title": "Prompt para resumen", "prompt": "Resume el artículo anterior en 5 frases clave." },
+                        { "title": "Prompt para revisión de estilo", "prompt": "Revisa el texto para hacerlo más persuasivo y claro, dirigido a docentes." }
+                    ]
+                },
+                "analisis-sentimientos": {
+                    "id": "analisis-sentimientos",
+                    "title": "Análisis de sentimientos y tono con IA",
+                    "moduleTitle": "Técnicas avanzadas",
+                    "durationMinutes": 12,
+                    "summary": "Descubre cómo la IA puede analizar el tono, la emoción y la intención de textos para mejorar la comunicación y la toma de decisiones.",
+                    "objectives": [
+                        "Entender el análisis de sentimientos y tono en textos IA.",
+                        "Aplicar análisis automático a textos propios o ajenos.",
+                        "Ajustar el mensaje según el análisis obtenido."
+                    ],
+                    "sections": [
+                        { "heading": "¿Qué es el análisis de sentimientos?", "content": "Es la capacidad de la IA para identificar emociones (positivo, negativo, neutral) y tono (formal, informal, entusiasta, etc.) en un texto. Es útil para adaptar mensajes y comprender mejor a la audiencia." },
+                        { "heading": "Herramientas y aplicaciones", "content": "ChatGPT, Gemini y otras IAs pueden analizar sentimientos y tono. Ejemplo: 'Analiza el tono de este email y sugiere mejoras para hacerlo más cordial'." },
+                        { "heading": "Ajustar el mensaje según el análisis", "content": "Tras el análisis, puedes pedir a la IA que modifique el texto para lograr el tono o emoción deseados, mejorando la efectividad de la comunicación." }
+                    ],
+                    "activity": "Analiza el tono de un email profesional y pide a la IA que lo haga más empático. Luego, solicita una versión más directa y otra más persuasiva.",
+                    "deliverable": "Tres versiones del email: empática, directa y persuasiva, más una reflexión sobre el impacto de cada tono.",
+                    "checklist": [
+                        "Usé la IA para analizar y ajustar el tono de un texto.",
+                        "Probé diferentes versiones según el análisis de sentimientos.",
+                        "Analicé el impacto de los cambios en la comunicación."
+                    ],
+                    "promptStarter": "Analiza el tono de un mensaje de disculpa y genera una versión más cálida y otra más formal.",
+                    "promptExamples": [
+                        { "title": "Prompt para análisis de tono", "prompt": "Analiza el tono de este texto y sugiere mejoras para hacerlo más motivador." },
+                        { "title": "Prompt para ajuste emocional", "prompt": "Convierte este mensaje neutral en uno entusiasta y otro reflexivo." },
+                        { "title": "Prompt para comparación de versiones", "prompt": "Genera dos versiones de este texto: una persuasiva y otra informativa." }
+                    ]
+                },
+                "escritura-colaborativa": {
+                    "id": "escritura-colaborativa",
+                    "title": "Escritura colaborativa con IA",
+                    "moduleTitle": "Técnicas avanzadas",
+                    "durationMinutes": 10,
+                    "summary": "Aprende a trabajar en equipo con la IA para co-crear textos, revisar ideas y mejorar resultados.",
+                    "objectives": [
+                        "Colaborar con la IA en la creación de textos.",
+                        "Revisar y mejorar ideas en equipo.",
+                        "Gestionar versiones y aportes de diferentes autores."
+                    ],
+                    "sections": [
+                        { "heading": "¿Qué es la escritura colaborativa con IA?", "content": "Consiste en alternar entre aportes humanos y de la IA para crear textos más ricos y variados. Puedes pedir sugerencias, revisiones o continuar textos iniciados por otros." },
+                        { "heading": "Flujo de trabajo colaborativo", "content": "Ejemplo: un usuario escribe el inicio de un cuento, la IA lo desarrolla, otro usuario revisa y así sucesivamente. Se pueden usar comentarios y versiones para organizar el trabajo." },
+                        { "heading": "Herramientas y consejos", "content": "Usa plataformas que permitan comentarios y control de versiones. Documenta los aportes de cada autor y revisa el texto final en conjunto." }
+                    ],
+                    "activity": "Crea un cuento corto alternando párrafos entre tú y la IA. Luego, revisa el texto con otro usuario y ajusta el final en equipo.",
+                    "deliverable": "Cuento colaborativo con indicación de los aportes de cada autor, más una reflexión sobre el proceso de co-creación.",
+                    "checklist": [
+                        "Colaboré con la IA y al menos otra persona en la creación de un texto.",
+                        "Documenté los aportes de cada autor.",
+                        "Revisé y mejoré el texto final en equipo."
+                    ],
+                    "promptStarter": "Escribe el inicio de una historia y pide a la IA que la continúe. Luego, revisa el texto con un compañero y ajusta el desenlace.",
+                    "promptExamples": [
+                        { "title": "Prompt para co-creación", "prompt": "Escribe el primer párrafo de un cuento de aventuras. Pide a la IA que escriba el segundo y así sucesivamente." },
+                        { "title": "Prompt para revisión colaborativa", "prompt": "Revisa el texto generado y sugiere mejoras en equipo." },
+                        { "title": "Prompt para final alternativo", "prompt": "Propón dos finales diferentes para la historia creada en colaboración." }
+                    ]
+                },
+                "automatizacion": {
+                    "id": "automatizacion",
+                    "title": "Automatización de generación de textos IA",
+                    "moduleTitle": "Técnicas avanzadas",
+                    "durationMinutes": 10,
+                    "summary": "Aprende a automatizar la creación de textos IA usando scripts, APIs y flujos de trabajo programados.",
+                    "objectives": [
+                        "Conocer las opciones de automatización para textos IA.",
+                        "Crear un script básico para generar textos automáticamente.",
+                        "Integrar la generación de textos en otros proyectos digitales."
+                    ],
+                    "sections": [
+                        { "heading": "¿Por qué automatizar?", "content": "La automatización permite generar grandes volúmenes de textos, crear variaciones rápidamente y ahorrar tiempo en proyectos creativos o empresariales." },
+                        { "heading": "Opciones de automatización", "content": "Usa APIs de ChatGPT, Gemini o Claude, o scripts en Python para enviar prompts y descargar textos automáticamente. Ejemplo: automatizar la creación de descripciones de productos para una tienda online." },
+                        { "heading": "Ejemplo de script básico", "content": "Un script en Python que envía una lista de prompts a la API de ChatGPT y guarda los textos generados en archivos locales." }
+                    ],
+                    "activity": "Crea un script sencillo que genere 5 textos IA a partir de una lista de prompts y los guarde automáticamente.",
+                    "deliverable": "Script funcional y archivos con los textos generados, más una breve explicación del proceso.",
+                    "checklist": [
+                        "Creé un script o usé una API para automatizar la generación de textos.",
+                        "Probé la automatización con al menos 5 prompts diferentes.",
+                        "Documenté el proceso y los resultados obtenidos."
+                    ],
+                    "promptStarter": "Automatiza la generación de textos de diferentes temas en estilos variados usando una API de IA.",
+                    "promptExamples": [
+                        { "title": "Prompt para automatización", "prompt": "Redacta una descripción de producto en estilo persuasivo." },
+                        { "title": "Prompt para variaciones", "prompt": "Genera 3 versiones de un mismo texto en diferentes tonos: formal, amistoso y creativo." },
+                        { "title": "Prompt para integración digital", "prompt": "Crea textos para publicaciones en redes sociales sobre tecnología, estilo breve y atractivo." }
+                    ]
+                },
+                "mejorar-resultados": {
+                    "id": "mejorar-resultados",
+                    "title": "Cómo mejorar resultados y evitar errores comunes",
+                    "moduleTitle": "Técnicas avanzadas",
+                    "durationMinutes": 10,
+                    "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener textos más precisos y profesionales.",
+                    "objectives": [
+                        "Identificar errores comunes en prompts de texto.",
+                        "Aplicar técnicas de iteración y ajuste.",
+                        "Obtener textos más alineados con tu idea inicial."
+                    ],
+                    "sections": [
+                        { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo del texto. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                        { "heading": "Iterar y ajustar para mejorar", "content": "Genera el texto, analiza el resultado y ajusta el prompt: cambia el estilo, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                        { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+                    ],
+                    "activity": "Elige un texto generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                    "deliverable": "Secuencia de 3 textos (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                    "checklist": [
+                        "Identifiqué y corregí errores en mis prompts.",
+                        "Iteré al menos dos veces para mejorar el resultado.",
+                        "Documenté el proceso de mejora."
+                    ],
+                    "promptStarter": "Redacta un texto sobre la importancia de la colaboración. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la claridad y el nivel de detalle.",
+                    "promptExamples": [
+                        { "title": "Prompt original", "prompt": "La importancia de la colaboración en el trabajo en equipo." },
+                        { "title": "Primera iteración", "prompt": "Explica con ejemplos concretos por qué la colaboración es fundamental para el éxito de los proyectos." },
+                        { "title": "Segunda iteración", "prompt": "Redacta un texto persuasivo sobre los beneficios de la colaboración, dirigido a líderes de equipos." }
+                    ]
+                },
+                "proyecto-final": {
+                    "id": "proyecto-final",
+                    "title": "Proyecto final: portafolio avanzado de textos IA",
+                    "moduleTitle": "Técnicas avanzadas",
+                    "durationMinutes": 13,
+                    "summary": "Aplica todas las técnicas aprendidas creando un portafolio avanzado de textos IA, combinando herramientas, estilos y automatización.",
+                    "objectives": [
+                        "Combinar técnicas avanzadas de prompting, análisis y automatización.",
+                        "Crear un portafolio temático con textos IA personalizados.",
+                        "Documentar el proceso y justificar cada elección creativa."
+                    ],
+                    "sections": [
+                        { "heading": "Definir el tema y objetivo del portafolio", "content": "Elige un tema avanzado (tecnología, ética, futuro del trabajo, etc.) y define el propósito del portafolio: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                        { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 textos usando diferentes técnicas: prompt engineering, análisis de tono, automatización, escritura colaborativa. Documenta cada paso y los prompts usados." },
+                        { "heading": "Presentar y justificar el portafolio", "content": "Organiza los textos en un documento digital, explica las técnicas y herramientas usadas en cada uno, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+                    ],
+                    "activity": "Crea un portafolio digital de 6 textos IA sobre un tema avanzado, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+                    "deliverable": "Portafolio digital con 6 textos, prompts, técnicas usadas y justificación de cada elección creativa.",
+                    "checklist": [
+                        "Generé al menos 6 textos IA aplicando técnicas avanzadas.",
+                        "Documenté el proceso y los prompts usados.",
+                        "Justifiqué cada elección creativa en el portafolio."
+                    ],
+                    "promptStarter": "Crea una serie de textos sobre 'el futuro del trabajo' usando técnicas avanzadas de prompting, análisis de tono y automatización.",
+                    "promptExamples": [
+                        { "title": "Prompt para portafolio temático", "prompt": "Un ensayo sobre la ética de la inteligencia artificial en el trabajo, tono reflexivo, dirigido a profesionales." },
+                        { "title": "Prompt para creatividad", "prompt": "Un cuento corto sobre un robot que aprende a colaborar con humanos en una empresa." },
+                        { "title": "Prompt para análisis de tono", "prompt": "Analiza el tono de un texto sobre teletrabajo y sugiere mejoras para hacerlo más motivador." }
+                    ]
+                }
+            },
+        /* ═══════════════════════════════════════════
+           CURSO 6: ia-textos-basico
+           Textos con IA: Primeros pasos
+           Nivel: Principiante | 8 lecciones
+           ═══════════════════════════════════════════ */
+        "ia-textos-basico": {
+            "chatgpt-texto": {
+                "id": "chatgpt-texto",
+                "title": "Introducción a ChatGPT para textos",
+                "moduleTitle": "Herramientas de texto",
+                "durationMinutes": 10,
+                "summary": "Descubre cómo ChatGPT puede ayudarte a generar, mejorar y corregir textos de manera sencilla y rápida. Aprende a escribir tus primeros prompts para obtener resultados útiles.",
+                "objectives": [
+                    "Entender el funcionamiento básico de ChatGPT para textos.",
+                    "Crear tu primer texto a partir de un prompt simple.",
+                    "Identificar los límites y mejores usos de ChatGPT en redacción."
+                ],
+                "sections": [
+                    { "heading": "¿Qué es ChatGPT?", "content": "ChatGPT es un modelo de lenguaje desarrollado por OpenAI capaz de generar textos coherentes y útiles a partir de instrucciones escritas. Es ideal para redactar emails, artículos, resúmenes y más, sin necesidad de experiencia previa en IA." },
+                    { "heading": "Cómo usar ChatGPT para escribir", "content": "Solo necesitas escribir una instrucción clara. Ejemplo: 'Redacta un correo para solicitar información sobre un curso'. ChatGPT generará una propuesta que puedes ajustar según tus necesidades." },
+                    { "heading": "Limitaciones y mejores prácticas", "content": "ChatGPT es excelente para textos generales, pero puede cometer errores de datos o estilo. Para mejores resultados, revisa y ajusta el texto generado, y proporciona instrucciones específicas." }
+                ],
+                "activity": "Pide a ChatGPT que redacte una invitación a un evento familiar. Luego, solicita una versión más formal y otra más creativa.",
+                "deliverable": "Tres versiones de la invitación: estándar, formal y creativa, acompañadas de una breve reflexión sobre cuál se adapta mejor a tu objetivo.",
+                "checklist": [
+                    "He generado al menos 3 textos con ChatGPT.",
+                    "Probé diferentes estilos y enfoques.",
+                    "Identifiqué una limitación de ChatGPT en mis pruebas."
+                ],
+                "promptStarter": "Redacta un mensaje de agradecimiento para un profesor, primero en tono informal y luego en tono profesional.",
+                "promptExamples": [
+                    { "title": "Prompt simple para ChatGPT", "prompt": "Escribe una descripción breve de un producto tecnológico para una tienda online." },
+                    { "title": "Prompt con estilo específico", "prompt": "Redacta una carta de presentación para un trabajo creativo, tono entusiasta y original." },
+                    { "title": "Prompt para resumen", "prompt": "Resume en 5 líneas un artículo sobre energías renovables." }
+                ]
+            },
+            "mejorar-textos": {
+                "id": "mejorar-textos",
+                "title": "Mejorar y corregir textos con IA",
+                "moduleTitle": "Herramientas de texto",
+                "durationMinutes": 10,
+                "summary": "Aprende a usar la IA para corregir, mejorar y adaptar textos a diferentes estilos y necesidades.",
+                "objectives": [
+                    "Corregir errores ortográficos y gramaticales con IA.",
+                    "Mejorar la claridad y el estilo de un texto.",
+                    "Adaptar textos a diferentes públicos y propósitos."
+                ],
+                "sections": [
+                    { "heading": "Corrección automática de textos", "content": "ChatGPT y otras IAs pueden detectar y corregir errores ortográficos, gramaticales y de estilo. Solo debes pedir: 'Corrige el siguiente texto'." },
+                    { "heading": "Mejorar la claridad y el impacto", "content": "Solicita a la IA que haga tu texto más claro, persuasivo o adecuado para un público específico. Ejemplo: 'Haz este texto más convincente para un cliente'." },
+                    { "heading": "Adaptar el tono y el formato", "content": "La IA puede transformar un texto formal en uno informal, resumirlo, expandirlo o traducirlo. Especifica el objetivo y el público para mejores resultados." }
+                ],
+                "activity": "Corrige y mejora un texto propio usando ChatGPT. Luego, pide una versión adaptada para un público infantil y otra para un público profesional.",
+                "deliverable": "Tres versiones del texto: corregida, infantil y profesional, más una reflexión sobre los cambios realizados.",
+                "checklist": [
+                    "Usé la IA para corregir y mejorar un texto.",
+                    "Probé adaptaciones para diferentes públicos.",
+                    "Analicé los cambios y su impacto en el mensaje."
+                ],
+                "promptStarter": "Convierte un texto informativo sobre reciclaje en una historia para niños y luego en un informe ejecutivo.",
+                "promptExamples": [
+                    { "title": "Prompt para corrección", "prompt": "Corrige y mejora el siguiente párrafo sobre energías renovables." },
+                    { "title": "Prompt para adaptación de público", "prompt": "Haz este texto sobre astronomía comprensible para niños de 8 años." },
+                    { "title": "Prompt para cambio de tono", "prompt": "Convierte este mensaje formal en uno amistoso y cercano." }
+                ]
+            },
+            "escritura-creativa": {
+                "id": "escritura-creativa",
+                "title": "Escritura creativa con IA",
+                "moduleTitle": "Herramientas de texto",
+                "durationMinutes": 10,
+                "summary": "Explora cómo la IA puede inspirar y potenciar tu creatividad en cuentos, poemas, diálogos y más.",
+                "objectives": [
+                    "Generar ideas y estructuras para textos creativos.",
+                    "Escribir cuentos, poemas o diálogos con ayuda de IA.",
+                    "Experimentar con diferentes géneros y estilos literarios."
+                ],
+                "sections": [
+                    { "heading": "Inspiración y generación de ideas", "content": "Pide a la IA sugerencias de temas, personajes o situaciones. Ejemplo: 'Dame 3 ideas para un cuento de ciencia ficción'." },
+                    { "heading": "Escritura asistida por IA", "content": "Solicita a la IA que escriba el inicio de un cuento, un poema o un diálogo. Puedes continuar la historia o pedirle que la desarrolle en diferentes direcciones." },
+                    { "heading": "Experimentar con géneros y estilos", "content": "Prueba pedir textos en diferentes géneros (misterio, humor, aventura) o estilos (poético, formal, coloquial). La IA puede adaptar el lenguaje y la estructura según tus indicaciones." }
+                ],
+                "activity": "Pide a la IA que escriba el inicio de un cuento de aventuras. Luego, solicita una versión en formato de poema y otra como diálogo entre dos personajes.",
+                "deliverable": "Tres versiones del mismo inicio: cuento, poema y diálogo, más una reflexión sobre las diferencias de estilo.",
+                "checklist": [
+                    "Generé ideas y textos creativos con IA.",
+                    "Probé diferentes géneros y formatos.",
+                    "Analicé cómo cambia el mensaje según el estilo."
+                ],
+                "promptStarter": "Escribe una historia corta sobre un robot que quiere aprender a pintar, primero como cuento, luego como poema y finalmente como diálogo.",
+                "promptExamples": [
+                    { "title": "Prompt para cuento", "prompt": "Escribe un cuento breve sobre un dragón que descubre la música." },
+                    { "title": "Prompt para poema", "prompt": "Convierte la historia del dragón en un poema rimado." },
+                    { "title": "Prompt para diálogo", "prompt": "Escribe un diálogo entre el dragón y un músico sobre la importancia de la creatividad." }
+                ]
+            },
+            "resumir-textos": {
+                "id": "resumir-textos",
+                "title": "Resumir y extraer ideas clave con IA",
+                "moduleTitle": "Herramientas de texto",
+                "durationMinutes": 9,
+                "summary": "Aprende a usar la IA para resumir textos largos, extraer ideas principales y organizar información de manera eficiente.",
+                "objectives": [
+                    "Resumir textos extensos en pocos párrafos.",
+                    "Extraer ideas clave y conceptos principales.",
+                    "Organizar información de manera clara y estructurada."
+                ],
+                "sections": [
+                    { "heading": "Resumir con IA", "content": "Pide a la IA que resuma un texto largo en un número específico de líneas o palabras. Ejemplo: 'Resume este artículo en 5 frases'." },
+                    { "heading": "Extraer ideas clave", "content": "Solicita a la IA que identifique los conceptos principales o haga una lista de puntos clave. Ejemplo: 'Enumera las ideas principales de este texto'." },
+                    { "heading": "Organizar información", "content": "La IA puede ayudarte a estructurar información en esquemas, tablas o listas, facilitando la comprensión y el estudio." }
+                ],
+                "activity": "Resume un artículo de tu interés en 5 frases. Luego, pide a la IA que extraiga las ideas clave y las organice en una tabla comparativa.",
+                "deliverable": "Resumen breve, lista de ideas clave y tabla comparativa, más una reflexión sobre la utilidad de cada formato.",
+                "checklist": [
+                    "Usé la IA para resumir y extraer ideas clave de un texto.",
+                    "Probé diferentes formatos de organización de información.",
+                    "Analicé cuál formato es más útil para mi objetivo."
+                ],
+                "promptStarter": "Resume un texto sobre energías renovables en 5 frases y luego extrae los conceptos principales en una lista.",
+                "promptExamples": [
+                    { "title": "Prompt para resumen", "prompt": "Resume este texto sobre inteligencia artificial en 3 párrafos." },
+                    { "title": "Prompt para ideas clave", "prompt": "Enumera los puntos principales de este artículo sobre cambio climático." },
+                    { "title": "Prompt para tabla comparativa", "prompt": "Organiza la información de este texto en una tabla con ventajas y desventajas." }
+                ]
+            },
+            "estilos-texto": {
+                "id": "estilos-texto",
+                "title": "Estilos de texto y adaptación",
+                "moduleTitle": "Herramientas de texto",
+                "durationMinutes": 9,
+                "summary": "Conoce los estilos de redacción más comunes y aprende a adaptar tus textos según el público y el objetivo.",
+                "objectives": [
+                    "Identificar al menos 4 estilos de redacción.",
+                    "Adaptar un texto a diferentes estilos y públicos.",
+                    "Elegir el estilo más adecuado para cada situación."
+                ],
+                "sections": [
+                    { "heading": "Estilos de redacción más usados", "content": "Informativo, persuasivo, narrativo y descriptivo. Cada uno tiene características propias y se adapta a diferentes objetivos: informar, convencer, contar historias o describir situaciones." },
+                    { "heading": "Cómo adaptar el estilo", "content": "Define el objetivo y el público del texto. Ajusta el vocabulario, la estructura y el tono para conectar mejor con los lectores. Prueba diferentes estilos para ver cuál comunica mejor tu mensaje." },
+                    { "heading": "Ejemplos prácticos", "content": "Toma un mismo tema (por ejemplo, el reciclaje) y redacta un párrafo en cada estilo. Analiza cómo cambia la percepción según el enfoque." }
+                ],
+                "activity": "Redacta un texto sobre la importancia del reciclaje en estilo informativo, persuasivo, narrativo y descriptivo. Compara los resultados y elige el más adecuado para una campaña escolar.",
+                "deliverable": "Cuatro versiones del texto, una por estilo, más una justificación de la elección final para el público objetivo.",
+                "checklist": [
+                    "Probé al menos 4 estilos de redacción diferentes.",
+                    "Analicé cuál comunica mejor para mi objetivo.",
+                    "Elegí el estilo más adecuado para mi audiencia."
+                ],
+                "promptStarter": "Redacta un texto sobre el ahorro de energía en estilo informativo, luego persuasivo, narrativo y descriptivo.",
+                "promptExamples": [
+                    { "title": "Prompt para informativo", "prompt": "Explica qué es el cambio climático en un párrafo informativo." },
+                    { "title": "Prompt para persuasivo", "prompt": "Convence a un amigo de reciclar usando argumentos persuasivos." },
+                    { "title": "Prompt para narrativo", "prompt": "Cuenta una historia breve sobre alguien que aprendió a reciclar." }
+                ]
+            },
+            "mejorar-resultados": {
+                "id": "mejorar-resultados",
+                "title": "Cómo mejorar resultados y evitar errores comunes",
+                "moduleTitle": "Herramientas de texto",
+                "durationMinutes": 10,
+                "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener textos más precisos y profesionales.",
+                "objectives": [
+                    "Identificar errores comunes en prompts de texto.",
+                    "Aplicar técnicas de iteración y ajuste.",
+                    "Obtener textos más alineados con tu idea inicial."
+                ],
+                "sections": [
+                    { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo del texto. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                    { "heading": "Iterar y ajustar para mejorar", "content": "Genera el texto, analiza el resultado y ajusta el prompt: cambia el estilo, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                    { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+                ],
+                "activity": "Elige un texto generado que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+                "deliverable": "Secuencia de 3 textos (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+                "checklist": [
+                    "Identifiqué y corregí errores en mis prompts.",
+                    "Iteré al menos dos veces para mejorar el resultado.",
+                    "Documenté el proceso de mejora."
+                ],
+                "promptStarter": "Redacta un texto sobre la importancia de la lectura. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la claridad y el nivel de detalle.",
+                "promptExamples": [
+                    { "title": "Prompt original", "prompt": "La importancia de la lectura en la educación." },
+                    { "title": "Primera iteración", "prompt": "Explica con ejemplos concretos por qué la lectura es fundamental para el aprendizaje." },
+                    { "title": "Segunda iteración", "prompt": "Redacta un texto persuasivo sobre los beneficios de la lectura diaria, dirigido a estudiantes de secundaria." }
+                ]
+            },
+            "proyecto-final": {
+                "id": "proyecto-final",
+                "title": "Proyecto final: portafolio de textos IA",
+                "moduleTitle": "Herramientas de texto",
+                "durationMinutes": 12,
+                "summary": "Pon en práctica todo lo aprendido creando un portafolio personal de textos generados con IA, aplicando diferentes estilos, herramientas y técnicas de prompting.",
+                "objectives": [
+                    "Aplicar técnicas de prompting y adaptación de estilos.",
+                    "Usar al menos dos herramientas diferentes de IA de texto.",
+                    "Presentar un portafolio con justificación de cada texto."
+                ],
+                "sections": [
+                    { "heading": "Definir el objetivo del portafolio", "content": "Elige un tema central (educación, tecnología, medio ambiente, etc.) y define el propósito de tu portafolio: mostrar habilidades, inspirar, presentar a clientes, etc." },
+                    { "heading": "Seleccionar herramientas y estilos", "content": "Genera al menos 5 textos usando diferentes herramientas (ChatGPT, Gemini, Claude, etc.) y estilos variados. Documenta el proceso y los prompts usados." },
+                    { "heading": "Presentar y justificar tus elecciones", "content": "Organiza los textos en un documento o galería, explica por qué elegiste cada estilo y herramienta, y qué aprendiste en el proceso." }
+                ],
+                "activity": "Crea un portafolio de 5 textos IA sobre un tema de tu elección, usando al menos 3 herramientas y 3 estilos diferentes.",
+                "deliverable": "Portafolio digital con 5 textos, prompts utilizados y justificación de cada elección.",
+                "checklist": [
+                    "Generé al menos 5 textos con IA usando diferentes herramientas y estilos.",
+                    "Documenté los prompts y el proceso de selección.",
+                    "Justifiqué cada elección en mi portafolio."
+                ],
+                "promptStarter": "Crea una serie de textos sobre 'el futuro de la educación' usando ChatGPT, Gemini y Claude, cada uno en un estilo diferente.",
+                "promptExamples": [
+                    { "title": "Prompt para portafolio temático", "prompt": "Un artículo informativo sobre inteligencia artificial en la educación, dirigido a docentes." },
+                    { "title": "Prompt para creatividad", "prompt": "Un cuento corto sobre un robot que aprende a escribir poesía." },
+                    { "title": "Prompt para reflexión", "prompt": "Un texto persuasivo sobre la importancia de la ética en el uso de IA." }
+                ]
+            }
+        },
+    /* ═══════════════════════════════════════════
+       CURSO 5: ia-imagenes-avanzado
+       Imágenes con IA: Técnicas avanzadas
+       Nivel: Intermedio | 8 lecciones
+       ═══════════════════════════════════════════ */
+    "ia-imagenes-avanzado": {
+        "prompt-engineering": {
+            "id": "prompt-engineering",
+            "title": "Prompt Engineering para imágenes",
+            "moduleTitle": "Técnicas avanzadas",
+            "durationMinutes": 12,
+            "summary": "Descubre cómo estructurar prompts complejos para obtener imágenes precisas y personalizadas. Aprende a usar descriptores, estilos y parámetros avanzados.",
+            "objectives": [
+                "Dominar la estructura avanzada de prompts visuales.",
+                "Utilizar descriptores y parámetros para afinar resultados.",
+                "Evitar ambigüedades y errores comunes en prompts complejos."
+            ],
+            "sections": [
+                { "heading": "¿Qué es el prompt engineering?", "content": "Es el arte de diseñar instrucciones detalladas y precisas para que la IA genere imágenes alineadas con tu visión. Incluye el uso de descriptores, estilos, composición y parámetros técnicos." },
+                { "heading": "Descriptores y parámetros avanzados", "content": "Incluye detalles como iluminación, composición, perspectiva, emociones, materiales, época, etc. Ejemplo: 'Un retrato de una científica victoriana, luz tenue, fondo de laboratorio antiguo, estilo óleo clásico'." },
+                { "heading": "Errores y cómo evitarlos", "content": "Evita prompts demasiado largos o contradictorios. Prioriza la claridad y la jerarquía de la información: primero el sujeto, luego el entorno, después el estilo y finalmente los detalles técnicos." }
+            ],
+            "activity": "Escribe un prompt avanzado para 'un dragón mecánico en una ciudad steampunk al anochecer, con luces de neón y niebla'. Experimenta cambiando la iluminación y el ángulo de cámara.",
+            "deliverable": "Dos imágenes generadas con variaciones en iluminación y perspectiva, más una reflexión sobre el impacto de los cambios.",
+            "checklist": [
+                "Escribí y probé un prompt avanzado con descriptores detallados.",
+                "Ajusté parámetros para comparar resultados.",
+                "Documenté el impacto de los cambios en el resultado."
+            ],
+            "promptStarter": "Crea una imagen de un castillo futurista en ruinas, al amanecer, con niebla y reflejos en el agua, estilo arte digital.",
+            "promptExamples": [
+                { "title": "Prompt avanzado con descriptores", "prompt": "Un retrato de una reina elfa, luz dorada, fondo de bosque mágico, estilo realista, detalles en la corona y el vestido." },
+                { "title": "Prompt con parámetros técnicos", "prompt": "Un auto deportivo clásico en una carretera mojada, ángulo bajo, reflejos, estilo fotografía nocturna, alta resolución." },
+                { "title": "Prompt para escena compleja", "prompt": "Un mercado medieval al atardecer, gente conversando, puestos de frutas, luces cálidas, estilo óleo clásico." }
+            ]
+        },
+        "combinacion-herramientas": {
+            "id": "combinacion-herramientas",
+            "title": "Combinando herramientas de IA para imágenes",
+            "moduleTitle": "Técnicas avanzadas",
+            "durationMinutes": 10,
+            "summary": "Aprende a combinar diferentes generadores de imágenes IA para obtener resultados únicos y aprovechar lo mejor de cada uno.",
+            "objectives": [
+                "Identificar ventajas y limitaciones de cada herramienta.",
+                "Combinar imágenes generadas en diferentes plataformas.",
+                "Optimizar el flujo de trabajo creativo usando IA."
+            ],
+            "sections": [
+                { "heading": "¿Por qué combinar herramientas?", "content": "Cada generador de imágenes IA tiene fortalezas: DALL-E es versátil, Midjourney destaca en arte conceptual, Stable Diffusion permite personalización. Combinarlas permite obtener resultados más ricos y variados." },
+                { "heading": "Flujo de trabajo recomendado", "content": "Ejemplo: genera un boceto en DALL-E, refínalo en Midjourney y aplica detalles finales en Stable Diffusion. Así aprovechas la rapidez, el estilo y la personalización de cada herramienta." },
+                { "heading": "Consejos para integración", "content": "Guarda tus imágenes en alta resolución, usa editores gráficos para ajustes finales y documenta los prompts y parámetros usados en cada etapa." }
+            ],
+            "activity": "Crea una imagen conceptual en DALL-E, refínala en Midjourney y añade detalles en Stable Diffusion. Documenta el proceso y los cambios en cada etapa.",
+            "deliverable": "Secuencia de 3 imágenes (boceto, refinado, detalle) con explicación de los cambios y herramientas usadas.",
+            "checklist": [
+                "Probé al menos dos herramientas diferentes en un mismo proyecto.",
+                "Documenté el flujo de trabajo y los prompts usados.",
+                "Analicé las ventajas de cada herramienta en el resultado final."
+            ],
+            "promptStarter": "Genera un personaje fantástico en DALL-E, luego refínalo en Midjourney y añade detalles en Stable Diffusion.",
+            "promptExamples": [
+                { "title": "Prompt para boceto inicial", "prompt": "Un mago anciano con bastón, fondo de biblioteca, estilo cartoon." },
+                { "title": "Prompt para refinado artístico", "prompt": "Un mago anciano con bastón, fondo de biblioteca, estilo arte digital, iluminación dramática." },
+                { "title": "Prompt para detalles finales", "prompt": "Un mago anciano con bastón, fondo de biblioteca, detalles en las arrugas y la ropa, estilo realista, alta resolución." }
+            ]
+        },
+        "controlnet": {
+            "id": "controlnet",
+            "title": "ControlNet y control avanzado de poses",
+            "moduleTitle": "Técnicas avanzadas",
+            "durationMinutes": 12,
+            "summary": "Descubre cómo usar ControlNet y modelos de control para definir poses, composiciones y detalles precisos en imágenes IA.",
+            "objectives": [
+                "Entender el funcionamiento de ControlNet.",
+                "Aplicar control de poses y composición en imágenes IA.",
+                "Experimentar con modelos de control para resultados personalizados."
+            ],
+            "sections": [
+                { "heading": "¿Qué es ControlNet?", "content": "ControlNet es una extensión para Stable Diffusion que permite controlar la pose, composición y detalles de la imagen usando imágenes guía (poses, bocetos, mapas de profundidad). Es ideal para ilustradores y creativos que buscan precisión." },
+                { "heading": "Cómo usar ControlNet", "content": "Sube una imagen guía (por ejemplo, un boceto de pose) y escribe tu prompt. ControlNet ajustará la generación para seguir la guía. Puedes combinar varios modelos de control para resultados aún más detallados." },
+                { "heading": "Ejemplos de uso avanzado", "content": "Crea una ilustración de un personaje en una pose específica, o genera fondos complejos siguiendo un esquema de composición. Experimenta con mapas de profundidad y líneas de contorno para controlar el resultado." }
+            ],
+            "activity": "Genera una imagen de 'un bailarín en pose dinámica' usando una imagen guía de pose en ControlNet. Prueba diferentes estilos y compara los resultados.",
+            "deliverable": "Dos imágenes generadas con la misma pose pero estilos diferentes, más una reflexión sobre el control logrado.",
+            "checklist": [
+                "Usé ControlNet con una imagen guía de pose.",
+                "Probé al menos dos estilos diferentes.",
+                "Analicé el nivel de control y precisión obtenido."
+            ],
+            "promptStarter": "Crea una imagen de un atleta saltando sobre un obstáculo, usando una foto de referencia para la pose y dos estilos visuales distintos.",
+            "promptExamples": [
+                { "title": "Prompt con imagen guía", "prompt": "Un bailarín clásico en pose de arabesque, fondo de teatro, estilo realista, usando imagen guía de pose." },
+                { "title": "Prompt para fondo complejo", "prompt": "Un bosque encantado con caminos sinuosos, composición guiada por un boceto, estilo arte digital." },
+                { "title": "Prompt para control de perspectiva", "prompt": "Un auto deportivo visto desde arriba, usando mapa de profundidad como guía, estilo realista." }
+            ]
+        },
+        "inpainting-outpainting": {
+            "id": "inpainting-outpainting",
+            "title": "Inpainting y Outpainting: edición avanzada",
+            "moduleTitle": "Técnicas avanzadas",
+            "durationMinutes": 10,
+            "summary": "Aprende a editar y expandir imágenes generadas con IA usando técnicas de inpainting (relleno) y outpainting (expansión).",
+            "objectives": [
+                "Dominar el uso de inpainting para corregir o modificar imágenes.",
+                "Aplicar outpainting para expandir escenas más allá del marco original.",
+                "Combinar ambas técnicas para proyectos creativos."
+            ],
+            "sections": [
+                { "heading": "¿Qué es inpainting?", "content": "Inpainting permite modificar partes específicas de una imagen generada por IA, rellenando zonas seleccionadas con nuevos elementos o corrigiendo errores. Es útil para ajustes finos y personalización." },
+                { "heading": "¿Qué es outpainting?", "content": "Outpainting expande una imagen más allá de sus bordes originales, generando contenido coherente con el estilo y la composición. Ideal para crear fondos panorámicos o ampliar ilustraciones." },
+                { "heading": "Herramientas y flujo de trabajo", "content": "Stable Diffusion y DALL-E ofrecen funciones de inpainting y outpainting. Selecciona la zona a modificar o expandir, escribe un prompt específico y ajusta los parámetros para lograr el resultado deseado." }
+            ],
+            "activity": "Corrige un detalle en una imagen generada (por ejemplo, cambia el color de un objeto) usando inpainting. Luego expande la imagen con outpainting para añadir un nuevo elemento al fondo.",
+            "deliverable": "Imagen original, versión corregida con inpainting y versión expandida con outpainting, más una explicación del proceso.",
+            "checklist": [
+                "Usé inpainting para modificar una imagen IA.",
+                "Apliqué outpainting para expandir la escena.",
+                "Documenté el proceso y los resultados obtenidos."
+            ],
+            "promptStarter": "Corrige el color de un coche en una imagen IA usando inpainting y luego expande la carretera con outpainting.",
+            "promptExamples": [
+                { "title": "Prompt para inpainting", "prompt": "Rellena la zona seleccionada con flores rojas, manteniendo el estilo original de la imagen." },
+                { "title": "Prompt para outpainting", "prompt": "Expande la imagen hacia la derecha, añadiendo un bosque al fondo, estilo acuarela." },
+                { "title": "Prompt combinado", "prompt": "Corrige el rostro de un personaje y amplía el fondo con un paisaje montañoso, estilo realista." }
+            ]
+        },
+        "ajuste-modelos": {
+            "id": "ajuste-modelos",
+            "title": "Ajuste de modelos y estilos personalizados",
+            "moduleTitle": "Técnicas avanzadas",
+            "durationMinutes": 11,
+            "summary": "Explora cómo entrenar o ajustar modelos IA para crear estilos visuales únicos y personalizados.",
+            "objectives": [
+                "Comprender el proceso de ajuste fino de modelos IA.",
+                "Crear un estilo visual personalizado a partir de ejemplos.",
+                "Aplicar modelos personalizados en generadores de imágenes."
+            ],
+            "sections": [
+                { "heading": "¿Qué es el ajuste de modelos?", "content": "El ajuste fino (fine-tuning) consiste en entrenar un modelo IA con tus propias imágenes para que aprenda un estilo o temática específica. Es ideal para branding, proyectos artísticos o necesidades empresariales." },
+                { "heading": "Cómo crear un modelo personalizado", "content": "Selecciona al menos 10 imágenes representativas del estilo deseado. Usa plataformas como DreamBooth o herramientas de Stable Diffusion para entrenar el modelo. Aplica el modelo personalizado en tus prompts para obtener resultados únicos." },
+                { "heading": "Aplicaciones y ejemplos", "content": "Crea retratos en un estilo propio, genera ilustraciones para una marca o adapta imágenes a una temática específica. Documenta el proceso y los resultados para futuras referencias." }
+            ],
+            "activity": "Entrena un modelo personalizado con imágenes de tu elección y genera al menos dos imágenes aplicando el nuevo estilo.",
+            "deliverable": "Dos imágenes generadas con el modelo personalizado y una breve explicación del proceso de ajuste.",
+            "checklist": [
+                "Seleccioné imágenes para entrenar un modelo personalizado.",
+                "Entrené el modelo y lo apliqué en generadores IA.",
+                "Documenté el proceso y los resultados obtenidos."
+            ],
+            "promptStarter": "Crea una imagen de un animal fantástico en el estilo visual que entrenaste con tu propio modelo.",
+            "promptExamples": [
+                { "title": "Prompt para modelo personalizado", "prompt": "Un retrato de una persona en el estilo visual entrenado, fondo abstracto, colores vivos." },
+                { "title": "Prompt para branding", "prompt": "Un logotipo de una empresa tecnológica en el estilo visual personalizado, fondo blanco." },
+                { "title": "Prompt para ilustración artística", "prompt": "Una escena de bosque encantado en el estilo visual entrenado, alta resolución." }
+            ]
+        },
+        "automatizacion": {
+            "id": "automatizacion",
+            "title": "Automatización de generación de imágenes IA",
+            "moduleTitle": "Técnicas avanzadas",
+            "durationMinutes": 10,
+            "summary": "Aprende a automatizar la creación de imágenes IA usando scripts, APIs y flujos de trabajo programados.",
+            "objectives": [
+                "Conocer las opciones de automatización para imágenes IA.",
+                "Crear un script básico para generar imágenes automáticamente.",
+                "Integrar la generación de imágenes en otros proyectos digitales."
+            ],
+            "sections": [
+                { "heading": "¿Por qué automatizar?", "content": "La automatización permite generar grandes volúmenes de imágenes, crear variaciones rápidamente y ahorrar tiempo en proyectos creativos o empresariales." },
+                { "heading": "Opciones de automatización", "content": "Usa APIs de DALL-E, Stable Diffusion o Midjourney, o scripts en Python para enviar prompts y descargar imágenes automáticamente. Ejemplo: automatizar la creación de imágenes para una tienda online o una campaña de marketing." },
+                { "heading": "Ejemplo de script básico", "content": "Un script en Python que envía una lista de prompts a la API de DALL-E y guarda las imágenes generadas en una carpeta local." }
+            ],
+            "activity": "Crea un script sencillo que genere 5 imágenes IA a partir de una lista de prompts y las guarde automáticamente.",
+            "deliverable": "Script funcional y carpeta con las imágenes generadas, más una breve explicación del proceso.",
+            "checklist": [
+                "Creé un script o usé una API para automatizar la generación de imágenes.",
+                "Probé la automatización con al menos 5 prompts diferentes.",
+                "Documenté el proceso y los resultados obtenidos."
+            ],
+            "promptStarter": "Automatiza la generación de imágenes de diferentes animales en estilos variados usando una API de IA.",
+            "promptExamples": [
+                { "title": "Prompt para automatización", "prompt": "Un pájaro tropical en estilo acuarela." },
+                { "title": "Prompt para variaciones", "prompt": "Un coche deportivo en diferentes colores y estilos visuales." },
+                { "title": "Prompt para integración digital", "prompt": "Iconos de aplicaciones móviles en estilo minimalista, fondo transparente." }
+            ]
+        },
+        "proyecto-final": {
+            "id": "proyecto-final",
+            "title": "Proyecto final: galería avanzada de imágenes IA",
+            "moduleTitle": "Técnicas avanzadas",
+            "durationMinutes": 13,
+            "summary": "Aplica todas las técnicas aprendidas creando una galería avanzada de imágenes IA, combinando herramientas, estilos y automatización.",
+            "objectives": [
+                "Combinar técnicas avanzadas de prompting, control y automatización.",
+                "Crear una galería temática con imágenes IA personalizadas.",
+                "Documentar el proceso y justificar cada elección creativa."
+            ],
+            "sections": [
+                { "heading": "Definir el tema y objetivo de la galería", "content": "Elige un tema avanzado (futurismo, surrealismo, ciencia ficción, etc.) y define el propósito de la galería: portafolio profesional, exposición digital, inspiración creativa, etc." },
+                { "heading": "Aplicar técnicas avanzadas", "content": "Genera al menos 6 imágenes usando diferentes técnicas: prompt engineering, control de poses, inpainting/outpainting, modelos personalizados y automatización. Documenta cada paso y los prompts usados." },
+                { "heading": "Presentar y justificar la galería", "content": "Organiza las imágenes en una galería digital, explica las técnicas y herramientas usadas en cada una, y reflexiona sobre el proceso creativo y los aprendizajes obtenidos." }
+            ],
+            "activity": "Crea una galería digital de 6 imágenes IA sobre un tema avanzado, aplicando al menos 4 técnicas diferentes y documentando el proceso.",
+            "deliverable": "Galería digital con 6 imágenes, prompts, técnicas usadas y justificación de cada elección creativa.",
+            "checklist": [
+                "Generé al menos 6 imágenes IA aplicando técnicas avanzadas.",
+                "Documenté el proceso y los prompts usados.",
+                "Justifiqué cada elección creativa en la galería."
+            ],
+            "promptStarter": "Crea una serie de imágenes sobre 'ciudades del futuro' usando técnicas avanzadas de prompting, control de poses y estilos personalizados.",
+            "promptExamples": [
+                { "title": "Prompt para galería temática", "prompt": "Una ciudad flotante sobre el océano, estilo arte digital, detalles futuristas, iluminación nocturna." },
+                { "title": "Prompt para surrealismo", "prompt": "Un reloj derritiéndose sobre un paisaje desértico, estilo surrealista, colores intensos." },
+                { "title": "Prompt para ciencia ficción", "prompt": "Un androide explorando un planeta alienígena, fondo de galaxias, estilo realista, alta resolución." }
+            ]
+        }
+    },
 /* ═══════════════════════════════════════════════════════════
    COURSE LESSON CONTENT - IAFACIL.HELP
    Contenido especializado por leccion - 25 cursos, 216 lecciones
@@ -434,6 +6477,254 @@ export const COURSE_LESSONS = {
                     "title": "Agentes de IA en la practica",
                     "prompt": "Dame 5 ejemplos concretos de como los agentes de IA autonomos cambiaran tareas cotidianas de trabajo: gestion de email, planificacion de proyectos, investigacion de mercado, atencion al cliente y gestion financiera. Para cada ejemplo, describeme el antes (como se hace hoy) y el despues (como lo hara un agente de IA)."
                 }
+            ]
+        }
+    },
+
+    /* ═══════════════════════════════════════════
+       CURSO 4: ia-imagenes-basico
+       Imágenes con IA: Primeros pasos
+       Nivel: Principiante | 8 lecciones
+       ═══════════════════════════════════════════ */
+    "ia-imagenes-basico": {
+        "dalle-intro": {
+            "id": "dalle-intro",
+            "title": "Introducción a DALL-E",
+            "moduleTitle": "Herramientas de imagen",
+            "durationMinutes": 10,
+            "summary": "Descubre cómo DALL-E convierte texto en imágenes sorprendentes. Aprende a usar la herramienta integrada en ChatGPT y a escribir tus primeros prompts visuales.",
+            "objectives": [
+                "Entender el funcionamiento básico de DALL-E.",
+                "Crear tu primera imagen a partir de un prompt simple.",
+                "Identificar los límites y mejores usos de DALL-E."
+            ],
+            "sections": [
+                { "heading": "¿Qué es DALL-E?", "content": "DALL-E es un modelo de IA desarrollado por OpenAI capaz de generar imágenes originales a partir de descripciones textuales. Utiliza una arquitectura de difusión y ha sido entrenado con millones de imágenes y textos asociados. Es ideal para crear ilustraciones, conceptos visuales y material creativo sin necesidad de saber dibujar." },
+                { "heading": "Cómo usar DALL-E en ChatGPT", "content": "Si tienes ChatGPT Plus, puedes acceder a DALL-E directamente desde la interfaz. Solo escribe tu descripción en el chat y selecciona la opción de imagen. Ejemplo: 'Un perro astronauta en la luna, estilo dibujo animado'. DALL-E generará varias opciones para elegir." },
+                { "heading": "Limitaciones y mejores prácticas", "content": "DALL-E es excelente para imágenes creativas y artísticas, pero tiene limitaciones con detalles muy específicos, texto dentro de imágenes y rostros realistas. Para mejores resultados, usa descripciones claras, estilos definidos y evita instrucciones contradictorias." }
+            ],
+            "activity": "Crea una imagen de 'un gato leyendo un libro en una biblioteca futurista'. Experimenta cambiando el estilo (realista, acuarela, pixel art) y observa las diferencias.",
+            "deliverable": "Tres imágenes generadas con el mismo prompt pero diferentes estilos, acompañadas de una breve reflexión sobre cuál comunica mejor tu idea.",
+            "checklist": [
+                "He generado al menos 3 imágenes con DALL-E.",
+                "Probé diferentes estilos y descripciones.",
+                "Identifiqué una limitación de DALL-E en mis pruebas."
+            ],
+            "promptStarter": "Genera una imagen de un robot pintando un cuadro en un museo moderno. Prueba con estilos: realista, cartoon y arte digital.",
+            "promptExamples": [
+                { "title": "Prompt simple para DALL-E", "prompt": "Un zorro tocando el violín bajo la lluvia, estilo acuarela." },
+                { "title": "Prompt con estilo específico", "prompt": "Un retrato de una científica en su laboratorio, estilo cómic europeo, colores vivos." },
+                { "title": "Prompt para portada de libro", "prompt": "Un castillo flotante sobre nubes al atardecer, estilo ilustración de fantasía, alta resolución." }
+            ]
+        },
+        "midjourney-intro": {
+            "id": "midjourney-intro",
+            "title": "Primeros pasos con Midjourney",
+            "moduleTitle": "Herramientas de imagen",
+            "durationMinutes": 10,
+            "summary": "Aprende a usar Midjourney, la herramienta favorita de artistas y creadores para generar imágenes de alta calidad en Discord.",
+            "objectives": [
+                "Crear una cuenta y acceder a Midjourney en Discord.",
+                "Escribir prompts básicos y entender los parámetros principales.",
+                "Comparar resultados con otras herramientas de IA."
+            ],
+            "sections": [
+                { "heading": "¿Qué es Midjourney?", "content": "Midjourney es un generador de imágenes por IA que funciona a través de Discord. Destaca por su calidad artística y la variedad de estilos que puede producir. Es ampliamente usado por diseñadores, ilustradores y creativos para inspiración visual y prototipos rápidos." },
+                { "heading": "Cómo empezar en Discord", "content": "Para usar Midjourney, crea una cuenta en Discord y únete al servidor oficial de Midjourney. Usa el canal #newbies para escribir tus prompts. Ejemplo: '/imagine Un dragón azul volando sobre una ciudad futurista, estilo cyberpunk'." },
+                { "heading": "Parámetros y trucos básicos", "content": "Midjourney permite ajustar el aspecto de las imágenes con parámetros como --v (versión), --ar (relación de aspecto), --q (calidad) y --style (estilo). Experimenta con diferentes combinaciones para ver cómo cambian los resultados." }
+            ],
+            "activity": "Genera una imagen de 'una bicicleta antigua en un campo de flores al amanecer' usando al menos dos estilos diferentes (realista y arte digital).",
+            "deliverable": "Dos imágenes generadas en Midjourney con el mismo prompt y estilos distintos, más una breve comparación de los resultados.",
+            "checklist": [
+                "Accedí a Midjourney en Discord y generé imágenes.",
+                "Probé al menos dos estilos o parámetros diferentes.",
+                "Comparé los resultados con otra herramienta de IA (opcional)."
+            ],
+            "promptStarter": "Crea una imagen de un bosque encantado iluminado por luciérnagas, estilo realista y luego en estilo arte digital.",
+            "promptExamples": [
+                { "title": "Prompt con parámetro de estilo", "prompt": "/imagine Un retrato de astronauta en Marte, --ar 16:9 --v 6 --style 4c" },
+                { "title": "Prompt para portada de álbum", "prompt": "/imagine Una ciudad sumergida bajo el agua, estilo arte conceptual, --q 2 --ar 3:2" },
+                { "title": "Prompt para logo creativo", "prompt": "/imagine Un logotipo minimalista de un búho, fondo blanco, --v 6 --style 4b" }
+            ]
+        },
+        "stable-diffusion": {
+            "id": "stable-diffusion",
+            "title": "Stable Diffusion y alternativas gratuitas",
+            "moduleTitle": "Herramientas de imagen",
+            "durationMinutes": 10,
+            "summary": "Explora Stable Diffusion, el modelo de código abierto para generar imágenes en tu propio ordenador o en la nube. Aprende a usar plataformas gratuitas y a personalizar resultados.",
+            "objectives": [
+                "Entender qué es Stable Diffusion y cómo funciona.",
+                "Probar una plataforma gratuita basada en Stable Diffusion.",
+                "Personalizar imágenes usando parámetros y modelos comunitarios."
+            ],
+            "sections": [
+                { "heading": "¿Qué es Stable Diffusion?", "content": "Stable Diffusion es un modelo de IA de código abierto que permite generar imágenes a partir de texto. Puedes ejecutarlo en tu propio ordenador o usar plataformas web como Leonardo.ai, Playground o Hugging Face. Es ideal para quienes buscan control total y personalización avanzada." },
+                { "heading": "Plataformas gratuitas y cómo usarlas", "content": "Leonardo.ai y Playground ofrecen acceso gratuito (con límites diarios) a Stable Diffusion. Solo necesitas registrarte, escribir tu prompt y elegir el modelo o estilo. Ejemplo: 'Un castillo medieval en la cima de una montaña, estilo óleo clásico'." },
+                { "heading": "Personalización y modelos comunitarios", "content": "Stable Diffusion permite usar modelos entrenados por la comunidad para estilos específicos (anime, realismo, pixel art). También puedes ajustar parámetros como el número de pasos, la semilla (seed) y la escala de orientación para afinar los resultados." }
+            ],
+            "activity": "Genera una imagen de 'un robot jardinero cuidando plantas exóticas' en Leonardo.ai y prueba cambiar el modelo a uno de estilo anime.",
+            "deliverable": "Dos imágenes: una con el modelo estándar y otra con un modelo de estilo anime, más una reflexión sobre las diferencias.",
+            "checklist": [
+                "Probé Stable Diffusion en una plataforma gratuita.",
+                "Experimenté con al menos dos modelos o estilos diferentes.",
+                "Personalicé parámetros básicos (pasos, seed, escala)."
+            ],
+            "promptStarter": "Crea una imagen de una biblioteca futurista flotando en el espacio, primero en estilo realista y luego en estilo anime.",
+            "promptExamples": [
+                { "title": "Prompt para arte conceptual", "prompt": "Un guerrero samurái en un campo de flores, estilo arte digital, alta resolución." },
+                { "title": "Prompt con modelo anime", "prompt": "Una chica científica en un laboratorio futurista, estilo anime, colores pastel." },
+                { "title": "Prompt para póster de película", "prompt": "Un tren volador cruzando montañas nevadas al atardecer, estilo póster retro, colores vibrantes." }
+            ]
+        },
+        "herramientas-gratis": {
+            "id": "herramientas-gratis",
+            "title": "Herramientas gratuitas para crear imágenes",
+            "moduleTitle": "Herramientas de imagen",
+            "durationMinutes": 8,
+            "summary": "Descubre las mejores opciones gratuitas para generar imágenes con IA sin pagar ni instalar nada. Compara sus ventajas y limitaciones.",
+            "objectives": [
+                "Conocer al menos 3 herramientas gratuitas para imágenes IA.",
+                "Comparar resultados y facilidad de uso entre ellas.",
+                "Saber cuándo elegir cada herramienta según la necesidad."
+            ],
+            "sections": [
+                { "heading": "Plataformas gratuitas populares", "content": "Bing Image Creator (usa DALL-E), Leonardo.ai y Playground son las opciones más accesibles. Solo necesitas una cuenta de Microsoft o Google. Permiten generar imágenes rápidamente y ofrecen estilos variados." },
+                { "heading": "Ventajas y limitaciones", "content": "Las herramientas gratuitas suelen tener límites diarios, marcas de agua o menor resolución. Sin embargo, son ideales para experimentar, prototipar ideas y aprender a escribir prompts efectivos sin coste." },
+                { "heading": "Cuándo usar cada una", "content": "Bing Image Creator es ideal para imágenes rápidas y sin complicaciones. Leonardo.ai destaca en personalización y estilos. Playground es versátil y permite probar diferentes modelos. Elige según tu objetivo: rapidez, personalización o variedad." }
+            ],
+            "activity": "Genera la misma imagen ('un dragón leyendo un libro en una biblioteca') en dos plataformas gratuitas y compara los resultados.",
+            "deliverable": "Dos imágenes generadas en plataformas diferentes, con una tabla comparativa de ventajas y desventajas.",
+            "checklist": [
+                "Probé al menos dos herramientas gratuitas de imágenes IA.",
+                "Comparé resultados y facilidad de uso.",
+                "Identifiqué cuál se adapta mejor a mis necesidades."
+            ],
+            "promptStarter": "Genera una imagen de una ciudad futurista al atardecer en Bing Image Creator y en Leonardo.ai. Compara los estilos y calidad.",
+            "promptExamples": [
+                { "title": "Prompt para Bing Image Creator", "prompt": "Un elefante volando con globos de colores sobre una ciudad, estilo ilustración infantil." },
+                { "title": "Prompt para Leonardo.ai", "prompt": "Un retrato de un chef preparando sushi en una cocina moderna, estilo realista, alta resolución." },
+                { "title": "Prompt para Playground", "prompt": "Un paisaje de montaña con cascada y arcoíris, estilo arte digital, colores vivos." }
+            ]
+        },
+        "primer-prompt-imagen": {
+            "id": "primer-prompt-imagen",
+            "title": "Tu primer prompt de imagen efectivo",
+            "moduleTitle": "Crear imágenes",
+            "durationMinutes": 10,
+            "summary": "Aprende a escribir prompts claros y efectivos para obtener imágenes que realmente representen tu idea. Descubre la estructura ideal y errores comunes a evitar.",
+            "objectives": [
+                "Dominar la estructura básica de un prompt visual.",
+                "Evitar los errores más comunes al describir imágenes.",
+                "Probar tu primer prompt en dos herramientas diferentes."
+            ],
+            "sections": [
+                { "heading": "Estructura de un prompt visual", "content": "Un buen prompt de imagen incluye: sujeto principal, acción o situación, entorno, estilo visual y detalles opcionales (colores, iluminación, composición). Ejemplo: 'Un perro corriendo en la playa al atardecer, estilo acuarela, colores cálidos, enfoque en el movimiento'." },
+                { "heading": "Errores comunes y cómo evitarlos", "content": "Errores típicos: ser demasiado vago ('un animal'), pedir cosas imposibles ('un círculo cuadrado'), mezclar estilos contradictorios ('realista y pixel art a la vez'). Solución: sé específico, elige un solo estilo y revisa ejemplos antes de enviar." },
+                { "heading": "Probar y ajustar", "content": "Genera tu imagen, analiza el resultado y ajusta el prompt si es necesario. Cambia el estilo, añade detalles o elimina ambigüedades. La iteración es clave para obtener la imagen ideal." }
+            ],
+            "activity": "Escribe un prompt para 'un pájaro mecánico volando sobre una ciudad antigua'. Prueba el mismo prompt en DALL-E y en Midjourney, y ajusta la descripción para mejorar el resultado en cada herramienta.",
+            "deliverable": "Dos imágenes generadas con el mismo prompt en herramientas diferentes, más una breve explicación de los cambios realizados.",
+            "checklist": [
+                "Escribí y probé mi primer prompt visual en dos herramientas.",
+                "Ajusté el prompt tras ver los resultados.",
+                "Identifiqué diferencias entre las herramientas."
+            ],
+            "promptStarter": "Crea una imagen de un zorro explorador en un bosque nevado, estilo acuarela, con bufanda roja.",
+            "promptExamples": [
+                { "title": "Prompt estructurado básico", "prompt": "Un unicornio galopando en un campo de lavanda, estilo ilustración infantil, colores pastel." },
+                { "title": "Prompt con detalles de ambiente", "prompt": "Un café parisino en un día lluvioso, gente conversando, luces cálidas, estilo realista." },
+                { "title": "Prompt para escena de acción", "prompt": "Un robot y un dragón luchando en una ciudad futurista, estilo cómic, colores vibrantes." }
+            ]
+        },
+        "estilos-basicos": {
+            "id": "estilos-basicos",
+            "title": "Estilos visuales básicos y cómo elegirlos",
+            "moduleTitle": "Crear imágenes",
+            "durationMinutes": 9,
+            "summary": "Conoce los estilos visuales más populares en IA (realista, cartoon, acuarela, pixel art, etc.) y aprende a elegir el adecuado para tu proyecto.",
+            "objectives": [
+                "Identificar al menos 5 estilos visuales populares.",
+                "Probar el mismo prompt en diferentes estilos.",
+                "Elegir el estilo más adecuado según el objetivo."
+            ],
+            "sections": [
+                { "heading": "Estilos más usados en IA", "content": "Realista, cartoon, acuarela, arte digital, pixel art, cómic, óleo clásico, anime. Cada estilo tiene ventajas: realista para presentaciones profesionales, cartoon para educación, pixel art para videojuegos, etc." },
+                { "heading": "Cómo elegir el estilo correcto", "content": "Define el objetivo de la imagen: ¿es para un informe, una red social, un juego, un póster? Elige el estilo que mejor comunique tu mensaje y conecte con tu audiencia. Prueba varios estilos antes de decidir." },
+                { "heading": "Ejemplos prácticos", "content": "Genera la misma escena ('un dragón en una montaña') en 3 estilos diferentes y analiza cuál transmite mejor la emoción o mensaje que buscas." }
+            ],
+            "activity": "Genera una imagen de 'un robot chef cocinando en una cocina futurista' en estilo cartoon, realista y pixel art. Compara los resultados y elige el más adecuado para un público infantil.",
+            "deliverable": "Tres imágenes en diferentes estilos, con una justificación de la elección final para el público objetivo.",
+            "checklist": [
+                "Probé al menos 3 estilos visuales diferentes.",
+                "Analicé cuál comunica mejor para mi objetivo.",
+                "Elegí el estilo más adecuado para mi audiencia."
+            ],
+            "promptStarter": "Crea una imagen de una nave espacial aterrizando en Marte, primero en estilo realista, luego cartoon y finalmente pixel art.",
+            "promptExamples": [
+                { "title": "Prompt para cartoon", "prompt": "Un perro detective con lupa y sombrero, estilo cartoon, fondo de ciudad." },
+                { "title": "Prompt para realista", "prompt": "Un retrato de una científica en su laboratorio, estilo realista, luz natural." },
+                { "title": "Prompt para pixel art", "prompt": "Un castillo medieval en la cima de una colina, estilo pixel art, colores brillantes." }
+            ]
+        },
+        "mejorar-resultados": {
+            "id": "mejorar-resultados",
+            "title": "Cómo mejorar resultados y evitar errores comunes",
+            "moduleTitle": "Crear imágenes",
+            "durationMinutes": 10,
+            "summary": "Aprende técnicas para refinar tus prompts, corregir errores frecuentes y obtener imágenes más precisas y profesionales.",
+            "objectives": [
+                "Identificar errores comunes en prompts visuales.",
+                "Aplicar técnicas de iteración y ajuste.",
+                "Obtener imágenes más alineadas con tu idea inicial."
+            ],
+            "sections": [
+                { "heading": "Errores frecuentes y cómo solucionarlos", "content": "Errores típicos: prompts ambiguos, pedir estilos contradictorios, exceso de detalles irrelevantes, olvidar el objetivo de la imagen. Solución: revisa tu prompt, elimina ambigüedades y enfócate en lo esencial." },
+                { "heading": "Iterar y ajustar para mejorar", "content": "Genera la imagen, analiza el resultado y ajusta el prompt: cambia el estilo, añade o elimina detalles, prueba diferentes herramientas. La iteración es clave para obtener el resultado ideal." },
+                { "heading": "Consejos de expertos", "content": "Guarda tus mejores prompts como plantillas, revisa galerías de ejemplos y aprende de la comunidad. No temas experimentar y pedir feedback a otros usuarios." }
+            ],
+            "activity": "Elige una imagen generada que no te convenza. Ajusta el prompt al menos dos veces para mejorar el resultado y documenta los cambios.",
+            "deliverable": "Secuencia de 3 imágenes (original + 2 iteraciones) con explicación de los cambios y mejoras logradas.",
+            "checklist": [
+                "Identifiqué y corregí errores en mis prompts.",
+                "Iteré al menos dos veces para mejorar el resultado.",
+                "Documenté el proceso de mejora."
+            ],
+            "promptStarter": "Genera una imagen de un jardín zen al atardecer. Si el resultado no es satisfactorio, ajusta el prompt para mejorar la iluminación y el nivel de detalle.",
+            "promptExamples": [
+                { "title": "Prompt original", "prompt": "Un jardín zen al atardecer, estilo realista." },
+                { "title": "Primera iteración", "prompt": "Un jardín zen al atardecer, luz cálida, enfoque en las piedras y el agua, estilo realista." },
+                { "title": "Segunda iteración", "prompt": "Un jardín zen al atardecer, luz cálida, detalles en las piedras, reflejos en el agua, fondo de montañas, estilo realista, alta resolución." }
+            ]
+        },
+        "proyecto-final": {
+            "id": "proyecto-final",
+            "title": "Proyecto final: crea tu portafolio de imágenes IA",
+            "moduleTitle": "Crear imágenes",
+            "durationMinutes": 12,
+            "summary": "Pon en práctica todo lo aprendido creando un portafolio personal de imágenes generadas con IA, aplicando diferentes estilos, herramientas y técnicas de prompting.",
+            "objectives": [
+                "Aplicar técnicas de prompting y selección de estilos.",
+                "Usar al menos dos herramientas diferentes de IA de imágenes.",
+                "Presentar un portafolio con justificación de cada imagen."
+            ],
+            "sections": [
+                { "heading": "Definir el objetivo del portafolio", "content": "Elige un tema central (naturaleza, tecnología, fantasía, etc.) y define el propósito de tu portafolio: mostrar habilidades, inspirar, presentar a clientes, etc." },
+                { "heading": "Seleccionar herramientas y estilos", "content": "Genera al menos 5 imágenes usando diferentes herramientas (DALL-E, Midjourney, Stable Diffusion, Leonardo.ai, Bing Image Creator) y estilos variados. Documenta el proceso y los prompts usados." },
+                { "heading": "Presentar y justificar tus elecciones", "content": "Organiza las imágenes en un documento o galería, explica por qué elegiste cada estilo y herramienta, y qué aprendiste en el proceso." }
+            ],
+            "activity": "Crea un portafolio de 5 imágenes IA sobre un tema de tu elección, usando al menos 3 herramientas y 3 estilos diferentes.",
+            "deliverable": "Portafolio digital con 5 imágenes, prompts utilizados y justificación de cada elección.",
+            "checklist": [
+                "Generé al menos 5 imágenes con IA usando diferentes herramientas y estilos.",
+                "Documenté los prompts y el proceso de selección.",
+                "Justifiqué cada elección en mi portafolio."
+            ],
+            "promptStarter": "Crea una serie de imágenes sobre 'la evolución de la tecnología' usando DALL-E, Midjourney y Stable Diffusion, cada una en un estilo diferente.",
+            "promptExamples": [
+                { "title": "Prompt para portafolio temático", "prompt": "Un puente futurista conectando dos ciudades flotantes, estilo arte digital, alta resolución." },
+                { "title": "Prompt para naturaleza", "prompt": "Un bosque encantado con árboles luminosos y animales fantásticos, estilo acuarela." },
+                { "title": "Prompt para tecnología", "prompt": "Un androide tocando el piano en un teatro antiguo, mezcla de estilos realista y cyberpunk." }
             ]
         }
     },
@@ -971,6 +7262,438 @@ export const COURSE_LESSONS = {
                 {
                     "title": "Proyecto completo de contenido",
                     "prompt": "Vamos a crear un mini plan de contenido para mi marca personal en LinkedIn. Paso 1: Define mi posicionamiento (soy [profesion]). Paso 2: Sugiere 4 pilares de contenido. Paso 3: Genera un calendario de 2 semanas (3 posts/semana). Paso 4: Escribe el primer post completo. Paso 5: Dame ideas para el visual que acompane al post."
+                }
+            ]
+        }
+    },
+
+    /* ═══════════════════════════════════════════
+       CURSO 3: prompts-101
+       Prompts 101: El Arte de Preguntar a la IA
+       Nivel: Principiante | 8 lecciones
+       ═══════════════════════════════════════════ */
+    "prompts-101": {
+        "que-es-prompt": {
+            "id": "que-es-prompt",
+            "title": "¿Que es un prompt y por que importa tanto?",
+            "moduleTitle": "Fundamentos de prompts",
+            "durationMinutes": 10,
+            "summary": "Un prompt es la instruccion que le das a la IA. Es el punto de contacto entre tu intencion y la capacidad de la maquina. Dominar el arte del prompting es la habilidad mas importante de la era de la IA, y en esta leccion empezaras a desarrollarla.",
+            "objectives": [
+                "Definir que es un prompt y por que es la habilidad clave para usar IA efectivamente.",
+                "Entender la relacion directa entre calidad del prompt y calidad del resultado.",
+                "Conocer los elementos basicos que componen un prompt efectivo."
+            ],
+            "sections": [
+                {
+                    "heading": "Prompt: tu lenguaje con la IA",
+                    "content": "Un prompt es cualquier texto que escribes para comunicarte con una IA. Puede ser una pregunta ('¿Que es la inflacion?'), una instruccion ('Escribe un email formal'), una descripcion ('Una imagen de un gato en el espacio') o un contexto complejo con multiples requisitos. El prompting (o prompt engineering) es el arte y la ciencia de escribir instrucciones que produzcan el resultado exacto que necesitas. Es literalmente el idioma que hablas con la IA, y como cualquier idioma, se puede hablar con torpeza o con fluidez."
+                },
+                {
+                    "heading": "La ley del garbage in, garbage out",
+                    "content": "Esta ley de la informatica es mas relevante que nunca: si metes basura (un prompt vago), sale basura (una respuesta generica). Si metes calidad (un prompt especifico y bien estructurado), sale calidad. Ejemplo real: 'Ayudame con marketing' produce una respuesta de manual generica. 'Actua como CMO de una startup SaaS B2B. Mi producto es un CRM para dentistas con precio de 49€/mes. Tenemos 200 clientes y presupuesto de marketing de 2000€/mes. Dame 5 estrategias especificas de adquisicion con estimacion de CAC y ROI para cada una' produce una respuesta que realmente puedes usar."
+                },
+                {
+                    "heading": "Los 4 elementos fundamentales de un prompt",
+                    "content": "Todo prompt efectivo tiene hasta 4 elementos (no siempre necesitas los 4): 1) Rol: quien quieres que sea la IA ('Actua como editor de The New York Times'). 2) Contexto: informacion de fondo necesaria ('Escribo un blog de fitness para principiantes'). 3) Instruccion: que quieres que haga ('Creame un calendario de entrenamiento de 4 semanas'). 4) Formato: como quieres el resultado ('En formato tabla, con dia, ejercicio, series y descanso'). Con estos 4 elementos, controlas el 90% de la calidad de la respuesta."
+                },
+                {
+                    "heading": "Prompt engineering: la profesion del futuro",
+                    "content": "El prompt engineering ya es una habilidad profesional real. Empresas contratan 'prompt engineers' con salarios de 80.000-150.000€. Pero no necesitas ser un profesional para beneficiarte: cualquier persona que mejore sus prompts mejora su productividad con IA un 300-500%. La buena noticia es que es una habilidad que se aprende con practica, no requiere conocimientos tecnicos, y los principios son transferibles entre ChatGPT, Claude, Gemini, Midjourney y cualquier IA. Lo que aprendas aqui lo usaras con cualquier herramienta."
+                }
+            ],
+            "activity": "Escribe la misma solicitud de 3 formas: como un principiante (1 linea), como un intermedio (3-4 lineas con contexto) y como un experto (prompt completo con rol, contexto, instruccion y formato). Ejecuta las tres y compara.",
+            "deliverable": "3 versiones de un mismo prompt con nivel creciente de sofisticacion + resultados comparados + reflexion sobre la diferencia.",
+            "checklist": [
+                "Puedo definir que es un prompt y por que importa.",
+                "Conozco los 4 elementos de un prompt efectivo.",
+                "He experimentado la diferencia entre un prompt vago y uno estructurado.",
+                "Entiendo que el prompting es una habilidad transferible entre IAs."
+            ],
+            "promptStarter": "Actua como un profesor de prompt engineering. Voy a escribirte un prompt basico y quiero que: 1) Lo evalues del 1 al 10, 2) Expliques que le falta, 3) Me muestres como reescribirlo como un experto, 4) Expliques cada mejora. Mi prompt basico es: 'Dame ideas de negocio'",
+            "promptExamples": [
+                {
+                    "title": "Evolucion de un prompt",
+                    "prompt": "Muestrame la evolucion de este prompt en 4 niveles (principiante, basico, intermedio, experto): 'Escribe un post de Instagram'. Para cada nivel, muestra el prompt y explica que mejora y por que. Al final, ejecuta el nivel experto."
+                },
+                {
+                    "title": "Diagnostico de prompt",
+                    "prompt": "Aqui tienes un prompt que escribi: [tu prompt]. Actua como un doctor de prompts: diagnostica sus problemas, explica los sintomas (por que da resultados mediocres), prescribe el tratamiento (mejoras concretas) y dame la version curada."
+                },
+                {
+                    "title": "Prompt para generar prompts",
+                    "prompt": "Actua como un experto en prompt engineering. Necesito hacer esta tarea: [describe tu tarea]. Generame 3 prompts diferentes que yo pueda usar para lograr el mejor resultado posible. Explica la estrategia detras de cada uno."
+                }
+            ]
+        },
+        "anatomia-prompt": {
+            "id": "anatomia-prompt",
+            "title": "Anatomia de un prompt perfecto",
+            "moduleTitle": "Fundamentos de prompts",
+            "durationMinutes": 14,
+            "summary": "Un prompt perfecto no es cuestion de suerte sino de estructura. En esta leccion diseccionaremos prompts exitosos para entender exactamente que los hace funcionar, y construiras tu propio framework personal de prompting.",
+            "objectives": [
+                "Identificar y aplicar los 7 componentes de un prompt avanzado.",
+                "Analizar prompts reales exitosos y entender por que funcionan.",
+                "Construir un framework personal de prompting adaptado a tus tareas."
+            ],
+            "sections": [
+                {
+                    "heading": "Los 7 componentes del prompt perfecto",
+                    "content": "1) ROL: 'Actua como un X con Y experiencia'. 2) CONTEXTO: situacion, background, informacion relevante. 3) TAREA: la instruccion principal clara y especifica. 4) FORMATO: como quieres el resultado (tabla, lista, parrafo, email). 5) TONO: estilo de comunicacion (formal, casual, tecnico, divulgativo). 6) RESTRICCIONES: limites y exclusiones ('Maximo 200 palabras', 'No uses jerga'). 7) EJEMPLOS: muestras del resultado esperado. No todos los prompts necesitan los 7, pero cuantos mas incluyas, mas preciso sera el resultado."
+                },
+                {
+                    "heading": "Diseccionando un prompt exitoso",
+                    "content": "Prompt: 'Eres un copywriter senior especializado en e-commerce (ROL). Mi tienda online vende cafe de especialidad a 15€/250g, nuestro publico son millennials urbanos amantes del cafe artesanal (CONTEXTO). Escribe 5 descripciones de producto para nuestra pagina web (TAREA). Cada descripcion debe tener: titulo atractivo, 2-3 lineas descriptivas y un CTA (FORMATO). Tono: cercano, sofisticado pero no pretencioso (TONO). Maximo 80 palabras por descripcion, no uses la palabra premium ni artesanal (RESTRICCIONES).' Este prompt tiene 6 de 7 componentes y producira resultados excelentes porque no deja espacio a la ambiguedad."
+                },
+                {
+                    "heading": "Errores de estructura mas comunes",
+                    "content": "Error 1: Todo en un bloque de texto sin estructura. Solucion: usa saltos de linea y etiquetas claras (ROL:, CONTEXTO:, TAREA:). Error 2: Dar la instruccion al principio y el contexto al final. Mejor: contexto primero, instruccion despues. Error 3: Instrucciones contradictorias ('Se creativo pero sigue exactamente este formato'). Error 4: Pedir demasiadas cosas en un solo prompt. Si la tarea es compleja, diviedela en pasos. Error 5: No ser especifico con el formato de salida, dejando que la IA decida un formato que luego debes reformatear."
+                },
+                {
+                    "heading": "Tu framework personal de prompting",
+                    "content": "Crea tu plantilla personal adaptada a tus tareas mas frecuentes. Si eres de marketing, tu framework podria ser: '[ROL de marketing] + [producto/servicio] + [audiencia target] + [canal] + [objetivo] + [formato de entrega] + [restricciones de marca]'. Si eres educador: '[ROL pedagogico] + [tema] + [nivel de alumnos] + [objetivo de aprendizaje] + [formato didactico] + [restricciones de tiempo]'. Guarda este framework como nota rapida y usalo como checklist antes de enviar cualquier prompt importante."
+                }
+            ],
+            "activity": "Crea 3 prompts completos usando los 7 componentes para 3 tareas diferentes de tu trabajo. Evalua cada resultado y ajusta los componentes que necesiten mejora.",
+            "deliverable": "3 prompts estructurados con los 7 componentes etiquetados + resultados + framework personal de prompting.",
+            "checklist": [
+                "Conozco y aplico los 7 componentes de un prompt avanzado.",
+                "Puedo diseccionar un prompt explicando por que funciona.",
+                "Tengo mi framework personal de prompting creado.",
+                "Mis prompts producen resultados utilizables al primer intento."
+            ],
+            "promptStarter": "ROL: Eres un consultor de productividad con certificacion GTD.\nCONTEXTO: Soy un emprendedor con un equipo de 3 personas. Manejamos 15 proyectos simultaneos y sentimos que perdemos el control.\nTAREA: Disenanos un sistema de gestion de proyectos simple usando herramientas gratuitas.\nFORMATO: Guia paso a paso con herramientas recomendadas para cada etapa.\nTONO: Practico y directo, sin teoria excesiva.\nRESTRICCIONES: Solo herramientas gratuitas, implementable en 1 semana, maximo 5 herramientas.",
+            "promptExamples": [
+                {
+                    "title": "Framework completo para marketing",
+                    "prompt": "ROL: Eres un estratega de redes sociales para pymes.\nCONTEXTO: Mi negocio es una floristeria local con 500 seguidores en Instagram. Presupuesto de marketing: 0€ (solo tiempo).\nTAREA: Crea una estrategia de crecimiento organico para llegar a 2000 seguidores en 3 meses.\nFORMATO: Plan mensual con acciones semanales en formato tabla.\nTONO: Motivador y practico.\nRESTRICCIONES: Sin anuncios pagados, maximo 1 hora diaria de dedicacion.\nEJEMPLO: Semana 1 - Lunes: post de detras de escenas mostrando el montaje de un ramo."
+                },
+                {
+                    "title": "Framework completo para educacion",
+                    "prompt": "ROL: Eres un disenador instruccional experto en aprendizaje activo.\nCONTEXTO: Enseno matematicas a alumnos de 14 anos, clase de 25 estudiantes, 50 minutos por sesion.\nTAREA: Disenanos una clase sobre fracciones que enganche a adolescentes que odian las mates.\nFORMATO: Plan de clase con minuto a minuto, materiales necesarios y actividades.\nTONO: Divertido y dinamico.\nRESTRICCIONES: Sin tecnologia (no hay tablets), solo materiales fisicos low-cost."
+                },
+                {
+                    "title": "Analisis de componentes",
+                    "prompt": "Analiza este prompt que escribi e identifica cuales de los 7 componentes tiene y cuales le faltan: [pega tu prompt]. Para cada componente faltante, sugiere que deberia anadir. Reescribe el prompt mejorado y explica por que sera mas efectivo."
+                }
+            ]
+        },
+        "errores-comunes": {
+            "id": "errores-comunes",
+            "title": "Los 10 errores mas comunes al escribir prompts",
+            "moduleTitle": "Fundamentos de prompts",
+            "durationMinutes": 12,
+            "summary": "Todos cometemos los mismos errores al empezar con prompts. Ser demasiado vago, no dar contexto, aceptar la primera respuesta... Esta leccion te ahorrara semanas de frustracion mostrandote los errores mas frecuentes y como evitarlos.",
+            "objectives": [
+                "Identificar los 10 errores mas comunes en la escritura de prompts.",
+                "Aprender la correccion especifica para cada error.",
+                "Desarrollar el habito de revisar tus prompts antes de enviarlos."
+            ],
+            "sections": [
+                {
+                    "heading": "Errores 1-3: Vagos, genericos y sin contexto",
+                    "content": "Error 1: Ser demasiado vago. 'Ayudame con mi negocio' no le da nada a la IA. Correccion: se especifico sobre que aspecto del negocio, que problema tienes y que resultado esperas. Error 2: No dar contexto personal. La IA no sabe quien eres, donde trabajas ni que nivel tienes. Correccion: siempre incluye tu situacion al inicio. Error 3: Hacer preguntas cerradas. '¿Es bueno el email marketing?' solo obtiene un si/no. Correccion: pregunta abierta con especificidad: 'Que estrategias de email marketing funcionan mejor para un e-commerce de moda con lista de 5.000 suscriptores?'"
+                },
+                {
+                    "heading": "Errores 4-6: Formato, expectativas y single-shot",
+                    "content": "Error 4: No pedir formato de salida. Si no especificas, ChatGPT elige el formato y probablemente no sera el que necesitas. Correccion: siempre incluye el formato deseado. Error 5: Expectativas irrealistas. Pedir 'un plan de negocio completo' en un solo prompt es demasiado. Correccion: divide tareas grandes en pasos y trabaja secuencialmente. Error 6: Aceptar la primera respuesta sin iterar. El prompting es conversacional. Correccion: siempre pide ajustes ('Hazlo mas corto', 'Dale mas ejemplos', 'Cambia el tono'). La magia esta en la iteracion, no en el primer intento."
+                },
+                {
+                    "heading": "Errores 7-8: Instrucciones confusas y tonos",
+                    "content": "Error 7: Instrucciones contradictorias o ambiguas. 'Escribe algo corto pero completo y detallado' confunde al modelo. Correccion: prioriza. 'Escribe un resumen conciso (150 palabras) que cubra los 3 puntos principales.' Error 8: No definir el tono. La IA por defecto usa un tono neutro-formal que suena robotic. Correccion: especifica siempre el tono: 'como si hablaras con un amigo', 'tono de informe ejecutivo', 'estilo divulgativo para blog'. El tono define si el resultado suena humano o artificial."
+                },
+                {
+                    "heading": "Errores 9-10: Desaprovechar la conversacion",
+                    "content": "Error 9: No usar la memoria de la conversacion. Muchos usuarios repiten informacion que ya dieron antes. Correccion: referencia lo anterior ('Basandote en el perfil de cliente que definimos...'). Error 10: Mezclar temas dispares en una conversacion. La calidad cae cuando saltas de marketing a recetas a codigo en el mismo chat. Correccion: una conversacion = un proyecto/tema. Si cambias de tema, abre un nuevo chat y da el contexto inicial necesario. Tus conversaciones deben ser enfocadas."
+                }
+            ],
+            "activity": "Toma 5 prompts que hayas usado antes (en tu historial de ChatGPT). Para cada uno, identifica que errores cometiste de los 10 listados y reescribelos aplicando las correcciones. Compara los nuevos resultados.",
+            "deliverable": "5 prompts originales con errores identificados + 5 versiones corregidas + comparacion de resultados demostrando la mejora.",
+            "checklist": [
+                "Puedo identificar los 10 errores mas comunes de prompting.",
+                "Reviso mis prompts antes de enviarlos usando un checklist mental.",
+                "Practico la iteracion en lugar de aceptar la primera respuesta.",
+                "Mis conversaciones estan enfocadas en un solo tema."
+            ],
+            "promptStarter": "Voy a enviarte 3 prompts que he escrito para mi trabajo. Para cada uno: 1) Identificame todos los errores de los 10 mas comunes, 2) Explicame por que producen resultados mediocres, 3) Reescribelos como un experto en prompt engineering. Prompts: 1) 'Ayudame con una presentacion', 2) 'Necesito ideas de marketing', 3) 'Escribe algo sobre mi empresa'",
+            "promptExamples": [
+                {
+                    "title": "Auditar tus propios prompts",
+                    "prompt": "Actua como un auditor de calidad de prompts. Te voy a enviar el historial de mis ultimos 5 prompts. Para cada uno, evalua del 1 al 10 y dime que error de los clasicos estoy cometiendo. Prompt 1: [pega tu prompt]. (Repite para cada uno)"
+                },
+                {
+                    "title": "De malo a excelente en un paso",
+                    "prompt": "Aqui tienes un prompt malo a proposito: 'Escribe cosas sobre el cambio climatico'. Transformalo paso a paso, anadiendo un componente a la vez (rol, contexto, tarea, formato, tono, restricciones). Muestrame como cada adicion mejora el resultado."
+                },
+                {
+                    "title": "Checklist pre-envio",
+                    "prompt": "Creame un checklist de 10 puntos que deba verificar antes de enviar cualquier prompt importante. Para cada punto, dame un ejemplo de lo que esta bien y lo que esta mal. Formato: tabla con columnas Criterio, Mal ejemplo, Buen ejemplo."
+                }
+            ]
+        },
+        "practica-basica": {
+            "id": "practica-basica",
+            "title": "Practica guiada: tus primeros prompts efectivos",
+            "moduleTitle": "Fundamentos de prompts",
+            "durationMinutes": 18,
+            "summary": "La teoria sin practica no sirve. En esta leccion haras 8 ejercicios guiados paso a paso, cada uno disenado para desarrollar una habilidad especifica de prompting. Al terminar, tendras confianza para escribir prompts efectivos por tu cuenta.",
+            "objectives": [
+                "Escribir prompts efectivos para 8 tipos de tareas diferentes.",
+                "Desarrollar fluidez en la formulacion de instrucciones para IA.",
+                "Crear tu primera biblioteca personal de prompts probados."
+            ],
+            "sections": [
+                {
+                    "heading": "Practica 1-2: Escritura con precision",
+                    "content": "Practica 1: Redacta un prompt para generar una bio profesional para LinkedIn. Incluye: tu rol, anos de experiencia, sector, logros clave y estilo deseado. Criterio de exito: la bio suena como tu, no como una IA. Practica 2: Escribe un prompt para crear un email dificil (rechazo, queja, negociacion). Especifica la situacion exacta, la relacion con el destinatario y el resultado que buscas. Criterio de exito: el email es util sin ediciones significativas."
+                },
+                {
+                    "heading": "Practica 3-4: Analisis e investigacion",
+                    "content": "Practica 3: Toma un articulo largo de tu industria, pegalo en ChatGPT y pide un resumen en 3 niveles (tweet, parrafo, pagina). Luego pide: puntos clave, implicaciones para tu trabajo y 3 preguntas que el articulo deja sin responder. Practica 4: Investiga un tema que necesites aprender rapido. No preguntes '¿Que es X?'. En su lugar: 'Soy [tu nivel] y necesito entender [tema] en 20 minutos. Dame una explicacion progresiva: primero la idea central en 1 frase, luego conceptos clave en 5 bullets, y finalmente una explicacion detallada con ejemplos del mundo real.'"
+                },
+                {
+                    "heading": "Practica 5-6: Creatividad e ideacion",
+                    "content": "Practica 5: Pide ideas con restricciones. 'Dame 10 ideas de nombres para mi podcast sobre [tema]. Restricciones: maximo 4 palabras, faciles de recordar, disponibles como dominio .com, con un toque de humor.' Las restricciones paradojicamente generan mas creatividad. Practica 6: Escribe un prompt para crear contenido creativo (post, hilo, articulo). Incluye: audiencia, plataforma, objetivo (educar/entretener/vender), tono y un ejemplo de contenido que admires como referencia."
+                },
+                {
+                    "heading": "Practica 7-8: Planificacion y decision",
+                    "content": "Practica 7: Pide ayuda para tomar una decision. 'Estoy evaluando estas 3 opciones para [situacion]. Dame un analisis comparativo con pros, contras, riesgos y recomendacion. Mis criterios de decision son [lista criterios].' Practica 8: Crea un plan de accion. 'Necesito un plan de 30 dias para [objetivo]. Soy [contexto]. Formato: semana a semana con acciones diarias especificas, herramientas necesarias y metricas de avance.' Revisa el plan, pide ajustes y guardalo como plantilla."
+                }
+            ],
+            "activity": "Completa las 8 practicas una por una. Para cada una, evalua tu prompt antes de enviarlo (¿tiene contexto? ¿es especifico? ¿define formato?) y evalua el resultado (¿es util? ¿necesita edicion?).",
+            "deliverable": "8 prompts completados con sus resultados + evaluacion personal de cada uno + mejores prompts guardados como plantillas.",
+            "checklist": [
+                "Complete los 8 ejercicios de practica guiada.",
+                "Todos mis prompts incluyen al menos contexto, tarea y formato.",
+                "He iterado al menos una vez en cada ejercicio.",
+                "Guarde mis mejores prompts como plantillas reutilizables."
+            ],
+            "promptStarter": "Actua como mi coach personal de prompts. Voy a hacer los ejercicios de practica guiada. Empecemos con el primero: necesito una bio profesional para LinkedIn. Te doy mis datos: soy [profesion], con [X] anos de experiencia en [sector]. Mis logros principales son [logros]. Quiero que suene [estilo]. Creala y luego explicame que hiciste bien y que puedo mejorar en mi prompt.",
+            "promptExamples": [
+                {
+                    "title": "Bio de LinkedIn optimizada",
+                    "prompt": "Crea una bio profesional para LinkedIn con estos datos:\n- Nombre: [nombre]\n- Rol: [cargo actual]\n- Sector: [industria]\n- Experiencia: [anos] anos\n- Logros top: [2-3 logros]\n- Estilo deseado: profesional pero con personalidad\n- Longitud: 3 parrafos (resumen caracteristicas, experiencia, vision)\nDame 2 versiones: una seria y una con toque mas personal."
+                },
+                {
+                    "title": "Email de negociacion",
+                    "prompt": "Escribe un email para negociar un aumento de precio con mi proveedor principal. Contexto: llevamos 3 anos trabajando juntos, su precio subio un 20% sin aviso, nuestro volumen les representa el 15% de su negocio. Quiero: que revisen el aumento al 10% y congelen precios 6 meses. Tono: firme pero preservando la relacion. Maximo 200 palabras."
+                },
+                {
+                    "title": "Resumen de articulo en 3 niveles",
+                    "prompt": "Resume el siguiente articulo en 3 niveles:\nNivel 1 - Tweet (280 caracteres): la idea central\nNivel 2 - Resumen LinkedIn (100 palabras): puntos principales\nNivel 3 - Briefing (300 palabras): resumen detallado con implicaciones\n\nAl final, dame 3 preguntas que este articulo deja sin responder.\n\nArticulo: [pega el articulo]"
+                }
+            ]
+        },
+        "dar-contexto": {
+            "id": "dar-contexto",
+            "title": "Tecnicas avanzadas para dar contexto",
+            "moduleTitle": "Tecnicas esenciales",
+            "durationMinutes": 13,
+            "summary": "Dar contexto es mas que decir 'soy profesor'. Es un arte que incluye compartir antecedentes, definir la situacion, establecer restricciones y dar ejemplos del resultado deseado. Domina estas tecnicas y tus resultados pasaran de 'aceptable' a 'excelente'.",
+            "objectives": [
+                "Aplicar 5 tecnicas avanzadas para proporcionar contexto efectivo.",
+                "Saber que informacion incluir y cual omitir en el contexto.",
+                "Crear contextos reutilizables para tus tareas frecuentes."
+            ],
+            "sections": [
+                {
+                    "heading": "Contexto por capas: del general al especifico",
+                    "content": "Estructura tu contexto como una cebolla, de fuera hacia dentro: Capa 1 (sector): 'Trabajo en marketing digital'. Capa 2 (empresa): 'en una agencia con 20 clientes pyme'. Capa 3 (rol): 'soy responsable de contenido y SEO'. Capa 4 (proyecto): 'estoy lanzando la estrategia de contenido para un cliente que es una clinica dental'. Capa 5 (tarea): 'necesito escribir los primeros 4 articulos del blog'. Cada capa anade precision. Para tareas simples bastan 2-3 capas; para tareas complejas usa las 5."
+                },
+                {
+                    "heading": "Contexto por ejemplo: muestra, no cuentes",
+                    "content": "A veces es mas efectivo mostrar un ejemplo que explicar con palabras. 'Quiero un email como este: [pega ejemplo real]. Pero adaptado a esta nueva situacion: [describe situacion].' Otro metodo: 'Aqui tienes 3 posts de Instagram que me gustan de nuestro competidor: [pega textos]. Analiza el estilo, tono y estructura, y crea 5 posts nuevos con ese mismo estilo pero para nuestro producto.' Dar ejemplos es la forma mas rapida de conseguir resultados que se parezcan a lo que imaginas."
+                },
+                {
+                    "heading": "Contexto acumulativo en conversaciones",
+                    "content": "Cuando trabajas en un proyecto complejo, construye contexto progresivamente a lo largo de la conversacion. Mensaje 1: Define el proyecto y el contexto general. Mensaje 2: Establece los requisitos y restricciones. Mensaje 3: Proporciona datos especificos o documentos. Mensaje 4: Ahora si, pide la tarea. Este enfoque produce resultados superiores a meter todo en un solo prompt gigante. Ademas, puedes verificar que la IA entendio cada capa antes de avanzar: 'Resume lo que sabes de mi proyecto hasta ahora.'"
+                },
+                {
+                    "heading": "Contexto reutilizable: tu 'starter pack'",
+                    "content": "Crea un bloque de contexto para cada area de tu vida: profesional, un proyecto especifico, una clase que ensenas, etc. Ejemplo de starter pack profesional: 'Soy Maria Garcia, content manager en TechStart (SaaS de RRHH, 50 empleados). Nuestro publico son directores de RRHH en empresas de 100-500 empleados en Espana. Tono de marca: profesional, cercano, basado en datos. Evitar: lenguaje corporativo vacio, promesas exageradas, anglicismos innecesarios.' Guarda esto como nota y pegalo al inicio de cualquier conversacion relevante. Te ahorrara tiempo y aumentara la calidad."
+                }
+            ],
+            "activity": "Crea 3 'starter packs' de contexto reutilizable: uno para tu trabajo principal, uno para un proyecto actual, y uno personal (hobby, formacion, etc). Pruebalos en conversaciones distintas.",
+            "deliverable": "3 bloques de contexto reutilizable guardados + prueba de uso en conversaciones reales demostrando mejora de calidad.",
+            "checklist": [
+                "Domino la tecnica de contexto por capas.",
+                "He usado contexto por ejemplo al menos una vez con buenos resultados.",
+                "Cree mis starter packs de contexto reutilizable.",
+                "Practico construir contexto progresivo en conversaciones largas."
+            ],
+            "promptStarter": "Antes de pedirte nada, quiero construir el contexto completo de mi proyecto. Voy a darte informacion por capas y quiero que me confirmes que entiendes cada una antes de avanzar. Capa 1 - Mi sector e industria: [describe]. Confirma y preguntame lo que necesites saber.",
+            "promptExamples": [
+                {
+                    "title": "Contexto por ejemplo",
+                    "prompt": "Aqui tienes 3 descripciones de producto de mi tienda online que me gustan:\n1. [pega descripcion 1]\n2. [pega descripcion 2]\n3. [pega descripcion 3]\nAnaliza el patron: tono, estructura, longitud y palabras clave recurrentes. Ahora crea 5 descripciones nuevas para estos productos siguiendo exactamente el mismo patron: [lista de productos]."
+                },
+                {
+                    "title": "Starter pack profesional",
+                    "prompt": "Ayudame a crear mi 'starter pack de contexto' para ChatGPT. Entrevistame con 10 preguntas sobre mi trabajo, mi estilo de comunicacion, mis tareas frecuentes y mis preferencias. Con las respuestas, redactame un bloque de contexto de 5-6 lineas que pueda reutilizar al inicio de cualquier conversacion."
+                },
+                {
+                    "title": "Verificar comprension del contexto",
+                    "prompt": "Acabo de darte mucha informacion sobre mi proyecto. Antes de que trabajemos, quiero verificar que entendiste todo. Resumeme en tus palabras: 1) Quien soy, 2) Que estoy haciendo, 3) Para quien, 4) Que restricciones tengo, 5) Que tipo de resultado espero. Si algo no quedo claro, preguntame."
+                }
+            ]
+        },
+        "definir-rol": {
+            "id": "definir-rol",
+            "title": "Definir el rol: la tecnica mas poderosa",
+            "moduleTitle": "Tecnicas esenciales",
+            "durationMinutes": 12,
+            "summary": "Decirle a la IA 'Actua como...' cambia radicalmente la calidad de las respuestas. Es la tecnica mas facil de aplicar y la que mayor impacto tiene. Aprende a elegir el rol perfecto para cada situacion y a personalizar al 'personaje' que necesitas.",
+            "objectives": [
+                "Dominar la tecnica de role-playing para mejorar la calidad de respuestas.",
+                "Crear roles detallados con personalidad, experiencia y estilo definidos.",
+                "Saber combinar multiples roles para obtener perspectivas diferentes."
+            ],
+            "sections": [
+                {
+                    "heading": "Por que funciona asignar un rol",
+                    "content": "Cuando escribes 'Actua como un nutricionista deportivo con 15 anos de experiencia', ChatGPT activa un conjunto diferente de patrones que cuando le preguntas sin rol. Es como la diferencia entre preguntar a un amigo sobre dietas y preguntar a un medico. El modelo ajusta su vocabulario, nivel de detalle, tipos de recomendaciones y estilo de comunicacion segun el rol asignado. Esto funciona porque el modelo fue entrenado con textos de todo tipo de profesionales, y al asignar un rol, 'enfocas' su generacion en los patrones de ese perfil."
+                },
+                {
+                    "heading": "Como crear un rol detallado",
+                    "content": "Un rol basico: 'Actua como un experto en marketing'. Un rol potente: 'Actua como un CMO con 20 anos de experiencia en startups tecnologicas B2B, especializado en growth hacking y marketing de contenidos. Has escalado 3 empresas de 0 a 10 millones de euros. Tu estilo es directo, basado en datos y con un enfoque muy practico. No te gustan las teorias abstractas, prefieres casos reales y numeros concretos.' Cuanto mas detallado el personaje, mas consistente y util sera la respuesta. Piensa en el rol como un personaje de pelicula: necesita background, personalidad y estilo."
+                },
+                {
+                    "heading": "Roles para cada situacion",
+                    "content": "Para escritura: editor senior, copywriter, periodista, guionista. Para negocios: consultor McKinsey, coach ejecutivo, inversor angel. Para educacion: profesor, tutor personal, disenador instruccional. Para creatividad: director creativo, brainstorming facilitator, artista visual. Para analisis: analista de datos, investigador, auditor. Para feedback: critico constructivo, mentor, revisor de pares. Truco avanzado: puedes combinar roles: 'Actua como un consultor de negocios que tambien es psisociologo, y analiza el problema considerando tanto los numeros como el factor humano.'"
+                },
+                {
+                    "heading": "Tecnica multiperspectiva: debate de roles",
+                    "content": "Una tecnica poderosa es pedir multiples perspectivas: 'Analiza mi plan de negocio desde 3 puntos de vista: 1) Como inversor exigente que busca retorno rapido, 2) Como coach de emprendimiento que se enfoca en growth, 3) Como cliente potencial escepcion. Para cada perspectiva, da los 3 puntos positivos y 3 preocupaciones principales.' Esta tecnica te da una vision 360° de cualquier idea o decision. Tambien puedes pedir un 'debate' donde dos roles discuten entre si: 'Simula un debate entre un optimista de la IA y un esceptico sobre el futuro del empleo.'"
+                }
+            ],
+            "activity": "Elige un problema real que necesites resolver. Plantealo a ChatGPT 3 veces con 3 roles diferentes (ejemplo: coach, analista, y cliente). Compara las perspectivas y combinalas para una solucion mas completa.",
+            "deliverable": "3 respuestas al mismo problema desde 3 roles + sintesis combinando las mejores ideas de cada perspectiva.",
+            "checklist": [
+                "Uso la tecnica de rol en al menos el 80% de mis prompts.",
+                "Se crear roles detallados con experiencia, personalidad y estilo.",
+                "He probado la tecnica multiperspectiva con al menos 3 roles.",
+                "Tengo una lista de roles utiles guardada para mis tareas frecuentes."
+            ],
+            "promptStarter": "Necesito resolver este problema: [describe tu problema]. Dame 3 analisis desde 3 perspectivas diferentes:\n1) Como consultor de negocios frio y analitico\n2) Como coach motivacional centrado en el factor humano\n3) Como un usuario/cliente final realista\nAl final, sintetiza las 3 perspectivas en una recomendacion unificada.",
+            "promptExamples": [
+                {
+                    "title": "Rol ultra-detallado",
+                    "prompt": "Actua como Sarah Chen, directora creativa de una agencia de branding en Barcelona con 12 anos de experiencia. Has trabajado con marcas como Desigual, Mango y Glovo. Tu enfoque se basa en el storytelling emocional y el diseno minimalista. Eres directa, exigente pero constructiva. Necesito tu opinion experta sobre el nombre y posicionamiento de mi nueva marca de [producto]."
+                },
+                {
+                    "title": "Debate de perspectivas",
+                    "prompt": "Simula un debate entre 3 expertos sobre si deberia abrir una cafeteria de especialidad en mi barrio:\n- Carlos (economista): analiza numeros, inversion y retorno\n- Maria (marketer): analiza mercado, competencia y diferenciacion\n- Pablo (barista): analiza viabilidad operativa y experiencia cliente\nCada uno da su veredicto al final. Tu modera el debate."
+                },
+                {
+                    "title": "El mentor exigente",
+                    "prompt": "Actua como un mentor de negocios extremadamente exigente y directo. El tipo de persona que no te dice lo que quieres oir sino lo que necesitas oir. Revisa mi plan: [describe tu plan]. Senala sin piedad los 3 puntos debiles mas criticos, pero tambien reconoce los 2 puntos fuertes, y dame el mejor consejo que le darias a un mentoreado."
+                }
+            ]
+        },
+        "formato-salida": {
+            "id": "formato-salida",
+            "title": "Dominar el formato de salida",
+            "moduleTitle": "Tecnicas esenciales",
+            "durationMinutes": 11,
+            "summary": "El formato perfecto convierte una respuesta buena en una respuesta directamente utilizable. Aprende formatos avanzados como tablas anidadas, outputs condicionales, formatos mixtos y templates reutilizables que te ahorraran horas de reformateo.",
+            "objectives": [
+                "Dominar formatos de salida avanzados mas alla de listas y tablas.",
+                "Crear templates de salida reutilizables para tareas frecuentes.",
+                "Saber cuando usar cada formato segun el proposito y la audiencia."
+            ],
+            "sections": [
+                {
+                    "heading": "Formatos avanzados que pocos conocen",
+                    "content": "Formato decision tree: 'Presenta la informacion como un arbol de decisiones: SI [condicion] → [accion], NO → [siguiente pregunta].' Formato antes/despues: 'Para cada punto, muestra el antes y el despues con la mejora.' Formato BLUF (Bottom Line Up Front): 'Empieza con la conclusion, luego los datos de soporte.' Formato framework: 'Organiza usando el framework AIDA (Atencion, Interes, Deseo, Accion).' Formato scorecard: 'Evalua cada opcion puntuando del 1-5 en estos criterios: [criterios].' Cada formato resuelve un problema de comunicacion diferente."
+                },
+                {
+                    "heading": "Templates de salida para productividad",
+                    "content": "Puedes definir templates exactos que ChatGPT rellenara. Ejemplo: 'Usa esta plantilla para cada producto:\n===\nNOMBRE: [nombre del producto]\nPRECIO: [precio en EUR]\nBENEFICIO PRINCIPAL: [en 1 linea]\nPARA QUIEN: [perfil de cliente ideal]\nFRASE DE VENTA: [frase persuasiva de 15 palabras max]\n===\nRellena esta plantilla para estos 5 productos: [lista]'. Este enfoque es extremadamente potente para generar contenido masivo consistente, como fichas de producto, perfiles de persona, o resenas."
+                },
+                {
+                    "heading": "Formato condicional y adaptativo",
+                    "content": "Puedes crear respuestas que se adapten a condiciones: 'Si el presupuesto es menor a 1000€, sugiere la opcion A. Si es entre 1000-5000€, la opcion B. Si es mayor a 5000€, la opcion C. Desarrolla cada escenario.' Otro ejemplo: 'Escribe 3 versiones del email: una para si el cliente dijo que si, una para si dijo que lo pensara, y una para si dijo que no.' Esto es increiblemente util para preparar respuestas anticipadas y flujos de comunicacion."
+                },
+                {
+                    "heading": "Combinar formatos en un solo output",
+                    "content": "Los mejores resultados combinan multiples formatos: 'Para mi analisis de mercado: empieza con un resumen ejecutivo de 3 lineas (formato BLUF), seguido de una tabla comparativa de 5 competidores, luego 3 graficos conceptuales en ASCII art mostrando tendencias, y cierra con 5 recomendaciones en lista priorizada con nivel de urgencia (alto/medio/bajo).' La clave esta en especificar la estructura completa del documento que necesitas antes de que ChatGPT empiece a escribir."
+                }
+            ],
+            "activity": "Crea un 'catalogo de formatos' personal: para cada tipo de tarea que haces frecuentemente, define el formato ideal de salida. Prueba 3 de los formatos avanzados (decision tree, template, condicional) con tareas reales.",
+            "deliverable": "Catalogo personal de formatos con al menos 8 entradas + 3 ejemplos de formatos avanzados probados con resultados reales.",
+            "checklist": [
+                "Conozco al menos 8 formatos avanzados de salida.",
+                "Puedo crear templates reutilizables para mis tareas frecuentes.",
+                "He probado formatos condicionales y adaptativos.",
+                "Tengo mi catalogo personal de formatos favoritos."
+            ],
+            "promptStarter": "Necesito que analices estas 3 opciones de software para mi empresa usando este formato exacto para cada una:\n\n📊 [NOMBRE DEL SOFTWARE]\n• Precio: [mensual y anual]\n• Puntuacion general: [X/10]\n• Mejor para: [tipo de empresa]\n• Punto fuerte: [1 frase]\n• Punto debil: [1 frase]\n• Veredicto: [SI/NO/DEPENDE] + [1 linea de justificacion]\n\nAl final, tabla resumen comparativa y recomendacion final basada en mi contexto: [describe tu empresa].",
+            "promptExamples": [
+                {
+                    "title": "Template de ficha de producto",
+                    "prompt": "Para cada producto que te de, rellena esta ficha:\n===\n🏷️ NOMBRE: \n💰 PRECIO: \n⭐ BENEFICIO #1: \n👤 CLIENTE IDEAL: \n📝 COPY DE VENTA (max 20 palabras): \n🔑 KEYWORDS SEO (5): \n===\nProductos: [lista tus productos]"
+                },
+                {
+                    "title": "Formato condicional de respuesta",
+                    "prompt": "Prepara 3 versiones de respuesta a esta objecion del cliente: 'Es demasiado caro'.\nVersion A: Si el cliente compara con la competencia (contraargumento de valor)\nVersion B: Si el cliente tiene presupuesto limitado real (opciones de pago)\nVersion C: Si el cliente esta regateando (firmeza elegante)\nCada version: maximo 4 lineas."
+                },
+                {
+                    "title": "Formato arbol de decisiones",
+                    "prompt": "Crea un arbol de decisiones para ayudarme a elegir la mejor herramienta de IA segun mis necesidades:\n¿Para que tipo de contenido? → Texto / Imagen / Audio / Video\n→ ¿Presupuesto? → Gratis / <20€/mes / <50€/mes\n→ ¿Nivel tecnico? → Principiante / Intermedio / Avanzado\nPara cada combinacion final, recomienda UNA herramienta con enlace."
+                }
+            ]
+        },
+        "iteracion": {
+            "id": "iteracion",
+            "title": "El arte de la iteracion: refina hasta la perfeccion",
+            "moduleTitle": "Tecnicas esenciales",
+            "durationMinutes": 14,
+            "summary": "Los mejores resultados nunca salen al primer intento. La iteracion es la fase donde un resultado 'bueno' se convierte en 'excelente'. Aprende tecnicas sistematicas para refinar, ajustar y perfeccionar las respuestas de la IA paso a paso.",
+            "objectives": [
+                "Dominar 5 tecnicas de iteracion para mejorar cualquier respuesta de IA.",
+                "Desarrollar el habito de nunca aceptar el primer resultado sin evaluarlo.",
+                "Saber cuando iterar y cuando empezar de cero con un nuevo enfoque."
+            ],
+            "sections": [
+                {
+                    "heading": "Por que el primer resultado nunca es suficiente",
+                    "content": "ChatGPT genera la respuesta estadisticamente mas probable, no la ideal para tu caso. El primer resultado es un borrador, un punto de partida excelente que necesita tu direccion humana para convertirse en algo realmente bueno. Los usuarios expertos iteran 3-5 veces de media antes de llegar al resultado final. Los principiantes aceptan la primera respuesta o abandonan frustrados. La diferencia entre un usuario medio y un power user no es la calidad del primer prompt, sino la calidad de la iteracion."
+                },
+                {
+                    "heading": "Tecnicas de iteracion por refinamiento",
+                    "content": "Zoom in: 'Desarrolla el punto 3 con mas detalle y ejemplos.' Zoom out: 'Resumelo a la mitad manteniendo lo esencial.' Cambio de tono: 'Reescribelo con un tono mas cercano/formal/tecnico.' Perspectiva: 'Ahora reescribelo pensando en [otra audiencia].' Critica: 'Que le falta a esta respuesta? Que puntos debiles tiene? Mejorala.' Cada tecnica es un ajuste fino que te acerca al resultado perfecto sin perder lo bueno del resultado anterior."
+                },
+                {
+                    "heading": "La iteracion 'negativa': decir lo que NO quieres",
+                    "content": "A veces es mas facil decir que no te gusta que explicar que quieres. 'No me gusta que suene tan formal, hazlo mas conversacional.' 'Quita la introduccion, ve directo al grano.' 'No uses la palabra innovador ni lider, son cliches.' 'Elimina los emojis.' 'El tercer parrafo es demasiado generico, reescribelo con datos concretos.' La iteracion negativa es rapida y efectiva: senalar lo que sobra o no funciona guia al modelo con precision. Combina iteracion positiva ('anade X') con negativa ('quita Y') para maxima eficiencia."
+                },
+                {
+                    "heading": "Cuando iterar vs. cuando empezar de cero",
+                    "content": "Itera cuando: el resultado va en la direccion correcta pero necesita ajustes de tono, longitud, formato o detalle. Empieza de cero cuando: el enfoque es completamente diferente a lo que necesitas, el modelo parece atascado en una direccion, o la conversacion se ha vuelto demasiado larga y confusa. Para empezar de cero: abre un nuevo chat, reescribe tu prompt incorporando lo que aprendiste de la iteracion fallida. A veces la mejor iteracion es reformular completamente tu solicitud original con las lecciones aprendidas."
+                }
+            ],
+            "activity": "Elige una tarea importante. Escribe tu primer prompt, y luego itera exactamente 5 veces usando una tecnica diferente cada vez (zoom in, zoom out, cambio de tono, critica, negativa). Documenta como evoluciona el resultado.",
+            "deliverable": "Documento mostrando la evolucion de una respuesta a traves de 5 iteraciones, con el prompt de cada iteracion y el resultado obtenido.",
+            "checklist": [
+                "Domino al menos 5 tecnicas de iteracion.",
+                "Nunca acepto el primer resultado sin evaluarlo criticamente.",
+                "Se distinguir cuando iterar y cuando empezar de cero.",
+                "Mi flujo natural incluye 2-3 iteraciones por tarea importante."
+            ],
+            "promptStarter": "Escribe un discurso de 2 minutos para presentar mi proyecto en un evento de networking. Mi proyecto es [describe brevemente]. (Despues de recibir la primera version): Ahora vamos a iterar 5 veces. Iteracion 1: Hazlo mas conversacional, menos formal. Iteracion 2: El inicio es aburrido, necesito un gancho que atrape en 5 segundos. Iteracion 3: Anade una anecdota personal corta. Iteracion 4: El cierre necesita un call-to-action claro. Iteracion 5: Reducelo a 90 segundos manteniendo el impacto.",
+            "promptExamples": [
+                {
+                    "title": "Refinamiento progresivo",
+                    "prompt": "Escribeme la descripcion de un puesto de trabajo para Community Manager.\n(Tras recibir el resultado) Iteraciones:\n1. El tono es muy corporativo, hazlo mas atractivo para jovenes creativos\n2. Anade los beneficios emocionales del puesto, no solo los funcionales\n3. El perfil ideal que describes es poco realista, hazlo mas accesible\n4. Quita la seccion de requisitos tecnicos y ponla como 'valorable'\n5. Version final: reduce un 30% sin perder lo esencial"
+                },
+                {
+                    "title": "Critica constructiva",
+                    "prompt": "Acabas de escribir este texto para mi: [pega el resultado previo]. Ahora ponte el sombrero de critico: ¿que partes son genericas o cliche? ¿Donde podria ser mas especifico? ¿Que eliminarias? ¿Que falta? Dame la version mejorada aplicando tu propia critica."
+                },
+                {
+                    "title": "Iteracion por audiencia",
+                    "prompt": "Toma este mensaje que escribimos: [pega mensaje]. Ahora adaptalo para 3 audiencias diferentes manteniendo la idea central:\n1) Para un CEO con 30 segundos de atencion\n2) Para un equipo tecnico que necesita detalles\n3) Para un post de LinkedIn que genere engagement\nMuestra las 3 versiones lado a lado."
                 }
             ]
         }
