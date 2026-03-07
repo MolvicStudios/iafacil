@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <h1 class="section-title animate-fadeInUp">Herramientas interactivas</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">Aprende haciendo con nuestras 7 herramientas gratuitas</p>
+
+        <div class="cards-grid" style="margin-top:2rem;">
+            <a href="/pages/herramientas/prompt-builder.html" class="tool-card animate-fadeInUp delay-1">
+                <div class="tool-card-icon">🔧</div>
+                <h3 class="tool-card-title">Constructor de Prompts</h3>
+                <p class="tool-card-desc">Crea prompts efectivos arrastrando bloques. Sin escribir desde cero.</p>
+            </a>
+            <a href="/pages/herramientas/generador-imagenes.html" class="tool-card animate-fadeInUp delay-2">
+                <div class="tool-card-icon">🎨</div>
+                <h3 class="tool-card-title">Generador de Imágenes</h3>
+                <p class="tool-card-desc">Genera prompts optimizados para Midjourney, DALL-E y Stable Diffusion.</p>
+            </a>
+            <a href="/pages/herramientas/analizador-prompts.html" class="tool-card animate-fadeInUp delay-3">
+                <div class="tool-card-icon">🔍</div>
+                <h3 class="tool-card-title">Analizador de Prompts</h3>
+                <p class="tool-card-desc">Pega tu prompt y recibe puntuación con sugerencias de mejora.</p>
+            </a>
+            <a href="/pages/herramientas/comparador-ias.html" class="tool-card animate-fadeInUp delay-4">
+                <div class="tool-card-icon">⚖️</div>
+                <h3 class="tool-card-title">Comparador de IAs</h3>
+                <p class="tool-card-desc">Compara ChatGPT, Claude, Gemini y más lado a lado.</p>
+            </a>
+            <a href="/pages/herramientas/workflow-builder.html" class="tool-card animate-fadeInUp delay-5">
+                <div class="tool-card-icon">🔄</div>
+                <h3 class="tool-card-title">Workflow Builder</h3>
+                <p class="tool-card-desc">Diseña flujos de automatización combinando herramientas de IA.</p>
+            </a>
+            <a href="/pages/herramientas/biblioteca-prompts.html" class="tool-card animate-fadeInUp delay-6">
+                <div class="tool-card-icon">📚</div>
+                <h3 class="tool-card-title">Biblioteca de Prompts</h3>
+                <p class="tool-card-desc">+500 prompts probados organizados por categoría y profesión.</p>
+            </a>
+            <a href="/pages/glosario.html" class="tool-card animate-fadeInUp delay-7">
+                <div class="tool-card-icon">📖</div>
+                <h3 class="tool-card-title">Glosario IA</h3>
+                <p class="tool-card-desc">Todos los términos de IA explicados de forma simple.</p>
+            </a>
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+</script>
+
+</body>
+</html>

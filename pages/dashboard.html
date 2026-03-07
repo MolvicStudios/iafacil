@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<!-- Header -->
+<div id="headerContainer"></div>
+
+<!-- Main content -->
+<main class="page-content">
+    <div class="container">
+
+        <!-- Welcome banner -->
+        <section class="welcome-banner animate-fadeInUp" id="welcomeBanner">
+            <div class="welcome-content">
+                <h1 class="welcome-title">¡Hola, <span id="userName">Estudiante</span>! 👋</h1>
+                <p class="welcome-subtitle">Continúa tu camino para dominar la IA</p>
+            </div>
+            <div class="welcome-level" id="welcomeLevel">
+                <span class="level-icon">🌱</span>
+                <span class="level-name">Nivel 1 · Novato IA</span>
+            </div>
+        </section>
+
+        <!-- Stats grid -->
+        <section class="stats-grid animate-fadeInUp delay-1">
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-value" id="statXP">0</div>
+                <div class="stat-label">XP total</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-value" id="statStreak">0</div>
+                <div class="stat-label">Días de racha</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-value" id="statCourses">0</div>
+                <div class="stat-label">Cursos activos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-value" id="statBadges">0</div>
+                <div class="stat-label">Logros</div>
+            </div>
+        </section>
+
+        <!-- XP Progress bar -->
+        <section class="xp-section animate-fadeInUp delay-2">
+            <div class="xp-header">
+                <span class="xp-level" id="xpLevelName">Nivel 1 · Novato IA</span>
+                <span class="xp-numbers" id="xpNumbers">0 / 100 XP</span>
+            </div>
+            <div class="xp-bar">
+                <div class="xp-bar-fill" id="xpBarFill" style="width: 0%"></div>
+            </div>
+        </section>
+
+        <!-- Two columns layout -->
+        <div class="two-cols">
+            <!-- Left column -->
+            <div class="two-cols-main">
+
+                <!-- Continue learning -->
+                <section class="section animate-fadeInUp delay-3">
+                    <h2 class="section-title">Continuar aprendiendo</h2>
+                    <div id="continueLearning">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📚</div>
+                            <h3 class="empty-state-title">¡Empieza tu primer curso!</h3>
+                            <p class="empty-state-desc">Explora nuestro catálogo y comienza a aprender IA hoy.</p>
+                            <a href="/pages/cursos/" class="btn btn-primary">Ver cursos</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick actions -->
+                <section class="section animate-fadeInUp delay-4">
+                    <h2 class="section-title">Acciones rápidas</h2>
+                    <div class="quick-actions">
+                        <a href="/pages/herramientas/prompt-builder.html" class="quick-action-card">
+                            <span class="quick-action-icon">🔧</span>
+                            <span class="quick-action-label">Construir prompt</span>
+                        </a>
+                        <a href="/pages/herramientas/generador-imagenes.html" class="quick-action-card">
+                            <span class="quick-action-icon">🎨</span>
+                            <span class="quick-action-label">Generar imagen</span>
+                        </a>
+                        <a href="/pages/herramientas/analizador-prompts.html" class="quick-action-card">
+                            <span class="quick-action-icon">🔍</span>
+                            <span class="quick-action-label">Analizar prompt</span>
+                        </a>
+                        <a href="/pages/explorador.html" class="quick-action-card">
+                            <span class="quick-action-icon">🗺️</span>
+                            <span class="quick-action-label">Explorar IAs</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right column (sidebar) -->
+            <div class="two-cols-aside">
+
+                <!-- Streak card -->
+                <div class="streak-card animate-fadeInUp delay-3">
+                    <div class="streak-flame">🔥</div>
+                    <div class="streak-count" id="streakCount">0</div>
+                    <div class="streak-label">días de racha</div>
+                    <div class="streak-message" id="streakMessage">¡Comienza tu racha hoy!</div>
+                </div>
+
+                <!-- Activity calendar -->
+                <section class="section animate-fadeInUp delay-4">
+                    <h3 class="section-title" style="font-size:1rem;">Actividad reciente</h3>
+                    <div class="activity-calendar" id="activityCalendar">
+                        <!-- 7x4 grid generated by JS -->
+                    </div>
+                </section>
+
+                <!-- Recent badges -->
+                <section class="section animate-fadeInUp delay-5">
+                    <h3 class="section-title" style="font-size:1rem;">Últimos logros</h3>
+                    <div id="recentBadges">
+                        <p class="text-muted text-sm">Completa lecciones para ganar logros</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- Bottom nav mobile -->
+<div id="bottomNavContainer"></div>
+
+<!-- Footer -->
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { authService } from '/js/services/auth.js';
+    import { db } from '/js/services/database.js';
+    import { gamification } from '/js/services/gamification.js';
+    import { LEVELS } from '/js/config/constants.js';
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+
+    // Verificar autenticación
+    if (!authService.isAuthenticated()) {
+        window.location.href = '/pages/auth/login.html';
+    }
+
+    // Render layout components
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    // Load dashboard data
+    async function loadDashboard() {
+        try {
+            const user = authService.getUser();
+            if (!user) return;
+
+            const profile = await db.getProfile(user.id);
+            if (!profile) return;
+
+            // Update streak
+            await gamification.updateStreak(user.id);
+
+            // Name
+            const name = profile.full_name || user.email?.split('@')[0] || 'Estudiante';
+            document.getElementById('userName').textContent = name;
+
+            // Stats
+            const level = gamification.getLevelFromXP(profile.xp || 0);
+            const progress = gamification.getLevelProgress(profile.xp || 0);
+
+            document.getElementById('statXP').textContent = profile.xp || 0;
+            document.getElementById('statStreak').textContent = profile.streak || 0;
+            document.getElementById('streakCount').textContent = profile.streak || 0;
+
+            // Level display
+            document.getElementById('welcomeLevel').innerHTML = `
+                <span class="level-icon">${level.icon}</span>
+                <span class="level-name">Nivel ${level.level} · ${level.name}</span>
+            `;
+            document.getElementById('xpLevelName').textContent = `Nivel ${level.level} · ${level.name}`;
+            document.getElementById('xpNumbers').textContent = `${profile.xp || 0} / ${level.xpMax === Infinity ? '∞' : level.xpMax} XP`;
+            document.getElementById('xpBarFill').style.width = `${progress}%`;
+
+            // Streak message
+            const streak = profile.streak || 0;
+            const messages = {
+                0: '¡Comienza tu racha hoy!',
+                1: '¡Primer día! Sigue así 💪',
+                3: '¡3 días seguidos! 🔥',
+                7: '¡Una semana completa! 🎉',
+                14: '¡Dos semanas! Eres imparable 🚀',
+                30: '¡Un mes! Leyenda 👑'
+            };
+            const msgKey = Object.keys(messages).reverse().find(k => streak >= Number(k));
+            document.getElementById('streakMessage').textContent = messages[msgKey] || `¡${streak} días! Increíble 🌟`;
+
+            // Progress
+            const allProgress = await db.getAllProgress(user.id);
+            document.getElementById('statCourses').textContent = allProgress.length;
+
+            // Badges
+            const badges = await db.getUserBadges(user.id);
+            document.getElementById('statBadges').textContent = badges.length;
+
+            // Continue learning cards
+            if (allProgress.length > 0) {
+                renderContinueLearning(allProgress);
+            }
+
+            // Activity calendar
+            const dates = await db.getActivityDates(user.id, 28);
+            renderCalendar(dates);
+
+            // Recent badges
+            if (badges.length > 0) {
+                renderRecentBadges(badges.slice(0, 3));
+            }
+
+        } catch (err) {
+            console.error('Error loading dashboard:', err);
+        }
+    }
+
+    function renderContinueLearning(progressList) {
+        const container = document.getElementById('continueLearning');
+        const recent = progressList.slice(0, 3);
+
+        container.innerHTML = recent.map(p => `
+            <a href="/pages/cursos/${p.course_id}.html" class="continue-card">
+                <div class="continue-info">
+                    <h3 class="continue-title">${p.course_id}</h3>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: ${p.completed_lessons?.length ? Math.round((p.completed_lessons.length / (p.total_lessons || 10)) * 100) : 0}%"></div>
+                    </div>
+                </div>
+                <span class="continue-arrow">→</span>
+            </a>
+        `).join('');
+    }
+
+    function renderCalendar(activeDates) {
+        const calendar = document.getElementById('activityCalendar');
+        const today = new Date();
+        let html = '';
+
+        for (let i = 27; i >= 0; i--) {
+            const date = new Date(today);
+            date.setDate(date.getDate() - i);
+            const dateStr = date.toISOString().split('T')[0];
+            const isActive = activeDates.includes(dateStr);
+            const level = isActive ? 'level-2' : 'level-0';
+            html += `<div class="calendar-day ${level}" title="${dateStr}"></div>`;
+        }
+
+        calendar.innerHTML = html;
+    }
+
+    function renderRecentBadges(badges) {
+        const container = document.getElementById('recentBadges');
+        container.innerHTML = badges.map(b => `
+            <div class="badge-item" style="display:flex; align-items:center; gap:0.75rem; padding:0.5rem 0;">
+                <span style="font-size:1.5rem;">🏆</span>
+                <div>
+                    <div style="font-weight:600;">${b.badge_id}</div>
+                    <div class="text-muted text-sm">${new Date(b.earned_at).toLocaleDateString('es')}</div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    loadDashboard();
+</script>
+
+</body>
+</html>

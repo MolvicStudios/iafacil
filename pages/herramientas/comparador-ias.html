@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de IAs — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <div class="breadcrumbs animate-fadeIn">
+            <a href="/pages/herramientas/">Herramientas</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Comparador de IAs</span>
+        </div>
+
+        <h1 class="section-title animate-fadeInUp">⚖️ Comparador de IAs</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">Compara las principales herramientas de IA lado a lado</p>
+
+        <!-- Selector de IAs -->
+        <div class="comparator animate-fadeInUp delay-2">
+            <div class="comparator-select" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem;">
+                <div class="form-group">
+                    <label class="form-label">IA #1</label>
+                    <select class="form-select" id="ia1">
+                        <option value="chatgpt">ChatGPT (GPT-4o)</option>
+                        <option value="claude">Claude 3.5 Sonnet</option>
+                        <option value="gemini">Gemini 1.5 Pro</option>
+                        <option value="copilot">Microsoft Copilot</option>
+                        <option value="perplexity">Perplexity</option>
+                        <option value="mistral">Mistral Large</option>
+                        <option value="llama">LLaMA 3.1</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">IA #2</label>
+                    <select class="form-select" id="ia2">
+                        <option value="claude" selected>Claude 3.5 Sonnet</option>
+                        <option value="chatgpt">ChatGPT (GPT-4o)</option>
+                        <option value="gemini">Gemini 1.5 Pro</option>
+                        <option value="copilot">Microsoft Copilot</option>
+                        <option value="perplexity">Perplexity</option>
+                        <option value="mistral">Mistral Large</option>
+                        <option value="llama">LLaMA 3.1</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" id="btnCompare">⚖️ Comparar</button>
+
+            <!-- Tabla de comparación -->
+            <div id="comparisonTable" style="margin-top:2rem;"></div>
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { toast } from '/js/components/toast.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    const iaData = {
+        chatgpt: {
+            name: 'ChatGPT (GPT-4o)', company: 'OpenAI', icon: '💬',
+            pricing: 'Gratis (limitado) / Plus $20/mes', contextWindow: '128K tokens',
+            strengths: ['Más popular y versátil', 'Excelente para código', 'Plugins y GPTs', 'DALL-E integrado', 'Multimodal completo'],
+            weaknesses: ['Precio alto para Plus', 'Puede alucinar', 'Limitado en plan gratis'],
+            bestFor: 'Uso general, código, creatividad', rating: { texto: 9, codigo: 9, creativo: 8, analisis: 8, velocidad: 8 }
+        },
+        claude: {
+            name: 'Claude 3.5 Sonnet', company: 'Anthropic', icon: '🟣',
+            pricing: 'Gratis (limitado) / Pro $20/mes', contextWindow: '200K tokens',
+            strengths: ['Contexto más largo', 'Mejor en escritura', 'Más seguro y ético', 'Excelente razonamiento', 'Artifacts interactivos'],
+            weaknesses: ['Menos popular', 'Sin generación de imagen', 'Menos plugins'],
+            bestFor: 'Escritura, análisis largos, documentos', rating: { texto: 9, codigo: 9, creativo: 9, analisis: 9, velocidad: 8 }
+        },
+        gemini: {
+            name: 'Gemini 1.5 Pro', company: 'Google', icon: '🔵',
+            pricing: 'Gratis / Advanced $20/mes', contextWindow: '1M tokens',
+            strengths: ['Contexto enorme (1M)', 'Integración Google', 'Multimodal nativo', 'Búsqueda web', 'Gratis y potente'],
+            weaknesses: ['A veces genérico', 'Menos creativo', 'UI menos pulida'],
+            bestFor: 'Investigación, datos, integración Google', rating: { texto: 8, codigo: 7, creativo: 7, analisis: 8, velocidad: 9 }
+        },
+        copilot: {
+            name: 'Microsoft Copilot', company: 'Microsoft', icon: '🪟',
+            pricing: 'Gratis / Pro $20/mes', contextWindow: '128K tokens',
+            strengths: ['Gratis con GPT-4', 'Integración Office', 'Bing Search', 'DALL-E 3 gratis', 'Accesible'],
+            weaknesses: ['Menos personalizable', 'Respuestas a veces cortas', 'UX básica'],
+            bestFor: 'Usuarios de Microsoft, búsquedas', rating: { texto: 7, codigo: 7, creativo: 7, analisis: 7, velocidad: 8 }
+        },
+        perplexity: {
+            name: 'Perplexity', company: 'Perplexity AI', icon: '🔍',
+            pricing: 'Gratis / Pro $20/mes', contextWindow: '32K tokens',
+            strengths: ['Cita fuentes', 'Búsqueda en tiempo real', 'Preciso para investigación', 'Interface limpia', 'Focus modes'],
+            weaknesses: ['No genera imágenes', 'Menos creativo', 'Contexto limitado'],
+            bestFor: 'Investigación con fuentes, fact-checking', rating: { texto: 7, codigo: 6, creativo: 5, analisis: 9, velocidad: 9 }
+        },
+        mistral: {
+            name: 'Mistral Large', company: 'Mistral AI', icon: '🇫🇷',
+            pricing: 'Gratis (Le Chat)', contextWindow: '128K tokens',
+            strengths: ['Gratis y potente', 'Open source base', 'Rápido', 'Buen razonamiento', 'Privacidad europea'],
+            weaknesses: ['Menos conocido', 'Ecosistema pequeño', 'Sin imagen'],
+            bestFor: 'Alternativa gratis, privacidad', rating: { texto: 8, codigo: 8, creativo: 7, analisis: 8, velocidad: 9 }
+        },
+        llama: {
+            name: 'LLaMA 3.1 405B', company: 'Meta', icon: '🦙',
+            pricing: 'Gratis (Open Source)', contextWindow: '128K tokens',
+            strengths: ['100% open source', 'Personalizable', 'Sin censura excesiva', 'Comunidad activa', 'Ejecutable local'],
+            weaknesses: ['Requiere hardware potente', 'Sin servicio oficial', 'Configuración técnica'],
+            bestFor: 'Desarrolladores, privacidad total, personalización', rating: { texto: 8, codigo: 8, creativo: 7, analisis: 7, velocidad: 7 }
+        }
+    };
+
+    document.getElementById('btnCompare').addEventListener('click', compare);
+
+    function compare() {
+        const id1 = document.getElementById('ia1').value;
+        const id2 = document.getElementById('ia2').value;
+
+        if (id1 === id2) {
+            toast.warning('Selecciona dos IAs diferentes');
+            return;
+        }
+
+        const ia1 = iaData[id1];
+        const ia2 = iaData[id2];
+        const table = document.getElementById('comparisonTable');
+
+        const categories = ['texto', 'codigo', 'creativo', 'analisis', 'velocidad'];
+        const catLabels = { texto: '✍️ Texto', codigo: '💻 Código', creativo: '🎨 Creatividad', analisis: '🔍 Análisis', velocidad: '⚡ Velocidad' };
+
+        table.innerHTML = `
+        <div class="comparison-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+            ${[ia1, ia2].map(ia => `
+            <div class="card" style="padding:1.5rem;">
+                <div style="text-align:center; margin-bottom:1rem;">
+                    <div style="font-size:2.5rem;">${ia.icon}</div>
+                    <h3>${ia.name}</h3>
+                    <p class="text-muted text-sm">${ia.company}</p>
+                </div>
+                <div style="margin-bottom:1rem;">
+                    <div class="text-sm"><strong>Precio:</strong> ${ia.pricing}</div>
+                    <div class="text-sm"><strong>Contexto:</strong> ${ia.contextWindow}</div>
+                    <div class="text-sm"><strong>Mejor para:</strong> ${ia.bestFor}</div>
+                </div>
+                <h4 style="margin-bottom:0.5rem;">Fortalezas</h4>
+                <ul style="margin-bottom:1rem;">${ia.strengths.map(s => `<li class="text-sm">✅ ${s}</li>`).join('')}</ul>
+                <h4 style="margin-bottom:0.5rem;">Debilidades</h4>
+                <ul>${ia.weaknesses.map(w => `<li class="text-sm">⚠️ ${w}</li>`).join('')}</ul>
+            </div>
+            `).join('')}
+        </div>
+
+        <h3 style="margin-top:2rem; margin-bottom:1rem;">Comparación por categoría</h3>
+        ${categories.map(cat => {
+            const s1 = ia1.rating[cat];
+            const s2 = ia2.rating[cat];
+            const winner = s1 > s2 ? 'left' : s2 > s1 ? 'right' : 'tie';
+            return `
+            <div class="criteria-row" style="margin-bottom:0.75rem;">
+                <span style="min-width:120px; font-weight:600;">${catLabels[cat]}</span>
+                <div style="flex:1; display:flex; align-items:center; gap:0.5rem;">
+                    <span class="text-sm" style="width:40px; text-align:right; font-weight:${winner==='left'?'700':'400'}; color:${winner==='left'?'var(--color-primary)':'inherit'}">${s1}/10</span>
+                    <div style="flex:1; height:8px; background:var(--bg-secondary); border-radius:4px; display:flex; overflow:hidden;">
+                        <div style="width:${s1*10}%; background:var(--color-primary); border-radius:4px 0 0 4px;"></div>
+                        <div style="width:${(10-s1)*10}%; background:transparent;"></div>
+                    </div>
+                    <div style="flex:1; height:8px; background:var(--bg-secondary); border-radius:4px; display:flex; overflow:hidden;">
+                        <div style="width:${s2*10}%; background:var(--color-secondary); border-radius:4px 0 0 4px;"></div>
+                    </div>
+                    <span class="text-sm" style="width:40px; font-weight:${winner==='right'?'700':'400'}; color:${winner==='right'?'var(--color-secondary)':'inherit'}">${s2}/10</span>
+                </div>
+            </div>`;
+        }).join('')}
+        `;
+    }
+
+    // Auto-compare on load
+    compare();
+</script>
+
+</body>
+</html>

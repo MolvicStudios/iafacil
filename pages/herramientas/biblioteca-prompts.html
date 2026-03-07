@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Prompts — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <div class="breadcrumbs animate-fadeIn">
+            <a href="/pages/herramientas/">Herramientas</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Biblioteca de Prompts</span>
+        </div>
+
+        <h1 class="section-title animate-fadeInUp">📚 Biblioteca de Prompts</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">Colección curada de prompts listos para usar</p>
+
+        <!-- Search & Filters -->
+        <div class="animate-fadeInUp delay-2" style="margin-top:2rem;">
+            <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+                <div class="form-group" style="flex:1; min-width:200px; margin-bottom:0;">
+                    <input class="form-input" id="searchInput" placeholder="🔍 Buscar prompts..." />
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                    <select class="form-select" id="difficultyFilter">
+                        <option value="">Todas las dificultades</option>
+                        <option value="principiante">🟢 Principiante</option>
+                        <option value="intermedio">🟡 Intermedio</option>
+                        <option value="avanzado">🔴 Avanzado</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="categoryFilters" style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem;"></div>
+        </div>
+
+        <!-- Prompt Grid -->
+        <div id="promptGrid" class="card-grid animate-fadeInUp delay-3"></div>
+
+        <div id="emptyState" class="text-center" style="padding:3rem; display:none;">
+            <div style="font-size:3rem;">🔍</div>
+            <h3>No se encontraron prompts</h3>
+            <p class="text-muted">Intenta con otros filtros o términos de búsqueda</p>
+        </div>
+
+        <!-- Saved Prompts Section -->
+        <div class="animate-fadeInUp" style="margin-top:3rem;">
+            <h2 class="section-title">💾 Mis Prompts Guardados</h2>
+            <div id="savedPrompts"></div>
+        </div>
+    </div>
+</main>
+
+<!-- Prompt Detail Modal -->
+<div id="promptModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:1000; display:none; align-items:center; justify-content:center; padding:1rem;">
+    <div class="card" style="max-width:600px; width:100%; max-height:90vh; overflow-y:auto; padding:2rem; position:relative;">
+        <button id="closeModal" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer;">✕</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { toast } from '/js/components/toast.js';
+    import { PROMPTS, PROMPT_CATEGORIES, getPromptsByCategory } from '/js/data/prompts.js';
+    import { DatabaseService } from '/js/services/database.js';
+    import { getUser } from '/js/config/supabase.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    let selectedCategory = '';
+    let searchTerm = '';
+    let selectedDifficulty = '';
+
+    const difficultyColors = {
+        principiante: 'var(--color-secondary)',
+        intermedio: 'var(--color-yellow)',
+        avanzado: 'var(--color-accent)'
+    };
+    const difficultyEmoji = {
+        principiante: '🟢',
+        intermedio: '🟡',
+        avanzado: '🔴'
+    };
+
+    // Render category filters
+    function renderCategoryFilters() {
+        const container = document.getElementById('categoryFilters');
+        container.innerHTML = `
+            <button class="btn btn-sm ${selectedCategory === '' ? 'btn-primary' : 'btn-outline'} cat-btn" data-cat="">Todos</button>
+            ${PROMPT_CATEGORIES.map(c => `
+                <button class="btn btn-sm ${selectedCategory === c.id ? 'btn-primary' : 'btn-outline'} cat-btn" data-cat="${c.id}">
+                    ${c.icon} ${c.name}
+                </button>
+            `).join('')}
+        `;
+        container.querySelectorAll('.cat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                selectedCategory = btn.dataset.cat;
+                renderCategoryFilters();
+                renderPrompts();
+            });
+        });
+    }
+
+    // Render prompts
+    function renderPrompts() {
+        let filtered = [...PROMPTS];
+
+        if (selectedCategory) {
+            filtered = filtered.filter(p => p.category === selectedCategory);
+        }
+        if (selectedDifficulty) {
+            filtered = filtered.filter(p => p.difficulty === selectedDifficulty);
+        }
+        if (searchTerm) {
+            const term = searchTerm.toLowerCase();
+            filtered = filtered.filter(p =>
+                p.title.toLowerCase().includes(term) ||
+                p.text.toLowerCase().includes(term) ||
+                (p.tags && p.tags.some(t => t.toLowerCase().includes(term)))
+            );
+        }
+
+        const grid = document.getElementById('promptGrid');
+        const empty = document.getElementById('emptyState');
+
+        if (filtered.length === 0) {
+            grid.innerHTML = '';
+            empty.style.display = 'block';
+            return;
+        }
+
+        empty.style.display = 'none';
+        grid.innerHTML = filtered.map(p => {
+            const cat = PROMPT_CATEGORIES.find(c => c.id === p.category);
+            return `
+            <div class="card prompt-card" style="padding:1.25rem; cursor:pointer;" data-id="${p.id}">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
+                    <span style="font-size:1.5rem;">${cat ? cat.icon : '💡'}</span>
+                    <span class="badge" style="background:${difficultyColors[p.difficulty]}20; color:${difficultyColors[p.difficulty]}; padding:0.2rem 0.6rem; border-radius:999px; font-size:0.75rem;">
+                        ${difficultyEmoji[p.difficulty]} ${p.difficulty}
+                    </span>
+                </div>
+                <h4 style="margin-bottom:0.5rem;">${p.title}</h4>
+                <p class="text-sm text-muted" style="margin-bottom:0.75rem; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">${p.text}</p>
+                <div style="display:flex; gap:0.25rem; flex-wrap:wrap;">
+                    ${(p.tags || []).slice(0, 3).map(t => `<span class="text-xs" style="background:var(--bg-secondary); padding:0.15rem 0.5rem; border-radius:999px;">${t}</span>`).join('')}
+                </div>
+            </div>
+        `}).join('');
+
+        grid.querySelectorAll('.prompt-card').forEach(card => {
+            card.addEventListener('click', () => openDetail(card.dataset.id));
+        });
+    }
+
+    // Open detail modal
+    function openDetail(id) {
+        const p = PROMPTS.find(x => x.id === id);
+        if (!p) return;
+
+        const cat = PROMPT_CATEGORIES.find(c => c.id === p.category);
+        const modal = document.getElementById('promptModal');
+        const content = document.getElementById('modalContent');
+
+        content.innerHTML = `
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+                <span style="font-size:2rem;">${cat ? cat.icon : '💡'}</span>
+                <div>
+                    <h2 style="margin:0;">${p.title}</h2>
+                    <span class="text-sm text-muted">${cat ? cat.name : ''} • ${difficultyEmoji[p.difficulty]} ${p.difficulty}</span>
+                </div>
+            </div>
+            <div style="background:var(--bg-secondary); border-radius:var(--radius-lg); padding:1.25rem; margin-bottom:1rem; font-size:0.95rem; line-height:1.7; white-space:pre-wrap;">${p.text}</div>
+            ${p.variables ? `
+                <h4 style="margin-bottom:0.5rem;">📝 Variables a personalizar</h4>
+                <div style="margin-bottom:1rem;">
+                    ${p.variables.map(v => `<span class="badge" style="margin:0.15rem; background:var(--color-primary-light); color:var(--color-primary); padding:0.2rem 0.6rem; border-radius:999px; font-size:0.8rem;">[${v}]</span>`).join('')}
+                </div>
+            ` : ''}
+            ${p.tags ? `
+                <h4 style="margin-bottom:0.5rem;">🏷️ Tags</h4>
+                <div style="display:flex; gap:0.25rem; flex-wrap:wrap; margin-bottom:1rem;">
+                    ${p.tags.map(t => `<span class="text-xs" style="background:var(--bg-secondary); padding:0.2rem 0.5rem; border-radius:999px;">${t}</span>`).join('')}
+                </div>
+            ` : ''}
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <button class="btn btn-primary flex-1" id="btnCopyPrompt">📋 Copiar Prompt</button>
+                <button class="btn btn-secondary flex-1" id="btnSavePrompt">💾 Guardar</button>
+            </div>
+        `;
+
+        modal.style.display = 'flex';
+
+        document.getElementById('btnCopyPrompt').addEventListener('click', () => {
+            navigator.clipboard.writeText(p.text);
+            toast.success('¡Prompt copiado!');
+        });
+
+        document.getElementById('btnSavePrompt').addEventListener('click', async () => {
+            const user = await getUser();
+            if (!user) {
+                toast.warning('Inicia sesión para guardar prompts');
+                return;
+            }
+            try {
+                await DatabaseService.savePrompt(user.id, { title: p.title, text: p.text, category: p.category });
+                toast.success('Prompt guardado');
+            } catch (err) {
+                toast.error('Error al guardar');
+            }
+        });
+    }
+
+    // Close modal
+    document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('promptModal').style.display = 'none';
+    });
+    document.getElementById('promptModal').addEventListener('click', e => {
+        if (e.target === e.currentTarget) {
+            document.getElementById('promptModal').style.display = 'none';
+        }
+    });
+
+    // Search
+    document.getElementById('searchInput').addEventListener('input', e => {
+        searchTerm = e.target.value;
+        renderPrompts();
+    });
+
+    // Difficulty filter
+    document.getElementById('difficultyFilter').addEventListener('change', e => {
+        selectedDifficulty = e.target.value;
+        renderPrompts();
+    });
+
+    // Load saved prompts
+    async function loadSaved() {
+        const container = document.getElementById('savedPrompts');
+        const user = await getUser();
+        if (!user) {
+            container.innerHTML = '<p class="text-muted text-center" style="padding:1rem;">Inicia sesión para ver tus prompts guardados</p>';
+            return;
+        }
+        try {
+            const saved = await DatabaseService.getSavedPrompts(user.id);
+            if (!saved || saved.length === 0) {
+                container.innerHTML = '<p class="text-muted text-center" style="padding:1rem;">Aún no has guardado prompts. Explora la biblioteca y guarda tus favoritos.</p>';
+                return;
+            }
+            container.innerHTML = `<div class="card-grid">${saved.map(s => `
+                <div class="card" style="padding:1rem;">
+                    <h4>${s.title || 'Sin título'}</h4>
+                    <p class="text-sm text-muted" style="display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">${s.text || ''}</p>
+                    <button class="btn btn-sm btn-secondary copy-saved" data-text="${(s.text || '').replace(/"/g, '&quot;')}" style="margin-top:0.5rem;">📋 Copiar</button>
+                </div>
+            `).join('')}</div>`;
+            container.querySelectorAll('.copy-saved').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    navigator.clipboard.writeText(btn.dataset.text);
+                    toast.success('¡Copiado!');
+                });
+            });
+        } catch {
+            container.innerHTML = '<p class="text-muted text-center" style="padding:1rem;">Error al cargar prompts guardados</p>';
+        }
+    }
+
+    renderCategoryFilters();
+    renderPrompts();
+    loadSaved();
+</script>
+
+</body>
+</html>

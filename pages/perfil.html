@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <h1 class="section-title animate-fadeInUp">👤 Mi Perfil</h1>
+
+        <div class="two-cols" style="margin-top:2rem;">
+            <!-- Left: Profile Info -->
+            <div>
+                <!-- Avatar & Basic Info -->
+                <div class="card animate-fadeInUp delay-1" style="padding:2rem; text-align:center;">
+                    <div style="position:relative; display:inline-block; margin-bottom:1rem;">
+                        <div id="avatarPreview" style="width:120px; height:120px; border-radius:50%; background:var(--bg-secondary); display:flex; align-items:center; justify-content:center; font-size:3rem; margin:0 auto; overflow:hidden; border:4px solid var(--color-primary);">
+                            👤
+                        </div>
+                        <label for="avatarInput" style="position:absolute; bottom:0; right:calc(50% - 75px); background:var(--color-primary); color:white; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:0.9rem;">📷</label>
+                        <input type="file" id="avatarInput" accept="image/*" style="display:none;" />
+                    </div>
+                    <h2 id="profileName" style="margin-bottom:0.25rem;">Cargando...</h2>
+                    <p id="profileEmail" class="text-muted text-sm">—</p>
+                    <div id="profileLevel" style="margin-top:0.75rem;"></div>
+                </div>
+
+                <!-- Stats -->
+                <div class="card animate-fadeInUp delay-2" style="padding:1.5rem; margin-top:1rem;">
+                    <h3 style="margin-bottom:1rem;">📊 Estadísticas</h3>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                        <div class="stat-card" style="text-align:center; padding:1rem;">
+                            <div id="statXP" style="font-size:1.5rem; font-weight:700; color:var(--color-primary);">0</div>
+                            <div class="text-sm text-muted">XP Total</div>
+                        </div>
+                        <div class="stat-card" style="text-align:center; padding:1rem;">
+                            <div id="statStreak" style="font-size:1.5rem; font-weight:700; color:var(--color-accent);">0</div>
+                            <div class="text-sm text-muted">🔥 Racha</div>
+                        </div>
+                        <div class="stat-card" style="text-align:center; padding:1rem;">
+                            <div id="statCourses" style="font-size:1.5rem; font-weight:700; color:var(--color-secondary);">0</div>
+                            <div class="text-sm text-muted">Cursos</div>
+                        </div>
+                        <div class="stat-card" style="text-align:center; padding:1rem;">
+                            <div id="statBadges" style="font-size:1.5rem; font-weight:700; color:var(--color-yellow);">0</div>
+                            <div class="text-sm text-muted">🏅 Insignias</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Settings & Badges -->
+            <div>
+                <!-- Edit Profile -->
+                <div class="card animate-fadeInUp delay-2" style="padding:1.5rem;">
+                    <h3 style="margin-bottom:1rem;">✏️ Editar Perfil</h3>
+                    <form id="profileForm">
+                        <div class="form-group">
+                            <label class="form-label">Nombre completo</label>
+                            <input class="form-input" id="editName" placeholder="Tu nombre" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Bio</label>
+                            <textarea class="form-input" id="editBio" rows="3" placeholder="Cuéntanos sobre ti..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Objetivo de aprendizaje</label>
+                            <select class="form-select" id="editGoal">
+                                <option value="">Seleccionar...</option>
+                                <option value="personal">Uso personal</option>
+                                <option value="profesional">Crecimiento profesional</option>
+                                <option value="negocio">Para mi negocio</option>
+                                <option value="curiosidad">Curiosidad</option>
+                                <option value="carrera">Cambio de carrera</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">💾 Guardar Cambios</button>
+                    </form>
+                </div>
+
+                <!-- My Badges -->
+                <div class="card animate-fadeInUp delay-3" style="padding:1.5rem; margin-top:1rem;">
+                    <h3 style="margin-bottom:1rem;">🏅 Mis Insignias</h3>
+                    <div id="badgesGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(80px, 1fr)); gap:0.75rem;"></div>
+                </div>
+
+                <!-- Account Actions -->
+                <div class="card animate-fadeInUp delay-3" style="padding:1.5rem; margin-top:1rem;">
+                    <h3 style="margin-bottom:1rem;">⚙️ Cuenta</h3>
+                    <button class="btn btn-outline btn-block" id="btnChangePassword" style="margin-bottom:0.5rem;">🔑 Cambiar Contraseña</button>
+                    <button class="btn btn-outline btn-block" id="btnLogout" style="color:var(--color-danger); border-color:var(--color-danger);">🚪 Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { toast } from '/js/components/toast.js';
+    import { getUser, signOut } from '/js/config/supabase.js';
+    import { LEVELS } from '/js/config/constants.js';
+    import { DatabaseService } from '/js/services/database.js';
+    import { StorageService } from '/js/services/storage.js';
+    import { GamificationService } from '/js/services/gamification.js';
+    import { BADGES } from '/js/data/badges.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    let currentUser = null;
+    let profile = null;
+
+    async function init() {
+        currentUser = await getUser();
+        if (!currentUser) {
+            window.location.href = '/pages/auth/login.html';
+            return;
+        }
+
+        try {
+            profile = await DatabaseService.getProfile(currentUser.id);
+        } catch {
+            profile = null;
+        }
+
+        renderProfile();
+        loadBadges();
+    }
+
+    function renderProfile() {
+        const name = profile?.full_name || currentUser.user_metadata?.full_name || 'Usuario';
+        document.getElementById('profileName').textContent = name;
+        document.getElementById('profileEmail').textContent = currentUser.email;
+
+        // Avatar
+        if (profile?.avatar_url) {
+            document.getElementById('avatarPreview').innerHTML = `<img src="${profile.avatar_url}" style="width:100%; height:100%; object-fit:cover;" alt="Avatar" />`;
+        }
+
+        // Level
+        const xp = profile?.total_xp || 0;
+        const level = GamificationService.getLevelFromXP(xp);
+        const progress = GamificationService.getLevelProgress(xp);
+        const levelData = LEVELS[level - 1];
+
+        document.getElementById('profileLevel').innerHTML = `
+            <span style="font-size:1.25rem;">${levelData.icon}</span>
+            <span style="font-weight:600;">${levelData.name}</span>
+            <div style="margin-top:0.5rem; height:8px; background:var(--bg-secondary); border-radius:4px; overflow:hidden;">
+                <div style="width:${progress}%; height:100%; background:var(--color-primary); border-radius:4px; transition:width 0.5s;"></div>
+            </div>
+            <span class="text-xs text-muted">${xp} / ${levelData.xpMax} XP</span>
+        `;
+
+        // Stats
+        document.getElementById('statXP').textContent = xp.toLocaleString();
+        document.getElementById('statStreak').textContent = profile?.streak_count || 0;
+
+        // Form
+        document.getElementById('editName').value = profile?.full_name || '';
+        document.getElementById('editBio').value = profile?.bio || '';
+        document.getElementById('editGoal').value = profile?.learning_goal || '';
+
+        // Load course count
+        DatabaseService.getCourseProgress(currentUser.id).then(courses => {
+            document.getElementById('statCourses').textContent = courses?.length || 0;
+        }).catch(() => {});
+    }
+
+    async function loadBadges() {
+        const grid = document.getElementById('badgesGrid');
+        try {
+            const userBadges = await DatabaseService.getUserBadges(currentUser.id);
+            const earnedIds = new Set((userBadges || []).map(b => b.badge_id));
+
+            document.getElementById('statBadges').textContent = earnedIds.size;
+
+            grid.innerHTML = BADGES.map(b => {
+                const earned = earnedIds.has(b.id);
+                return `
+                <div style="text-align:center; opacity:${earned ? 1 : 0.3}; ${earned ? '' : 'filter:grayscale(1);'}">
+                    <div style="font-size:2rem;">${b.icon}</div>
+                    <div class="text-xs" style="margin-top:0.25rem;">${b.name}</div>
+                </div>
+            `}).join('');
+        } catch {
+            grid.innerHTML = '<p class="text-muted text-sm">Error al cargar insignias</p>';
+        }
+    }
+
+    // Avatar upload
+    document.getElementById('avatarInput').addEventListener('change', async e => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        try {
+            const url = await StorageService.uploadAvatar(currentUser.id, file);
+            await DatabaseService.updateProfile(currentUser.id, { avatar_url: url });
+            document.getElementById('avatarPreview').innerHTML = `<img src="${url}" style="width:100%; height:100%; object-fit:cover;" alt="Avatar" />`;
+            toast.success('Avatar actualizado');
+        } catch (err) {
+            toast.error('Error al subir imagen');
+        }
+    });
+
+    // Save profile
+    document.getElementById('profileForm').addEventListener('submit', async e => {
+        e.preventDefault();
+        const data = {
+            full_name: document.getElementById('editName').value.trim(),
+            bio: document.getElementById('editBio').value.trim(),
+            learning_goal: document.getElementById('editGoal').value
+        };
+
+        try {
+            await DatabaseService.updateProfile(currentUser.id, data);
+            profile = { ...profile, ...data };
+            document.getElementById('profileName').textContent = data.full_name || 'Usuario';
+            toast.success('Perfil actualizado');
+        } catch {
+            toast.error('Error al guardar');
+        }
+    });
+
+    // Change password
+    document.getElementById('btnChangePassword').addEventListener('click', () => {
+        window.location.href = '/pages/auth/reset-password.html';
+    });
+
+    // Logout
+    document.getElementById('btnLogout').addEventListener('click', async () => {
+        await signOut();
+        window.location.href = '/';
+    });
+
+    init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow Builder — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <div class="breadcrumbs animate-fadeIn">
+            <a href="/pages/herramientas/">Herramientas</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Workflow Builder</span>
+        </div>
+
+        <h1 class="section-title animate-fadeInUp">⚡ Workflow Builder</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">Diseña flujos de trabajo con IA paso a paso</p>
+
+        <div class="animate-fadeInUp delay-2" style="margin-top:2rem;">
+            <!-- Templates -->
+            <h3 style="margin-bottom:1rem;">📋 Plantillas rápidas</h3>
+            <div class="card-grid" style="margin-bottom:2rem;" id="templates">
+                <button class="card tool-card template-btn" data-template="content">
+                    <div style="font-size:2rem; margin-bottom:0.5rem;">📝</div>
+                    <h4>Creación de Contenido</h4>
+                    <p class="text-sm text-muted">Idea → Investigar → Escribir → Editar → Publicar</p>
+                </button>
+                <button class="card tool-card template-btn" data-template="email">
+                    <div style="font-size:2rem; margin-bottom:0.5rem;">📧</div>
+                    <h4>Email Marketing</h4>
+                    <p class="text-sm text-muted">Segmentar → Redactar → Asunto → Revisar → Enviar</p>
+                </button>
+                <button class="card tool-card template-btn" data-template="social">
+                    <div style="font-size:2rem; margin-bottom:0.5rem;">📱</div>
+                    <h4>Redes Sociales</h4>
+                    <p class="text-sm text-muted">Planificar → Diseñar → Escribir → Programar → Analizar</p>
+                </button>
+                <button class="card tool-card template-btn" data-template="research">
+                    <div style="font-size:2rem; margin-bottom:0.5rem;">🔬</div>
+                    <h4>Investigación</h4>
+                    <p class="text-sm text-muted">Definir → Recopilar → Analizar → Sintetizar → Presentar</p>
+                </button>
+            </div>
+
+            <!-- Workflow Canvas -->
+            <div class="card" style="padding:1.5rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+                    <h3>🔗 Tu Workflow</h3>
+                    <div style="display:flex; gap:0.5rem;">
+                        <button class="btn btn-sm btn-secondary" id="btnAddStep">+ Agregar Paso</button>
+                        <button class="btn btn-sm btn-outline" id="btnClearWf">🗑️ Limpiar</button>
+                    </div>
+                </div>
+
+                <div id="workflowCanvas" style="min-height:120px;"></div>
+
+                <div style="margin-top:1.5rem;">
+                    <button class="btn btn-primary btn-lg btn-block" id="btnExport">📋 Exportar como texto</button>
+                </div>
+            </div>
+
+            <!-- Export Preview -->
+            <div class="card" style="padding:1.5rem; margin-top:1.5rem; display:none;" id="exportCard">
+                <h3 style="margin-bottom:1rem;">📄 Workflow Exportado</h3>
+                <div id="exportOutput" style="background:var(--bg-secondary); border-radius:var(--radius-lg); padding:1.25rem; font-family:monospace; font-size:0.9rem; line-height:1.7; white-space:pre-wrap;"></div>
+                <button class="btn btn-secondary" style="margin-top:1rem;" id="btnCopyExport">📋 Copiar</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { toast } from '/js/components/toast.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    const templates = {
+        content: [
+            { title: 'Generar Ideas', tool: 'ChatGPT', prompt: 'Dame 10 ideas de artículos sobre [tema]', description: 'Lluvia de ideas con IA' },
+            { title: 'Investigar', tool: 'Perplexity', prompt: 'Investiga las tendencias actuales de [tema]', description: 'Buscar fuentes y datos' },
+            { title: 'Escribir Borrador', tool: 'Claude', prompt: 'Escribe un artículo de 1500 palabras sobre [tema]', description: 'Redactar el contenido' },
+            { title: 'Editar y Mejorar', tool: 'ChatGPT', prompt: 'Revisa y mejora este texto para SEO', description: 'Optimizar y corregir' },
+            { title: 'Crear Imagen', tool: 'Midjourney', prompt: 'Imagen de portada para un artículo sobre [tema]', description: 'Diseñar visual' }
+        ],
+        email: [
+            { title: 'Segmentar Audiencia', tool: 'ChatGPT', prompt: 'Define 3 segmentos para mi campaña de [producto]', description: 'Identificar público' },
+            { title: 'Redactar Email', tool: 'Claude', prompt: 'Escribe un email de marketing para [segmento]', description: 'Crear el contenido' },
+            { title: 'Líneas de Asunto', tool: 'ChatGPT', prompt: 'Genera 10 líneas de asunto con alta tasa de apertura', description: 'Optimizar asunto' },
+            { title: 'Revisar Tono', tool: 'Claude', prompt: 'Revisa que el tono sea persuasivo pero no agresivo', description: 'Ajustar comunicación' },
+            { title: 'A/B Testing', tool: 'ChatGPT', prompt: 'Crea una variante B de este email', description: 'Crear versión alternativa' }
+        ],
+        social: [
+            { title: 'Calendario', tool: 'ChatGPT', prompt: 'Planifica un mes de contenido para [red social]', description: 'Planificar publicaciones' },
+            { title: 'Diseñar Visual', tool: 'DALL-E / Canva', prompt: 'Imagen para post sobre [tema], estilo [marca]', description: 'Crear imágenes' },
+            { title: 'Escribir Copy', tool: 'Claude', prompt: 'Escribe 5 copies para Instagram sobre [tema]', description: 'Redactar textos' },
+            { title: 'Hashtags', tool: 'ChatGPT', prompt: 'Sugiere 20 hashtags relevantes para [nicho]', description: 'Optimizar alcance' },
+            { title: 'Analizar Métricas', tool: 'ChatGPT', prompt: 'Interpreta estas métricas: [datos]', description: 'Evaluar resultados' }
+        ],
+        research: [
+            { title: 'Definir Pregunta', tool: 'ChatGPT', prompt: 'Ayúdame a formular mi pregunta de investigación sobre [tema]', description: 'Clarificar objetivo' },
+            { title: 'Buscar Fuentes', tool: 'Perplexity', prompt: 'Encuentra estudios recientes sobre [tema]', description: 'Recopilar información' },
+            { title: 'Analizar Datos', tool: 'Claude', prompt: 'Analiza estos datos y encuentra patrones', description: 'Procesar información' },
+            { title: 'Sintetizar', tool: 'Claude', prompt: 'Resume los hallazgos principales en 500 palabras', description: 'Consolidar resultados' },
+            { title: 'Presentación', tool: 'ChatGPT', prompt: 'Crea un outline de presentación con estos hallazgos', description: 'Preparar para compartir' }
+        ]
+    };
+
+    let steps = [];
+
+    function renderSteps() {
+        const canvas = document.getElementById('workflowCanvas');
+        if (steps.length === 0) {
+            canvas.innerHTML = '<div class="text-center text-muted" style="padding:2rem;">Selecciona una plantilla o agrega pasos manualmente</div>';
+            return;
+        }
+
+        canvas.innerHTML = steps.map((step, i) => `
+            <div class="card" style="padding:1rem; margin-bottom:0.75rem; border-left:4px solid var(--color-primary); position:relative;" data-index="${i}">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem;">
+                    <div style="flex:1;">
+                        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+                            <span style="background:var(--color-primary); color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; flex-shrink:0;">${i + 1}</span>
+                            <input class="form-input" value="${step.title}" placeholder="Nombre del paso" style="font-weight:600; padding:0.25rem 0.5rem;" data-field="title" data-i="${i}" />
+                        </div>
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:0.5rem;">
+                            <input class="form-input" value="${step.tool}" placeholder="Herramienta IA" style="padding:0.25rem 0.5rem; font-size:0.85rem;" data-field="tool" data-i="${i}" />
+                            <input class="form-input" value="${step.description}" placeholder="Descripción" style="padding:0.25rem 0.5rem; font-size:0.85rem;" data-field="description" data-i="${i}" />
+                        </div>
+                        <textarea class="form-input" rows="2" placeholder="Prompt sugerido..." style="font-size:0.85rem; padding:0.25rem 0.5rem;" data-field="prompt" data-i="${i}">${step.prompt}</textarea>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:0.25rem;">
+                        ${i > 0 ? `<button class="btn btn-sm btn-outline move-btn" data-dir="up" data-i="${i}">↑</button>` : ''}
+                        ${i < steps.length - 1 ? `<button class="btn btn-sm btn-outline move-btn" data-dir="down" data-i="${i}">↓</button>` : ''}
+                        <button class="btn btn-sm btn-outline delete-btn" data-i="${i}" style="color:var(--color-danger);">✕</button>
+                    </div>
+                </div>
+                ${i < steps.length - 1 ? '<div style="text-align:center; margin-top:0.5rem; color:var(--color-primary); font-size:1.2rem;">↓</div>' : ''}
+            </div>
+        `).join('');
+
+        // Input listeners
+        canvas.querySelectorAll('input, textarea').forEach(el => {
+            el.addEventListener('input', e => {
+                const idx = parseInt(e.target.dataset.i);
+                const field = e.target.dataset.field;
+                steps[idx][field] = e.target.value;
+            });
+        });
+
+        // Move buttons
+        canvas.querySelectorAll('.move-btn').forEach(btn => {
+            btn.addEventListener('click', e => {
+                const i = parseInt(e.target.dataset.i);
+                const dir = e.target.dataset.dir;
+                const j = dir === 'up' ? i - 1 : i + 1;
+                [steps[i], steps[j]] = [steps[j], steps[i]];
+                renderSteps();
+            });
+        });
+
+        // Delete buttons
+        canvas.querySelectorAll('.delete-btn').forEach(btn => {
+            btn.addEventListener('click', e => {
+                steps.splice(parseInt(e.target.dataset.i), 1);
+                renderSteps();
+            });
+        });
+    }
+
+    renderSteps();
+
+    // Templates
+    document.getElementById('templates').addEventListener('click', e => {
+        const btn = e.target.closest('.template-btn');
+        if (!btn) return;
+        steps = JSON.parse(JSON.stringify(templates[btn.dataset.template]));
+        renderSteps();
+        toast.success('Plantilla cargada');
+    });
+
+    // Add step
+    document.getElementById('btnAddStep').addEventListener('click', () => {
+        steps.push({ title: '', tool: '', prompt: '', description: '' });
+        renderSteps();
+        const canvas = document.getElementById('workflowCanvas');
+        canvas.lastElementChild?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    // Clear
+    document.getElementById('btnClearWf').addEventListener('click', () => {
+        steps = [];
+        renderSteps();
+        document.getElementById('exportCard').style.display = 'none';
+    });
+
+    // Export
+    document.getElementById('btnExport').addEventListener('click', () => {
+        if (steps.length === 0) {
+            toast.warning('Agrega al menos un paso');
+            return;
+        }
+
+        let output = '🔗 WORKFLOW DE IA\n';
+        output += '═'.repeat(40) + '\n\n';
+
+        steps.forEach((step, i) => {
+            output += `PASO ${i + 1}: ${step.title || 'Sin nombre'}\n`;
+            output += `  🛠️ Herramienta: ${step.tool || 'No especificada'}\n`;
+            if (step.description) output += `  📋 ${step.description}\n`;
+            if (step.prompt) output += `  💬 Prompt: "${step.prompt}"\n`;
+            output += '\n';
+            if (i < steps.length - 1) output += '  ↓\n\n';
+        });
+
+        output += '═'.repeat(40) + '\n';
+        output += `Total: ${steps.length} pasos | Generado con IAFACIL.HELP`;
+
+        const exportCard = document.getElementById('exportCard');
+        document.getElementById('exportOutput').textContent = output;
+        exportCard.style.display = 'block';
+        exportCard.scrollIntoView({ behavior: 'smooth' });
+        toast.success('Workflow exportado');
+    });
+
+    // Copy export
+    document.getElementById('btnCopyExport').addEventListener('click', () => {
+        navigator.clipboard.writeText(document.getElementById('exportOutput').textContent);
+        toast.success('¡Copiado al portapapeles!');
+    });
+</script>
+
+</body>
+</html>

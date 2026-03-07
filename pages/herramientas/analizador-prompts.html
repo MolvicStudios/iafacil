@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Prompts — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <div class="breadcrumbs animate-fadeIn">
+            <a href="/pages/herramientas/">Herramientas</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Analizador de Prompts</span>
+        </div>
+
+        <h1 class="section-title animate-fadeInUp">🔍 Analizador de Prompts</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">Pega tu prompt y recibe una puntuación con sugerencias de mejora</p>
+
+        <div class="analyzer animate-fadeInUp delay-2">
+            <div class="form-group">
+                <label class="form-label">Tu prompt</label>
+                <textarea class="form-input" id="promptInput" rows="8" placeholder="Pega aquí el prompt que quieres analizar..."></textarea>
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" id="btnAnalyze">🔍 Analizar prompt</button>
+
+            <!-- Resultados -->
+            <div id="results" class="d-none" style="margin-top: 2rem;">
+                <!-- Score -->
+                <div class="analyzer-score" id="scoreSection">
+                    <div class="score-circle" id="scoreCircle">
+                        <span class="score-value" id="scoreValue">0</span>
+                        <span class="score-label">/100</span>
+                    </div>
+                    <div class="score-text" id="scoreText">-</div>
+                </div>
+
+                <!-- Criterios -->
+                <div class="analyzer-criteria" id="criteria"></div>
+
+                <!-- Sugerencias -->
+                <div class="analyzer-suggestions" style="margin-top:1.5rem;">
+                    <h3>💡 Sugerencias de mejora</h3>
+                    <ul id="suggestions" class="suggestion-list"></ul>
+                </div>
+
+                <!-- Prompt mejorado -->
+                <div style="margin-top:1.5rem;">
+                    <h3>✨ Prompt mejorado</h3>
+                    <div class="builder-preview" id="improvedPrompt"></div>
+                    <button class="btn btn-outline" id="btnCopyImproved" style="margin-top:0.75rem;">📋 Copiar prompt mejorado</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { toast } from '/js/components/toast.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    const promptInput = document.getElementById('promptInput');
+    const results = document.getElementById('results');
+
+    document.getElementById('btnAnalyze').addEventListener('click', () => {
+        const text = promptInput.value.trim();
+        if (!text) {
+            toast.warning('Escribe o pega un prompt para analizar');
+            return;
+        }
+        analyzePrompt(text);
+    });
+
+    function analyzePrompt(text) {
+        const criteria = [
+            { name: 'Claridad', key: 'clarity', weight: 20 },
+            { name: 'Especificidad', key: 'specificity', weight: 20 },
+            { name: 'Contexto', key: 'context', weight: 15 },
+            { name: 'Formato', key: 'format', weight: 15 },
+            { name: 'Restricciones', key: 'constraints', weight: 10 },
+            { name: 'Rol / Persona', key: 'role', weight: 10 },
+            { name: 'Longitud adecuada', key: 'length', weight: 10 }
+        ];
+
+        const words = text.split(/\s+/).length;
+        const sentences = text.split(/[.!?]+/).filter(Boolean).length;
+        const hasRole = /(?:actúa como|eres|sé|rol de|experto en|actua como)/i.test(text);
+        const hasContext = /(?:contexto|situación|background|tengo|mi empresa|mi negocio)/i.test(text);
+        const hasFormat = /(?:formato|lista|tabla|párrafo|bullet|json|markdown|estructura)/i.test(text);
+        const hasConstraints = /(?:no |máximo|mínimo|evita|sin |límite|restrict)/i.test(text);
+        const hasSpecifics = /(?:\d|ejemplo|específ|concreto|detall)/i.test(text);
+
+        const scores = {};
+
+        // Clarity: based on sentence structure
+        scores.clarity = Math.min(100, 40 + (sentences > 1 ? 20 : 0) + (words > 10 ? 20 : 0) + (text.includes('?') || text.includes('.') ? 20 : 0));
+
+        // Specificity
+        scores.specificity = Math.min(100, 20 + (hasSpecifics ? 30 : 0) + Math.min(30, words * 2) + (sentences > 2 ? 20 : 0));
+
+        // Context
+        scores.context = hasContext ? Math.min(100, 60 + Math.min(40, words)) : Math.min(40, words * 2);
+
+        // Format
+        scores.format = hasFormat ? 85 : (text.includes('\n') ? 50 : 20);
+
+        // Constraints
+        scores.constraints = hasConstraints ? 80 : 20;
+
+        // Role
+        scores.role = hasRole ? 90 : 15;
+
+        // Length
+        if (words < 10) scores.length = 20;
+        else if (words < 30) scores.length = 50;
+        else if (words < 60) scores.length = 80;
+        else if (words < 150) scores.length = 100;
+        else if (words < 300) scores.length = 90;
+        else scores.length = 70;
+
+        // Total weighted score
+        let total = 0;
+        criteria.forEach(c => {
+            total += (scores[c.key] / 100) * c.weight;
+        });
+        total = Math.round(total);
+
+        // Render results
+        results.classList.remove('d-none');
+
+        // Score
+        const scoreValue = document.getElementById('scoreValue');
+        scoreValue.textContent = total;
+        const scoreCircle = document.getElementById('scoreCircle');
+        scoreCircle.className = 'score-circle';
+        if (total >= 80) { scoreCircle.classList.add('score-high'); }
+        else if (total >= 50) { scoreCircle.classList.add('score-medium'); }
+        else { scoreCircle.classList.add('score-low'); }
+
+        const labels = { high: 'Excelente prompt', medium: 'Buen prompt, puede mejorar', low: 'Necesita mejoras' };
+        document.getElementById('scoreText').textContent =
+            total >= 80 ? '¡Excelente prompt! 🎉' :
+            total >= 50 ? 'Buen prompt, puede mejorar 💪' :
+            'Necesita mejoras importantes 🔧';
+
+        // Criteria bars
+        const criteriaEl = document.getElementById('criteria');
+        criteriaEl.innerHTML = criteria.map(c => {
+            const score = scores[c.key];
+            const color = score >= 70 ? 'var(--color-secondary)' : score >= 40 ? 'var(--color-yellow)' : 'var(--color-accent)';
+            return `
+            <div class="criteria-row">
+                <div class="criteria-label">${c.name}</div>
+                <div class="criteria-bar">
+                    <div class="criteria-bar-fill" style="width:${score}%; background:${color}"></div>
+                </div>
+                <span class="criteria-score">${score}%</span>
+            </div>`;
+        }).join('');
+
+        // Suggestions
+        const suggestions = [];
+        if (!hasRole) suggestions.push('Añade un rol o persona: "Actúa como un experto en..."');
+        if (!hasContext) suggestions.push('Proporciona contexto: describe tu situación o negocio');
+        if (!hasFormat) suggestions.push('Especifica el formato de salida: lista, tabla, párrafos, etc.');
+        if (!hasConstraints) suggestions.push('Añade restricciones: longitud máxima, qué evitar, etc.');
+        if (words < 20) suggestions.push('Tu prompt es muy corto. Añade más detalles para mejores resultados.');
+        if (!hasSpecifics) suggestions.push('Sé más específico: incluye números, ejemplos o datos concretos.');
+        if (suggestions.length === 0) suggestions.push('¡Tu prompt está muy bien estructurado! Sigue así.');
+
+        document.getElementById('suggestions').innerHTML = suggestions.map(s =>
+            `<li>${s}</li>`
+        ).join('');
+
+        // Improved prompt
+        let improved = text;
+        if (!hasRole) improved = 'Actúa como un experto profesional.\n\n' + improved;
+        if (!hasFormat) improved += '\n\nFormato: Proporciona la respuesta en formato estructurado con secciones claras.';
+        if (!hasConstraints) improved += '\n\nRestricciones: Sé conciso y directo. Máximo 500 palabras.';
+
+        document.getElementById('improvedPrompt').textContent = improved;
+
+        document.getElementById('btnCopyImproved').onclick = async () => {
+            await navigator.clipboard.writeText(improved);
+            toast.success('¡Prompt mejorado copiado!');
+        };
+
+        results.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

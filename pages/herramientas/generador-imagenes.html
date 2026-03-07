@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Prompts para Imágenes — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <div class="breadcrumbs animate-fadeIn">
+            <a href="/pages/herramientas/">Herramientas</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Generador de Imágenes</span>
+        </div>
+
+        <h1 class="section-title animate-fadeInUp">🎨 Generador de Prompts para Imágenes</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">Crea prompts optimizados para Midjourney, DALL-E y Stable Diffusion</p>
+
+        <div class="two-cols" style="margin-top:2rem;">
+            <!-- Builder Panel -->
+            <div class="animate-fadeInUp delay-2">
+                <div class="card" style="padding:1.5rem;">
+                    <h3 style="margin-bottom:1rem;">🎯 Plataforma</h3>
+                    <div class="form-group">
+                        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;" id="platformBtns">
+                            <button class="btn btn-sm btn-primary platform-btn active" data-platform="midjourney">Midjourney</button>
+                            <button class="btn btn-sm btn-outline platform-btn" data-platform="dalle">DALL-E 3</button>
+                            <button class="btn btn-sm btn-outline platform-btn" data-platform="stable">Stable Diffusion</button>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-bottom:1rem;">📝 Sujeto principal</h3>
+                    <div class="form-group">
+                        <input class="form-input" id="subject" placeholder="Ej: un astronauta, un castillo medieval, un gato..." />
+                    </div>
+
+                    <h3 style="margin-bottom:1rem;">🎭 Estilo artístico</h3>
+                    <div class="form-group">
+                        <select class="form-select" id="style">
+                            <option value="">Sin especificar</option>
+                            <option value="realistic photography">Fotografía Realista</option>
+                            <option value="digital art">Arte Digital</option>
+                            <option value="oil painting">Pintura al Óleo</option>
+                            <option value="watercolor">Acuarela</option>
+                            <option value="anime style">Anime</option>
+                            <option value="pixel art">Pixel Art</option>
+                            <option value="3D render">Render 3D</option>
+                            <option value="minimalist illustration">Ilustración Minimalista</option>
+                            <option value="cyberpunk">Cyberpunk</option>
+                            <option value="studio ghibli style">Estilo Ghibli</option>
+                            <option value="comic book style">Cómic</option>
+                            <option value="surrealist">Surrealista</option>
+                            <option value="impressionist">Impresionista</option>
+                            <option value="isometric">Isométrico</option>
+                        </select>
+                    </div>
+
+                    <h3 style="margin-bottom:1rem;">💡 Iluminación</h3>
+                    <div class="form-group">
+                        <select class="form-select" id="lighting">
+                            <option value="">Sin especificar</option>
+                            <option value="golden hour lighting">Hora Dorada</option>
+                            <option value="dramatic lighting">Dramática</option>
+                            <option value="soft natural lighting">Natural Suave</option>
+                            <option value="neon lighting">Neón</option>
+                            <option value="studio lighting">Estudio</option>
+                            <option value="cinematic lighting">Cinemática</option>
+                            <option value="backlit">Contraluz</option>
+                            <option value="moody dark lighting">Oscura/Moody</option>
+                            <option value="volumetric lighting">Volumétrica</option>
+                        </select>
+                    </div>
+
+                    <h3 style="margin-bottom:1rem;">📐 Composición</h3>
+                    <div class="form-group">
+                        <select class="form-select" id="composition">
+                            <option value="">Sin especificar</option>
+                            <option value="close-up shot">Primer Plano</option>
+                            <option value="wide angle shot">Gran Angular</option>
+                            <option value="bird's eye view">Vista Aérea</option>
+                            <option value="low angle shot">Ángulo Bajo</option>
+                            <option value="symmetrical composition">Simétrica</option>
+                            <option value="rule of thirds">Regla de Tercios</option>
+                            <option value="macro photography">Macro</option>
+                            <option value="panoramic view">Panorámica</option>
+                        </select>
+                    </div>
+
+                    <h3 style="margin-bottom:1rem;">🎨 Paleta de colores</h3>
+                    <div class="form-group">
+                        <select class="form-select" id="colors">
+                            <option value="">Sin especificar</option>
+                            <option value="vibrant colors">Vibrante</option>
+                            <option value="pastel color palette">Pastel</option>
+                            <option value="monochromatic">Monocromático</option>
+                            <option value="warm tones">Tonos Cálidos</option>
+                            <option value="cool tones">Tonos Fríos</option>
+                            <option value="earth tones">Tonos Tierra</option>
+                            <option value="black and white">Blanco y Negro</option>
+                            <option value="neon colors">Neón</option>
+                        </select>
+                    </div>
+
+                    <h3 style="margin-bottom:1rem;">✨ Detalles extra</h3>
+                    <div class="form-group">
+                        <input class="form-input" id="extras" placeholder="Ej: altamente detallado, 8K, tendencia en ArtStation..." />
+                    </div>
+
+                    <h3 style="margin-bottom:1rem;">📏 Relación de aspecto</h3>
+                    <div class="form-group">
+                        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;" id="ratioBtns">
+                            <button class="btn btn-sm btn-outline ratio-btn" data-ratio="1:1">1:1</button>
+                            <button class="btn btn-sm btn-primary ratio-btn active" data-ratio="16:9">16:9</button>
+                            <button class="btn btn-sm btn-outline ratio-btn" data-ratio="9:16">9:16</button>
+                            <button class="btn btn-sm btn-outline ratio-btn" data-ratio="4:3">4:3</button>
+                            <button class="btn btn-sm btn-outline ratio-btn" data-ratio="3:2">3:2</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg btn-block" id="btnGenerate" style="margin-top:1rem;">✨ Generar Prompt</button>
+                </div>
+            </div>
+
+            <!-- Preview Panel -->
+            <div class="animate-fadeInUp delay-3">
+                <div class="card" style="padding:1.5rem; position:sticky; top:5rem;">
+                    <h3 style="margin-bottom:1rem;">🖼️ Prompt Generado</h3>
+                    <div id="promptOutput" style="background:var(--bg-secondary); border-radius:var(--radius-lg); padding:1.25rem; min-height:120px; font-family:monospace; font-size:0.9rem; line-height:1.6; white-space:pre-wrap; word-break:break-word; color:var(--text-primary);">
+                        <span class="text-muted">Configura las opciones y haz clic en "Generar Prompt"</span>
+                    </div>
+
+                    <div style="display:flex; gap:0.5rem; margin-top:1rem;">
+                        <button class="btn btn-secondary flex-1" id="btnCopy">📋 Copiar</button>
+                        <button class="btn btn-outline flex-1" id="btnClear">🗑️ Limpiar</button>
+                    </div>
+
+                    <h3 style="margin-top:2rem; margin-bottom:1rem;">📌 Tips por plataforma</h3>
+                    <div id="platformTips" class="text-sm"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { toast } from '/js/components/toast.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    let selectedPlatform = 'midjourney';
+    let selectedRatio = '16:9';
+
+    const tips = {
+        midjourney: `<ul>
+            <li>Usa <code>--ar 16:9</code> para la relación de aspecto</li>
+            <li>Agrega <code>--v 6</code> para la última versión</li>
+            <li>Usa <code>--stylize 750</code> para más estilización</li>
+            <li>Separa conceptos con <code>::</code> para pesos</li>
+            <li>Usa <code>--no</code> para excluir elementos</li>
+        </ul>`,
+        dalle: `<ul>
+            <li>Sé muy descriptivo y específico</li>
+            <li>Menciona el estilo artístico explícitamente</li>
+            <li>Describe la escena completa</li>
+            <li>Los prompts más largos dan mejores resultados</li>
+            <li>Evita referencias a personas reales</li>
+        </ul>`,
+        stable: `<ul>
+            <li>Usa paréntesis <code>(palabra:1.5)</code> para dar más peso</li>
+            <li>Agrega <code>negative prompt</code> para excluir</li>
+            <li>Usa <code>steps: 30-50</code> para mejor calidad</li>
+            <li>CFG scale: 7-12 para equilibrio</li>
+            <li>Menciona <code>masterpiece, best quality</code></li>
+        </ul>`
+    };
+
+    function renderTips() {
+        document.getElementById('platformTips').innerHTML = tips[selectedPlatform];
+    }
+    renderTips();
+
+    // Platform buttons
+    document.getElementById('platformBtns').addEventListener('click', e => {
+        const btn = e.target.closest('.platform-btn');
+        if (!btn) return;
+        document.querySelectorAll('.platform-btn').forEach(b => { b.classList.remove('btn-primary', 'active'); b.classList.add('btn-outline'); });
+        btn.classList.remove('btn-outline');
+        btn.classList.add('btn-primary', 'active');
+        selectedPlatform = btn.dataset.platform;
+        renderTips();
+    });
+
+    // Ratio buttons
+    document.getElementById('ratioBtns').addEventListener('click', e => {
+        const btn = e.target.closest('.ratio-btn');
+        if (!btn) return;
+        document.querySelectorAll('.ratio-btn').forEach(b => { b.classList.remove('btn-primary', 'active'); b.classList.add('btn-outline'); });
+        btn.classList.remove('btn-outline');
+        btn.classList.add('btn-primary', 'active');
+        selectedRatio = btn.dataset.ratio;
+    });
+
+    // Generate
+    document.getElementById('btnGenerate').addEventListener('click', () => {
+        const subject = document.getElementById('subject').value.trim();
+        if (!subject) {
+            toast.warning('Escribe un sujeto principal');
+            return;
+        }
+
+        const style = document.getElementById('style').value;
+        const lighting = document.getElementById('lighting').value;
+        const composition = document.getElementById('composition').value;
+        const colors = document.getElementById('colors').value;
+        const extras = document.getElementById('extras').value.trim();
+
+        let parts = [subject];
+        if (style) parts.push(style);
+        if (lighting) parts.push(lighting);
+        if (composition) parts.push(composition);
+        if (colors) parts.push(colors);
+        if (extras) parts.push(extras);
+
+        let prompt = '';
+
+        if (selectedPlatform === 'midjourney') {
+            prompt = parts.join(', ');
+            prompt += ` --ar ${selectedRatio} --v 6 --stylize 500`;
+        } else if (selectedPlatform === 'dalle') {
+            prompt = `Create an image of ${parts.join('. ')}. The aspect ratio should be ${selectedRatio}. Make it highly detailed and visually stunning.`;
+        } else {
+            prompt = `masterpiece, best quality, ${parts.join(', ')}, highly detailed, 8K resolution`;
+            prompt += `\n\nNegative prompt: low quality, blurry, deformed, ugly, bad anatomy, watermark, text, signature`;
+        }
+
+        document.getElementById('promptOutput').textContent = prompt;
+        toast.success('¡Prompt generado! 🎨');
+    });
+
+    // Copy
+    document.getElementById('btnCopy').addEventListener('click', () => {
+        const text = document.getElementById('promptOutput').textContent;
+        if (!text || text.includes('Configura las opciones')) {
+            toast.warning('Genera un prompt primero');
+            return;
+        }
+        navigator.clipboard.writeText(text);
+        toast.success('¡Copiado al portapapeles!');
+    });
+
+    // Clear
+    document.getElementById('btnClear').addEventListener('click', () => {
+        document.getElementById('promptOutput').innerHTML = '<span class="text-muted">Configura las opciones y haz clic en "Generar Prompt"</span>';
+        document.getElementById('subject').value = '';
+        document.getElementById('style').value = '';
+        document.getElementById('lighting').value = '';
+        document.getElementById('composition').value = '';
+        document.getElementById('colors').value = '';
+        document.getElementById('extras').value = '';
+    });
+</script>
+
+</body>
+</html>

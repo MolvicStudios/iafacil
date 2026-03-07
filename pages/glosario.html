@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario de IA — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <h1 class="section-title animate-fadeInUp">📖 Glosario de IA</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">Todos los términos de inteligencia artificial explicados de forma sencilla</p>
+
+        <!-- Search -->
+        <div class="animate-fadeInUp delay-2" style="margin-top:2rem; max-width:500px; margin-left:auto; margin-right:auto; margin-bottom:2rem;">
+            <input class="form-input" id="searchInput" placeholder="🔍 Buscar término..." style="text-align:center; font-size:1.1rem;" />
+        </div>
+
+        <!-- Alphabet Nav -->
+        <div id="alphabetNav" class="animate-fadeInUp delay-2" style="display:flex; gap:0.25rem; flex-wrap:wrap; justify-content:center; margin-bottom:2rem;"></div>
+
+        <!-- Results count -->
+        <p id="resultsCount" class="text-muted text-sm text-center animate-fadeInUp delay-2" style="margin-bottom:1.5rem;"></p>
+
+        <!-- Glossary List -->
+        <div id="glossaryList" class="animate-fadeInUp delay-3" style="max-width:800px; margin:0 auto;"></div>
+
+        <div id="emptyState" class="text-center" style="padding:3rem; display:none;">
+            <div style="font-size:3rem;">🔍</div>
+            <h3>Término no encontrado</h3>
+            <p class="text-muted">Intenta con otra palabra</p>
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { GLOSSARY, searchGlossary } from '/js/data/glossary.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    let searchTerm = '';
+    let selectedLetter = '';
+
+    const categoryColors = {
+        fundamentos: 'var(--color-primary)',
+        modelos: 'var(--color-secondary)',
+        tecnicas: 'var(--color-accent)',
+        aplicaciones: 'var(--color-yellow)',
+        etica: 'var(--color-info)',
+        datos: '#e17055'
+    };
+
+    // Get unique first letters
+    const letters = [...new Set(GLOSSARY.map(g => g.term.charAt(0).toUpperCase()))].sort();
+
+    // Render alphabet
+    function renderAlphabet() {
+        document.getElementById('alphabetNav').innerHTML = `
+            <button class="btn btn-sm ${selectedLetter === '' ? 'btn-primary' : 'btn-outline'} letter-btn" data-letter="">Todas</button>
+            ${letters.map(l => `
+                <button class="btn btn-sm ${selectedLetter === l ? 'btn-primary' : 'btn-outline'} letter-btn" data-letter="${l}" style="min-width:36px;">${l}</button>
+            `).join('')}
+        `;
+        document.querySelectorAll('.letter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                selectedLetter = btn.dataset.letter;
+                renderAlphabet();
+                renderGlossary();
+            });
+        });
+    }
+
+    // Render glossary
+    function renderGlossary() {
+        let filtered = [...GLOSSARY];
+
+        if (selectedLetter) {
+            filtered = filtered.filter(g => g.term.charAt(0).toUpperCase() === selectedLetter);
+        }
+        if (searchTerm) {
+            filtered = searchGlossary(searchTerm);
+            if (selectedLetter) {
+                filtered = filtered.filter(g => g.term.charAt(0).toUpperCase() === selectedLetter);
+            }
+        }
+
+        filtered.sort((a, b) => a.term.localeCompare(b.term, 'es'));
+
+        const list = document.getElementById('glossaryList');
+        const empty = document.getElementById('emptyState');
+        const count = document.getElementById('resultsCount');
+
+        count.textContent = `${filtered.length} término${filtered.length !== 1 ? 's' : ''}`;
+
+        if (filtered.length === 0) {
+            list.innerHTML = '';
+            empty.style.display = 'block';
+            return;
+        }
+
+        empty.style.display = 'none';
+
+        // Group by letter
+        const grouped = {};
+        filtered.forEach(g => {
+            const letter = g.term.charAt(0).toUpperCase();
+            if (!grouped[letter]) grouped[letter] = [];
+            grouped[letter].push(g);
+        });
+
+        list.innerHTML = Object.entries(grouped).map(([letter, terms]) => `
+            <div style="margin-bottom:2rem;">
+                <h2 style="color:var(--color-primary); border-bottom:2px solid var(--color-primary); padding-bottom:0.5rem; margin-bottom:1rem;" id="letter-${letter}">${letter}</h2>
+                ${terms.map(g => {
+                    const color = categoryColors[g.category] || 'var(--text-muted)';
+                    return `
+                    <div class="card glossary-term" style="padding:1.25rem; margin-bottom:0.75rem; cursor:pointer;" onclick="this.querySelector('.glossary-def').classList.toggle('expanded')">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 style="margin:0; font-size:1.1rem;">${g.term}</h3>
+                            <span style="background:${color}20; color:${color}; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.7rem;">${g.category}</span>
+                        </div>
+                        <div class="glossary-def" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease;">
+                            <p style="margin-top:0.75rem; line-height:1.7; color:var(--text-secondary);">${g.definition}</p>
+                            ${g.example ? `<p style="margin-top:0.5rem; padding:0.75rem; background:var(--bg-secondary); border-radius:var(--radius-md); font-style:italic; font-size:0.9rem;">💡 ${g.example}</p>` : ''}
+                            ${g.related ? `<p class="text-sm text-muted" style="margin-top:0.5rem;">🔗 Relacionado: ${g.related.join(', ')}</p>` : ''}
+                        </div>
+                    </div>
+                `}).join('')}
+            </div>
+        `).join('');
+    }
+
+    // Search
+    document.getElementById('searchInput').addEventListener('input', e => {
+        searchTerm = e.target.value;
+        renderGlossary();
+    });
+
+    renderAlphabet();
+    renderGlossary();
+
+    // CSS for expand
+    const style = document.createElement('style');
+    style.textContent = `.glossary-def.expanded { max-height: 400px !important; }`;
+    document.head.appendChild(style);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "IAFACIL.HELP",
+  "short_name": "IAFácil",
+  "description": "Aprende Inteligencia Artificial sin programar — como Duolingo pero para IA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6C5CE7",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

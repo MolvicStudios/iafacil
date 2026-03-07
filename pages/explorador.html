@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Herramientas IA — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <h1 class="section-title animate-fadeInUp">🔍 Explorador de Herramientas IA</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">Descubre las mejores herramientas de inteligencia artificial</p>
+
+        <!-- Search & Filters -->
+        <div class="animate-fadeInUp delay-2" style="margin-top:2rem;">
+            <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+                <div class="form-group" style="flex:1; min-width:200px; margin-bottom:0;">
+                    <input class="form-input" id="searchInput" placeholder="🔍 Buscar herramientas..." />
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                    <select class="form-select" id="pricingFilter">
+                        <option value="">Todos los precios</option>
+                        <option value="gratis">Gratis</option>
+                        <option value="freemium">Freemium</option>
+                        <option value="pago">De pago</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="categoryFilters" style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem;"></div>
+        </div>
+
+        <!-- Results count -->
+        <p id="resultsCount" class="text-muted text-sm animate-fadeInUp delay-2" style="margin-bottom:1rem;"></p>
+
+        <!-- Tools Grid -->
+        <div id="toolsGrid" class="card-grid animate-fadeInUp delay-3"></div>
+
+        <div id="emptyState" class="text-center" style="padding:3rem; display:none;">
+            <div style="font-size:3rem;">🔍</div>
+            <h3>No se encontraron herramientas</h3>
+            <p class="text-muted">Intenta con otros filtros o términos</p>
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { toast } from '/js/components/toast.js';
+    import { TOOLS_DIRECTORY, TOOL_CATEGORIES, getToolsByCategory, searchTools } from '/js/data/tools-directory.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    let selectedCategory = '';
+    let searchTerm = '';
+    let selectedPricing = '';
+
+    const pricingBadge = {
+        gratis: { bg: 'var(--color-secondary)', label: 'Gratis' },
+        freemium: { bg: 'var(--color-primary)', label: 'Freemium' },
+        pago: { bg: 'var(--color-accent)', label: 'De pago' }
+    };
+
+    // Render category filters
+    function renderCategories() {
+        const container = document.getElementById('categoryFilters');
+        container.innerHTML = `
+            <button class="btn btn-sm ${selectedCategory === '' ? 'btn-primary' : 'btn-outline'} cat-btn" data-cat="">Todas</button>
+            ${TOOL_CATEGORIES.map(c => `
+                <button class="btn btn-sm ${selectedCategory === c.id ? 'btn-primary' : 'btn-outline'} cat-btn" data-cat="${c.id}">
+                    ${c.icon} ${c.name}
+                </button>
+            `).join('')}
+        `;
+        container.querySelectorAll('.cat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                selectedCategory = btn.dataset.cat;
+                renderCategories();
+                renderTools();
+            });
+        });
+    }
+
+    // Render tools
+    function renderTools() {
+        let filtered = [...TOOLS_DIRECTORY];
+
+        if (selectedCategory) {
+            filtered = filtered.filter(t => t.category === selectedCategory);
+        }
+        if (selectedPricing) {
+            filtered = filtered.filter(t => t.pricing === selectedPricing);
+        }
+        if (searchTerm) {
+            const term = searchTerm.toLowerCase();
+            filtered = filtered.filter(t =>
+                t.name.toLowerCase().includes(term) ||
+                t.description.toLowerCase().includes(term) ||
+                (t.tags && t.tags.some(tag => tag.toLowerCase().includes(term)))
+            );
+        }
+
+        const grid = document.getElementById('toolsGrid');
+        const empty = document.getElementById('emptyState');
+        const count = document.getElementById('resultsCount');
+
+        count.textContent = `${filtered.length} herramienta${filtered.length !== 1 ? 's' : ''} encontrada${filtered.length !== 1 ? 's' : ''}`;
+
+        if (filtered.length === 0) {
+            grid.innerHTML = '';
+            empty.style.display = 'block';
+            return;
+        }
+
+        empty.style.display = 'none';
+        grid.innerHTML = filtered.map(t => {
+            const cat = TOOL_CATEGORIES.find(c => c.id === t.category);
+            const badge = pricingBadge[t.pricing] || pricingBadge.freemium;
+            return `
+            <div class="card tool-card" style="padding:1.25rem;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
+                    <div style="display:flex; align-items:center; gap:0.5rem;">
+                        <span style="font-size:1.75rem;">${t.icon || (cat ? cat.icon : '🤖')}</span>
+                        <div>
+                            <h4 style="margin:0;">${t.name}</h4>
+                            <span class="text-xs text-muted">${cat ? cat.name : ''}</span>
+                        </div>
+                    </div>
+                    <span style="background:${badge.bg}20; color:${badge.bg}; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.7rem; font-weight:600;">${badge.label}</span>
+                </div>
+                <p class="text-sm text-muted" style="margin-bottom:0.75rem; line-height:1.5;">${t.description}</p>
+                ${t.price ? `<p class="text-xs" style="margin-bottom:0.5rem;">💰 ${t.price}</p>` : ''}
+                ${t.tags ? `
+                    <div style="display:flex; gap:0.25rem; flex-wrap:wrap; margin-bottom:0.75rem;">
+                        ${t.tags.slice(0, 4).map(tag => `<span class="text-xs" style="background:var(--bg-secondary); padding:0.1rem 0.4rem; border-radius:999px;">${tag}</span>`).join('')}
+                    </div>
+                ` : ''}
+                ${t.url ? `<a href="${t.url}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline btn-block">🔗 Visitar</a>` : ''}
+            </div>
+        `}).join('');
+    }
+
+    // Search
+    document.getElementById('searchInput').addEventListener('input', e => {
+        searchTerm = e.target.value;
+        renderTools();
+    });
+
+    // Pricing filter
+    document.getElementById('pricingFilter').addEventListener('change', e => {
+        selectedPricing = e.target.value;
+        renderTools();
+    });
+
+    renderCategories();
+    renderTools();
+</script>
+
+</body>
+</html>

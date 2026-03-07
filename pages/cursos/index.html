@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <h1 class="section-title animate-fadeInUp">Cursos</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">25 cursos para dominar la IA, organizados por nivel y profesión</p>
+
+        <!-- Filtros -->
+        <div class="course-filters animate-fadeInUp delay-2" id="filters">
+            <button class="filter-chip active" data-filter="todos">Todos</button>
+            <button class="filter-chip" data-filter="principiante">🌱 Principiante</button>
+            <button class="filter-chip" data-filter="intermedio">⚡ Intermedio</button>
+            <button class="filter-chip" data-filter="avanzado">🚀 Avanzado</button>
+            <button class="filter-chip" data-filter="texto">✍️ Texto</button>
+            <button class="filter-chip" data-filter="imagen">🎨 Imagen</button>
+            <button class="filter-chip" data-filter="audio">🎵 Audio</button>
+            <button class="filter-chip" data-filter="video">🎬 Video</button>
+            <button class="filter-chip" data-filter="auto">⚙️ Automatización</button>
+            <button class="filter-chip" data-filter="agentes">🤖 Agentes</button>
+        </div>
+
+        <!-- Grid de cursos -->
+        <div class="cards-grid" id="coursesGrid">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { authService } from '/js/services/auth.js';
+    import { db } from '/js/services/database.js';
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { COURSES } from '/js/data/courses.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    const grid = document.getElementById('coursesGrid');
+    const filters = document.getElementById('filters');
+    let userProgress = [];
+
+    // Load user progress if authenticated
+    async function loadProgress() {
+        if (authService.isAuthenticated()) {
+            const user = authService.getUser();
+            userProgress = await db.getAllProgress(user.id);
+        }
+    }
+
+    function renderCourses(filter = 'todos') {
+        let filtered = COURSES;
+        if (filter !== 'todos') {
+            filtered = COURSES.filter(c =>
+                c.level === filter || c.category === filter
+            );
+        }
+
+        if (filtered.length === 0) {
+            grid.innerHTML = `
+                <div class="empty-state" style="grid-column: 1/-1;">
+                    <div class="empty-state-icon">🔍</div>
+                    <h3 class="empty-state-title">No se encontraron cursos</h3>
+                    <p class="empty-state-desc">Prueba con otro filtro</p>
+                </div>`;
+            return;
+        }
+
+        grid.innerHTML = filtered.map((course, i) => {
+            const progress = userProgress.find(p => p.course_id === course.id);
+            const pct = progress?.completed_lessons?.length
+                ? Math.round((progress.completed_lessons.length / course.totalLessons) * 100)
+                : 0;
+
+            return `
+            <a href="/pages/cursos/${course.id}.html" class="course-card animate-fadeInUp delay-${(i % 6) + 1}">
+                <div class="course-card-badge category-badge-${course.category}">${course.categoryIcon} ${course.categoryLabel}</div>
+                <h3 class="course-card-title">${course.title}</h3>
+                <p class="course-card-desc">${course.description}</p>
+                <div class="course-card-meta">
+                    <span>${course.levelIcon} ${course.levelLabel}</span>
+                    <span>📖 ${course.totalLessons} lecciones</span>
+                </div>
+                ${pct > 0 ? `
+                <div class="progress-bar" style="margin-top:0.75rem;">
+                    <div class="progress-bar-fill" style="width:${pct}%"></div>
+                </div>
+                <span class="text-sm text-muted">${pct}% completado</span>
+                ` : ''}
+            </a>`;
+        }).join('');
+    }
+
+    // Filter clicks
+    filters.addEventListener('click', (e) => {
+        const chip = e.target.closest('.filter-chip');
+        if (!chip) return;
+
+        filters.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        renderCourses(chip.dataset.filter);
+    });
+
+    // URL params filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get('cat');
+
+    async function init() {
+        await loadProgress();
+        renderCourses(catParam || 'todos');
+        if (catParam) {
+            const chip = filters.querySelector(`[data-filter="${catParam}"]`);
+            if (chip) {
+                filters.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+            }
+        }
+    }
+
+    init();
+</script>
+
+</body>
+</html>

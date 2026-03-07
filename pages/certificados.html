@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Certificados — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container">
+        <h1 class="section-title animate-fadeInUp">🎓 Mis Certificados</h1>
+        <p class="section-subtitle animate-fadeInUp delay-1">Certificados digitales de los cursos completados</p>
+
+        <div id="certificatesList" class="animate-fadeInUp delay-2" style="margin-top:2rem;"></div>
+
+        <div id="emptyState" class="text-center" style="padding:3rem; display:none;">
+            <div style="font-size:4rem; margin-bottom:1rem;">🎓</div>
+            <h3>Aún no tienes certificados</h3>
+            <p class="text-muted" style="margin-bottom:1.5rem;">Completa un curso para obtener tu primer certificado digital</p>
+            <a href="/pages/cursos/" class="btn btn-primary">📚 Explorar Cursos</a>
+        </div>
+    </div>
+</main>
+
+<div id="bottomNavContainer"></div>
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    import { renderBottomNav } from '/js/components/bottomNav.js';
+    import { toast } from '/js/components/toast.js';
+    import { getUser } from '/js/config/supabase.js';
+    import { DatabaseService } from '/js/services/database.js';
+    import { COURSES, getCourseById } from '/js/data/courses.js';
+
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+    renderBottomNav(document.getElementById('bottomNavContainer'));
+
+    async function init() {
+        const user = await getUser();
+        if (!user) {
+            window.location.href = '/pages/auth/login.html';
+            return;
+        }
+
+        const container = document.getElementById('certificatesList');
+        const empty = document.getElementById('emptyState');
+
+        try {
+            const progress = await DatabaseService.getCourseProgress(user.id);
+            const completed = (progress || []).filter(p => p.completed);
+
+            if (completed.length === 0) {
+                empty.style.display = 'block';
+                return;
+            }
+
+            const profile = await DatabaseService.getProfile(user.id);
+            const userName = profile?.full_name || user.user_metadata?.full_name || 'Estudiante';
+
+            container.innerHTML = completed.map(p => {
+                const course = getCourseById(p.course_id);
+                const date = new Date(p.completed_at || p.updated_at).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+                const certId = `IAFACIL-${p.course_id.toUpperCase().slice(0, 8)}-${user.id.slice(0, 6)}`.toUpperCase();
+
+                return `
+                <div class="card" style="padding:2rem; margin-bottom:1.5rem; border:2px solid var(--color-primary); position:relative; overflow:hidden;">
+                    <div style="position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));"></div>
+
+                    <div style="text-align:center; margin-bottom:1.5rem;">
+                        <div style="font-size:3rem; margin-bottom:0.5rem;">🎓</div>
+                        <h2 style="color:var(--color-primary); margin-bottom:0.25rem;">Certificado de Finalización</h2>
+                        <p class="text-muted text-sm">IAFACIL.HELP</p>
+                    </div>
+
+                    <div style="text-align:center; margin-bottom:1.5rem;">
+                        <p class="text-muted">Esto certifica que</p>
+                        <h3 style="font-size:1.5rem; margin:0.5rem 0;">${userName}</h3>
+                        <p class="text-muted">ha completado exitosamente el curso</p>
+                        <h3 style="color:var(--color-primary); margin:0.5rem 0;">${course ? course.title : p.course_id}</h3>
+                        <p class="text-sm text-muted">Fecha: ${date}</p>
+                    </div>
+
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding-top:1rem; border-top:1px solid var(--border-color);">
+                        <span class="text-xs text-muted">ID: ${certId}</span>
+                        <button class="btn btn-sm btn-secondary print-cert" data-name="${userName}" data-course="${course ? course.title : p.course_id}" data-date="${date}" data-id="${certId}">🖨️ Imprimir</button>
+                    </div>
+                </div>
+            `}).join('');
+
+            // Print buttons
+            container.querySelectorAll('.print-cert').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const w = window.open('', '_blank');
+                    w.document.write(`
+                        <!DOCTYPE html>
+                        <html><head><title>Certificado</title>
+                        <style>
+                            body { font-family: 'Georgia', serif; text-align: center; padding: 60px; color: #333; }
+                            h1 { color: #6C5CE7; font-size: 2rem; }
+                            h2 { font-size: 1.5rem; }
+                            .line { border-bottom: 2px solid #6C5CE7; max-width: 300px; margin: 1rem auto; }
+                            .id { color: #999; font-size: 0.8rem; margin-top: 2rem; }
+                            .grad { height: 6px; background: linear-gradient(90deg, #6C5CE7, #00D9A5, #FF6B9D); margin-bottom: 2rem; }
+                            @media print { body { padding: 40px; } }
+                        </style></head><body>
+                        <div class="grad"></div>
+                        <h1>🎓 Certificado de Finalización</h1>
+                        <p>IAFACIL.HELP</p>
+                        <div class="line"></div>
+                        <p>Esto certifica que</p>
+                        <h2>${btn.dataset.name}</h2>
+                        <p>ha completado exitosamente el curso</p>
+                        <h2 style="color:#6C5CE7;">${btn.dataset.course}</h2>
+                        <p>Fecha: ${btn.dataset.date}</p>
+                        <div class="line"></div>
+                        <p class="id">ID: ${btn.dataset.id}</p>
+                        </body></html>
+                    `);
+                    w.document.close();
+                    w.print();
+                });
+            });
+
+        } catch (err) {
+            container.innerHTML = '<p class="text-muted text-center" style="padding:2rem;">Error al cargar certificados</p>';
+        }
+    }
+
+    init();
+</script>
+
+</body>
+</html>

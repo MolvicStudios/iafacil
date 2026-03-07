@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Cookies — IAFACIL.HELP</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="headerContainer"></div>
+
+<main class="page-content">
+    <div class="container" style="max-width:800px;">
+        <h1 class="section-title animate-fadeInUp">🍪 Política de Cookies</h1>
+        <p class="text-muted animate-fadeInUp delay-1">Última actualización: enero 2025</p>
+
+        <div class="card animate-fadeInUp delay-2" style="padding:2rem; margin-top:2rem; line-height:1.8;">
+            <h2>¿Qué son las cookies?</h2>
+            <p>Las cookies son pequeños archivos de texto que se almacenan en tu navegador cuando visitas un sitio web. Se utilizan para recordar preferencias y mejorar tu experiencia.</p>
+
+            <h2>Cookies que utilizamos</h2>
+
+            <h3>Cookies esenciales (necesarias)</h3>
+            <p>Estas cookies son imprescindibles para el funcionamiento de la plataforma:</p>
+            <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem;">
+                <thead>
+                    <tr style="border-bottom:2px solid var(--border-color);">
+                        <th style="text-align:left; padding:0.75rem;">Cookie</th>
+                        <th style="text-align:left; padding:0.75rem;">Propósito</th>
+                        <th style="text-align:left; padding:0.75rem;">Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;"><code>sb-access-token</code></td>
+                        <td style="padding:0.75rem;">Autenticación de sesión</td>
+                        <td style="padding:0.75rem;">1 hora</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;"><code>sb-refresh-token</code></td>
+                        <td style="padding:0.75rem;">Renovación de sesión</td>
+                        <td style="padding:0.75rem;">7 días</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Cookies funcionales</h3>
+            <p>Mejoran tu experiencia pero no son estrictamente necesarias:</p>
+            <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem;">
+                <thead>
+                    <tr style="border-bottom:2px solid var(--border-color);">
+                        <th style="text-align:left; padding:0.75rem;">Cookie</th>
+                        <th style="text-align:left; padding:0.75rem;">Propósito</th>
+                        <th style="text-align:left; padding:0.75rem;">Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;"><code>theme</code></td>
+                        <td style="padding:0.75rem;">Preferencia de tema (claro/oscuro)</td>
+                        <td style="padding:0.75rem;">1 año</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Cookies de terceros</h2>
+            <p>Si inicias sesión con Google, se pueden establecer cookies de Google para la autenticación OAuth. Estas cookies están sujetas a la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.</p>
+
+            <h2>Cómo gestionar las cookies</h2>
+            <p>Puedes gestionar las cookies desde la configuración de tu navegador:</p>
+            <ul>
+                <li><strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
+                <li><strong>Firefox:</strong> Configuración → Privacidad y seguridad → Cookies</li>
+                <li><strong>Safari:</strong> Preferencias → Privacidad</li>
+                <li><strong>Edge:</strong> Configuración → Cookies y permisos del sitio</li>
+            </ul>
+            <p><strong>Nota:</strong> Desactivar las cookies esenciales puede impedir que inicies sesión o que la plataforma funcione correctamente.</p>
+
+            <h2>Contacto</h2>
+            <p>Si tienes preguntas sobre nuestra política de cookies: <strong>privacidad@iafacil.help</strong></p>
+        </div>
+    </div>
+</main>
+
+<div id="footerContainer"></div>
+
+<script type="module">
+    import { renderHeader } from '/js/components/header.js';
+    import { renderFooter } from '/js/components/footer.js';
+    renderHeader(document.getElementById('headerContainer'));
+    renderFooter(document.getElementById('footerContainer'));
+</script>
+
+</body>
+</html>
