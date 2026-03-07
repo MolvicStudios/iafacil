@@ -54,7 +54,7 @@
 
             const progress = (localProgress || []).map(p => ({
                 ...p,
-                completed: p.completed ?? ((p.completed_lessons || []).length > 0)
+                completed: p.completed && p.quiz_passed
             }));
             const completed = (progress || []).filter(p => p.completed);
 
@@ -70,6 +70,8 @@
                 const course = getCourseById(p.course_id);
                 const date = new Date(p.completed_at || p.updated_at).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
                 const certId = `IAFACIL-${p.course_id.toUpperCase().slice(0, 8)}-${String(userId).slice(0, 6)}`.toUpperCase();
+                const quizScore = p.quiz_score || 100;
+                const levelLabel = course ? `${course.levelIcon} ${course.levelLabel}` : '';
 
                 return `
                 <div class="card" style="padding:2rem; margin-bottom:1.5rem; border:2px solid var(--color-primary); position:relative; overflow:hidden;">
@@ -86,47 +88,75 @@
                         <h3 style="font-size:1.5rem; margin:0.5rem 0;">${userName}</h3>
                         <p class="text-muted">ha completado exitosamente el curso</p>
                         <h3 style="color:var(--color-primary); margin:0.5rem 0;">${course ? course.title : p.course_id}</h3>
-                        <p class="text-sm text-muted">Fecha: ${date}</p>
+                        <p class="text-sm text-muted">${levelLabel} · ${course ? course.totalLessons : ''} lecciones · Quiz: ${quizScore}%</p>
+                        <p class="text-sm text-muted" style="margin-top:0.25rem;">Fecha: ${date}</p>
                     </div>
 
                     <div style="display:flex; justify-content:space-between; align-items:center; padding-top:1rem; border-top:1px solid var(--border-color);">
                         <span class="text-xs text-muted">ID: ${certId}</span>
-                        <button class="btn btn-sm btn-secondary print-cert" data-name="${userName}" data-course="${course ? course.title : p.course_id}" data-date="${date}" data-id="${certId}">🖨️ Imprimir</button>
+                        <div style="display:flex; gap:0.5rem;">
+                            <button class="btn btn-sm btn-outline download-cert" data-name="${userName}" data-course="${course ? course.title : p.course_id}" data-date="${date}" data-id="${certId}" data-score="${quizScore}" data-level="${levelLabel}">📥 Descargar</button>
+                            <button class="btn btn-sm btn-secondary print-cert" data-name="${userName}" data-course="${course ? course.title : p.course_id}" data-date="${date}" data-id="${certId}" data-score="${quizScore}" data-level="${levelLabel}">🖨️ Imprimir</button>
+                        </div>
                     </div>
                 </div>
             `}).join('');
 
+            // Print / Download certificate HTML builder
+            function buildCertHTML(data) {
+                return `<!DOCTYPE html>
+<html><head><title>Certificado - ${data.course}</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', serif; text-align: center; padding: 60px 40px; color: #333; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+    h1 { color: #00B894; font-size: 2rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.5rem; }
+    .line { border-bottom: 2px solid #00B894; max-width: 300px; margin: 1.25rem auto; }
+    .meta { color: #666; font-size: 0.9rem; margin-top: 0.5rem; }
+    .id { color: #999; font-size: 0.8rem; margin-top: 2rem; }
+    .grad { height: 6px; background: linear-gradient(90deg, #00B894, #0984E3, #6C5CE7); margin-bottom: 2rem; border-radius: 3px; }
+    .badge { display: inline-block; background: #00B894; color: white; padding: 0.25rem 1rem; border-radius: 50px; font-size: 0.85rem; margin-top: 0.5rem; }
+    @media print { body { padding: 40px 30px; } }
+</style></head><body>
+<div class="grad"></div>
+<h1>🎓 Certificado de Finalización</h1>
+<p style="color:#666;">IAFACIL.HELP — Plataforma de IA Accesible</p>
+<div class="line"></div>
+<p>Esto certifica que</p>
+<h2>${data.name}</h2>
+<p>ha completado exitosamente el curso</p>
+<h2 style="color:#00B894;">${data.course}</h2>
+<p class="meta">${data.level}</p>
+<div class="badge">Quiz: ${data.score}%</div>
+<p class="meta" style="margin-top:1rem;">Fecha de finalización: ${data.date}</p>
+<div class="line"></div>
+<p class="id">ID del certificado: ${data.id}</p>
+</body></html>`;
+            }
+
             // Print buttons
             container.querySelectorAll('.print-cert').forEach(btn => {
                 btn.addEventListener('click', () => {
+                    const data = { name: btn.dataset.name, course: btn.dataset.course, date: btn.dataset.date, id: btn.dataset.id, score: btn.dataset.score, level: btn.dataset.level };
                     const w = window.open('', '_blank');
-                    w.document.write(`
-                        <!DOCTYPE html>
-                        <html><head><title>Certificado</title>
-                        <style>
-                            body { font-family: 'Georgia', serif; text-align: center; padding: 60px; color: #333; }
-                            h1 { color: #00B894; font-size: 2rem; }
-                            h2 { font-size: 1.5rem; }
-                            .line { border-bottom: 2px solid #00B894; max-width: 300px; margin: 1rem auto; }
-                            .id { color: #999; font-size: 0.8rem; margin-top: 2rem; }
-                            .grad { height: 6px; background: linear-gradient(90deg, #00B894, #0984E3, #2D3436); margin-bottom: 2rem; }
-                            @media print { body { padding: 40px; } }
-                        </style></head><body>
-                        <div class="grad"></div>
-                        <h1>🎓 Certificado de Finalización</h1>
-                        <p>IAFACIL.HELP</p>
-                        <div class="line"></div>
-                        <p>Esto certifica que</p>
-                        <h2>${btn.dataset.name}</h2>
-                        <p>ha completado exitosamente el curso</p>
-                        <h2 style="color:#00B894;">${btn.dataset.course}</h2>
-                        <p>Fecha: ${btn.dataset.date}</p>
-                        <div class="line"></div>
-                        <p class="id">ID: ${btn.dataset.id}</p>
-                        </body></html>
-                    `);
+                    w.document.write(buildCertHTML(data));
                     w.document.close();
                     w.print();
+                });
+            });
+
+            // Download buttons
+            container.querySelectorAll('.download-cert').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const data = { name: btn.dataset.name, course: btn.dataset.course, date: btn.dataset.date, id: btn.dataset.id, score: btn.dataset.score, level: btn.dataset.level };
+                    const blob = new Blob([buildCertHTML(data)], { type: 'text/html' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `certificado-${btn.dataset.id.toLowerCase()}.html`;
+                    a.click();
+                    URL.revokeObjectURL(url);
+                    toast.success('Certificado descargado');
                 });
             });
 

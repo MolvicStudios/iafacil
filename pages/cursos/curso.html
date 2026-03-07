@@ -41,6 +41,19 @@
             <p class="text-muted">Selecciona una leccion para ver su contenido completo.</p>
         </section>
 
+        <!-- Quiz Section -->
+        <section class="card" id="quizSection" style="margin-top:1.5rem; padding:1.25rem; display:none;">
+            <div id="quizContainer"></div>
+        </section>
+
+        <!-- Certificate Banner -->
+        <section class="card" id="certificateBanner" style="margin-top:1.5rem; padding:1.5rem; display:none; border:2px solid var(--color-primary); text-align:center;">
+            <div style="font-size:3rem; margin-bottom:0.5rem;">🎓</div>
+            <h3 style="margin-bottom:0.5rem;">¡Curso Completado!</h3>
+            <p class="text-muted" style="margin-bottom:1rem;">Has completado todas las lecciones y aprobado el quiz.</p>
+            <a href="/pages/certificados.html" class="btn btn-primary">Ver mi certificado</a>
+        </section>
+
         <section class="card" style="margin-top:1.5rem; padding:1.25rem;">
             <h3 style="margin-bottom:0.5rem;">Progreso local</h3>
             <p class="text-muted" style="margin-bottom:1rem;">Este modo guarda tu avance en este navegador.</p>
@@ -58,6 +71,7 @@
     import { renderBottomNav } from '/js/components/bottomNav.js';
     import { COURSES, getCourseById } from '/js/data/courses.js';
     import { getLessonContent } from '/js/data/course-lessons.js';
+    import { getCourseQuiz } from '/js/data/course-quizzes.js';
     import { toast } from '/js/components/toast.js';
 
     renderHeader(document.getElementById('headerContainer'));
@@ -295,17 +309,194 @@
         }
 
         const completedLessons = [...done];
+        const allDone = completedLessons.length >= course.totalLessons;
         const next = {
             ...current,
             course_id: courseId,
             completed_lessons: completedLessons,
             total_lessons: course.totalLessons,
             updated_at: new Date().toISOString(),
-            completed: completedLessons.length >= course.totalLessons
+            completed: allDone && (current.quiz_passed || false),
+            completed_at: (allDone && current.quiz_passed) ? (current.completed_at || new Date().toISOString()) : null
         };
 
         saveCourseProgress(next);
         renderCourse();
+        renderQuizSection();
+        renderCertificateBanner();
+
+        if (!done.has(lessonId)) {
+            toast.success('¡Lección completada! +10 XP');
+            addXP(10);
+        }
+    }
+
+    /* ═══ XP System ═══ */
+    function addXP(amount) {
+        try {
+            const profile = JSON.parse(localStorage.getItem('iafacil-profile') || '{}');
+            profile.xp = (profile.xp || 0) + amount;
+            localStorage.setItem('iafacil-profile', JSON.stringify(profile));
+        } catch {}
+    }
+
+    /* ═══ Quiz System ═══ */
+    let quizState = { currentQ: 0, answers: {}, submitted: false, score: 0 };
+
+    function renderQuizSection() {
+        const section = document.getElementById('quizSection');
+        if (!section || !course) return;
+
+        const progress = getCourseProgress();
+        const completedLessons = progress.completed_lessons || [];
+        const allLessonsDone = completedLessons.length >= course.totalLessons;
+        const quiz = getCourseQuiz(courseId);
+
+        if (!quiz || !allLessonsDone) {
+            section.style.display = 'none';
+            return;
+        }
+
+        if (progress.quiz_passed) {
+            section.style.display = 'block';
+            const container = document.getElementById('quizContainer');
+            container.innerHTML = `
+                <div class="quiz-result">
+                    <div class="quiz-result-icon">🎉</div>
+                    <h3>Quiz aprobado</h3>
+                    <div class="quiz-result-score">${progress.quiz_score || 100}%</div>
+                    <p class="text-muted" style="margin-top:0.5rem;">Has superado la evaluación de este curso.</p>
+                    <button class="btn btn-outline" style="margin-top:1rem;" id="btnRetakeQuiz">Repetir quiz</button>
+                </div>`;
+            document.getElementById('btnRetakeQuiz')?.addEventListener('click', () => {
+                quizState = { currentQ: 0, answers: {}, submitted: false, score: 0 };
+                renderQuiz();
+            });
+            return;
+        }
+
+        section.style.display = 'block';
+        renderQuiz();
+    }
+
+    function renderQuiz() {
+        const container = document.getElementById('quizContainer');
+        const quiz = getCourseQuiz(courseId);
+        if (!container || !quiz) return;
+
+        if (quizState.submitted) {
+            renderQuizResults(container, quiz);
+            return;
+        }
+
+        const q = quiz.questions[quizState.currentQ];
+        const total = quiz.questions.length;
+        const pct = Math.round(((quizState.currentQ) / total) * 100);
+
+        container.innerHTML = `
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h3>📝 ${quiz.title}</h3>
+                    <p class="text-muted">${quiz.description}</p>
+                </div>
+                <div class="quiz-progress" style="margin-bottom:1.5rem;">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                        <span class="text-sm">Pregunta ${quizState.currentQ + 1} de ${total}</span>
+                        <span class="text-sm">${pct}%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
+                </div>
+                <div class="quiz-question">
+                    <p class="quiz-question-text">${q.question}</p>
+                    <div class="quiz-options">
+                        ${q.options.map((opt, i) => `
+                            <div class="quiz-option ${quizState.answers[quizState.currentQ] === i ? 'selected' : ''}" data-action="select-option" data-option="${i}">
+                                <span style="font-weight:700; min-width:1.5rem;">${String.fromCharCode(65 + i)}.</span>
+                                <span>${opt}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-top:1.5rem;">
+                    <button class="btn btn-outline" ${quizState.currentQ === 0 ? 'disabled' : ''} data-action="quiz-prev">← Anterior</button>
+                    ${quizState.currentQ < total - 1
+                        ? `<button class="btn btn-primary" data-action="quiz-next" ${quizState.answers[quizState.currentQ] === undefined ? 'disabled' : ''}>Siguiente →</button>`
+                        : `<button class="btn btn-primary" data-action="quiz-submit" ${Object.keys(quizState.answers).length < total ? 'disabled' : ''}>Enviar respuestas</button>`
+                    }
+                </div>
+                <p class="text-muted text-sm text-center" style="margin-top:0.75rem;">Necesitas un 70% para aprobar</p>
+            </div>
+        `;
+    }
+
+    function renderQuizResults(container, quiz) {
+        const total = quiz.questions.length;
+        let correct = 0;
+        quiz.questions.forEach((q, i) => {
+            if (quizState.answers[i] === q.correct) correct++;
+        });
+        const score = Math.round((correct / total) * 100);
+        const passed = score >= quiz.passingScore;
+
+        container.innerHTML = `
+            <div class="quiz-result">
+                <div class="quiz-result-icon">${passed ? '🎉' : '😔'}</div>
+                <h3>${passed ? '¡Felicidades! Has aprobado' : 'No has aprobado esta vez'}</h3>
+                <div class="quiz-result-score">${score}%</div>
+                <p class="text-muted" style="margin-top:0.5rem;">${correct} de ${total} respuestas correctas</p>
+                ${passed
+                    ? '<p style="margin-top:0.75rem; color:var(--color-success);">🎓 ¡Has obtenido tu certificado!</p>'
+                    : `<p style="margin-top:0.75rem;">Necesitas un ${quiz.passingScore}% para aprobar. ¡Repasa las lecciones y vuelve a intentarlo!</p>`
+                }
+                <button class="btn ${passed ? 'btn-outline' : 'btn-primary'}" style="margin-top:1rem;" data-action="quiz-review">Ver respuestas</button>
+                ${!passed ? '<button class="btn btn-primary" style="margin-top:0.5rem;" data-action="quiz-retry">Intentar de nuevo</button>' : ''}
+            </div>
+            <div id="quizReview" style="display:none; margin-top:1.5rem;"></div>
+        `;
+
+        if (passed) {
+            const progress = getCourseProgress();
+            progress.quiz_passed = true;
+            progress.quiz_score = score;
+            progress.completed = true;
+            progress.completed_at = progress.completed_at || new Date().toISOString();
+            saveCourseProgress(progress);
+            addXP(100);
+            toast.success('🎓 ¡Curso completado! +100 XP');
+            renderCertificateBanner();
+        }
+    }
+
+    function renderQuizReview(container, quiz) {
+        const review = container.querySelector('#quizReview') || document.getElementById('quizReview');
+        if (!review) return;
+        review.style.display = 'block';
+
+        review.innerHTML = quiz.questions.map((q, i) => {
+            const userAns = quizState.answers[i];
+            const isCorrect = userAns === q.correct;
+            return `
+                <div class="quiz-question" style="margin-bottom:1rem;">
+                    <p class="quiz-question-text" style="font-size:1rem;">${i + 1}. ${q.question}</p>
+                    <div class="quiz-options">
+                        ${q.options.map((opt, j) => {
+                            let cls = '';
+                            if (j === q.correct) cls = 'correct';
+                            else if (j === userAns && !isCorrect) cls = 'incorrect';
+                            return `<div class="quiz-option ${cls}" style="cursor:default;"><span style="font-weight:700; min-width:1.5rem;">${String.fromCharCode(65 + j)}.</span><span>${opt}</span></div>`;
+                        }).join('')}
+                    </div>
+                    <div class="quiz-explanation">💡 ${q.explanation}</div>
+                </div>`;
+        }).join('');
+    }
+
+    /* ═══ Certificate Banner ═══ */
+    function renderCertificateBanner() {
+        const banner = document.getElementById('certificateBanner');
+        if (!banner || !course) return;
+        const progress = getCourseProgress();
+        banner.style.display = (progress.completed && progress.quiz_passed) ? 'block' : 'none';
     }
 
     document.addEventListener('click', (e) => {
@@ -317,8 +508,46 @@
         }
 
         const btn = e.target.closest('[data-action="toggle-lesson"]');
-        if (!btn) return;
-        toggleLesson(btn.dataset.lessonId);
+        if (btn) {
+            toggleLesson(btn.dataset.lessonId);
+            return;
+        }
+
+        const optBtn = e.target.closest('[data-action="select-option"]');
+        if (optBtn) {
+            quizState.answers[quizState.currentQ] = parseInt(optBtn.dataset.option);
+            renderQuiz();
+            return;
+        }
+
+        if (e.target.closest('[data-action="quiz-prev"]')) {
+            if (quizState.currentQ > 0) { quizState.currentQ--; renderQuiz(); }
+            return;
+        }
+
+        if (e.target.closest('[data-action="quiz-next"]')) {
+            const quiz = getCourseQuiz(courseId);
+            if (quiz && quizState.currentQ < quiz.questions.length - 1) { quizState.currentQ++; renderQuiz(); }
+            return;
+        }
+
+        if (e.target.closest('[data-action="quiz-submit"]')) {
+            quizState.submitted = true;
+            renderQuiz();
+            return;
+        }
+
+        if (e.target.closest('[data-action="quiz-retry"]')) {
+            quizState = { currentQ: 0, answers: {}, submitted: false, score: 0 };
+            renderQuiz();
+            return;
+        }
+
+        if (e.target.closest('[data-action="quiz-review"]')) {
+            const quiz = getCourseQuiz(courseId);
+            if (quiz) renderQuizReview(document.getElementById('quizContainer'), quiz);
+            return;
+        }
     });
 
     const resetBtn = document.getElementById('btnResetProgress');
@@ -332,6 +561,8 @@
     }
 
     renderCourse();
+    renderQuizSection();
+    renderCertificateBanner();
 </script>
 
 </body>
