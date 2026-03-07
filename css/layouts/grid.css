@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════════════════════
+   GRID SYSTEM - IAFACIL.HELP
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Layout principal de la app ─── */
+.page-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    padding-bottom: calc(var(--nav-mobile-height) + var(--spacing-lg));
+    min-height: 100vh;
+}
+
+@media (min-width: 769px) {
+    .page-content {
+        padding: var(--spacing-xl) var(--spacing-xl);
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .app-layout .page-content {
+        max-width: calc(var(--max-width) - 260px);
+    }
+}
+
+/* ─── Sección ─── */
+.section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.section-lg {
+    padding: var(--spacing-3xl) 0;
+}
+
+.section-title {
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* ─── Cards Grid responsivo ─── */
+.cards-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.cards-grid-4 {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .cards-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards-grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ─── Layout de dos columnas ─── */
+.two-cols {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+@media (min-width: 1024px) {
+    .two-cols {
+        flex-direction: row;
+    }
+
+    .two-cols-main {
+        flex: 1;
+    }
+
+    .two-cols-aside {
+        width: 320px;
+        flex-shrink: 0;
+    }
+}
+
+/* ─── Empty state ─── */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.empty-state-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state-text {
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-lg);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}

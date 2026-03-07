@@ -1,0 +1,94 @@
+/* ═══════════════════════════════════════════════════════════
+   SIDEBAR - IAFACIL.HELP
+   ═══════════════════════════════════════════════════════════ */
+
+/* Sidebar de curso (índice de lecciones) */
+.course-sidebar {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .course-sidebar {
+        display: block;
+        width: 320px;
+        position: sticky;
+        top: calc(var(--header-height) + var(--spacing-lg));
+        max-height: calc(100vh - var(--header-height) - var(--spacing-2xl));
+        overflow-y: auto;
+        padding: var(--spacing-lg);
+        background: var(--bg-card);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-card);
+    }
+}
+
+.course-sidebar-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.course-sidebar-module {
+    margin-bottom: var(--spacing-md);
+}
+
+.course-sidebar-module-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.course-sidebar-lesson {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    font-size: 0.9375rem;
+}
+
+.course-sidebar-lesson:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.course-sidebar-lesson.active {
+    background: rgba(108, 92, 231, 0.08);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.course-sidebar-lesson.completed {
+    color: var(--color-success);
+}
+
+.course-sidebar-lesson .lesson-status {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+}
+
+.course-sidebar-lesson.completed .lesson-status {
+    background: var(--color-success);
+    border-color: var(--color-success);
+    color: white;
+}
+
+.course-sidebar-lesson.active .lesson-status {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: white;
+}

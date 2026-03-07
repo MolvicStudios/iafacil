@@ -1,0 +1,177 @@
+/* ═══════════════════════════════════════════════════════════
+   HEADER - IAFACIL.HELP
+   ═══════════════════════════════════════════════════════════ */
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-md);
+    z-index: 800;
+}
+
+@media (min-width: 769px) {
+    .header {
+        padding: 0 var(--spacing-xl);
+    }
+
+    .app-layout .header {
+        margin-left: 0;
+    }
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* ─── Logo ─── */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.header-logo img {
+    width: 36px;
+    height: 36px;
+}
+
+.header-logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+@media (min-width: 769px) {
+    .app-layout .header-logo {
+        display: none;
+    }
+}
+
+/* ─── Navegación desktop header ─── */
+.header-nav {
+    display: none;
+    gap: 0.25rem;
+}
+
+@media (min-width: 769px) {
+    .header-nav {
+        display: flex;
+    }
+}
+
+.header-nav-item {
+    padding: 0.5rem 1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-fast);
+}
+
+.header-nav-item:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.header-nav-item.active {
+    color: var(--color-primary);
+    background: rgba(108, 92, 231, 0.08);
+}
+
+/* ─── Acciones del header ─── */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-xp {
+    display: none;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-accent-alt);
+}
+
+@media (min-width: 769px) {
+    .header-xp {
+        display: flex;
+    }
+}
+
+.header-streak {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #FF6B6B;
+}
+
+.header-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: box-shadow var(--transition-fast);
+}
+
+.header-avatar:hover {
+    box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ─── Header para landing (público) ─── */
+.header-landing {
+    background: transparent;
+    border-bottom: none;
+    position: absolute;
+}
+
+.header-landing.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+}
+
+/* ─── Menú hamburguesa (mobile) ─── */
+.header-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 24px;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.header-menu-toggle span {
+    display: block;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+@media (min-width: 769px) {
+    .header-menu-toggle {
+        display: none;
+    }
+}

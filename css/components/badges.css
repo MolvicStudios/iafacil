@@ -1,0 +1,117 @@
+/* ═══════════════════════════════════════════════════════════
+   BADGES/INSIGNIAS - IAFACIL.HELP
+   ═══════════════════════════════════════════════════════════ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 2rem;
+    position: relative;
+}
+
+.badge::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: var(--badge-color, var(--color-primary));
+    opacity: 0.2;
+}
+
+.badge-sm {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+}
+
+.badge-lg {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+}
+
+/* ─── Rareza ─── */
+.badge-comun { --badge-color: #95A5A6; }
+.badge-raro { --badge-color: #3498DB; }
+.badge-epico { --badge-color: #9B59B6; }
+.badge-legendario {
+    --badge-color: #F1C40F;
+    animation: legendary-glow 2s ease-in-out infinite;
+}
+
+@keyframes legendary-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(241, 196, 15, 0.5); }
+    50% { box-shadow: 0 0 40px rgba(241, 196, 15, 0.8); }
+}
+
+/* ─── Badge bloqueado ─── */
+.badge-locked {
+    filter: grayscale(1);
+    opacity: 0.4;
+}
+
+.badge-locked::after {
+    content: '🔒';
+    position: absolute;
+    font-size: 1rem;
+}
+
+/* ─── Grid de badges ─── */
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1.5rem;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.badge-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.badge-description {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ─── Tags de rareza ─── */
+.rarity-tag {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    border-radius: 50px;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rarity-comun {
+    background: #95a5a611;
+    color: #95A5A6;
+}
+
+.rarity-raro {
+    background: #3498db11;
+    color: #3498DB;
+}
+
+.rarity-epico {
+    background: #9b59b611;
+    color: #9B59B6;
+}
+
+.rarity-legendario {
+    background: #f1c40f11;
+    color: #D4AC0D;
+}
