@@ -1,0 +1,97 @@
+/* ═══════════════════════════════════════════════════════════
+   VARIABLES CSS - IAFACIL.HELP
+   Sistema de diseño completo estilo Duolingo
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+    /* ─── Colores principales ─── */
+    --color-primary: #6C5CE7;
+    --color-primary-light: #A29BFE;
+    --color-primary-dark: #5541D7;
+
+    --color-secondary: #00D9A5;
+    --color-secondary-light: #55EFC4;
+    --color-secondary-dark: #00B894;
+
+    --color-accent: #FF6B9D;
+    --color-accent-alt: #FDCB6E;
+
+    /* ─── Colores por categoría ─── */
+    --color-texto: #3498DB;
+    --color-imagen: #E84393;
+    --color-audio: #00CEC9;
+    --color-video: #FF7675;
+    --color-auto: #FDCB6E;
+    --color-agentes: #6C5CE7;
+
+    /* ─── Fondos ─── */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FE;
+    --bg-tertiary: #EEF0F8;
+    --bg-card: #FFFFFF;
+    --bg-dark: #2D3436;
+
+    /* ─── Textos ─── */
+    --text-primary: #2D3436;
+    --text-secondary: #636E72;
+    --text-muted: #B2BEC3;
+    --text-inverse: #FFFFFF;
+
+    /* ─── Estados ─── */
+    --color-success: #00D9A5;
+    --color-warning: #FDCB6E;
+    --color-error: #FF6B6B;
+    --color-info: #74B9FF;
+
+    /* ─── Bordes ─── */
+    --border-color: #E0E6ED;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 30px;
+
+    /* ─── Sombras ─── */
+    --shadow-sm: 0 2px 8px rgba(108, 92, 231, 0.08);
+    --shadow-md: 0 4px 20px rgba(108, 92, 231, 0.12);
+    --shadow-lg: 0 8px 40px rgba(108, 92, 231, 0.16);
+    --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    /* ─── Tipografía ─── */
+    --font-primary: 'Nunito', 'Segoe UI', sans-serif;
+    --font-display: 'Nunito', 'Segoe UI', sans-serif;
+
+    /* ─── Espaciado ─── */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+
+    /* ─── Transiciones ─── */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* ─── Layout ─── */
+    --max-width: 1200px;
+    --header-height: 64px;
+    --nav-mobile-height: 64px;
+}
+
+/* ─── Dark Mode (preparado) ─── */
+[data-theme="dark"] {
+    --bg-primary: #1A1A2E;
+    --bg-secondary: #16213E;
+    --bg-tertiary: #0F3460;
+    --bg-card: #1A1A2E;
+    --text-primary: #EAEAEA;
+    --text-secondary: #B0B0B0;
+    --text-muted: #666;
+    --border-color: #2A2A4A;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+    --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.3);
+}

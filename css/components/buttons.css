@@ -1,0 +1,183 @@
+/* ═══════════════════════════════════════════════════════════
+   BOTONES - IAFACIL.HELP
+   Estilo Duolingo con efecto 3D push
+   ═══════════════════════════════════════════════════════════ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius-lg);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Efecto 3D estilo Duolingo */
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+    box-shadow: 0 4px 0 var(--color-primary-dark);
+    transform: translateY(0);
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--color-primary-dark);
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--color-primary-dark);
+}
+
+.btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    box-shadow: 0 4px 0 var(--border-color);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--border-color);
+}
+
+.btn-secondary:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--border-color);
+}
+
+.btn-success {
+    background: var(--color-success);
+    color: white;
+    box-shadow: 0 4px 0 var(--color-secondary-dark);
+}
+
+.btn-success:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--color-secondary-dark);
+}
+
+.btn-success:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--color-secondary-dark);
+}
+
+.btn-accent {
+    background: var(--color-accent);
+    color: white;
+    box-shadow: 0 4px 0 #e0527e;
+}
+
+.btn-accent:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #e0527e;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    box-shadow: none;
+}
+
+.btn-outline:hover:not(:disabled) {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    box-shadow: none;
+}
+
+.btn-ghost:hover:not(:disabled) {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Tamaños */
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    border-radius: var(--border-radius-xl);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn-xs {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+}
+
+.btn-icon {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.btn-icon.btn-sm {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Botón Google OAuth */
+.btn-google {
+    background: white;
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 2px 0 var(--border-color);
+}
+
+.btn-google:hover:not(:disabled) {
+    background: var(--bg-secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 0 var(--border-color);
+}
+
+.btn-google img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Loading state */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
