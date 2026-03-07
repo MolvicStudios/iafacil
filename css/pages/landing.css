@@ -2,6 +2,38 @@
    LANDING PAGE - IAFACIL.HELP
    ═══════════════════════════════════════════════════════════ */
 
+/* ─── Section Intro Card ─── */
+.section-intro-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-lg);
+    max-width: 640px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.section-intro-card .section-title {
+    margin-bottom: var(--spacing-xs);
+}
+
+.section-intro-card .section-subtitle {
+    margin-bottom: 0;
+    max-width: none;
+}
+
+/* ─── CTA Card ─── */
+.cta-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* ─── Hero Section ─── */
 .hero {
     padding: calc(var(--header-height) + var(--spacing-2xl)) var(--spacing-md) var(--spacing-3xl);
