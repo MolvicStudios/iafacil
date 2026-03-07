@@ -39,13 +39,13 @@
 .badge-raro { --badge-color: #3498DB; }
 .badge-epico { --badge-color: #9B59B6; }
 .badge-legendario {
-    --badge-color: #F1C40F;
-    animation: legendary-glow 2s ease-in-out infinite;
+    --badge-color: #F59E0B;
+    animation: legendary-glow 2.5s ease-in-out infinite;
 }
 
 @keyframes legendary-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(241, 196, 15, 0.5); }
-    50% { box-shadow: 0 0 40px rgba(241, 196, 15, 0.8); }
+    0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(245, 158, 11, 0.7), 0 0 60px rgba(245, 158, 11, 0.2); }
 }
 
 /* ─── Badge bloqueado ─── */

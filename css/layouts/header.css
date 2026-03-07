@@ -8,12 +8,15 @@
     left: 0;
     right: 0;
     height: var(--header-height);
-    background: var(--bg-card);
+    background: var(--bg-glass-strong);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     padding: 0 var(--spacing-md);
     z-index: 800;
+    transition: all var(--transition-normal);
 }
 
 @media (min-width: 769px) {
@@ -51,7 +54,10 @@
 .header-logo-text {
     font-size: 1.25rem;
     font-weight: 800;
-    color: var(--color-primary);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 @media (min-width: 769px) {
@@ -78,16 +84,17 @@
     font-weight: 600;
     border-radius: var(--border-radius-md);
     transition: all var(--transition-fast);
+    position: relative;
 }
 
 .header-nav-item:hover {
-    background: var(--bg-tertiary);
+    background: var(--bg-secondary);
     color: var(--text-primary);
 }
 
 .header-nav-item.active {
     color: var(--color-primary);
-    background: rgba(108, 92, 231, 0.08);
+    background: rgba(0, 184, 148, 0.08);
 }
 
 /* ─── Acciones del header ─── */
@@ -103,7 +110,7 @@
     gap: 0.375rem;
     font-size: 0.875rem;
     font-weight: 700;
-    color: var(--color-accent-alt);
+    color: var(--color-accent);
 }
 
 @media (min-width: 769px) {
@@ -118,24 +125,26 @@
     gap: 0.25rem;
     font-size: 0.875rem;
     font-weight: 700;
-    color: #FF6B6B;
+    color: #EF4444;
 }
 
 .header-avatar {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: var(--bg-tertiary);
+    background: var(--bg-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
     cursor: pointer;
-    transition: box-shadow var(--transition-fast);
+    transition: all var(--transition-fast);
+    border: 2px solid transparent;
 }
 
 .header-avatar:hover {
-    box-shadow: 0 0 0 3px var(--color-primary-light);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.15);
 }
 
 /* ─── Header para landing (público) ─── */
@@ -143,13 +152,17 @@
     background: transparent;
     border-bottom: none;
     position: absolute;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 .header-landing.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--bg-glass-strong);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     position: fixed;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
 }
 
 /* ─── Menú hamburguesa (mobile) ─── */

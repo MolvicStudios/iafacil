@@ -12,17 +12,19 @@ html {
     font-size: 16px;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    scroll-padding-top: var(--header-height);
 }
 
 body {
     font-family: var(--font-primary);
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--text-primary);
     background-color: var(--bg-primary);
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 img, picture, video, canvas, svg {
@@ -52,12 +54,38 @@ ul, ol {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 /* Focus visible para accesibilidad */
 :focus-visible {
     outline: 3px solid var(--color-primary);
-    outline-offset: 2px;
+    outline-offset: 3px;
+    border-radius: var(--border-radius-sm);
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+    background: rgba(0, 184, 148, 0.2);
+    color: var(--text-primary);
 }
 
 /* Eliminar animaciones para usuarios que las prefieren reducidas */

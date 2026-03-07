@@ -10,33 +10,33 @@
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(30px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
+    from { opacity: 0; transform: translateY(-30px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideInRight {
-    from { opacity: 0; transform: translateX(30px); }
+    from { opacity: 0; transform: translateX(40px); }
     to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-30px); }
+    from { opacity: 0; transform: translateX(-40px); }
     to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes scaleIn {
-    from { opacity: 0; transform: scale(0.9); }
+    from { opacity: 0; transform: scale(0.85); }
     to   { opacity: 1; transform: scale(1); }
 }
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-10px); }
+    50%      { transform: translateY(-12px); }
 }
 
 @keyframes pulse {
@@ -69,7 +69,7 @@
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-6px); }
+    50%      { transform: translateY(-8px); }
 }
 
 @keyframes progressFill {
@@ -81,36 +81,59 @@
     100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
 }
 
-/* ─── Clases de utilidad ─── */
-.animate-fadeIn      { animation: fadeIn 0.4s ease-out both; }
-.animate-fadeInUp    { animation: fadeInUp 0.5s ease-out both; }
-.animate-fadeInDown  { animation: fadeInDown 0.5s ease-out both; }
-.animate-slideInRight{ animation: slideInRight 0.5s ease-out both; }
-.animate-slideInLeft { animation: slideInLeft 0.5s ease-out both; }
-.animate-scaleIn     { animation: scaleIn 0.4s ease-out both; }
-.animate-bounce      { animation: bounce 0.6s ease both; }
-.animate-pulse       { animation: pulse 1.5s ease-in-out infinite; }
-.animate-shake       { animation: shake 0.4s ease both; }
-.animate-celebrate   { animation: celebrate 0.6s ease both; }
-.animate-spin        { animation: spin 1s linear infinite; }
-.animate-float       { animation: float 3s ease-in-out infinite; }
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-/* ─── Delays ─── */
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-4 { animation-delay: 0.4s; }
-.delay-5 { animation-delay: 0.5s; }
-.delay-6 { animation-delay: 0.6s; }
-.delay-7 { animation-delay: 0.7s; }
-.delay-8 { animation-delay: 0.8s; }
+@keyframes morphBlob {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    25%      { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    50%      { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+    75%      { border-radius: 60% 30% 60% 40% / 70% 40% 50% 60%; }
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.5; }
+    50%      { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(60px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Clases de utilidad ─── */
+.animate-fadeIn       { animation: fadeIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.animate-fadeInUp     { animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.animate-fadeInDown   { animation: fadeInDown 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.animate-slideInRight { animation: slideInRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.animate-slideInLeft  { animation: slideInLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.animate-scaleIn      { animation: scaleIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.animate-bounce       { animation: bounce 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animate-pulse        { animation: pulse 2s ease-in-out infinite; }
+.animate-shake        { animation: shake 0.4s ease both; }
+.animate-celebrate    { animation: celebrate 0.7s ease both; }
+.animate-spin         { animation: spin 1s linear infinite; }
+.animate-float        { animation: float 4s ease-in-out infinite; }
+
+/* ─── Delays (staggered) ─── */
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
 
 /* ─── Hover effects ─── */
 .hover-lift {
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 .hover-lift:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -118,33 +141,33 @@
     transition: transform var(--transition-normal);
 }
 .hover-scale:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
 .hover-glow {
     transition: box-shadow var(--transition-normal);
 }
 .hover-glow:hover {
-    box-shadow: 0 0 20px rgba(108, 92, 231, 0.3);
+    box-shadow: var(--shadow-glow-accent);
 }
 
 /* ─── Skeleton loading ─── */
 .skeleton {
     background: linear-gradient(
-        90deg,
+        110deg,
         var(--bg-secondary) 25%,
-        var(--bg-hover) 50%,
+        var(--bg-tertiary) 50%,
         var(--bg-secondary) 75%
     );
     background-size: 200% 100%;
-    animation: shimmer 1.5s ease-in-out infinite;
+    animation: shimmer 1.8s ease-in-out infinite;
     border-radius: var(--border-radius-sm);
 }
 
 .skeleton-text {
     height: 1rem;
     margin-bottom: 0.5rem;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .skeleton-text:last-child {

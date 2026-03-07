@@ -18,10 +18,10 @@
 .form-select,
 .form-textarea {
     width: 100%;
-    padding: 0.875rem 1rem;
+    padding: 0.875rem 1.125rem;
     font-size: 1rem;
     color: var(--text-primary);
-    background: var(--bg-secondary);
+    background: var(--bg-card);
     border: 2px solid var(--border-color);
     border-radius: var(--border-radius-md);
     transition: all var(--transition-fast);
@@ -31,7 +31,7 @@
 .form-input:hover,
 .form-select:hover,
 .form-textarea:hover {
-    border-color: var(--color-primary-light);
+    border-color: rgba(0, 184, 148, 0.4);
 }
 
 .form-input:focus,
@@ -39,7 +39,7 @@
 .form-textarea:focus {
     border-color: var(--color-primary);
     background: var(--bg-primary);
-    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.12);
+    box-shadow: 0 0 0 4px rgba(0, 184, 148, 0.1), 0 4px 16px rgba(0, 184, 148, 0.06);
 }
 
 .form-input::placeholder,

@@ -4,13 +4,16 @@
 
 /* ─── Welcome banner ─── */
 .dashboard-welcome {
-    background: linear-gradient(135deg, var(--color-primary) 0%, #0984E3 100%);
+    background: linear-gradient(135deg, #00B894 0%, #0984E3 50%, #6C5CE7 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 6s ease-in-out infinite;
     color: white;
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 184, 148, 0.2);
 }
 
 .dashboard-welcome::after {
@@ -18,9 +21,20 @@
     position: absolute;
     right: -30px;
     bottom: -30px;
-    width: 150px;
-    height: 150px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 180px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.dashboard-welcome::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
 }
 
@@ -61,13 +75,15 @@
     background: var(--bg-card);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-color);
     transition: all var(--transition-normal);
     cursor: pointer;
 }
 
 .continue-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(0, 184, 148, 0.2);
 }
 
 .continue-card-icon {
@@ -130,12 +146,26 @@
 
 /* ─── Streak card ─── */
 .streak-card {
-    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    background: linear-gradient(135deg, #EF4444 0%, #F97316 50%, #F59E0B 100%);
     color: white;
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-xl);
     text-align: center;
     margin-bottom: var(--spacing-xl);
+    box-shadow: 0 8px 30px rgba(239, 68, 68, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.streak-card::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
 }
 
 .streak-card .streak-number {
@@ -172,6 +202,7 @@
     background: var(--bg-card);
     border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
     cursor: pointer;
     transition: all var(--transition-fast);
     text-align: center;
@@ -180,8 +211,9 @@
 }
 
 .quick-action:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-md);
+    border-color: rgba(0, 184, 148, 0.2);
 }
 
 .quick-action .action-icon {
