@@ -1,8567 +1,977 @@
 /* ═══════════════════════════════════════════════════════════
    COURSE LESSON CONTENT - IAFACIL.HELP
-   Contenido de lecciones para todos los cursos
+   Contenido especializado por leccion - 25 cursos, 216 lecciones
+   Cada leccion con contenido unico, ejemplos y prompts reales
    ═══════════════════════════════════════════════════════════ */
 
 export const COURSE_LESSONS = {
+
+    /* ═══════════════════════════════════════════
+       CURSO 1: intro-ia
+       ¿Que es la Inteligencia Artificial?
+       Nivel: Principiante | 8 lecciones
+       ═══════════════════════════════════════════ */
     "intro-ia": {
         "que-es-ia": {
             "id": "que-es-ia",
-            "title": "Que es ia",
+            "title": "¿Que es la Inteligencia Artificial?",
             "moduleTitle": "Fundamentos de IA",
-            "durationMinutes": 10,
-            "summary": "En esta leccion trabajaras que es ia dentro del curso \"¿Qué es la Inteligencia Artificial?\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 12,
+            "summary": "La Inteligencia Artificial es la capacidad de las maquinas para realizar tareas que normalmente requieren inteligencia humana: entender lenguaje, reconocer imagenes, tomar decisiones y aprender de la experiencia. En esta leccion descubriras que hay detras de la IA que ya usas a diario sin darte cuenta, desde el autocompletado de tu movil hasta las recomendaciones de Netflix.",
             "objectives": [
-                "Comprender los fundamentos practicos de que es ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Definir que es la Inteligencia Artificial en terminos simples y distinguirla de la programacion tradicional.",
+                "Identificar al menos 5 ejemplos de IA que ya utilizas en tu vida cotidiana.",
+                "Comprender la diferencia entre IA estrecha (la que existe hoy) e IA general (la del futuro)."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ¿Qué es la Inteligencia Artificial?. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "¿Que es realmente la IA?",
+                    "content": "La Inteligencia Artificial es un campo de la informatica que busca crear sistemas capaces de realizar tareas que requieren inteligencia humana. A diferencia de un programa tradicional donde un programador escribe reglas exactas (si pasa X, haz Y), la IA aprende patrones a partir de datos. Imagina la diferencia: un programa clasico de spam tiene reglas fijas como 'si contiene la palabra gratis, es spam'. Un sistema de IA analiza miles de correos spam y aprende a detectar patrones por si mismo, incluso combinaciones que ningun humano habria programado."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Los tres ingredientes de la IA moderna",
+                    "content": "Toda IA moderna necesita tres cosas: datos (la materia prima de la que aprende), algoritmos (las recetas matematicas que procesan esos datos) y capacidad de computo (los ordenadores potentes que ejecutan los calculos). Cuando ChatGPT te responde, esta usando un modelo entrenado con billones de textos de internet (datos), arquitectura Transformer (algoritmo) y miles de GPUs trabajando en paralelo (computo). Esta combinacion es lo que ha permitido el salto espectacular de la IA en los ultimos anos."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "IA en tu dia a dia: ya la usas sin saberlo",
+                    "content": "Cada vez que desbloqueas tu movil con la cara usas IA de reconocimiento facial. Cuando Google Maps te sugiere la ruta mas rapida, usa IA para predecir el trafico. El corrector ortografico de tu teclado, las recomendaciones de Spotify, los filtros de Instagram, el traductor de Google... todo funciona con IA. La diferencia ahora es que herramientas como ChatGPT, Claude o Gemini te permiten interactuar directamente con la IA mediante texto, dandote un poder que antes solo tenian los programadores."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar que es ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Lo que la IA puede y no puede hacer (hoy)",
+                    "content": "La IA actual es increiblemente buena en tareas especificas: escribir textos, generar imagenes, traducir idiomas, analizar datos y reconocer patrones. Pero no piensa, no siente, no tiene conciencia ni comprension real del mundo. Cuando ChatGPT escribe un poema, no siente emociones; predice la siguiente palabra mas probable basandose en patrones estadisticos. Entender esta distincion es fundamental para usar la IA de forma efectiva y no atribuirle capacidades que no tiene."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica que es ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Abre tu movil y haz una lista de todas las apps que usas a diario. Para cada una, investiga si utiliza IA y para que. Objetivo: identificar al menos 10 usos de IA en tu vida cotidiana que no conocias.",
+            "deliverable": "Lista documentada de 10+ aplicaciones con IA que usas, explicando que tipo de IA emplea cada una y para que sirve.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Se definir IA en mis propias palabras sin usar jerga tecnica.",
+                "Puedo explicar la diferencia entre programacion tradicional e IA.",
+                "Identifique al menos 10 usos de IA en mi vida diaria.",
+                "Entiendo que la IA actual no piensa ni tiene conciencia."
             ],
-            "promptStarter": "Actua como especialista en ¿Qué es la Inteligencia Artificial?. Necesito ayuda con \"Que es ia\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Actua como un divulgador de tecnologia que explica conceptos complejos de forma simple. Explicame que es la Inteligencia Artificial como si tuviera 10 anos, usando analogias con cosas cotidianas. Incluye 5 ejemplos de IA que un nino usaria sin saberlo.",
+            "promptExamples": [
+                {
+                    "title": "Entender IA con analogias",
+                    "prompt": "Explicame la diferencia entre un programa informatico tradicional y la inteligencia artificial usando la analogia de aprender a cocinar. El programa seria como seguir una receta al pie de la letra, y la IA seria como..."
+                },
+                {
+                    "title": "Detectar IA oculta",
+                    "prompt": "Soy un usuario comun de smartphone. Analiza estas apps que uso a diario y dime exactamente donde hay IA funcionando sin que yo lo sepa: WhatsApp, Google Maps, Instagram, Spotify, Gmail, TikTok. Para cada una, explica que tipo de IA usa y que hace."
+                },
+                {
+                    "title": "Desmitificar la IA",
+                    "prompt": "Dame una lista de 5 mitos comunes sobre la Inteligencia Artificial y desmiente cada uno con hechos reales y explicaciones simples. Formato: Mito → Realidad → Por que importa saberlo."
+                }
+            ]
         },
         "historia-ia": {
             "id": "historia-ia",
-            "title": "Historia ia",
+            "title": "Historia de la IA: De Turing a ChatGPT",
             "moduleTitle": "Fundamentos de IA",
-            "durationMinutes": 11,
-            "summary": "En esta leccion trabajaras historia ia dentro del curso \"¿Qué es la Inteligencia Artificial?\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 15,
+            "summary": "La IA no nacio con ChatGPT. Su historia abarca mas de 70 anos, desde Alan Turing preguntandose si las maquinas pueden pensar hasta el lanzamiento de GPT-4. Conocer esta historia te ayudara a entender por que la IA funciona como funciona hoy y hacia donde va.",
             "objectives": [
-                "Comprender los fundamentos practicos de historia ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Conocer los hitos fundamentales en la historia de la IA desde 1950 hasta hoy.",
+                "Entender por que hubo 'inviernos de la IA' (periodos donde se freno su desarrollo).",
+                "Comprender que cambio tecnologico provoco la explosion actual de la IA generativa."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ¿Qué es la Inteligencia Artificial?. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "1950-1970: El nacimiento y los suenos",
+                    "content": "En 1950, Alan Turing publico su famoso articulo '¿Pueden pensar las maquinas?' y propuso el Test de Turing: si no puedes distinguir si hablas con una maquina o un humano, la maquina es inteligente. En 1956, en la conferencia de Dartmouth, se acuno oficialmente el termino 'Inteligencia Artificial'. Los primeros investigadores eran increiblemente optimistas: predijeron que en 20 anos tendriamos maquinas tan inteligentes como humanos. Se crearon programas que jugaban ajedrez y resolvian problemas logicos, pero pronto descubrieron que el lenguaje humano y el sentido comun eran mucho mas dificiles de lo esperado."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "1970-2000: Los inviernos y la perseverancia",
+                    "content": "Cuando las promesas no se cumplieron, llego el primer 'invierno de la IA' (anos 70): los gobiernos cortaron la financiacion porque la tecnologia no cumplia expectativas. En los 80 hubo un renacer con los 'sistemas expertos' (programas con reglas escritas por humanos), pero volvieron a decepcionar. El segundo invierno llego en los 90. Sin embargo, durante estos periodos de bajo perfil, investigadores persistentes desarrollaron las bases matematicas que hoy hacen posible ChatGPT: las redes neuronales artificiales, inspiradas en como funcionan las neuronas del cerebro humano."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "2010-2022: Deep Learning y la revolucion silenciosa",
+                    "content": "En 2012, una red neuronal llamada AlexNet arraso en un concurso de reconocimiento de imagenes, demostrando que el Deep Learning funcionaba. Google, Facebook y Amazon empezaron a invertir miles de millones. En 2017, Google publico el paper 'Attention Is All You Need', presentando la arquitectura Transformer, la base de GPT, BERT y todos los modelos de lenguaje actuales. La clave fue combinar tres factores que no existian antes: internet genero cantidades masivas de datos, las GPUs (tarjetas graficas) aportaron la potencia de calculo necesaria, y los algoritmos Transformer supieron aprovechar ambos."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar historia ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "2022-Hoy: La era de la IA generativa",
+                    "content": "El 30 de noviembre de 2022, OpenAI lanzo ChatGPT y todo cambio. En 5 dias alcanzo un millon de usuarios, el crecimiento mas rapido de la historia. Despues vinieron GPT-4, Claude de Anthropic, Gemini de Google, Llama de Meta, DALL-E, Midjourney y Stable Diffusion. Por primera vez, cualquier persona sin conocimientos tecnicos puede crear textos, imagenes, musica y video con IA. Estamos viviendo el momento mas transformador de la tecnologia desde la aparicion de internet, y apenas estamos en el principio."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica historia ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Crea una linea temporal visual de la historia de la IA pidiendo a ChatGPT que te la genere en formato de tabla. Luego pidele que anada un evento personal para cada decada: algo que existia en tu vida gracias a la IA de esa epoca.",
+            "deliverable": "Linea temporal de la IA con al menos 10 hitos clave, cada uno explicado en una frase y conectado con un impacto practico en la vida cotidiana.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Puedo nombrar al menos 5 hitos clave en la historia de la IA.",
+                "Entiendo que son los 'inviernos de la IA' y por que ocurrieron.",
+                "Se explicar que es la arquitectura Transformer y por que importa.",
+                "Comprendo por que 2022 fue el punto de inflexion con ChatGPT."
             ],
-            "promptStarter": "Actua como especialista en ¿Qué es la Inteligencia Artificial?. Necesito ayuda con \"Historia ia\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Actua como un historiador de la tecnologia. Creame una linea temporal interactiva de la historia de la Inteligencia Artificial desde 1950 hasta 2025, con los 15 hitos mas importantes. Para cada hito incluye: ano, evento, por que fue importante, y como afecta a la IA que usamos hoy. Formato tabla.",
+            "promptExamples": [
+                {
+                    "title": "Comparar eras de IA",
+                    "prompt": "Compara la IA de los anos 90 (sistemas expertos) con la IA actual (modelos de lenguaje). Que podia hacer cada una, que no podia, y cual fue el cambio tecnologico clave que permitio el salto. Explicalo como una conversacion entre un investigador de 1995 y uno de 2025."
+                },
+                {
+                    "title": "Entender Transformers sin tecnicismos",
+                    "prompt": "Explicame la arquitectura Transformer (la base de ChatGPT) como si fuera una cadena de montaje en una fabrica. Que entra, que hace cada estacion de trabajo, y que sale al final. Sin formulas matematicas, solo analogias."
+                },
+                {
+                    "title": "Velocidad del cambio",
+                    "prompt": "Creame una tabla comparativa que muestre cuanto tardo cada tecnologia en alcanzar 100 millones de usuarios: telefono, internet, Facebook, Instagram, ChatGPT. Anade una columna explicando que dice esto sobre la velocidad de adopcion de la IA."
+                }
+            ]
         },
         "tipos-ia": {
             "id": "tipos-ia",
-            "title": "Tipos ia",
+            "title": "Tipos de Inteligencia Artificial",
             "moduleTitle": "Fundamentos de IA",
             "durationMinutes": 12,
-            "summary": "En esta leccion trabajaras tipos ia dentro del curso \"¿Qué es la Inteligencia Artificial?\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "summary": "No toda la IA es igual. Existen diferentes tipos segun su capacidad, su funcion y como aprenden. Entender estas categorias te ayudara a elegir la herramienta correcta para cada tarea y a no esperar de la IA mas de lo que puede ofrecer hoy.",
             "objectives": [
-                "Comprender los fundamentos practicos de tipos ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Distinguir entre IA estrecha, IA general y superinteligencia.",
+                "Conocer los principales enfoques de IA: supervisado, no supervisado y por refuerzo.",
+                "Clasificar las herramientas de IA actuales segun su tipo y especialidad."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ¿Qué es la Inteligencia Artificial?. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "IA estrecha vs. IA general: donde estamos realmente",
+                    "content": "Toda la IA que existe hoy es IA estrecha (ANI): sistemas excelentes en una tarea especifica pero incapaces de transferir ese conocimiento a otra area. ChatGPT es brillante generando texto pero no puede conducir un coche. DALL-E crea imagenes impresionantes pero no entiende lo que dibuja. La IA General (AGI) seria una maquina que aprende y razona como un humano en cualquier area, y aun no existe. La superinteligencia (ASI), una IA que supere al humano en todo, es especulacion a largo plazo. Cuando usas herramientas de IA hoy, recuerda: son especialistas muy capaces, no generalistas."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Como aprende la IA: tres caminos diferentes",
+                    "content": "El aprendizaje supervisado es como ensenar con ejemplos etiquetados: le muestras miles de fotos de gatos diciendo 'esto es un gato' hasta que aprende a reconocerlos. Gmail detecta spam asi. El aprendizaje no supervisado busca patrones ocultos en datos sin etiquetar: Spotify agrupa canciones similares sin que nadie le diga que generos existen. El aprendizaje por refuerzo aprende por prueba y error con recompensas: asi se entreno AlphaGo para vencer al campeon mundial de Go. Los modelos de lenguaje como GPT usan principalmente aprendizaje auto-supervisado, prediciendo la siguiente palabra."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Mapa de herramientas de IA por tipo",
+                    "content": "Las IAs de texto (ChatGPT, Claude, Gemini) generan y comprenden lenguaje escrito. Las IAs de imagen (DALL-E, Midjourney, Stable Diffusion) crean graficos a partir de descripciones. Las IAs de audio (Whisper, ElevenLabs, Suno) transcriben, generan voz y crean musica. Las IAs de video (Runway, Pika, HeyGen) producen y editan video. Las IAs de codigo (GitHub Copilot, Cursor) ayudan a programar. Y las IAs multimodales (GPT-4o, Gemini) combinan varias capacidades. Cada tipo tiene fortalezas distintas y la clave esta en saber que herramienta usar para cada necesidad."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar tipos ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Modelos propietarios vs. codigo abierto",
+                    "content": "Los modelos propietarios (GPT-4 de OpenAI, Claude de Anthropic, Gemini de Google) son de pago, ofrecen alto rendimiento y se acceden via API o interfaz web. Los modelos de codigo abierto (Llama de Meta, Mistral, Stable Diffusion) son gratuitos, modificables y se pueden ejecutar en tu propio ordenador. La eleccion depende de tus necesidades: los propietarios son mas faciles de usar y suelen ser mas potentes, mientras que los de codigo abierto ofrecen privacidad y personalizacion. Para empezar, recomendamos los propietarios por su facilidad de uso."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica tipos ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Crea una tabla comparativa de al menos 8 herramientas de IA que conozcas, clasificandolas por tipo (texto, imagen, audio, video, codigo), modelo de negocio (gratis/pago), y para que las usarias tu personalmente.",
+            "deliverable": "Tabla comparativa de herramientas de IA clasificadas por tipo, con al menos una herramienta recomendada para cada categoria y un caso de uso personal.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Distingo claramente entre IA estrecha, general y superinteligencia.",
+                "Puedo explicar los tres tipos de aprendizaje automatico con ejemplos.",
+                "Conozco al menos 2 herramientas de IA para cada categoria (texto, imagen, audio).",
+                "Entiendo la diferencia entre modelos propietarios y de codigo abierto."
             ],
-            "promptStarter": "Actua como especialista en ¿Qué es la Inteligencia Artificial?. Necesito ayuda con \"Tipos ia\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Actua como un consultor de tecnologia. Necesito elegir herramientas de IA para mi trabajo. Creame una guia comparativa de las mejores herramientas de IA en 2025 organizadas por categoria: texto, imagen, audio, video y codigo. Para cada una incluye: nombre, que hace, precio, nivel de dificultad y mejor caso de uso. Formato tabla.",
+            "promptExamples": [
+                {
+                    "title": "Elegir la IA correcta",
+                    "prompt": "Tengo estas tareas pendientes en mi trabajo: 1) Escribir emails profesionales, 2) Crear graficos para redes sociales, 3) Transcribir reuniones, 4) Analizar datos de ventas. Para cada tarea, recomiendame la mejor herramienta de IA (gratuita y de pago), explicando por que."
+                },
+                {
+                    "title": "Entender aprendizaje automatico",
+                    "prompt": "Explicame los tres tipos de aprendizaje automatico (supervisado, no supervisado y por refuerzo) usando la analogia de un nino aprendiendo a andar en bicicleta. Hazlo visual y facil de recordar."
+                },
+                {
+                    "title": "Codigo abierto vs propietario",
+                    "prompt": "Soy un emprendedor con presupuesto limitado. Comparame las opciones de IA gratuitas/abiertas vs de pago para: generacion de texto, imagenes y transcripcion. Incluye pros, contras y recomendacion honesta."
+                }
+            ]
         },
         "ia-en-tu-vida": {
             "id": "ia-en-tu-vida",
-            "title": "Ia en tu vida",
+            "title": "La IA en tu vida cotidiana",
             "moduleTitle": "Fundamentos de IA",
-            "durationMinutes": 13,
-            "summary": "En esta leccion trabajaras ia en tu vida dentro del curso \"¿Qué es la Inteligencia Artificial?\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 10,
+            "summary": "La IA no es solo ChatGPT. Esta presente en cada momento de tu dia: desde que tu alarma inteligente decide cuando despertarte hasta que Netflix te sugiere que ver antes de dormir. En esta leccion haras un recorrido por un dia tipico para descubrir toda la IA invisible que ya te rodea.",
             "objectives": [
-                "Comprender los fundamentos practicos de ia en tu vida en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Mapear al menos 15 puntos de contacto con IA en un dia normal.",
+                "Entender como la IA personaliza tu experiencia digital sin que lo notes.",
+                "Reflexionar sobre las implicaciones de depender de algoritmos de IA."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ¿Qué es la Inteligencia Artificial?. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Tu manana con IA",
+                    "content": "Tu despertador inteligente analiza tus ciclos de sueno para despertarte en el momento optimo. Al revisar el movil, el algoritmo de tu email ya filtro el spam y priorizo los mensajes importantes. El teclado predictivo te ahorra tiempo escribiendo mensajes. Google Maps calcula tu ruta usando IA que predice el trafico en tiempo real combinando datos historicos, accidentes reportados y velocidad de otros conductores. Incluso el cafe de tu cafetera inteligente se preparo a la hora que la IA aprendio que lo prefieres."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Tu jornada laboral asistida por IA",
+                    "content": "En el trabajo, la IA esta en todas partes aunque no la veas. El corrector gramatical de Word o Google Docs usa modelos de lenguaje. Las videollamadas de Zoom usan IA para cancelar el ruido de fondo y mejorar tu imagen. Los buscadores internos de tu empresa priorizan resultados con IA. Si trabajas con Excel, las sugerencias de formulas y graficos las genera IA. Y si usas algun CRM como Salesforce, los puntajes de leads y predicciones de ventas son pura inteligencia artificial."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Tu tiempo libre: entretenimiento algoritmico",
+                    "content": "Spotify crea tu playlist Discover Weekly analizando tus gustos y comparandolos con millones de usuarios similares. Netflix selecciona que miniatura mostrarte de una pelicula segun tu historial (si te gustan las comedias romanticas, te muestra la escena romantica; si prefieres accion, la escena de accion). TikTok e Instagram usan IA para decidir que contenido aparece en tu feed. Los videojuegos modernos usan IA para adaptar la dificultad a tu nivel. Incluso los filtros de fotos que usas son redes neuronales procesando tu imagen en tiempo real."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar ia en tu vida, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Reflexion: ¿Comodidad o dependencia?",
+                    "content": "Esta omnipresencia de la IA tiene beneficios enormes: ahorra tiempo, personaliza experiencias y aumenta tu productividad. Pero tambien plantea preguntas importantes. Los algoritmos crean 'burbujas de filtro' mostrandote solo lo que quieres ver. Tu atencion se ha convertido en una mercancia que la IA optimiza para las plataformas. Conocer donde esta la IA te da poder: puedes decidir conscientemente que automatizaciones te benefician y cuales te limitan. Eso es ser un usuario inteligente de la IA."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica ia en tu vida a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Documenta un dia completo anotando cada vez que interactuas con IA (directa o indirectamente). Usa la tecnica de diario: desde que te levantas hasta que te acuestas, apunta app/dispositivo, tipo de IA y que beneficio te da.",
+            "deliverable": "Diario de un dia con IA: documento con al menos 15 interacciones con IA identificadas, clasificadas por momento del dia, tipo de IA y nivel de utilidad.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Identifique al menos 15 interacciones con IA en mi dia a dia.",
+                "Puedo explicar como la IA personaliza mi experiencia en redes sociales.",
+                "Reflexione sobre que automatizaciones me benefician y cuales no.",
+                "Comprendo el concepto de 'burbuja de filtro' y como afecta mi informacion."
             ],
-            "promptStarter": "Actua como especialista en ¿Qué es la Inteligencia Artificial?. Necesito ayuda con \"Ia en tu vida\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Actua como un investigador de tecnologia cotidiana. Hazme un recorrido hora por hora de un dia tipico de una persona promedio en 2025, senalando CADA punto donde interactua con IA sin saberlo. Desde las 7:00 hasta las 23:00. Para cada momento incluye: hora, actividad, IA involucrada y que hace exactamente esa IA.",
+            "promptExamples": [
+                {
+                    "title": "Auditar tu huella de IA",
+                    "prompt": "Estas son las apps que tengo instaladas en mi movil: [lista tus apps]. Analiza cada una y dime: 1) Si usa IA, 2) Que tipo de IA, 3) Que datos mios necesita para funcionar, 4) Que alternativa sin IA existe. Formato tabla."
+                },
+                {
+                    "title": "Burbuja de filtro personal",
+                    "prompt": "Explicame como los algoritmos de recomendacion de YouTube, TikTok e Instagram crean una burbuja de filtro personalizada para mi. Dame 5 estrategias practicas para 'romper la burbuja' y exponerme a contenido diverso."
+                },
+                {
+                    "title": "IA invisible en el hogar",
+                    "prompt": "Tengo estos dispositivos en casa: movil, smart TV, asistente de voz, router WiFi, aspiradora robot. Creame un informe de toda la IA que funciona en mi hogar: que hace, que datos recopila y como me beneficia. Se honesto sobre los riesgos de privacidad tambien."
+                }
+            ]
         },
         "que-es-IA-generativa": {
             "id": "que-es-IA-generativa",
-            "title": "Que es IA generativa",
+            "title": "¿Que es la IA Generativa?",
             "moduleTitle": "IA Generativa",
             "durationMinutes": 14,
-            "summary": "En esta leccion trabajaras que es ia generativa dentro del curso \"¿Qué es la Inteligencia Artificial?\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "summary": "La IA Generativa es la rama de la inteligencia artificial capaz de crear contenido nuevo: textos, imagenes, musica, video y codigo. Es lo que diferencia a ChatGPT de una busqueda en Google. Esta leccion te ensenara como funciona esta tecnologia revolucionaria y por que ha cambiado las reglas del juego.",
             "objectives": [
-                "Comprender los fundamentos practicos de que es ia generativa en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Definir IA generativa y diferenciarla de la IA discriminativa/analitica.",
+                "Entender el concepto basico de como un modelo generativo crea contenido nuevo.",
+                "Conocer las principales aplicaciones y limitaciones de la IA generativa."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ¿Qué es la Inteligencia Artificial?. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Generativa vs. discriminativa: crear vs. clasificar",
+                    "content": "Imagina dos tipos de estudiantes de arte. El primero puede mirar un cuadro y decirte si es de Picasso o Monet (IA discriminativa/analitica). El segundo puede pintar un cuadro nuevo al estilo de Picasso (IA generativa). Antes de 2022, la mayoria de la IA comercial era discriminativa: clasificaba emails como spam, detectaba fraudes o reconocia caras. La IA generativa da un salto cualitativo: no solo analiza, sino que crea contenido original. ChatGPT genera textos, DALL-E genera imagenes, Suno genera musica. Todo desde cero, a partir de tus instrucciones."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Como crea contenido la IA: la magia de la prediccion",
+                    "content": "El secreto de la IA generativa es sorprendentemente simple: prediccion estadistica a gran escala. Cuando ChatGPT escribe, no 'piensa' en que decir; predice cual es la siguiente palabra mas probable dado todo lo anterior. Es como un autocompletado superinteligente entrenado con todo internet. DALL-E funciona diferente: parte de ruido aleatorio (como nieve de television) y va eliminando ruido paso a paso, guiado por tu descripcion, hasta formar una imagen coherente. Este proceso se llama difusion. Ambos enfoques producen resultados que parecen creativos pero son fundamentalmente predicciones matematicas sofisticadas."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Que puede crear la IA generativa hoy",
+                    "content": "Texto: articulos, emails, codigo, guiones, poesia, analisis, traducciones (ChatGPT, Claude, Gemini). Imagenes: fotografias, ilustraciones, logos, arte conceptual desde descripciones textuales (DALL-E, Midjourney, Stable Diffusion). Audio: musica completa, voces sinteticas, podcast (Suno, ElevenLabs, Murf). Video: clips cortos, avatares parlantes, animaciones (Runway, Pika, HeyGen). Codigo: aplicaciones completas, scripts, sitios web (GitHub Copilot, Cursor, Replit). La tendencia es hacia modelos multimodales que combinan todas estas capacidades en uno solo, como GPT-4o."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar que es ia generativa, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Limitaciones que debes conocer",
+                    "content": "La IA generativa 'alucina': inventa datos falsos con total confianza. No tiene acceso a informacion despues de su fecha de entrenamiento (salvo que navegue por internet). Genera contenido basado en patrones estadisticos, no en comprension real, asi que puede ser plausible pero incorrecto. El contenido generado puede contener sesgos presentes en los datos de entrenamiento. Y aunque genera contenido 'nuevo', en realidad recombina patrones existentes, lo que plantea debates sobre originalidad y derechos de autor. Conocer estas limitaciones es clave para usar la IA de forma responsable y efectiva."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica que es ia generativa a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Genera el mismo contenido con tres herramientas distintas de IA generativa (por ejemplo, pide a ChatGPT, Gemini y Claude que escriban un email profesional con las mismas instrucciones). Compara los resultados y analiza las diferencias en estilo, calidad y precision.",
+            "deliverable": "Documento comparativo con los tres resultados generados, un analisis de diferencias y una conclusion sobre que herramienta prefieres para ese tipo de tarea.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Se explicar la diferencia entre IA generativa y discriminativa.",
+                "Entiendo como ChatGPT genera texto (prediccion de siguiente palabra).",
+                "Conozco al menos una herramienta de IA generativa para cada tipo de contenido.",
+                "Puedo nombrar 3 limitaciones importantes de la IA generativa."
             ],
-            "promptStarter": "Actua como especialista en ¿Qué es la Inteligencia Artificial?. Necesito ayuda con \"Que es IA generativa\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Explicame como funciona la IA generativa como si fuera una fabrica. El texto que le doy es la orden de trabajo, y el resultado es el producto final. Describeme paso a paso que pasa dentro de la fabrica desde que recibe mi orden hasta que entrega el resultado. Usa la analogia completa con departamentos, trabajadores y control de calidad.",
+            "promptExamples": [
+                {
+                    "title": "Comparar IAs generativas",
+                    "prompt": "Necesito crear un post de LinkedIn anunciando un nuevo producto. Escribe 3 versiones diferentes: una formal y corporativa, una casual y cercana, y una creativa con storytelling. Cada version debe tener maximo 150 palabras y un call-to-action."
+                },
+                {
+                    "title": "Entender las alucinaciones",
+                    "prompt": "Dame 5 ejemplos reales de situaciones donde la IA generativa puede alucinar (inventar informacion falsa) y explicame para cada caso: por que ocurre, como detectarlo, y como prevenirlo con mejor prompting."
+                },
+                {
+                    "title": "IA generativa para principiantes",
+                    "prompt": "Soy completamente nuevo en IA generativa. Creame un plan de 7 dias (una actividad por dia) para probar diferentes tipos de IA generativa: texto, imagen, audio, video y codigo. Para cada dia incluye: herramienta gratuita, que probar, y un prompt de ejemplo."
+                }
+            ]
         },
         "modelos-lenguaje": {
             "id": "modelos-lenguaje",
-            "title": "Modelos lenguaje",
+            "title": "Modelos de Lenguaje: GPT, Claude, Gemini y mas",
             "moduleTitle": "IA Generativa",
             "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras modelos lenguaje dentro del curso \"¿Qué es la Inteligencia Artificial?\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "summary": "Los modelos de lenguaje grande (LLM) son el motor detras de ChatGPT, Claude y Gemini. Entender que son, como funcionan y en que se diferencian te permitira elegir el mejor para cada tarea y sacarles el maximo partido.",
             "objectives": [
-                "Comprender los fundamentos practicos de modelos lenguaje en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Comprender que es un LLM y como genera lenguaje natural.",
+                "Comparar los principales modelos de lenguaje del mercado y sus fortalezas.",
+                "Saber elegir el modelo correcto segun el tipo de tarea."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ¿Qué es la Inteligencia Artificial?. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "¿Que es un modelo de lenguaje grande (LLM)?",
+                    "content": "Un LLM es una red neuronal gigantesca entrenada con enormes cantidades de texto para entender y generar lenguaje humano. GPT-4 tiene mas de un billon de parametros (valores numericos ajustados durante el entrenamiento). Estos parametros codifican patrones del lenguaje: gramatica, hechos, estilos de escritura y razonamiento logico. Cuando le escribes un prompt, el modelo procesa cada palabra, aplica atencion a las partes relevantes del contexto y genera la respuesta mas probable. Es como un lector que ha leido todo internet y puede escribir sobre cualquier tema imitando patrones aprendidos."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Los grandes modelos de 2025",
+                    "content": "GPT-4/4o de OpenAI: el mas versatil, excelente en razonamiento, codigo y creatividad; accesible via ChatGPT. Claude 3.5/4 de Anthropic: destaca en textos largos, analisis de documentos y seguir instrucciones complejas; conocido por ser mas preciso y menos dado a alucinar. Gemini de Google: potente en multimodalidad e integracion con servicios Google; buena opcion para busqueda y datos. Llama de Meta: el mejor modelo de codigo abierto, gratuito y modificable. Mistral: modelo europeo ligero con excelente rendimiento. Cada uno tiene personalidad y fortalezas propias."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Diferencias practicas que importan",
+                    "content": "Ventana de contexto: la cantidad de texto que el modelo puede recordar en una conversacion. Claude lidera con 200K tokens (un libro completo), GPT-4 ofrece 128K y Gemini hasta 1M tokens. Conocimiento de corte: cada modelo tiene una fecha limite de conocimiento. Velocidad: modelos mas pequenos como GPT-4o mini responden mas rapido pero con menos calidad. Precio: varia enormidad entre modelos; ChatGPT Free usa GPT-4o mini, mientras GPT-4o requiere suscripcion. Para la mayoria de tareas cotidianas, cualquier modelo top funciona bien; las diferencias importan en tareas especializadas."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar modelos lenguaje, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Elegir el modelo segun la tarea",
+                    "content": "Para escritura creativa y brainstorming: ChatGPT o Claude. Para analisis de documentos largos: Claude (por su ventana de contexto). Para busqueda de informacion actualizada: Gemini con Google Search. Para programacion: GPT-4 o Claude. Para tareas que requieren privacidad: Llama (ejecutable localmente). Para presupuesto limitado: ChatGPT free, Gemini free o Perplexity. La mejor estrategia es conocer 2-3 modelos y saber cuando usar cada uno, en lugar de casarse con uno solo."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica modelos lenguaje a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Haz la misma pregunta compleja a ChatGPT, Claude y Gemini (ejemplo: 'Explicame la inflacion y como afecta mis ahorros'). Compara las respuestas evaluando: precision, facilidad de lectura, ejemplos proporcionados y utilidad practica.",
+            "deliverable": "Tabla comparativa de los tres modelos con evaluacion en 5 criterios (precision, claridad, utilidad, creatividad, longitud) puntuados del 1 al 5, mas una conclusion personal.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Puedo explicar que es un LLM en mis propias palabras.",
+                "Conozco al menos 5 modelos de lenguaje y sus diferencias clave.",
+                "Se elegir el modelo adecuado segun el tipo de tarea.",
+                "He probado y comparado al menos 2 modelos diferentes."
             ],
-            "promptStarter": "Actua como especialista en ¿Qué es la Inteligencia Artificial?. Necesito ayuda con \"Modelos lenguaje\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Actua como un analista de tecnologia. Hazme una comparativa honesta y actualizada de los 5 mejores modelos de lenguaje de IA en 2025: GPT-4o, Claude 3.5, Gemini, Llama 3, Mistral. Para cada uno incluye: creador, precio, ventana de contexto, fortalezas, debilidades y mejor caso de uso. Formato tabla comparativa.",
+            "promptExamples": [
+                {
+                    "title": "Test de capacidades",
+                    "prompt": "Voy a hacerte un test de capacidades. Resuelve estas 5 tareas y sere honesto sobre la calidad: 1) Resume este parrafo en una frase, 2) Traduce al ingles formal, 3) Encuentra el error logico en este argumento: [argumento], 4) Escribe un haiku sobre tecnologia, 5) Explica blockchain a un nino de 8 anos."
+                },
+                {
+                    "title": "Guia de seleccion de modelo",
+                    "prompt": "Soy profesional de marketing y necesito IA para: copywriting, analisis de datos de campanas, crear imagenes para redes, generar reportes. Con un presupuesto de 30€/mes, recomiendame las mejores suscripciones de IA combinadas."
+                },
+                {
+                    "title": "Entender tokens y contexto",
+                    "prompt": "Explicame que son los 'tokens' en un LLM como si fuera un sistema de creditos en un videojuego. Como se cuentan, por que importan, cuantos tokens tiene una pagina de texto y como afecta a mis conversaciones con ChatGPT."
+                }
+            ]
         },
         "modelos-imagen": {
             "id": "modelos-imagen",
-            "title": "Modelos imagen",
+            "title": "Modelos de generacion de imagenes",
             "moduleTitle": "IA Generativa",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras modelos imagen dentro del curso \"¿Qué es la Inteligencia Artificial?\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 14,
+            "summary": "DALL-E, Midjourney y Stable Diffusion han democratizado la creacion visual. En esta leccion entenderas como estos modelos convierten texto en imagenes, que diferencia a cada uno y como elegir el adecuado para tu proyecto.",
             "objectives": [
-                "Comprender los fundamentos practicos de modelos imagen en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Entender el mecanismo basico de difusion que usan los generadores de imagenes.",
+                "Comparar DALL-E, Midjourney, Stable Diffusion y otras herramientas.",
+                "Escribir un primer prompt efectivo para generar imagenes con IA."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ¿Qué es la Inteligencia Artificial?. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Como la IA convierte texto en imagenes",
+                    "content": "Los modelos de imagen actuales usan un proceso llamado difusion. Imagina que tomas una foto y le vas anadiendo ruido aleatorio hasta que queda como nieve de television. El modelo aprende a hacer el proceso inverso: partir del ruido y eliminar gradualmente hasta formar una imagen coherente. Tu prompt de texto guia este proceso de eliminacion de ruido, indicandole al modelo que debe aparecer en la imagen final. Es como un escultor que parte de un bloque de marmol (ruido) y va quitando material guiado por tu descripcion hasta revelar la figura deseada."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "DALL-E: la opcion integrada de ChatGPT",
+                    "content": "DALL-E (de OpenAI) esta integrado directamente en ChatGPT Plus, lo que lo hace el mas accesible. Genera imagenes fotorealistas y artisticas con buena comprension del lenguaje en espanol. Destaca en seguir instrucciones complejas y generar texto dentro de imagenes (algo que otros modelos hacen mal). Limitaciones: menor control sobre parametros artisticos que Midjourney, y la version gratuita tiene generaciones limitadas. Es ideal para quien ya usa ChatGPT y necesita imagenes rapidas sin salir de la herramienta."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Midjourney: el rey de la estetica",
+                    "content": "Midjourney produce las imagenes mas esteticas y artisticas del mercado. Sus resultados tienen un estilo visual impactante incluso con prompts simples. Funciona a traves de Discord (que puede resultar confuso al principio) y tiene varias versiones (la V6 es la mas reciente). Ofrece parametros avanzados para controlar el estilo, la composicion y la aleatoriedad. Es el favorito de disenadores, artistas y creadores de contenido visual. Su principal limitacion es que no tiene plan gratuito y requiere usar Discord."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar modelos imagen, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Stable Diffusion y alternativas gratuitas",
+                    "content": "Stable Diffusion es el modelo de codigo abierto mas popular: gratuito, se puede ejecutar en tu propio ordenador y es completamente personalizable. Plataformas como Leonardo.ai, Playground y Adobe Firefly lo hacen accesible sin necesidad tecnica. Flux (de Black Forest Labs) es otra alternativa de codigo abierto con excelente calidad. Ideogram destaca en generar texto dentro de imagenes. Para empezar gratis, Leonardo.ai y Bing Image Creator (que usa DALL-E) son las mejores opciones. La clave esta en experimentar con varias para descubrir cual se adapta mejor a tu estilo."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica modelos imagen a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Genera la misma imagen usando tres herramientas diferentes (DALL-E en ChatGPT, Leonardo.ai y Bing Image Creator) con el mismo prompt: 'Una cafeteria acogedora en un dia lluvioso, estilo acuarela'. Compara calidad, estilo y fidelidad al prompt.",
+            "deliverable": "Coleccion de 3 imagenes generadas con el mismo prompt en diferentes herramientas, con analisis comparativo de calidad, estilo y facilidad de uso.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Entiendo el concepto basico de difusion en generacion de imagenes.",
+                "Conozco las diferencias entre DALL-E, Midjourney y Stable Diffusion.",
+                "He generado mi primera imagen con IA usando un prompt descriptivo.",
+                "Se que herramienta gratuita usar para generar imagenes."
             ],
-            "promptStarter": "Actua como especialista en ¿Qué es la Inteligencia Artificial?. Necesito ayuda con \"Modelos imagen\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Genera una imagen de un espacio de trabajo moderno y minimalista con un ordenador portatil, una taza de cafe humeante, una planta pequena y luz natural entrando por una ventana. Estilo fotografia editorial, colores calidos, alta resolucion.",
+            "promptExamples": [
+                {
+                    "title": "Prompt basico de imagen",
+                    "prompt": "Un gato naranja dormido sobre una pila de libros antiguos en una biblioteca victoriana. Luz de velas, atmosfera acogedora, estilo pintura al oleo clasica."
+                },
+                {
+                    "title": "Imagen para negocio",
+                    "prompt": "Crea una fotografia profesional de producto: un frasco de crema facial sobre una superficie de marmol blanco con ramitas de lavanda al lado. Fondo minimalista, iluminacion de estudio suave, estilo revista de belleza."
+                },
+                {
+                    "title": "Estilo especifico",
+                    "prompt": "Un paisaje urbano futurista de una ciudad con jardines verticales y coches voladores, al atardecer. Estilo de ilustracion de ciencia ficcion retro de los anos 80, colores neon pastel, perspectiva gran angular."
+                }
+            ]
         },
         "futuro-ia": {
             "id": "futuro-ia",
-            "title": "Futuro ia",
+            "title": "El futuro de la IA: tendencias y predicciones",
             "moduleTitle": "IA Generativa",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras futuro ia dentro del curso \"¿Qué es la Inteligencia Artificial?\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 12,
+            "summary": "La IA avanza a velocidad vertiginosa. En esta leccion exploraremos las tendencias que definiran los proximos anos: agentes autonomos, IA multimodal, personalizacion extrema y el impacto en el empleo. Preparate para lo que viene.",
             "objectives": [
-                "Comprender los fundamentos practicos de futuro ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Identificar las 5 tendencias mas importantes en IA para los proximos anos.",
+                "Comprender que son los agentes de IA y por que cambiaran todo.",
+                "Desarrollar una mentalidad de aprendizaje continuo para adaptarse a los cambios."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ¿Qué es la Inteligencia Artificial?. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Agentes de IA: de asistentes a ejecutores",
+                    "content": "La proxima gran revolucion de la IA son los agentes autonomos: sistemas que no solo responden preguntas sino que ejecutan tareas complejas de forma independiente. Imagina decirle a un agente 'Organizame un viaje a Barcelona para 4 personas el proximo fin de semana con presupuesto de 800 euros' y que el agente busque vuelos, reserve hotel, planifique actividades y te envie el itinerario completo. OpenAI, Google y Anthropic ya estan desarrollando estos agentes. La transicion sera de 'la IA como herramienta' a 'la IA como companero de trabajo autonomo'."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "IA multimodal: un modelo para todo",
+                    "content": "Los modelos del futuro no seran especialistas en texto O imagen O audio. Seran multimodales nativos: entenderan y generaran cualquier tipo de contenido simultaneamente. GPT-4o ya puede ver, escuchar y hablar. Gemini procesa texto, imagen, audio y video en una sola consulta. La tendencia es hacia modelos que funcionen como un asistente humano que puede ver tu pantalla, escuchar tu voz, leer documentos y generar cualquier formato de salida. Esto eliminara la necesidad de usar herramientas separadas para cada tipo de contenido."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Personalizacion: tu IA, tus reglas",
+                    "content": "El futuro de la IA es personal. Los Custom GPTs de OpenAI y los proyectos de Claude ya permiten crear versiones personalizadas de la IA. Pero esto ira mucho mas alla: tendras un asistente de IA que conoce tu estilo de escritura, tus preferencias, tu historial de trabajo y tu contexto personal. Sera como un asistente ejecutivo que te conoce profundamente. Los modelos locales (que corren en tu dispositivo) permitiran esta personalizacion con privacidad total. Apple ya ha dado pasos con Apple Intelligence ejecutandose en tu iPhone."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar futuro ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Que significa esto para tu carrera",
+                    "content": "La IA no va a reemplazar a las personas, pero las personas que usen IA reemplazaran a las que no la usen. Las habilidades mas valiosas del futuro seran: saber comunicarte con IA (prompt engineering), evaluar criticamente las salidas de IA, combinar creatividad humana con eficiencia artificial, y adaptarte continuamente a nuevas herramientas. El mejor momento para empezar a dominar la IA fue hace dos anos. El segundo mejor momento es ahora. Este curso es tu primer paso en esa direccion."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica futuro ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Escribe una carta a tu 'yo del futuro' dentro de 2 anos describiendo como crees que usaras la IA en tu trabajo y vida personal. Luego, pide a ChatGPT que analice tu prediccion y te sugiera areas que no has considerado.",
+            "deliverable": "Carta personal con predicciones de uso de IA + analisis de ChatGPT con sugerencias adicionales + plan de accion de 3 pasos para prepararte.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Puedo nombrar 5 tendencias clave en el futuro de la IA.",
+                "Entiendo que son los agentes de IA y su potencial.",
+                "He reflexionado sobre como la IA impactara mi carrera.",
+                "Tengo un plan basico para mantenerme actualizado en IA."
             ],
-            "promptStarter": "Actua como especialista en ¿Qué es la Inteligencia Artificial?. Necesito ayuda con \"Futuro ia\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Actua como un futurista experto en tecnologia. Necesito que me hagas un analisis de las tendencias mas disruptivas en IA para los proximos 3 anos (2025-2028). Para cada tendencia incluye: que es, por que importa, como afectara a profesionales no tecnicos, y un ejemplo concreto de como se usara. Incluye al menos 7 tendencias.",
+            "promptExamples": [
+                {
+                    "title": "Impacto en mi profesion",
+                    "prompt": "Soy [tu profesion]. Analiza honestamente como la IA afectara mi trabajo en los proximos 3 anos. Que tareas se automatizaran, que habilidades nuevas necesitare, y que oportunidades nuevas se crearan. Se realista, no alarmista ni optimista en exceso."
+                },
+                {
+                    "title": "Plan de aprendizaje continuo",
+                    "prompt": "Creame un plan de aprendizaje de IA de 12 meses para un profesional que ya conoce los basicos de ChatGPT. Mes a mes, que deberia aprender, que herramientas dominar, y que proyectos hacer para mantenerme actualizado sin abrumarme."
+                },
+                {
+                    "title": "Agentes de IA en la practica",
+                    "prompt": "Dame 5 ejemplos concretos de como los agentes de IA autonomos cambiaran tareas cotidianas de trabajo: gestion de email, planificacion de proyectos, investigacion de mercado, atencion al cliente y gestion financiera. Para cada ejemplo, describeme el antes (como se hace hoy) y el despues (como lo hara un agente de IA)."
+                }
+            ]
         }
     },
+
+    /* ═══════════════════════════════════════════
+       CURSO 2: chatgpt-basico
+       ChatGPT desde cero
+       Nivel: Principiante | 10 lecciones
+       ═══════════════════════════════════════════ */
     "chatgpt-basico": {
         "crear-cuenta": {
             "id": "crear-cuenta",
-            "title": "Crear cuenta",
+            "title": "Crear tu cuenta en ChatGPT",
             "moduleTitle": "Primeros pasos",
-            "durationMinutes": 10,
-            "summary": "En esta leccion trabajaras crear cuenta dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 8,
+            "summary": "Todo empieza aqui. En esta leccion aprenderas a crear tu cuenta en ChatGPT paso a paso, entenderas las diferencias entre la version gratuita y ChatGPT Plus, y configuraras tu perfil para obtener respuestas personalizadas desde el primer dia.",
             "objectives": [
-                "Comprender los fundamentos practicos de crear cuenta en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Crear una cuenta en ChatGPT y configurar el perfil personalizado.",
+                "Entender las diferencias entre ChatGPT Free, Plus, Pro y la API.",
+                "Configurar las instrucciones personalizadas para mejorar las respuestas."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Registro paso a paso",
+                    "content": "Ve a chat.openai.com y haz clic en 'Sign up'. Puedes registrarte con tu email, tu cuenta de Google, Microsoft o Apple. Recomendacion: usa tu email personal primero para experimentar libremente. Tras verificar tu correo, tendras acceso inmediato a ChatGPT con el modelo GPT-4o mini (gratuito). No necesitas tarjeta de credito ni datos de pago para empezar. El plan gratuito incluye acceso a GPT-4o con limites de uso, generacion de imagenes limitada y acceso basico a los GPTs de la tienda."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Free vs Plus vs Pro: ¿cual necesito?",
+                    "content": "ChatGPT Free te da acceso a GPT-4o mini y acceso limitado a GPT-4o: perfecto para empezar y aprender. ChatGPT Plus (20$/mes) ofrece GPT-4o sin restricciones, DALL-E para imagenes, analisis de datos, navegacion web y acceso prioritario. ChatGPT Pro (200$/mes) incluye el modelo o1 completo con razonamiento avanzado para tareas complejas. Recomendacion: empieza con Free para aprender, sube a Plus cuando notes que necesitas mas generaciones o funciones avanzadas. La API es para desarrolladores y tiene precios por uso."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Configura tus instrucciones personalizadas",
+                    "content": "Este es el truco que el 90% de usuarios no conoce. Ve a Configuracion > Personalizacion > Instrucciones personalizadas. Aqui puedes decirle a ChatGPT quien eres y como quieres que responda. En '¿Que te gustaria que ChatGPT supiera de ti?' escribe tu profesion, ubicacion y contexto. En '¿Como te gustaria que ChatGPT respondiera?' define el tono, idioma y formato. Ejemplo: 'Soy community manager en Madrid. Responde siempre en espanol de Espana, con tono profesional pero cercano, y da ejemplos practicos.' Esto mejora drasticamente la calidad de las respuestas."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar crear cuenta, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Primeras configuraciones esenciales",
+                    "content": "Activa el modo oscuro si trabajas muchas horas (Configuracion > General). En Privacidad, decide si quieres que tus conversaciones se usen para entrenar el modelo (puedes desactivarlo). Explora la opcion de Memoria: cuando esta activa, ChatGPT recuerda detalles de conversaciones anteriores. Crea tu primera carpeta de conversaciones para organizar por temas. Y lo mas importante: la app movil de ChatGPT es igual de potente que la web, con la ventaja de poder usar voz. Instalala para tener la IA siempre contigo."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica crear cuenta a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Crea tu cuenta en ChatGPT, configura tus instrucciones personalizadas con tu perfil real (profesion, estilo preferido de respuesta) y haz tu primera pregunta de prueba para verificar que la personalizacion funciona.",
+            "deliverable": "Cuenta de ChatGPT creada y configurada con instrucciones personalizadas + captura o texto de tu primera conversacion personalizada.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Tengo mi cuenta creada y verificada en ChatGPT.",
+                "Configure mis instrucciones personalizadas con mi perfil.",
+                "Entiendo las diferencias entre los planes Free y Plus.",
+                "Instale la app movil de ChatGPT."
             ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Crear cuenta\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Hola ChatGPT, acabo de crear mi cuenta. Soy [tu profesion] y quiero aprender a usarte de forma efectiva. Dame 5 cosas que deberia configurar o saber como usuario nuevo para sacarle el maximo provecho desde el primer dia.",
+            "promptExamples": [
+                {
+                    "title": "Configurar instrucciones personalizadas",
+                    "prompt": "Necesito ayuda para escribir mis instrucciones personalizadas de ChatGPT. Soy [profesion] en [ciudad]. Mis tareas principales son [tareas]. Prefiero respuestas en [estilo]. Redactame unas instrucciones personalizadas optimizadas para mi perfil."
+                },
+                {
+                    "title": "Evaluar si necesito Plus",
+                    "prompt": "Uso ChatGPT para: [lista tus usos]. Gasto aproximadamente [tiempo] al dia. Explicame honestamente si me conviene pagar ChatGPT Plus o si puedo funcionar bien con la version gratuita. Lista pros y contras para mi caso especifico."
+                },
+                {
+                    "title": "Tour de funcionalidades",
+                    "prompt": "Actua como un guia turistico de ChatGPT. Dame un tour completo de todas tus funcionalidades actuales, incluyendo las que la mayoria de usuarios no conoce. Para cada funcion, dame un ejemplo practico de como usarla."
+                }
+            ]
         },
         "interfaz": {
             "id": "interfaz",
-            "title": "Interfaz",
+            "title": "Dominando la interfaz de ChatGPT",
             "moduleTitle": "Primeros pasos",
-            "durationMinutes": 11,
-            "summary": "En esta leccion trabajaras interfaz dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 10,
+            "summary": "La interfaz de ChatGPT esconde muchas funciones que la mayoria ignora. Aprender a navegar eficientemente, organizar conversaciones y usar atajos te ahorrara horas de trabajo cada semana.",
             "objectives": [
-                "Comprender los fundamentos practicos de interfaz en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Dominar todas las funciones de la interfaz de ChatGPT web y movil.",
+                "Organizar conversaciones con carpetas y nombres descriptivos.",
+                "Usar funciones avanzadas: editar mensajes, regenerar respuestas y compartir chats."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Anatomia de la interfaz",
+                    "content": "La barra lateral izquierda contiene tu historial de conversaciones, busqueda, y carpetas de organizacion. El area central es tu espacio de conversacion. En el campo de texto inferior puedes escribir, adjuntar archivos (imagenes, PDFs, documentos), buscar en la web o seleccionar un GPT especializado. Arriba del chat puedes cambiar el modelo (GPT-4o, GPT-4o mini, o1). El icono de usuario arriba a la derecha da acceso a configuracion, plan y personalizacion."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Funciones ocultas que debes conocer",
+                    "content": "Editar mensajes previos: haz clic en el icono de lapiz en cualquier mensaje tuyo para reescribirlo sin empezar de cero; ChatGPT regenerara la respuesta desde ese punto. Regenerar respuesta: el icono de recargar genera una respuesta alternativa a tu mismo prompt. Compartir conversacion: crea un enlace para compartir un chat completo con otras personas. Modo canvas: disponible para escritura y codigo, abre un editor lateral donde puedes colaborar con ChatGPT en documentos. Buscar en historial: usa el buscador para encontrar conversaciones antiguas por palabras clave."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Organizacion como un profesional",
+                    "content": "Crea carpetas por proyecto o tema: 'Trabajo', 'Personal', 'Aprendizaje', etc. Renombra cada conversacion con un titulo descriptivo (haz clic en el nombre para editarlo). Archiva conversaciones terminadas para mantener limpia tu barra lateral. Consejo profesional: inicia cada nueva tarea en una conversacion nueva. Mezclar temas en un mismo chat confunde al modelo y reduce la calidad de respuestas. ChatGPT funciona mejor con conversaciones enfocadas en un solo tema."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar interfaz, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "ChatGPT en el movil: voz y camara",
+                    "content": "La app movil anade dos superpoderes: entrada por voz y camara. El modo de voz avanzado permite conversaciones naturales habladas con la IA, ideal para brainstorming mientras caminas o conduces. La camara te permite tomar una foto de cualquier cosa (un problema matematico, una planta, un menu en otro idioma) y preguntar sobre ella. Puedes fotografiar documentos, capturas de pantalla o productos y pedir analisis instantaneo. La experiencia movil es especialmente potente para traducciones en tiempo real y consultas rapidas mientras estas fuera del escritorio."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica interfaz a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Organiza tu ChatGPT creando al menos 3 carpetas tematicas. Practica las funciones ocultas: edita un mensaje previo, regenera una respuesta para comparar, y comparte un chat con alguien. Si tienes la app, prueba el modo voz y la camara.",
+            "deliverable": "ChatGPT organizado con carpetas tematicas + prueba documentada de al menos 3 funciones avanzadas (editar, regenerar, compartir).",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Conozco todas las areas principales de la interfaz.",
+                "Cree carpetas para organizar mis conversaciones.",
+                "Practique editar mensajes y regenerar respuestas.",
+                "Probe la funcion de voz o camara en el movil."
             ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Interfaz\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Voy a hacer un test de tus capacidades. Primero, explicame algo en un formato lista con emojis. Luego voy a editar mi mensaje para pedirtelo en formato tabla. Quiero ver como cambian tus respuestas. Empieza: Dame las 5 mejores practicas de productividad personal.",
+            "promptExamples": [
+                {
+                    "title": "Probar regeneracion",
+                    "prompt": "Escribe un eslogan creativo para una tienda online de ropa sostenible. (Despues de recibir la respuesta, usa el boton de regenerar 3 veces y compara los resultados)"
+                },
+                {
+                    "title": "Probar adjuntos",
+                    "prompt": "(Adjunta una foto de tu escritorio o un documento) Analiza esta imagen/documento y dame 5 observaciones utiles sobre lo que ves. Se detallado y practica."
+                },
+                {
+                    "title": "Probar modo Canvas",
+                    "prompt": "Abre canvas y ayudame a redactar un email profesional solicitando una reunion con un cliente potencial. Quiero que sea corto, personalizado y con un call-to-action claro."
+                }
+            ]
         },
         "primera-consulta": {
             "id": "primera-consulta",
-            "title": "Primera consulta",
+            "title": "Tu primera consulta efectiva",
             "moduleTitle": "Primeros pasos",
             "durationMinutes": 12,
-            "summary": "En esta leccion trabajaras primera consulta dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "summary": "La diferencia entre una consulta mediocre y una excelente es como la diferencia entre preguntar '¿que cocino?' y '¿que cena rapida y sana puedo hacer con pollo, brocoli y arroz para 2 personas en 30 minutos?'. Esta leccion te ensenara a hacer consultas que obtengan resultados utiles desde el primer intento.",
             "objectives": [
-                "Comprender los fundamentos practicos de primera consulta en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Formular consultas claras y especificas que produzcan resultados utiles.",
+                "Entender por que las preguntas vagas generan respuestas genericas.",
+                "Aplicar la formula basica: contexto + tarea + formato para toda consulta."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "El problema de las consultas vagas",
+                    "content": "La mayoria de personas escribe prompts como mensajes de texto a un amigo: '¿que es el marketing?' o 'ayudame con mi trabajo'. Estos prompts producen respuestas genericas que podrias encontrar en Wikipedia. ChatGPT no puede leer tu mente; necesita contexto. Es como pedir a un taxista que te lleve 'a algun lugar bonito' versus darle la direccion exacta. Cuanta mas informacion le des, mejor sera el resultado. La regla de oro: si tu prompt cabe en un tweet, probablemente es demasiado vago."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "La formula CTF: Contexto + Tarea + Formato",
+                    "content": "Toda buena consulta tiene tres elementos. Contexto: quien eres, para que necesitas esto, cual es la situacion ('Soy profesor de historia en secundaria'). Tarea: que necesitas exactamente, con detalles especificos ('Necesito crear un examen de 10 preguntas sobre la Revolucion Francesa para alumnos de 15 anos'). Formato: como quieres la respuesta ('En formato de examen con 4 opciones por pregunta, senalando la respuesta correcta al final'). Si incluyes estos tres elementos, la calidad del resultado sube dramaticamente."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Ejemplos: de malo a excelente",
+                    "content": "Malo: 'Escribe un email'. Mejor: 'Escribe un email profesional'. Bueno: 'Escribe un email para solicitar una reunion con mi jefe'. Excelente: 'Eres mi asistente de comunicacion. Escribe un email corto (maximo 100 palabras) a mi jefa de departamento, Ana Garcia, solicitando una reunion de 30 minutos esta semana para presentar los resultados del proyecto de digitalizacion. Tono: profesional pero cercano. Incluye 2 opciones de horario.' Nota como cada version anade contexto, especificidad y formato. La version excelente deja poco espacio para la ambiguedad."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar primera consulta, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Tu primera conversacion productiva",
+                    "content": "Elige una tarea real que necesites resolver hoy: un email, un resumen, una idea, una explicacion. Aplica la formula CTF y escribe tu consulta. Lee la respuesta con ojo critico: ¿es util? ¿falta algo? Si no es perfecta, no abandones: responde con lo que falta ('Hazlo mas corto', 'Anade un ejemplo', 'Cambia el tono a informal'). Esta iteracion es fundamental. ChatGPT funciona mejor como una conversacion que como una maquina de respuestas unicas. Cada mensaje adicional refina el resultado."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica primera consulta a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Elige 3 tareas reales de tu dia a dia. Para cada una, escribe primero un prompt vago y luego reescribelo aplicando la formula CTF. Ejecuta ambas versiones en ChatGPT y compara los resultados.",
+            "deliverable": "Documento con 3 pares de prompts (vago vs CTF) y sus respectivas respuestas, con un breve analisis de la diferencia de calidad.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Entiendo por que los prompts vagos dan respuestas genericas.",
+                "Aplico la formula CTF (Contexto + Tarea + Formato) en mis consultas.",
+                "He comparado resultados entre un prompt vago y uno estructurado.",
+                "Practico la iteracion: pido ajustes cuando la primera respuesta no es perfecta."
             ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Primera consulta\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Soy [tu profesion] y necesito [tarea especifica]. El contexto es [tu situacion]. Necesito que el resultado sea [formato deseado], con un tono [tono] y una extension de [longitud]. Incluye [elementos especificos que necesitas].",
+            "promptExamples": [
+                {
+                    "title": "Email profesional (formula CTF)",
+                    "prompt": "Contexto: Soy gerente de un equipo de 5 personas en una agencia de marketing. Tarea: Redacta un email anunciando que nuestro horario cambiara a jornada intensiva en verano (7:00 a 15:00, de junio a septiembre). Formato: Maximo 150 palabras, tono entusiasta pero profesional, con vinetitas para los puntos clave y un cierre motivador."
+                },
+                {
+                    "title": "Resumen de documento",
+                    "prompt": "Necesito resumir el siguiente texto para una presentacion ejecutiva. El publico son directivos con poco tiempo. Hazme un resumen en 3 niveles: 1) La idea clave en una frase, 2) Los 3 puntos principales en un parrafo, 3) El resumen detallado en media pagina. Texto: [pega tu texto]"
+                },
+                {
+                    "title": "Lluviad de ideas estructurada",
+                    "prompt": "Soy dueno de una pasteleria local. Necesito ideas para aumentar ventas en temporada baja (enero-marzo). Dame 10 ideas organizadas en 3 categorias: marketing digital, experiencia en tienda, y nuevos productos. Para cada idea incluye: descripcion, coste estimado (bajo/medio/alto) y dificultad de implementacion."
+                }
+            ]
         },
         "tipos-respuesta": {
             "id": "tipos-respuesta",
-            "title": "Tipos respuesta",
+            "title": "Tipos de respuesta que ChatGPT puede generar",
             "moduleTitle": "Primeros pasos",
-            "durationMinutes": 13,
-            "summary": "En esta leccion trabajaras tipos respuesta dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 11,
+            "summary": "ChatGPT no solo responde preguntas. Puede redactar, analizar, traducir, programar, calcular, crear tablas, resumir y mucho mas. Conocer todo su repertorio de capacidades te abrira un mundo de posibilidades que probablemente no imaginabas.",
             "objectives": [
-                "Comprender los fundamentos practicos de tipos respuesta en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Conocer al menos 15 tipos diferentes de salida que ChatGPT puede generar.",
+                "Saber pedir el formato correcto para cada tipo de tarea.",
+                "Descubrir usos avanzados que van mas alla de preguntas y respuestas."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Mas alla de preguntas y respuestas",
+                    "content": "La mayoria de usuarios trata a ChatGPT como un buscador: 'Que es X' o 'Como funciona Y'. Pero su verdadero poder esta en la creacion y transformacion de contenido. Puede escribir articulos, emails, guiones de video, descripciones de producto, codigo, poesia, letras de canciones, planes de negocio, analisis FODA, presupuestos y hasta cuentos infantiles personalizados. Tambien es un excelente editor: puede reescribir un texto cambiando el tono, resumirlo, ampliarlo, corregirlo o traducirlo. Piensa en ChatGPT no como una enciclopedia sino como un equipo multidisciplinar a tu disposicion."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Formatos de salida que debes conocer",
+                    "content": "Listas: numeradas o con vinetitas para ideas y pasos. Tablas: ideales para comparativas y datos estructurados ('Creame una tabla comparativa de...'). Formato Markdown: encabezados, negritas, cursivas para documentos bien estructurados. Codigo: en cualquier lenguaje de programacion con explicaciones. CSV: datos tabulares para importar a Excel. JSON: datos estructurados para uso tecnico. Diagramas en texto: flujos y estructuras con caracteres ASCII. Formato de email: con asunto, cuerpo y despedida. Script de video: con marcas de tiempo y indicaciones visuales. No tengas miedo de especificar exactamente el formato que necesitas."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "ChatGPT como analizador",
+                    "content": "Pega un texto y pide: 'Analiza el tono y sugiere mejoras', 'Encuentra errores logicos', 'Identifica los puntos debiles del argumento'. Sube un documento y pide resumen ejecutivo. Comparte datos de ventas y pide analisis de tendencias. ChatGPT puede revisar contratos identificando clausulas problematicas, analizar reviews de clientes encontrando patrones, o evaluar tu CV sugiriendo mejoras. Su capacidad de analisis es una de las funciones mas infrautilizadas y mas valiosas para profesionales."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar tipos respuesta, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "ChatGPT como tutor personal",
+                    "content": "Una de las aplicaciones mas potentes es el aprendizaje personalizado. Pide: 'Explicame [tema] como si tuviera 12 anos', 'Quiero aprender [habilidad], creame un plan de estudio de 4 semanas', 'Hazme 10 preguntas de examen sobre [tema] y corrige mis respuestas'. Puedes aprender idiomas con conversaciones, practicar entrevistas de trabajo con role-playing, o preparar presentaciones recibiendo feedback. ChatGPT se adapta a tu ritmo y nivel, algo que ningun libro o curso puede hacer."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica tipos respuesta a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Prueba 5 tipos de respuesta diferentes con una misma tematica (elige tu area de interes). Pide: 1) Una explicacion, 2) Una tabla comparativa, 3) Un plan de accion, 4) Un analisis critico, 5) Un script de video de 60 segundos.",
+            "deliverable": "Coleccion de 5 respuestas del mismo tema en formatos distintos, demostrando la versatilidad de ChatGPT.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Conozco al menos 10 tipos de formatos de respuesta de ChatGPT.",
+                "He probado pedir tablas, listas, codigo y otros formatos estructurados.",
+                "Use ChatGPT como analizador con un texto o documento real.",
+                "Probe el modo tutor para aprender algo nuevo."
             ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Tipos respuesta\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Demuestrame tu versatilidad. Sobre el tema 'productividad personal', dame 5 respuestas en formatos completamente diferentes: 1) Lista con emojis, 2) Tabla comparativa de tecnicas, 3) Plan semanal dia por dia, 4) Dialogo entre un mentor y un alumno, 5) Script para un video de TikTok de 60 segundos.",
+            "promptExamples": [
+                {
+                    "title": "Formato tabla avanzada",
+                    "prompt": "Creame una tabla comparativa de las 5 metodologias de productividad mas populares: GTD, Pomodoro, Time Blocking, Eat the Frog, Eisenhower. Columnas: Nombre, En que consiste (1 frase), Ideal para quien, Herramientas recomendadas, Dificultad de implementar."
+                },
+                {
+                    "title": "ChatGPT como editor",
+                    "prompt": "Aqui tienes un email que escribi: [pega tu email]. Dame 3 versiones mejoradas: una mas formal, una mas concisa (50% menos de palabras), y una mas persuasiva. Explica que cambiaste y por que en cada version."
+                },
+                {
+                    "title": "ChatGPT como tutor",
+                    "prompt": "Quiero aprender los fundamentos de finanzas personales desde cero. Se mi tutor: explicame el concepto de ahorro e inversion como si tuviera 15 anos, luego hazme 5 preguntas para comprobar que lo entendi. Corrige mis respuestas y dame una nota."
+                }
+            ]
         },
         "limitaciones": {
             "id": "limitaciones",
-            "title": "Limitaciones",
+            "title": "Limitaciones y alucinaciones de ChatGPT",
             "moduleTitle": "Primeros pasos",
-            "durationMinutes": 14,
-            "summary": "En esta leccion trabajaras limitaciones dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 12,
+            "summary": "ChatGPT parece saberlo todo, pero no es asi. Puede inventar datos falsos con total confianza, tiene conocimiento limitado, y no siempre acierta con logica o matematicas. Conocer sus limitaciones te hara un usuario mas inteligente y evitara errores costosos.",
             "objectives": [
-                "Comprender los fundamentos practicos de limitaciones en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Identificar las principales limitaciones de ChatGPT y cuando no confiar ciegamente.",
+                "Entender que son las alucinaciones y como detectarlas.",
+                "Desarrollar un flujo de verificacion para informacion critica generada por IA."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Alucinaciones: cuando la IA miente con confianza",
+                    "content": "Una alucinacion es cuando ChatGPT genera informacion falsa pero la presenta como si fuera cierta, con total confianza. Puede inventar citas de libros que no existen, crear referencias academicas falsas, dar estadisticas inventadas o atribuir afirmaciones a personas que nunca las dijeron. Esto ocurre porque el modelo no 'sabe' nada: predice la siguiente palabra mas probable. Si la secuencia estadisticamente probable incluye un dato falso plausible, lo generara sin pestanear. Ejemplo real: abogados han presentado en tribunales casos legales inventados por ChatGPT. La regla: nunca publiques datos de ChatGPT sin verificar la fuente."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Limites de conocimiento y razonamiento",
+                    "content": "ChatGPT tiene una fecha de corte de entrenamiento y puede no conocer eventos recientes (aunque la navegacion web mitiga esto). No puede acceder a internet por si solo a menos que uses la funcion de busqueda. Tiene dificultades con matematicas complejas, logica formal y acertijos que requieren razonamiento espacial. No puede ejecutar codigo en tiempo real (salvo en modo Code Interpreter). Y aunque 'recuerda' dentro de una conversacion, conversaciones diferentes son completamente independientes (salvo que actives la funcion Memoria)."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Sesgos en las respuestas",
+                    "content": "ChatGPT fue entrenado con textos de internet, que contienen sesgos culturales, de genero, raciales y politicos. Tiende a dar respuestas que suenan 'equilibradas' aunque a veces el consenso cientifico sea claro. Puede sobrerrepresentar perspectivas anglosajonas y subrepresentar otras culturas. Si le pides que escriba un cuento, los personajes por defecto suelen seguir estereotipos. Es tu responsabilidad revisar criticamente las respuestas, especialmente en temas sensibles. Puedes mitigar sesgos dandole instrucciones explicitas sobre perspectiva e inclusividad."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar limitaciones, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Como protegerte: el metodo de verificacion",
+                    "content": "Paso 1: Pide fuentes. 'Dame las fuentes de esta informacion.' Si no puede darlas o inventa URLs, es senal de alerta. Paso 2: Verifica cruzado. Comprueba datos importantes en fuentes confiables (Wikipedia, medios, estudios). Paso 3: Pide que se autocuestione. 'Que podria estar mal en tu respuesta anterior?' ChatGPT a veces corrige sus propios errores. Paso 4: Usa busqueda web. Activa la funcion de navegacion para que busque informacion actualizada. Paso 5: No uses ChatGPT para diagnosticos medicos, asesoramiento legal vinculante o decisiones financieras sin consultar a un profesional."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica limitaciones a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Haz un 'test de alucinaciones': pide a ChatGPT informacion sobre un tema que tu domines bien. Evalua la precision de cada afirmacion. Luego, pidele que cite fuentes y verifica si son reales.",
+            "deliverable": "Informe con al menos 3 preguntas a ChatGPT sobre tu area de expertise, evaluacion de precision y documentacion de errores o alucinaciones encontradas.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Entiendo que son las alucinaciones y por que ocurren.",
+                "Probe a detectar errores en un tema que conozco bien.",
+                "Aplico el metodo de verificacion con informacion critica.",
+                "Se cuando NO debo confiar en ChatGPT sin verificar."
             ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Limitaciones\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Quiero entender tus limitaciones. Dame 5 tipos de preguntas en las que es probable que te equivoques o alucines, con un ejemplo de cada una. Se honesto y autocritico. Para cada tipo, dame una estrategia para que el usuario detecte el error.",
+            "promptExamples": [
+                {
+                    "title": "Test de alucinaciones",
+                    "prompt": "Dame el nombre completo del autor del libro 'Inteligencia Emocional para el Liderazgo en la Era Digital' publicado en 2019 por la editorial Planeta. Citame el ISBN y un resumen de 3 lineas. (Nota: verifica si este libro existe realmente)"
+                },
+                {
+                    "title": "Autocritica forzada",
+                    "prompt": "Acabas de darme informacion sobre [tema]. Ahora actua como un verificador de datos exigente y critica tu propia respuesta. Que partes podrian ser inexactas, estar desactualizadas o ser excesivamente simplificadas? Califica tu propia respuesta del 1 al 10 en precision."
+                },
+                {
+                    "title": "Contrastar informacion",
+                    "prompt": "Necesito informacion precisa sobre [tema especifico]. Dame la informacion, pero para cada dato importante, indica tu nivel de confianza (alto/medio/bajo) y sugiere una fuente donde yo pueda verificarlo. Si no estas seguro de algo, di 'no estoy seguro' en vez de inventar."
+                }
+            ]
         },
         "prompts-basicos": {
             "id": "prompts-basicos",
-            "title": "Prompts basicos",
+            "title": "Prompts basicos que funcionan",
             "moduleTitle": "Uso efectivo",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras prompts basicos dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 14,
+            "summary": "Un buen prompt es la diferencia entre perder el tiempo y obtener resultados profesionales. Esta leccion te dara una coleccion de patrones de prompts basicos que funcionan para las tareas mas comunes: escribir, resumir, analizar, crear y organizar.",
             "objectives": [
-                "Comprender los fundamentos practicos de prompts basicos en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Dominar 6 patrones de prompts basicos aplicables a cualquier tarea.",
+                "Crear prompts para tareas reales de tu trabajo usando plantillas probadas.",
+                "Entender por que el 'como pides' importa mas que 'que pides'."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Patron 1: El Experto (asignar un rol)",
+                    "content": "Inicia tu prompt con 'Actua como [rol experto]'. Esto configura el marco de referencia de ChatGPT y mejora significativamente la calidad de la respuesta. 'Actua como un nutricionista deportivo' genera respuestas mas tecnicas y precisas que simplemente preguntar sobre alimentacion. Otros ejemplos: 'Actua como editor de revista', 'Actua como abogado laboralista', 'Actua como profesor de primaria'. Puedes combinar: 'Actua como un experto en SEO que trabaja en una agencia de marketing digital con 10 anos de experiencia'."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Patron 2: Paso a Paso (descomponer tareas)",
+                    "content": "Para tareas complejas, pide que resuelva paso a paso: 'Explicame paso a paso como...' o 'Desglosa este proceso en pasos numerados'. Esto funciona especialmente bien para tutoriales, guias y resoluciones de problemas. Ejemplo: 'Explicame paso a paso como crear una campana de email marketing desde cero, desde la estrategia hasta la medicion de resultados. Numera cada paso y explica por que es importante.' El paso a paso tambien reduce alucinaciones porque fuerza al modelo a ser sistematico."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Patron 3: Plantilla (dar estructura exacta)",
+                    "content": "Dale a ChatGPT la estructura exacta que necesitas: 'Usa este formato: Titulo: [x], Publico: [x], Problema: [x], Solucion: [x]'. Puedes pegar una plantilla de email, informe o documento y pedir que la complete. Ejemplo avanzado: 'Escribe una propuesta de proyecto con esta estructura: 1. Resumen ejecutivo (3 lineas), 2. Problema (1 parrafo), 3. Solucion propuesta (3 puntos), 4. Timeline (tabla), 5. Presupuesto (tabla), 6. Proximos pasos (lista).' Cuanto mas clara la plantilla, mejor el resultado."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar prompts basicos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Patrones 4-6: Ejemplos, Restricciones y Audiencia",
+                    "content": "Patron Ejemplo: 'Aqui tienes un ejemplo del estilo que quiero: [pega ejemplo]. Ahora crea algo similar pero sobre [nuevo tema].'  Patron Restriccion: 'Maximo 200 palabras', 'No uses jerga tecnica', 'Incluye exactamente 5 puntos'. Las restricciones paradojicamente mejoran la creatividad. Patron Audiencia: 'Esto es para ejecutivos con poco tiempo', 'Mi audiencia son adolescentes de 15 anos', 'Escribe para alguien que no sabe nada del tema'. Definir la audiencia cambia completamente el nivel y tono de la respuesta."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica prompts basicos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Toma una tarea real de tu trabajo y reescribela usando cada uno de los 6 patrones. Ejecuta todos en ChatGPT y compara cual te da el mejor resultado para tu caso.",
+            "deliverable": "Coleccion de 6 prompts aplicando cada patron a una tarea real + comparativa de resultados.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Domino los 6 patrones basicos de prompts.",
+                "He probado cada patron con una tarea real.",
+                "Puedo combinar multiples patrones en un solo prompt.",
+                "Tengo mis patrones favoritos guardados como plantillas."
             ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Prompts basicos\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Actua como un experto en productividad laboral con 15 anos de experiencia. Necesito un plan de productividad semanal para un gerente de marketing que trabaja desde casa. El plan debe cubrir lunes a viernes, con bloques de 2 horas. Formato tabla con: Hora, Actividad, Herramienta sugerida, Consejo del experto. Maximo 5 actividades por dia. Tono: practico y motivador.",
+            "promptExamples": [
+                {
+                    "title": "Patron Experto + Restriccion",
+                    "prompt": "Actua como un consultor de negocios de McKinsey. Analiza esta situacion: mi restaurante ha bajado ventas un 20% en los ultimos 3 meses. Dame exactamente 5 estrategias de recuperacion, priorizadas por impacto y facilidad de implementacion. Cada estrategia en maximo 3 lineas."
+                },
+                {
+                    "title": "Patron Plantilla",
+                    "prompt": "Escribe un post de LinkedIn usando esta estructura exacta:\nGancho (1 linea impactante)\n[linea en blanco]\nHistoria personal (3 lineas)\n[linea en blanco]\nLeccion aprendida (2 lineas)\n[linea en blanco]\n3 consejos accionables (con emojis)\n[linea en blanco]\nPregunta de engagement\n[Hashtags relevantes]\nTema: los errores que cometi al empezar a usar IA en mi trabajo."
+                },
+                {
+                    "title": "Patron Audiencia + Ejemplo",
+                    "prompt": "Necesito explicar que es blockchain a mi abuela de 75 anos que apenas usa WhatsApp. Usa analogias con cosas que ella conoce: la libreta del mercado, el libro de cuentas del banco, los sellos de correo. Maximo 200 palabras. Estilo: conversacion de sobremesa, carinoso."
+                }
+            ]
         },
         "contexto": {
             "id": "contexto",
-            "title": "Contexto",
+            "title": "El poder del contexto en tus conversaciones",
             "moduleTitle": "Uso efectivo",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras contexto dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 13,
+            "summary": "El contexto es el ingrediente secreto de los buenos prompts. Mientras mas contexto relevante le des a ChatGPT, mejores seran las respuestas. Aprenderas a proporcionar el contexto justo: ni demasiado poco (respuestas genericas) ni demasiado (confusion).",
             "objectives": [
-                "Comprender los fundamentos practicos de contexto en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Entender por que el contexto transforma la calidad de las respuestas de ChatGPT.",
+                "Dominar los 5 tipos de contexto que puedes proporcionar.",
+                "Saber como mantener el contexto a lo largo de una conversacion larga."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Por que el contexto lo cambia todo",
+                    "content": "Sin contexto: 'Escribe un email.' Con contexto: 'Soy recruiter en una startup de tecnologia y necesito escribir un email rechazando amablemente a un candidato que llego a la fase final pero no fue seleccionado. Quiero mantener la puerta abierta para futuros roles.' La primera instruccion puede producir cualquier cosa. La segunda produce exactamente lo que necesitas. El contexto actua como GPS para ChatGPT: le dice donde estas, a donde quieres llegar y por que camino. Sin GPS, te lleva a 'cualquier destino'; con GPS, al destino exacto."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Los 5 tipos de contexto",
+                    "content": "1) Contexto personal: quien eres, tu rol, experiencia ('Soy disenador junior en agencia'). 2) Contexto situacional: que esta pasando, por que necesitas esto ('Mi jefe me pidio un informe urgente para manana'). 3) Contexto de audiencia: para quien es el resultado ('Esto lo leera el CEO que tiene 2 minutos'). 4) Contexto de calidad: tus estandares y restricciones ('Debe ser formal, sin emojis, maximo 200 palabras'). 5) Contexto previo: informacion que ChatGPT necesita ('Adjunto nuestro plan estrategico' o 'En mi empresa vendemos software B2B')."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Tecnicas avanzadas de contexto",
+                    "content": "Contexto por referencia: 'Escribe en el estilo de [persona/marca]' o pega un texto de ejemplo diciendo 'Analiza este estilo y usalo'. Contexto acumulativo: en conversaciones largas, ChatGPT recuerda lo anterior. Aprovechalo: 'Basandote en el perfil de cliente que definimos antes, escribe ahora un email de bienvenida'. Contexto por documento: sube archivos (PDF, Word, Excel) para que ChatGPT tenga acceso a informacion especifica. Contexto negativo: 'NO menciones precios', 'Evita tecnicismos': decir lo que no quieres es tan util como decir lo que si quieres."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar contexto, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Errores comunes con el contexto",
+                    "content": "Error 1: Demasiado contexto irrelevante que confunde al modelo. Si preguntas sobre marketing, no necesitas contar tu historia de vida. Error 2: Asumir que ChatGPT sabe cosas que no le has dicho. No conoce tu empresa, tu mercado ni tus clientes a menos que se lo expliques. Error 3: No actualizar el contexto cuando cambia el tema dentro de la conversacion. Error 4: Olvidar que cada nueva conversacion empieza desde cero (a menos que uses la funcion Memoria). Consejo: si una conversacion se vuelve larga y confusa, empieza una nueva resumiendo el contexto esencial en el primer mensaje."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica contexto a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Elige un proyecto real. Escribe un 'brief de contexto' de 5 lineas que puedas pegar al inicio de cualquier conversacion sobre ese proyecto. Luego pruebalo haciendo 3 preguntas diferentes y observa como el contexto mejora todas las respuestas.",
+            "deliverable": "Brief de contexto reutilizable de 5 lineas + 3 consultas diferentes usando ese mismo contexto, demostrando la mejora en relevancia.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Identifico los 5 tipos de contexto y cuando usar cada uno.",
+                "Cree un brief de contexto reutilizable para mi proyecto principal.",
+                "Probe la diferencia entre consultar con y sin contexto.",
+                "Se cuando iniciar una nueva conversacion vs continuar la actual."
             ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Contexto\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Voy a darte contexto sobre mi situacion para que todas tus respuestas sean relevantes. Soy [profesion] en [empresa/sector]. Mi principal desafio ahora es [desafio]. Mi audiencia es [audiencia]. Mi objetivo para esta semana es [objetivo]. A partir de ahora, usa este contexto en todas tus respuestas. Confirma que entendiste resumiendo mi perfil.",
+            "promptExamples": [
+                {
+                    "title": "Brief de contexto profesional",
+                    "prompt": "Antes de hacer cualquier tarea, quiero que tengas este contexto sobre mi: Soy community manager de una marca de cosmetica natural en Instagram (15K seguidores). Nuestro tono es cercano, educativo y empoderador. Nuestro publico son mujeres de 25-45 anos interesadas en bienestar. Nunca usamos lenguaje tecnico de marketing. Confirma que entiendes el perfil y dame 3 ideas de posts para esta semana."
+                },
+                {
+                    "title": "Contexto negativo util",
+                    "prompt": "Redacta un articulo sobre los beneficios del teletrabajo. Contexto: es para la intranet de nuestra empresa donde estamos implementando un modelo hibrido. NO menciones desventajas (los directivos son sensibles al tema), NO uses estadisticas de EEUU (somos empresa espanola), NO hagas que suene como publicidad. Si: incluye ejemplos reales europeos y adaptados a nuestra cultura."
+                },
+                {
+                    "title": "Mantener contexto en conversacion",
+                    "prompt": "Acabamos de definir que nuestro cliente ideal es Maria, 35 anos, madre de 2, trabaja medio tiempo, busca alimentacion sana y rapida. Basandote en este perfil que desarrollamos juntos, ahora escribe: 1) Un email de bienvenida para Maria, 2) 3 asuntos de email que Maria abriria."
+                }
+            ]
         },
         "formato-respuestas": {
             "id": "formato-respuestas",
-            "title": "Formato respuestas",
+            "title": "Controlar el formato de las respuestas",
             "moduleTitle": "Uso efectivo",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras formato respuestas dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 11,
+            "summary": "Saber pedir el formato correcto es un superpoder. En lugar de recibir muros de texto y tener que reformatear, puedes obtener tablas, listas, JSON, CSV, emails, scripts y cualquier estructura directamente lista para usar.",
             "objectives": [
-                "Comprender los fundamentos practicos de formato respuestas en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Dominar al menos 10 formatos de salida diferentes.",
+                "Saber transformar una respuesta de un formato a otro.",
+                "Crear prompts que produzcan contenido listo para copiar y pegar."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Formatos de texto basicos",
+                    "content": "Lista con vinetitas: 'Dame los puntos clave en formato lista'. Lista numerada: 'Dame los pasos numerados'. Parrafo: 'Respondeme en un solo parrafo de maximo 100 palabras'. Puntos clave + desarrollo: 'Resumeme en 5 puntos clave y luego desarrolla cada uno'. FAQ: 'Presentalo como preguntas frecuentes con respuestas cortas'. Comparacion pros/contras: 'Organiza la informacion en dos columnas: ventajas y desventajas'. Cada formato sirve para un proposito distinto y tu controlas cual quieres."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Formatos estructurados: tablas y datos",
+                    "content": "Las tablas son excepcionalmente utiles. 'Creame una tabla con columnas: Nombre, Precio, Caracteristica principal, Puntuacion'. Puedes pedir tablas comparativas, calendarios, matrices de decision, presupuestos y cronogramas. Para datos exportables: 'Dame los resultados en formato CSV separado por comas para importar a Excel'. Para uso tecnico: 'Devuelveme la informacion en formato JSON'. Para presentaciones: 'Organizalo en formato outline con 3 niveles de jerarquia'. Estos formatos te ahorran horas de reformateo manual."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Formatos creativos y profesionales",
+                    "content": "Email: 'Escribe un email con asunto, cuerpo y firma'. Script de video: 'Formato de guion con marcas de tiempo, naracion y texto en pantalla'. Post de red social: 'Formato de post de Instagram con caption, hashtags y CTA'. Hilo de Twitter/X: 'Escribe un hilo de 8 tweets sobre [tema], cada uno menor a 280 caracteres'. Informe ejecutivo: 'Formato de informe con resumen ejecutivo, hallazgos, recomendaciones y pasos a seguir'. Newsletter: 'Formato de boletin con titular, editorial, 3 noticias resumidas y cierre'."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar formato respuestas, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Transformar formatos sobre la marcha",
+                    "content": "Una funcion poderosa es pedirle a ChatGPT que transforme contenido entre formatos. 'Convierte esta lista en una tabla'. 'Toma este parrafo y hazlo un email profesional'. 'Transforma este informe en 5 bullets para una presentacion'. 'Convierte esta conversacion en un documento de requisitos'. 'Toma estas notas desordenadas y crea un articulo estructurado'. Esto te permite trabajar de forma natural (tomando notas desordenadas, por ejemplo) y dejar que la IA se encargue de dar formato profesional al resultado final."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica formato respuestas a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Toma un tema de tu area y pide el mismo contenido en 5 formatos diferentes: tabla, email, post de LinkedIn, lista de bullets y formato FAQ. Evalua cual es mas util para cada audiencia.",
+            "deliverable": "Un mismo contenido presentado en 5 formatos distintos + reflexion sobre cuando usar cada formato.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Domino al menos 10 formatos de salida de ChatGPT.",
+                "Puedo pedir tablas, CSV, JSON y otros formatos estructurados.",
+                "Se transformar contenido entre formatos con un solo prompt.",
+                "Mis prompts producen contenido listo para copiar y usar."
             ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Formato respuestas\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Necesito contenido sobre los beneficios del trabajo remoto presentado en 5 formatos: 1) Tabla comparativa (presencial vs remoto), 2) Email al equipo anunciando la politica, 3) Post de LinkedIn del CEO, 4) FAQ para recursos humanos, 5) 3 slides clave para una presentacion. Mismo contenido, 5 formatos. Ve formato por formato.",
+            "promptExamples": [
+                {
+                    "title": "Transformar notas a documento",
+                    "prompt": "Tengo estas notas desordenadas de una reunion: [pega tus notas]. Transformalas en: 1) Acta de reunion formal con asistentes, temas y acuerdos, 2) Lista de tareas asignadas con responsable y fecha, 3) Email resumen para los que no asistieron."
+                },
+                {
+                    "title": "Formato para presentacion",
+                    "prompt": "Tengo este texto largo: [pega texto]. Necesito convertirlo en contenido para una presentacion de 10 slides. Para cada slide dame: titulo, 3 bullet points (maximo 8 palabras cada uno), y notas del presentador (lo que deberia decir)."
+                },
+                {
+                    "title": "Generar datos tabulares",
+                    "prompt": "Creame una tabla con las 10 herramientas de IA mas utiles para oficina. Columnas: Herramienta | Categoria | Precio/mes | Ideal para | Alternativa gratuita | Puntuacion (1-5). Ordenadas de mayor a menor puntuacion. Separame la version en CSV al final para importar a Excel."
+                }
+            ]
         },
         "plugins": {
             "id": "plugins",
-            "title": "Plugins",
+            "title": "GPTs, plugins y herramientas integradas",
             "moduleTitle": "Uso efectivo",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras plugins dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "durationMinutes": 13,
+            "summary": "ChatGPT ha evolucionado mas alla del texto. Con los GPTs personalizados, la navegacion web, el interprete de codigo, DALL-E integrado y la tienda de GPTs, tienes un ecosistema completo. Aprende a usar estas herramientas integradas para multiplicar tu productividad.",
             "objectives": [
-                "Comprender los fundamentos practicos de plugins en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Conocer todas las herramientas integradas de ChatGPT (DALL-E, codigo, web, GPTs).",
+                "Encontrar y usar GPTs especializados de la tienda para tareas especificas.",
+                "Combinar multiples herramientas en una sola conversacion."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "El ecosistema de herramientas de ChatGPT",
+                    "content": "ChatGPT Plus incluye varias herramientas integradas que se activan automaticamente segun tu solicitud. DALL-E genera imagenes cuando pides 'crea una imagen de...'. Code Interpreter (analisis avanzado) ejecuta codigo Python para analizar datos, crear graficos y procesar archivos. Navegacion web busca informacion actualizada en internet. Canvas abre un editor colaborativo para textos y codigo. No necesitas activar nada manualmente: ChatGPT decide que herramienta usar basandose en tu prompt. Puedes forzar una: 'Usa Code Interpreter para analizar este Excel'."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "La tienda de GPTs: asistentes especializados",
+                    "content": "Los GPTs son versiones personalizadas de ChatGPT creadas para tareas especificas. La tienda GPT Store tiene miles. Ejemplos utiles: Canva GPT para disenar, Consensus para buscar papers academicos, Whimsical para crear diagramas, Kayak para planificar viajes, Scholar AI para investigacion. Para encontrar GPTs: haz clic en 'Explorar GPTs' en la barra lateral. Puedes buscar por categoria (productividad, escritura, educacion) o por nombre. Los mejores GPTs suelen ser los de las propias empresas (Canva, Zapier) y los destacados por OpenAI."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Code Interpreter: tu analista de datos personal",
+                    "content": "Code Interpreter es una de las funciones mas potentes y menos aprovechadas. Sube un archivo Excel, CSV o PDF con datos y pide: 'Analiza estos datos de ventas y crea graficos con los insights principales'. Puede crear visualizaciones profesionales, hacer calculos estadisticos, limpiar datos desordenados, convertir formatos de archivo y procesar imagenes. Ejemplo practico: sube tu extracto bancario en CSV y pide 'Analiza mis gastos por categoria y crea un grafico de barras'. Se nota que ejecuta codigo real (Python) a diferencia de las respuestas normales basadas solo en texto."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar plugins, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Combinar herramientas en un solo flujo",
+                    "content": "El verdadero poder esta en combinar herramientas. Ejemplo de flujo completo: 1) Busca en web las tendencias de tu industria, 2) Pide que analice los datos encontrados, 3) Genera un informe con graficos usando Code Interpreter, 4) Crea una imagen de portada con DALL-E, 5) Organiza todo en un documento con Canvas. Todo en una sola conversacion. Otro ejemplo: sube un PDF largo, pide un resumen ejecutivo, luego pide que genere una presentacion visual, y finalmente que cree las imagenes para acompanarla. ChatGPT se convierte en un equipo multidisciplinar."
                 }
             ],
-            "activity": "Actividad de micro-practica guiada: aplica plugins a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Haz un proyecto completo usando al menos 3 herramientas de ChatGPT. Ejemplo: busca informacion web sobre un tema, pidele que la analice creando una tabla, genera una imagen relacionada y exporta todo como documento.",
+            "deliverable": "Proyecto mini que demuestre el uso de al menos 3 herramientas integradas (web + analisis + imagen) en una sola conversacion.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Conozco las 4 herramientas integradas principales de ChatGPT.",
+                "He explorado la tienda de GPTs y encontrado al menos 3 utiles.",
+                "Probe Code Interpreter subiendo un archivo real de datos.",
+                "Combine al menos 2 herramientas en una misma conversacion."
             ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Plugins\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            "promptStarter": "Vamos a hacer un mini proyecto combinando tus herramientas. Primero, busca en internet las 5 tendencias principales en [tu industria] para 2025. Luego, crea una tabla comparativa con impacto, madurez y relevancia para una pyme. Despues, genera un grafico visual. Finalmente, crea una imagen profesional que represente estas tendencias para usar como portada de un informe.",
+            "promptExamples": [
+                {
+                    "title": "Analisis de datos con Code Interpreter",
+                    "prompt": "(Sube un archivo Excel) Analiza este archivo de datos de ventas mensuales. Necesito: 1) Resumen estadistico, 2) Tendencia de los ultimos 12 meses con grafico de lineas, 3) Top 5 productos por ingresos, 4) Prediccion para el proximo trimestre. Presenta todo con graficos profesionales."
+                },
+                {
+                    "title": "Encontrar el GPT correcto",
+                    "prompt": "Necesito un GPT especializado para [tu tarea]. Recomiendame los 5 mejores GPTs de la tienda para esta tarea, explicando que hace cada uno, sus puntos fuertes y un ejemplo de como usarlo."
+                },
+                {
+                    "title": "Flujo completo multiherramienta",
+                    "prompt": "Hagamos un proyecto completo: 1) Busca en internet las ultimas estadisticas sobre el mercado de e-commerce en Espana 2024-2025, 2) Organiza los datos en una tabla comparativa, 3) Crea 3 graficos profesionales con los datos mas relevantes, 4) Redacta un informe ejecutivo de 1 pagina, 5) Genera una imagen de portada para el informe."
+                }
+            ]
         },
         "ejercicios": {
             "id": "ejercicios",
-            "title": "Ejercicios",
+            "title": "Ejercicios practicos integradores",
             "moduleTitle": "Uso efectivo",
-            "durationMinutes": 10,
-            "summary": "En esta leccion trabajaras ejercicios dentro del curso \"ChatGPT desde cero\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Comprender los fundamentos practicos de ejercicios en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en ChatGPT desde cero. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar ejercicios, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica ejercicios a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en ChatGPT desde cero. Necesito ayuda con \"Ejercicios\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "prompts-101": {
-        "que-es-prompt": {
-            "id": "que-es-prompt",
-            "title": "Que es prompt",
-            "moduleTitle": "Fundamentos de prompts",
-            "durationMinutes": 10,
-            "summary": "En esta leccion trabajaras que es prompt dentro del curso \"Prompts 101: El Arte de Preguntar a la IA\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Comprender los fundamentos practicos de que es prompt en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts 101: El Arte de Preguntar a la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar que es prompt, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica que es prompt a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts 101: El Arte de Preguntar a la IA. Necesito ayuda con \"Que es prompt\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "anatomia-prompt": {
-            "id": "anatomia-prompt",
-            "title": "Anatomia prompt",
-            "moduleTitle": "Fundamentos de prompts",
-            "durationMinutes": 11,
-            "summary": "En esta leccion trabajaras anatomia prompt dentro del curso \"Prompts 101: El Arte de Preguntar a la IA\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Comprender los fundamentos practicos de anatomia prompt en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts 101: El Arte de Preguntar a la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar anatomia prompt, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica anatomia prompt a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts 101: El Arte de Preguntar a la IA. Necesito ayuda con \"Anatomia prompt\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "errores-comunes": {
-            "id": "errores-comunes",
-            "title": "Errores comunes",
-            "moduleTitle": "Fundamentos de prompts",
-            "durationMinutes": 12,
-            "summary": "En esta leccion trabajaras errores comunes dentro del curso \"Prompts 101: El Arte de Preguntar a la IA\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Comprender los fundamentos practicos de errores comunes en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts 101: El Arte de Preguntar a la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar errores comunes, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica errores comunes a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts 101: El Arte de Preguntar a la IA. Necesito ayuda con \"Errores comunes\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "practica-basica": {
-            "id": "practica-basica",
-            "title": "Practica basica",
-            "moduleTitle": "Fundamentos de prompts",
-            "durationMinutes": 13,
-            "summary": "En esta leccion trabajaras practica basica dentro del curso \"Prompts 101: El Arte de Preguntar a la IA\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Comprender los fundamentos practicos de practica basica en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts 101: El Arte de Preguntar a la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar practica basica, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica practica basica a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts 101: El Arte de Preguntar a la IA. Necesito ayuda con \"Practica basica\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "dar-contexto": {
-            "id": "dar-contexto",
-            "title": "Dar contexto",
-            "moduleTitle": "Técnicas esenciales",
-            "durationMinutes": 14,
-            "summary": "En esta leccion trabajaras dar contexto dentro del curso \"Prompts 101: El Arte de Preguntar a la IA\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Comprender los fundamentos practicos de dar contexto en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts 101: El Arte de Preguntar a la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar dar contexto, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica dar contexto a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts 101: El Arte de Preguntar a la IA. Necesito ayuda con \"Dar contexto\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "definir-rol": {
-            "id": "definir-rol",
-            "title": "Definir rol",
-            "moduleTitle": "Técnicas esenciales",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras definir rol dentro del curso \"Prompts 101: El Arte de Preguntar a la IA\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Comprender los fundamentos practicos de definir rol en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts 101: El Arte de Preguntar a la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar definir rol, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica definir rol a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts 101: El Arte de Preguntar a la IA. Necesito ayuda con \"Definir rol\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "formato-salida": {
-            "id": "formato-salida",
-            "title": "Formato salida",
-            "moduleTitle": "Técnicas esenciales",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras formato salida dentro del curso \"Prompts 101: El Arte de Preguntar a la IA\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Comprender los fundamentos practicos de formato salida en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts 101: El Arte de Preguntar a la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar formato salida, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica formato salida a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts 101: El Arte de Preguntar a la IA. Necesito ayuda con \"Formato salida\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "iteracion": {
-            "id": "iteracion",
-            "title": "Iteracion",
-            "moduleTitle": "Técnicas esenciales",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras iteracion dentro del curso \"Prompts 101: El Arte de Preguntar a la IA\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Comprender los fundamentos practicos de iteracion en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts 101: El Arte de Preguntar a la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar iteracion, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica iteracion a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts 101: El Arte de Preguntar a la IA. Necesito ayuda con \"Iteracion\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-imagenes-basico": {
-        "dalle-intro": {
-            "id": "dalle-intro",
-            "title": "Dalle intro",
-            "moduleTitle": "Herramientas de imagen",
-            "durationMinutes": 10,
-            "summary": "En esta leccion trabajaras dalle intro dentro del curso \"Imágenes con IA: Primeros pasos\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Comprender los fundamentos practicos de dalle intro en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Imágenes con IA: Primeros pasos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar dalle intro, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica dalle intro a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Imágenes con IA: Primeros pasos. Necesito ayuda con \"Dalle intro\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "midjourney-intro": {
-            "id": "midjourney-intro",
-            "title": "Midjourney intro",
-            "moduleTitle": "Herramientas de imagen",
-            "durationMinutes": 11,
-            "summary": "En esta leccion trabajaras midjourney intro dentro del curso \"Imágenes con IA: Primeros pasos\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Comprender los fundamentos practicos de midjourney intro en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Imágenes con IA: Primeros pasos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar midjourney intro, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica midjourney intro a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Imágenes con IA: Primeros pasos. Necesito ayuda con \"Midjourney intro\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "stable-diffusion": {
-            "id": "stable-diffusion",
-            "title": "Stable diffusion",
-            "moduleTitle": "Herramientas de imagen",
-            "durationMinutes": 12,
-            "summary": "En esta leccion trabajaras stable diffusion dentro del curso \"Imágenes con IA: Primeros pasos\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Comprender los fundamentos practicos de stable diffusion en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Imágenes con IA: Primeros pasos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar stable diffusion, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica stable diffusion a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Imágenes con IA: Primeros pasos. Necesito ayuda con \"Stable diffusion\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "herramientas-gratis": {
-            "id": "herramientas-gratis",
-            "title": "Herramientas gratis",
-            "moduleTitle": "Herramientas de imagen",
-            "durationMinutes": 13,
-            "summary": "En esta leccion trabajaras herramientas gratis dentro del curso \"Imágenes con IA: Primeros pasos\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Comprender los fundamentos practicos de herramientas gratis en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Imágenes con IA: Primeros pasos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar herramientas gratis, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica herramientas gratis a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Imágenes con IA: Primeros pasos. Necesito ayuda con \"Herramientas gratis\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "primer-prompt-imagen": {
-            "id": "primer-prompt-imagen",
-            "title": "Primer prompt imagen",
-            "moduleTitle": "Crear imágenes",
-            "durationMinutes": 14,
-            "summary": "En esta leccion trabajaras primer prompt imagen dentro del curso \"Imágenes con IA: Primeros pasos\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Comprender los fundamentos practicos de primer prompt imagen en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Imágenes con IA: Primeros pasos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar primer prompt imagen, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica primer prompt imagen a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Imágenes con IA: Primeros pasos. Necesito ayuda con \"Primer prompt imagen\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "estilos-basicos": {
-            "id": "estilos-basicos",
-            "title": "Estilos basicos",
-            "moduleTitle": "Crear imágenes",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras estilos basicos dentro del curso \"Imágenes con IA: Primeros pasos\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Comprender los fundamentos practicos de estilos basicos en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Imágenes con IA: Primeros pasos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar estilos basicos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica estilos basicos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Imágenes con IA: Primeros pasos. Necesito ayuda con \"Estilos basicos\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "mejorar-resultados": {
-            "id": "mejorar-resultados",
-            "title": "Mejorar resultados",
-            "moduleTitle": "Crear imágenes",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras mejorar resultados dentro del curso \"Imágenes con IA: Primeros pasos\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Comprender los fundamentos practicos de mejorar resultados en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Imágenes con IA: Primeros pasos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar mejorar resultados, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica mejorar resultados a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Imágenes con IA: Primeros pasos. Necesito ayuda con \"Mejorar resultados\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "proyecto-final": {
-            "id": "proyecto-final",
-            "title": "Proyecto final",
-            "moduleTitle": "Crear imágenes",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras proyecto final dentro del curso \"Imágenes con IA: Primeros pasos\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Comprender los fundamentos practicos de proyecto final en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Imágenes con IA: Primeros pasos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar proyecto final, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica proyecto final a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Imágenes con IA: Primeros pasos. Necesito ayuda con \"Proyecto final\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "productividad-ia": {
-        "emails-ia": {
-            "id": "emails-ia",
-            "title": "Emails ia",
-            "moduleTitle": "IA en el trabajo",
-            "durationMinutes": 10,
-            "summary": "En esta leccion trabajaras emails ia dentro del curso \"Productividad con IA en el trabajo\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Comprender los fundamentos practicos de emails ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Productividad con IA en el trabajo. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar emails ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica emails ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Productividad con IA en el trabajo. Necesito ayuda con \"Emails ia\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "resumenes": {
-            "id": "resumenes",
-            "title": "Resumenes",
-            "moduleTitle": "IA en el trabajo",
-            "durationMinutes": 11,
-            "summary": "En esta leccion trabajaras resumenes dentro del curso \"Productividad con IA en el trabajo\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Comprender los fundamentos practicos de resumenes en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Productividad con IA en el trabajo. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar resumenes, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica resumenes a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Productividad con IA en el trabajo. Necesito ayuda con \"Resumenes\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "presentaciones": {
-            "id": "presentaciones",
-            "title": "Presentaciones",
-            "moduleTitle": "IA en el trabajo",
-            "durationMinutes": 12,
-            "summary": "En esta leccion trabajaras presentaciones dentro del curso \"Productividad con IA en el trabajo\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Comprender los fundamentos practicos de presentaciones en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Productividad con IA en el trabajo. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar presentaciones, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica presentaciones a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Productividad con IA en el trabajo. Necesito ayuda con \"Presentaciones\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "brainstorming": {
-            "id": "brainstorming",
-            "title": "Brainstorming",
-            "moduleTitle": "IA en el trabajo",
-            "durationMinutes": 13,
-            "summary": "En esta leccion trabajaras brainstorming dentro del curso \"Productividad con IA en el trabajo\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Comprender los fundamentos practicos de brainstorming en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Productividad con IA en el trabajo. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar brainstorming, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica brainstorming a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Productividad con IA en el trabajo. Necesito ayuda con \"Brainstorming\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "notion-ai": {
-            "id": "notion-ai",
-            "title": "Notion ai",
-            "moduleTitle": "Herramientas prácticas",
-            "durationMinutes": 14,
-            "summary": "En esta leccion trabajaras notion ai dentro del curso \"Productividad con IA en el trabajo\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Comprender los fundamentos practicos de notion ai en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Productividad con IA en el trabajo. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar notion ai, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica notion ai a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Productividad con IA en el trabajo. Necesito ayuda con \"Notion ai\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "canva-ai": {
-            "id": "canva-ai",
-            "title": "Canva ai",
-            "moduleTitle": "Herramientas prácticas",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras canva ai dentro del curso \"Productividad con IA en el trabajo\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Comprender los fundamentos practicos de canva ai en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Productividad con IA en el trabajo. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar canva ai, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica canva ai a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Productividad con IA en el trabajo. Necesito ayuda con \"Canva ai\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "google-workspace": {
-            "id": "google-workspace",
-            "title": "Google workspace",
-            "moduleTitle": "Herramientas prácticas",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras google workspace dentro del curso \"Productividad con IA en el trabajo\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Comprender los fundamentos practicos de google workspace en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Productividad con IA en el trabajo. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar google workspace, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica google workspace a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Productividad con IA en el trabajo. Necesito ayuda con \"Google workspace\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "automatizaciones": {
-            "id": "automatizaciones",
-            "title": "Automatizaciones",
-            "moduleTitle": "Herramientas prácticas",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras automatizaciones dentro del curso \"Productividad con IA en el trabajo\" con un enfoque paso a paso, lenguaje simple y ejemplos cotidianos. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Comprender los fundamentos practicos de automatizaciones en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Productividad con IA en el trabajo. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar automatizaciones, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de micro-practica guiada: aplica automatizaciones a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Productividad con IA en el trabajo. Necesito ayuda con \"Automatizaciones\" para nivel principiante. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "prompts-avanzados": {
-        "chain-of-thought": {
-            "id": "chain-of-thought",
-            "title": "Chain of thought",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras chain of thought dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de chain of thought en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar chain of thought, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica chain of thought a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Chain of thought\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "few-shot": {
-            "id": "few-shot",
-            "title": "Few shot",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras few shot dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de few shot en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar few shot, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica few shot a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Few shot\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "zero-shot": {
-            "id": "zero-shot",
-            "title": "Zero shot",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras zero shot dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de zero shot en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar zero shot, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica zero shot a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Zero shot\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "role-playing": {
-            "id": "role-playing",
-            "title": "Role playing",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras role playing dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de role playing en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar role playing, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica role playing a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Role playing\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "sistema-prompts": {
-            "id": "sistema-prompts",
-            "title": "Sistema prompts",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras sistema prompts dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de sistema prompts en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar sistema prompts, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica sistema prompts a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Sistema prompts\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "escritura-creativa": {
-            "id": "escritura-creativa",
-            "title": "Escritura creativa",
-            "moduleTitle": "Casos prácticos",
             "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras escritura creativa dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
+            "summary": "Es hora de poner en practica todo lo aprendido. Esta leccion contiene 10 ejercicios progresivos que cubren todos los conceptos del curso: desde prompts basicos hasta flujos complejos con multiples herramientas. Completalos todos para consolidar tu dominio de ChatGPT.",
             "objectives": [
-                "Aplicar los fundamentos practicos de escritura creativa en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
+                "Aplicar todas las tecnicas aprendidas en ejercicios practicos reales.",
+                "Resolver desafios progresivos que combinan multiples habilidades.",
+                "Crear un portfolio personal de prompts probados y resultados."
             ],
             "sections": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "heading": "Ejercicios 1-3: Fundamentos de prompting",
+                    "content": "Ejercicio 1: Email profesional. Escribe un prompt usando la formula CTF para generar un email solicitando presupuesto a un proveedor. Debe incluir contexto de empresa, requisitos especificos y formato formal. Ejercicio 2: Resumen ejecutivo. Copia un articulo largo de internet, pegalo en ChatGPT y pide un resumen en 3 niveles: tweet (280 chars), parrafo (100 palabras) y pagina completa. Ejercicio 3: Traductor contextual. Pide que traduzca un texto tecnico de tu area al ingles, manteniendo el tono profesional y los terminos tecnicos correctos del sector."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "heading": "Ejercicios 4-6: Formatos y creatividad",
+                    "content": "Ejercicio 4: Tabla comparativa. Crea una tabla de las 5 mejores opciones de [producto/servicio de tu interes] con al menos 6 columnas de criterios relevantes. Ejercicio 5: Script de contenido. Genera un guion para un video de 60 segundos sobre un tema que domines, con estructura gancho-desarrollo-cierre y marcas de tiempo. Ejercicio 6: Brainstorming estructurado. Pide 20 ideas para [tu desafio], organizadas por categoria (rapidas, a medio plazo, ambiciosas), con puntuacion de viabilidad."
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
+                    "heading": "Ejercicios 7-8: Analisis y critica",
+                    "content": "Ejercicio 7: Analista critico. Pega un texto que hayas escrito (email, informe, post) y pide feedback constructivo: fortalezas, debilidades, errores y 3 mejoras concretas con reescritura. Ejercicio 8: Detector de alucinaciones. Haz a ChatGPT 5 preguntas sobre datos especificos de tu area (fechas, estadisticas, nombres) y verifica cada respuesta. Documenta cuantas acierta y cuantas alucina."
                 },
                 {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar escritura creativa, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "heading": "Ejercicios 9-10: Proyectos integradores",
+                    "content": "Ejercicio 9: Asistente personalizado. Escribe un 'system prompt' completo (instrucciones iniciales) para convertir a ChatGPT en tu asistente personal de trabajo. Incluye: quien eres, como quieres que responda, que debe recordar y que nunca debe hacer. Pruebalo con 5 preguntas distintas. Ejercicio 10: Flujo completo. Elige un proyecto real (organizar un evento, planificar un viaje, crear un plan de marketing) y resuelvelo integramente con ChatGPT usando minimo 5 conversaciones enlazadas: investigacion, planificacion, creacion de contenido, analisis y entregable final."
                 }
             ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica escritura creativa a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
+            "activity": "Completa los 10 ejercicios del 1 al 10. Guarda tus mejores prompts y resultados en un documento. Esto se convertira en tu 'caja de herramientas' personal para futuras tareas.",
+            "deliverable": "Portfolio de 10 ejercicios completados con prompts, resultados y reflexiones sobre que funciono mejor y que mejorar.",
             "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
+                "Complete los 10 ejercicios progresivos.",
+                "Guarde mis mejores prompts como plantillas reutilizables.",
+                "Combine multiples tecnicas en los ejercicios avanzados.",
+                "Cree mi portfolio personal de prompts probados."
             ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Escritura creativa\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "analisis-datos": {
-            "id": "analisis-datos",
-            "title": "Analisis datos",
-            "moduleTitle": "Casos prácticos",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras analisis datos dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de analisis datos en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
+            "promptStarter": "Actua como mi coach de ChatGPT. He completado un curso basico y quiero poner a prueba mis habilidades. Dame un desafio practico de nivel intermedio: una tarea del mundo real que requiera combinar contexto, formato, rol y iteracion para resolverla bien. Evalua mi resultado cuando te lo envie.",
+            "promptExamples": [
                 {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
+                    "title": "Ejercicio integrador de email",
+                    "prompt": "Actua como director de comunicacion de una startup de tecnologia educativa. Necesito escribir un email al equipo de 12 personas anunciando: 1) Cerramos una ronda de financiacion de 2 millones, 2) Contrataremos 5 personas nuevas, 3) Lanzaremos el producto en 3 meses. Tono: profesional pero emocionante. Incluye: asunto impactante, cuerpo con los 3 puntos, y cierre motivador. Maximo 250 palabras."
                 },
                 {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
+                    "title": "Reto de deteccion de errores",
+                    "prompt": "Voy a darte un texto que escribi y quiero que seas extremadamente critico. Busca: errores gramaticales, frases confusas, argumentos debiles, afirmaciones sin respaldo, y oportunidades de mejora. Puntuame del 1 al 10 en: claridad, persuasion, profesionalismo y concision. Texto: [pega tu texto]"
                 },
                 {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar analisis datos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
+                    "title": "Proyecto completo de contenido",
+                    "prompt": "Vamos a crear un mini plan de contenido para mi marca personal en LinkedIn. Paso 1: Define mi posicionamiento (soy [profesion]). Paso 2: Sugiere 4 pilares de contenido. Paso 3: Genera un calendario de 2 semanas (3 posts/semana). Paso 4: Escribe el primer post completo. Paso 5: Dame ideas para el visual que acompane al post."
                 }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica analisis datos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Analisis datos\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "programacion": {
-            "id": "programacion",
-            "title": "Programacion",
-            "moduleTitle": "Casos prácticos",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras programacion dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de programacion en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar programacion, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica programacion a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Programacion\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "investigacion": {
-            "id": "investigacion",
-            "title": "Investigacion",
-            "moduleTitle": "Casos prácticos",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras investigacion dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de investigacion en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar investigacion, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica investigacion a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Investigacion\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "proyecto": {
-            "id": "proyecto",
-            "title": "Proyecto",
-            "moduleTitle": "Casos prácticos",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras proyecto dentro del curso \"Prompts Avanzados\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de proyecto en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Prompts Avanzados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar proyecto, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica proyecto a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Prompts Avanzados. Necesito ayuda con \"Proyecto\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
+            ]
         }
     },
-    "midjourney-mastery": {
-        "parametros-v6": {
-            "id": "parametros-v6",
-            "title": "Parametros v6",
-            "moduleTitle": "Parámetros y control",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras parametros v6 dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de parametros v6 en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar parametros v6, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica parametros v6 a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Parametros v6\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "aspect-ratio": {
-            "id": "aspect-ratio",
-            "title": "Aspect ratio",
-            "moduleTitle": "Parámetros y control",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras aspect ratio dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de aspect ratio en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar aspect ratio, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica aspect ratio a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Aspect ratio\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "stylize": {
-            "id": "stylize",
-            "title": "Stylize",
-            "moduleTitle": "Parámetros y control",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras stylize dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de stylize en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar stylize, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica stylize a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Stylize\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "chaos-weird": {
-            "id": "chaos-weird",
-            "title": "Chaos weird",
-            "moduleTitle": "Parámetros y control",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras chaos weird dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de chaos weird en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar chaos weird, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica chaos weird a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Chaos weird\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "seed": {
-            "id": "seed",
-            "title": "Seed",
-            "moduleTitle": "Parámetros y control",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras seed dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de seed en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar seed, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica seed a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Seed\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "estilos-artisticos": {
-            "id": "estilos-artisticos",
-            "title": "Estilos artisticos",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras estilos artisticos dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de estilos artisticos en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar estilos artisticos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica estilos artisticos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Estilos artisticos\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "composicion": {
-            "id": "composicion",
-            "title": "Composicion",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras composicion dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de composicion en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar composicion, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica composicion a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Composicion\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "iluminacion": {
-            "id": "iluminacion",
-            "title": "Iluminacion",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras iluminacion dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de iluminacion en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar iluminacion, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica iluminacion a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Iluminacion\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "consistencia": {
-            "id": "consistencia",
-            "title": "Consistencia",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras consistencia dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de consistencia en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar consistencia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica consistencia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Consistencia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "portfolio": {
-            "id": "portfolio",
-            "title": "Portfolio",
-            "moduleTitle": "Técnicas avanzadas",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras portfolio dentro del curso \"Midjourney: De intermedio a experto\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de portfolio en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Midjourney: De intermedio a experto. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar portfolio, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica portfolio a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Midjourney: De intermedio a experto. Necesito ayuda con \"Portfolio\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "audio-ia": {
-        "suno-musica": {
-            "id": "suno-musica",
-            "title": "Suno musica",
-            "moduleTitle": "Generación de audio",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras suno musica dentro del curso \"Audio e IA: Música, voz y sonido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: pieza de audio lista para publicar.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de suno musica en tu contexto.",
-                "Construir una solucion repetible con foco en direccion sonora y limpieza de resultado.",
-                "Evitar el riesgo mas comun en este tema: voz o musica sin coherencia tonal."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Audio e IA: Música, voz y sonido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar suno musica, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica suno musica a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: pieza de audio lista para publicar + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Audio e IA: Música, voz y sonido. Necesito ayuda con \"Suno musica\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "elevenlabs-voz": {
-            "id": "elevenlabs-voz",
-            "title": "Elevenlabs voz",
-            "moduleTitle": "Generación de audio",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras elevenlabs voz dentro del curso \"Audio e IA: Música, voz y sonido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: pieza de audio lista para publicar.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de elevenlabs voz en tu contexto.",
-                "Construir una solucion repetible con foco en direccion sonora y limpieza de resultado.",
-                "Evitar el riesgo mas comun en este tema: voz o musica sin coherencia tonal."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Audio e IA: Música, voz y sonido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar elevenlabs voz, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica elevenlabs voz a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: pieza de audio lista para publicar + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Audio e IA: Música, voz y sonido. Necesito ayuda con \"Elevenlabs voz\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "soundraw": {
-            "id": "soundraw",
-            "title": "Soundraw",
-            "moduleTitle": "Generación de audio",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras soundraw dentro del curso \"Audio e IA: Música, voz y sonido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: pieza de audio lista para publicar.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de soundraw en tu contexto.",
-                "Construir una solucion repetible con foco en direccion sonora y limpieza de resultado.",
-                "Evitar el riesgo mas comun en este tema: voz o musica sin coherencia tonal."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Audio e IA: Música, voz y sonido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar soundraw, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica soundraw a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: pieza de audio lista para publicar + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Audio e IA: Música, voz y sonido. Necesito ayuda con \"Soundraw\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "efectos-sonido": {
-            "id": "efectos-sonido",
-            "title": "Efectos sonido",
-            "moduleTitle": "Generación de audio",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras efectos sonido dentro del curso \"Audio e IA: Música, voz y sonido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: pieza de audio lista para publicar.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de efectos sonido en tu contexto.",
-                "Construir una solucion repetible con foco en direccion sonora y limpieza de resultado.",
-                "Evitar el riesgo mas comun en este tema: voz o musica sin coherencia tonal."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Audio e IA: Música, voz y sonido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar efectos sonido, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica efectos sonido a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: pieza de audio lista para publicar + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Audio e IA: Música, voz y sonido. Necesito ayuda con \"Efectos sonido\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "podcast-ia": {
-            "id": "podcast-ia",
-            "title": "Podcast ia",
-            "moduleTitle": "Aplicaciones prácticas",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras podcast ia dentro del curso \"Audio e IA: Música, voz y sonido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: pieza de audio lista para publicar.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de podcast ia en tu contexto.",
-                "Construir una solucion repetible con foco en direccion sonora y limpieza de resultado.",
-                "Evitar el riesgo mas comun en este tema: voz o musica sin coherencia tonal."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Audio e IA: Música, voz y sonido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar podcast ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica podcast ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: pieza de audio lista para publicar + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Audio e IA: Música, voz y sonido. Necesito ayuda con \"Podcast ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "whisper-transcripcion": {
-            "id": "whisper-transcripcion",
-            "title": "Whisper transcripcion",
-            "moduleTitle": "Aplicaciones prácticas",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras whisper transcripcion dentro del curso \"Audio e IA: Música, voz y sonido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: pieza de audio lista para publicar.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de whisper transcripcion en tu contexto.",
-                "Construir una solucion repetible con foco en direccion sonora y limpieza de resultado.",
-                "Evitar el riesgo mas comun en este tema: voz o musica sin coherencia tonal."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Audio e IA: Música, voz y sonido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar whisper transcripcion, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica whisper transcripcion a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: pieza de audio lista para publicar + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Audio e IA: Música, voz y sonido. Necesito ayuda con \"Whisper transcripcion\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "doblaje": {
-            "id": "doblaje",
-            "title": "Doblaje",
-            "moduleTitle": "Aplicaciones prácticas",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras doblaje dentro del curso \"Audio e IA: Música, voz y sonido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: pieza de audio lista para publicar.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de doblaje en tu contexto.",
-                "Construir una solucion repetible con foco en direccion sonora y limpieza de resultado.",
-                "Evitar el riesgo mas comun en este tema: voz o musica sin coherencia tonal."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Audio e IA: Música, voz y sonido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar doblaje, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica doblaje a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: pieza de audio lista para publicar + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Audio e IA: Música, voz y sonido. Necesito ayuda con \"Doblaje\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "proyecto-audio": {
-            "id": "proyecto-audio",
-            "title": "Proyecto audio",
-            "moduleTitle": "Aplicaciones prácticas",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras proyecto audio dentro del curso \"Audio e IA: Música, voz y sonido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: pieza de audio lista para publicar.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de proyecto audio en tu contexto.",
-                "Construir una solucion repetible con foco en direccion sonora y limpieza de resultado.",
-                "Evitar el riesgo mas comun en este tema: voz o musica sin coherencia tonal."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Audio e IA: Música, voz y sonido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar proyecto audio, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica proyecto audio a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: pieza de audio lista para publicar + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Audio e IA: Música, voz y sonido. Necesito ayuda con \"Proyecto audio\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "video-ia": {
-        "runway-gen3": {
-            "id": "runway-gen3",
-            "title": "Runway gen3",
-            "moduleTitle": "Generación de video",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras runway gen3 dentro del curso \"Video con IA: Creación y edición\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: secuencia de video con narrativa clara.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de runway gen3 en tu contexto.",
-                "Construir una solucion repetible con foco en storyboard, edicion y consistencia visual.",
-                "Evitar el riesgo mas comun en este tema: escenas inconexas o ritmo inestable."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Video con IA: Creación y edición. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar runway gen3, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica runway gen3 a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: secuencia de video con narrativa clara + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Video con IA: Creación y edición. Necesito ayuda con \"Runway gen3\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "pika-labs": {
-            "id": "pika-labs",
-            "title": "Pika labs",
-            "moduleTitle": "Generación de video",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras pika labs dentro del curso \"Video con IA: Creación y edición\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: secuencia de video con narrativa clara.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de pika labs en tu contexto.",
-                "Construir una solucion repetible con foco en storyboard, edicion y consistencia visual.",
-                "Evitar el riesgo mas comun en este tema: escenas inconexas o ritmo inestable."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Video con IA: Creación y edición. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar pika labs, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica pika labs a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: secuencia de video con narrativa clara + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Video con IA: Creación y edición. Necesito ayuda con \"Pika labs\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "heygen-avatares": {
-            "id": "heygen-avatares",
-            "title": "Heygen avatares",
-            "moduleTitle": "Generación de video",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras heygen avatares dentro del curso \"Video con IA: Creación y edición\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: secuencia de video con narrativa clara.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de heygen avatares en tu contexto.",
-                "Construir una solucion repetible con foco en storyboard, edicion y consistencia visual.",
-                "Evitar el riesgo mas comun en este tema: escenas inconexas o ritmo inestable."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Video con IA: Creación y edición. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar heygen avatares, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica heygen avatares a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: secuencia de video con narrativa clara + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Video con IA: Creación y edición. Necesito ayuda con \"Heygen avatares\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "text-to-video": {
-            "id": "text-to-video",
-            "title": "Text to video",
-            "moduleTitle": "Generación de video",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras text to video dentro del curso \"Video con IA: Creación y edición\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: secuencia de video con narrativa clara.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de text to video en tu contexto.",
-                "Construir una solucion repetible con foco en storyboard, edicion y consistencia visual.",
-                "Evitar el riesgo mas comun en este tema: escenas inconexas o ritmo inestable."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Video con IA: Creación y edición. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar text to video, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica text to video a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: secuencia de video con narrativa clara + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Video con IA: Creación y edición. Necesito ayuda con \"Text to video\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "edicion-ia": {
-            "id": "edicion-ia",
-            "title": "Edicion ia",
-            "moduleTitle": "Edición y producción",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras edicion ia dentro del curso \"Video con IA: Creación y edición\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: secuencia de video con narrativa clara.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de edicion ia en tu contexto.",
-                "Construir una solucion repetible con foco en storyboard, edicion y consistencia visual.",
-                "Evitar el riesgo mas comun en este tema: escenas inconexas o ritmo inestable."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Video con IA: Creación y edición. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar edicion ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica edicion ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: secuencia de video con narrativa clara + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Video con IA: Creación y edición. Necesito ayuda con \"Edicion ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "subtitulos-auto": {
-            "id": "subtitulos-auto",
-            "title": "Subtitulos auto",
-            "moduleTitle": "Edición y producción",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras subtitulos auto dentro del curso \"Video con IA: Creación y edición\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: secuencia de video con narrativa clara.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de subtitulos auto en tu contexto.",
-                "Construir una solucion repetible con foco en storyboard, edicion y consistencia visual.",
-                "Evitar el riesgo mas comun en este tema: escenas inconexas o ritmo inestable."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Video con IA: Creación y edición. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar subtitulos auto, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica subtitulos auto a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: secuencia de video con narrativa clara + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Video con IA: Creación y edición. Necesito ayuda con \"Subtitulos auto\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "shorts-reels": {
-            "id": "shorts-reels",
-            "title": "Shorts reels",
-            "moduleTitle": "Edición y producción",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras shorts reels dentro del curso \"Video con IA: Creación y edición\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: secuencia de video con narrativa clara.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de shorts reels en tu contexto.",
-                "Construir una solucion repetible con foco en storyboard, edicion y consistencia visual.",
-                "Evitar el riesgo mas comun en este tema: escenas inconexas o ritmo inestable."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Video con IA: Creación y edición. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar shorts reels, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica shorts reels a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: secuencia de video con narrativa clara + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Video con IA: Creación y edición. Necesito ayuda con \"Shorts reels\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "proyecto-video": {
-            "id": "proyecto-video",
-            "title": "Proyecto video",
-            "moduleTitle": "Edición y producción",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras proyecto video dentro del curso \"Video con IA: Creación y edición\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: secuencia de video con narrativa clara.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de proyecto video en tu contexto.",
-                "Construir una solucion repetible con foco en storyboard, edicion y consistencia visual.",
-                "Evitar el riesgo mas comun en este tema: escenas inconexas o ritmo inestable."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Video con IA: Creación y edición. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar proyecto video, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica proyecto video a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: secuencia de video con narrativa clara + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Video con IA: Creación y edición. Necesito ayuda con \"Proyecto video\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "automatizacion-ia": {
-        "que-es-automatizacion": {
-            "id": "que-es-automatizacion",
-            "title": "Que es automatizacion",
-            "moduleTitle": "Fundamentos de automatización",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras que es automatizacion dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de que es automatizacion en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar que es automatizacion, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica que es automatizacion a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"Que es automatizacion\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "make-intro": {
-            "id": "make-intro",
-            "title": "Make intro",
-            "moduleTitle": "Fundamentos de automatización",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras make intro dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de make intro en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar make intro, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica make intro a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"Make intro\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "zapier-intro": {
-            "id": "zapier-intro",
-            "title": "Zapier intro",
-            "moduleTitle": "Fundamentos de automatización",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras zapier intro dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de zapier intro en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar zapier intro, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica zapier intro a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"Zapier intro\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "n8n-intro": {
-            "id": "n8n-intro",
-            "title": "N8n intro",
-            "moduleTitle": "Fundamentos de automatización",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras n8n intro dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de n8n intro en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar n8n intro, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica n8n intro a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"N8n intro\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "elegir-herramienta": {
-            "id": "elegir-herramienta",
-            "title": "Elegir herramienta",
-            "moduleTitle": "Fundamentos de automatización",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras elegir herramienta dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de elegir herramienta en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar elegir herramienta, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica elegir herramienta a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"Elegir herramienta\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "email-auto": {
-            "id": "email-auto",
-            "title": "Email auto",
-            "moduleTitle": "Flujos prácticos",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras email auto dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de email auto en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar email auto, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica email auto a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"Email auto\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "social-media": {
-            "id": "social-media",
-            "title": "Social media",
-            "moduleTitle": "Flujos prácticos",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras social media dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de social media en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar social media, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica social media a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"Social media\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "generacion-contenido": {
-            "id": "generacion-contenido",
-            "title": "Generacion contenido",
-            "moduleTitle": "Flujos prácticos",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras generacion contenido dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de generacion contenido en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar generacion contenido, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica generacion contenido a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"Generacion contenido\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "datos-sheets": {
-            "id": "datos-sheets",
-            "title": "Datos sheets",
-            "moduleTitle": "Flujos prácticos",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras datos sheets dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de datos sheets en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar datos sheets, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica datos sheets a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"Datos sheets\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "proyecto-flow": {
-            "id": "proyecto-flow",
-            "title": "Proyecto flow",
-            "moduleTitle": "Flujos prácticos",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras proyecto flow dentro del curso \"Automatización con IA: Make y Zapier\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de proyecto flow en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Automatización con IA: Make y Zapier. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar proyecto flow, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica proyecto flow a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Automatización con IA: Make y Zapier. Necesito ayuda con \"Proyecto flow\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "agentes-ia": {
-        "crear-gpt": {
-            "id": "crear-gpt",
-            "title": "Crear gpt",
-            "moduleTitle": "GPTs Personalizados",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras crear gpt dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de crear gpt en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar crear gpt, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica crear gpt a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Crear gpt\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "instrucciones": {
-            "id": "instrucciones",
-            "title": "Instrucciones",
-            "moduleTitle": "GPTs Personalizados",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras instrucciones dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de instrucciones en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar instrucciones, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica instrucciones a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Instrucciones\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "knowledge-base": {
-            "id": "knowledge-base",
-            "title": "Knowledge base",
-            "moduleTitle": "GPTs Personalizados",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras knowledge base dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de knowledge base en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar knowledge base, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica knowledge base a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Knowledge base\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "actions-api": {
-            "id": "actions-api",
-            "title": "Actions api",
-            "moduleTitle": "GPTs Personalizados",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras actions api dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de actions api en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar actions api, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica actions api a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Actions api\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "publicar-gpt": {
-            "id": "publicar-gpt",
-            "title": "Publicar gpt",
-            "moduleTitle": "GPTs Personalizados",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras publicar gpt dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de publicar gpt en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar publicar gpt, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica publicar gpt a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Publicar gpt\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "que-son-agentes": {
-            "id": "que-son-agentes",
-            "title": "Que son agentes",
-            "moduleTitle": "Agentes autónomos",
-            "durationMinutes": 25,
-            "summary": "En esta leccion trabajaras que son agentes dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de que son agentes en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar que son agentes, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica que son agentes a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Que son agentes\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "crew-ai": {
-            "id": "crew-ai",
-            "title": "Crew ai",
-            "moduleTitle": "Agentes autónomos",
-            "durationMinutes": 26,
-            "summary": "En esta leccion trabajaras crew ai dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de crew ai en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar crew ai, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica crew ai a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Crew ai\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "autogen": {
-            "id": "autogen",
-            "title": "Autogen",
-            "moduleTitle": "Agentes autónomos",
-            "durationMinutes": 27,
-            "summary": "En esta leccion trabajaras autogen dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de autogen en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar autogen, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica autogen a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Autogen\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "langchain-basico": {
-            "id": "langchain-basico",
-            "title": "Langchain basico",
-            "moduleTitle": "Agentes autónomos",
-            "durationMinutes": 28,
-            "summary": "En esta leccion trabajaras langchain basico dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de langchain basico en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar langchain basico, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica langchain basico a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Langchain basico\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "proyecto-agente": {
-            "id": "proyecto-agente",
-            "title": "Proyecto agente",
-            "moduleTitle": "Agentes autónomos",
-            "durationMinutes": 29,
-            "summary": "En esta leccion trabajaras proyecto agente dentro del curso \"Agentes de IA y GPTs personalizados\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: agente con instrucciones robustas.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de proyecto agente en tu contexto.",
-                "Construir una solucion repetible con foco en diseno de roles, herramientas y limites.",
-                "Evitar el riesgo mas comun en este tema: agentes sin control o con objetivos vagos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Agentes de IA y GPTs personalizados. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar proyecto agente, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica proyecto agente a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: agente con instrucciones robustas + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Agentes de IA y GPTs personalizados. Necesito ayuda con \"Proyecto agente\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-codigo": {
-        "copilot-intro": {
-            "id": "copilot-intro",
-            "title": "Copilot intro",
-            "moduleTitle": "Herramientas de código",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras copilot intro dentro del curso \"IA para programadores (sin programar)\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de copilot intro en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para programadores (sin programar). Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar copilot intro, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica copilot intro a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para programadores (sin programar). Necesito ayuda con \"Copilot intro\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "cursor-ide": {
-            "id": "cursor-ide",
-            "title": "Cursor ide",
-            "moduleTitle": "Herramientas de código",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras cursor ide dentro del curso \"IA para programadores (sin programar)\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de cursor ide en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para programadores (sin programar). Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar cursor ide, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica cursor ide a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para programadores (sin programar). Necesito ayuda con \"Cursor ide\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "replit-ia": {
-            "id": "replit-ia",
-            "title": "Replit ia",
-            "moduleTitle": "Herramientas de código",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras replit ia dentro del curso \"IA para programadores (sin programar)\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de replit ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para programadores (sin programar). Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar replit ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica replit ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para programadores (sin programar). Necesito ayuda con \"Replit ia\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "v0-dev": {
-            "id": "v0-dev",
-            "title": "V0 dev",
-            "moduleTitle": "Herramientas de código",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras v0 dev dentro del curso \"IA para programadores (sin programar)\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de v0 dev en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para programadores (sin programar). Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar v0 dev, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica v0 dev a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para programadores (sin programar). Necesito ayuda con \"V0 dev\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "web-con-ia": {
-            "id": "web-con-ia",
-            "title": "Web con ia",
-            "moduleTitle": "Crear sin programar",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras web con ia dentro del curso \"IA para programadores (sin programar)\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de web con ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para programadores (sin programar). Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar web con ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica web con ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para programadores (sin programar). Necesito ayuda con \"Web con ia\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "app-con-ia": {
-            "id": "app-con-ia",
-            "title": "App con ia",
-            "moduleTitle": "Crear sin programar",
-            "durationMinutes": 25,
-            "summary": "En esta leccion trabajaras app con ia dentro del curso \"IA para programadores (sin programar)\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de app con ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para programadores (sin programar). Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar app con ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica app con ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para programadores (sin programar). Necesito ayuda con \"App con ia\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "chrome-extension": {
-            "id": "chrome-extension",
-            "title": "Chrome extension",
-            "moduleTitle": "Crear sin programar",
-            "durationMinutes": 26,
-            "summary": "En esta leccion trabajaras chrome extension dentro del curso \"IA para programadores (sin programar)\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de chrome extension en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para programadores (sin programar). Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar chrome extension, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica chrome extension a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para programadores (sin programar). Necesito ayuda con \"Chrome extension\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "deploy": {
-            "id": "deploy",
-            "title": "Deploy",
-            "moduleTitle": "Crear sin programar",
-            "durationMinutes": 27,
-            "summary": "En esta leccion trabajaras deploy dentro del curso \"IA para programadores (sin programar)\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de deploy en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para programadores (sin programar). Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar deploy, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica deploy a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para programadores (sin programar). Necesito ayuda con \"Deploy\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "multimodal-ia": {
-        "que-es-multimodal": {
-            "id": "que-es-multimodal",
-            "title": "Que es multimodal",
-            "moduleTitle": "Fundamentos multimodal",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras que es multimodal dentro del curso \"IA Multimodal: Texto + Imagen + Audio + Video\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de que es multimodal en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA Multimodal: Texto + Imagen + Audio + Video. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar que es multimodal, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica que es multimodal a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA Multimodal: Texto + Imagen + Audio + Video. Necesito ayuda con \"Que es multimodal\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "gpt-4-vision": {
-            "id": "gpt-4-vision",
-            "title": "Gpt 4 vision",
-            "moduleTitle": "Fundamentos multimodal",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras gpt 4 vision dentro del curso \"IA Multimodal: Texto + Imagen + Audio + Video\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de gpt 4 vision en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA Multimodal: Texto + Imagen + Audio + Video. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar gpt 4 vision, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica gpt 4 vision a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA Multimodal: Texto + Imagen + Audio + Video. Necesito ayuda con \"Gpt 4 vision\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "gemini-multimodal": {
-            "id": "gemini-multimodal",
-            "title": "Gemini multimodal",
-            "moduleTitle": "Fundamentos multimodal",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras gemini multimodal dentro del curso \"IA Multimodal: Texto + Imagen + Audio + Video\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de gemini multimodal en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA Multimodal: Texto + Imagen + Audio + Video. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar gemini multimodal, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica gemini multimodal a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA Multimodal: Texto + Imagen + Audio + Video. Necesito ayuda con \"Gemini multimodal\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "claude-docs": {
-            "id": "claude-docs",
-            "title": "Claude docs",
-            "moduleTitle": "Fundamentos multimodal",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras claude docs dentro del curso \"IA Multimodal: Texto + Imagen + Audio + Video\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de claude docs en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA Multimodal: Texto + Imagen + Audio + Video. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar claude docs, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica claude docs a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA Multimodal: Texto + Imagen + Audio + Video. Necesito ayuda con \"Claude docs\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "blog-completo": {
-            "id": "blog-completo",
-            "title": "Blog completo",
-            "moduleTitle": "Proyectos combinados",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras blog completo dentro del curso \"IA Multimodal: Texto + Imagen + Audio + Video\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de blog completo en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA Multimodal: Texto + Imagen + Audio + Video. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar blog completo, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica blog completo a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA Multimodal: Texto + Imagen + Audio + Video. Necesito ayuda con \"Blog completo\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "presentacion-ia": {
-            "id": "presentacion-ia",
-            "title": "Presentacion ia",
-            "moduleTitle": "Proyectos combinados",
-            "durationMinutes": 25,
-            "summary": "En esta leccion trabajaras presentacion ia dentro del curso \"IA Multimodal: Texto + Imagen + Audio + Video\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de presentacion ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA Multimodal: Texto + Imagen + Audio + Video. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar presentacion ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica presentacion ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA Multimodal: Texto + Imagen + Audio + Video. Necesito ayuda con \"Presentacion ia\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "video-marketing": {
-            "id": "video-marketing",
-            "title": "Video marketing",
-            "moduleTitle": "Proyectos combinados",
-            "durationMinutes": 26,
-            "summary": "En esta leccion trabajaras video marketing dentro del curso \"IA Multimodal: Texto + Imagen + Audio + Video\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de video marketing en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA Multimodal: Texto + Imagen + Audio + Video. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar video marketing, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica video marketing a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA Multimodal: Texto + Imagen + Audio + Video. Necesito ayuda con \"Video marketing\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "portfolio": {
-            "id": "portfolio",
-            "title": "Portfolio",
-            "moduleTitle": "Proyectos combinados",
-            "durationMinutes": 27,
-            "summary": "En esta leccion trabajaras portfolio dentro del curso \"IA Multimodal: Texto + Imagen + Audio + Video\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de portfolio en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA Multimodal: Texto + Imagen + Audio + Video. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar portfolio, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica portfolio a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA Multimodal: Texto + Imagen + Audio + Video. Necesito ayuda con \"Portfolio\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "negocio-ia": {
-        "freelance-ia": {
-            "id": "freelance-ia",
-            "title": "Freelance ia",
-            "moduleTitle": "Modelos de negocio",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras freelance ia dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de freelance ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar freelance ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica freelance ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Freelance ia\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "agencia-ia": {
-            "id": "agencia-ia",
-            "title": "Agencia ia",
-            "moduleTitle": "Modelos de negocio",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras agencia ia dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de agencia ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar agencia ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica agencia ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Agencia ia\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "contenido-ia": {
-            "id": "contenido-ia",
-            "title": "Contenido ia",
-            "moduleTitle": "Modelos de negocio",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras contenido ia dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de contenido ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar contenido ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica contenido ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Contenido ia\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "saas-ia": {
-            "id": "saas-ia",
-            "title": "Saas ia",
-            "moduleTitle": "Modelos de negocio",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras saas ia dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de saas ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar saas ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica saas ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Saas ia\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "consultoria": {
-            "id": "consultoria",
-            "title": "Consultoria",
-            "moduleTitle": "Modelos de negocio",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras consultoria dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de consultoria en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar consultoria, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica consultoria a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Consultoria\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "primer-cliente": {
-            "id": "primer-cliente",
-            "title": "Primer cliente",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 25,
-            "summary": "En esta leccion trabajaras primer cliente dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de primer cliente en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar primer cliente, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica primer cliente a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Primer cliente\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "portfolio": {
-            "id": "portfolio",
-            "title": "Portfolio",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 26,
-            "summary": "En esta leccion trabajaras portfolio dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de portfolio en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar portfolio, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica portfolio a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Portfolio\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "pricing": {
-            "id": "pricing",
-            "title": "Pricing",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 27,
-            "summary": "En esta leccion trabajaras pricing dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de pricing en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar pricing, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica pricing a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Pricing\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "escalar": {
-            "id": "escalar",
-            "title": "Escalar",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 28,
-            "summary": "En esta leccion trabajaras escalar dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de escalar en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar escalar, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica escalar a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Escalar\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "caso-estudio": {
-            "id": "caso-estudio",
-            "title": "Caso estudio",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 29,
-            "summary": "En esta leccion trabajaras caso estudio dentro del curso \"Monetizar con IA: Crea tu negocio\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de caso estudio en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Monetizar con IA: Crea tu negocio. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar caso estudio, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica caso estudio a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Monetizar con IA: Crea tu negocio. Necesito ayuda con \"Caso estudio\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "etica-ia": {
-        "sesgos-ia": {
-            "id": "sesgos-ia",
-            "title": "Sesgos ia",
-            "moduleTitle": "Ética e impacto",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras sesgos ia dentro del curso \"Ética y futuro de la IA\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de sesgos ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Ética y futuro de la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar sesgos ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica sesgos ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Ética y futuro de la IA. Necesito ayuda con \"Sesgos ia\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "privacidad": {
-            "id": "privacidad",
-            "title": "Privacidad",
-            "moduleTitle": "Ética e impacto",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras privacidad dentro del curso \"Ética y futuro de la IA\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de privacidad en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Ética y futuro de la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar privacidad, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica privacidad a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Ética y futuro de la IA. Necesito ayuda con \"Privacidad\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "derechos-autor": {
-            "id": "derechos-autor",
-            "title": "Derechos autor",
-            "moduleTitle": "Ética e impacto",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras derechos autor dentro del curso \"Ética y futuro de la IA\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de derechos autor en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Ética y futuro de la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar derechos autor, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica derechos autor a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Ética y futuro de la IA. Necesito ayuda con \"Derechos autor\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "deepfakes": {
-            "id": "deepfakes",
-            "title": "Deepfakes",
-            "moduleTitle": "Ética e impacto",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras deepfakes dentro del curso \"Ética y futuro de la IA\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de deepfakes en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Ética y futuro de la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar deepfakes, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica deepfakes a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Ética y futuro de la IA. Necesito ayuda con \"Deepfakes\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "regulaciones": {
-            "id": "regulaciones",
-            "title": "Regulaciones",
-            "moduleTitle": "Futuro",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras regulaciones dentro del curso \"Ética y futuro de la IA\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de regulaciones en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Ética y futuro de la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar regulaciones, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica regulaciones a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Ética y futuro de la IA. Necesito ayuda con \"Regulaciones\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "agi": {
-            "id": "agi",
-            "title": "Agi",
-            "moduleTitle": "Futuro",
-            "durationMinutes": 25,
-            "summary": "En esta leccion trabajaras agi dentro del curso \"Ética y futuro de la IA\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de agi en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Ética y futuro de la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar agi, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica agi a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Ética y futuro de la IA. Necesito ayuda con \"Agi\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "trabajo-futuro": {
-            "id": "trabajo-futuro",
-            "title": "Trabajo futuro",
-            "moduleTitle": "Futuro",
-            "durationMinutes": 26,
-            "summary": "En esta leccion trabajaras trabajo futuro dentro del curso \"Ética y futuro de la IA\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de trabajo futuro en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Ética y futuro de la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar trabajo futuro, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica trabajo futuro a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Ética y futuro de la IA. Necesito ayuda con \"Trabajo futuro\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "prepararse": {
-            "id": "prepararse",
-            "title": "Prepararse",
-            "moduleTitle": "Futuro",
-            "durationMinutes": 27,
-            "summary": "En esta leccion trabajaras prepararse dentro del curso \"Ética y futuro de la IA\" con un enfoque vision estrategica, optimizacion y analisis de impacto. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Optimizar los fundamentos practicos de prepararse en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en Ética y futuro de la IA. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar prepararse, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de proyecto con metricas y evaluacion critica: aplica prepararse a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en Ética y futuro de la IA. Necesito ayuda con \"Prepararse\" para nivel avanzado. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-marketing": {
-        "copywriting-ia": {
-            "id": "copywriting-ia",
-            "title": "Copywriting ia",
-            "moduleTitle": "Contenido y copy",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras copywriting ia dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de copywriting ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar copywriting ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica copywriting ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Copywriting ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "blogs-seo": {
-            "id": "blogs-seo",
-            "title": "Blogs seo",
-            "moduleTitle": "Contenido y copy",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras blogs seo dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de blogs seo en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar blogs seo, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica blogs seo a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Blogs seo\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "email-marketing": {
-            "id": "email-marketing",
-            "title": "Email marketing",
-            "moduleTitle": "Contenido y copy",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras email marketing dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de email marketing en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar email marketing, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica email marketing a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Email marketing\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "social-posts": {
-            "id": "social-posts",
-            "title": "Social posts",
-            "moduleTitle": "Contenido y copy",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras social posts dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de social posts en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar social posts, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica social posts a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Social posts\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "ads-copy": {
-            "id": "ads-copy",
-            "title": "Ads copy",
-            "moduleTitle": "Contenido y copy",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras ads copy dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de ads copy en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar ads copy, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica ads copy a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Ads copy\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "seo-ia": {
-            "id": "seo-ia",
-            "title": "Seo ia",
-            "moduleTitle": "Estrategia",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras seo ia dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de seo ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar seo ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica seo ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Seo ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "analytics-ia": {
-            "id": "analytics-ia",
-            "title": "Analytics ia",
-            "moduleTitle": "Estrategia",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras analytics ia dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de analytics ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar analytics ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica analytics ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Analytics ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "competencia": {
-            "id": "competencia",
-            "title": "Competencia",
-            "moduleTitle": "Estrategia",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras competencia dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de competencia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar competencia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica competencia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Competencia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "calendario": {
-            "id": "calendario",
-            "title": "Calendario",
-            "moduleTitle": "Estrategia",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras calendario dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de calendario en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar calendario, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica calendario a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Calendario\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "campana-completa": {
-            "id": "campana-completa",
-            "title": "Campana completa",
-            "moduleTitle": "Estrategia",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras campana completa dentro del curso \"IA para Marketing Digital\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de campana completa en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Marketing Digital. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar campana completa, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica campana completa a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Marketing Digital. Necesito ayuda con \"Campana completa\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-diseno": {
-        "logos-ia": {
-            "id": "logos-ia",
-            "title": "Logos ia",
-            "moduleTitle": "Diseño con IA",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras logos ia dentro del curso \"IA para Diseñadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de logos ia en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Diseñadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar logos ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica logos ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Diseñadores. Necesito ayuda con \"Logos ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "branding": {
-            "id": "branding",
-            "title": "Branding",
-            "moduleTitle": "Diseño con IA",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras branding dentro del curso \"IA para Diseñadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de branding en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Diseñadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar branding, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica branding a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Diseñadores. Necesito ayuda con \"Branding\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "mockups": {
-            "id": "mockups",
-            "title": "Mockups",
-            "moduleTitle": "Diseño con IA",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras mockups dentro del curso \"IA para Diseñadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de mockups en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Diseñadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar mockups, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica mockups a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Diseñadores. Necesito ayuda con \"Mockups\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "ui-design": {
-            "id": "ui-design",
-            "title": "Ui design",
-            "moduleTitle": "Diseño con IA",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras ui design dentro del curso \"IA para Diseñadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de ui design en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Diseñadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar ui design, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica ui design a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Diseñadores. Necesito ayuda con \"Ui design\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "figma-plugins": {
-            "id": "figma-plugins",
-            "title": "Figma plugins",
-            "moduleTitle": "Flujo de trabajo",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras figma plugins dentro del curso \"IA para Diseñadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de figma plugins en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Diseñadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar figma plugins, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica figma plugins a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Diseñadores. Necesito ayuda con \"Figma plugins\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "canva-avanzado": {
-            "id": "canva-avanzado",
-            "title": "Canva avanzado",
-            "moduleTitle": "Flujo de trabajo",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras canva avanzado dentro del curso \"IA para Diseñadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de canva avanzado en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Diseñadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar canva avanzado, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica canva avanzado a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Diseñadores. Necesito ayuda con \"Canva avanzado\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "photoshop-ia": {
-            "id": "photoshop-ia",
-            "title": "Photoshop ia",
-            "moduleTitle": "Flujo de trabajo",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras photoshop ia dentro del curso \"IA para Diseñadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de photoshop ia en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Diseñadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar photoshop ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica photoshop ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Diseñadores. Necesito ayuda con \"Photoshop ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "portfolio-ia": {
-            "id": "portfolio-ia",
-            "title": "Portfolio ia",
-            "moduleTitle": "Flujo de trabajo",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras portfolio ia dentro del curso \"IA para Diseñadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: prompt visual reproducible.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de portfolio ia en tu contexto.",
-                "Construir una solucion repetible con foco en direccion artistica y control de estilo.",
-                "Evitar el riesgo mas comun en este tema: imagenes inconsistentes entre iteraciones."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Diseñadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar portfolio ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica portfolio ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: prompt visual reproducible + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Diseñadores. Necesito ayuda con \"Portfolio ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-educacion": {
-        "planes-clase": {
-            "id": "planes-clase",
-            "title": "Planes clase",
-            "moduleTitle": "Contenido educativo",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras planes clase dentro del curso \"IA para Educadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de planes clase en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Educadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar planes clase, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica planes clase a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Educadores. Necesito ayuda con \"Planes clase\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "examenes-ia": {
-            "id": "examenes-ia",
-            "title": "Examenes ia",
-            "moduleTitle": "Contenido educativo",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras examenes ia dentro del curso \"IA para Educadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de examenes ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Educadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar examenes ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica examenes ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Educadores. Necesito ayuda con \"Examenes ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "presentaciones-edu": {
-            "id": "presentaciones-edu",
-            "title": "Presentaciones edu",
-            "moduleTitle": "Contenido educativo",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras presentaciones edu dentro del curso \"IA para Educadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de presentaciones edu en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Educadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar presentaciones edu, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica presentaciones edu a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Educadores. Necesito ayuda con \"Presentaciones edu\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "material-didactico": {
-            "id": "material-didactico",
-            "title": "Material didactico",
-            "moduleTitle": "Contenido educativo",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras material didactico dentro del curso \"IA para Educadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de material didactico en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Educadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar material didactico, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica material didactico a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Educadores. Necesito ayuda con \"Material didactico\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "tutoria-ia": {
-            "id": "tutoria-ia",
-            "title": "Tutoria ia",
-            "moduleTitle": "Innovación educativa",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras tutoria ia dentro del curso \"IA para Educadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de tutoria ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Educadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar tutoria ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica tutoria ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Educadores. Necesito ayuda con \"Tutoria ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "retroalimentacion": {
-            "id": "retroalimentacion",
-            "title": "Retroalimentacion",
-            "moduleTitle": "Innovación educativa",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras retroalimentacion dentro del curso \"IA para Educadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de retroalimentacion en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Educadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar retroalimentacion, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica retroalimentacion a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Educadores. Necesito ayuda con \"Retroalimentacion\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "accesibilidad": {
-            "id": "accesibilidad",
-            "title": "Accesibilidad",
-            "moduleTitle": "Innovación educativa",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras accesibilidad dentro del curso \"IA para Educadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de accesibilidad en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Educadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar accesibilidad, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica accesibilidad a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Educadores. Necesito ayuda con \"Accesibilidad\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "etica-educativa": {
-            "id": "etica-educativa",
-            "title": "Etica educativa",
-            "moduleTitle": "Innovación educativa",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras etica educativa dentro del curso \"IA para Educadores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de etica educativa en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Educadores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar etica educativa, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica etica educativa a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Educadores. Necesito ayuda con \"Etica educativa\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-escritores": {
-        "superar-bloqueo": {
-            "id": "superar-bloqueo",
-            "title": "Superar bloqueo",
-            "moduleTitle": "Escritura con IA",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras superar bloqueo dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de superar bloqueo en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar superar bloqueo, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica superar bloqueo a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Superar bloqueo\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "personajes": {
-            "id": "personajes",
-            "title": "Personajes",
-            "moduleTitle": "Escritura con IA",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras personajes dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de personajes en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar personajes, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica personajes a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Personajes\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "dialogos": {
-            "id": "dialogos",
-            "title": "Dialogos",
-            "moduleTitle": "Escritura con IA",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras dialogos dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de dialogos en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar dialogos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica dialogos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Dialogos\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "worldbuilding": {
-            "id": "worldbuilding",
-            "title": "Worldbuilding",
-            "moduleTitle": "Escritura con IA",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras worldbuilding dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de worldbuilding en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar worldbuilding, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica worldbuilding a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Worldbuilding\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "estilos": {
-            "id": "estilos",
-            "title": "Estilos",
-            "moduleTitle": "Escritura con IA",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras estilos dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de estilos en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar estilos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica estilos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Estilos\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "blogs-monetizar": {
-            "id": "blogs-monetizar",
-            "title": "Blogs monetizar",
-            "moduleTitle": "Publicación",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras blogs monetizar dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de blogs monetizar en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar blogs monetizar, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica blogs monetizar a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Blogs monetizar\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "newsletter": {
-            "id": "newsletter",
-            "title": "Newsletter",
-            "moduleTitle": "Publicación",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras newsletter dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de newsletter en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar newsletter, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica newsletter a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Newsletter\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "ebooks": {
-            "id": "ebooks",
-            "title": "Ebooks",
-            "moduleTitle": "Publicación",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras ebooks dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de ebooks en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar ebooks, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica ebooks a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Ebooks\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "ghostwriting": {
-            "id": "ghostwriting",
-            "title": "Ghostwriting",
-            "moduleTitle": "Publicación",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras ghostwriting dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de ghostwriting en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar ghostwriting, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica ghostwriting a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Ghostwriting\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "isbn-publicar": {
-            "id": "isbn-publicar",
-            "title": "Isbn publicar",
-            "moduleTitle": "Publicación",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras isbn publicar dentro del curso \"IA para Escritores y Creadores de Contenido\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de isbn publicar en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Escritores y Creadores de Contenido. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar isbn publicar, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica isbn publicar a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Escritores y Creadores de Contenido. Necesito ayuda con \"Isbn publicar\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-emprendedores": {
-        "generar-ideas": {
-            "id": "generar-ideas",
-            "title": "Generar ideas",
-            "moduleTitle": "Ideación y validación",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras generar ideas dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de generar ideas en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar generar ideas, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica generar ideas a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Generar ideas\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "validar-mercado": {
-            "id": "validar-mercado",
-            "title": "Validar mercado",
-            "moduleTitle": "Ideación y validación",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras validar mercado dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de validar mercado en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar validar mercado, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica validar mercado a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Validar mercado\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "modelo-negocio": {
-            "id": "modelo-negocio",
-            "title": "Modelo negocio",
-            "moduleTitle": "Ideación y validación",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras modelo negocio dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de modelo negocio en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar modelo negocio, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica modelo negocio a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Modelo negocio\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "nombre-marca": {
-            "id": "nombre-marca",
-            "title": "Nombre marca",
-            "moduleTitle": "Ideación y validación",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras nombre marca dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de nombre marca en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar nombre marca, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica nombre marca a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Nombre marca\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "landing-page": {
-            "id": "landing-page",
-            "title": "Landing page",
-            "moduleTitle": "Ideación y validación",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras landing page dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de landing page en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar landing page, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica landing page a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Landing page\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "mvp-ia": {
-            "id": "mvp-ia",
-            "title": "Mvp ia",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras mvp ia dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de mvp ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar mvp ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica mvp ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Mvp ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "pitch-deck": {
-            "id": "pitch-deck",
-            "title": "Pitch deck",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras pitch deck dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de pitch deck en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar pitch deck, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica pitch deck a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Pitch deck\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "legal-ia": {
-            "id": "legal-ia",
-            "title": "Legal ia",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras legal ia dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de legal ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar legal ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica legal ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Legal ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "pricing-ia": {
-            "id": "pricing-ia",
-            "title": "Pricing ia",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 23,
-            "summary": "En esta leccion trabajaras pricing ia dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de pricing ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar pricing ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica pricing ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Pricing ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "growth-hacking": {
-            "id": "growth-hacking",
-            "title": "Growth hacking",
-            "moduleTitle": "Ejecución",
-            "durationMinutes": 24,
-            "summary": "En esta leccion trabajaras growth hacking dentro del curso \"IA para Emprendedores\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de growth hacking en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Emprendedores. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar growth hacking, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica growth hacking a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Emprendedores. Necesito ayuda con \"Growth hacking\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-rrhh": {
-        "job-descriptions": {
-            "id": "job-descriptions",
-            "title": "Job descriptions",
-            "moduleTitle": "Reclutamiento IA",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras job descriptions dentro del curso \"IA para Recursos Humanos\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de job descriptions en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Recursos Humanos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar job descriptions, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica job descriptions a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Recursos Humanos. Necesito ayuda con \"Job descriptions\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "screening-cv": {
-            "id": "screening-cv",
-            "title": "Screening cv",
-            "moduleTitle": "Reclutamiento IA",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras screening cv dentro del curso \"IA para Recursos Humanos\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de screening cv en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Recursos Humanos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar screening cv, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica screening cv a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Recursos Humanos. Necesito ayuda con \"Screening cv\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "entrevistas": {
-            "id": "entrevistas",
-            "title": "Entrevistas",
-            "moduleTitle": "Reclutamiento IA",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras entrevistas dentro del curso \"IA para Recursos Humanos\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de entrevistas en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Recursos Humanos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar entrevistas, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica entrevistas a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Recursos Humanos. Necesito ayuda con \"Entrevistas\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "evaluaciones": {
-            "id": "evaluaciones",
-            "title": "Evaluaciones",
-            "moduleTitle": "Reclutamiento IA",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras evaluaciones dentro del curso \"IA para Recursos Humanos\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de evaluaciones en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Recursos Humanos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar evaluaciones, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica evaluaciones a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Recursos Humanos. Necesito ayuda con \"Evaluaciones\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "onboarding": {
-            "id": "onboarding",
-            "title": "Onboarding",
-            "moduleTitle": "Gestión de personas",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras onboarding dentro del curso \"IA para Recursos Humanos\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de onboarding en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Recursos Humanos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar onboarding, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica onboarding a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Recursos Humanos. Necesito ayuda con \"Onboarding\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "desarrollo": {
-            "id": "desarrollo",
-            "title": "Desarrollo",
-            "moduleTitle": "Gestión de personas",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras desarrollo dentro del curso \"IA para Recursos Humanos\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de desarrollo en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Recursos Humanos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar desarrollo, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica desarrollo a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Recursos Humanos. Necesito ayuda con \"Desarrollo\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "comunicacion-interna": {
-            "id": "comunicacion-interna",
-            "title": "Comunicacion interna",
-            "moduleTitle": "Gestión de personas",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras comunicacion interna dentro del curso \"IA para Recursos Humanos\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de comunicacion interna en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Recursos Humanos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar comunicacion interna, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica comunicacion interna a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Recursos Humanos. Necesito ayuda con \"Comunicacion interna\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "analytics-rrhh": {
-            "id": "analytics-rrhh",
-            "title": "Analytics rrhh",
-            "moduleTitle": "Gestión de personas",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras analytics rrhh dentro del curso \"IA para Recursos Humanos\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de analytics rrhh en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Recursos Humanos. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar analytics rrhh, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica analytics rrhh a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Recursos Humanos. Necesito ayuda con \"Analytics rrhh\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-ventas": {
-        "encontrar-leads": {
-            "id": "encontrar-leads",
-            "title": "Encontrar leads",
-            "moduleTitle": "Prospección con IA",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras encontrar leads dentro del curso \"IA para Ventas\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de encontrar leads en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Ventas. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar encontrar leads, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica encontrar leads a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Ventas. Necesito ayuda con \"Encontrar leads\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "investigar-prospectos": {
-            "id": "investigar-prospectos",
-            "title": "Investigar prospectos",
-            "moduleTitle": "Prospección con IA",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras investigar prospectos dentro del curso \"IA para Ventas\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de investigar prospectos en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Ventas. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar investigar prospectos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica investigar prospectos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Ventas. Necesito ayuda con \"Investigar prospectos\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "emails-frios": {
-            "id": "emails-frios",
-            "title": "Emails frios",
-            "moduleTitle": "Prospección con IA",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras emails frios dentro del curso \"IA para Ventas\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de emails frios en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Ventas. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar emails frios, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica emails frios a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Ventas. Necesito ayuda con \"Emails frios\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "linkedin-ia": {
-            "id": "linkedin-ia",
-            "title": "Linkedin ia",
-            "moduleTitle": "Prospección con IA",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras linkedin ia dentro del curso \"IA para Ventas\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de linkedin ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Ventas. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar linkedin ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica linkedin ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Ventas. Necesito ayuda con \"Linkedin ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "propuestas-ia": {
-            "id": "propuestas-ia",
-            "title": "Propuestas ia",
-            "moduleTitle": "Cierre y seguimiento",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras propuestas ia dentro del curso \"IA para Ventas\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de propuestas ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Ventas. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar propuestas ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica propuestas ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Ventas. Necesito ayuda con \"Propuestas ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "objeciones": {
-            "id": "objeciones",
-            "title": "Objeciones",
-            "moduleTitle": "Cierre y seguimiento",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras objeciones dentro del curso \"IA para Ventas\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de objeciones en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Ventas. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar objeciones, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica objeciones a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Ventas. Necesito ayuda con \"Objeciones\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "crm-ia": {
-            "id": "crm-ia",
-            "title": "Crm ia",
-            "moduleTitle": "Cierre y seguimiento",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras crm ia dentro del curso \"IA para Ventas\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de crm ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Ventas. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar crm ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica crm ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Ventas. Necesito ayuda con \"Crm ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "analytics-ventas": {
-            "id": "analytics-ventas",
-            "title": "Analytics ventas",
-            "moduleTitle": "Cierre y seguimiento",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras analytics ventas dentro del curso \"IA para Ventas\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de analytics ventas en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Ventas. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar analytics ventas, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica analytics ventas a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Ventas. Necesito ayuda con \"Analytics ventas\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-abogados": {
-        "busqueda-jurisprudencia": {
-            "id": "busqueda-jurisprudencia",
-            "title": "Busqueda jurisprudencia",
-            "moduleTitle": "Investigación legal",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras busqueda jurisprudencia dentro del curso \"IA para Profesionales del Derecho\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de busqueda jurisprudencia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales del Derecho. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar busqueda jurisprudencia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica busqueda jurisprudencia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales del Derecho. Necesito ayuda con \"Busqueda jurisprudencia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "analisis-leyes": {
-            "id": "analisis-leyes",
-            "title": "Analisis leyes",
-            "moduleTitle": "Investigación legal",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras analisis leyes dentro del curso \"IA para Profesionales del Derecho\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de analisis leyes en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales del Derecho. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar analisis leyes, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica analisis leyes a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales del Derecho. Necesito ayuda con \"Analisis leyes\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "comparar-contratos": {
-            "id": "comparar-contratos",
-            "title": "Comparar contratos",
-            "moduleTitle": "Investigación legal",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras comparar contratos dentro del curso \"IA para Profesionales del Derecho\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de comparar contratos en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales del Derecho. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar comparar contratos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica comparar contratos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales del Derecho. Necesito ayuda con \"Comparar contratos\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "due-diligence": {
-            "id": "due-diligence",
-            "title": "Due diligence",
-            "moduleTitle": "Investigación legal",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras due diligence dentro del curso \"IA para Profesionales del Derecho\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de due diligence en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales del Derecho. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar due diligence, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica due diligence a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales del Derecho. Necesito ayuda con \"Due diligence\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "redactar-contratos": {
-            "id": "redactar-contratos",
-            "title": "Redactar contratos",
-            "moduleTitle": "Documentos legales",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras redactar contratos dentro del curso \"IA para Profesionales del Derecho\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de redactar contratos en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales del Derecho. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar redactar contratos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica redactar contratos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales del Derecho. Necesito ayuda con \"Redactar contratos\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "demandas": {
-            "id": "demandas",
-            "title": "Demandas",
-            "moduleTitle": "Documentos legales",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras demandas dentro del curso \"IA para Profesionales del Derecho\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de demandas en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales del Derecho. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar demandas, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica demandas a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales del Derecho. Necesito ayuda con \"Demandas\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "compliance": {
-            "id": "compliance",
-            "title": "Compliance",
-            "moduleTitle": "Documentos legales",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras compliance dentro del curso \"IA para Profesionales del Derecho\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de compliance en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales del Derecho. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar compliance, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica compliance a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales del Derecho. Necesito ayuda con \"Compliance\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "etica-legal-ia": {
-            "id": "etica-legal-ia",
-            "title": "Etica legal ia",
-            "moduleTitle": "Documentos legales",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras etica legal ia dentro del curso \"IA para Profesionales del Derecho\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de etica legal ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales del Derecho. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar etica legal ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica etica legal ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales del Derecho. Necesito ayuda con \"Etica legal ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-salud": {
-        "documentacion-clinica": {
-            "id": "documentacion-clinica",
-            "title": "Documentacion clinica",
-            "moduleTitle": "IA en salud",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras documentacion clinica dentro del curso \"IA para Profesionales de Salud\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de documentacion clinica en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales de Salud. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar documentacion clinica, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica documentacion clinica a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales de Salud. Necesito ayuda con \"Documentacion clinica\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "investigacion-medica": {
-            "id": "investigacion-medica",
-            "title": "Investigacion medica",
-            "moduleTitle": "IA en salud",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras investigacion medica dentro del curso \"IA para Profesionales de Salud\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de investigacion medica en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales de Salud. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar investigacion medica, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica investigacion medica a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales de Salud. Necesito ayuda con \"Investigacion medica\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "comunicacion-pacientes": {
-            "id": "comunicacion-pacientes",
-            "title": "Comunicacion pacientes",
-            "moduleTitle": "IA en salud",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras comunicacion pacientes dentro del curso \"IA para Profesionales de Salud\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de comunicacion pacientes en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales de Salud. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar comunicacion pacientes, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica comunicacion pacientes a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales de Salud. Necesito ayuda con \"Comunicacion pacientes\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "educacion-salud": {
-            "id": "educacion-salud",
-            "title": "Educacion salud",
-            "moduleTitle": "IA en salud",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras educacion salud dentro del curso \"IA para Profesionales de Salud\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de educacion salud en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales de Salud. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar educacion salud, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica educacion salud a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales de Salud. Necesito ayuda con \"Educacion salud\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "transcripcion-consultas": {
-            "id": "transcripcion-consultas",
-            "title": "Transcripcion consultas",
-            "moduleTitle": "Herramientas específicas",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras transcripcion consultas dentro del curso \"IA para Profesionales de Salud\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de transcripcion consultas en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales de Salud. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar transcripcion consultas, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica transcripcion consultas a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales de Salud. Necesito ayuda con \"Transcripcion consultas\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "imagenes-medicas": {
-            "id": "imagenes-medicas",
-            "title": "Imagenes medicas",
-            "moduleTitle": "Herramientas específicas",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras imagenes medicas dentro del curso \"IA para Profesionales de Salud\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de imagenes medicas en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales de Salud. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar imagenes medicas, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica imagenes medicas a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales de Salud. Necesito ayuda con \"Imagenes medicas\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "protocolos": {
-            "id": "protocolos",
-            "title": "Protocolos",
-            "moduleTitle": "Herramientas específicas",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras protocolos dentro del curso \"IA para Profesionales de Salud\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de protocolos en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales de Salud. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar protocolos, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica protocolos a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales de Salud. Necesito ayuda con \"Protocolos\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "etica-salud-ia": {
-            "id": "etica-salud-ia",
-            "title": "Etica salud ia",
-            "moduleTitle": "Herramientas específicas",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras etica salud ia dentro del curso \"IA para Profesionales de Salud\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: brief escrito utilizable.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de etica salud ia en tu contexto.",
-                "Construir una solucion repetible con foco en claridad de prompts y calidad de redaccion.",
-                "Evitar el riesgo mas comun en este tema: respuestas genericas o sin contexto."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Profesionales de Salud. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar etica salud ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica etica salud ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: brief escrito utilizable + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Profesionales de Salud. Necesito ayuda con \"Etica salud ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    },
-    "ia-freelancers": {
-        "servicios-ofrecer": {
-            "id": "servicios-ofrecer",
-            "title": "Servicios ofrecer",
-            "moduleTitle": "Servicios con IA",
-            "durationMinutes": 15,
-            "summary": "En esta leccion trabajaras servicios ofrecer dentro del curso \"IA para Freelancers\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de servicios ofrecer en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Freelancers. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar servicios ofrecer, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica servicios ofrecer a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Freelancers. Necesito ayuda con \"Servicios ofrecer\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "propuestas-ia": {
-            "id": "propuestas-ia",
-            "title": "Propuestas ia",
-            "moduleTitle": "Servicios con IA",
-            "durationMinutes": 16,
-            "summary": "En esta leccion trabajaras propuestas ia dentro del curso \"IA para Freelancers\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de propuestas ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Freelancers. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar propuestas ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica propuestas ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Freelancers. Necesito ayuda con \"Propuestas ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "portfolio-ia": {
-            "id": "portfolio-ia",
-            "title": "Portfolio ia",
-            "moduleTitle": "Servicios con IA",
-            "durationMinutes": 17,
-            "summary": "En esta leccion trabajaras portfolio ia dentro del curso \"IA para Freelancers\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de portfolio ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Freelancers. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar portfolio ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica portfolio ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Freelancers. Necesito ayuda con \"Portfolio ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "precios-ia": {
-            "id": "precios-ia",
-            "title": "Precios ia",
-            "moduleTitle": "Servicios con IA",
-            "durationMinutes": 18,
-            "summary": "En esta leccion trabajaras precios ia dentro del curso \"IA para Freelancers\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de precios ia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Freelancers. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar precios ia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica precios ia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Freelancers. Necesito ayuda con \"Precios ia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "automatizar-tareas": {
-            "id": "automatizar-tareas",
-            "title": "Automatizar tareas",
-            "moduleTitle": "Escalar",
-            "durationMinutes": 19,
-            "summary": "En esta leccion trabajaras automatizar tareas dentro del curso \"IA para Freelancers\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de automatizar tareas en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Freelancers. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar automatizar tareas, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica automatizar tareas a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Freelancers. Necesito ayuda con \"Automatizar tareas\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "multiples-clientes": {
-            "id": "multiples-clientes",
-            "title": "Multiples clientes",
-            "moduleTitle": "Escalar",
-            "durationMinutes": 20,
-            "summary": "En esta leccion trabajaras multiples clientes dentro del curso \"IA para Freelancers\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de multiples clientes en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Freelancers. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar multiples clientes, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica multiples clientes a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Freelancers. Necesito ayuda con \"Multiples clientes\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "contenido-marca": {
-            "id": "contenido-marca",
-            "title": "Contenido marca",
-            "moduleTitle": "Escalar",
-            "durationMinutes": 21,
-            "summary": "En esta leccion trabajaras contenido marca dentro del curso \"IA para Freelancers\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de contenido marca en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Freelancers. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar contenido marca, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica contenido marca a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Freelancers. Necesito ayuda con \"Contenido marca\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        },
-        "de-freelance-a-agencia": {
-            "id": "de-freelance-a-agencia",
-            "title": "De freelance a agencia",
-            "moduleTitle": "Escalar",
-            "durationMinutes": 22,
-            "summary": "En esta leccion trabajaras de freelance a agencia dentro del curso \"IA para Freelancers\" con un enfoque enfoque practico con flujo de trabajo y decisiones. El objetivo es que conviertas teoria en una salida concreta: flujo automatizado documentado.",
-            "objectives": [
-                "Aplicar los fundamentos practicos de de freelance a agencia en tu contexto.",
-                "Construir una solucion repetible con foco en orquestacion de herramientas y validacion.",
-                "Evitar el riesgo mas comun en este tema: automatizar errores o procesos ambiguos."
-            ],
-            "sections": [
-                {
-                    "heading": "Contexto y por que importa",
-                    "content": "Antes de ejecutar herramientas, define el resultado final que necesitas en IA para Freelancers. Cuando tienes claridad de objetivo, la IA deja de ser un experimento y pasa a ser una capacidad real de trabajo."
-                },
-                {
-                    "heading": "Metodo guiado paso a paso",
-                    "content": "1) Define una meta concreta para esta leccion. 2) Crea un primer borrador con IA. 3) Itera con criterios de calidad claros. 4) Registra lo que funciono para reutilizarlo en proximas tareas."
-                },
-                {
-                    "heading": "Criterios de calidad",
-                    "content": "Evalua tu resultado por claridad, utilidad y consistencia. Si no cumple el estandar, ajusta el contexto, las restricciones y el formato de salida hasta obtener un entregable util para produccion."
-                },
-                {
-                    "heading": "Aplicacion en el mundo real",
-                    "content": "Tras dominar de freelance a agencia, conectalo con una necesidad real de tu dia a dia. La ventaja competitiva aparece cuando tu flujo es medible, rapido y facil de repetir."
-                }
-            ],
-            "activity": "Actividad de caso practico con criterio profesional: aplica de freelance a agencia a un caso real de tu entorno y documenta el antes y despues del resultado.",
-            "deliverable": "Entregable esperado: flujo automatizado documentado + breve nota explicando decisiones, ajustes y resultado final.",
-            "checklist": [
-                "Defini una meta especifica y medible para la leccion.",
-                "Genere al menos una primera version y dos iteraciones de mejora.",
-                "Valide la calidad del resultado con criterios claros.",
-                "Guarde una plantilla reutilizable para futuras tareas."
-            ],
-            "promptStarter": "Actua como especialista en IA para Freelancers. Necesito ayuda con \"De freelance a agencia\" para nivel intermedio. Dame una solucion paso a paso, con ejemplo real y checklist de calidad en formato accionable."
-        }
-    }
-};
-
-export function getLessonContent(courseId, lessonId) {
-    return COURSE_LESSONS?.[courseId]?.[lessonId] || null;
-}
-
-export function getCourseLessons(courseId) {
-    return COURSE_LESSONS?.[courseId] || {};
-}
