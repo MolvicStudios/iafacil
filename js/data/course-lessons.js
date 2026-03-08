@@ -6048,6 +6048,18 @@
    ═══════════════════════════════════════════════════════════ */
 
 export const COURSE_LESSONS = {
+/**
+ * Devuelve el contenido de una lección dado el ID del curso y el ID de la lección.
+ * @param {string} courseId - ID del curso (ej: "ia-salud-basico")
+ * @param {string} lessonId - ID de la lección (ej: "introduccion-ia-salud")
+ * @returns {object|null} Objeto con los datos de la lección o null si no existe
+ */
+export function getLessonContent(courseId, lessonId) {
+    if (COURSE_LESSONS[courseId] && COURSE_LESSONS[courseId][lessonId]) {
+        return COURSE_LESSONS[courseId][lessonId];
+    }
+    return null;
+}
 
     /* ═══════════════════════════════════════════
        CURSO 1: intro-ia
