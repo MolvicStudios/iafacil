@@ -325,7 +325,7 @@
         renderQuizSection();
         renderCertificateBanner();
 
-        if (!done.has(lessonId)) {
+        if (done.has(lessonId)) {
             toast.success('¡Lección completada! +10 XP');
             addXP(10);
         }
