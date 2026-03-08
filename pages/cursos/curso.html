@@ -7,6 +7,8 @@
     <meta name="description" content="Detalle de curso en IAFACIL.HELP.">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="stylesheet" href="/css/main.css">
+    <!-- Dynamic structured data injected by JS after course loads -->
+    <script type="application/ld+json" id="courseSchema"></script>
 </head>
 <body>
 
@@ -45,6 +47,21 @@
         <section class="card" id="quizSection" style="margin-top:1.5rem; padding:1.25rem; display:none;">
             <div id="quizContainer"></div>
         </section>
+
+        <!-- Ad slot between content and certificate -->
+        <div class="ad-slot ad-slot--rectangle" style="max-width:336px; margin:1.5rem auto;">
+            <!-- AdSense unit — reemplaza YOUR_AD_SLOT_CURSO_ID con el ID real -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1513893788851225"
+                 data-ad-slot="YOUR_AD_SLOT_CURSO_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Next-content panel (P8) -->
+        <section id="nextContentPanel" style="display:none; margin-top:1.5rem;"></section>
 
         <!-- Certificate Section -->
         <section id="certificateBanner" style="margin-top:1.5rem; display:none;"></section>
@@ -182,6 +199,36 @@
         }
 
         document.title = `${course.title} - IAFACIL.HELP`;
+
+        // Inject Course + BreadcrumbList JSON-LD (P5 + P14)
+        const schemaEl = document.getElementById('courseSchema');
+        if (schemaEl) {
+            schemaEl.textContent = JSON.stringify([
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Course",
+                    "name": course.title,
+                    "description": course.description,
+                    "provider": { "@type": "Organization", "name": "IAFACIL.HELP", "url": "https://iafacil.help" },
+                    "educationalLevel": course.levelLabel,
+                    "hasCourseInstance": {
+                        "@type": "CourseInstance",
+                        "courseMode": "online",
+                        "inLanguage": "es",
+                        "courseWorkload": `PT${course.totalLessons * 15}M`
+                    }
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://iafacil.help/"},
+                        {"@type":"ListItem","position":2,"name":"Cursos","item":"https://iafacil.help/pages/cursos/index.html"},
+                        {"@type":"ListItem","position":3,"name":course.title,"item":`https://iafacil.help/pages/cursos/curso.html?id=${course.id}`}
+                    ]
+                }
+            ]);
+        }
 
         const progress = getCourseProgress();
         const completedLessons = progress.completed_lessons || [];
@@ -333,11 +380,54 @@
         renderCourse();
         renderQuizSection();
         renderCertificateBanner();
+        renderNextContent();
 
         if (!done.has(lessonId)) {
             toast.success('¡Lección completada! +10 XP');
             addXP(10);
         }
+    }
+
+    /* ═══ Next Content Suggestion (P8) ═══ */
+    function renderNextContent() {
+        const panel = document.getElementById('nextContentPanel');
+        if (!panel || !course) return;
+        const progress = getCourseProgress();
+        const allDone = (progress.completed_lessons || []).length >= course.totalLessons;
+        if (!allDone) { panel.style.display = 'none'; return; }
+
+        // Find next course in COURSES array
+        const idx = COURSES.findIndex(c => c.id === course.id);
+        const nextCourse = COURSES[idx + 1] || null;
+
+        // Suggest a related tool based on category
+        const toolSuggestions = {
+            'texto': { name: 'Constructor de Prompts', url: '/pages/herramientas/prompt-builder.html', icon: '🔧' },
+            'imagen': { name: 'Generador de Imágenes', url: '/pages/herramientas/generador-imagenes.html', icon: '🎨' },
+            'automatizacion': { name: 'Workflow Builder', url: '/pages/herramientas/workflow-builder.html', icon: '⚡️' },
+            'audio': { name: 'Biblioteca de Prompts', url: '/pages/herramientas/biblioteca-prompts.html', icon: '📚' }
+        };
+        const tool = toolSuggestions[course.category] || toolSuggestions['texto'];
+
+        panel.style.display = 'block';
+        panel.innerHTML = `
+        <div class="card" style="padding:1.5rem; border-left:4px solid var(--color-primary);">
+            <h3 style="margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
+                🏆 ¡Todas las lecciones completadas!
+            </h3>
+            <p class="text-muted" style="margin-bottom:1.25rem;">Ahora que terminaste todas las lecciones, ¿qué quieres hacer?</p>
+            <div style="display:flex; flex-wrap:wrap; gap:0.75rem;">
+                ${nextCourse ? `<a href="/pages/cursos/curso.html?id=${nextCourse.id}" class="btn btn-primary">
+                    ➡️ Siguiente curso: ${nextCourse.title}
+                </a>` : ''}
+                <a href="${tool.url}" class="btn btn-outline">
+                    ${tool.icon} Probar: ${tool.name}
+                </a>
+                <a href="/pages/cursos/" class="btn btn-outline">
+                    📚 Explorar más cursos
+                </a>
+            </div>
+        </div>`;
     }
 
     /* ═══ XP System ═══ */
@@ -777,6 +867,7 @@ body{font-family:'Lato',sans-serif;background:#0a0e1a;min-height:100vh;display:f
     renderCourse();
     renderQuizSection();
     renderCertificateBanner();
+    renderNextContent();
 
     /* ═══ Certificate Name Modal ═══ */
     document.getElementById('certNameModal')?.addEventListener('click', (e) => {

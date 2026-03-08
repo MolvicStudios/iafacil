@@ -578,6 +578,12 @@
     margin-bottom: 0;
 }
 
+a.tool-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 /* ─── Testimonials ─── */
 .testimonials-section {
     padding: var(--spacing-3xl) var(--spacing-md);

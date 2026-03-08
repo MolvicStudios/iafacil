@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparador de IAs — IAFACIL.HELP</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://iafacil.help/"},
+        {"@type":"ListItem","position":2,"name":"Herramientas","item":"https://iafacil.help/pages/herramientas/index.html"},
+        {"@type":"ListItem","position":3,"name":"Comparador de IAs","item":"https://iafacil.help/pages/herramientas/comparador-ias.html"}
+      ]
+    }
+    </script>
     <meta name="description" content="Compara las principales IAs lado a lado: ChatGPT, Claude, Gemini, Copilot y más. Características, precios y casos de uso.">
     <meta name="keywords" content="comparar IAs, ChatGPT vs Claude, mejor IA, comparador inteligencia artificial, ChatGPT vs Gemini">
 
@@ -13,7 +24,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://iafacil.help/pages/herramientas/comparador-ias">
     <meta property="og:image" content="https://iafacil.help/assets/images/og-image.png">
-    <link rel="canonical" href="https://iafacil.help/pages/herramientas/comparador-ias">
+    <link rel="canonical" href="https://iafacil.help/pages/herramientas/comparador-ias.html">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -38,25 +49,29 @@
                 <div class="form-group">
                     <label class="form-label">IA #1</label>
                     <select class="form-select" id="ia1">
-                        <option value="chatgpt">ChatGPT (GPT-4o)</option>
-                        <option value="claude">Claude 3.5 Sonnet</option>
-                        <option value="gemini">Gemini 1.5 Pro</option>
+                        <option value="chatgpt">ChatGPT (GPT-4o / o3)</option>
+                        <option value="claude">Claude 3.7 Sonnet</option>
+                        <option value="gemini">Gemini 2.5 Pro</option>
+                        <option value="deepseek">DeepSeek R1</option>
+                        <option value="grok">Grok 3 (xAI)</option>
                         <option value="copilot">Microsoft Copilot</option>
                         <option value="perplexity">Perplexity</option>
-                        <option value="mistral">Mistral Large</option>
-                        <option value="llama">LLaMA 3.1</option>
+                        <option value="mistral">Mistral Large 2</option>
+                        <option value="llama">LLaMA 3.3</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label class="form-label">IA #2</label>
                     <select class="form-select" id="ia2">
-                        <option value="claude" selected>Claude 3.5 Sonnet</option>
-                        <option value="chatgpt">ChatGPT (GPT-4o)</option>
-                        <option value="gemini">Gemini 1.5 Pro</option>
+                        <option value="claude" selected>Claude 3.7 Sonnet</option>
+                        <option value="chatgpt">ChatGPT (GPT-4o / o3)</option>
+                        <option value="gemini">Gemini 2.5 Pro</option>
+                        <option value="deepseek">DeepSeek R1</option>
+                        <option value="grok">Grok 3 (xAI)</option>
                         <option value="copilot">Microsoft Copilot</option>
                         <option value="perplexity">Perplexity</option>
-                        <option value="mistral">Mistral Large</option>
-                        <option value="llama">LLaMA 3.1</option>
+                        <option value="mistral">Mistral Large 2</option>
+                        <option value="llama">LLaMA 3.3</option>
                     </select>
                 </div>
             </div>
@@ -84,53 +99,67 @@
 
     const iaData = {
         chatgpt: {
-            name: 'ChatGPT (GPT-4o)', company: 'OpenAI', icon: '💬',
+            name: 'ChatGPT (GPT-4o / o3)', company: 'OpenAI', icon: '💬',
             pricing: 'Gratis (limitado) / Plus $20/mes', contextWindow: '128K tokens',
-            strengths: ['Más popular y versátil', 'Excelente para código', 'Plugins y GPTs', 'DALL-E integrado', 'Multimodal completo'],
-            weaknesses: ['Precio alto para Plus', 'Puede alucinar', 'Limitado en plan gratis'],
-            bestFor: 'Uso general, código, creatividad', rating: { texto: 9, codigo: 9, creativo: 8, analisis: 8, velocidad: 8 }
+            strengths: ['Más popular y versátil', 'GPT-4o para uso general', 'o3 para razonamiento avanzado', 'DALL-E 3 integrado', 'Tienda de GPTs personalizada'],
+            weaknesses: ['Precio elevado para Plus', 'Puede alucinar hechos', 'Límites en plan gratis'],
+            bestFor: 'Uso general, código, creatividad, razonamiento', rating: { texto: 9, codigo: 9, creativo: 9, analisis: 9, velocidad: 8 }
         },
         claude: {
-            name: 'Claude 3.5 Sonnet', company: 'Anthropic', icon: '🟣',
+            name: 'Claude 3.7 Sonnet', company: 'Anthropic', icon: '🟣',
             pricing: 'Gratis (limitado) / Pro $20/mes', contextWindow: '200K tokens',
-            strengths: ['Contexto más largo', 'Mejor en escritura', 'Más seguro y ético', 'Excelente razonamiento', 'Artifacts interactivos'],
-            weaknesses: ['Menos popular', 'Sin generación de imagen', 'Menos plugins'],
-            bestFor: 'Escritura, análisis largos, documentos', rating: { texto: 9, codigo: 9, creativo: 9, analisis: 9, velocidad: 8 }
+            strengths: ['Razonamiento extendido (thinking)', 'Mejor en escritura larga', 'Más seguro y ético', 'Artifacts interactivos', 'Contexto de 200K tokens'],
+            weaknesses: ['Límites de uso en gratis', 'Sin generación de imagen', 'Ecosistema menor'],
+            bestFor: 'Escritura, análisis de documentos largos, código', rating: { texto: 10, codigo: 9, creativo: 9, analisis: 10, velocidad: 8 }
         },
         gemini: {
-            name: 'Gemini 1.5 Pro', company: 'Google', icon: '🔵',
-            pricing: 'Gratis / Advanced $20/mes', contextWindow: '1M tokens',
-            strengths: ['Contexto enorme (1M)', 'Integración Google', 'Multimodal nativo', 'Búsqueda web', 'Gratis y potente'],
-            weaknesses: ['A veces genérico', 'Menos creativo', 'UI menos pulida'],
-            bestFor: 'Investigación, datos, integración Google', rating: { texto: 8, codigo: 7, creativo: 7, analisis: 8, velocidad: 9 }
+            name: 'Gemini 2.5 Pro', company: 'Google', icon: '🔵',
+            pricing: 'Gratis (Flash) / Advanced $20/mes', contextWindow: '1M tokens',
+            strengths: ['Contexto de 1 millón de tokens', 'Integración total con Google', 'Multimodal nativo', 'Búsqueda web en tiempo real', 'Flash gratuito muy rápido'],
+            weaknesses: ['Puede ser genérico en creatividad', 'Privacidad ligada a Google', 'Pro requiere suscripción'],
+            bestFor: 'Investigación, análisis de archivos, integración Google', rating: { texto: 8, codigo: 8, creativo: 7, analisis: 9, velocidad: 9 }
+        },
+        deepseek: {
+            name: 'DeepSeek R1', company: 'DeepSeek (China)', icon: '🐋',
+            pricing: 'Gratis (web) / API muy económica', contextWindow: '128K tokens',
+            strengths: ['Razonamiento paso a paso visible', '100% open-source', 'Rendimiento comparable a GPT-4o', 'API 20-50x más barata', 'Uso gratis sin registro'],
+            weaknesses: ['Datos alojados en China', 'Restricciones en temas políticos', 'Ecosystem menor', 'Sin multimodal nativo'],
+            bestFor: 'Matemáticas, código, razonamiento lógico, API de bajo coste', rating: { texto: 8, codigo: 9, creativo: 7, analisis: 9, velocidad: 8 }
+        },
+        grok: {
+            name: 'Grok 3 (xAI)', company: 'xAI (Elon Musk)', icon: '✕',
+            pricing: 'Gratis (básico) / SuperGrok $30/mes', contextWindow: '131K tokens',
+            strengths: ['Datos en tiempo real de X/Twitter', 'Sin restricciones excesivas', 'Modo de razonamiento profundo', 'Generación de imágenes Aurora', 'Respuestas directas sin rodeos'],
+            weaknesses: ['Ligado al ecosistema X', 'Menos herramientas de terceros', 'Más reciente, historiales menores'],
+            bestFor: 'Noticias en tiempo real, análisis de tendencias, código', rating: { texto: 8, codigo: 8, creativo: 8, analisis: 8, velocidad: 8 }
         },
         copilot: {
             name: 'Microsoft Copilot', company: 'Microsoft', icon: '🪟',
             pricing: 'Gratis / Pro $20/mes', contextWindow: '128K tokens',
-            strengths: ['Gratis con GPT-4', 'Integración Office', 'Bing Search', 'DALL-E 3 gratis', 'Accesible'],
-            weaknesses: ['Menos personalizable', 'Respuestas a veces cortas', 'UX básica'],
-            bestFor: 'Usuarios de Microsoft, búsquedas', rating: { texto: 7, codigo: 7, creativo: 7, analisis: 7, velocidad: 8 }
+            strengths: ['GPT-4o y o1 gratis', 'Integración Microsoft 365', 'DALL-E 3 gratis', 'Búsqueda Bing integrada', 'Accesible sin cuenta'],
+            weaknesses: ['Menos personalizable', 'Respuestas a veces conservadoras', 'Depende del ecosistema MS'],
+            bestFor: 'Usuarios de Microsoft, búsquedas, documentos Office', rating: { texto: 7, codigo: 7, creativo: 7, analisis: 7, velocidad: 8 }
         },
         perplexity: {
             name: 'Perplexity', company: 'Perplexity AI', icon: '🔍',
             pricing: 'Gratis / Pro $20/mes', contextWindow: '32K tokens',
-            strengths: ['Cita fuentes', 'Búsqueda en tiempo real', 'Preciso para investigación', 'Interface limpia', 'Focus modes'],
-            weaknesses: ['No genera imágenes', 'Menos creativo', 'Contexto limitado'],
-            bestFor: 'Investigación con fuentes, fact-checking', rating: { texto: 7, codigo: 6, creativo: 5, analisis: 9, velocidad: 9 }
+            strengths: ['Cita fuentes verificables', 'Búsqueda en tiempo real', 'Focus modes especializados', 'Interfaz limpia y rápida', 'Resúmenes de investigación'],
+            weaknesses: ['No genera imágenes', 'Menos creativo', 'Contexto limitado', 'No apto para tareas largas'],
+            bestFor: 'Investigación con fuentes, fact-checking, noticias', rating: { texto: 7, codigo: 6, creativo: 5, analisis: 9, velocidad: 9 }
         },
         mistral: {
-            name: 'Mistral Large', company: 'Mistral AI', icon: '🇫🇷',
+            name: 'Mistral Large 2', company: 'Mistral AI', icon: '🇫🇷',
             pricing: 'Gratis (Le Chat)', contextWindow: '128K tokens',
-            strengths: ['Gratis y potente', 'Open source base', 'Rápido', 'Buen razonamiento', 'Privacidad europea'],
-            weaknesses: ['Menos conocido', 'Ecosistema pequeño', 'Sin imagen'],
-            bestFor: 'Alternativa gratis, privacidad', rating: { texto: 8, codigo: 8, creativo: 7, analisis: 8, velocidad: 9 }
+            strengths: ['Completamente gratis en Le Chat', 'Open-source base', 'Privacidad europea (GDPR)', 'Rápido y competente', 'Buen razonamiento multilingüe'],
+            weaknesses: ['Ecosistema pequeño', 'Sin generación de imagen', 'Menos conocido fuera de Europa'],
+            bestFor: 'Alternativa gratis, privacidad, usuarios europeos', rating: { texto: 8, codigo: 8, creativo: 7, analisis: 8, velocidad: 9 }
         },
         llama: {
-            name: 'LLaMA 3.1 405B', company: 'Meta', icon: '🦙',
+            name: 'LLaMA 3.3 70B', company: 'Meta', icon: '🦙',
             pricing: 'Gratis (Open Source)', contextWindow: '128K tokens',
-            strengths: ['100% open source', 'Personalizable', 'Sin censura excesiva', 'Comunidad activa', 'Ejecutable local'],
-            weaknesses: ['Requiere hardware potente', 'Sin servicio oficial', 'Configuración técnica'],
-            bestFor: 'Desarrolladores, privacidad total, personalización', rating: { texto: 8, codigo: 8, creativo: 7, analisis: 7, velocidad: 7 }
+            strengths: ['100% open-source', 'Ejecutable en hardware propio', 'Sin censura excesiva', 'Comunidad activa', 'Privacidad total en local'],
+            weaknesses: ['Requiere hardware potente para local', 'Sin servicio oficial propio', 'Configuración técnica necesaria'],
+            bestFor: 'Desarrolladores, privacidad total, personalización extrema', rating: { texto: 8, codigo: 8, creativo: 7, analisis: 7, velocidad: 7 }
         }
     };
 

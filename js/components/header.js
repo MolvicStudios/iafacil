@@ -5,6 +5,23 @@
 
 import { ROUTES } from '../config/routes.js';
 
+// ── Inject Nunito font (non-blocking <link>, avoids @import CLS) ──
+(function injectFont() {
+    if (document.querySelector('link[href*="Nunito"]')) return;
+    const pre1 = Object.assign(document.createElement('link'), { rel: 'preconnect', href: 'https://fonts.googleapis.com' });
+    const pre2 = Object.assign(document.createElement('link'), { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' });
+    const font = Object.assign(document.createElement('link'), { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap' });
+    document.head.prepend(font); document.head.prepend(pre2); document.head.prepend(pre1);
+})();
+
+// ── Dark mode: apply persisted or system preference immediately ──
+(function applyDarkMode() {
+    const saved = localStorage.getItem('iafacil-theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+})();
+
 export function renderHeader(container, options = {}) {
     if (!container) return;
     const { landing = false } = options;
@@ -21,6 +38,9 @@ export function renderHeader(container, options = {}) {
 
             <div class="header-actions">
                 ${landing ? renderGuestActions() : renderUserActions()}
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Cambiar tema" title="Cambiar tema claro/oscuro">
+                    ${document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙'}
+                </button>
             </div>
 
             <button class="hamburger" id="hamburger" aria-label="Menú">
@@ -79,6 +99,23 @@ function initHeaderEvents(container) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             nav.classList.toggle('active');
+        });
+    }
+
+    // Dark mode toggle
+    const dmToggle = container.querySelector('#darkModeToggle');
+    if (dmToggle) {
+        dmToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('iafacil-theme', 'light');
+                dmToggle.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('iafacil-theme', 'dark');
+                dmToggle.textContent = '☀️';
+            }
         });
     }
 

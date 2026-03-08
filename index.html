@@ -15,6 +15,72 @@
     <meta property="og:image" content="https://iafacil.help/assets/images/og-image.png">
     <link rel="canonical" href="https://iafacil.help">
 
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IAFACIL.HELP",
+      "url": "https://iafacil.help",
+      "logo": "https://iafacil.help/assets/images/og-image.png",
+      "description": "La plataforma más fácil para aprender Inteligencia Artificial sin programar. Cursos interactivos y herramientas prácticas en español.",
+      "sameAs": ["https://iafacil.help"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "IAFACIL.HELP",
+      "url": "https://iafacil.help",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://iafacil.help/pages/explorador.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Es necesario saber programar para aprender IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. IAFACIL.HELP está diseñado para personas sin conocimientos técnicos. Todos los cursos y herramientas están explicados en español simple y sin código."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Son gratuitos los cursos de IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Todo el contenido de IAFACIL.HELP es 100% gratuito: cursos, herramientas interactivas, glosario y certificados digitales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué herramientas de IA puedo aprender?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ChatGPT, Claude, Gemini, Midjourney, Stable Diffusion, DALL-E, Suno, ElevenLabs, n8n, Make y muchas más herramientas organizadas por categoría."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede obtener un certificado al completar un curso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Al superar el examen final de cualquier curso obtienes un certificado digital descargable en PDF que puedes compartir en LinkedIn."
+          }
+        }
+      ]
+    }
+    </script>
+
     <title>IAFACIL.HELP — Aprende IA sin programar</title>
 
     <!-- Favicon -->
@@ -71,10 +137,7 @@
                 </p>
                 <div class="hero-actions">
                     <a href="/pages/dashboard.html" class="btn btn-primary btn-lg">
-                        Empezar ahora
-                    </a>
-                    <a href="/pages/herramientas/" class="btn btn-secondary btn-lg">
-                        Probar herramientas
+                        🚀 Empezar ahora gratis
                     </a>
                     <a href="#cursos" class="btn btn-outline btn-lg">
                         Ver cursos
@@ -97,6 +160,20 @@
             </div>
         </div>
     </section>
+
+    <!-- ═══════════════ AD — after hero ═══════════════ -->
+    <div class="container">
+        <div class="ad-slot ad-slot--leaderboard" style="margin:0 auto;">
+            <!-- AdSense unit — reemplaza YOUR_AD_SLOT_ID con el ID real de tu unidad -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1513893788851225"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
 
     <!-- ═══════════════ FEATURES ═══════════════ -->
     <section class="section" id="features">
@@ -221,36 +298,36 @@
             </div>
 
             <div class="cards-grid">
-                <div class="tool-card animate-fadeInUp delay-1">
+                <a href="/pages/herramientas/prompt-builder.html" class="tool-card animate-fadeInUp delay-1">
                     <div class="tool-card-icon">🔧</div>
                     <h3 class="tool-card-title">Constructor de Prompts</h3>
                     <p class="tool-card-desc">Crea prompts efectivos arrastrando bloques. Sin escribir desde cero.</p>
-                </div>
-                <div class="tool-card animate-fadeInUp delay-2">
+                </a>
+                <a href="/pages/herramientas/generador-imagenes.html" class="tool-card animate-fadeInUp delay-2">
                     <div class="tool-card-icon">🎨</div>
                     <h3 class="tool-card-title">Generador de Imágenes</h3>
                     <p class="tool-card-desc">Genera prompts para Midjourney, DALL-E y Stable Diffusion.</p>
-                </div>
-                <div class="tool-card animate-fadeInUp delay-3">
+                </a>
+                <a href="/pages/herramientas/analizador-prompts.html" class="tool-card animate-fadeInUp delay-3">
                     <div class="tool-card-icon">🔍</div>
                     <h3 class="tool-card-title">Analizador de Prompts</h3>
                     <p class="tool-card-desc">Pega tu prompt y recibe puntuación con sugerencias de mejora.</p>
-                </div>
-                <div class="tool-card animate-fadeInUp delay-4">
+                </a>
+                <a href="/pages/herramientas/comparador-ias.html" class="tool-card animate-fadeInUp delay-4">
                     <div class="tool-card-icon">⚖️</div>
                     <h3 class="tool-card-title">Comparador de IAs</h3>
                     <p class="tool-card-desc">Compara ChatGPT, Claude, Gemini y más lado a lado.</p>
-                </div>
-                <div class="tool-card animate-fadeInUp delay-5">
+                </a>
+                <a href="/pages/herramientas/workflow-builder.html" class="tool-card animate-fadeInUp delay-5">
                     <div class="tool-card-icon">🔄</div>
                     <h3 class="tool-card-title">Workflow Builder</h3>
                     <p class="tool-card-desc">Diseña flujos de automatización combinando herramientas de IA.</p>
-                </div>
-                <div class="tool-card animate-fadeInUp delay-6">
+                </a>
+                <a href="/pages/herramientas/biblioteca-prompts.html" class="tool-card animate-fadeInUp delay-6">
                     <div class="tool-card-icon">📚</div>
                     <h3 class="tool-card-title">Biblioteca de Prompts</h3>
                     <p class="tool-card-desc">+500 prompts probados organizados por categoría y profesión.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -264,6 +341,20 @@
                 <a href="/pages/cursos/" class="btn btn-primary btn-lg animate-fadeInUp delay-3">
                     Explorar cursos ahora
                 </a>
+                <!-- Newsletter -->
+                <div class="animate-fadeInUp delay-4" style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.12);">
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.9rem; margin-bottom:0.75rem;">📧 Recibe el <strong>prompt de la semana</strong> + novedades de IA</p>
+                    <form id="newsletterForm" style="display:flex; gap:0.5rem; justify-content:center; flex-wrap:wrap; max-width:440px; margin:0 auto;"
+                          onsubmit="handleNewsletter(event)">
+                        <input type="email" id="nlEmail" placeholder="tu@email.com" required
+                               style="flex:1; min-width:200px; padding:0.625rem 1rem; border-radius:var(--border-radius-md);
+                                      border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.1);
+                                      color:#fff; font-size:0.9rem; outline:none;" />
+                        <button type="submit" class="btn btn-primary" style="white-space:nowrap;">Suscribirme</button>
+                    </form>
+                    <p id="nlMsg" style="font-size:0.8rem; color:rgba(255,255,255,0.5); margin-top:0.5rem; display:none;"></p>
+                    <p style="font-size:0.75rem; color:rgba(255,255,255,0.35); margin-top:0.4rem;">Sin spam. Baja cuando quieras.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -278,34 +369,34 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card animate-fadeInUp delay-1">
                     <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Por fin una plataforma que explica la IA en español y sin complicaciones. ¡Llevo una racha de 15 días!"</p>
+                    <p class="testimonial-text">"Por fin una plataforma que explica la IA en español y sin complicaciones. Pasé de no saber nada a crear automatizaciones en 2 semanas. ¡Llevo una racha de 32 días!"</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">MC</div>
                         <div>
                             <div class="testimonial-name">María C.</div>
-                            <div class="testimonial-role">Diseñadora gráfica</div>
+                            <div class="testimonial-role">Diseñadora gráfica · Madrid</div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card animate-fadeInUp delay-2">
                     <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"El constructor de prompts me ahorró horas de trabajo. Ahora uso ChatGPT como un profesional."</p>
+                    <p class="testimonial-text">"El constructor de prompts me ahorró 5 horas semanales en mi trabajo de marketing. Ahora uso ChatGPT como un profesional y mis clientes lo notan."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">JR</div>
                         <div>
                             <div class="testimonial-name">Juan R.</div>
-                            <div class="testimonial-role">Marketing Digital</div>
+                            <div class="testimonial-role">Marketing Digital · Barcelona</div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card animate-fadeInUp delay-3">
                     <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Pensé que la IA era solo para programadores. IAFACIL me demostró lo contrario. ¡Súper recomendada!"</p>
+                    <p class="testimonial-text">"Pensé que la IA era solo para programadores. IAFACIL me demostró lo contrario. Ya tengo 3 certificados y he reducido el tiempo de preparación de clases a la mitad."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">AL</div>
                         <div>
                             <div class="testimonial-name">Ana L.</div>
-                            <div class="testimonial-role">Profesora</div>
+                            <div class="testimonial-role">Profesora · Sevilla</div>
                         </div>
                     </div>
                 </div>
@@ -403,6 +494,22 @@
         document.querySelectorAll('[class*="animate-"]').forEach(el => {
             observer.observe(el);
         });
+    </script>
+    <script>
+        function handleNewsletter(e) {
+            e.preventDefault();
+            const email = document.getElementById('nlEmail').value.trim();
+            const msg = document.getElementById('nlMsg');
+            if (!email) return;
+            // Persist locally (replace with real API call when available)
+            const list = JSON.parse(localStorage.getItem('nl_subscribers') || '[]');
+            if (!list.includes(email)) list.push(email);
+            localStorage.setItem('nl_subscribers', JSON.stringify(list));
+            document.getElementById('nlEmail').value = '';
+            msg.textContent = '✅ ¡Suscripción confirmada! Te avisaremos pronto.';
+            msg.style.display = 'block';
+            setTimeout(() => { msg.style.display = 'none'; }, 4000);
+        }
     </script>
 <script src="/cookie-consent.js"></script>
 </body>

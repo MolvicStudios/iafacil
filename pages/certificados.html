@@ -32,6 +32,8 @@
 <div id="bottomNavContainer"></div>
 <div id="footerContainer"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script type="module">
     import { renderHeader } from '/js/components/header.js';
     import { renderFooter } from '/js/components/footer.js';
@@ -69,7 +71,7 @@
                 const courseTitle = course ? course.title : p.course_id;
 
                 return `
-                <div style="
+                <div class="cert-card" style="
                     background: linear-gradient(135deg, #0a0e1a 0%, #0d1635 50%, #0a0e1a 100%);
                     border-radius: 16px;
                     margin-bottom: 2rem;
@@ -122,11 +124,11 @@
                         <p style="color:rgba(255,255,255,0.2); font-size:0.7rem; letter-spacing:1px; margin-bottom:1.5rem;">ID: ${certId}</p>
 
                         <!-- Buttons -->
-                        <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+                        <div class="cert-actions" style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
                             <button class="btn download-cert"
                                 style="background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;border:none;font-weight:700;padding:0.625rem 1.25rem;"
                                 data-name="${userName}" data-course="${courseTitle}" data-date="${date}" data-id="${certId}" data-score="${quizScore}" data-level="${levelLabel}">
-                                📥 Descargar
+                                📥 Guardar PDF
                             </button>
                             <button class="btn print-cert btn-outline"
                                 style="border-color:#FFD700;color:#FFD700;padding:0.625rem 1.25rem;"
@@ -209,18 +211,46 @@ body{font-family:'Lato',sans-serif;background:#0a0e1a;min-height:100vh;display:f
                 });
             });
 
-            // Download buttons
+            // Download buttons — generates a real PDF via html2canvas + jsPDF
             container.querySelectorAll('.download-cert').forEach(btn => {
-                btn.addEventListener('click', () => {
+                btn.addEventListener('click', async () => {
                     const data = { name: btn.dataset.name, course: btn.dataset.course, date: btn.dataset.date, id: btn.dataset.id, score: btn.dataset.score, level: btn.dataset.level };
-                    const blob = new Blob([buildCertHTML(data)], { type: 'text/html' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = `certificado-${data.course.toLowerCase().replace(/\s+/g, '-').slice(0, 30)}.html`;
-                    a.click();
-                    URL.revokeObjectURL(url);
-                    toast.success('✅ Certificado descargado');
+                    const certCard = btn.closest('.cert-card');
+                    const actionsEl = certCard.querySelector('.cert-actions');
+
+                    btn.disabled = true;
+                    btn.textContent = '⏳ Generando PDF...';
+                    if (actionsEl) actionsEl.style.visibility = 'hidden';
+
+                    try {
+                        const canvas = await html2canvas(certCard, {
+                            scale: 2,
+                            useCORS: true,
+                            backgroundColor: '#0a0e1a',
+                            logging: false,
+                            ignoreElements: el => el.classList.contains('cert-actions')
+                        });
+
+                        const imgData = canvas.toDataURL('image/png');
+                        const { jsPDF } = window.jspdf;
+                        const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
+                        const pdfW = pdf.internal.pageSize.getWidth();   // 297mm
+                        const pdfH = pdf.internal.pageSize.getHeight();  // 210mm
+                        const imgRatio = canvas.width / canvas.height;
+                        const drawW = pdfW;
+                        const drawH = drawW / imgRatio;
+                        const yOff = Math.max(0, (pdfH - drawH) / 2);
+                        pdf.addImage(imgData, 'PNG', 0, yOff, drawW, Math.min(drawH, pdfH));
+                        pdf.save(`certificado-${data.course.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}.pdf`);
+                        toast.success('✅ PDF descargado correctamente');
+                    } catch (err) {
+                        console.error('PDF generation error:', err);
+                        toast.error('❌ Error al generar el PDF. Inténtalo de nuevo.');
+                    } finally {
+                        btn.disabled = false;
+                        btn.textContent = '📥 Guardar PDF';
+                        if (actionsEl) actionsEl.style.visibility = 'visible';
+                    }
                 });
             });
 

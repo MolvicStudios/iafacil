@@ -1,22 +1,23 @@
 /* ═══════════════════════════════════════════════════════════
    COOKIE CONSENT + ADSENSE CONDICIONAL — MolvicStudios
-   Script universal para todas las webs.
-   
+   Versión 2.0 — RGPD/LOPDGDD conforme con granularidad por finalidad.
+
    USO: <script src="cookie-consent.js"></script> antes de </body>
-   
-   Cada sitio usa su propia clave localStorage para no interferir
-   entre dominios. Se genera automáticamente desde el hostname.
    ═══════════════════════════════════════════════════════════ */
 
 (function() {
   'use strict';
 
   var PUB_ID = 'ca-pub-1513893788851225';
-  var CONSENT_KEY = 'molvic_cookie_consent_' + location.hostname.replace(/\./g, '_');
+  var CONSENT_KEY = 'molvic_cookie_consent_v2_' + location.hostname.replace(/\./g, '_');
+  var PRIVACY_URL = '/pages/legal/privacidad.html';
 
   // ── AdSense loader ──
-  function loadAdSense() {
+  function loadAdSense(personalized) {
     if (document.querySelector('script[src*="adsbygoogle"]')) return;
+    if (!personalized) {
+      (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+    }
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + PUB_ID;
@@ -24,139 +25,139 @@
     document.head.appendChild(s);
   }
 
-  // ── If consent already given, just load and stop ──
-  var saved = localStorage.getItem(CONSENT_KEY);
-  if (saved === 'accepted') { loadAdSense(); return; }
-  if (saved === 'rejected') {
-    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
-    loadAdSense();
-    return;
+  // ── Read saved consent ──
+  function getSaved() {
+    try { return JSON.parse(localStorage.getItem(CONSENT_KEY) || 'null'); } catch { return null; }
   }
 
-  // ── No consent yet: build the banner ──
+  // ── Apply saved consent on page load ──
+  var saved = getSaved();
+  if (saved) {
+    if (saved.advertising) loadAdSense(true);
+    else if (saved.essential) loadAdSense(false); // non-personalized still loaded
+    return; // No banner needed
+  }
+
+  // ── Build granular consent banner ──
   function createBanner() {
-    // Remove any previous instance
     var old = document.getElementById('molvic-cookie-banner');
     if (old) old.remove();
 
     var wrap = document.createElement('div');
     wrap.id = 'molvic-cookie-banner';
-
-    // Force it on top of EVERYTHING with shadow DOM isolation
-    // This prevents any parent stacking context from pushing it behind
     wrap.style.cssText = [
-      'position:fixed',
-      'bottom:0',
-      'left:0',
-      'right:0',
-      'z-index:2147483647',       // Maximum possible z-index
-      'pointer-events:auto',
-      'isolation:isolate',         // Creates new stacking context at top level
-      'transform:translateZ(0)',   // Forces GPU compositing layer
+      'position:fixed', 'bottom:0', 'left:0', 'right:0',
+      'z-index:2147483647', 'pointer-events:auto', 'isolation:isolate',
+      'transform:translateZ(0)',
       'font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif',
-      'font-size:14px',
-      'line-height:1.5'
+      'font-size:14px', 'line-height:1.5'
     ].join(';');
 
-    // Inner HTML with fully self-contained styles (no reliance on page CSS)
-    wrap.innerHTML =
-      '<div style="' +
-        'background:#111118;' +
-        'border-top:1px solid #333;' +
-        'padding:16px 20px;' +
-        'box-shadow:0 -6px 30px rgba(0,0,0,0.7);' +
-        'color:#e0e0e0;' +
-      '">' +
-        '<div style="max-width:960px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">' +
-          '<div style="flex:1;min-width:220px;font-size:13px;line-height:1.6;">' +
-            '\uD83C\uDF6A Este sitio utiliza cookies de Google AdSense para mostrar anuncios. ' +
-            'Consulta nuestra <a href="privacidad.html" id="mcc-priv" style="color:#7eb8ff;text-decoration:underline;">Pol\u00edtica de Privacidad</a> ' +
-            'y <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener" style="color:#7eb8ff;text-decoration:underline;">c\u00f3mo usa Google los datos</a>.' +
-          '</div>' +
-          '<div style="display:flex;gap:8px;flex-shrink:0;">' +
-            '<button id="mcc-accept" style="' +
-              'background:#4a8eff;color:#fff;border:none;padding:10px 22px;' +
-              'border-radius:8px;font-weight:700;cursor:pointer;font-size:14px;' +
-              'transition:background 0.2s;' +
-            '">Aceptar</button>' +
-            '<button id="mcc-reject" style="' +
-              'background:transparent;color:#999;border:1px solid #444;padding:10px 22px;' +
-              'border-radius:8px;cursor:pointer;font-size:14px;' +
-              'transition:background 0.2s;' +
-            '">Solo esenciales</button>' +
-          '</div>' +
-        '</div>' +
-      '</div>';
+    wrap.innerHTML = [
+      '<div id="mcc-main" style="background:#111118;border-top:2px solid #333;padding:20px 24px;',
+        'box-shadow:0 -8px 40px rgba(0,0,0,0.75);color:#e0e0e0;">',
+        '<div style="max-width:1000px;margin:0 auto;">',
+          '<div style="display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;">',
+            '<div style="flex:1;min-width:240px;">',
+              '<p style="margin:0 0 6px;font-weight:700;font-size:15px;">🍪 Control de cookies</p>',
+              '<p style="margin:0;font-size:13px;color:#aaa;line-height:1.6;">',
+                'Usamos cookies para mostrar anuncios y mejorar el servicio. Puedes decidir qué aceptas. ',
+                '<a href="' + PRIVACY_URL + '" style="color:#7eb8ff;text-decoration:underline;">Política de Privacidad</a>',
+              '</p>',
+            '</div>',
+            '<div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;">',
+              '<div style="display:flex;gap:8px;flex-wrap:wrap;">',
+                '<button id="mcc-accept-all" style="background:#4a8eff;color:#fff;border:none;padding:10px 20px;',
+                  'border-radius:8px;font-weight:700;cursor:pointer;font-size:13px;white-space:nowrap;">✅ Aceptar todo</button>',
+                '<button id="mcc-reject-all" style="background:transparent;color:#aaa;border:1px solid #444;',
+                  'padding:10px 20px;border-radius:8px;cursor:pointer;font-size:13px;white-space:nowrap;">Solo esenciales</button>',
+                '<button id="mcc-show-settings" style="background:transparent;color:#7eb8ff;border:1px solid #4a8eff;',
+                  'padding:10px 20px;border-radius:8px;cursor:pointer;font-size:13px;white-space:nowrap;">⚙️ Más opciones</button>',
+              '</div>',
+            '</div>',
+          '</div>',
+          '<div id="mcc-settings" style="display:none;margin-top:16px;padding-top:16px;border-top:1px solid #333;">',
+            '<p style="margin:0 0 12px;font-weight:600;font-size:13px;color:#ccc;">Personaliza tus preferencias:</p>',
+            '<div style="display:flex;flex-direction:column;gap:10px;">',
+              renderCategory('mcc-cat-essential', '🔧 Esenciales', 'Necesarias para el funcionamiento básico del sitio. No se pueden desactivar.', true, true),
+              renderCategory('mcc-cat-advertising', '📢 Publicidad', 'Cookies de Google AdSense para mostrar anuncios relevantes. Sin estas, los anuncios serán genéricos.', false, false),
+            '</div>',
+            '<button id="mcc-save-settings" style="margin-top:14px;background:#4a8eff;color:#fff;border:none;',
+              'padding:10px 24px;border-radius:8px;font-weight:700;cursor:pointer;font-size:13px;">Guardar preferencias</button>',
+          '</div>',
+        '</div>',
+      '</div>'
+    ].join('');
 
     document.body.appendChild(wrap);
 
-    // Fix privacy link for sites with different paths
-    var privLink = document.getElementById('mcc-priv');
-    if (privLink) {
-      // Check if /pages/legal/privacidad.html exists (multi-page sites like iafacil)
-      if (document.querySelector('a[href*="/pages/legal/privacidad"]')) {
-        privLink.href = '/pages/legal/privacidad.html';
-      }
-      // For Kadath (Vite SPA), use /privacidad.html
-      // Default: privacidad.html (relative) works for flat sites
-    }
-
-    document.getElementById('mcc-accept').addEventListener('click', function() {
-      localStorage.setItem(CONSENT_KEY, 'accepted');
+    // Events
+    document.getElementById('mcc-accept-all').onclick = function() {
+      saveConsent({ essential: true, advertising: true });
       wrap.remove();
-      loadAdSense();
-    });
+      loadAdSense(true);
+    };
 
-    document.getElementById('mcc-reject').addEventListener('click', function() {
-      localStorage.setItem(CONSENT_KEY, 'rejected');
+    document.getElementById('mcc-reject-all').onclick = function() {
+      saveConsent({ essential: true, advertising: false });
       wrap.remove();
-      (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
-      loadAdSense();
-    });
+      loadAdSense(false);
+    };
+
+    document.getElementById('mcc-show-settings').onclick = function() {
+      var s = document.getElementById('mcc-settings');
+      s.style.display = s.style.display === 'none' ? 'block' : 'none';
+      this.textContent = s.style.display === 'block' ? '✖ Cerrar' : '⚙️ Más opciones';
+    };
+
+    document.getElementById('mcc-save-settings').onclick = function() {
+      var adv = document.getElementById('mcc-cat-advertising');
+      var consent = {
+        essential: true,
+        advertising: adv ? adv.checked : false
+      };
+      saveConsent(consent);
+      wrap.remove();
+      loadAdSense(consent.advertising);
+    };
   }
 
-  // ── Ensure banner appears AFTER everything else has rendered ──
-  // Use multiple strategies to guarantee visibility:
+  function renderCategory(id, title, desc, disabled, checked) {
+    return [
+      '<label style="display:flex;align-items:flex-start;gap:12px;cursor:' + (disabled ? 'default' : 'pointer') + ';">',
+        '<input type="checkbox" id="' + id + '" ' + (checked ? 'checked' : '') + ' ' + (disabled ? 'disabled' : '') +
+          ' style="width:18px;height:18px;margin-top:2px;accent-color:#4a8eff;flex-shrink:0;" />',
+        '<div>',
+          '<p style="margin:0;font-weight:600;font-size:13px;color:#ddd;">' + title + (disabled ? ' <span style="color:#666;font-weight:400;">(siempre activas)</span>' : '') + '</p>',
+          '<p style="margin:2px 0 0;font-size:12px;color:#888;">' + desc + '</p>',
+        '</div>',
+      '</label>'
+    ].join('');
+  }
 
-  // Strategy 1: On DOMContentLoaded (if not yet fired)
+  function saveConsent(prefs) {
+    prefs.date = new Date().toISOString();
+    localStorage.setItem(CONSENT_KEY, JSON.stringify(prefs));
+  }
+
+  // ── Show banner after render ──
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(createBanner, 300);
-    });
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(createBanner, 300); });
   } else {
-    // Strategy 2: DOM already ready, wait a tick for game init
     setTimeout(createBanner, 300);
   }
 
-  // Strategy 3: Re-inject if something covers it (check every 2s for 10s)
+  // ── Watchdog: re-inject if removed accidentally ──
   var checks = 0;
   var watchdog = setInterval(function() {
-    checks++;
-    if (checks > 5) { clearInterval(watchdog); return; }
-
+    if (++checks > 5) { clearInterval(watchdog); return; }
     var banner = document.getElementById('molvic-cookie-banner');
-    if (!banner) {
-      // Banner was removed (consent given) — stop checking
-      clearInterval(watchdog);
-      return;
-    }
-
-    // Verify it's actually visible and on top
+    if (!banner) { clearInterval(watchdog); return; }
     var rect = banner.getBoundingClientRect();
-    if (rect.height === 0 || rect.width === 0) {
-      // Banner collapsed or hidden — recreate
-      createBanner();
-      return;
-    }
-
-    // Check if something is blocking it at center point
-    var cx = rect.left + rect.width / 2;
-    var cy = rect.top + rect.height / 2;
-    var topEl = document.elementFromPoint(cx, cy);
-    if (topEl && !banner.contains(topEl) && topEl !== banner) {
-      // Something is on top — re-append to ensure we're last in DOM
-      document.body.appendChild(banner);
-    }
+    if (rect.height === 0) { createBanner(); return; }
+    var cx = rect.left + rect.width / 2, cy = rect.top + rect.height / 2;
+    var top = document.elementFromPoint(cx, cy);
+    if (top && !banner.contains(top)) document.body.appendChild(banner);
   }, 2000);
 
 })();

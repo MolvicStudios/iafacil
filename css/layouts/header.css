@@ -193,6 +193,30 @@
     box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.15);
 }
 
+/* ─── Dark mode toggle ─── */
+.dark-mode-toggle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.dark-mode-toggle:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: scale(1.1);
+}
+
 /* ─── Header para landing (público) ─── */
 .header-landing {
     background: transparent;
