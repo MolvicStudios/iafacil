@@ -1,9 +1,5 @@
-                                                                                    /* ═══════════════════════════════════════════
-                                                                                       CURSO 25: ia-ciberseguridad-basico
-                                                                                       Ciberseguridad con IA: Primeros pasos
-                                                                                       Nivel: Principiante | 8 lecciones
-                                                                                       ═══════════════════════════════════════════ */
-                                                                                    "ia-ciberseguridad-basico": {
+export const COURSE_LESSONS = {
+  "ia-ciberseguridad-basico": {
                                                                                         "intro-ciberseguridad-ia": {
                                                                                             "id": "intro-ciberseguridad-ia",
                                                                                             "title": "Introducción a la ciberseguridad con IA",
@@ -6047,21 +6043,23 @@
    Cada leccion con contenido unico, ejemplos y prompts reales
    ═══════════════════════════════════════════════════════════ */
 
-export const COURSE_LESSONS = {
-/**
- * Devuelve el contenido de una lección dado el ID del curso y el ID de la lección.
- * @param {string} courseId - ID del curso (ej: "ia-salud-basico")
- * @param {string} lessonId - ID de la lección (ej: "introduccion-ia-salud")
- * @returns {object|null} Objeto con los datos de la lección o null si no existe
- */
-export function getLessonContent(courseId, lessonId) {
-    if (COURSE_LESSONS[courseId] && COURSE_LESSONS[courseId][lessonId]) {
-        return COURSE_LESSONS[courseId][lessonId];
-    }
-    return null;
-}
+
 
     /* ═══════════════════════════════════════════
+    // --- END OF LESSON DATA ---
+
+    /**
+     * Devuelve el contenido de una lección dado el ID del curso y el ID de la lección.
+     * @param {string} courseId - ID del curso (ej: "ia-salud-basico")
+     * @param {string} lessonId - ID de la lección (ej: "introduccion-ia-salud")
+     * @returns {object|null} Objeto con los datos de la lección o null si no existe
+     */
+    export function getLessonContent(courseId, lessonId) {
+        if (COURSE_LESSONS[courseId] && COURSE_LESSONS[courseId][lessonId]) {
+            return COURSE_LESSONS[courseId][lessonId];
+        }
+        return null;
+    }
        CURSO 1: intro-ia
        ¿Que es la Inteligencia Artificial?
        Nivel: Principiante | 8 lecciones
