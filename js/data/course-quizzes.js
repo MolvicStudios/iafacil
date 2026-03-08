@@ -6,9 +6,9 @@
 
 export const COURSE_QUIZZES = {
     "intro-ia": {
-        title: "Quiz: ¿Qué es la Inteligencia Artificial?",
+        title: "Examen Final: ¿Qué es la Inteligencia Artificial?",
         description: "Evalúa tus conocimientos del curso \"¿Qué es la Inteligencia Artificial?\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -79,13 +79,48 @@ export const COURSE_QUIZZES = {
                 options: ["Que sea demasiado cara","Que genere información incorrecta (alucinaciones)","Que sea muy lenta","Que gaste mucha batería"],
                 correct: 1,
                 explanation: "Los modelos de IA pueden generar respuestas que suenan convincentes pero son incorrectas — esto se conoce como \"alucinaciones\"."
+            },
+            {
+                id: 11,
+                question: "¿Qué diferencia a la IA estrecha de la Inteligencia Artificial General (AGI)?",
+                options: ["La velocidad","La AGI puede realizar cualquier tarea intelectual humana; la IA estrecha solo tareas específicas","El precio","El idioma"],
+                correct: 1,
+                explanation: "La IA estrecha (como ChatGPT) es experta en una tarea. La AGI hipotética tendría capacidad cognitiva general equivalente o superior a la humana."
+            },
+            {
+                id: 12,
+                question: "¿Cuál es una aplicación real del Machine Learning?",
+                options: ["Encender la luz manualmente","Filtros de spam en el email que aprenden de tus acciones","Escribir código a mano","Buscar en Google tecleando"],
+                correct: 1,
+                explanation: "Los filtros de spam usan ML para aprender qué es correo no deseado basándose en millones de ejemplos y tus acciones previas."
+            },
+            {
+                id: 13,
+                question: "¿Qué significa que una red neuronal tiene 'capas'?",
+                options: ["Que tiene varios colores","Que procesa información en múltiples etapas de transformación, como el cerebro","Que tiene varios idiomas","Que es muy lenta"],
+                correct: 1,
+                explanation: "Las capas de una red neuronal transforman los datos en cada paso: cada capa extrae características más abstractas hasta llegar a la respuesta final."
+            },
+            {
+                id: 14,
+                question: "¿Qué empresa desarrolló ChatGPT?",
+                options: ["Google","Apple","OpenAI","Meta"],
+                correct: 2,
+                explanation: "OpenAI, fundada en 2015, desarrolló la familia de modelos GPT, incluyendo ChatGPT que se lanzó públicamente en noviembre de 2022."
+            },
+            {
+                id: 15,
+                question: "¿Por qué es importante entender la IA aunque no seas programador?",
+                options: ["No es importante para no programadores","Porque la IA afecta todos los trabajos y quien la domine tendrá ventaja competitiva","Solo importa si trabajas en tecnología","Para impresionar en reuniones"],
+                correct: 1,
+                explanation: "La IA ya transforma todas las industrias. Entender cómo funciona y usarla estratégicamente es una ventaja competitiva en cualquier profesión."
             }
         ]
     },
     "chatgpt-basico": {
-        title: "Quiz: ChatGPT desde cero",
+        title: "Examen Final: ChatGPT desde cero",
         description: "Evalúa tus conocimientos del curso \"ChatGPT desde cero\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -156,13 +191,48 @@ export const COURSE_QUIZZES = {
                 options: ["Publicarla inmediatamente","Verificarla con fuentes externas confiables","Traducirla a inglés","Compartirla en redes sociales"],
                 correct: 1,
                 explanation: "Siempre verifica datos importantes, estadísticas, fechas y hechos en fuentes confiables. ChatGPT es una herramienta de asistencia, no una fuente de verdad."
+            },
+            {
+                id: 11,
+                question: "¿Qué tipo de información NUNCA debes compartir con ChatGPT?",
+                options: ["Tu nombre","Contraseñas, datos bancarios o información médica sensible","El tema de tu trabajo","Tus aficiones"],
+                correct: 1,
+                explanation: "Nunca compartas contraseñas, datos bancarios, información médica privada o secretos comerciales. Las conversaciones pueden usarse para entrenar modelos."
+            },
+            {
+                id: 12,
+                question: "¿Qué es un 'GPT personalizado' (My GPTs)?",
+                options: ["Una versión más cara de ChatGPT","Un ChatGPT configurado con instrucciones, personalidad y conocimiento específico para una tarea","Un backup de ChatGPT","Una traducción de GPT"],
+                correct: 1,
+                explanation: "Los GPTs personalizados son versiones de ChatGPT con instrucciones, conocimiento e incluso herramientas específicas, como un asistente diseñado a medida."
+            },
+            {
+                id: 13,
+                question: "¿Qué es el modo 'voz' de ChatGPT en móvil?",
+                options: ["Para escuchar música","Permite hablar con ChatGPT como si fuera una conversación telefónica, con voz natural","Para grabar llamadas","Para transcribir reuniones"],
+                correct: 1,
+                explanation: "El modo voz de ChatGPT permite conversaciones habladas en tiempo real, con entonación natural y posibilidad de interrumpir — como hablar con una persona."
+            },
+            {
+                id: 14,
+                question: "¿Cuándo conviene usar ChatGPT en lugar de Google?",
+                options: ["Para buscar páginas web específicas","Para generar contenido, razonar, obtener explicaciones personalizadas o procesar documentos","Para ver las noticias del día","Para ver resultados locales"],
+                correct: 1,
+                explanation: "ChatGPT es mejor para tareas creativas, explicaciones detalladas y procesamiento. Google es mejor para información actualizada y búsqueda de páginas web."
+            },
+            {
+                id: 15,
+                question: "¿Cómo puedes mejorar una respuesta que no es exactamente lo que buscabas?",
+                options: ["Cerrar la pestaña","Continuar en la misma conversación indicando qué mejorar: 'hazlo más corto', 'añade ejemplos'","Empezar un chat nuevo","Buscar en Google en su lugar"],
+                correct: 1,
+                explanation: "La fortaleza de ChatGPT es el dialogo iterativo: puedes refinar cualquier respuesta indicando exactamente qué cambiar sin perder el contexto anterior."
             }
         ]
     },
     "prompts-101": {
-        title: "Quiz: Prompts 101: El Arte de Preguntar a la IA",
+        title: "Examen Final: Prompts 101: El Arte de Preguntar a la IA",
         description: "Evalúa tus conocimientos del curso \"Prompts 101: El Arte de Preguntar a la IA\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -233,13 +303,48 @@ export const COURSE_QUIZZES = {
                 options: ["Apagar y encender ChatGPT","Pedir que analice el tema desde diferentes roles o puntos de vista","Escribir en otro idioma","Usar solo mayúsculas"],
                 correct: 1,
                 explanation: "Puedes pedir: \"Analiza esta idea de negocio desde la perspectiva de un inversor, un cliente potencial y un competidor\"."
+            },
+            {
+                id: 11,
+                question: "¿Qué son los 'few-shot prompts'?",
+                options: ["Prompts muy cortos","Prompts que incluyen ejemplos de entrada/salida para guiar el formato de la respuesta","Prompts en inglés","Prompts con emojis"],
+                correct: 1,
+                explanation: "Few-shot = pocos ejemplos. Das 2-3 ejemplos de cómo quieres la respuesta y la IA aprende el patrón y lo aplica a tu caso."
+            },
+            {
+                id: 12,
+                question: "¿Cuándo usar cadenas de prompts ('prompt chains')?",
+                options: ["Cuando tienes una pregunta simple","Para tareas complejas que se benefician de dividir el trabajo en pasos secuenciales","Para redactar emails","Solo con código"],
+                correct: 1,
+                explanation: "El prompt chaining divide tareas grandes: primero genera la estructura, luego desarrolla cada sección, finalmente revisa y mejora — resultados mucho mejores."
+            },
+            {
+                id: 13,
+                question: "¿Qué es el 'zero-shot prompting'?",
+                options: ["Un prompt que no funciona","Pedir algo sin dar ejemplos, confiando en el conocimiento previo del modelo","Un prompt con cero palabras","Usar la IA sin prompt"],
+                correct: 1,
+                explanation: "Zero-shot = sin ejemplos. Le pides algo directamente asumiendo que el modelo ya sabe cómo hacerlo. Funciona para tareas comunes y bien definidas."
+            },
+            {
+                id: 14,
+                question: "¿Cómo mejorar las respuestas con 'restricciones de longitud'?",
+                options: ["No ayudan","Especificar 'en 3 oraciones', '200 palabras máximo' o 'un párrafo' da respuestas más útiles y precisas","Solo sirven para hacer respuestas más largas","Ralentizan la IA"],
+                correct: 1,
+                explanation: "Las restricciones de longitud obligan a la IA a priorizar lo importante. 'En 50 palabras explica X' genera resúmenes accionables frente a respuestas genéricas."
+            },
+            {
+                id: 15,
+                question: "¿Por qué es valioso dominar el prompting?",
+                options: ["Solo para impresionar a colegas","Es la habilidad que multiplica el valor de cualquier herramienta IA: mejores prompts = mejores resultados","Solo para programadores","Es innecesario si la IA es buena"],
+                correct: 1,
+                explanation: "El prompting es el lenguaje de comunicación con la IA. Dominarlo es como aprender a formular bien las preguntas: obtienes 10x mejores resultados con las mismas herramientas."
             }
         ]
     },
     "ia-imagenes-basico": {
-        title: "Quiz: Imágenes con IA: Primeros pasos",
+        title: "Examen Final: Imágenes con IA: Primeros pasos",
         description: "Evalúa tus conocimientos del curso \"Imágenes con IA: Primeros pasos\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -310,13 +415,48 @@ export const COURSE_QUIZZES = {
                 options: ["Solo para artistas","Marketing, diseño, educación, redes sociales, emprendedores y más","Solo para programadores","Solo para fotógrafos"],
                 correct: 1,
                 explanation: "La generación de imágenes es útil en prácticamente cualquier campo: posts de redes sociales, presentaciones, mockups, material educativo, etc."
+            },
+            {
+                id: 11,
+                question: "¿Cuál es una limitación conocida de las IAs generadoras de imágenes?",
+                options: ["No pueden hacer fondos","Dificultad para generar texto legible y manos con el número correcto de dedos","No pueden usar colores oscuros","Solo generan paisajes"],
+                correct: 1,
+                explanation: "Los modelos actuales a menudo fallan con texto dentro de imágenes y manos (dedos extras). Están mejorando pero es un área conocida de debilidad."
+            },
+            {
+                id: 12,
+                question: "¿Para qué sirve el 'inpainting' en IA de imágenes?",
+                options: ["Para añadir filtros","Para modificar zonas específicas de una imagen manteniendo el resto intacto","Para hacer zoom","Para cambiar el tamaño"],
+                correct: 1,
+                explanation: "Inpainting = pintar hacia dentro. Seleccionas un área de la imagen y la IA la rellena o reemplaza según tu prompt, sin afectar el resto."
+            },
+            {
+                id: 13,
+                question: "¿Qué significa el parámetro de 'aspecto ratio' (--ar)?",
+                options: ["La calidad de la imagen","La proporción entre ancho y alto (16:9 panorámica, 9:16 vertical, 1:1 cuadrada)","La velocidad de generación","El número de variaciones"],
+                correct: 1,
+                explanation: "El aspect ratio define la forma: 16:9 para pantallas y YouTube, 9:16 para móvil e Instagram Stories, 1:1 para posts cuadrados."
+            },
+            {
+                id: 14,
+                question: "¿Qué herramienta IA es gratuita y accesible para generar imágenes desde el navegador?",
+                options: ["Solo Midjourney de pago","Adobe Firefly, Microsoft Designer (con Copilot) o Stable Diffusion en HuggingFace","Solo con Adobe CC","Solo con GPU dedicada"],
+                correct: 1,
+                explanation: "Adobe Firefly tiene capa gratuita, Microsoft Designer está integrado en Bing/Copilot, y Stable Diffusion se puede usar via HuggingFace Spaces sin instalación."
+            },
+            {
+                id: 15,
+                question: "¿Cómo mejorar la calidad de tus imágenes generadas con IA?",
+                options: ["Usar prompts más cortos","Ser más específico en estilo, iluminación, cámara y agregar palabras de calidad como 'high resolution, detailed'","Solo cambiar la herramienta","Repetir el mismo prompt"],
+                correct: 1,
+                explanation: "La calidad mejora especificando: estilo artístico, tipo de iluminación, tipo de cámara/lente, y términos de calidad. Un mal prompt produce resultados mediocres incluso con IA excelente."
             }
         ]
     },
     "productividad-ia": {
-        title: "Quiz: Productividad con IA en el trabajo",
+        title: "Examen Final: Productividad con IA en el trabajo",
         description: "Evalúa tus conocimientos del curso \"Productividad con IA en el trabajo\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -387,13 +527,48 @@ export const COURSE_QUIZZES = {
                 options: ["Reemplazar todo tu equipo","Identificar 2-3 tareas repetitivas donde la IA puede ayudarte","Aprender a programar","Comprar el hardware más caro"],
                 correct: 1,
                 explanation: "Empieza pequeño: identifica las tareas que te quitan más tiempo y son más repetitivas — ahí es donde la IA tiene mayor impacto."
+            },
+            {
+                id: 11,
+                question: "¿Cómo puede la IA ayudar en la gestión del email?",
+                options: ["No puede ayudar con emails","Clasificando emails, sugiriendo respuestas, redactando borradores y resumiendo hilos largos","Solo enviando emails","Solo eliminando spam"],
+                correct: 1,
+                explanation: "Herramientas como Gemini en Gmail o Copilot en Outlook pueden clasificar, resumir, responder y redactar emails con instrucciones en lenguaje natural."
+            },
+            {
+                id: 12,
+                question: "¿Qué es la automatización de flujos de trabajo con IA?",
+                options: ["Automatizar solo tareas de programación","Conectar aplicaciones para que realicen acciones automáticamente sin intervención humana","Solo hacer macros en Excel","Contratar más personal"],
+                correct: 1,
+                explanation: "La automatización con herramientas como Zapier, Make o n8n conecta apps: 'cuando llega un email con adjunto, guárdalo en Drive y notifícame en Slack'."
+            },
+            {
+                id: 13,
+                question: "¿Cómo usar la IA para tomar mejores notas en reuniones?",
+                options: ["No se puede","Herramientas como Otter.ai o Fireflies transcriben, resumen y extraen acciones de cualquier reunión","Solo manualmente","Grabando en cassette"],
+                correct: 1,
+                explanation: "Apps como Otter.ai, Fireflies o Notion AI transcriben reuniones en tiempo real, identifican participantes, resumen puntos clave y generan listas de próximas acciones."
+            },
+            {
+                id: 14,
+                question: "¿Qué es el 'batch processing' con IA para la productividad?",
+                options: ["Procesar una cosa a la vez","Agrupar tareas similares y procesarlas todas juntas con IA para mayor eficiencia","Solo para grandes empresas","Un tipo de base de datos"],
+                correct: 1,
+                explanation: "Batch = lote. En vez de hacer 50 descripciones de producto una a una, creas un prompt con los datos de todos y generas los 50 de una vez."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es la clave para integrar la IA en tu rutina laboral?",
+                options: ["Usarla para todo desde el primer día","Identificar las 3 tareas más repetitivas y que más tiempo consumen, y empezar por automatizarlas con IA","Comprar las herramientas más caras","Esperar a que sea perfecta"],
+                correct: 1,
+                explanation: "La adopción efectiva de IA empieza por los quick wins: identifica las tareas más tediosas y repetitivas, implementa IA ahí primero y mide el tiempo ahorrado."
             }
         ]
     },
     "prompts-avanzados": {
-        title: "Quiz: Prompts Avanzados",
+        title: "Examen Final: Prompts Avanzados",
         description: "Evalúa tus conocimientos del curso \"Prompts Avanzados\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -464,13 +639,48 @@ export const COURSE_QUIZZES = {
                 options: ["Por su longitud","Por la especificidad, reproducibilidad y calidad consistente del resultado","Por cuántos emojis tiene","Por lo rápido que responde"],
                 correct: 1,
                 explanation: "Un buen prompt avanzado produce resultados consistentes, específicos y de alta calidad cada vez que lo usas, con mínima edición posterior."
+            },
+            {
+                id: 11,
+                question: "¿Qué es el 'metacprompting'?",
+                options: ["Un error de prompt","Usar la IA para generar y mejorar tus propios prompts","Prompts en lenguaje máquina","Solo para expertos en código"],
+                correct: 1,
+                explanation: "Metaprompting = IA mejora tus prompts. Le pides a la IA: 'Mejora este prompt para obtener mejores resultados' y ella reescribe tu instrucción de forma más efectiva."
+            },
+            {
+                id: 12,
+                question: "¿Qué es el 'contextual injection' en prompts avanzados?",
+                options: ["Un fallo de seguridad","Insertar datos dinámicos (nombre, fecha, datos del cliente) en plantillas de prompts para personalizarlos","Solo para APIs","Un tipo de plugin"],
+                correct: 1,
+                explanation: "Contextual injection: tienes una plantilla de prompt con variables {nombre}, {empresa}, {problema} y las rellenas dinámicamente para cada caso de uso."
+            },
+            {
+                id: 13,
+                question: "¿Cómo funciona el 'tree of thought' prompting?",
+                options: ["Solo para matemáticas","Hacer que la IA explore múltiples caminos de razonamiento antes de dar la respuesta final","Para hacer listas","Solo en inglés"],
+                correct: 1,
+                explanation: "Tree of Thought pide a la IA que explore varios enfoques para resolver un problema, evalúe cada uno y elija el mejor, mejorando dramáticamente el razonamiento."
+            },
+            {
+                id: 14,
+                question: "¿Cuándo usar 'constitutional AI' en tus prompts?",
+                options: ["Nunca","Para establecer principios éticos que la IA debe seguir al responder","Solo para textos legales","Para hacer la IA más lenta"],
+                correct: 1,
+                explanation: "Constitutional prompting define reglas que la IA debe respetar: 'sé siempre constructivo', 'no hagas afirmaciones sin base', 'cita incertidumbres'. Mejora fiabilidad."
+            },
+            {
+                id: 15,
+                question: "¿Qué ventaja da dominar el prompting avanzado en entornos profesionales?",
+                options: ["Solo vanidad","Permite automatizar análisis complejos, crear sistemas de IA a medida y multiplicar la productividad de todo un equipo","Solo para uso personal","No tiene ventajas reales"],
+                correct: 1,
+                explanation: "El prompting avanzado en empresas puede automatizar análisis de datos, generación de informes, atención al cliente y formación — siendo una ventaja competitiva real."
             }
         ]
     },
     "midjourney-mastery": {
-        title: "Quiz: Midjourney: De intermedio a experto",
+        title: "Examen Final: Midjourney: De intermedio a experto",
         description: "Evalúa tus conocimientos del curso \"Midjourney: De intermedio a experto\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -541,13 +751,48 @@ export const COURSE_QUIZZES = {
                 options: ["Usar prompts al azar","Combinar prompts detallados con parámetros técnicos y iteración constante","Solo usar la versión más nueva","Copiar prompts de otros"],
                 correct: 1,
                 explanation: "Los resultados profesionales vienen de prompts descriptivos + parámetros técnicos + iteración + conocimiento de estilos y composición."
+            },
+            {
+                id: 11,
+                question: "¿Qué hace el parámetro '--v' en Midjourney?",
+                options: ["Cambia la resolución","Selecciona la versión del modelo (--v 6 es la más reciente y capaz)","Ajusta el volumen","Añade filtros"],
+                correct: 1,
+                explanation: "--v selecciona la versión del modelo: --v 6 (septiembre 2023) tiene mayor coherencia, mejor texto y más detalle que versiones anteriores."
+            },
+            {
+                id: 12,
+                question: "¿Para qué sirve el comando '/blend' en Midjourney?",
+                options: ["Para mezclar colores básicos","Para combinar 2-5 imágenes de referencia creando una fusión estética","Para hacer copias","Para deshacer acciones"],
+                correct: 1,
+                explanation: "/blend combina 2-5 imágenes tomando las características visuales de todas: útil para crear estilos híbridos o combinar un personaje con un fondo de referencia."
+            },
+            {
+                id: 13,
+                question: "¿Qué es el 'image prompting' en Midjourney?",
+                options: ["Solo texto","Usar imágenes de referencia (URL) para guiar el estilo o composición de la imagen generada","Escribir prompts en inglés","Un tipo de error"],
+                correct: 1,
+                explanation: "Image prompting: añades URLs de imágenes al inicio del prompt para decirle a Midjourney 'quiero algo con este estilo/composición y además {tu descripción}'."
+            },
+            {
+                id: 14,
+                question: "¿Cómo crear variaciones de un personaje consistente en Midjourney?",
+                options: ["Es imposible","Con 'Character Reference' (--cref) que mantiene los rasgos del personaje entre generaciones","Solo editando en Photoshop","Copiando la imagen"],
+                correct: 1,
+                explanation: "--cref (Character Reference) en MJ v6 permite mantener el look de un personaje entre diferentes escenas y poses, crucial para storytelling visual."
+            },
+            {
+                id: 15,
+                question: "¿Qué tipo de proyectos comerciales se pueden crear con Midjourney?",
+                options: ["Solo arte","Branding, ilustraciones para libros, marketing digital, diseño de productos, concept art","Solo fondos de pantalla","Solo memes"],
+                correct: 1,
+                explanation: "Midjourney tiene licencia comercial en planes de pago. Se usa profesionalmente en: portadas de libros, publicidad, branding, ilustración editorial y concept art."
             }
         ]
     },
     "audio-ia": {
-        title: "Quiz: Audio e IA: Música, voz y sonido",
+        title: "Examen Final: Audio e IA: Música, voz y sonido",
         description: "Evalúa tus conocimientos del curso \"Audio e IA: Música, voz y sonido\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -618,13 +863,48 @@ export const COURSE_QUIZZES = {
                 options: ["Instalar un estudio de grabación","Crear un episodio de podcast con guión IA, voz sintética, intro musical y transcripción","Solo escuchar música","Comprar equipos caros"],
                 correct: 1,
                 explanation: "Un proyecto completo: ChatGPT para el guión, ElevenLabs para la narración, Suno para la intro, y Whisper para la transcripción."
+            },
+            {
+                id: 11,
+                question: "¿Qué es el 'voice cloning' con IA?",
+                options: ["Un tipo de llamada telefónica","Tecnología que replica fielmente una voz a partir de pocos minutos de audio de muestra","Solo para cantantes","Copiar un CD"],
+                correct: 1,
+                explanation: "El clonado de voz con IA (ElevenLabs, Resemble.ai) puede replicar una voz con alta fidelidad a partir de 1-3 minutos de audio, capturando tono, cadencia y acento."
+            },
+            {
+                id: 12,
+                question: "¿Qué es la IA de separación de fuentes de audio?",
+                options: ["Solo ecualización","Tecnología que separa automáticamente voz, instrumentos y efectos de cualquier mezcla de audio","Solo para DJs","Amplificación de sonido"],
+                correct: 1,
+                explanation: "Herramientas como Spleeter o Lalal.ai separan stems de audio: extraen la voz de una canción, aíslan guitarras o eliminan ruido de fondo de grabaciones."
+            },
+            {
+                id: 13,
+                question: "¿Cómo puede la IA mejorar grabaciones de voz amateur?",
+                options: ["No puede mejorar grabaciones malas","Eliminando ruido de fondo, mejorando claridad, comprimiendo y masterizando automáticamente","Solo con micrófonos caros","Solo en estudio"],
+                correct: 1,
+                explanation: "Adobe Podcast, Dolby.io o Auphonic usan IA para mejorar grabaciones: eliminan ruido, ecualización automática, limpieza de reverb y masterización con un clic."
+            },
+            {
+                id: 14,
+                question: "¿Qué herramienta IA genera música original a partir de texto?",
+                options: ["Spotify","Suno AI o Udio, que crean canciones completas con letra y música a partir de una descripción","Apple Music","YouTube"],
+                correct: 1,
+                explanation: "Suno AI y Udio pueden generar canciones completas (letra + música + voz) en segundos a partir de prompts como 'pop melancólico sobre nostalgia de verano'."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es una consideración ética importante al usar clonado de voz IA?",
+                options: ["El coste de la herramienta","Nunca clonar la voz de una persona sin su consentimiento explícito","El tipo de micrófono","La velocidad de internet"],
+                correct: 1,
+                explanation: "El clonado de voz sin consentimiento es una violación de privacidad y puede ser ilegal. Siempre obtén permiso explícito antes de clonar la voz de cualquier persona."
             }
         ]
     },
     "video-ia": {
-        title: "Quiz: Video con IA: Creación y edición",
+        title: "Examen Final: Video con IA: Creación y edición",
         description: "Evalúa tus conocimientos del curso \"Video con IA: Creación y edición\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -695,13 +975,48 @@ export const COURSE_QUIZZES = {
                 options: ["Grabar con tu móvil","Crear un short/reel combinando guión IA, clips generados, avatar, subtítulos y música","Subir un video sin editar","Solo descargar videos de YouTube"],
                 correct: 1,
                 explanation: "Proyecto completo: ChatGPT (guión) + Runway/Pika (clips) + HeyGen (avatar) + CapCut (edición, subtítulos) + Suno (música de fondo)."
+            },
+            {
+                id: 11,
+                question: "¿Qué es Sora de OpenAI?",
+                options: ["Una app de música","Un modelo de IA que genera videos hiper-realistas de hasta 1 minuto a partir de texto","Un editor de fotos","Un asistente de texto"],
+                correct: 1,
+                explanation: "Sora es el modelo de generación de video de OpenAI (2024), capaz de generar videos de alta calidad y hasta 1 minuto de duración a partir de prompts de texto."
+            },
+            {
+                id: 12,
+                question: "¿Para qué sirve HeyGen en video IA?",
+                options: ["Editar subtítulos","Crear videos con avatares digitales realistas que hablan cualquier texto en varios idiomas","Solo generar imágenes","Streaming en vivo"],
+                correct: 1,
+                explanation: "HeyGen genera videos con avatares humanos realistas que leen cualquier texto, en múltiples idiomas y con sincronización labial precisa. Ideal para cursos y marketing."
+            },
+            {
+                id: 13,
+                question: "¿Qué es la 'interpolación de frames' con IA en video?",
+                options: ["Añadir subtítulos","Generar fotogramas intermedios para convertir video a mayor FPS o ralentizar sin perder calidad","Comprimir video","Cambiar la resolución"],
+                correct: 1,
+                explanation: "La interpolación IA genera frames sintéticos entre los reales, permitiendo convertir video a 60fps, crear slow-motion o suavizar animaciones."
+            },
+            {
+                id: 14,
+                question: "¿Cómo funciona la 'traducción de video con lip sync' IA?",
+                options: ["Solo añade subtítulos","Traduce el audio, genera nueva voz en el idioma objetivo y ajusta los movimientos labiales del video","Solo cambia el audio","Requiere regrabar"],
+                correct: 1,
+                explanation: "Herramientas como HeyGen o Captions pueden traducir un video, sintetizar la voz del presentador en el nuevo idioma Y ajustar el movimiento de labios para que coincidan."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es la herramienta IA más accesible para crear videos cortos de marketing?",
+                options: ["Solo Adobe Premiere","Canva con IA, CapCut o invideo.ai, que generan videos desde texto o imágenes con plantillas","Solo Final Cut Pro","Solo con cámara profesional"],
+                correct: 1,
+                explanation: "Canva, CapCut e invideo.ai permiten crear videos de marketing en minutos: texto → script → imágenes/video → voz off → subtítulos, todo asistido por IA."
             }
         ]
     },
     "automatizacion-ia": {
-        title: "Quiz: Automatización con IA: Make y Zapier",
+        title: "Examen Final: Automatización con IA: Make y Zapier",
         description: "Evalúa tus conocimientos del curso \"Automatización con IA: Make y Zapier\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -772,13 +1087,48 @@ export const COURSE_QUIZZES = {
                 options: ["Leer un libro","Crear un flujo completo: trigger → IA procesa → acción automática (ej: newsletter semanal)","Solo ver tutoriales","Memorizarlas herramientas"],
                 correct: 1,
                 explanation: "Mejor proyecto: crear un flujo real — ej: cada lunes la IA genera un newsletter personalizado desde tus fuentes y lo envía automáticamente."
+            },
+            {
+                id: 11,
+                question: "¿Qué diferencia Make (Integromat) de Zapier?",
+                options: ["Son idénticos","Make ofrece flujos visuales más complejos y es más barato; Zapier es más simple y con más integraciones estándar","Solo el precio","La velocidad"],
+                correct: 1,
+                explanation: "Make permite flujos multi-rama, bucles y lógica compleja con interfaz visual. Zapier es más simple, con más conectores listos pero menos capacidad para automatizaciones avanzadas."
+            },
+            {
+                id: 12,
+                question: "¿Qué es un webhook en automatización?",
+                options: ["Un tipo de error","Una URL que recibe datos en tiempo real cuando ocurre un evento en otra aplicación","Un tipo de email","Un protocolo de seguridad"],
+                correct: 1,
+                explanation: "Un webhook es como un 'timbre digital': cuando algo pasa en una app (nuevo pago, nuevo lead), esa app envía datos automáticamente a tu URL de webhook para procesarlos."
+            },
+            {
+                id: 13,
+                question: "¿Para qué sirve OpenAI API en flujos de automatización?",
+                options: ["Solo para chat en vivo","Para añadir inteligencia a cualquier automatización: clasificar datos, resumir textos, generar contenido, tomar decisiones","Solo para programadores avanzados","Para hosting"],
+                correct: 1,
+                explanation: "La API de OpenAI en Make/n8n permite añadir IA a cualquier flujo: clasificar emails, resumir documentos, generar respuestas personalizadas o analizar datos automáticamente."
+            },
+            {
+                id: 14,
+                question: "¿Qué es un 'router' o 'switch' en flujos de automatización?",
+                options: ["Un dispositivo de red","Un nodo que dirije el flujo por diferentes caminos según condiciones (si cliente VIP → acción A, si no → acción B)","Un tipo de conector","Una herramienta de debug"],
+                correct: 1,
+                explanation: "El router permite lógica condicional: según los datos, el flujo toma caminos diferentes. Esencial para automatizaciones que deben responder distinto a cada situación."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es el primer paso al diseñar una automatización IA?",
+                options: ["Elegir la herramienta","Mapear el proceso manual actual paso a paso antes de automatizarlo","Comprar la suscripción","Contratar a un experto"],
+                correct: 1,
+                explanation: "Antes de automatizar, documenta el proceso completo: qué datos entran, qué decisiones hay, qué acciones se ejecutan y qué sale. Sin este mapa, la automatización fracasa."
             }
         ]
     },
     "agentes-ia": {
-        title: "Quiz: Agentes de IA y GPTs personalizados",
+        title: "Examen Final: Agentes de IA y GPTs personalizados",
         description: "Evalúa tus conocimientos del curso \"Agentes de IA y GPTs personalizados\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -849,13 +1199,48 @@ export const COURSE_QUIZZES = {
                 options: ["Instalar ChatGPT","Crear un agente que investigue un tema, analice datos y genere un informe completo automáticamente","Solo chatear con IA","Leer documentación"],
                 correct: 1,
                 explanation: "Un agente que recibe un tema, busca información, analiza múltiples fuentes, sintetiza hallazgos y genera un informe bien estructurado."
+            },
+            {
+                id: 11,
+                question: "¿Qué diferencia a un agente IA de un chatbot?",
+                options: ["Son lo mismo","Un agente puede tomar acciones autónomas (buscar web, ejecutar código, enviar emails); un chatbot solo conversa","Solo el precio","El idioma"],
+                correct: 1,
+                explanation: "Un chatbot responde preguntas; un agente IA actúa: busca información, ejecuta tareas, usa herramientas y toma decisiones para completar objetivos complejos."
+            },
+            {
+                id: 12,
+                question: "¿Qué herramienta permite crear agentes IA sin código?",
+                options: ["Solo con Python","Flowise o Botpress permiten crear agentes visuales con flujos drag-and-drop","Solo con JavaScript","Solo con APIs directas"],
+                correct: 1,
+                explanation: "Flowise (open-source) y Botpress permiten crear agentes IA y chatbots con interfaz visual, sin código, conectando LLMs con herramientas y bases de conocimiento."
+            },
+            {
+                id: 13,
+                question: "¿Qué es una 'knowledge base' en un agente IA?",
+                options: ["La memoria RAM","Una colección de documentos que el agente puede consultar para dar respuestas basadas en tu información específica","El modelo de lenguaje","La interfaz de usuario"],
+                correct: 1,
+                explanation: "La knowledge base es el 'cerebro documental' del agente: PDFs, manuales, FAQs que el agente indexa y consulta para responder preguntas con información de tu empresa."
+            },
+            {
+                id: 14,
+                question: "¿Qué es el patrón 'ReAct' en agentes IA?",
+                options: ["Una biblioteca JavaScript","Reason + Act: el agente razona sobre qué hacer, actúa, observa el resultado y decide el siguiente paso","Un framework CSS","Un tipo de API"],
+                correct: 1,
+                explanation: "ReAct (Reason + Act) es el patrón fundamental de los agentes: piensan ('necesito buscar esto'), actúan (llaman a una herramienta), observan el resultado y repiten."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es el principal riesgo de los agentes IA autónomos?",
+                options: ["Que sean lentos","Que ejecuten acciones no deseadas o irreversibles si no tienen límites y validaciones adecuadas","Que consuman mucha batería","Que no hablen español"],
+                correct: 1,
+                explanation: "Un agente autónomo mal configurado puede eliminar datos, enviar emails masivos o hacer compras. Siempre implementa 'human in the loop' para acciones críticas e irreversibles."
             }
         ]
     },
     "ia-codigo": {
-        title: "Quiz: IA para programadores (sin programar)",
+        title: "Examen Final: IA para programadores (sin programar)",
         description: "Evalúa tus conocimientos del curso \"IA para programadores (sin programar)\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -926,13 +1311,48 @@ export const COURSE_QUIZZES = {
                 options: ["Instalar VS Code","Crear y desplegar una app web funcional describiendo los requisitos a la IA","Solo leer tutoriales","Memorizar lenguajes"],
                 correct: 1,
                 explanation: "Crea una app real: describe los requisitos, genera el código con IA, prueba, itera y despliégala en producción accesible por internet."
+            },
+            {
+                id: 11,
+                question: "¿Qué es GitHub Copilot?",
+                options: ["Una red social de programadores","IA integrada en editores de código (VS Code) que sugiere código, completa funciones y genera tests en tiempo real","Un hosting de código","Un lenguaje de programación"],
+                correct: 1,
+                explanation: "GitHub Copilot es un asistente de código IA que examina tu contexto y sugiere la siguiente línea o bloque entero, generando código basado en comentarios o nombres de funciones."
+            },
+            {
+                id: 12,
+                question: "¿Para qué sirve 'cursor.sh'?",
+                options: ["Para diseño gráfico","Editor de código con IA integrada que permite editar archivos enteros, debuggear y explicar código con lenguaje natural","Un navegador web","Un sistema operativo"],
+                correct: 1,
+                explanation: "Cursor es un fork de VS Code con IA profundamente integrada: puedes seleccionar código y pedirle que lo refactorice, explique, debuggee o genere tests."
+            },
+            {
+                id: 13,
+                question: "¿Cómo ayuda la IA a depurar (debug) código?",
+                options: ["No puede depurar","Analiza el error, identifica la causa raíz y sugiere soluciones concretas con explicación del problema","Solo muestra el error en rojo","Solo para Python"],
+                correct: 1,
+                explanation: "Pegar un error y el código relevante en ChatGPT/Copilot produce análisis detallado: qué falló, por qué y una corrección concreta. Reduce depuración de horas a minutos."
+            },
+            {
+                id: 14,
+                question: "¿Qué es 'v0.dev' de Vercel?",
+                options: ["Una versión de Node.js","IA que genera componentes UI completos (React/HTML) a partir de una descripción en texto","Un servicio de hosting","Una base de datos"],
+                correct: 1,
+                explanation: "v0.dev convierte descripciones de texto en componentes React/Tailwind completos y funcionales. Describes 'un dashboard con tabla y gráfico' y genera el código listo."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es la mejor práctica al usar IA para generar código?",
+                options: ["Copiar sin leer","Revisar y entender el código generado, probarlo en aislamiento y adaptarlo a tu proyecto","Nunca usar IA para código","Solo para proyectos pequeños"],
+                correct: 1,
+                explanation: "El código IA es un punto de partida, no la solución final. Siempre entiende qué hace, prueba en sandbox, adapta a tu arquitectura y mantén tú el control del resultado."
             }
         ]
     },
     "multimodal-ia": {
-        title: "Quiz: IA Multimodal: Texto + Imagen + Audio + Video",
+        title: "Examen Final: IA Multimodal: Texto + Imagen + Audio + Video",
         description: "Evalúa tus conocimientos del curso \"IA Multimodal: Texto + Imagen + Audio + Video\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1003,13 +1423,48 @@ export const COURSE_QUIZZES = {
                 options: ["Volver al texto plano","Modelos unificados que procesen y generen cualquier tipo de contenido fluidamente","Solo realidad virtual","IA solo para imágenes"],
                 correct: 1,
                 explanation: "La tendencia es hacia modelos que trabajen con todas las modalidades nativamente, permitiendo flujos creativos sin cambiar de herramienta."
+            },
+            {
+                id: 11,
+                question: "¿Qué es 'Gemini Advanced' de Google?",
+                options: ["Una versión de Android","El modelo más capaz de Google con contexto extendido, análisis multimodal y acceso a más herramientas","Un buscador mejorado","Una app de mapas"],
+                correct: 1,
+                explanation: "Gemini Advanced usa Gemini Ultra, el modelo más potente de Google, con contexto de 1M tokens, análisis de video largo y capacidades mejoradas de razonamiento."
+            },
+            {
+                id: 12,
+                question: "¿Cómo se usa la IA para análisis de documentos complejos?",
+                options: ["Solo para texto simple","Subiendo PDFs, informes o presentaciones a Claude/GPT-4 para extraer datos, comparar versiones o responder preguntas","Solo con OCR básico","Solo para archivos Word"],
+                correct: 1,
+                explanation: "Claude puede analizar contratos de 200 páginas, informes financieros o manuales técnicos, extraer datos clave, comparar versiones y responder preguntas sobre el contenido."
+            },
+            {
+                id: 13,
+                question: "¿Qué ventaja da el contexto extendido en modelos multimodales?",
+                options: ["Solo velocidad","Permite analizar libros completos, proyectos enteros o conversaciones largas manteniendo coherencia en las respuestas","Solo para imágenes grandes","Consume menos energía"],
+                correct: 1,
+                explanation: "Con ventanas de 1M+ tokens, puedes analizar proyectos completos: pegar todo el código de una app, todos los documentos de un proyecto o una investigación entera."
+            },
+            {
+                id: 14,
+                question: "¿Cómo transcribir y analizar una reunión grabada con IA?",
+                options: ["Es imposible","Usando Whisper (OpenAI) para transcribir el audio y luego ChatGPT para extraer acciones, decisiones y resumen","Solo con transcriptores manuales","Solo con herramientas de pago"],
+                correct: 1,
+                explanation: "Whisper transcribe con alta precisión en múltiples idiomas. El texto se pasa a ChatGPT con instrucciones para extraer: participantes, decisiones, acciones y próximos pasos."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es el flujo multimodal más productivo para creadores de contenido?",
+                options: ["Usar solo una herramienta","Texto (idea) → ChatGPT (guión) → DALL-E/Midjourney (visuales) → ElevenLabs (voz) → capCut/Runway (video final)","Solo grabación directa","Solo texto plano"],
+                correct: 1,
+                explanation: "El flujo multimodal permite a un solo creador producir contenido profesional completo: idea → guión → imágenes → narración → video en cada semana con IA."
             }
         ]
     },
     "negocio-ia": {
-        title: "Quiz: Monetizar con IA: Crea tu negocio",
+        title: "Examen Final: Monetizar con IA: Crea tu negocio",
         description: "Evalúa tus conocimientos del curso \"Monetizar con IA: Crea tu negocio\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1080,13 +1535,48 @@ export const COURSE_QUIZZES = {
                 options: ["Conocer todas las herramientas","Resolver un problema real específico y demostrar resultados medibles","Tener muchos seguidores","Usar la IA más cara"],
                 correct: 1,
                 explanation: "El éxito viene de resolver problemas reales, no de conocer herramientas. Enfócate en un nicho, resuelve un dolor específico y muestra resultados."
+            },
+            {
+                id: 11,
+                question: "¿Qué es un 'MicroSaaS' con IA?",
+                options: ["Una gran empresa tecnológica","Un producto de software pequeño y especializado que resuelve un problema muy específico usando IA","Un tipo de microservicio","Solo para programadores"],
+                correct: 1,
+                explanation: "Un MicroSaaS IA resuelve UN problema específico: generador de bio para Instagram, analizador de contratos, resumidor de reuniones. Sin inversión masiva y con herramientas existentes."
+            },
+            {
+                id: 12,
+                question: "¿Cómo validar una idea de negocio IA antes de invertir tiempo?",
+                options: ["Desarrollarla completamente","Crear un MVP (página de espera + demo manual) y pre-vender antes de construir el producto real","Pedirle a la IA que valide","Esperar a tener inversores"],
+                correct: 1,
+                explanation: "Validación lean: landing page simple, explica la solución, colecta emails/pre-ventas. Si 10-20 personas pagan por adelantado, existe mercado. Si no, pivota antes de gastar."
+            },
+            {
+                id: 13,
+                question: "¿Cuáles son los servicios de mayor demanda en el mercado IA actual?",
+                options: ["Servicios genéricos de diseño","Automatización de procesos empresariales, creación de chatbots y generación de contenido a escala","Solo programación","Solo diseño gráfico"],
+                correct: 1,
+                explanation: "La mayor demanda actual: automatización (ahorro de tiempo), generación de contenido escalable, chatbots de atención y análisis de datos. Las empresas buscan ROI tangible."
+            },
+            {
+                id: 14,
+                question: "¿Cómo protege a tu negocio IA la dependencia de un solo proveedor?",
+                options: ["No es un problema","Diversificando herramientas, documentando procesos y manteniendo conocimiento que no depende de una sola IA","Solo con contratos legales","Solo usando open source"],
+                correct: 1,
+                explanation: "Si OpenAI cambia precios o cae, tu negocio debe sobrevivir. Usa APIs intercambiables, documenta tu know-how y asegúrate de que el valor es tu expertise, no solo la herramienta."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es el primer paso para lanzar servicios IA como freelancer?",
+                options: ["Crear una empresa primero","Elegir un nicho específico, dominar 2-3 herramientas clave y conseguir un caso de éxito documentado","Esperar a tener experiencia de 5 años","Certificarse en todas las plataformas"],
+                correct: 1,
+                explanation: "El free-to-paid path: elige nicho (ej: automatización para e-commerce), consigue cliente de prueba gratis, documenta resultados y úsalo como caso de estudio para cobrar."
             }
         ]
     },
     "etica-ia": {
-        title: "Quiz: Ética y futuro de la IA",
+        title: "Examen Final: Ética y futuro de la IA",
         description: "Evalúa tus conocimientos del curso \"Ética y futuro de la IA\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1157,13 +1647,48 @@ export const COURSE_QUIZZES = {
                 options: ["Ninguna","Verificar información, ser transparente sobre su uso, proteger datos y considerar el impacto","Solo usarla para ganar dinero","Solo evitar errores ortográficos"],
                 correct: 1,
                 explanation: "Eres responsable de verificar la información, ser transparente cuando usas IA, proteger datos sensibles y considerar el impacto de tu contenido."
+            },
+            {
+                id: 11,
+                question: "¿Qué es el 'deepfake' y por qué es un problema ético?",
+                options: ["Un filtro de foto divertido","Contenido audiovisual falsificado con IA que pone palabras o acciones en boca de personas reales sin su consentimiento","Una técnica de diseño","Un tipo de vídeo educativo"],
+                correct: 1,
+                explanation: "Los deepfakes pueden destruir reputaciones, crear desinformación política y vulnerar la privacidad. Su detección es cada vez más difícil, representando un riesgo democrático serio."
+            },
+            {
+                id: 12,
+                question: "¿Qué organizaciones están regulando la IA actualmente?",
+                options: ["Ninguna","La UE con el AI Act (2024), ejecutivos de EE.UU. y organismos como UNESCO establecen marcos regulatorios","Solo empresas privadas","Solo la ONU"],
+                correct: 1,
+                explanation: "El AI Act de la UE (2024) es la regulación más completa: clasifica sistemas IA por riesgo y establece requisitos específicos. EE.UU. tiene órdenes ejecutivas y la UNESCO directrices globales."
+            },
+            {
+                id: 13,
+                question: "¿Qué es la 'explicabilidad' (XAI) en sistemas de IA?",
+                options: ["Que la IA hable claro","La capacidad de entender y explicar por qué la IA tomó una decisión específica","Que la IA use términos simples","Solo para sistemas legales"],
+                correct: 1,
+                explanation: "XAI (eXplainable AI) busca que los sistemas puedan explicar sus decisiones: si la IA deniega un crédito, debe poder explicar qué factores influyeron en esa decisión."
+            },
+            {
+                id: 14,
+                question: "¿Por qué es importante la diversidad en los equipos que desarrollan IA?",
+                options: ["Solo por política empresarial","Porque equipos homogéneos crean sistemas con sesgos que afectan a grupos subrepresentados en los datos","Solo para imagen corporativa","No afecta al desarrollo"],
+                correct: 1,
+                explanation: "La diversidad en equipos IA reduce sesgos: si todos los desarrolladores son del mismo perfil, tienden a no ver cómo el sistema puede discriminar a grupos diferentes al suyo."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es la responsabilidad individual al usar IA generativa?",
+                options: ["Ninguna, la IA es responsable","Verificar información antes de publicar, respetar derechos de autor y ser transparente cuando el contenido es generado por IA","Solo responsabilidad de empresas","Solo responsabilidad de programadores"],
+                correct: 1,
+                explanation: "Cada usuario es responsable de cómo usa la IA: verificar datos antes de publicarlos, no atribuir textos IA como propios sin declararlo y no usar IA para dañar a otros."
             }
         ]
     },
     "ia-marketing": {
-        title: "Quiz: IA para Marketing Digital",
+        title: "Examen Final: IA para Marketing Digital",
         description: "Evalúa tus conocimientos del curso \"IA para Marketing Digital\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1234,13 +1759,48 @@ export const COURSE_QUIZZES = {
                 options: ["No se puede medir","Comparando métricas antes/después: velocidad de producción, engagement, conversiones y ROI","Solo por likes","Solo por seguidores"],
                 correct: 1,
                 explanation: "Mide: tiempo de producción (antes vs después), engagement rates, tasas de conversión, coste por lead y ROI de contenido generado con IA."
+            },
+            {
+                id: 11,
+                question: "¿Cómo puede la IA personalizar campañas de email marketing?",
+                options: ["Enviando el mismo email a todos","Segmentando automáticamente audiencias, generando variantes personalizadas y enviando en el momento óptimo por usuario","Solo añadiendo el nombre","Solo con grandes presupuestos"],
+                correct: 1,
+                explanation: "IA en email: Klaviyo o ActiveCampaign segmentan automáticamente, PersonAI genera variantes personalizadas y los modelos predicen el mejor horario de envío por suscriptor."
+            },
+            {
+                id: 12,
+                question: "¿Qué es el 'marketing conversacional' con IA?",
+                options: ["llamar a clientes por teléfono","Usar chatbots IA para guiar a prospectos en tiempo real a través de una conversación personalizada hasta la conversión","Solo WhatsApp manual","Solo email"],
+                correct: 1,
+                explanation: "Marketing conversacional: chatbots IA en web/WhatsApp que cualifican leads, responden dudas de compra y acompañan al usuario desde el primer interés hasta el checkout."
+            },
+            {
+                id: 13,
+                question: "¿Cómo analiza la IA el sentiment de los clientes?",
+                options: ["Contando palabras positivas","Analizando reseñas, comentarios y menciones para clasificar automáticamente la emoción y tema de cada mensaje","Solo en encuestas","Solo para grandes marcas"],
+                correct: 1,
+                explanation: "El análisis de sentimientos IA (Brandwatch, Sprinklr) clasifica millones de menciones en positivo/negativo/neutro, identifica temas emergentes y alerta sobre crisis de reputación."
+            },
+            {
+                id: 14,
+                question: "¿Qué es el 'predictive marketing' con IA?",
+                options: ["Adivinar las ventas","Usar modelos de ML para predecir qué clientes comprarán, qué producto y cuándo, permitiendo campañas proactivas","Marketing del futuro","Solo para Amazon"],
+                correct: 1,
+                explanation: "Predictive marketing: el modelo analiza historial y comportamiento para identificar quién tiene mayor probabilidad de comprar y cuándo, activando campañas en el momento perfecto."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es la métrica más importante al automatizar marketing con IA?",
+                options: ["Número de herramientas usadas","El ROI (retorno sobre inversión) de la automatización: revenue generado vs coste de la herramienta y tiempo","Solo los seguidores","Solo los opens de email"],
+                correct: 1,
+                explanation: "El ROI valida la inversión en IA marketing. Si una herramienta de 200€/mes genera 2000€ extras en ventas, el ROI es 10x. Sin esta métrica, no puedes justificar ni escalar."
             }
         ]
     },
     "ia-diseno": {
-        title: "Quiz: IA para Diseñadores",
+        title: "Examen Final: IA para Diseñadores",
         description: "Evalúa tus conocimientos del curso \"IA para Diseñadores\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1311,13 +1871,48 @@ export const COURSE_QUIZZES = {
                 options: ["Será reemplazado","Evoluciona de ejecutor a director creativo que guía, selecciona y refina resultados IA","Solo supervisar robots","No cambia nada"],
                 correct: 1,
                 explanation: "El diseñador pasa de crear cada pixel manualmente a ser un director creativo: define criterios, guía la IA, selecciona los mejores resultados y refina."
+            },
+            {
+                id: 11,
+                question: "¿Para qué sirve Adobe Firefly en design workflows?",
+                options: ["Solo para filtros básicos","Para generar y editar imágenes con IA directamente en Photoshop/Illustrator, integrado en el flujo creativo de Adobe","Solo para videos","Para crear PDFs"],
+                correct: 1,
+                explanation: "Adobe Firefly está integrado en la suite Adobe: Generative Fill en Photoshop, Text to Vector en Illustrator, Generate en Express — IA directamente en tus herramientas habituales."
+            },
+            {
+                id: 12,
+                question: "¿Qué es 'Uizard' o 'Galileo AI' para diseñadores?",
+                options: ["Herramientas de animación","IAs que convierten bocetos o descripciones de texto en wireframes y prototipos de UI/UX funcionales","Editores de imagen","Gestores de proyectos"],
+                correct: 1,
+                explanation: "Uizard y Galileo AI transforman bocetos rough o prompts de texto en wireframes y diseños de UI/UX completos, acelerando dramáticamente las fases de ideación."
+            },
+            {
+                id: 13,
+                question: "¿Cómo puede la IA ayudar en la creación de sistemas de diseño?",
+                options: ["No puede ayudar con sistemas","Generando paletas de color coherentes, sugiriendo tipografías armónicas y creando variantes de componentes automáticamente","Solo para logos","Solo para iconos"],
+                correct: 1,
+                explanation: "La IA puede generar sistemas completos: Khroma o Coolors para paletas, Fontpair para tipografías, Midjourney para moodboards y GPT-4 para documentar las guías de estilo."
+            },
+            {
+                id: 14,
+                question: "¿Qué ventaja da la IA en la creación de contenido para redes sociales?",
+                options: ["Ninguna real","Generar decenas de variantes de un post (diferentes formatos, colores, textos) en minutos para A/B testing continuo","Solo para grandes marcas","Solo para diseñadores senior"],
+                correct: 1,
+                explanation: "Con IA en Canva o Adobe Express, puedes generar 20 variaciones de un post en minutos: diferentes paletas, composiciones, textos — y probar qué funciona mejor con tu audiencia."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es el impacto de la IA en la profesional del diseño?",
+                options: ["Sustituirá completamente a los diseñadores","Los diseñadores que usan IA producen más en menos tiempo; los que no la usan corren el riesgo de ser menos competitivos","No tiene ningún impacto","Solo afecta al diseño gráfico"],
+                correct: 1,
+                explanation: "La IA no reemplaza el criterio estético ni la dirección creativa humana, pero sí automatiza tareas repetitivas. El diseñador IA augmented produce más con misma calidad."
             }
         ]
     },
     "ia-educacion": {
-        title: "Quiz: IA para Educadores",
+        title: "Examen Final: IA para Educadores",
         description: "Evalúa tus conocimientos del curso \"IA para Educadores\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1388,13 +1983,48 @@ export const COURSE_QUIZZES = {
                 options: ["Prohibirla completamente","Integrarla críticamente como herramienta, enseñando a usarla de forma ética y responsable","Dejar que los alumnos hagan todo con IA","Ignorarla"],
                 correct: 1,
                 explanation: "El educador debe integrar la IA planificadamente: enseñar a usarla como herramienta, desarrollar pensamiento crítico y establecer límites claros."
+            },
+            {
+                id: 11,
+                question: "¿Qué es el 'adaptive learning' con IA?",
+                options: ["Aprender a programar IA","Sistemas educativos que ajustan el contenido, ritmo y dificultad según el desempeño y estilo de aprendizaje de cada estudiante","Clases grabadas","Solo plataformas de pago"],
+                correct: 1,
+                explanation: "El aprendizaje adaptativo (Khan Academy, Duolingo) usa IA para personalizar la experiencia: si fallas en álgebra, el sistema te da más práctica específica en ese punto débil."
+            },
+            {
+                id: 12,
+                question: "¿Cómo puede un docente usar IA para crear material didáctico?",
+                options: ["No puede","ChatGPT puede generar ejercicios, rúbricas, explicaciones diferenciadas, casos prácticos y evaluaciones en el tiempo que tardaba uno solo","Solo para corrección","Solo para niños"],
+                correct: 1,
+                explanation: "Un docente con IA multiplica su producción: genera 20 ejercicios de distintas dificultades, crea explicaciones en 3 niveles de complejidad, diseña proyectos y rubrica criterios."
+            },
+            {
+                id: 13,
+                question: "¿Qué es un 'tutor IA personalizado'?",
+                options: ["Un robot físico","Un sistema de IA que responde dudas, explica conceptos, adapta el nivel y hace seguimiento del progreso del estudiante 24/7","Una app de flashcards","Solo para matemáticas"],
+                correct: 1,
+                explanation: "Un tutor IA (Khanmigo, Socratic by Google) orienta sin dar la respuesta directamente: hace preguntas socráticamente, identifica el punto de confusión y personaliza la explicación."
+            },
+            {
+                id: 14,
+                question: "¿Cuál es el riesgo del uso de IA en educación para los estudiantes?",
+                options: ["Que la IA cometa errores","Dependencia excesiva que impide desarrollar habilidades de pensamiento crítico y resolución autónoma de problemas","Que sea muy cara","Que no hable español"],
+                correct: 1,
+                explanation: "El mayor riesgo es la dependencia: si los estudiantes usan IA para pensar en lugar de pensar ellos mismos, no desarrollan capacidad crítica, memoria ni resolución autónoma."
+            },
+            {
+                id: 15,
+                question: "¿Cómo detectar el uso deshonesto de IA en trabajos académicos?",
+                options: ["Es imposible detectarlo","Con herramientas como Turnitin AI, GPTZero o simplemente diseñando evaluaciones que requieran conocimiento personal verificable","Solo leyendo con atención","Solo preguntando al alumno"],
+                correct: 1,
+                explanation: "GPTZero y Turnitin AI detectan patrones del texto IA. Pero la solución más efectiva es rediseñar las evaluaciones: proyectos personales, reflexiones aplicadas o presentaciones orales."
             }
         ]
     },
     "ia-escritores": {
-        title: "Quiz: IA para Escritores y Creadores de Contenido",
+        title: "Examen Final: IA para Escritores y Creadores de Contenido",
         description: "Evalúa tus conocimientos del curso \"IA para Escritores y Creadores de Contenido\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1465,13 +2095,48 @@ export const COURSE_QUIZZES = {
                 options: ["Es imposible sin editorial","Adquirir ISBN, formatear con herramientas adecuadas y subir a KDP cumpliendo los requisitos","Solo enviar un PDF por email","Necesitas imprimir miles de copias"],
                 correct: 1,
                 explanation: "Con Amazon KDP: prepara el manuscrito, adquiere un ISBN (opcional en KDP), formatea a ePub/KDP, crea la portada y publica siguiendo las guías."
+            },
+            {
+                id: 11,
+                question: "¿Cómo superar el 'bloqueo del escritor' con IA?",
+                options: ["Esperar a la inspiración","Usando prompts generadores de ideas: 'Dame 10 ángulos diferentes de este tema' o 'Propón un gancho inicial impactante'","Solo escribiendo más","Tomando café"],
+                correct: 1,
+                explanation: "La IA es perfecta para el bloqueo: genera 10 posibles aperturas, desarrolla un esquema detallado o te sugiere ángulos que nunca habrías considerado — rompiendo la parálisis."
+            },
+            {
+                id: 12,
+                question: "¿Qué es el 'ghostwriting' asistido por IA?",
+                options: ["Escribir sobre fantasmas","Crear contenido escrito a nombre de un cliente usando IA como asistente, manteniendo su voz y estilo únicos","Solo para blogs","Escribir anónimamente"],
+                correct: 1,
+                explanation: "El ghostwriting IA: primero captura la voz del cliente (ejemplos reales), luego usa IA para generar borradores en ese estilo, que el cliente revisa y publica como suyo."
+            },
+            {
+                id: 13,
+                question: "¿Cómo puede la IA ayudar a escribir una novela?",
+                options: ["No puede ayudar con ficción","Desarrollando tramas, perfiles de personajes, diálogos, descripciones y superando bloqueos creativos en cada capítulo","Escribiendo toda la novela sola","Solo para escaletas de cine"],
+                correct: 1,
+                explanation: "La IA en ficción: desarrolla personajes con profundidad psicológica, genera diálogos en el tono del personaje, sugiere giros de trama y ayuda a mantener coherencia en series largas."
+            },
+            {
+                id: 14,
+                question: "¿Qué herramienta IA es mejor para ensayos y artículos de fondo?",
+                options: ["Solo correctores ortográficos","Claude de Anthropic es especialmente bueno para textos largos, argumentativos y con alta coherencia y precisión factual","Solo ChatGPT","Solo Google Docs"],
+                correct: 1,
+                explanation: "Claude destaca en textos de profundidad: mantiene coherencia en artículos largos, es más cuidadoso con las afirmaciones factuales y tiene un estilo más matizado para ensayos."
+            },
+            {
+                id: 15,
+                question: "¿Cómo usar la IA para adaptar un mismo contenido a diferentes formatos?",
+                options: ["Rehacerlo todo manualmente","Partiendo del texto original: 'Convierte este artículo en hilo de Twitter', 'En script de podcast', 'En post de LinkedIn'","Solo para blogs","Requiere herramientas especiales"],
+                correct: 1,
+                explanation: "Un solo artículo se puede convertir en: hilo de Twitter (bullets impactantes), post LinkedIn (reflexión profesional), script de podcast (tono conversacional) y newsletter en minutos."
             }
         ]
     },
     "ia-emprendedores": {
-        title: "Quiz: IA para Emprendedores",
+        title: "Examen Final: IA para Emprendedores",
         description: "Evalúa tus conocimientos del curso \"IA para Emprendedores\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1542,13 +2207,48 @@ export const COURSE_QUIZZES = {
                 options: ["Esperar a dominar todas las herramientas","Empezar antes de estar listo: lanza una primera versión y mejora con feedback real","Solo planificar durante meses","Copiar exactamente lo que otros hacen"],
                 correct: 1,
                 explanation: "La IA reduce drásticamente el tiempo de idea a lanzamiento. El mayor error es no lanzar. Saca una V1 rápidamente y mejora con datos reales."
+            },
+            {
+                id: 11,
+                question: "¿Cómo puede la IA ayudar a validar una idea de startup?",
+                options: ["No puede ayudar en validación","Analizando tendencias de mercado, identificando competidores, generando hipótesis de cliente y simulando entrevistas","Solo construyendo el producto","Solo con datos de mercado pagos"],
+                correct: 1,
+                explanation: "ChatGPT puede simular entrevistas con clientes objetivo, analizar competidores, identificar riesgos y generar el business model canvas — todo antes de escribir una línea de código."
+            },
+            {
+                id: 12,
+                question: "¿Cómo crear un plan de negocio con IA?",
+                options: ["No se puede hacer con IA","Usando ChatGPT para generar secciones (mercado, competencia, modelo de ingresos, proyecciones) y refinando con datos reales","Delegando todo a la IA","Solo con consultoras caras"],
+                correct: 1,
+                explanation: "La IA genera el esqueleto: análisis de mercado, propuesta de valor, modelo de negocio, estrategia de go-to-market. Tú añades los datos reales y el conocimiento profundo del sector."
+            },
+            {
+                id: 13,
+                question: "¿Qué es un 'AI-first product'?",
+                options: ["Un producto que solo funciona online","Producto donde la IA es el componente central del valor (no un añadido), como ChatGPT, Midjourney o Cursor","Una tienda online","Un producto de hardware"],
+                correct: 1,
+                explanation: "AI-first: la IA no es un feature adicional sino el núcleo del valor. El producto no existiría o sería radicalmente peor sin la IA. Opuesto a 'añadir IA a algo ya existente'."
+            },
+            {
+                id: 14,
+                question: "¿Cómo escalar operaciones de una startup con IA?",
+                options: ["Contratando más personal siempre","Automatizando soporte al cliente, onboarding, generación de contenido y análisis de datos para que el equipo pequeño opere como uno grande","Solo con inversión","Solo en fase de crecimiento"],
+                correct: 1,
+                explanation: "Startups early-stage usan IA para operar 'above their weight': un equipo de 5 con IA puede producir lo que requería un equipo de 20, manteniendo costes bajos en fases críticas."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es el mayor error del emprendedor al adoptar IA?",
+                options: ["Usarla demasiado","Adoptar demasiadas herramientas sin integrarlas en procesos claros, creando caos tecnológico sin beneficio real","Esperar demasiado para usarla","Solo usarla para marketing"],
+                correct: 1,
+                explanation: "'Tool fever': acumular 20 herramientas IA sin implementarlas correctamente. El error es coleccionar en lugar de implementar. Menos herramientas, mejor integradas, con métricas de impacto."
             }
         ]
     },
     "ia-rrhh": {
-        title: "Quiz: IA para Recursos Humanos",
+        title: "Examen Final: IA para Recursos Humanos",
         description: "Evalúa tus conocimientos del curso \"IA para Recursos Humanos\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1619,13 +2319,48 @@ export const COURSE_QUIZZES = {
                 options: ["Solo IA, sin humanos","La IA automatiza lo operativo, los humanos lideran las relaciones, decisiones y cultura","Solo humanos, sin IA","Dejar que decida la dirección"],
                 correct: 1,
                 explanation: "La IA optimiza procesos (screening, scheduling, reportes). El profesional de RRHH se enfoca en relaciones, cultura, desarrollo y decisiones estratégicas."
+            },
+            {
+                id: 11,
+                question: "¿Qué es el 'screening automático' de CVs con IA?",
+                options: ["Eliminar candidatos al azar","Usar IA para analizar y puntuar CVs según criterios definidos, reduciendo el tiempo de selección inicial","Solo para grandes empresas","Descartar sin leer"],
+                correct: 1,
+                explanation: "El screening IA (HireVue, Workday) analiza CVs según competencias requeridas, puntuando candidatos objetivamente. Puede procesar miles en minutos, pero requiere criterios bien definidos para evitar sesgos."
+            },
+            {
+                id: 12,
+                question: "¿Cómo puede la IA mejorar la experiencia del empleado?",
+                options: ["Solo con encuestas anuales","Chatbots IA de RRHH que responden dudas 24/7 sobre nóminas, beneficios, políticas y peticiones sin esperar al departamento","Solo con más reuniones","Reduciendo el equipo"],
+                correct: 1,
+                explanation: "Chatbots de RRHH (como ServiceNow AI o Moveworks) responden el 80% de preguntas frecuentes en segundos, liberando al equipo de RRHH para trabajo estratégico."
+            },
+            {
+                id: 13,
+                question: "¿Qué es el análisis predictivo de rotación de empleados?",
+                options: ["Tablas de rotación manual","Usar ML para identificar empleados con riesgo de abandonar la empresa, permitiendo intervención proactiva","Solo para grandes empresas","Solo para ventas"],
+                correct: 1,
+                explanation: "Modelos ML analizan factores como satisfacción, engagement, compensación y patrones de comportamiento para predecir quién puede irse, activando acciones de retención a tiempo."
+            },
+            {
+                id: 14,
+                question: "¿Cómo usar IA en la formación y desarrollo de talento?",
+                options: ["Solo con videoconferencias","Personalizando rutas de aprendizaje, generando contenido formativo adaptado y midiendo el progreso de competencias","Solo con formaciones presenciales","No aplica en RRHH"],
+                correct: 1,
+                explanation: "Plataformas como Cornerstone o 360Learning usan IA para recomendar formaciones personalizadas, generar contenido adaptado al nivel y medir el desarrollo de competencias clave."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es la consideración ética más importante al usar IA en RRHH?",
+                options: ["El coste de la herramienta","Garantizar que los sistemas no discriminen por género, edad, raza u otras características protegidas al evaluar candidatos","La velocidad del proceso","La interfaz de usuario"],
+                correct: 1,
+                explanation: "La IA en RRHH puede escalar sesgos: si los datos históricos reflejan discriminación, el modelo perpetuará esos patrones. Requiere auditorías continuas de sesgo y supervisión humana en decisiones clave."
             }
         ]
     },
     "ia-ventas": {
-        title: "Quiz: IA para Ventas",
+        title: "Examen Final: IA para Ventas",
         description: "Evalúa tus conocimientos del curso \"IA para Ventas\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1696,13 +2431,48 @@ export const COURSE_QUIZZES = {
                 options: ["Automatizar todo sin personalización","Personalización a escala: usar IA para dar trato personalizado a muchos prospectos","Enviar más emails que la competencia","Bajar precios constantemente"],
                 correct: 1,
                 explanation: "La IA permite hacer lo que antes era imposible: personalizar cada interacción a escala, dando a cada prospecto un trato único y relevante."
+            },
+            {
+                id: 11,
+                question: "¿Qué es el 'lead scoring' con IA?",
+                options: ["Calificar prospectos manualmente","Modelos ML que asignan automáticamente puntuación a cada lead según probabilidad de conversión, priorizando esfuerzos del equipo","Una hoja de Excel","Solo para grandes CRMs"],
+                correct: 1,
+                explanation: "El lead scoring IA (Salesforce Einstein, HubSpot AI) analiza comportamiento web, interacciones y perfil para puntuar automáticamente qué prospectos tienen mayor probabilidad de cerrar."
+            },
+            {
+                id: 12,
+                question: "¿Cómo puede la IA personalizar propuestas comerciales?",
+                options: ["Enviando la misma propuesta a todos","Analizando el perfil, industria y puntos de dolor del cliente para generar propuestas con lenguaje, casos y números relevantes para cada uno","Solo con templates","Solo para grandes cuentas"],
+                correct: 1,
+                explanation: "Con IA, cada propuesta se personaliza en segundos: ajusta el lenguaje al sector, incluye casos de éxito de su industria, calcula ROI específico para su tamaño de empresa."
+            },
+            {
+                id: 13,
+                question: "¿Qué es el 'sales forecasting' con IA?",
+                options: ["Una predicción del tiempo","Usar ML para predecir con mayor precisión los ingresos futuros analizando el pipeline, historial y factores externos","Solo reportes de Excel","Solo para directores de ventas"],
+                correct: 1,
+                explanation: "El forecasting IA analiza el pipeline actual, velocidad de cierre histórica, estacionalidad y factores externos para predecir ingresos con mayor precisión que los métodos tradicionales."
+            },
+            {
+                id: 14,
+                question: "¿Cómo usa la IA para mejorar las llamadas de ventas?",
+                options: ["Grabando sin permiso","Gong.io o Chorus analizan llamadas reales, identifican qué funciona y qué no, y dan coaching específico a cada vendedor","Solo transcribiendo","Solo para entrenamiento inicial"],
+                correct: 1,
+                explanation: "Herramientas como Gong transcriben, analizan sentimiento, detectan objeciones y comparan las llamadas del vendedor con las de top performers, dando feedback accionable."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es la IA más útil para la prospección en ventas B2B?",
+                options: ["Solo LinkedIn manual","Clay.com o Apollo.io con IA que enriquece datos de prospectos, personaliza mensajes de outreach y automatiza secuencias de contacto","Solo cold calling","Solo ferias y eventos"],
+                correct: 1,
+                explanation: "Clay.com usa IA para enriquecer datos de prospectos (tecnología que usan, noticias recientes, cargo) y genera mensajes hiperpersonalizados para cada contacto — multiplicando el outreach."
             }
         ]
     },
     "ia-abogados": {
-        title: "Quiz: IA para Profesionales del Derecho",
+        title: "Examen Final: IA para Profesionales del Derecho",
         description: "Evalúa tus conocimientos del curso \"IA para Profesionales del Derecho\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1773,13 +2543,48 @@ export const COURSE_QUIZZES = {
                 options: ["Ignorarla completamente","Aprender a usar herramientas IA para investigación, redacción y análisis, verificando siempre","Cambiar de profesión","Solo delegar todo a la IA"],
                 correct: 1,
                 explanation: "Los abogados que dominen herramientas IA serán más productivos y competitivos. La clave: aprender a usarlas manteniendo el rigor profesional."
+            },
+            {
+                id: 11,
+                question: "¿Qué es el 'contract review' automatizado con IA?",
+                options: ["Firmar contratos automáticamente","Analizar contratos para identificar cláusulas de riesgo, inconsistencias y términos inusuales en segundos","Solo para contratos simples","Reemplazar abogados completamente"],
+                correct: 1,
+                explanation: "Herramientas como Kira, Luminance o LexCheck analizan contratos, señalan cláusulas problemáticas, comparan con los estándares de la firma y resumen los puntos clave de cada acuerdo."
+            },
+            {
+                id: 12,
+                question: "¿Cómo puede la IA ayudar en la investigación jurídica?",
+                options: ["Reemplazando LEXis completamente","Acelerando la búsqueda de jurisprudencia relevante, resumiendo sentencias y encontrando precedentes aplicables en minutos","Solo para búsquedas simples","Solo para derecho anglosajón"],
+                correct: 1,
+                explanation: "Herramientas como Harvey AI o Casetext (GPT-4 integrado) encuentran jurisprudencia relevante 10x más rápido, resumen sentencias extensas y extraen los principios aplicables al caso."
+            },
+            {
+                id: 13,
+                question: "¿Qué es la 'due diligence' asistida por IA?",
+                options: ["Una revisión manual","El proceso de analizar grandes volúmenes de documentos en operaciones M&A o litigation usando IA para encontrar datos críticos","Solo para fusiones grandes","Solo para auditores"],
+                correct: 1,
+                explanation: "En M&A, la due diligence requiere revisar miles de documentos. La IA analiza todos en paralelo, identifica riesgos (cláusulas de cambio de control, contingencias ocultas) y los organiza por importancia."
+            },
+            {
+                id: 14,
+                question: "¿Cuál es el riesgo principal al usar IA generativa en práctica legal?",
+                options: ["Que sea muy lenta","Las 'alucinaciones': la IA puede citar casos inexistentes o atribuir holding incorrecto a sentencias reales","Que sea muy cara","Que el cliente no la acepte"],
+                correct: 1,
+                explanation: "El caso Mata v. Avianca (2023): abogados presentaron citas de ChatGPT de casos inexistentes. La IA puede inventar jurisprudencia convincente. Siempre verifica CADA cita en bases de datos reales."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es el uso más ético y seguro de la IA en la abogacía?",
+                options: ["Usarla para todo sin revisar","Como asistente para tareas de investigación, redacción de borradores y análisis, con revisión humana experta de TODOS los outputs","Para reemplazar consultores","Solo para tareas administrativas"],
+                correct: 1,
+                explanation: "La IA jurídica funciona mejor como asistente bajo supervisión: acelera investigación y drafting, pero el abogado siempre verifica, valida y asume responsabilidad profesional total del resultado."
             }
         ]
     },
     "ia-salud": {
-        title: "Quiz: IA para Profesionales de Salud",
+        title: "Examen Final: IA para Profesionales de Salud",
         description: "Evalúa tus conocimientos del curso \"IA para Profesionales de Salud\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1850,13 +2655,48 @@ export const COURSE_QUIZZES = {
                 options: ["Evitarla por completo","Aprender a usarla para documentación y educación, manteniendo siempre el juicio clínico","Usarla para todo sin supervisión","Dejar que decida tratamientos"],
                 correct: 1,
                 explanation: "Formarse en herramientas IA para tareas administrativas y educativas. Mantener siempre el juicio clínico. La IA asiste al profesional, no lo sustituye."
+            },
+            {
+                id: 11,
+                question: "¿Qué es el diagnóstico asistido por IA en radiología?",
+                options: ["Una opinión de segunda","Sistemas que analizan imágenes médicas (rayos X, TAC, MRI) para detectar anomalías con alta precisión como asistencia al radiólogo","Sustituir al médico completamente","Solo para hospitales grandes"],
+                correct: 1,
+                explanation: "Herramientas como Aidoc o Enlitic analizan imágenes médicas, señalan áreas de interés y priorizan los casos urgentes. Actúan como control de calidad, no como sustituto del especialista."
+            },
+            {
+                id: 12,
+                question: "¿Cómo puede la IA ayudar en la gestión de pacientes crónicos?",
+                options: ["Solo recordatorios de medicación básicos","Monitorizando datos continuos (wearables), prediciendo descompensaciones, personalizando planes de tratamiento y alertando al médico","Solo para hospitales","Reemplazando al médico de cabecera"],
+                correct: 1,
+                explanation: "Sistemas como Livongo o WellDoc monitorizan continuamente, detectan patrones de riesgo antes de que empeoren y generan recomendaciones personalizadas para pacientes diabetes, cardíacos, etc."
+            },
+            {
+                id: 13,
+                question: "¿Qué es el 'drug discovery' acelerado con IA?",
+                options: ["Venta de medicamentos online","Usar ML para identificar moléculas candidatas a nuevos fármacos y simular su comportamiento, reduciendo el tiempo de desarrollo","Un tipo de base de datos","Solo para laboratorios farmacéuticos grandes"],
+                correct: 1,
+                explanation: "AlphaFold (DeepMind) resolvió el problema del plegamiento de proteínas. Empresas como Insilico Medicine usan IA para identificar targets y diseñar moléculas candidatas en semanas, no años."
+            },
+            {
+                id: 14,
+                question: "¿Cuál es la regulación clave para IA en dispositivos médicos en España/UE?",
+                options: ["No hay regulación específica","El Reglamento de Dispositivos Médicos (MDR) y el AI Act aplican a sistemas IA de diagnóstico como dispositivos de alto riesgo","Solo cumplir GDPR","Solo si es cirugía"],
+                correct: 1,
+                explanation: "La IA de diagnóstico médico cae bajo MDR (como dispositivo médico) y el AI Act (como sistema IA de alto riesgo). Requiere validación clínica, marcado CE y auditorías regulares."
+            },
+            {
+                id: 15,
+                question: "¿Cuál es la prioridad ética en IA de salud?",
+                options: ["La velocidad del sistema","La privacidad de los datos del paciente y garantizar que el sistema IA no agrava desigualdades en el acceso a salud de calidad","La interfaz visual","El coste de la herramienta"],
+                correct: 1,
+                explanation: "Los datos de salud son los más sensibles. Además, los sistemas IA de salud no deben funcionar peor para grupos subrepresentados en los datos de entrenamiento, perpetuando desigualdades sanitarias."
             }
         ]
     },
     "ia-freelancers": {
-        title: "Quiz: IA para Freelancers",
+        title: "Examen Final: IA para Freelancers",
         description: "Evalúa tus conocimientos del curso \"IA para Freelancers\"",
-        passingScore: 70,
+        passingScore: 80,
         questions: [
             {
                 id: 1,
@@ -1927,6 +2767,41 @@ export const COURSE_QUIZZES = {
                 options: ["Usar la IA más cara","Combinar expertise humana con productividad IA, entregando más valor de forma consistente","Solo velocidad","Solo cantidad de proyectos"],
                 correct: 1,
                 explanation: "El freelancer exitoso usa IA como multiplicador: más velocidad + misma calidad + mayor capacidad = más valor para clientes y más ingresos."
+            },
+            {
+                id: 11,
+                question: "¿Cómo puede la IA ayudar a gestionar múltiples clientes como freelancer?",
+                options: ["No puede ayudar en gestión","Automatizando seguimiento de proyectos, generando reportes de progreso, respondiendo emails de estado y organizando el trabajo","Solo con hojas de cálculo","Solo agencias grandes"],
+                correct: 1,
+                explanation: "La IA automatiza la gestión: usa Notion AI para seguimiento, Claude para redactar actualizaciones de estado, Zapier para recordatorios automáticos y GPT para escribir propuestas en segundos."
+            },
+            {
+                id: 12,
+                question: "¿Cómo fijar tarifas competitivas usando datos de mercado con IA?",
+                options: ["Solo mirando Upwork","ChatGPT puede analizar el mercado de tu especialidad, sugerir tarifas según experiencia y servicio, y justificar tu propuesta de valor","Solo copiando a competidores","Solo con coaches de negocio"],
+                correct: 1,
+                explanation: "Pide a ChatGPT: 'Soy diseñador UX, 3 años de experiencia, especializado en SaaS, basándome en el mercado actual, ¿qué tarifa por hora es competitiva y cómo la justifico?'"
+            },
+            {
+                id: 13,
+                question: "¿Qué servicios IA tienen mayor demanda para freelancers en 2024?",
+                options: ["Solo diseño gráfico básico","Automatización de procesos, creación de chatbots, prompt engineering, optimización SEO con IA y consultoría de adopción","Solo traducción","Solo diseño web"],
+                correct: 1,
+                explanation: "Los servicios de mayor crecimiento: automatización (ROI claro para empresas), chatbots de negocio, contenido a escala con IA y formación en adopción de IA dentro de empresas."
+            },
+            {
+                id: 14,
+                question: "¿Cómo construir un portafolio IA como freelancer sin clientes previos?",
+                options: ["Esperar a tener clientes","Crear entre 3-5 proyectos personales que demuestren skills: automatización de un proceso real, chatbot para un nicho, análisis de datos con IA","Solo con certificaciones","Solo con estudios formales"],
+                correct: 1,
+                explanation: "Proyectos personales que demuestren skills concretos: automatiza tu propia gestión de facturas, crea un chatbot FAQ para una asociación local, analiza datos públicos con IA + visualización."
+            },
+            {
+                id: 15,
+                question: "¿Cómo puede la IA ayudar a conseguir más reseñas y referencias de clientes?",
+                options: ["No puede ayudar en esto","Automatizando el seguimiento post-proyecto con mensajes personalizados, simplificando el proceso de dejar reseñas y midiendo la satisfacción","Solo emails manuales","Solo para plataformas grandes"],
+                correct: 1,
+                explanation: "Configura: Zapier + GPT genera mensaje de cierre de proyecto personalizado, envía link directo a la reseña y hace seguimiento automático si no responde. Las referencias se multiplican cuando el proceso es fácil."
             }
         ]
     }

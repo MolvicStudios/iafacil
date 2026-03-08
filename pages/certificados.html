@@ -51,87 +51,153 @@
             const localProgress = JSON.parse(localStorage.getItem('iafacil-course-progress') || '[]');
             const profile = JSON.parse(localStorage.getItem('iafacil-profile') || '{}');
 
-            const progress = (localProgress || []).map(p => ({
-                ...p,
-                completed: p.completed && p.quiz_passed
-            }));
-            const completed = (progress || []).filter(p => p.completed);
+            const completed = (localProgress || []).filter(p => p.completed && p.quiz_passed);
 
             if (completed.length === 0) {
                 empty.style.display = 'block';
                 return;
             }
 
-            const userName = profile?.full_name || 'Estudiante';
-            const userId = profile?.id || 'LOCALUSER';
+            const userName = profile?.cert_name || profile?.full_name || 'Estudiante';
 
             container.innerHTML = completed.map(p => {
                 const course = getCourseById(p.course_id);
                 const date = new Date(p.completed_at || p.updated_at).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
-                const certId = `IAFACIL-${p.course_id.toUpperCase().slice(0, 8)}-${String(userId).slice(0, 6)}`.toUpperCase();
+                const certId = p.cert_id || `IAF-${p.course_id.toUpperCase().slice(0, 8)}-${Date.now().toString(36).toUpperCase().slice(-6)}`;
                 const quizScore = p.quiz_score || 100;
                 const levelLabel = course ? `${course.levelIcon} ${course.levelLabel}` : '';
+                const courseTitle = course ? course.title : p.course_id;
 
                 return `
-                <div class="card" style="padding:2rem; margin-bottom:1.5rem; border:2px solid var(--color-primary); position:relative; overflow:hidden;">
-                    <div style="position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));"></div>
+                <div style="
+                    background: linear-gradient(135deg, #0a0e1a 0%, #0d1635 50%, #0a0e1a 100%);
+                    border-radius: 16px;
+                    margin-bottom: 2rem;
+                    overflow: hidden;
+                    position: relative;
+                    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                ">
+                    <div style="height:6px; background:linear-gradient(90deg,#FFD700,#FFA500,#FFD700,#FFA500,#FFD700);"></div>
 
-                    <div style="text-align:center; margin-bottom:1.5rem;">
-                        <div style="font-size:3rem; margin-bottom:0.5rem;">🎓</div>
-                        <h2 style="color:var(--color-primary); margin-bottom:0.25rem;">Certificado de Finalización</h2>
-                        <p class="text-muted text-sm">IAFACIL.HELP</p>
-                    </div>
+                    <!-- Corner ornaments -->
+                    <div style="position:absolute;top:20px;left:20px;width:50px;height:50px;border-top:2px solid #FFD700;border-left:2px solid #FFD700;border-radius:4px 0 0 0;opacity:0.6;"></div>
+                    <div style="position:absolute;top:20px;right:20px;width:50px;height:50px;border-top:2px solid #FFD700;border-right:2px solid #FFD700;border-radius:0 4px 0 0;opacity:0.6;"></div>
+                    <div style="position:absolute;bottom:60px;left:20px;width:50px;height:50px;border-bottom:2px solid #FFD700;border-left:2px solid #FFD700;border-radius:0 0 0 4px;opacity:0.6;"></div>
+                    <div style="position:absolute;bottom:60px;right:20px;width:50px;height:50px;border-bottom:2px solid #FFD700;border-right:2px solid #FFD700;border-radius:0 0 4px 0;opacity:0.6;"></div>
 
-                    <div style="text-align:center; margin-bottom:1.5rem;">
-                        <p class="text-muted">Esto certifica que</p>
-                        <h3 style="font-size:1.5rem; margin:0.5rem 0;">${userName}</h3>
-                        <p class="text-muted">ha completado exitosamente el curso</p>
-                        <h3 style="color:var(--color-primary); margin:0.5rem 0;">${course ? course.title : p.course_id}</h3>
-                        <p class="text-sm text-muted">${levelLabel} · ${course ? course.totalLessons : ''} lecciones · Quiz: ${quizScore}%</p>
-                        <p class="text-sm text-muted" style="margin-top:0.25rem;">Fecha: ${date}</p>
-                    </div>
+                    <div style="padding:2.5rem 2rem; text-align:center; position:relative; z-index:1;">
+                        <!-- Logo -->
+                        <div style="margin-bottom:1rem;">
+                            <span style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); padding:0.3rem 1rem; border-radius:50px; color:#FFD700; font-size:0.8rem; font-weight:700; letter-spacing:2px;">🤖 IAFACIL.HELP</span>
+                        </div>
 
-                    <div style="display:flex; justify-content:space-between; align-items:center; padding-top:1rem; border-top:1px solid var(--border-color);">
-                        <span class="text-xs text-muted">ID: ${certId}</span>
-                        <div style="display:flex; gap:0.5rem;">
-                            <button class="btn btn-sm btn-outline download-cert" data-name="${userName}" data-course="${course ? course.title : p.course_id}" data-date="${date}" data-id="${certId}" data-score="${quizScore}" data-level="${levelLabel}">📥 Descargar</button>
-                            <button class="btn btn-sm btn-secondary print-cert" data-name="${userName}" data-course="${course ? course.title : p.course_id}" data-date="${date}" data-id="${certId}" data-score="${quizScore}" data-level="${levelLabel}">🖨️ Imprimir</button>
+                        <!-- Title -->
+                        <h2 style="color:#FFD700; font-size:clamp(1.3rem,3vw,1.8rem); font-weight:800; letter-spacing:1px; margin-bottom:0.25rem; text-shadow:0 2px 10px rgba(255,215,0,0.3);">
+                            CERTIFICADO DE FINALIZACIÓN
+                        </h2>
+                        <div style="width:60px;height:2px;background:linear-gradient(90deg,transparent,#FFD700,transparent);margin:0.75rem auto 1.25rem;"></div>
+
+                        <p style="color:rgba(255,255,255,0.55); font-size:0.85rem; text-transform:uppercase; letter-spacing:2px; margin-bottom:0.5rem;">Esto certifica que</p>
+                        <h3 style="color:#fff; font-size:clamp(1.4rem,3.5vw,2.2rem); font-style:italic; font-weight:700; margin:0.25rem 0 1rem; text-shadow:0 2px 20px rgba(255,255,255,0.15);">${userName}</h3>
+                        <p style="color:rgba(255,255,255,0.55); font-size:0.85rem; text-transform:uppercase; letter-spacing:2px; margin-bottom:0.75rem;">ha completado exitosamente el curso</p>
+
+                        <div style="background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.25);border-radius:10px;padding:0.875rem 1.5rem;margin:0 auto 1.25rem;max-width:560px;">
+                            <div style="color:#FFD700; font-size:clamp(1rem,2.5vw,1.3rem); font-weight:700;">${courseTitle}</div>
+                        </div>
+
+                        <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.25rem;">
+                            <span style="color:rgba(255,255,255,0.65); font-size:0.85rem;">📊 Resultado: <strong style="color:#4ade80;">${quizScore}%</strong></span>
+                            <span style="color:rgba(255,255,255,0.65); font-size:0.85rem;">🎯 ${levelLabel}</span>
+                            <span style="color:rgba(255,255,255,0.65); font-size:0.85rem;">📅 ${date}</span>
+                        </div>
+
+                        <!-- Seal -->
+                        <div style="margin:0.5rem auto 1rem; display:inline-block;">
+                            <svg viewBox="0 0 100 100" style="width:64px;height:64px;">
+                                <polygon points="50,5 61,35 93,35 68,57 79,91 50,70 21,91 32,57 7,35 39,35" fill="rgba(255,215,0,0.12)" stroke="#FFD700" stroke-width="1.5"/>
+                                <text x="50" y="55" text-anchor="middle" fill="#FFD700" font-size="20" font-weight="bold">✓</text>
+                            </svg>
+                        </div>
+
+                        <p style="color:rgba(255,255,255,0.2); font-size:0.7rem; letter-spacing:1px; margin-bottom:1.5rem;">ID: ${certId}</p>
+
+                        <!-- Buttons -->
+                        <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+                            <button class="btn download-cert"
+                                style="background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;border:none;font-weight:700;padding:0.625rem 1.25rem;"
+                                data-name="${userName}" data-course="${courseTitle}" data-date="${date}" data-id="${certId}" data-score="${quizScore}" data-level="${levelLabel}">
+                                📥 Descargar
+                            </button>
+                            <button class="btn print-cert btn-outline"
+                                style="border-color:#FFD700;color:#FFD700;padding:0.625rem 1.25rem;"
+                                data-name="${userName}" data-course="${courseTitle}" data-date="${date}" data-id="${certId}" data-score="${quizScore}" data-level="${levelLabel}">
+                                🖨️ Imprimir
+                            </button>
+                            <a href="/pages/cursos/curso.html?id=${p.course_id}" class="btn btn-outline"
+                                style="border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.6);padding:0.625rem 1.25rem;">
+                                📚 Ver curso
+                            </a>
                         </div>
                     </div>
+
+                    <div style="height:4px; background:linear-gradient(90deg,#FFD700,#FFA500,#FFD700,#FFA500,#FFD700);"></div>
                 </div>
             `}).join('');
 
-            // Print / Download certificate HTML builder
+            // Certificate HTML builder (matching premium design)
             function buildCertHTML(data) {
                 return `<!DOCTYPE html>
-<html><head><title>Certificado - ${data.course}</title>
+<html lang="es"><head><meta charset="UTF-8"><title>Certificado \u2014 ${data.course}</title>
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Georgia', serif; text-align: center; padding: 60px 40px; color: #333; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-    h1 { color: #00B894; font-size: 2rem; margin-bottom: 0.25rem; }
-    h2 { font-size: 1.5rem; }
-    .line { border-bottom: 2px solid #00B894; max-width: 300px; margin: 1.25rem auto; }
-    .meta { color: #666; font-size: 0.9rem; margin-top: 0.5rem; }
-    .id { color: #999; font-size: 0.8rem; margin-top: 2rem; }
-    .grad { height: 6px; background: linear-gradient(90deg, #00B894, #0984E3, #6C5CE7); margin-bottom: 2rem; border-radius: 3px; }
-    .badge { display: inline-block; background: #00B894; color: white; padding: 0.25rem 1rem; border-radius: 50px; font-size: 0.85rem; margin-top: 0.5rem; }
-    @media print { body { padding: 40px 30px; } }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lato',sans-serif;background:#0a0e1a;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.cert{background:linear-gradient(135deg,#0a0e1a 0%,#0d1635 50%,#0a0e1a 100%);width:100%;max-width:900px;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.bar{background:linear-gradient(90deg,#FFD700,#FFA500,#FFD700,#FFA500,#FFD700)}
+.bar-top{height:8px}
+.bar-bot{height:5px}
+.corner{position:absolute;width:70px;height:70px;border-color:#FFD700;border-style:solid;opacity:.65}
+.tl{top:20px;left:20px;border-width:3px 0 0 3px;border-radius:4px 0 0 0}
+.tr{top:20px;right:20px;border-width:3px 3px 0 0;border-radius:0 4px 0 0}
+.bl{bottom:20px;left:20px;border-width:0 0 3px 3px;border-radius:0 0 0 4px}
+.br{bottom:20px;right:20px;border-width:0 3px 3px 0;border-radius:0 0 4px 0}
+.inner{padding:60px 80px;text-align:center;position:relative;z-index:1}
+.logo-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,215,0,.1);border:1px solid rgba(255,215,0,.3);padding:6px 18px;border-radius:50px;margin-bottom:20px;color:#FFD700;font-size:13px;font-weight:700;letter-spacing:3px}
+.cert-title{font-family:'Playfair Display',serif;color:#FFD700;font-size:2.3rem;font-weight:700;letter-spacing:2px;text-shadow:0 2px 10px rgba(255,215,0,.3)}
+.divider{width:100px;height:2px;background:linear-gradient(90deg,transparent,#FFD700,transparent);margin:16px auto 28px}
+.lbl{color:rgba(255,255,255,.5);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.student{font-family:'Playfair Display',serif;color:#fff;font-size:3rem;font-style:italic;margin:8px 0 24px;text-shadow:0 2px 20px rgba(255,255,255,.12)}
+.course-box{background:rgba(255,215,0,.08);border:1px solid rgba(255,215,0,.25);border-radius:10px;padding:16px 32px;margin:12px auto 24px;display:inline-block;max-width:700px}
+.course-name{color:#FFD700;font-size:1.6rem;font-weight:700}
+.meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin:20px 0;color:rgba(255,255,255,.6);font-size:14px}
+.meta strong{color:#4ade80}
+.cert-id{color:rgba(255,255,255,.22);font-size:11px;letter-spacing:1px;margin-top:14px}
+@media print{body{background:#fff;padding:0}.cert{box-shadow:none}}
 </style></head><body>
-<div class="grad"></div>
-<h1>🎓 Certificado de Finalización</h1>
-<p style="color:#666;">IAFACIL.HELP — Plataforma de IA Accesible</p>
-<div class="line"></div>
-<p>Esto certifica que</p>
-<h2>${data.name}</h2>
-<p>ha completado exitosamente el curso</p>
-<h2 style="color:#00B894;">${data.course}</h2>
-<p class="meta">${data.level}</p>
-<div class="badge">Quiz: ${data.score}%</div>
-<p class="meta" style="margin-top:1rem;">Fecha de finalización: ${data.date}</p>
-<div class="line"></div>
-<p class="id">ID del certificado: ${data.id}</p>
-<script src="/cookie-consent.js"></script>
-</body></html>`;
+<div class="cert">
+<div class="bar bar-top"></div>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+<div class="inner">
+<div class="logo-pill">🤖 IAFACIL.HELP</div>
+<div class="cert-title">CERTIFICADO DE FINALIZACIÓN</div>
+<div class="divider"></div>
+<div class="lbl">Esto certifica que</div>
+<div class="student">${data.name}</div>
+<div class="lbl">ha completado exitosamente el curso</div>
+<div class="course-box"><div class="course-name">${data.course}</div></div>
+<div class="meta">
+  <span>📊 Resultado del Examen Final: <strong>${data.score}%</strong></span>
+  <span>🎯 ${data.level}</span>
+  <span>📅 ${data.date}</span>
+</div>
+<svg viewBox="0 0 100 100" style="width:70px;height:70px;margin:8px auto;display:block">
+  <polygon points="50,5 61,35 93,35 68,57 79,91 50,70 21,91 32,57 7,35 39,35" fill="rgba(255,215,0,.12)" stroke="#FFD700" stroke-width="1.5"/>
+  <text x="50" y="55" text-anchor="middle" fill="#FFD700" font-size="20" font-weight="bold">✓</text>
+</svg>
+<div class="cert-id">Certificado ID: ${data.id}</div>
+</div>
+<div class="bar bar-bot"></div>
+</div></body></html>`;
             }
 
             // Print buttons
@@ -139,9 +205,7 @@
                 btn.addEventListener('click', () => {
                     const data = { name: btn.dataset.name, course: btn.dataset.course, date: btn.dataset.date, id: btn.dataset.id, score: btn.dataset.score, level: btn.dataset.level };
                     const w = window.open('', '_blank');
-                    w.document.write(buildCertHTML(data));
-                    w.document.close();
-                    w.print();
+                    if (w) { w.document.write(buildCertHTML(data)); w.document.close(); w.print(); }
                 });
             });
 
@@ -153,10 +217,10 @@
                     const url = URL.createObjectURL(blob);
                     const a = document.createElement('a');
                     a.href = url;
-                    a.download = `certificado-${btn.dataset.id.toLowerCase()}.html`;
+                    a.download = `certificado-${data.course.toLowerCase().replace(/\s+/g, '-').slice(0, 30)}.html`;
                     a.click();
                     URL.revokeObjectURL(url);
-                    toast.success('Certificado descargado');
+                    toast.success('✅ Certificado descargado');
                 });
             });
 

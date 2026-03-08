@@ -46,13 +46,22 @@
             <div id="quizContainer"></div>
         </section>
 
-        <!-- Certificate Banner -->
-        <section class="card" id="certificateBanner" style="margin-top:1.5rem; padding:1.5rem; display:none; border:2px solid var(--color-primary); text-align:center;">
-            <div style="font-size:3rem; margin-bottom:0.5rem;">🎓</div>
-            <h3 style="margin-bottom:0.5rem;">¡Curso Completado!</h3>
-            <p class="text-muted" style="margin-bottom:1rem;">Has completado todas las lecciones y aprobado el quiz.</p>
-            <a href="/pages/certificados.html" class="btn btn-primary">Ver mi certificado</a>
-        </section>
+        <!-- Certificate Section -->
+        <section id="certificateBanner" style="margin-top:1.5rem; display:none;"></section>
+
+        <!-- Name Input Modal -->
+        <div id="certNameModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:9999; display:flex; align-items:center; justify-content:center; padding:1rem;" hidden>
+            <div style="background:var(--color-surface); border-radius:var(--border-radius-lg); padding:2rem; max-width:500px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,0.4); text-align:center; position:relative;">
+                <div style="font-size:3.5rem; margin-bottom:0.5rem;">🎓</div>
+                <h2 style="margin-bottom:0.5rem; color:var(--color-primary);">¡Examen Superado!</h2>
+                <p id="certModalScore" class="text-muted" style="margin-bottom:1.5rem;"></p>
+                <p style="margin-bottom:1rem;">Introduce tu nombre completo para generar tu certificado oficial:</p>
+                <input type="text" id="certNameInput" placeholder="Ej: María García López" maxlength="80"
+                    style="width:100%; padding:0.875rem 1rem; font-size:1.1rem; border:2px solid var(--color-primary); border-radius:var(--border-radius); background:var(--color-bg); color:var(--color-text); margin-bottom:1rem; text-align:center; outline:none;">
+                <button id="btnGenerateCert" class="btn btn-primary" style="width:100%; padding:0.875rem; font-size:1rem;">✨ Generar mi certificado</button>
+                <p class="text-muted text-sm" style="margin-top:0.75rem;">Tu nombre aparecerá en el certificado de finalización del curso.</p>
+            </div>
+        </div>
 
         <section class="card" style="margin-top:1.5rem; padding:1.25rem;">
             <h3 style="margin-bottom:0.5rem;">Progreso local</h3>
@@ -340,7 +349,8 @@
         } catch {}
     }
 
-    /* ═══ Quiz System ═══ */
+    /* ═══ Final Exam System ═══ */
+    const FINAL_PASS_SCORE = 80;
     let quizState = { currentQ: 0, answers: {}, submitted: false, score: 0 };
 
     function renderQuizSection() {
@@ -362,11 +372,11 @@
             const container = document.getElementById('quizContainer');
             container.innerHTML = `
                 <div class="quiz-result">
-                    <div class="quiz-result-icon">🎉</div>
-                    <h3>Quiz aprobado</h3>
+                    <div class="quiz-result-icon">🏆</div>
+                    <h3>Examen Final aprobado</h3>
                     <div class="quiz-result-score">${progress.quiz_score || 100}%</div>
-                    <p class="text-muted" style="margin-top:0.5rem;">Has superado la evaluación de este curso.</p>
-                    <button class="btn btn-outline" style="margin-top:1rem;" id="btnRetakeQuiz">Repetir quiz</button>
+                    <p class="text-muted" style="margin-top:0.5rem;">Has superado el examen final de certificación.</p>
+                    <button class="btn btn-outline" style="margin-top:1rem;" id="btnRetakeQuiz">Repetir examen</button>
                 </div>`;
             document.getElementById('btnRetakeQuiz')?.addEventListener('click', () => {
                 quizState = { currentQ: 0, answers: {}, submitted: false, score: 0 };
@@ -389,20 +399,25 @@
             return;
         }
 
-        const q = quiz.questions[quizState.currentQ];
-        const total = quiz.questions.length;
+        // Use up to 15 questions
+        const questions = quiz.questions.slice(0, 15);
+        const q = questions[quizState.currentQ];
+        const total = questions.length;
         const pct = Math.round(((quizState.currentQ) / total) * 100);
 
         container.innerHTML = `
             <div class="quiz-container">
-                <div class="quiz-header">
-                    <h3>📝 ${quiz.title}</h3>
-                    <p class="text-muted">${quiz.description}</p>
+                <div class="quiz-header" style="margin-bottom:1rem;">
+                    <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+                        <span style="background:var(--color-primary); color:white; padding:0.2rem 0.6rem; border-radius:50px; font-size:0.75rem; font-weight:700;">EXAMEN FINAL DE CERTIFICACIÓN</span>
+                    </div>
+                    <h3 style="margin-bottom:0.25rem;">📋 ${quiz.title}</h3>
+                    <p class="text-muted text-sm">${quiz.description}</p>
                 </div>
                 <div class="quiz-progress" style="margin-bottom:1.5rem;">
                     <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
-                        <span class="text-sm">Pregunta ${quizState.currentQ + 1} de ${total}</span>
-                        <span class="text-sm">${pct}%</span>
+                        <span class="text-sm font-medium">Pregunta ${quizState.currentQ + 1} de ${total}</span>
+                        <span class="text-sm">${pct}% completado</span>
                     </div>
                     <div class="progress-bar"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
                 </div>
@@ -421,34 +436,39 @@
                     <button class="btn btn-outline" ${quizState.currentQ === 0 ? 'disabled' : ''} data-action="quiz-prev">← Anterior</button>
                     ${quizState.currentQ < total - 1
                         ? `<button class="btn btn-primary" data-action="quiz-next" ${quizState.answers[quizState.currentQ] === undefined ? 'disabled' : ''}>Siguiente →</button>`
-                        : `<button class="btn btn-primary" data-action="quiz-submit" ${Object.keys(quizState.answers).length < total ? 'disabled' : ''}>Enviar respuestas</button>`
+                        : `<button class="btn btn-primary" data-action="quiz-submit" ${Object.keys(quizState.answers).length < total ? 'disabled' : ''}>📤 Enviar respuestas</button>`
                     }
                 </div>
-                <p class="text-muted text-sm text-center" style="margin-top:0.75rem;">Necesitas un 70% para aprobar</p>
+                <p class="text-muted text-sm text-center" style="margin-top:0.75rem;">Necesitas un ${FINAL_PASS_SCORE}% (${Math.ceil(total * FINAL_PASS_SCORE / 100)} de ${total}) para obtener el certificado</p>
             </div>
         `;
     }
 
     function renderQuizResults(container, quiz) {
-        const total = quiz.questions.length;
+        const questions = quiz.questions.slice(0, 15);
+        const total = questions.length;
         let correct = 0;
-        quiz.questions.forEach((q, i) => {
+        questions.forEach((q, i) => {
             if (quizState.answers[i] === q.correct) correct++;
         });
         const score = Math.round((correct / total) * 100);
-        const passed = score >= quiz.passingScore;
+        const passed = score >= FINAL_PASS_SCORE;
 
         container.innerHTML = `
             <div class="quiz-result">
-                <div class="quiz-result-icon">${passed ? '🎉' : '😔'}</div>
-                <h3>${passed ? '¡Felicidades! Has aprobado' : 'No has aprobado esta vez'}</h3>
-                <div class="quiz-result-score">${score}%</div>
+                <div class="quiz-result-icon">${passed ? '🏆' : '😔'}</div>
+                <h3>${passed ? '¡Examen Superado!' : 'No has aprobado esta vez'}</h3>
+                <div class="quiz-result-score" style="color:${passed ? 'var(--color-success)' : 'var(--color-error)'}">${score}%</div>
                 <p class="text-muted" style="margin-top:0.5rem;">${correct} de ${total} respuestas correctas</p>
                 ${passed
-                    ? '<p style="margin-top:0.75rem; color:var(--color-success);">🎓 ¡Has obtenido tu certificado!</p>'
-                    : `<p style="margin-top:0.75rem;">Necesitas un ${quiz.passingScore}% para aprobar. ¡Repasa las lecciones y vuelve a intentarlo!</p>`
+                    ? `<p style="margin-top:0.75rem; color:var(--color-success); font-weight:600;">🎓 ¡Puedes generar tu certificado oficial!</p>`
+                    : `<p style="margin-top:0.75rem;">Necesitas un ${FINAL_PASS_SCORE}% para obtener el certificado. ¡Repasa el material!</p>`
                 }
-                <button class="btn ${passed ? 'btn-outline' : 'btn-primary'}" style="margin-top:1rem;" data-action="quiz-review">Ver respuestas</button>
+                ${passed
+                    ? `<button class="btn btn-primary" style="margin-top:1rem; padding:0.75rem 2rem; font-size:1rem;" data-action="open-cert-modal">✨ Generar mi certificado</button>`
+                    : ''
+                }
+                <button class="btn btn-outline" style="margin-top:0.75rem;" data-action="quiz-review">Ver respuestas</button>
                 ${!passed ? '<button class="btn btn-primary" style="margin-top:0.5rem;" data-action="quiz-retry">Intentar de nuevo</button>' : ''}
             </div>
             <div id="quizReview" style="display:none; margin-top:1.5rem;"></div>
@@ -462,7 +482,7 @@
             progress.completed_at = progress.completed_at || new Date().toISOString();
             saveCourseProgress(progress);
             addXP(100);
-            toast.success('🎓 ¡Curso completado! +100 XP');
+            toast.success('🏆 ¡Examen superado! +100 XP — Genera tu certificado');
             renderCertificateBanner();
         }
     }
@@ -472,7 +492,7 @@
         if (!review) return;
         review.style.display = 'block';
 
-        review.innerHTML = quiz.questions.map((q, i) => {
+        review.innerHTML = quiz.questions.slice(0, 15).map((q, i) => {
             const userAns = quizState.answers[i];
             const isCorrect = userAns === q.correct;
             return `
@@ -491,12 +511,200 @@
         }).join('');
     }
 
-    /* ═══ Certificate Banner ═══ */
+    /* ═══ Certificate Modal & Banner ═══ */
+    function openCertModal(score) {
+        const modal = document.getElementById('certNameModal');
+        const scoreEl = document.getElementById('certModalScore');
+        const input = document.getElementById('certNameInput');
+        const profile = JSON.parse(localStorage.getItem('iafacil-profile') || '{}');
+        if (scoreEl) scoreEl.textContent = `Has obtenido ${score}% — superas el mínimo de ${FINAL_PASS_SCORE}% requerido.`;
+        if (input && profile.full_name) input.value = profile.full_name;
+        modal.removeAttribute('hidden');
+        modal.style.display = 'flex';
+        setTimeout(() => input && input.focus(), 100);
+    }
+
+    function closeCertModal() {
+        const modal = document.getElementById('certNameModal');
+        modal.setAttribute('hidden', '');
+        modal.style.display = 'none';
+    }
+
     function renderCertificateBanner() {
         const banner = document.getElementById('certificateBanner');
         if (!banner || !course) return;
         const progress = getCourseProgress();
-        banner.style.display = (progress.completed && progress.quiz_passed) ? 'block' : 'none';
+        if (!(progress.completed && progress.quiz_passed)) {
+            banner.style.display = 'none';
+            return;
+        }
+        banner.style.display = 'block';
+        const profile = JSON.parse(localStorage.getItem('iafacil-profile') || '{}');
+        const certName = profile.cert_name || profile.full_name || 'Estudiante';
+        const date = new Date(progress.completed_at || progress.updated_at).toLocaleDateString('es-ES', { year:'numeric', month:'long', day:'numeric' });
+        const certId = `IAF-${(course.id).toUpperCase().slice(0,8)}-${Date.now().toString(36).toUpperCase().slice(-6)}`;
+        const savedCertId = progress.cert_id || certId;
+        if (!progress.cert_id) { progress.cert_id = certId; saveCourseProgress(progress); }
+        banner.innerHTML = buildInPageCertificate({ name: certName, course: course.title, date, id: savedCertId, score: progress.quiz_score || 100, level: `${course.levelIcon} ${course.levelLabel}` });
+        // Re-attach cert name modal button if profile name not yet set
+        const rebtn = banner.querySelector('[data-action="open-cert-modal-banner"]');
+        if (rebtn) rebtn.addEventListener('click', () => openCertModal(progress.quiz_score || 100));
+        banner.querySelector('[data-action="download-cert"]')?.addEventListener('click', downloadCertificate);
+        banner.querySelector('[data-action="print-cert"]')?.addEventListener('click', printCertificate);
+    }
+
+    function buildInPageCertificate({ name, course: courseTitle, date, id, score, level }) {
+        return `
+        <div id="inPageCert" style="
+            background: linear-gradient(135deg, #0a0e1a 0%, #0d1635 50%, #0a0e1a 100%);
+            border-radius: var(--border-radius-lg);
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        ">
+            <!-- Top gradient bar -->
+            <div style="height:6px; background:linear-gradient(90deg, #FFD700, #FFA500, #FFD700, #FFA500, #FFD700);"></div>
+
+            <!-- Decorative corner ornaments -->
+            <div style="position:absolute; top:20px; left:20px; width:60px; height:60px; border-top:3px solid #FFD700; border-left:3px solid #FFD700; border-radius:4px 0 0 0; opacity:0.7;"></div>
+            <div style="position:absolute; top:20px; right:20px; width:60px; height:60px; border-top:3px solid #FFD700; border-right:3px solid #FFD700; border-radius:0 4px 0 0; opacity:0.7;"></div>
+            <div style="position:absolute; bottom:20px; left:20px; width:60px; height:60px; border-bottom:3px solid #FFD700; border-left:3px solid #FFD700; border-radius:0 0 0 4px; opacity:0.7;"></div>
+            <div style="position:absolute; bottom:20px; right:20px; width:60px; height:60px; border-bottom:3px solid #FFD700; border-right:3px solid #FFD700; border-radius:0 0 4px 0; opacity:0.7;"></div>
+
+            <!-- Content -->
+            <div style="padding:2.5rem 3rem; text-align:center; position:relative; z-index:1;">
+
+                <!-- Logo area -->
+                <div style="margin-bottom:1rem;">
+                    <div style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); padding:0.4rem 1rem; border-radius:50px;">
+                        <span style="font-size:1.1rem;">🤖</span>
+                        <span style="color:#FFD700; font-size:0.85rem; font-weight:700; letter-spacing:2px;">IAFACIL.HELP</span>
+                    </div>
+                </div>
+
+                <!-- Title -->
+                <h2 style="color:#FFD700; font-size:clamp(1.4rem,3vw,2rem); font-weight:800; letter-spacing:1px; margin-bottom:0.25rem; text-shadow:0 2px 10px rgba(255,215,0,0.3);">CERTIFICADO DE FINALIZACIÓN</h2>
+                <div style="width:80px; height:2px; background:linear-gradient(90deg, transparent, #FFD700, transparent); margin:0.75rem auto 1.5rem;"></div>
+
+                <!-- Certifies text -->
+                <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; margin-bottom:0.5rem; letter-spacing:1px; text-transform:uppercase;">Esto certifica que</p>
+
+                <!-- Student name -->
+                <h3 style="color:#fff; font-size:clamp(1.6rem,4vw,2.5rem); font-weight:700; margin:0.25rem 0 1rem; text-shadow:0 2px 20px rgba(255,255,255,0.2); font-style:italic;">${name}</h3>
+
+                <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:0.5rem; letter-spacing:1px; text-transform:uppercase;">ha completado exitosamente el curso</p>
+
+                <!-- Course name -->
+                <div style="background:rgba(255,215,0,0.08); border:1px solid rgba(255,215,0,0.25); border-radius:var(--border-radius); padding:0.875rem 1.5rem; margin:0.75rem auto; max-width:600px;">
+                    <h4 style="color:#FFD700; font-size:clamp(1rem,2.5vw,1.4rem); font-weight:700; margin:0;">${courseTitle}</h4>
+                </div>
+
+                <!-- Meta info -->
+                <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; margin:1.25rem 0;">
+                    <span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">📊 Resultado: <strong style="color:#4ade80;">${score}%</strong></span>
+                    <span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">🎯 ${level}</span>
+                    <span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">📅 ${date}</span>
+                </div>
+
+                <!-- Decorative seal -->
+                <div style="margin:1rem auto; width:80px; height:80px; position:relative; display:inline-block;">
+                    <svg viewBox="0 0 100 100" style="width:80px; height:80px;">
+                        <polygon points="50,5 61,35 93,35 68,57 79,91 50,70 21,91 32,57 7,35 39,35" fill="rgba(255,215,0,0.15)" stroke="#FFD700" stroke-width="1.5"/>
+                        <text x="50" y="55" text-anchor="middle" fill="#FFD700" font-size="18" font-weight="bold">✓</text>
+                    </svg>
+                </div>
+
+                <!-- Certificate ID -->
+                <p style="color:rgba(255,255,255,0.3); font-size:0.75rem; margin-top:0.5rem; letter-spacing:1px;">ID: ${id}</p>
+
+                <!-- Action Buttons -->
+                <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
+                    <button data-action="download-cert" class="btn btn-primary" style="background:linear-gradient(135deg, #FFD700, #FFA500); color:#000; border:none; font-weight:700;">📥 Descargar certificado</button>
+                    <button data-action="print-cert" class="btn btn-outline" style="border-color:#FFD700; color:#FFD700;">🖨️ Imprimir</button>
+                    <a href="/pages/certificados.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3); color:rgba(255,255,255,0.7);">🎓 Ver todos mis certificados</a>
+                </div>
+            </div>
+
+            <!-- Bottom gradient bar -->
+            <div style="height:4px; background:linear-gradient(90deg, #FFD700, #FFA500, #FFD700, #FFA500, #FFD700);"></div>
+        </div>
+        `;
+    }
+
+    /* ═══ Certificate Download/Print ═══ */
+    function getCertData() {
+        const progress = getCourseProgress();
+        const profile = JSON.parse(localStorage.getItem('iafacil-profile') || '{}');
+        const certName = profile.cert_name || profile.full_name || 'Estudiante';
+        const date = new Date(progress.completed_at || progress.updated_at).toLocaleDateString('es-ES', { year:'numeric', month:'long', day:'numeric' });
+        return { name: certName, course: course.title, date, id: progress.cert_id || 'IAF-CERT', score: progress.quiz_score || 100, level: `${course.levelIcon} ${course.levelLabel}` };
+    }
+
+    function buildPrintableCert(data) {
+        return `<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><title>Certificado — ${data.course}</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lato',sans-serif;background:#0a0e1a;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.cert{background:linear-gradient(135deg,#0a0e1a 0%,#0d1635 50%,#0a0e1a 100%);width:100%;max-width:900px;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.bar-top{height:8px;background:linear-gradient(90deg,#FFD700,#FFA500,#FFD700,#FFA500,#FFD700)}
+.bar-bot{height:5px;background:linear-gradient(90deg,#FFD700,#FFA500,#FFD700,#FFA500,#FFD700)}
+.corner{position:absolute;width:70px;height:70px;border-color:#FFD700;border-style:solid;opacity:.7}
+.tl{top:20px;left:20px;border-width:3px 0 0 3px;border-radius:4px 0 0 0}
+.tr{top:20px;right:20px;border-width:3px 3px 0 0;border-radius:0 4px 0 0}
+.bl{bottom:20px;left:20px;border-width:0 0 3px 3px;border-radius:0 0 0 4px}
+.br{bottom:20px;right:20px;border-width:0 3px 3px 0;border-radius:0 0 4px 0}
+.inner{padding:60px 80px;text-align:center;position:relative;z-index:1}
+.logo-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,215,0,.1);border:1px solid rgba(255,215,0,.3);padding:6px 18px;border-radius:50px;margin-bottom:20px}
+.logo-text{color:#FFD700;font-size:13px;font-weight:700;letter-spacing:3px}
+.cert-title{font-family:'Playfair Display',serif;color:#FFD700;font-size:2.2rem;font-weight:700;letter-spacing:2px;text-shadow:0 2px 10px rgba(255,215,0,.3);margin-bottom:6px}
+.divider{width:100px;height:2px;background:linear-gradient(90deg,transparent,#FFD700,transparent);margin:16px auto 24px}
+.certifies{color:rgba(255,255,255,.55);font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.student-name{font-family:'Playfair Display',serif;color:#fff;font-size:2.8rem;font-style:italic;margin:8px 0 20px;text-shadow:0 2px 20px rgba(255,255,255,.15)}
+.completed-text{color:rgba(255,255,255,.55);font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.course-box{background:rgba(255,215,0,.08);border:1px solid rgba(255,215,0,.25);border-radius:10px;padding:14px 28px;margin:12px auto;max-width:600px}
+.course-name{color:#FFD700;font-size:1.5rem;font-weight:700}
+.meta-row{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:20px 0;color:rgba(255,255,255,.65);font-size:13px}
+.meta-row strong{color:#4ade80}
+.seal svg{width:80px;height:80px;margin:10px auto}
+.cert-id{color:rgba(255,255,255,.25);font-size:11px;letter-spacing:1px;margin-top:10px}
+@media print{body{background:#fff}}</style></head>
+<body><div class="cert">
+<div class="bar-top"></div>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+<div class="inner">
+<div class="logo-pill"><span>🤖</span><span class="logo-text">IAFACIL.HELP</span></div>
+<div class="cert-title">CERTIFICADO DE FINALIZACIÓN</div>
+<div class="divider"></div>
+<div class="certifies">Esto certifica que</div>
+<div class="student-name">${data.name}</div>
+<div class="completed-text">ha completado exitosamente el curso</div>
+<div class="course-box"><div class="course-name">${data.course}</div></div>
+<div class="meta-row"><span>📊 Resultado: <strong>${data.score}%</strong></span><span>🎯 ${data.level}</span><span>📅 ${data.date}</span></div>
+<div class="seal"><svg viewBox="0 0 100 100"><polygon points="50,5 61,35 93,35 68,57 79,91 50,70 21,91 32,57 7,35 39,35" fill="rgba(255,215,0,.15)" stroke="#FFD700" stroke-width="1.5"/><text x="50" y="55" text-anchor="middle" fill="#FFD700" font-size="18" font-weight="bold">✓</text></svg></div>
+<div class="cert-id">Certificado ID: ${data.id}</div>
+</div>
+<div class="bar-bot"></div>
+</div></body></html>`;
+    }
+
+    function downloadCertificate() {
+        const data = getCertData();
+        const blob = new Blob([buildPrintableCert(data)], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `certificado-${(data.course).toLowerCase().replace(/\s+/g, '-').slice(0,30)}.html`;
+        a.click();
+        URL.revokeObjectURL(url);
+        toast.success('✅ Certificado descargado');
+    }
+
+    function printCertificate() {
+        const data = getCertData();
+        const w = window.open('', '_blank');
+        if (w) { w.document.write(buildPrintableCert(data)); w.document.close(); w.print(); }
     }
 
     document.addEventListener('click', (e) => {
@@ -527,13 +735,19 @@
 
         if (e.target.closest('[data-action="quiz-next"]')) {
             const quiz = getCourseQuiz(courseId);
-            if (quiz && quizState.currentQ < quiz.questions.length - 1) { quizState.currentQ++; renderQuiz(); }
+            if (quiz && quizState.currentQ < Math.min(quiz.questions.length, 15) - 1) { quizState.currentQ++; renderQuiz(); }
             return;
         }
 
         if (e.target.closest('[data-action="quiz-submit"]')) {
             quizState.submitted = true;
             renderQuiz();
+            return;
+        }
+
+        if (e.target.closest('[data-action="open-cert-modal"]')) {
+            const progress = getCourseProgress();
+            openCertModal(progress.quiz_score || quizState.score || 80);
             return;
         }
 
@@ -563,6 +777,37 @@
     renderCourse();
     renderQuizSection();
     renderCertificateBanner();
+
+    /* ═══ Certificate Name Modal ═══ */
+    document.getElementById('certNameModal')?.addEventListener('click', (e) => {
+        if (e.target === document.getElementById('certNameModal')) closeCertModal();
+    });
+
+    document.getElementById('btnGenerateCert')?.addEventListener('click', () => {
+        const input = document.getElementById('certNameInput');
+        const name = (input?.value || '').trim();
+        if (!name) {
+            input?.style.setProperty('border-color', 'var(--color-error)');
+            input?.focus();
+            toast.error('Por favor introduce tu nombre completo');
+            return;
+        }
+        // Save name to profile
+        const profile = JSON.parse(localStorage.getItem('iafacil-profile') || '{}');
+        profile.cert_name = name;
+        if (!profile.full_name) profile.full_name = name;
+        localStorage.setItem('iafacil-profile', JSON.stringify(profile));
+        closeCertModal();
+        renderCertificateBanner();
+        // Scroll to certificate
+        document.getElementById('certificateBanner')?.scrollIntoView({ behavior: 'smooth' });
+        toast.success('🎓 ¡Certificado generado! Puedes descargarlo o imprimirlo.');
+    });
+
+    document.getElementById('certNameInput')?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') document.getElementById('btnGenerateCert')?.click();
+        document.getElementById('certNameInput')?.style.removeProperty('border-color');
+    });
 </script>
 
 <script src="/cookie-consent.js"></script>
