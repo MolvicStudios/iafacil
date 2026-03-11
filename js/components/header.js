@@ -12,15 +12,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// ── Inject Nunito font (non-blocking <link>, avoids @import CLS) ──
-(function injectFont() {
-    if (document.querySelector('link[href*="Nunito"]')) return;
-    const pre1 = Object.assign(document.createElement('link'), { rel: 'preconnect', href: 'https://fonts.googleapis.com' });
-    const pre2 = Object.assign(document.createElement('link'), { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' });
-    const font = Object.assign(document.createElement('link'), { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap' });
-    document.head.prepend(font); document.head.prepend(pre2); document.head.prepend(pre1);
-})();
-
 // ── Dark mode: apply persisted or system preference immediately ──
 (function applyDarkMode() {
     const saved = localStorage.getItem('iafacil-theme');
@@ -33,8 +24,8 @@ export function renderHeader(container, options = {}) {
     if (!container) return;
     const { landing = false } = options;
 
-    container.innerHTML = `
-    <header class="header ${landing ? 'header-landing' : ''}" id="header">
+    container.innerHTML = `<a href="#main-content" class="skip-link">Saltar al contenido</a>
+<header class="header ${landing ? 'header-landing' : ''}" id="header">
         <div class="container">
             <a href="${landing ? '/' : ROUTES.DASHBOARD}" class="header-logo">
                 <span class="logo-icon">🤖</span>

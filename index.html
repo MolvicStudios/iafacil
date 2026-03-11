@@ -13,6 +13,11 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://iafacil.help">
     <meta property="og:image" content="https://iafacil.help/assets/images/og-image.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IAFACIL.HELP — Aprende IA sin programar">
+    <meta name="twitter:description" content="La plataforma más fácil para aprender Inteligencia Artificial. Cursos interactivos y herramientas prácticas en español.">
+    <meta name="twitter:image" content="https://iafacil.help/assets/images/og-image.png">
     <link rel="canonical" href="https://iafacil.help">
 
     <!-- Schema.org JSON-LD -->
@@ -87,7 +92,8 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
     <!-- AdSense -->
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1513893788851225"
+         crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,20 +109,14 @@
         }
     })();
     </script>
-<script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script>
 </head>
 <body>
-<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-1513893788851225">
-</amp-auto-ads>
 
     <!-- ═══════════════ HEADER ═══════════════ -->
     <div id="headerContainer"></div>
 
     <!-- ═══════════════ HERO ═══════════════ -->
-    <section class="hero">
+    <section class="hero" id="main-content">
         <div class="hero-bg">
             <div class="hero-circle hero-circle-1"></div>
             <div class="hero-circle hero-circle-2"></div>
@@ -161,12 +161,11 @@
     <div class="container">
         <div class="ad-wrapper">
             <p class="ad-label">Publicidad</p>
-            <!-- TODO: reemplaza YOUR_AD_SLOT_ID con el ID real de tu unidad AdSense -->
             <div class="ad-slot ad-slot--leaderboard" style="margin:0 auto;">
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-1513893788851225"
-                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-slot="7933598081"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -453,7 +452,7 @@
             if (!list.includes(email)) list.push(email);
             localStorage.setItem('nl_subscribers', JSON.stringify(list));
             document.getElementById('nlEmail').value = '';
-            msg.textContent = '✅ ¡Apuntado! Te avisaremos cuando el newsletter esté activo.';
+            msg.textContent = '✅ ¡Registrado! En breve tendremos el newsletter activo y te avisaremos.';
             msg.style.display = 'block';
             setTimeout(() => { msg.style.display = 'none'; }, 4000);
         }

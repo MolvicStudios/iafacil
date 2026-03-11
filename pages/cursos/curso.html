@@ -11,6 +11,12 @@
     <meta property="og:description" content="Cursos interactivos de IA en español.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://iafacil.help/assets/images/og-image.png">
+    <meta property="og:url" content="https://iafacil.help/pages/cursos/curso.html">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Curso — IAFACIL.HELP">
+    <meta name="twitter:description" content="Cursos interactivos de IA en español.">
+    <meta name="twitter:image" content="https://iafacil.help/assets/images/og-image.png">
     <link rel="canonical" href="https://iafacil.help/pages/cursos/curso.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,18 +24,15 @@
     <link rel="stylesheet" href="/css/main.css">
     <!-- Dynamic structured data injected by JS after course loads -->
     <script type="application/ld+json" id="courseSchema"></script>
-<script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script>
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1513893788851225"
+         crossorigin="anonymous"></script>
 </head>
 <body>
-<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-1513893788851225">
-</amp-auto-ads>
 
 <div id="headerContainer"></div>
 
-<main class="page-content">
+<main class="page-content" id="main-content">
     <div class="container">
         <a href="/pages/cursos/" class="btn btn-outline btn-sm" style="margin-bottom:1rem; display:inline-flex;">← Volver a cursos</a>
 
@@ -58,6 +61,20 @@
             <p class="text-muted">Selecciona una leccion para ver su contenido completo.</p>
         </section>
 
+        <!-- Ad Slot in-article: entre lección y examen final -->
+        <div class="ad-wrapper">
+            <p class="ad-label">Publicidad</p>
+            <div class="ad-slot ad-slot--leaderboard">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1513893788851225"
+                     data-ad-slot="7933598081"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
         <!-- Quiz Section -->
         <section class="card" id="quizSection" style="margin-top:1.5rem; padding:1.25rem; display:none;">
             <div id="quizContainer"></div>
@@ -66,12 +83,11 @@
         <!-- Ad slot con etiqueta reglamentaria -->
         <div class="ad-wrapper">
             <p class="ad-label">Publicidad</p>
-            <!-- TODO: reemplaza YOUR_AD_SLOT_CURSO_ID con el ID real de tu unidad AdSense -->
             <div class="ad-slot ad-slot--rectangle" style="max-width:336px; margin:0 auto;">
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-1513893788851225"
-                     data-ad-slot="YOUR_AD_SLOT_CURSO_ID"
+                     data-ad-slot="7933598081"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -418,7 +434,7 @@
         }
     }
 
-    /* ═══ Next Content Suggestion (P8) ═══ */
+    /* ═══ Next Content Suggestion (P8/P12) ═══ */
     function renderNextContent() {
         const panel = document.getElementById('nextContentPanel');
         if (!panel || !course) return;
@@ -430,6 +446,11 @@
         const idx = COURSES.findIndex(c => c.id === course.id);
         const nextCourse = COURSES[idx + 1] || null;
 
+        // Find up to 2 related courses from same category, excluding current and next
+        const related = COURSES
+            .filter(c => c.id !== course.id && c.id !== (nextCourse && nextCourse.id) && c.category === course.category)
+            .slice(0, 2);
+
         // Suggest a related tool based on category
         const toolSuggestions = {
             'texto': { name: 'Constructor de Prompts', url: '/pages/herramientas/prompt-builder.html', icon: '🔧' },
@@ -439,23 +460,20 @@
         };
         const tool = toolSuggestions[course.category] || toolSuggestions['texto'];
 
+        const relatedHtml = related.map(c =>
+            `<a href="/pages/cursos/curso.html?id=${c.id}" class="btn btn-outline">${c.levelIcon} ${c.title}</a>`
+        ).join('');
+
         panel.style.display = 'block';
         panel.innerHTML = `
         <div class="card" style="padding:1.5rem; border-left:4px solid var(--color-primary);">
-            <h3 style="margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
-                🏆 ¡Todas las lecciones completadas!
-            </h3>
-            <p class="text-muted" style="margin-bottom:1.25rem;">Ahora que terminaste todas las lecciones, ¿qué quieres hacer?</p>
+            <h3 style="margin-bottom:1rem;">🏆 ¡Todas las lecciones completadas!</h3>
+            <p class="text-muted" style="margin-bottom:1.25rem;">¿Qué quieres aprender ahora?</p>
             <div style="display:flex; flex-wrap:wrap; gap:0.75rem;">
-                ${nextCourse ? `<a href="/pages/cursos/curso.html?id=${nextCourse.id}" class="btn btn-primary">
-                    ➡️ Siguiente curso: ${nextCourse.title}
-                </a>` : ''}
-                <a href="${tool.url}" class="btn btn-outline">
-                    ${tool.icon} Probar: ${tool.name}
-                </a>
-                <a href="/pages/cursos/" class="btn btn-outline">
-                    📚 Explorar más cursos
-                </a>
+                ${nextCourse ? `<a href="/pages/cursos/curso.html?id=${nextCourse.id}" class="btn btn-primary">➡️ Siguiente: ${nextCourse.title}</a>` : ''}
+                ${relatedHtml}
+                <a href="${tool.url}" class="btn btn-outline">${tool.icon} Probar: ${tool.name}</a>
+                <a href="/pages/cursos/" class="btn btn-outline">📚 Más cursos</a>
             </div>
         </div>`;
     }

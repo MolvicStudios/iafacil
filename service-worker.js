@@ -3,7 +3,7 @@
    Cache-First for static assets, Network-First for HTML
    ═══════════════════════════════════════════════════════════ */
 
-const CACHE_NAME = 'iafacil-v1';
+const CACHE_NAME = 'iafacil-v2';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
