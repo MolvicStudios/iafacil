@@ -5,6 +5,13 @@
 
 import { ROUTES } from '../config/routes.js';
 
+// ── Service Worker registration (PWA offline support) ──
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+    });
+}
+
 // ── Inject Nunito font (non-blocking <link>, avoids @import CLS) ──
 (function injectFont() {
     if (document.querySelector('link[href*="Nunito"]')) return;

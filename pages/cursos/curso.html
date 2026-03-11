@@ -6,6 +6,15 @@
     <title>Curso - IAFACIL.HELP</title>
     <meta name="description" content="Detalle de curso en IAFACIL.HELP.">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <!-- SEO dinámico: title, desc, og y canonical se actualizan desde JS en renderCourse() -->
+    <meta property="og:title" content="Curso — IAFACIL.HELP">
+    <meta property="og:description" content="Cursos interactivos de IA en español.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://iafacil.help/assets/images/og-image.png">
+    <link rel="canonical" href="https://iafacil.help/pages/cursos/curso.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap">
     <link rel="stylesheet" href="/css/main.css">
     <!-- Dynamic structured data injected by JS after course loads -->
     <script type="application/ld+json" id="courseSchema"></script>
@@ -48,16 +57,19 @@
             <div id="quizContainer"></div>
         </section>
 
-        <!-- Ad slot between content and certificate -->
-        <div class="ad-slot ad-slot--rectangle" style="max-width:336px; margin:1.5rem auto;">
-            <!-- AdSense unit — reemplaza YOUR_AD_SLOT_CURSO_ID con el ID real -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1513893788851225"
-                 data-ad-slot="YOUR_AD_SLOT_CURSO_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <!-- Ad slot con etiqueta reglamentaria -->
+        <div class="ad-wrapper">
+            <p class="ad-label">Publicidad</p>
+            <!-- TODO: reemplaza YOUR_AD_SLOT_CURSO_ID con el ID real de tu unidad AdSense -->
+            <div class="ad-slot ad-slot--rectangle" style="max-width:336px; margin:0 auto;">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1513893788851225"
+                     data-ad-slot="YOUR_AD_SLOT_CURSO_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
         </div>
 
         <!-- Next-content panel (P8) -->
@@ -199,6 +211,18 @@
         }
 
         document.title = `${course.title} - IAFACIL.HELP`;
+
+        // SEO dinámico: meta description, OG y canonical
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.content = course.description;
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.content = `${course.title} — IAFACIL.HELP`;
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.content = course.description;
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.content = `https://iafacil.help/pages/cursos/curso.html?id=${course.id}`;
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.href = `https://iafacil.help/pages/cursos/curso.html?id=${course.id}`;
 
         // Inject Course + BreadcrumbList JSON-LD (P5 + P14)
         const schemaEl = document.getElementById('courseSchema');

@@ -89,35 +89,25 @@
     <!-- AdSense -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/main.css">
-
-    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Dark mode: aplicar antes del primer pintado para evitar FOUC -->
+    <script>
+    (function(){
+        var t=localStorage.getItem('iafacil-theme');
+        if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){
+            document.documentElement.setAttribute('data-theme','dark');
+        }
+    })();
+    </script>
 </head>
 <body>
 
     <!-- ═══════════════ HEADER ═══════════════ -->
-    <header class="header header-landing" id="header">
-        <div class="container">
-            <a href="/" class="header-logo">
-                <span class="logo-icon">🤖</span>
-                <span class="logo-text">IAFACIL<span class="logo-accent">.HELP</span></span>
-            </a>
-
-            <nav class="header-nav" id="mainNav">
-                <a href="#cursos" class="nav-item">Cursos</a>
-                <a href="#herramientas" class="nav-item">Herramientas</a>
-                <a href="#como-funciona" class="nav-item">Como funciona</a>
-            </nav>
-
-            <div class="header-actions"></div>
-
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+    <div id="headerContainer"></div>
 
     <!-- ═══════════════ HERO ═══════════════ -->
     <section class="hero">
@@ -163,15 +153,18 @@
 
     <!-- ═══════════════ AD — after hero ═══════════════ -->
     <div class="container">
-        <div class="ad-slot ad-slot--leaderboard" style="margin:0 auto;">
-            <!-- AdSense unit — reemplaza YOUR_AD_SLOT_ID con el ID real de tu unidad -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1513893788851225"
-                 data-ad-slot="YOUR_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <div class="ad-wrapper">
+            <p class="ad-label">Publicidad</p>
+            <!-- TODO: reemplaza YOUR_AD_SLOT_ID con el ID real de tu unidad AdSense -->
+            <div class="ad-slot ad-slot--leaderboard" style="margin:0 auto;">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1513893788851225"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
         </div>
     </div>
 
@@ -405,64 +398,17 @@
     </section>
 
     <!-- ═══════════════ FOOTER ═══════════════ -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <span class="logo-icon">🤖</span>
-                        <span class="logo-text">IAFACIL<span class="logo-accent">.HELP</span></span>
-                    </div>
-                    <p class="footer-desc">La plataforma más fácil para aprender Inteligencia Artificial sin programar.</p>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-title">Plataforma</h4>
-                    <ul class="footer-links">
-                        <li><a href="/pages/cursos/">Cursos</a></li>
-                        <li><a href="/pages/herramientas/">Herramientas</a></li>
-                        <li><a href="/pages/explorador.html">Explorador IA</a></li>
-                        <li><a href="/pages/glosario.html">Glosario</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-title">Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="/pages/legal/privacidad.html">Privacidad</a></li>
-                        <li><a href="/pages/legal/terminos.html">Términos</a></li>
-                        <li><a href="/pages/legal/cookies.html">Cookies</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 IAFACIL.HELP — Hecho con � para hispanohablantes</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footerContainer"></div>
 
     <!-- ═══════════════ SCRIPTS ═══════════════ -->
     <script type="module">
-        // Header scroll effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (header) {
-                header.classList.toggle('header-scrolled', window.scrollY > 50);
-            }
-        });
+        import { renderHeader } from '/js/components/header.js';
+        import { renderFooter } from '/js/components/footer.js';
 
-        // Hamburger menu
-        const hamburger = document.getElementById('hamburger');
-        const mainNav = document.getElementById('mainNav');
-        if (hamburger && mainNav) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                mainNav.classList.toggle('active');
-            });
-        }
+        renderHeader(document.getElementById('headerContainer'), { landing: true });
+        renderFooter(document.getElementById('footerContainer'));
 
-        // Smooth scroll for anchor links
+        // Smooth scroll for anchor links (el scroll del header lo gestiona el componente)
         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', (e) => {
                 const targetId = link.getAttribute('href');
@@ -471,11 +417,6 @@
                 const target = document.querySelector(targetId);
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Close mobile menu
-                    if (hamburger && mainNav) {
-                        hamburger.classList.remove('active');
-                        mainNav.classList.remove('active');
-                    }
                 }
             });
         });
@@ -501,12 +442,12 @@
             const email = document.getElementById('nlEmail').value.trim();
             const msg = document.getElementById('nlMsg');
             if (!email) return;
-            // Persist locally (replace with real API call when available)
+            // Guardar localmente hasta que se conecte un backend real (Mailchimp / Brevo)
             const list = JSON.parse(localStorage.getItem('nl_subscribers') || '[]');
             if (!list.includes(email)) list.push(email);
             localStorage.setItem('nl_subscribers', JSON.stringify(list));
             document.getElementById('nlEmail').value = '';
-            msg.textContent = '✅ ¡Suscripción confirmada! Te avisaremos pronto.';
+            msg.textContent = '✅ ¡Apuntado! Te avisaremos cuando el newsletter esté activo.';
             msg.style.display = 'block';
             setTimeout(() => { msg.style.display = 'none'; }, 4000);
         }

@@ -13,8 +13,11 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://iafacil.help/pages/glosario">
     <meta property="og:image" content="https://iafacil.help/assets/images/og-image.png">
-    <link rel="canonical" href="https://iafacil.help/pages/glosario">
+    <link rel="canonical" href="https://iafacil.help/pages/glosario.html">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -33,6 +36,20 @@
 
         <!-- Alphabet Nav -->
         <div id="alphabetNav" class="animate-fadeInUp delay-2" style="display:flex; gap:0.25rem; flex-wrap:wrap; justify-content:center; margin-bottom:2rem;"></div>
+
+        <!-- ─── SLOT PUBLICITARIO ─── -->
+        <div class="ad-wrapper">
+            <p class="ad-label">Publicidad</p>
+            <div class="ad-slot ad-slot--leaderboard">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1513893788851225"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
 
         <!-- Results count -->
         <p id="resultsCount" class="text-muted text-sm text-center animate-fadeInUp delay-2" style="margin-bottom:1.5rem;"></p>
@@ -146,6 +163,8 @@
                             <p style="margin-top:0.75rem; line-height:1.7; color:var(--text-secondary);">${g.definition}</p>
                             ${g.example ? `<p style="margin-top:0.5rem; padding:0.75rem; background:var(--bg-secondary); border-radius:var(--radius-md); font-style:italic; font-size:0.9rem;">💡 ${g.example}</p>` : ''}
                             ${g.related ? `<p class="text-sm text-muted" style="margin-top:0.5rem;">🔗 Relacionado: ${g.related.join(', ')}</p>` : ''}
+                            ${g.relatedCourse ? `<a href="/pages/cursos/curso.html?id=${g.relatedCourse.id}" class="btn btn-sm btn-outline" style="margin-top:0.75rem; display:inline-block; font-size:0.8rem;">📚 Curso: ${g.relatedCourse.name}</a>` : ''}
+                            ${g.relatedTool ? `<a href="${g.relatedTool.url}" class="btn btn-sm btn-outline" style="margin-top:0.4rem; display:inline-block; font-size:0.8rem;">🔧 Probar: ${g.relatedTool.name}</a>` : ''}
                         </div>
                     </div>
                 `}).join('')}

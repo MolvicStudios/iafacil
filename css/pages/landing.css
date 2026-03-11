@@ -66,6 +66,7 @@
     background: radial-gradient(circle, rgba(0, 184, 148, 0.1) 0%, rgba(0, 184, 148, 0.02) 40%, transparent 70%);
     border-radius: 50%;
     animation: morphBlob 15s ease-in-out infinite;
+    will-change: border-radius;
 }
 
 .hero::after {
@@ -78,6 +79,7 @@
     background: radial-gradient(circle, rgba(108, 92, 231, 0.08) 0%, rgba(108, 92, 231, 0.02) 40%, transparent 70%);
     border-radius: 50%;
     animation: morphBlob 12s ease-in-out infinite reverse;
+    will-change: border-radius;
 }
 
 .hero-bg {
