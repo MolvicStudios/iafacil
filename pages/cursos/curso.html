@@ -2,6 +2,106 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
+    <script type="text/javascript" async=true>
+    (function() {
+      var host = "www.themoneytizer.com";
+      var element = document.createElement('script');
+      var firstScript = document.getElementsByTagName('script')[0];
+      var url = 'https://cmp.inmobi.com'
+        .concat('/choice/', '6Fv0cGNfc_bw8', '/'  , host, '/choice.js?tag_version=V3');
+      var uspTries = 0;
+      var uspTriesLimit = 3;
+      element.async = true;
+      element.type = 'text/javascript';
+      element.src = url;
+      firstScript.parentNode.insertBefore(element, firstScript);
+      function makeStub() {
+        var TCF_LOCATOR_NAME = '__tcfapiLocator';
+        var queue = [];
+        var win = window;
+        var cmpFrame;
+        function addFrame() {
+          var doc = win.document;
+          var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+          if (!otherCMP) {
+            if (doc.body) {
+              var iframe = doc.createElement('iframe');
+              iframe.style.cssText = 'display:none';
+              iframe.name = TCF_LOCATOR_NAME;
+              doc.body.appendChild(iframe);
+            } else {
+              setTimeout(addFrame, 5);
+            }
+          }
+          return !otherCMP;
+        }
+        function tcfAPIHandler() {
+          var gdprApplies;
+          var args = arguments;
+          if (!args.length) {
+            return queue;
+          } else if (args[0] === 'setGdprApplies') {
+            if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
+              gdprApplies = args[3];
+              if (typeof args[2] === 'function') {
+                args[2]('set', true);
+              }
+            }
+          } else if (args[0] === 'ping') {
+            var retr = { gdprApplies: gdprApplies, cmpLoaded: false, cmpStatus: 'stub' };
+            if (typeof args[2] === 'function') {
+              args[2](retr);
+            }
+          } else {
+            if(args[0] === 'init' && typeof args[3] === 'object') {
+              args[3] = Object.assign(args[3], { tag_version: 'V3' });
+            }
+            queue.push(args);
+          }
+        }
+        function postMessageEventHandler(event) {
+          var msgIsString = typeof event.data === 'string';
+          var json = {};
+          try { if (msgIsString) { json = JSON.parse(event.data); } else { json = event.data; } } catch (ignore) {}
+          var payload = json.__tcfapiCall;
+          if (payload) {
+            window.__tcfapi(payload.command, payload.version, function(retValue, success) {
+              var returnMsg = { __tcfapiReturn: { returnValue: retValue, success: success, callId: payload.callId } };
+              if (msgIsString) { returnMsg = JSON.stringify(returnMsg); }
+              if (event && event.source && event.source.postMessage) { event.source.postMessage(returnMsg, '*'); }
+            }, payload.parameter);
+          }
+        }
+        while (win) {
+          try { if (win.frames[TCF_LOCATOR_NAME]) { cmpFrame = win; break; } } catch (ignore) {}
+          if (win === window.top) { break; }
+          win = win.parent;
+        }
+        if (!cmpFrame) {
+          addFrame();
+          win.__tcfapi = tcfAPIHandler;
+          win.addEventListener('message', postMessageEventHandler, false);
+        }
+      };
+      makeStub();
+      var uspStubFunction = function() {
+        var arg = arguments;
+        if (typeof window.__uspapi !== uspStubFunction) {
+          setTimeout(function() { if (typeof window.__uspapi !== 'undefined') { window.__uspapi.apply(window.__uspapi, arg); } }, 500);
+        }
+      };
+      var checkIfUspIsReady = function() {
+        uspTries++;
+        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) { console.warn('USP is not accessible'); } else { clearInterval(uspInterval); }
+      };
+      if (typeof window.__uspapi === 'undefined') {
+        window.__uspapi = uspStubFunction;
+        var uspInterval = setInterval(checkIfUspIsReady, 6000);
+      }
+    })();
+    </script>
+    <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso - IAFACIL.HELP</title>
     <meta name="description" content="Detalle de curso en IAFACIL.HELP.">
@@ -24,9 +124,6 @@
     <link rel="stylesheet" href="/css/main.css">
     <!-- Dynamic structured data injected by JS after course loads -->
     <script type="application/ld+json" id="courseSchema"></script>
-    <!-- AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1513893788851225"
-         crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -62,18 +159,6 @@
         </section>
 
         <!-- Ad Slot in-article: entre lección y examen final -->
-        <div class="ad-wrapper">
-            <p class="ad-label">Publicidad</p>
-            <div class="ad-slot ad-slot--leaderboard">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-1513893788851225"
-                     data-ad-slot="7933598081"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-        </div>
 
         <!-- Quiz Section -->
         <section class="card" id="quizSection" style="margin-top:1.5rem; padding:1.25rem; display:none;">
@@ -81,18 +166,6 @@
         </section>
 
         <!-- Ad slot con etiqueta reglamentaria -->
-        <div class="ad-wrapper">
-            <p class="ad-label">Publicidad</p>
-            <div class="ad-slot ad-slot--rectangle" style="max-width:336px; margin:0 auto;">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-1513893788851225"
-                     data-ad-slot="7933598081"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-        </div>
 
         <!-- Next-content panel (P8) -->
         <section id="nextContentPanel" style="display:none; margin-top:1.5rem;"></section>
@@ -782,6 +855,106 @@
     function buildPrintableCert(data) {
         return `<!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><title>Certificado — ${data.course}</title>
+    <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
+    <script type="text/javascript" async=true>
+    (function() {
+      var host = "www.themoneytizer.com";
+      var element = document.createElement('script');
+      var firstScript = document.getElementsByTagName('script')[0];
+      var url = 'https://cmp.inmobi.com'
+        .concat('/choice/', '6Fv0cGNfc_bw8', '/'  , host, '/choice.js?tag_version=V3');
+      var uspTries = 0;
+      var uspTriesLimit = 3;
+      element.async = true;
+      element.type = 'text/javascript';
+      element.src = url;
+      firstScript.parentNode.insertBefore(element, firstScript);
+      function makeStub() {
+        var TCF_LOCATOR_NAME = '__tcfapiLocator';
+        var queue = [];
+        var win = window;
+        var cmpFrame;
+        function addFrame() {
+          var doc = win.document;
+          var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+          if (!otherCMP) {
+            if (doc.body) {
+              var iframe = doc.createElement('iframe');
+              iframe.style.cssText = 'display:none';
+              iframe.name = TCF_LOCATOR_NAME;
+              doc.body.appendChild(iframe);
+            } else {
+              setTimeout(addFrame, 5);
+            }
+          }
+          return !otherCMP;
+        }
+        function tcfAPIHandler() {
+          var gdprApplies;
+          var args = arguments;
+          if (!args.length) {
+            return queue;
+          } else if (args[0] === 'setGdprApplies') {
+            if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
+              gdprApplies = args[3];
+              if (typeof args[2] === 'function') {
+                args[2]('set', true);
+              }
+            }
+          } else if (args[0] === 'ping') {
+            var retr = { gdprApplies: gdprApplies, cmpLoaded: false, cmpStatus: 'stub' };
+            if (typeof args[2] === 'function') {
+              args[2](retr);
+            }
+          } else {
+            if(args[0] === 'init' && typeof args[3] === 'object') {
+              args[3] = Object.assign(args[3], { tag_version: 'V3' });
+            }
+            queue.push(args);
+          }
+        }
+        function postMessageEventHandler(event) {
+          var msgIsString = typeof event.data === 'string';
+          var json = {};
+          try { if (msgIsString) { json = JSON.parse(event.data); } else { json = event.data; } } catch (ignore) {}
+          var payload = json.__tcfapiCall;
+          if (payload) {
+            window.__tcfapi(payload.command, payload.version, function(retValue, success) {
+              var returnMsg = { __tcfapiReturn: { returnValue: retValue, success: success, callId: payload.callId } };
+              if (msgIsString) { returnMsg = JSON.stringify(returnMsg); }
+              if (event && event.source && event.source.postMessage) { event.source.postMessage(returnMsg, '*'); }
+            }, payload.parameter);
+          }
+        }
+        while (win) {
+          try { if (win.frames[TCF_LOCATOR_NAME]) { cmpFrame = win; break; } } catch (ignore) {}
+          if (win === window.top) { break; }
+          win = win.parent;
+        }
+        if (!cmpFrame) {
+          addFrame();
+          win.__tcfapi = tcfAPIHandler;
+          win.addEventListener('message', postMessageEventHandler, false);
+        }
+      };
+      makeStub();
+      var uspStubFunction = function() {
+        var arg = arguments;
+        if (typeof window.__uspapi !== uspStubFunction) {
+          setTimeout(function() { if (typeof window.__uspapi !== 'undefined') { window.__uspapi.apply(window.__uspapi, arg); } }, 500);
+        }
+      };
+      var checkIfUspIsReady = function() {
+        uspTries++;
+        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) { console.warn('USP is not accessible'); } else { clearInterval(uspInterval); }
+      };
+      if (typeof window.__uspapi === 'undefined') {
+        window.__uspapi = uspStubFunction;
+        var uspInterval = setInterval(checkIfUspIsReady, 6000);
+      }
+    })();
+    </script>
+    <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
 <style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Lato',sans-serif;background:#0a0e1a;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
@@ -949,6 +1122,5 @@ body{font-family:'Lato',sans-serif;background:#0a0e1a;min-height:100vh;display:f
     });
 </script>
 
-<script src="/cookie-consent.js"></script>
 </body>
 </html>
