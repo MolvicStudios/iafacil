@@ -342,6 +342,14 @@
     transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ─── Layout del contenedor dentro del header ─── */
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+}
+
 @media (min-width: 769px) {
     .hamburger {
         display: none;
@@ -349,12 +357,6 @@
 }
 
 @media (max-width: 768px) {
-    .header .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: var(--spacing-sm);
-    }
 
     .header-nav {
         display: none;
