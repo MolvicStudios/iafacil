@@ -2,109 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
-    <script type="text/javascript" async=true>
-    (function() {
-      var host = "www.themoneytizer.com";
-      var element = document.createElement('script');
-      var firstScript = document.getElementsByTagName('script')[0];
-      var url = 'https://cmp.inmobi.com'
-        .concat('/choice/', '6Fv0cGNfc_bw8', '/'  , host, '/choice.js?tag_version=V3');
-      var uspTries = 0;
-      var uspTriesLimit = 3;
-      element.async = true;
-      element.type = 'text/javascript';
-      element.src = url;
-      firstScript.parentNode.insertBefore(element, firstScript);
-      function makeStub() {
-        var TCF_LOCATOR_NAME = '__tcfapiLocator';
-        var queue = [];
-        var win = window;
-        var cmpFrame;
-        function addFrame() {
-          var doc = win.document;
-          var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
-          if (!otherCMP) {
-            if (doc.body) {
-              var iframe = doc.createElement('iframe');
-              iframe.style.cssText = 'display:none';
-              iframe.name = TCF_LOCATOR_NAME;
-              doc.body.appendChild(iframe);
-            } else {
-              setTimeout(addFrame, 5);
-            }
-          }
-          return !otherCMP;
-        }
-        function tcfAPIHandler() {
-          var gdprApplies;
-          var args = arguments;
-          if (!args.length) {
-            return queue;
-          } else if (args[0] === 'setGdprApplies') {
-            if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
-              gdprApplies = args[3];
-              if (typeof args[2] === 'function') {
-                args[2]('set', true);
-              }
-            }
-          } else if (args[0] === 'ping') {
-            var retr = { gdprApplies: gdprApplies, cmpLoaded: false, cmpStatus: 'stub' };
-            if (typeof args[2] === 'function') {
-              args[2](retr);
-            }
-          } else {
-            if(args[0] === 'init' && typeof args[3] === 'object') {
-              args[3] = Object.assign(args[3], { tag_version: 'V3' });
-            }
-            queue.push(args);
-          }
-        }
-        function postMessageEventHandler(event) {
-          var msgIsString = typeof event.data === 'string';
-          var json = {};
-          try { if (msgIsString) { json = JSON.parse(event.data); } else { json = event.data; } } catch (ignore) {}
-          var payload = json.__tcfapiCall;
-          if (payload) {
-            window.__tcfapi(payload.command, payload.version, function(retValue, success) {
-              var returnMsg = { __tcfapiReturn: { returnValue: retValue, success: success, callId: payload.callId } };
-              if (msgIsString) { returnMsg = JSON.stringify(returnMsg); }
-              if (event && event.source && event.source.postMessage) { event.source.postMessage(returnMsg, '*'); }
-            }, payload.parameter);
-          }
-        }
-        while (win) {
-          try { if (win.frames[TCF_LOCATOR_NAME]) { cmpFrame = win; break; } } catch (ignore) {}
-          if (win === window.top) { break; }
-          win = win.parent;
-        }
-        if (!cmpFrame) {
-          addFrame();
-          win.__tcfapi = tcfAPIHandler;
-          win.addEventListener('message', postMessageEventHandler, false);
-        }
-      };
-      makeStub();
-      var uspStubFunction = function() {
-        var arg = arguments;
-        if (typeof window.__uspapi !== uspStubFunction) {
-          setTimeout(function() { if (typeof window.__uspapi !== 'undefined') { window.__uspapi.apply(window.__uspapi, arg); } }, 500);
-        }
-      };
-      var checkIfUspIsReady = function() {
-        uspTries++;
-        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) { console.warn('USP is not accessible'); } else { clearInterval(uspInterval); }
-      };
-      if (typeof window.__uspapi === 'undefined') {
-        window.__uspapi = uspStubFunction;
-        var uspInterval = setInterval(checkIfUspIsReady, 6000);
-      }
-    })();
-    </script>
-    <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad — IAFACIL.HELP</title>
-    <meta name="description" content="Política de privacidad de IAFACIL.HELP. Cómo recopilamos, usamos y protegemos tus datos personales.">
+    <meta name="description" content="Política de privacidad de IAFACIL.HELP conforme al RGPD y la LOPDGDD. Cómo recopilamos, usamos y protegemos tus datos personales.">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Política de Privacidad — IAFACIL.HELP">
@@ -123,58 +23,161 @@
 <main class="page-content" id="main-content">
     <div class="container" style="max-width:800px;">
         <h1 class="section-title animate-fadeInUp">🔒 Política de Privacidad</h1>
-        <p class="text-muted animate-fadeInUp delay-1">Última actualización: enero 2025</p>
+        <p class="text-muted animate-fadeInUp delay-1">Última actualización: marzo 2026</p>
 
         <div class="card animate-fadeInUp delay-2" style="padding:2rem; margin-top:2rem; line-height:1.8;">
-            <h2>1. Información que recopilamos</h2>
-            <p>En IAFACIL.HELP recopilamos la siguiente información cuando te registras y usas la plataforma:</p>
+
+            <h2>1. Responsable del tratamiento</h2>
+            <p>A los efectos del Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), el responsable del tratamiento de los datos personales recabados a través de este sitio web es:</p>
             <ul>
-                <li><strong>Información de cuenta:</strong> nombre, correo electrónico y contraseña (encriptada).</li>
-                <li><strong>Datos de perfil:</strong> avatar, biografía y objetivo de aprendizaje (opcionales).</li>
-                <li><strong>Datos de progreso:</strong> cursos completados, lecciones, resultados de quizzes, XP, racha e insignias.</li>
-                <li><strong>Datos de uso:</strong> herramientas utilizadas y prompts guardados.</li>
+                <li><strong>Sitio web:</strong> IAFACIL.HELP</li>
+                <li><strong>Correo electrónico de contacto:</strong> privacidad@iafacil.help</li>
+                <li><strong>Dominio:</strong> https://iafacil.help</li>
             </ul>
 
-            <h2>2. Cómo usamos tu información</h2>
-            <p>Usamos tu información para:</p>
+            <h2>2. Datos personales que recopilamos</h2>
+            <p>En función de la interacción del usuario con la plataforma, podemos recopilar las siguientes categorías de datos personales:</p>
+
+            <h3>2.1. Datos facilitados por el usuario</h3>
             <ul>
-                <li>Proporcionar y personalizar la experiencia de aprendizaje.</li>
-                <li>Rastrear tu progreso y otorgar logros.</li>
-                <li>Mejorar nuestro contenido y herramientas.</li>
-                <li>Enviar comunicaciones relevantes (si aceptas).</li>
+                <li><strong>Datos de registro:</strong> nombre, dirección de correo electrónico y contraseña (almacenada mediante hash cifrado, nunca en texto plano).</li>
+                <li><strong>Datos de perfil (opcionales):</strong> avatar, biografía y objetivo de aprendizaje.</li>
             </ul>
 
-            <h2>3. Almacenamiento y seguridad</h2>
-            <p>Tus datos se almacenan de forma segura en Supabase, que utiliza encriptación en tránsito (TLS) y en reposo. Las contraseñas se almacenan con hash bcrypt y nunca se guardan en texto plano.</p>
-
-            <h2>4. Terceros</h2>
-            <p>No vendemos ni compartimos tus datos personales con terceros. Utilizamos los siguientes servicios:</p>
+            <h3>2.2. Datos generados por el uso de la plataforma</h3>
             <ul>
-                <li><strong>Supabase:</strong> Base de datos, autenticación y almacenamiento.</li>
-                <li><strong>Cloudflare:</strong> Hosting y CDN.</li>
-                <li><strong>Google AdSense:</strong> Publicidad contextual.</li>
+                <li><strong>Datos de progreso educativo:</strong> cursos completados, lecciones realizadas, resultados de cuestionarios, puntos de experiencia (XP), racha de actividad e insignias obtenidas.</li>
+                <li><strong>Datos de uso de herramientas:</strong> herramientas interactivas utilizadas y prompts guardados.</li>
             </ul>
 
-            <h2>5. Cookies</h2>
-            <p>Utilizamos cookies esenciales para la autenticación y sesión. Consulta nuestra <a href="/pages/legal/cookies.html">Política de Cookies</a> para más detalles.</p>
-
-            <h2>6. Tus derechos</h2>
-            <p>Tienes derecho a:</p>
+            <h3>2.3. Datos recogidos automáticamente</h3>
             <ul>
-                <li>Acceder a tus datos personales.</li>
-                <li>Corregir información incorrecta.</li>
-                <li>Solicitar la eliminación de tu cuenta y datos.</li>
-                <li>Exportar tus datos en un formato legible.</li>
+                <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador, sistema operativo, páginas visitadas, fecha y hora de acceso. Estos datos se recopilan mediante cookies y tecnologías similares (véase nuestra <a href="/pages/legal/cookies.html">Política de Cookies</a>).</li>
             </ul>
 
-            <h2>7. Menores de edad</h2>
-            <p>IAFACIL.HELP está diseñado para personas mayores de 13 años. No recopilamos conscientemente datos de menores de 13 años.</p>
+            <h2>3. Finalidades del tratamiento</h2>
+            <p>Los datos personales se tratan con las siguientes finalidades:</p>
+            <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem;">
+                <thead>
+                    <tr style="border-bottom:2px solid var(--border-color);">
+                        <th style="text-align:left; padding:0.75rem;">Finalidad</th>
+                        <th style="text-align:left; padding:0.75rem;">Base jurídica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;">Gestión del registro y la cuenta de usuario</td>
+                        <td style="padding:0.75rem;">Ejecución de contrato (art. 6.1.b RGPD)</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;">Prestación del servicio educativo y seguimiento del progreso</td>
+                        <td style="padding:0.75rem;">Ejecución de contrato (art. 6.1.b RGPD)</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;">Personalización de la experiencia del usuario</td>
+                        <td style="padding:0.75rem;">Interés legítimo (art. 6.1.f RGPD)</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;">Mejora del contenido y las herramientas de la plataforma</td>
+                        <td style="padding:0.75rem;">Interés legítimo (art. 6.1.f RGPD)</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;">Envío de comunicaciones informativas (si el usuario consiente)</td>
+                        <td style="padding:0.75rem;">Consentimiento (art. 6.1.a RGPD)</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;">Mostrar publicidad a través de Monetag</td>
+                        <td style="padding:0.75rem;">Consentimiento (art. 6.1.a RGPD)</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <h2>8. Cambios a esta política</h2>
-            <p>Podemos actualizar esta política periódicamente. Te notificaremos por correo electrónico si realizamos cambios significativos.</p>
+            <h2>4. Destinatarios de los datos</h2>
+            <p>No vendemos, cedemos ni compartimos datos personales con terceros salvo en los siguientes supuestos:</p>
 
-            <h2>9. Contacto</h2>
-            <p>Si tienes preguntas sobre esta política, contáctanos en: <strong>privacidad@iafacil.help</strong></p>
+            <h3>4.1. Proveedores de servicios (encargados del tratamiento)</h3>
+            <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem;">
+                <thead>
+                    <tr style="border-bottom:2px solid var(--border-color);">
+                        <th style="text-align:left; padding:0.75rem;">Proveedor</th>
+                        <th style="text-align:left; padding:0.75rem;">Servicio</th>
+                        <th style="text-align:left; padding:0.75rem;">Ubicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;">Supabase</td>
+                        <td style="padding:0.75rem;">Base de datos, autenticación y almacenamiento</td>
+                        <td style="padding:0.75rem;">EE. UU. (cláusulas contractuales tipo)</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;">Cloudflare</td>
+                        <td style="padding:0.75rem;">Alojamiento web y red de distribución de contenido (CDN)</td>
+                        <td style="padding:0.75rem;">Global (cláusulas contractuales tipo)</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.75rem;">Monetag (PropellerAds)</td>
+                        <td style="padding:0.75rem;">Publicidad en línea y monetización</td>
+                        <td style="padding:0.75rem;">Global (cláusulas contractuales tipo)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4.2. Obligación legal</h3>
+            <p>Los datos personales podrán comunicarse a autoridades públicas, jueces o tribunales cuando exista una obligación legal para ello.</p>
+
+            <h2>5. Transferencias internacionales de datos</h2>
+            <p>Algunos de nuestros proveedores de servicios están ubicados fuera del Espacio Económico Europeo (EEE). En todos los casos, estas transferencias se realizan con las garantías adecuadas exigidas por el RGPD, tales como:</p>
+            <ul>
+                <li>Cláusulas contractuales tipo aprobadas por la Comisión Europea.</li>
+                <li>Decisiones de adecuación de la Comisión Europea, cuando existan.</li>
+            </ul>
+
+            <h2>6. Plazos de conservación</h2>
+            <p>Los datos personales se conservarán durante el tiempo estrictamente necesario para cumplir con las finalidades descritas:</p>
+            <ul>
+                <li><strong>Datos de cuenta y perfil:</strong> mientras la cuenta permanezca activa. Al eliminar la cuenta, los datos se suprimirán en un plazo máximo de 30 días.</li>
+                <li><strong>Datos de progreso y gamificación:</strong> mientras la cuenta permanezca activa.</li>
+                <li><strong>Datos de navegación:</strong> según lo indicado en la <a href="/pages/legal/cookies.html">Política de Cookies</a>.</li>
+            </ul>
+            <p>Una vez cumplidas las finalidades, los datos podrán conservarse, debidamente bloqueados, durante los plazos de prescripción legal aplicables.</p>
+
+            <h2>7. Derechos del usuario</h2>
+            <p>De conformidad con el RGPD y la LOPDGDD, el usuario tiene los siguientes derechos:</p>
+            <ul>
+                <li><strong>Derecho de acceso:</strong> obtener confirmación de si se están tratando sus datos y acceder a los mismos.</li>
+                <li><strong>Derecho de rectificación:</strong> solicitar la corrección de datos inexactos o incompletos.</li>
+                <li><strong>Derecho de supresión ("derecho al olvido"):</strong> solicitar la eliminación de sus datos personales.</li>
+                <li><strong>Derecho de limitación del tratamiento:</strong> solicitar que se limite el tratamiento de sus datos en determinadas circunstancias.</li>
+                <li><strong>Derecho a la portabilidad:</strong> recibir sus datos en un formato estructurado, de uso común y lectura mecánica.</li>
+                <li><strong>Derecho de oposición:</strong> oponerse al tratamiento de sus datos por motivos relacionados con su situación particular.</li>
+                <li><strong>Derecho a retirar el consentimiento:</strong> en cualquier momento, sin que ello afecte a la licitud del tratamiento basado en el consentimiento previo a su retirada.</li>
+            </ul>
+            <p>Para ejercer estos derechos, el usuario puede enviar un correo electrónico a <strong>privacidad@iafacil.help</strong>, adjuntando copia de su documento identificativo.</p>
+            <p>Asimismo, el usuario tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>: <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>.</p>
+
+            <h2>8. Seguridad de los datos</h2>
+            <p>IAFACIL.HELP implementa medidas técnicas y organizativas adecuadas para garantizar la seguridad de los datos personales, incluyendo:</p>
+            <ul>
+                <li>Cifrado de datos en tránsito mediante protocolo TLS/HTTPS.</li>
+                <li>Cifrado de datos en reposo en la base de datos.</li>
+                <li>Almacenamiento de contraseñas mediante hash bcrypt (nunca en texto plano).</li>
+                <li>Control de acceso basado en roles y permisos.</li>
+            </ul>
+
+            <h2>9. Publicidad — Monetag</h2>
+            <p>Este sitio web utiliza <strong>Monetag</strong> (anteriormente conocido como PropellerAds) como proveedor exclusivo de servicios de publicidad en línea. Monetag puede recopilar determinados datos del usuario (dirección IP, datos del navegador, información sobre los anuncios mostrados) con el fin de ofrecer publicidad relevante y medir su rendimiento.</p>
+            <p>La instalación de cookies publicitarias por parte de Monetag solo se produce si el usuario ha otorgado su consentimiento previo a través del banner de cookies.</p>
+            <p>Para más información, puede consultar la política de privacidad de Monetag en: <a href="https://monetag.com/privacy-policy/" target="_blank" rel="noopener noreferrer">https://monetag.com/privacy-policy/</a>.</p>
+
+            <h2>10. Menores de edad</h2>
+            <p>IAFACIL.HELP está dirigido a un público general mayor de 14 años. No recopilamos conscientemente datos personales de menores de 14 años. Si tiene conocimiento de que un menor de 14 años nos ha facilitado datos personales sin el consentimiento de sus padres o tutores, le rogamos que nos contacte para proceder a su eliminación.</p>
+
+            <h2>11. Modificaciones de esta política</h2>
+            <p>La presente Política de Privacidad podrá ser modificada en cualquier momento para adaptarla a cambios normativos o en los servicios ofrecidos. Se notificará a los usuarios registrados por correo electrónico en caso de cambios sustanciales. Se recomienda revisarla periódicamente. La fecha de la última actualización se indica al inicio del documento.</p>
+
+            <h2>12. Contacto</h2>
+            <p>Para cualquier consulta relacionada con la protección de sus datos personales, puede ponerse en contacto con nosotros en: <strong>privacidad@iafacil.help</strong></p>
         </div>
     </div>
 </main>

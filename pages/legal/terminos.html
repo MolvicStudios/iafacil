@@ -2,113 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
-    <script type="text/javascript" async=true>
-    (function() {
-      var host = "www.themoneytizer.com";
-      var element = document.createElement('script');
-      var firstScript = document.getElementsByTagName('script')[0];
-      var url = 'https://cmp.inmobi.com'
-        .concat('/choice/', '6Fv0cGNfc_bw8', '/'  , host, '/choice.js?tag_version=V3');
-      var uspTries = 0;
-      var uspTriesLimit = 3;
-      element.async = true;
-      element.type = 'text/javascript';
-      element.src = url;
-      firstScript.parentNode.insertBefore(element, firstScript);
-      function makeStub() {
-        var TCF_LOCATOR_NAME = '__tcfapiLocator';
-        var queue = [];
-        var win = window;
-        var cmpFrame;
-        function addFrame() {
-          var doc = win.document;
-          var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
-          if (!otherCMP) {
-            if (doc.body) {
-              var iframe = doc.createElement('iframe');
-              iframe.style.cssText = 'display:none';
-              iframe.name = TCF_LOCATOR_NAME;
-              doc.body.appendChild(iframe);
-            } else {
-              setTimeout(addFrame, 5);
-            }
-          }
-          return !otherCMP;
-        }
-        function tcfAPIHandler() {
-          var gdprApplies;
-          var args = arguments;
-          if (!args.length) {
-            return queue;
-          } else if (args[0] === 'setGdprApplies') {
-            if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
-              gdprApplies = args[3];
-              if (typeof args[2] === 'function') {
-                args[2]('set', true);
-              }
-            }
-          } else if (args[0] === 'ping') {
-            var retr = { gdprApplies: gdprApplies, cmpLoaded: false, cmpStatus: 'stub' };
-            if (typeof args[2] === 'function') {
-              args[2](retr);
-            }
-          } else {
-            if(args[0] === 'init' && typeof args[3] === 'object') {
-              args[3] = Object.assign(args[3], { tag_version: 'V3' });
-            }
-            queue.push(args);
-          }
-        }
-        function postMessageEventHandler(event) {
-          var msgIsString = typeof event.data === 'string';
-          var json = {};
-          try { if (msgIsString) { json = JSON.parse(event.data); } else { json = event.data; } } catch (ignore) {}
-          var payload = json.__tcfapiCall;
-          if (payload) {
-            window.__tcfapi(payload.command, payload.version, function(retValue, success) {
-              var returnMsg = { __tcfapiReturn: { returnValue: retValue, success: success, callId: payload.callId } };
-              if (msgIsString) { returnMsg = JSON.stringify(returnMsg); }
-              if (event && event.source && event.source.postMessage) { event.source.postMessage(returnMsg, '*'); }
-            }, payload.parameter);
-          }
-        }
-        while (win) {
-          try { if (win.frames[TCF_LOCATOR_NAME]) { cmpFrame = win; break; } } catch (ignore) {}
-          if (win === window.top) { break; }
-          win = win.parent;
-        }
-        if (!cmpFrame) {
-          addFrame();
-          win.__tcfapi = tcfAPIHandler;
-          win.addEventListener('message', postMessageEventHandler, false);
-        }
-      };
-      makeStub();
-      var uspStubFunction = function() {
-        var arg = arguments;
-        if (typeof window.__uspapi !== uspStubFunction) {
-          setTimeout(function() { if (typeof window.__uspapi !== 'undefined') { window.__uspapi.apply(window.__uspapi, arg); } }, 500);
-        }
-      };
-      var checkIfUspIsReady = function() {
-        uspTries++;
-        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) { console.warn('USP is not accessible'); } else { clearInterval(uspInterval); }
-      };
-      if (typeof window.__uspapi === 'undefined') {
-        window.__uspapi = uspStubFunction;
-        var uspInterval = setInterval(checkIfUspIsReady, 6000);
-      }
-    })();
-    </script>
-    <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos de Servicio — IAFACIL.HELP</title>
-    <meta name="description" content="Términos y condiciones de uso de IAFACIL.HELP. Derechos, responsabilidades y reglas de la plataforma.">
+    <title>Aviso Legal — IAFACIL.HELP</title>
+    <meta name="description" content="Aviso legal de IAFACIL.HELP. Información legal, condiciones de uso y responsabilidades conforme a la LSSI-CE y normativa española.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Términos de Servicio — IAFACIL.HELP">
-    <meta property="og:description" content="Términos y condiciones de uso de IAFACIL.HELP. Derechos, responsabilidades y reglas de la plataforma.">
+    <meta property="og:title" content="Aviso Legal — IAFACIL.HELP">
+    <meta property="og:description" content="Aviso legal de IAFACIL.HELP. Información legal, condiciones de uso y responsabilidades.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://iafacil.help/pages/legal/terminos.html">
     <meta property="og:image" content="https://iafacil.help/assets/images/og-image.png">
@@ -122,62 +22,99 @@
 
 <main class="page-content" id="main-content">
     <div class="container" style="max-width:800px;">
-        <h1 class="section-title animate-fadeInUp">📋 Términos de Servicio</h1>
-        <p class="text-muted animate-fadeInUp delay-1">Última actualización: enero 2025</p>
+        <h1 class="section-title animate-fadeInUp">📋 Aviso Legal y Condiciones de Uso</h1>
+        <p class="text-muted animate-fadeInUp delay-1">Última actualización: marzo 2026</p>
 
         <div class="card animate-fadeInUp delay-2" style="padding:2rem; margin-top:2rem; line-height:1.8;">
-            <h2>1. Aceptación de los términos</h2>
-            <p>Al acceder y utilizar IAFACIL.HELP, aceptas estos términos de servicio. Si no estás de acuerdo, no utilices la plataforma.</p>
 
-            <h2>2. Descripción del servicio</h2>
-            <p>IAFACIL.HELP es una plataforma educativa gratuita para aprender sobre inteligencia artificial sin necesidad de programar. Ofrecemos cursos, herramientas interactivas, un sistema de gamificación y recursos educativos.</p>
-
-            <h2>3. Registro y cuenta</h2>
+            <h2>1. Datos identificativos del titular</h2>
+            <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa al usuario de los siguientes datos identificativos del titular del sitio web:</p>
             <ul>
-                <li>Debes proporcionar información veraz al registrarte.</li>
-                <li>Eres responsable de mantener la seguridad de tu cuenta.</li>
-                <li>No compartas tu contraseña con terceros.</li>
-                <li>Debes tener al menos 13 años para crear una cuenta.</li>
+                <li><strong>Sitio web:</strong> IAFACIL.HELP</li>
+                <li><strong>Dominio:</strong> https://iafacil.help</li>
+                <li><strong>Correo electrónico:</strong> legal@iafacil.help</li>
+                <li><strong>Actividad:</strong> plataforma educativa gratuita sobre inteligencia artificial, con monetización mediante publicidad en línea.</li>
             </ul>
 
-            <h2>4. Uso aceptable</h2>
-            <p>Te comprometes a:</p>
+            <h2>2. Objeto del sitio web</h2>
+            <p>IAFACIL.HELP es una plataforma educativa gratuita cuyo objeto es ofrecer a los usuarios contenidos formativos sobre inteligencia artificial, herramientas interactivas, un sistema de gamificación y recursos educativos. El sitio se financia mediante la inserción de publicidad en línea proporcionada por <strong>Monetag</strong> (anteriormente conocido como PropellerAds).</p>
+
+            <h2>3. Condiciones generales de uso</h2>
+            <p>El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación plena y sin reservas de todas las disposiciones incluidas en el presente Aviso Legal, así como en la <a href="/pages/legal/privacidad.html">Política de Privacidad</a> y la <a href="/pages/legal/cookies.html">Política de Cookies</a>.</p>
+            <p>El usuario se compromete a hacer un uso adecuado del sitio web de conformidad con la ley, el presente Aviso Legal, la moral y las buenas costumbres generalmente aceptadas, y el orden público.</p>
+
+            <h2>4. Registro y cuenta de usuario</h2>
+            <p>Para acceder a determinadas funcionalidades de la plataforma, el usuario deberá crear una cuenta. El usuario se compromete a:</p>
             <ul>
-                <li>Usar la plataforma únicamente con fines educativos legítimos.</li>
-                <li>No intentar acceder a cuentas de otros usuarios.</li>
-                <li>No realizar actividades que perjudiquen el funcionamiento de la plataforma.</li>
-                <li>No utilizar bots, scrapers u otras herramientas automatizadas.</li>
-                <li>Respetar a otros usuarios de la comunidad.</li>
+                <li>Proporcionar información veraz, exacta y actualizada durante el proceso de registro.</li>
+                <li>Mantener la confidencialidad de sus credenciales de acceso (usuario y contraseña).</li>
+                <li>Ser el único responsable del uso que se haga de su cuenta.</li>
+                <li>Notificar al titular del sitio web cualquier uso no autorizado de su cuenta.</li>
+            </ul>
+            <p>El usuario debe tener al menos 14 años para crear una cuenta, de conformidad con lo establecido en la LOPDGDD.</p>
+
+            <h2>5. Uso aceptable</h2>
+            <p>Queda expresamente prohibido:</p>
+            <ul>
+                <li>Utilizar la plataforma con fines ilícitos o contrarios a lo establecido en el presente Aviso Legal.</li>
+                <li>Intentar acceder a cuentas de otros usuarios o a áreas restringidas del sistema.</li>
+                <li>Realizar actividades que puedan dañar, sobrecargar o deteriorar el funcionamiento del sitio web.</li>
+                <li>Utilizar robots, scrapers, crawlers u otras herramientas automatizadas para extraer contenido del sitio.</li>
+                <li>Reproducir, distribuir o modificar los contenidos del sitio sin autorización previa y por escrito del titular.</li>
+                <li>Introducir o difundir virus informáticos, malware o cualquier código dañino.</li>
             </ul>
 
-            <h2>5. Contenido educativo</h2>
-            <p>Todo el contenido educativo de IAFACIL.HELP es propiedad de MolvicStudios. Puedes usar el contenido para tu aprendizaje personal pero no puedes:</p>
+            <h2>6. Propiedad intelectual e industrial</h2>
+            <p>Todos los contenidos del sitio web (textos, imágenes, gráficos, logotipos, iconos, diseños, código fuente, software, cursos, herramientas y demás elementos) son propiedad del titular del sitio o de sus legítimos licenciantes, y están protegidos por las leyes españolas e internacionales de propiedad intelectual e industrial.</p>
+            <p>Se concede al usuario un derecho de uso personal, privado y no transferible de los contenidos educativos para su aprendizaje personal. No se permite:</p>
             <ul>
-                <li>Redistribuir o revender el contenido.</li>
-                <li>Copiar cursos completos para uso comercial.</li>
+                <li>Redistribuir, revender o sublicenciar los contenidos.</li>
+                <li>Copiar cursos completos o sustanciales para uso comercial.</li>
                 <li>Presentar el contenido como propio.</li>
+                <li>Eliminar o alterar avisos de copyright o propiedad.</li>
             </ul>
 
-            <h2>6. Herramientas interactivas</h2>
-            <p>Las herramientas de IAFACIL.HELP (prompt builder, analizador, etc.) son para uso educativo. Los resultados generados son orientativos y no garantizamos su precisión absoluta.</p>
+            <h2>7. Herramientas interactivas</h2>
+            <p>Las herramientas ofrecidas en IAFACIL.HELP (generador de prompts, analizador, comparador, etc.) tienen una finalidad exclusivamente educativa e informativa. Los resultados generados por dichas herramientas son orientativos y el titular del sitio no garantiza su precisión, exhaustividad ni idoneidad para un fin específico.</p>
 
-            <h2>7. Gamificación</h2>
-            <p>Los puntos de experiencia (XP), niveles, insignias y certificados son elementos de la plataforma sin valor monetario. No pueden ser canjeados, vendidos o transferidos.</p>
+            <h2>8. Gamificación y certificados</h2>
+            <p>Los elementos de gamificación (puntos de experiencia, niveles, insignias, rachas) y los certificados digitales emitidos por la plataforma:</p>
+            <ul>
+                <li>Son elementos internos de la plataforma sin valor monetario.</li>
+                <li>No pueden ser canjeados, vendidos, transferidos ni intercambiados.</li>
+                <li>Los certificados acreditan la finalización de cursos dentro de IAFACIL.HELP y son verificables mediante su identificador único, pero no constituyen una certificación académica oficial.</li>
+            </ul>
 
-            <h2>8. Certificados</h2>
-            <p>Los certificados digitales acreditan la finalización de cursos dentro de IAFACIL.HELP. Son verificables mediante su ID único pero no constituyen una certificación académica oficial.</p>
+            <h2>9. Publicidad — Monetag</h2>
+            <p>Este sitio web muestra publicidad proporcionada por <strong>Monetag</strong> (anteriormente PropellerAds). Monetag es el único proveedor de publicidad del sitio. La publicidad permite financiar la plataforma y mantenerla gratuita para los usuarios. Los anuncios pueden basarse en datos del usuario recopilados con su consentimiento previo, conforme a lo descrito en nuestra <a href="/pages/legal/cookies.html">Política de Cookies</a> y <a href="/pages/legal/privacidad.html">Política de Privacidad</a>.</p>
 
-            <h2>9. Limitación de responsabilidad</h2>
-            <p>IAFACIL.HELP se proporciona "tal cual". No garantizamos disponibilidad ininterrumpida ni que el contenido esté libre de errores. No somos responsables de decisiones tomadas basándose únicamente en nuestro contenido educativo.</p>
+            <h2>10. Enlaces a terceros</h2>
+            <p>El sitio web puede contener enlaces a sitios web de terceros. Estos enlaces se proporcionan únicamente para comodidad del usuario. El titular del sitio no se responsabiliza del contenido, la política de privacidad ni las prácticas de dichos sitios web de terceros. El acceso a los mismos se realiza bajo la exclusiva responsabilidad del usuario.</p>
 
-            <h2>10. Terminación</h2>
-            <p>Nos reservamos el derecho de suspender o eliminar cuentas que violen estos términos. Puedes eliminar tu cuenta en cualquier momento desde tu perfil.</p>
+            <h2>11. Limitación de responsabilidad</h2>
+            <p>El titular del sitio web no será responsable de:</p>
+            <ul>
+                <li>Interrupciones en la disponibilidad del sitio web por causas técnicas, de mantenimiento o de fuerza mayor.</li>
+                <li>Errores u omisiones en los contenidos educativos.</li>
+                <li>Daños o perjuicios derivados de decisiones tomadas por el usuario basándose en los contenidos del sitio.</li>
+                <li>Accesos no autorizados a las cuentas de los usuarios por causas no imputables al titular.</li>
+                <li>Contenidos o conductas de terceros que interactúen con la plataforma.</li>
+            </ul>
+            <p>La plataforma se proporciona «tal cual» (as is) y «según disponibilidad» (as available), sin garantías de ningún tipo, expresas o implícitas.</p>
 
-            <h2>11. Modificaciones</h2>
-            <p>Podemos modificar estos términos. Los cambios significativos serán notificados por correo electrónico con al menos 30 días de anticipación.</p>
+            <h2>12. Suspensión y terminación</h2>
+            <p>El titular del sitio se reserva el derecho de suspender o cancelar, sin previo aviso, el acceso de cualquier usuario que incumpla lo dispuesto en el presente Aviso Legal o que realice un uso indebido de la plataforma.</p>
+            <p>El usuario puede eliminar su cuenta en cualquier momento desde su perfil. La eliminación de la cuenta supondrá la supresión de sus datos personales conforme a lo establecido en la <a href="/pages/legal/privacidad.html">Política de Privacidad</a>.</p>
 
-            <h2>12. Contacto</h2>
-            <p>Para consultas legales: <strong>legal@iafacil.help</strong></p>
+            <h2>13. Legislación aplicable y jurisdicción</h2>
+            <p>Las presentes condiciones se rigen por la legislación española. Para la resolución de cualquier controversia derivada del uso del sitio web, las partes se someten, con renuncia a cualquier otro fuero, a los juzgados y tribunales competentes conforme a la normativa procesal vigente.</p>
+            <p>No obstante, si el usuario tiene la condición de consumidor, serán competentes los juzgados del domicilio del consumidor conforme al texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios.</p>
+
+            <h2>14. Modificaciones del Aviso Legal</h2>
+            <p>El titular se reserva el derecho de modificar el presente Aviso Legal en cualquier momento. Los cambios sustanciales serán notificados a los usuarios registrados por correo electrónico con una antelación mínima de 30 días. El uso continuado del sitio web tras la modificación implica la aceptación de las nuevas condiciones.</p>
+
+            <h2>15. Contacto</h2>
+            <p>Para cualquier consulta o reclamación relacionada con el presente Aviso Legal, puede ponerse en contacto con nosotros en: <strong>legal@iafacil.help</strong></p>
         </div>
     </div>
 </main>
