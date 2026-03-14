@@ -1,7 +1,7 @@
 {
   "name": "IAFACIL.HELP",
   "short_name": "IAFácil",
-  "description": "Aprende Inteligencia Artificial sin programar — como Duolingo pero para IA",
+  "description": "Aprende Inteligencia Artificial sin programar — cursos interactivos y gamificados",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

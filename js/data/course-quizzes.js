@@ -1989,7 +1989,7 @@ export const COURSE_QUIZZES = {
                 question: "¿Qué es el 'adaptive learning' con IA?",
                 options: ["Aprender a programar IA","Sistemas educativos que ajustan el contenido, ritmo y dificultad según el desempeño y estilo de aprendizaje de cada estudiante","Clases grabadas","Solo plataformas de pago"],
                 correct: 1,
-                explanation: "El aprendizaje adaptativo (Khan Academy, Duolingo) usa IA para personalizar la experiencia: si fallas en álgebra, el sistema te da más práctica específica en ese punto débil."
+                explanation: "El aprendizaje adaptativo (Khan Academy, apps educativas) usa IA para personalizar la experiencia: si fallas en álgebra, el sistema te da más práctica específica en ese punto débil."
             },
             {
                 id: 12,

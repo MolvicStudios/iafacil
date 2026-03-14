@@ -78,7 +78,7 @@
     color: var(--color-primary);
 }
 
-/* ─── XP Bar (estilo Duolingo) ─── */
+/* ─── XP Bar ─── */
 .xp-bar {
     background: var(--bg-tertiary);
     border-radius: 25px;
